@@ -1,14 +1,16 @@
 
-h1{
+.head1{
     color:white;
     text-align: center;
     padding-top:75px;
-    line-height: 0%;
+    line-height: 1%;
+    font-family: Cambria;
     /* padding-bottom: 10; */
 }
-h2{
+.head2{
     color:white;
     text-align: center;
+    font-family: Cambria;
 }
 .para1{
     text-align: center;
@@ -24,5 +26,7 @@ h2{
 
 .div3{
     text-align: center;
+    background-color: rgb(238, 238, 226);
+    /* width:max-content; */
 }
 
