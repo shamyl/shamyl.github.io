@@ -1,0 +1,32 @@
+.div2 {
+    /* display: block; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* More style: */
+    height: 20px;
+    background-color: #222;
+    /* white-space: pre-line; */
+  }
+
+  background: rgb(175, 58, 58);
+
+  .head1{
+    position:absolute;
+    color:white;
+    text-align: center;
+    padding-top:75px;
+    line-height: 1%;
+    font-family: Cambria;
+    /* padding-bottom: 10; */
+}
+.head2{
+    color:white;
+    text-align: center;
+    font-family: Cambria;
+}
+.para1{
+    text-align: center;
+    color:white;
+    line-height: 0%;
+}

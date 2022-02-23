@@ -1,26 +1,10 @@
-
-.head1{
-    position:absolute;
-    color:white;
-    text-align: center;
-    padding-top:75px;
-    line-height: 1%;
-    font-family: Cambria;
-    /* padding-bottom: 10; */
-}
-.head2{
-    color:white;
-    text-align: center;
-    font-family: Cambria;
-}
-.para1{
-    text-align: center;
-    color:white;
-    line-height: 0%;
+body{
+    margin:0;
+    padding:0;
 }
 
 .div1{
-    display:block;
+    /* display:block; */
     /* background-color: #222; */
     height: 200px;
     width:100%;
