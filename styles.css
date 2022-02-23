@@ -1,6 +1,7 @@
 body{
     margin:0;
     padding:0;
+    background-color: rgb(238, 238, 226);
 }
 
 .div1{
@@ -43,7 +44,18 @@ body{
 }
 .div3{
     text-align: center;
-    background-color: rgb(238, 238, 226);
+    /* background-color: rgb(238, 238, 226); */
+    height: 200px;
+    width:100%;
     /* width:max-content; */
+}
+.div3a{
+    text-align: justify;
+    font-family: Cambria;
+    color:black;
+    font-size: 20px;
+    padding-top:1%;
+    padding-left: 15%;
+    padding-right: 15%;
 }
 

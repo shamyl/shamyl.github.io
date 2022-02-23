@@ -7,9 +7,10 @@
     height: 20px;
     background-color: #222;
     /* white-space: pre-line; */
+    background: rgb(175, 58, 58);
   }
 
-  background: rgb(175, 58, 58);
+  
 
   .head1{
     position:absolute;
