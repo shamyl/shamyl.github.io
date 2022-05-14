@@ -3,41 +3,28 @@ body{
     padding:0;
     background-color: rgb(255, 255, 255);
 }
+.top-container {
+    background-color: #da4d4d;
+    padding: 30px;
+    text-align: center;
+    border-bottom-left-radius: 50% 50%;
+    border-bottom-right-radius: 50% 50%;
+  }
 
-.div1{
-    /* display:block; */
-    /* background-color: #222; */
-    height: 200px;
-    width:100%;
-    background: transparent;
-    border-top-left-radius: 50% 50%;
-    border-top-right-radius: 50% 50%;
-    transform:rotate(180deg);
-    position:relative;
-    overflow:hidden;   
-}
-.div1:after{
-    content:'';
-    width:100%;
-    height:200px;
-    position: absolute;
-    top:0;
-    background: rgb(175, 58, 58);
-}
 .head1a{
-    position:absolute;
+    /* position:absolute; */
     top:9%;
     left:50%;
-    transform:translate(-50%,-50%);
+    /* transform:translate(-50%,-50%); */
     font-family: Cambria;
     color:white;
     font-size: 35px;
 }
 .para2{
-    position:absolute;
+    /* position:absolute; */
     top:14%;
     left:50%;
-    transform:translate(-50%,-50%);
+    /* transform:translate(-50%,-50%); */
     font-family: Cambria;
     color:white;
     font-size: 25px;
