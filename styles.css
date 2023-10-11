@@ -23,7 +23,7 @@ ul {
     padding: 14px 16px;
     text-decoration: none;
     font-family: Onest;
-    font-size: 25px;
+    font-size: 15px;
   }
   
   li a:hover:not(.active) {
@@ -39,7 +39,7 @@ ul {
     text-align: center;
     font-family: Onest;
     color:rgb(75, 74, 74);
-    font-size: 25px;
+    font-size: 15px;
 }
 .head1a{
     /* position:absolute; */
@@ -49,13 +49,13 @@ ul {
     text-align: justify;
     font-family: Onest;
     color:rgb(0, 0, 0);
-    font-size: 25px;
+    font-size: 15px;
 }
 .para2{
     padding-top: 0%;
     font-family: Onest;
     color:rgb(0, 0, 0);
-    font-size: 25px;
+    font-size: 15px;
 }
 .div3{
     text-align: center;
@@ -68,7 +68,7 @@ ul {
     text-align: justify;
     font-family: Onest;
     color:black;
-    font-size: 25px;
+    font-size: 15px;
     padding-top:1%;
     padding-left: 15%;
     padding-right: 15%;
