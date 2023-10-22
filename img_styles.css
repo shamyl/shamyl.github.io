@@ -1,0 +1,19 @@
+img {
+    background: #eaeaed;
+    border: 1px solid #9799a7;
+     margin: 8px 0 0 20px;
+    padding: 4px;
+    height:60%;
+    width: 60%;
+  }
+  ul2 {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 15%;
+    padding-right: 15%;
+    overflow: hidden;
+    
+  }
+  li2 {
+    float: left;
+  }
