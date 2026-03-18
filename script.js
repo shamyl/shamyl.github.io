@@ -4,7 +4,7 @@ var themeToggle = document.getElementById('theme-toggle');
 // Function to toggle the dark theme
 function toggleDarkTheme() {
   document.body.classList.toggle('dark-theme');
-  document.getElementById("themeToggle").innerHTML = "18 degrees";
+  document.getElementById("theme-toggle").innerHTML = "18 degrees";
 }
 
 // Event listener for the theme toggle button
