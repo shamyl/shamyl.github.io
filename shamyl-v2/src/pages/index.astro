@@ -1,0 +1,106 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import BlogCard from '../components/BlogCard.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('blog');
+const latestPosts = allPosts
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 3);
+
+const allProjects = await getCollection('projects');
+const featuredProjects = allProjects
+  .filter(p => p.data.featured)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 4);
+---
+
+<BaseLayout title="Home">
+  <Hero />
+  
+  <!-- Latest Updates Section -->
+  <section class="section">
+    <div class="container">
+      <SectionHeader 
+        title="Latest Updates" 
+        link="/blog"
+        linkText="View All Posts"
+      />
+      <div class="posts-grid">
+        {latestPosts.length > 0 ? (
+          latestPosts.map(post => (
+            <BlogCard
+              title={post.data.title}
+              date={post.data.date}
+              description={post.data.description}
+              tags={post.data.tags}
+              slug={post.id}
+            />
+          ))
+        ) : (
+          <p class="empty-state">No posts yet. Check back soon!</p>
+        )}
+      </div>
+    </div>
+  </section>
+  
+  <!-- Featured Work Section -->
+  <section class="section">
+    <div class="container">
+      <SectionHeader 
+        title="Featured Work" 
+        subtitle="Selected projects across software, hardware, and research"
+        link="/work"
+        linkText="View All Projects"
+      />
+      <div class="projects-grid">
+        {featuredProjects.length > 0 ? (
+          featuredProjects.map(project => (
+            <ProjectCard
+              title={project.data.title}
+              description={project.data.description}
+              category={project.data.category}
+              image={project.data.image}
+              link={project.data.link}
+              slug={project.id}
+            />
+          ))
+        ) : (
+          <p class="empty-state">Projects coming soon!</p>
+        )}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .posts-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+  
+  @media (max-width: 768px) {
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .empty-state {
+    color: var(--text-muted);
+    font-style: italic;
+    padding: var(--space-xl);
+    text-align: center;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+  }
+</style>

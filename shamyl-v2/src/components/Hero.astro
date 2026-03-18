@@ -1,0 +1,108 @@
+---
+interface Props {
+  title?: string;
+  subtitle?: string;
+  description?: string;
+}
+
+const { 
+  title = "Shamyl Bin Mansoor",
+  subtitle = "Co-founder & CTO @ LearnOBots",
+  description = "Technologist · Maker · Educator"
+} = Astro.props;
+---
+
+<section class="hero">
+  <div class="container hero-content">
+    <div class="hero-text">
+      <h1 class="hero-title animate-fade-in">{title}</h1>
+      <p class="hero-subtitle animate-fade-in animate-delay-1">{subtitle}</p>
+      <p class="hero-description animate-fade-in animate-delay-2">{description}</p>
+      <p class="hero-tagline animate-fade-in animate-delay-3">
+        Building EdTech for developing countries
+      </p>
+      <div class="hero-actions animate-fade-in animate-delay-3">
+        <a href="/work" class="btn btn-primary">
+          View Work
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+        <a href="/about#contact" class="btn btn-secondary">Get in Touch</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    min-height: calc(100vh - 64px);
+    display: flex;
+    align-items: center;
+    padding-top: 64px;
+  }
+  
+  .hero-content {
+    padding: var(--space-3xl) 0;
+  }
+  
+  .hero-text {
+    max-width: 700px;
+  }
+  
+  .hero-title {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: var(--space-md);
+    opacity: 0;
+  }
+  
+  .hero-subtitle {
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: var(--space-sm);
+    opacity: 0;
+  }
+  
+  .hero-description {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-lg);
+    opacity: 0;
+  }
+  
+  .hero-tagline {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-bottom: var(--space-xl);
+    opacity: 0;
+  }
+  
+  .hero-actions {
+    display: flex;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+    opacity: 0;
+  }
+  
+  @media (max-width: 600px) {
+    .hero {
+      min-height: auto;
+      padding-top: calc(64px + var(--space-xl));
+    }
+    
+    .hero-actions {
+      flex-direction: column;
+    }
+    
+    .hero-actions .btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+</style>

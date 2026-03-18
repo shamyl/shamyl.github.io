@@ -1,0 +1,59 @@
+---
+import '../styles/global.css';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import GeometricBackground from '../components/GeometricBackground.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Co-founder & CTO @ LearnOBots | Technologist, Maker, Educator" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <title>{title} | Shamyl Bin Mansoor</title>
+    
+    <script is:inline>
+      const theme = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', theme);
+    </script>
+  </head>
+  <body>
+    <GeometricBackground />
+    <Navigation />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+    
+    <script>
+      const themeToggle = document.getElementById('theme-toggle');
+      
+      themeToggle?.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+      });
+    </script>
+  </body>
+</html>
+
+<style>
+  main {
+    min-height: calc(100vh - 200px);
+    position: relative;
+    z-index: 1;
+  }
+</style>

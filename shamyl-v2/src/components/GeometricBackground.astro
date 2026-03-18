@@ -1,0 +1,291 @@
+---
+---
+
+<div class="geometric-bg" aria-hidden="true">
+  <div class="shape diamond-1"></div>
+  <div class="shape diamond-2"></div>
+  <div class="shape diamond-3"></div>
+  <div class="shape circle-1"></div>
+  <div class="shape circle-2"></div>
+  <div class="shape circle-3"></div>
+  <div class="shape square-1"></div>
+  <div class="glow glow-1"></div>
+  <div class="glow glow-2"></div>
+  <div class="grid-lines"></div>
+  <div class="particle p1"></div>
+  <div class="particle p2"></div>
+  <div class="particle p3"></div>
+  <div class="particle p4"></div>
+  <div class="particle p5"></div>
+  <div class="particle p6"></div>
+</div>
+
+<style is:global>
+  .geometric-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  
+  .geometric-bg .shape {
+    position: absolute;
+    border: 1px solid #3b82f6;
+    opacity: 0.15;
+  }
+  
+  [data-theme="light"] .geometric-bg .shape {
+    opacity: 0.1;
+  }
+  
+  /* Diamond 1 - Large top right */
+  .geometric-bg .diamond-1 {
+    top: 8%;
+    right: 12%;
+    width: 280px;
+    height: 280px;
+    transform: rotate(45deg);
+    animation: floatDiamond1 20s ease-in-out infinite;
+  }
+  
+  /* Diamond 2 - Medium left */
+  .geometric-bg .diamond-2 {
+    top: 55%;
+    left: 8%;
+    width: 120px;
+    height: 120px;
+    border-width: 2px;
+    transform: rotate(45deg);
+    animation: floatDiamond2 15s ease-in-out infinite;
+  }
+  
+  /* Diamond 3 - Small filled */
+  .geometric-bg .diamond-3 {
+    bottom: 18%;
+    right: 25%;
+    width: 70px;
+    height: 70px;
+    background: #3b82f6;
+    border: none;
+    transform: rotate(45deg);
+    opacity: 0.08;
+    animation: pulseDiamond 6s ease-in-out infinite;
+  }
+  
+  /* Circle 1 - Large left */
+  .geometric-bg .circle-1 {
+    top: 20%;
+    left: 5%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    animation: floatCircle1 22s ease-in-out infinite;
+  }
+  
+  /* Circle 2 - Medium bottom right */
+  .geometric-bg .circle-2 {
+    bottom: 15%;
+    right: 8%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border-width: 2px;
+    animation: floatCircle2 18s ease-in-out infinite;
+  }
+  
+  /* Circle 3 - Small filled */
+  .geometric-bg .circle-3 {
+    top: 65%;
+    left: 35%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #3b82f6;
+    border: none;
+    opacity: 0.06;
+    animation: pulseCircle 5s ease-in-out infinite;
+  }
+  
+  /* Square */
+  .geometric-bg .square-1 {
+    top: 40%;
+    right: 6%;
+    width: 90px;
+    height: 90px;
+    animation: floatSquare 16s ease-in-out infinite;
+  }
+  
+  /* Glows */
+  .geometric-bg .glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.12;
+  }
+  
+  [data-theme="light"] .geometric-bg .glow {
+    opacity: 0.06;
+  }
+  
+  .geometric-bg .glow-1 {
+    top: 5%;
+    right: 15%;
+    width: 350px;
+    height: 350px;
+    background: #3b82f6;
+    animation: glowPulse1 8s ease-in-out infinite;
+  }
+  
+  .geometric-bg .glow-2 {
+    bottom: 5%;
+    left: 10%;
+    width: 280px;
+    height: 280px;
+    background: #8b5cf6;
+    animation: glowPulse2 10s ease-in-out infinite;
+  }
+  
+  /* Grid */
+  .geometric-bg .grid-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      linear-gradient(to right, rgba(34, 34, 34, 0.5) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(34, 34, 34, 0.5) 1px, transparent 1px);
+    background-size: 60px 60px;
+    opacity: 0.3;
+  }
+  
+  [data-theme="light"] .geometric-bg .grid-lines {
+    background-image: 
+      linear-gradient(to right, rgba(100, 100, 100, 0.3) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(100, 100, 100, 0.3) 1px, transparent 1px);
+    opacity: 0.5;
+  }
+  
+  /* Light mode - make shapes more visible */
+  [data-theme="light"] .geometric-bg .shape {
+    border-color: #3b82f6;
+    opacity: 0.2;
+  }
+  
+  [data-theme="light"] .geometric-bg .diamond-3 {
+    opacity: 0.12;
+  }
+  
+  [data-theme="light"] .geometric-bg .circle-3 {
+    opacity: 0.1;
+  }
+  
+  [data-theme="light"] .geometric-bg .glow {
+    opacity: 0.1;
+  }
+  
+  [data-theme="light"] .geometric-bg .particle {
+    opacity: 0.6;
+  }
+  
+  /* Particles */
+  .geometric-bg .particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #3b82f6;
+    border-radius: 50%;
+    opacity: 0.5;
+  }
+  
+  .geometric-bg .p1 { top: 15%; left: 25%; animation: particleFloat1 10s ease-in-out infinite; }
+  .geometric-bg .p2 { top: 35%; left: 75%; animation: particleFloat2 12s ease-in-out infinite; }
+  .geometric-bg .p3 { top: 55%; left: 20%; animation: particleFloat3 14s ease-in-out infinite; }
+  .geometric-bg .p4 { top: 75%; left: 65%; animation: particleFloat1 11s ease-in-out infinite reverse; }
+  .geometric-bg .p5 { top: 25%; left: 85%; animation: particleFloat2 13s ease-in-out infinite reverse; }
+  .geometric-bg .p6 { top: 85%; left: 40%; animation: particleFloat3 9s ease-in-out infinite; }
+  
+  /* Animations - Enhanced movement */
+  @keyframes floatDiamond1 {
+    0%, 100% { transform: rotate(45deg) translate(0, 0); }
+    25% { transform: rotate(55deg) translate(40px, -50px); }
+    50% { transform: rotate(40deg) translate(-30px, -80px); }
+    75% { transform: rotate(50deg) translate(-50px, -30px); }
+  }
+  
+  @keyframes floatDiamond2 {
+    0%, 100% { transform: rotate(45deg) translate(0, 0); }
+    33% { transform: rotate(60deg) translate(50px, -40px); }
+    66% { transform: rotate(35deg) translate(-30px, -70px); }
+  }
+  
+  @keyframes pulseDiamond {
+    0%, 100% { opacity: 0.05; transform: rotate(45deg) scale(1); }
+    50% { opacity: 0.18; transform: rotate(55deg) scale(1.3); }
+  }
+  
+  @keyframes floatCircle1 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    25% { transform: translate(50px, -60px) scale(1.08); }
+    50% { transform: translate(-40px, -100px) scale(0.95); }
+    75% { transform: translate(-60px, -40px) scale(1.05); }
+  }
+  
+  @keyframes floatCircle2 {
+    0%, 100% { transform: translate(0, 0); }
+    33% { transform: translate(-50px, -70px); }
+    66% { transform: translate(30px, -90px); }
+  }
+  
+  @keyframes pulseCircle {
+    0%, 100% { opacity: 0.04; transform: scale(1); }
+    50% { opacity: 0.15; transform: scale(1.4); }
+  }
+  
+  @keyframes floatSquare {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    33% { transform: translate(-40px, -50px) rotate(25deg); }
+    66% { transform: translate(20px, -80px) rotate(-15deg); }
+  }
+  
+  @keyframes glowPulse1 {
+    0%, 100% { opacity: 0.08; transform: scale(1) translate(0, 0); }
+    50% { opacity: 0.22; transform: scale(1.2) translate(30px, -20px); }
+  }
+  
+  @keyframes glowPulse2 {
+    0%, 100% { opacity: 0.06; transform: scale(1) translate(0, 0); }
+    50% { opacity: 0.18; transform: scale(1.25) translate(-25px, 15px); }
+  }
+  
+  @keyframes particleFloat1 {
+    0%, 100% { transform: translate(0, 0); opacity: 0.3; }
+    25% { transform: translate(60px, -80px); opacity: 0.8; }
+    50% { transform: translate(-40px, -120px); opacity: 0.4; }
+    75% { transform: translate(-70px, -50px); opacity: 0.7; }
+  }
+  
+  @keyframes particleFloat2 {
+    0%, 100% { transform: translate(0, 0); opacity: 0.4; }
+    33% { transform: translate(-50px, -90px); opacity: 0.8; }
+    66% { transform: translate(40px, -130px); opacity: 0.3; }
+  }
+  
+  @keyframes particleFloat3 {
+    0%, 100% { transform: translate(0, 0); opacity: 0.5; }
+    50% { transform: translate(70px, -100px); opacity: 0.9; }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .geometric-bg .diamond-1 { width: 160px; height: 160px; }
+    .geometric-bg .circle-1 { width: 120px; height: 120px; }
+    .geometric-bg .circle-2 { width: 100px; height: 100px; }
+    .geometric-bg .glow-1 { width: 200px; height: 200px; }
+    .geometric-bg .glow-2 { width: 150px; height: 150px; }
+  }
+</style>

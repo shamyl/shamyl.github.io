@@ -1,0 +1,71 @@
+---
+interface Props {
+  title: string;
+  subtitle?: string;
+  link?: string;
+  linkText?: string;
+}
+
+const { title, subtitle, link, linkText = "View All" } = Astro.props;
+---
+
+<div class="section-header">
+  <div class="section-header-text">
+    <h2 class="section-title">{title}</h2>
+    {subtitle && <p class="section-subtitle">{subtitle}</p>}
+  </div>
+  {link && (
+    <a href={link} class="section-link">
+      {linkText}
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <polyline points="12 5 19 12 12 19"></polyline>
+      </svg>
+    </a>
+  )}
+</div>
+
+<style>
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: var(--space-xl);
+    flex-wrap: wrap;
+    gap: var(--space-md);
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+  
+  .section-subtitle {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-top: var(--space-xs);
+  }
+  
+  .section-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    transition: all var(--transition-fast);
+  }
+  
+  .section-link:hover {
+    color: var(--accent);
+  }
+  
+  .section-link:hover svg {
+    transform: translateX(4px);
+  }
+  
+  .section-link svg {
+    transition: transform var(--transition-fast);
+  }
+</style>

@@ -1,0 +1,155 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import { getCollection } from 'astro:content';
+
+const allProjects = await getCollection('projects');
+const projects = allProjects.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const categories = ['all', 'software', 'hardware', 'research', 'publication'];
+---
+
+<BaseLayout title="Work" description="Projects spanning software, hardware, and research">
+  <section class="page-header">
+    <div class="container">
+      <h1 class="page-title">Work</h1>
+      <p class="page-subtitle">Projects spanning software, hardware, and research</p>
+    </div>
+  </section>
+  
+  <section class="section">
+    <div class="container">
+      <!-- Category Filters -->
+      <div class="filters">
+        {categories.map(cat => (
+          <button 
+            class="filter-btn" 
+            data-category={cat}
+            aria-pressed={cat === 'all' ? 'true' : 'false'}
+          >
+            {cat.charAt(0).toUpperCase() + cat.slice(1)}
+          </button>
+        ))}
+      </div>
+      
+      <!-- Projects Grid -->
+      <div class="projects-grid">
+        {projects.map(project => (
+          <div class="project-item" data-category={project.data.category}>
+            <ProjectCard
+              title={project.data.title}
+              description={project.data.description}
+              category={project.data.category}
+              image={project.data.image}
+              link={project.data.link}
+              slug={project.id}
+            />
+          </div>
+        ))}
+      </div>
+      
+      {projects.length === 0 && (
+        <p class="empty-state">Projects coming soon!</p>
+      )}
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const projectItems = document.querySelectorAll('.project-item');
+  
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const category = btn.getAttribute('data-category');
+      
+      filterBtns.forEach(b => b.setAttribute('aria-pressed', 'false'));
+      btn.setAttribute('aria-pressed', 'true');
+      
+      projectItems.forEach(item => {
+        const itemCategory = item.getAttribute('data-category');
+        if (category === 'all' || itemCategory === category) {
+          item.style.display = 'block';
+          item.style.animation = 'fadeIn 0.3s ease forwards';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  .page-header {
+    padding-top: calc(64px + var(--space-3xl));
+    padding-bottom: var(--space-xl);
+  }
+  
+  .page-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: var(--space-sm);
+  }
+  
+  .page-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+  }
+  
+  .filters {
+    display: flex;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-xl);
+    flex-wrap: wrap;
+  }
+  
+  .filter-btn {
+    padding: var(--space-sm) var(--space-lg);
+    font-size: 0.9rem;
+    font-weight: 500;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+  }
+  
+  .filter-btn:hover {
+    border-color: var(--text-muted);
+    color: var(--text-primary);
+  }
+  
+  .filter-btn[aria-pressed="true"] {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: white;
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+  }
+  
+  @media (max-width: 1024px) {
+    .projects-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .empty-state {
+    color: var(--text-muted);
+    font-style: italic;
+    padding: var(--space-3xl);
+    text-align: center;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+  }
+</style>

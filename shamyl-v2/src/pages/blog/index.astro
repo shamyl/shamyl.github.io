@@ -1,0 +1,70 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogCard from '../../components/BlogCard.astro';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('blog');
+const posts = allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<BaseLayout title="Blog" description="Updates, thoughts, and announcements">
+  <section class="page-header">
+    <div class="container">
+      <h1 class="page-title">Blog</h1>
+      <p class="page-subtitle">Updates, thoughts, and announcements</p>
+    </div>
+  </section>
+  
+  <section class="section">
+    <div class="container">
+      <div class="posts-list">
+        {posts.length > 0 ? (
+          posts.map(post => (
+            <BlogCard
+              title={post.data.title}
+              date={post.data.date}
+              description={post.data.description}
+              tags={post.data.tags}
+              slug={post.id}
+            />
+          ))
+        ) : (
+          <p class="empty-state">No posts yet. Check back soon!</p>
+        )}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-header {
+    padding-top: calc(64px + var(--space-3xl));
+    padding-bottom: var(--space-xl);
+  }
+  
+  .page-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: var(--space-sm);
+  }
+  
+  .page-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+  }
+  
+  .posts-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    max-width: 800px;
+  }
+  
+  .empty-state {
+    color: var(--text-muted);
+    font-style: italic;
+    padding: var(--space-3xl);
+    text-align: center;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+  }
+</style>

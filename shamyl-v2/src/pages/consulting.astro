@@ -1,0 +1,462 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const services = [
+  {
+    icon: 'product-design',
+    title: 'Product Design',
+    description: 'End-to-end product design from concept to launch. I help startups and enterprises create user-centered products that solve real problems.',
+    skills: ['User Research', 'UX/UI Design', 'Prototyping', 'Design Systems', 'Usability Testing'],
+  },
+  {
+    icon: 'product-management',
+    title: 'Product Management',
+    description: 'Strategic product leadership combining technical depth with business acumen. I help teams build the right product, the right way.',
+    skills: ['Product Strategy', 'Roadmap Planning', 'Agile/Scrum', 'Stakeholder Management', 'Go-to-Market'],
+  },
+  {
+    icon: 'full-stack',
+    title: 'Full Stack Development',
+    description: 'From architecture to deployment, I build scalable web and mobile applications with modern technologies.',
+    skills: ['React / Next.js', 'Node.js / Python', 'Cloud Infrastructure', 'Database Design', 'API Development'],
+  },
+  {
+    icon: 'edtech',
+    title: 'EdTech & STEAM',
+    description: 'Deep expertise in educational technology, curriculum design, and STEAM education for K-12 and higher education.',
+    skills: ['Curriculum Design', 'Learning Platforms', 'Robotics Education', 'Game-based Learning', 'EdTech Strategy'],
+  },
+];
+
+const experience = [
+  { metric: '10+', label: 'Years in Product' },
+  { metric: '15+', label: 'Years in Tech' },
+  { metric: '50+', label: 'Products Shipped' },
+  { metric: '100K+', label: 'Students Impacted' },
+];
+
+const engagementTypes = [
+  {
+    title: 'Advisory',
+    description: 'Strategic guidance for founders and product teams. Regular check-ins, roadmap reviews, and mentorship.',
+    duration: 'Ongoing',
+  },
+  {
+    title: 'Fractional CTO/CPO',
+    description: 'Part-time technical or product leadership for startups that need senior expertise without full-time commitment.',
+    duration: '3-6 months',
+  },
+  {
+    title: 'Product Sprint',
+    description: 'Intensive engagement to solve specific product challenges - from 0-to-1 product definition to feature redesigns.',
+    duration: '2-4 weeks',
+  },
+  {
+    title: 'Technical Audit',
+    description: 'Comprehensive review of your tech stack, architecture, and development practices with actionable recommendations.',
+    duration: '1-2 weeks',
+  },
+];
+
+const clients = [
+  'EdTech Startups',
+  'K-12 Schools',
+  'Universities',
+  'NGOs & Social Enterprises',
+  'Hardware Companies',
+  'SaaS Platforms',
+];
+---
+
+<BaseLayout title="Consulting" description="Product Design, Product Management, and Full Stack Development consulting services">
+  <section class="page-header">
+    <div class="container">
+      <h1 class="page-title">Consulting</h1>
+      <p class="page-subtitle">
+        Helping teams build products that matter — from strategy to execution
+      </p>
+    </div>
+  </section>
+  
+  <!-- Intro Section -->
+  <section class="section intro-section">
+    <div class="container">
+      <div class="intro-content">
+        <p class="intro-text">
+          With over 15 years of experience spanning academia, startups, and product development, 
+          I bring a unique perspective that combines <strong>technical depth</strong>, <strong>design thinking</strong>, 
+          and <strong>business strategy</strong>. As the co-founder and CTO of LearnOBots, I've built products 
+          from the ground up — from initial concept through to scale.
+        </p>
+        <p class="intro-text">
+          I specialize in helping teams in <strong>EdTech</strong>, <strong>hardware-software integration</strong>, 
+          and <strong>emerging markets</strong> build products that create real impact.
+        </p>
+      </div>
+      
+      <div class="experience-stats">
+        {experience.map(item => (
+          <div class="stat-item">
+            <span class="stat-metric">{item.metric}</span>
+            <span class="stat-label">{item.label}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+  
+  <!-- Services Section -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">What I Do</h2>
+      <div class="services-grid">
+        {services.map(service => (
+          <div class="service-card">
+            <div class="service-icon">
+              {service.icon === 'product-design' && (
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                  <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                  <path d="M2 2l7.586 7.586"></path>
+                  <circle cx="11" cy="11" r="2"></circle>
+                </svg>
+              )}
+              {service.icon === 'product-management' && (
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                  <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                </svg>
+              )}
+              {service.icon === 'full-stack' && (
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              )}
+              {service.icon === 'edtech' && (
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                </svg>
+              )}
+            </div>
+            <h3 class="service-title">{service.title}</h3>
+            <p class="service-description">{service.description}</p>
+            <div class="service-skills">
+              {service.skills.map(skill => (
+                <span class="skill-tag">{skill}</span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+  
+  <!-- Engagement Types -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">How We Can Work Together</h2>
+      <div class="engagement-grid">
+        {engagementTypes.map(type => (
+          <div class="engagement-card">
+            <div class="engagement-header">
+              <h3 class="engagement-title">{type.title}</h3>
+              <span class="engagement-duration">{type.duration}</span>
+            </div>
+            <p class="engagement-description">{type.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+  
+  <!-- Ideal Clients -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Who I Work With</h2>
+      <div class="clients-grid">
+        {clients.map(client => (
+          <div class="client-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>{client}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+  
+  <!-- CTA Section -->
+  <section class="section cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2 class="cta-title">Let's Build Something Great</h2>
+        <p class="cta-text">
+          Have a product challenge? Looking for strategic guidance? Let's talk about how I can help.
+        </p>
+        <div class="cta-actions">
+          <a href="mailto:shamyl@learnobots.com" class="btn btn-primary">
+            Get in Touch
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/shamyl-bin-mansoor/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            Connect on LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-header {
+    padding-top: calc(64px + var(--space-3xl));
+    padding-bottom: var(--space-xl);
+  }
+  
+  .page-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: var(--space-sm);
+  }
+  
+  .page-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    max-width: 600px;
+  }
+  
+  /* Intro Section */
+  .intro-section {
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .intro-content {
+    max-width: 800px;
+    margin-bottom: var(--space-2xl);
+  }
+  
+  .intro-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: var(--space-lg);
+  }
+  
+  .intro-text strong {
+    color: var(--text-primary);
+  }
+  
+  .experience-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-lg);
+  }
+  
+  .stat-item {
+    text-align: center;
+    padding: var(--space-lg);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+  }
+  
+  .stat-metric {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: var(--space-sm);
+  }
+  
+  .stat-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+  }
+  
+  /* Services */
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-xl);
+  }
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+  
+  .service-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    transition: all var(--transition-base);
+  }
+  
+  .service-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+  
+  .service-icon {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(59, 130, 246, 0.1);
+    border-radius: var(--radius-md);
+    color: var(--accent);
+    margin-bottom: var(--space-lg);
+  }
+  
+  .service-title {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-sm);
+  }
+  
+  .service-description {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-lg);
+    line-height: 1.6;
+  }
+  
+  .service-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+  
+  .skill-tag {
+    font-size: 0.75rem;
+    padding: var(--space-xs) var(--space-sm);
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-sm);
+    color: var(--text-secondary);
+  }
+  
+  /* Engagement Types */
+  .engagement-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+  
+  .engagement-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+  }
+  
+  .engagement-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-md);
+  }
+  
+  .engagement-title {
+    font-size: 1.1rem;
+  }
+  
+  .engagement-duration {
+    font-size: 0.8rem;
+    color: var(--accent);
+    background: rgba(59, 130, 246, 0.1);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-sm);
+  }
+  
+  .engagement-description {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+  
+  /* Clients */
+  .clients-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+  }
+  
+  .client-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-md) var(--space-lg);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+  }
+  
+  .client-item svg {
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+  
+  /* CTA */
+  .cta-section {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-xl);
+    margin: var(--space-3xl) var(--space-lg);
+  }
+  
+  .cta-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .cta-title {
+    font-size: 2rem;
+    margin-bottom: var(--space-md);
+  }
+  
+  .cta-text {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-xl);
+  }
+  
+  .cta-actions {
+    display: flex;
+    gap: var(--space-md);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .services-grid,
+    .engagement-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .clients-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .experience-stats {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .clients-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .cta-section {
+      margin: var(--space-2xl) 0;
+      border-radius: 0;
+    }
+  }
+</style>

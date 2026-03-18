@@ -1,0 +1,304 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allSpeaking = await getCollection('speaking');
+const speakingItems = allSpeaking.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const types = ['all', 'talk', 'panel', 'podcast', 'award'];
+
+const groupedByYear = speakingItems.reduce((acc, item) => {
+  const year = item.data.date.getFullYear();
+  if (!acc[year]) acc[year] = [];
+  acc[year].push(item);
+  return acc;
+}, {} as Record<number, typeof speakingItems>);
+
+const years = Object.keys(groupedByYear).sort((a, b) => Number(b) - Number(a));
+
+const typeIcons = {
+  talk: '🎤',
+  panel: '💬',
+  podcast: '🎙️',
+  award: '🏆',
+};
+---
+
+<BaseLayout title="Speaking & Awards" description="Talks, panels, podcasts, and recognition">
+  <section class="page-header">
+    <div class="container">
+      <h1 class="page-title">Speaking & Awards</h1>
+      <p class="page-subtitle">Talks, panels, podcasts, and recognition</p>
+    </div>
+  </section>
+  
+  <section class="section">
+    <div class="container">
+      <!-- Type Filters -->
+      <div class="filters">
+        {types.map(type => (
+          <button 
+            class="filter-btn" 
+            data-type={type}
+            aria-pressed={type === 'all' ? 'true' : 'false'}
+          >
+            {type === 'all' ? 'All' : (
+              <span>{typeIcons[type as keyof typeof typeIcons]} {type.charAt(0).toUpperCase() + type.slice(1)}s</span>
+            )}
+          </button>
+        ))}
+      </div>
+      
+      <!-- Timeline -->
+      <div class="timeline">
+        {years.map(year => (
+          <div class="timeline-year" data-year={year}>
+            <h2 class="year-label">{year}</h2>
+            <div class="year-items">
+              {groupedByYear[Number(year)].map(item => (
+                <div class="timeline-item" data-type={item.data.type}>
+                  <div class="item-icon">
+                    {item.data.type === 'award' ? (
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="8" r="7"></circle>
+                        <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                      </svg>
+                    ) : (
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                        <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                        <line x1="12" y1="19" x2="12" y2="23"></line>
+                        <line x1="8" y1="23" x2="16" y2="23"></line>
+                      </svg>
+                    )}
+                  </div>
+                  <div class="item-content">
+                    <span class="item-type tag tag-accent">{item.data.type}</span>
+                    <h3 class="item-title">
+                      {item.data.link ? (
+                        <a href={item.data.link} target="_blank" rel="noopener noreferrer">
+                          {item.data.title}
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                          </svg>
+                        </a>
+                      ) : (
+                        item.data.title
+                      )}
+                    </h3>
+                    {item.data.description && (
+                      <p class="item-description">{item.data.description}</p>
+                    )}
+                    {(item.data.venue || item.data.location) && (
+                      <p class="item-venue">
+                        {item.data.venue}{item.data.venue && item.data.location && ', '}{item.data.location}
+                      </p>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+      
+      {speakingItems.length === 0 && (
+        <p class="empty-state">Speaking engagements coming soon!</p>
+      )}
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const timelineItems = document.querySelectorAll('.timeline-item');
+  const timelineYears = document.querySelectorAll('.timeline-year');
+  
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const type = btn.getAttribute('data-type');
+      
+      filterBtns.forEach(b => b.setAttribute('aria-pressed', 'false'));
+      btn.setAttribute('aria-pressed', 'true');
+      
+      timelineItems.forEach(item => {
+        const itemType = item.getAttribute('data-type');
+        if (type === 'all' || itemType === type) {
+          (item as HTMLElement).style.display = 'flex';
+        } else {
+          (item as HTMLElement).style.display = 'none';
+        }
+      });
+      
+      timelineYears.forEach(yearSection => {
+        const visibleItems = yearSection.querySelectorAll('.timeline-item[style="display: flex;"], .timeline-item:not([style*="display: none"])');
+        const allItems = yearSection.querySelectorAll('.timeline-item');
+        let hasVisible = false;
+        
+        allItems.forEach(item => {
+          if ((item as HTMLElement).style.display !== 'none') {
+            hasVisible = true;
+          }
+        });
+        
+        (yearSection as HTMLElement).style.display = hasVisible ? 'block' : 'none';
+      });
+    });
+  });
+</script>
+
+<style>
+  .page-header {
+    padding-top: calc(64px + var(--space-3xl));
+    padding-bottom: var(--space-xl);
+  }
+  
+  .page-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: var(--space-sm);
+  }
+  
+  .page-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+  }
+  
+  .filters {
+    display: flex;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-2xl);
+    flex-wrap: wrap;
+  }
+  
+  .filter-btn {
+    padding: var(--space-sm) var(--space-lg);
+    font-size: 0.9rem;
+    font-weight: 500;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+  }
+  
+  .filter-btn:hover {
+    border-color: var(--text-muted);
+    color: var(--text-primary);
+  }
+  
+  .filter-btn[aria-pressed="true"] {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: white;
+  }
+  
+  .timeline {
+    max-width: 800px;
+  }
+  
+  .timeline-year {
+    margin-bottom: var(--space-2xl);
+  }
+  
+  .year-label {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-sm);
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .year-items {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+  
+  .timeline-item {
+    display: flex;
+    gap: var(--space-lg);
+    padding: var(--space-lg);
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-base);
+  }
+  
+  .timeline-item:hover {
+    border-color: var(--text-muted);
+    background: var(--card-hover);
+  }
+  
+  .item-icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-md);
+    color: var(--accent);
+  }
+  
+  .item-content {
+    flex: 1;
+  }
+  
+  .item-type {
+    margin-bottom: var(--space-xs);
+  }
+  
+  .item-title {
+    font-size: 1.1rem;
+    margin: var(--space-xs) 0;
+  }
+  
+  .item-title a {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    color: var(--text-primary);
+  }
+  
+  .item-title a:hover {
+    color: var(--accent);
+  }
+  
+  .item-description {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-top: var(--space-sm);
+  }
+  
+  .item-venue {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: var(--space-sm);
+  }
+  
+  .empty-state {
+    color: var(--text-muted);
+    font-style: italic;
+    padding: var(--space-3xl);
+    text-align: center;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+  }
+  
+  @media (max-width: 600px) {
+    .timeline-item {
+      flex-direction: column;
+      gap: var(--space-md);
+    }
+    
+    .item-icon {
+      width: 36px;
+      height: 36px;
+    }
+  }
+</style>
