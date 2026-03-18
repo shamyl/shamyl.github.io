@@ -1,0 +1,7 @@
+o add new content in the future:
+Create a .md file in the appropriate folder (src/content/blog/, src/content/projects/, or src/content/speaking/)
+Run npm run build in the shamyl-v2 folder
+Copy dist/* to the root folder
+Commit and push
+Or just edit the markdown files and let me know when you need to redeploy!
+Congratulations on your new site!

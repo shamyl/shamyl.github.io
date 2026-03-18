@@ -187,6 +187,19 @@ const currentPath = Astro.url.pathname;
   @media (max-width: 768px) {
     .nav-links {
       display: none;
+      position: absolute;
+      top: 64px;
+      left: 0;
+      right: 0;
+      background: var(--bg-primary);
+      border-bottom: 1px solid var(--border);
+      flex-direction: column;
+      padding: var(--space-lg);
+      gap: var(--space-md);
+    }
+    
+    .nav-links.show {
+      display: flex;
     }
     
     .mobile-menu-btn {
