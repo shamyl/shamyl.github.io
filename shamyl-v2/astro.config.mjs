@@ -6,6 +6,7 @@ export default defineConfig({
   site: 'https://shamyl.github.io',
   output: 'static',
   build: {
-    assets: 'assets'
+    assets: 'assets',
+    outDir: 'dist',
   }
 });
