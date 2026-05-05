@@ -1,5 +1,6 @@
 import type { APIContext } from 'astro';
 import { getCollection } from 'astro:content';
+import { marked } from 'marked';
 
 export async function GET(context: APIContext) {
   const posts = await getCollection('blog');
@@ -12,7 +13,7 @@ export async function GET(context: APIContext) {
   <channel>
     <title>Shamyl Bin Mansoor - Blog</title>
     <link>${siteUrl}/blog</link>
-    <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp; CTO @ LearnOBots</description>
+    <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     <atom:link href="${siteUrl}/rss.xml" rel="self" type="application/rss+xml"/>
@@ -27,12 +28,17 @@ ${sortedPosts.map(post => {
   const description = post.data.description || '';
   const tags = post.data.tags?.map(tag => `<category>${escapeXml(tag)}</category>`).join('\n    ') || '';
   
+  // Convert markdown body to HTML
+  const body = post.body || '';
+  const contentHtml = marked.parse(body) as string;
+  
   return `    <item>
       <title>${escapeXml(post.data.title)}</title>
       <link>${postUrl}</link>
       <guid isPermaLink="true">${postUrl}</guid>
       <pubDate>${pubDate}</pubDate>
       <description>${escapeXml(description)}</description>
+      <content:encoded><![CDATA[${contentHtml}]]></content:encoded>
       ${tags}
     </item>`;
 }).join('\n')}
