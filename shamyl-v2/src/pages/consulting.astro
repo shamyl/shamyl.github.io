@@ -26,6 +26,12 @@ const services = [
     description: 'Deep expertise in educational technology, curriculum design, and STEAM education for K-12 and higher education.',
     skills: ['Curriculum Design', 'Learning Platforms', 'Robotics Education', 'Game-based Learning', 'EdTech Strategy'],
   },
+  {
+    icon: 'openclaw',
+    title: 'OpenClaw & AI Automation',
+    description: 'Help companies deploy OpenClaw infrastructure and build custom AI agents for automation. <strong>CEO & Executive Automation:</strong> I specialize in automating daily operational tasks for busy leaders — calendar management, email triage, meeting prep, follow-ups, report generation, and decision support systems that save hours every week.',
+    skills: ['OpenClaw Setup', 'Custom AI Agents', 'CEO Workflow Automation', 'Executive Assistant Agents', 'Local LLM Integration', 'Agent Orchestration'],
+  },
 ];
 
 const experience = [
@@ -55,6 +61,16 @@ const engagementTypes = [
     description: 'Comprehensive review of your tech stack, architecture, and development practices with actionable recommendations.',
     duration: '1-2 weeks',
   },
+  {
+    title: 'AI Automation Setup',
+    description: 'End-to-end OpenClaw deployment and AI agent configuration for your organization. Includes infrastructure setup, custom agent development, and team training.',
+    duration: '1-2 weeks',
+  },
+  {
+    title: 'CEO Automation Package',
+    description: 'Comprehensive automation of executive workflows - calendar management, email triage, meeting prep, follow-ups, and decision support. Tailored for busy leaders who need to reclaim hours every week.',
+    duration: '2-3 weeks',
+  },
 ];
 
 const clients = [
@@ -64,10 +80,40 @@ const clients = [
   'NGOs & Social Enterprises',
   'Hardware Companies',
   'SaaS Platforms',
+  'CEOs & Executives',
+  'Tech Companies',
+  'Research Institutions',
+];
+
+const selectedClients = [
+  {
+    icon: 'dasa',
+    title: 'DASA',
+    role: 'Product Strategy Consultant',
+    period: 'Dec 2023 to Nov 2024',
+    description: 'DASA builds the most powerful restaurant till system — unifying POS, online ordering, delivery, reservations, and loyalty into one platform.<br><br>Advised on overall Product Strategy, led complete product overhaul, and led the Tech team through the transformation. Helped unify 10+ disconnected tools into one cohesive system.',
+    skills: ['Product Strategy', 'Tech Leadership', 'Product Overhaul', 'POS Systems'],
+  },
+  {
+    icon: 'poulta',
+    title: 'Poulta',
+    role: 'Product Consultant',
+    period: '2020-2021',
+    description: 'Poulta is the world\'s first AI-native poultry intelligence platform — backed by legendary Silicon Valley investor Tim Draper. They transform poultry farming with IoT-AI fusion technology.<br><br>Fixed critical product issues affecting farm operations, helped optimize their precision agriculture platform, and improved data analytics and operational workflows.',
+    skills: ['Product Consulting', 'IoT-AI', 'AgTech', 'Analytics'],
+  },
+  {
+    icon: 'smart',
+    title: 'SMART Lab & SMART Surgisol',
+    role: 'Founder & Consultant',
+    period: 'Ongoing',
+    description: 'Founded SMART Lab (Systems, Modeling, Algorithms, Robotics & Technology) at NUST. Research in surgical simulation and medical technology.<br><br>Served as consultant for SMART Surgisol — a company founded on research from SMART Lab, focused on surgical simulation technology. A valuable learning experience in medical tech commercialization.',
+    skills: ['Research Leadership', 'MedTech', 'Surgical Simulation', 'University Spin-offs'],
+  },
 ];
 ---
 
-<BaseLayout title="Consulting" description="Product Design, Product Management, and Full Stack Development consulting services">
+<BaseLayout title="Consulting" description="Product Design, Product Management, Full Stack Development, and AI Automation consulting services — including OpenClaw setup and CEO workflow automation">
   <section class="page-header">
     <div class="container">
       <h1 class="page-title">Consulting</h1>
@@ -138,9 +184,19 @@ const clients = [
                   <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
                 </svg>
               )}
+              {service.icon === 'openclaw' && (
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="3" y1="9" x2="21" y2="9"></line>
+                  <line x1="9" y1="21" x2="9" y2="9"></line>
+                  <circle cx="12" cy="12" r="1"></circle>
+                  <circle cx="16" cy="12" r="1"></circle>
+                  <circle cx="8" cy="12" r="1"></circle>
+                </svg>
+              )}
             </div>
             <h3 class="service-title">{service.title}</h3>
-            <p class="service-description">{service.description}</p>
+            <p class="service-description" set:html={service.description}></p>
             <div class="service-skills">
               {service.skills.map(skill => (
                 <span class="skill-tag">{skill}</span>
@@ -164,6 +220,48 @@ const clients = [
               <span class="engagement-duration">{type.duration}</span>
             </div>
             <p class="engagement-description">{type.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+  
+  <!-- Selected Clients -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Selected Clients</h2>
+      <div class="services-grid">
+        {selectedClients.map(client => (
+          <div class="service-card client-card">
+            <div class="service-icon">
+              {client.icon === 'dasa' && (
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+              )}
+              {client.icon === 'poulta' && (
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                  <path d="M2 17l10 5 10-5"></path>
+                  <path d="M2 12l10 5 10-5"></path>
+                </svg>
+              )}
+              {client.icon === 'smart' && (
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 2v20"></path>
+                  <path d="M2 12h20"></path>
+                </svg>
+              )}
+            </div>
+            <h3 class="service-title">{client.title}</h3>
+            <p class="client-role"><strong>{client.role}</strong> — {client.period}</p>
+            <p class="service-description" set:html={client.description}></p>
+            <div class="service-skills">
+              {client.skills.map(skill => (
+                <span class="skill-tag">{skill}</span>
+              ))}
+            </div>
           </div>
         ))}
       </div>
@@ -251,7 +349,7 @@ const clients = [
   
   .experience-stats {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--space-lg);
   }
   
@@ -326,6 +424,10 @@ const clients = [
     line-height: 1.6;
   }
   
+  .service-description :global(strong) {
+    color: var(--text-primary);
+  }
+  
   .service-skills {
     display: flex;
     flex-wrap: wrap;
@@ -338,6 +440,18 @@ const clients = [
     background: var(--bg-tertiary);
     border-radius: var(--radius-sm);
     color: var(--text-secondary);
+  }
+  
+  /* Client Cards */
+  .client-card .client-role {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-md);
+    margin-top: calc(-1 * var(--space-sm));
+  }
+  
+  .client-card .client-role strong {
+    color: var(--accent);
   }
   
   /* Engagement Types */
@@ -446,7 +560,7 @@ const clients = [
   
   @media (max-width: 768px) {
     .experience-stats {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(1, 1fr);
     }
     
     .clients-grid {
