@@ -5,13 +5,81 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Fri, 08 May 2026 04:01:32 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 09 May 2026 04:01:58 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamyl.github.io/blog</link>
     </image>
+    <item>
+      <title>Daily AI Updates - May 9, 2026</title>
+      <link>https://shamyl.github.io/blog/daily-ai-updates-2026-05-09</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/daily-ai-updates-2026-05-09</guid>
+      <pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate>
+      <description>Latest AI developments, tech trends, market updates, and world tech news from May 9, 2026.</description>
+      <content:encoded><![CDATA[<p>Here&#39;s your daily roundup of AI and tech news for May 9, 2026:</p>
+<h2>AI Developments</h2>
+<ul>
+<li><p><strong>OpenAI launches GPT-5.5 Instant</strong>: The new default model for ChatGPT promises smarter, clearer, and more personalized responses with greater accuracy and conciseness. <a href="https://openai.com/index/gpt-5-5-instant/">Read more</a></p>
+</li>
+<li><p><strong>OpenAI introduces GPT-5.5-Cyber</strong>: A specialized variation rolling out to vetted cybersecurity teams, trained to be more permissive on security-related tasks for defensive applications. <a href="https://www.cnbc.com/2026/05/07/openai-rolls-out-new-gpt-5point5-cyber-to-vetted-cybersecurity-teams.html">Read more</a></p>
+</li>
+<li><p><strong>Anthropic expands Claude Code limits</strong>: Partnership with SpaceX significantly increases compute capacity, allowing Anthropic to raise usage limits for Claude Code. <a href="https://www.anthropic.com/news/higher-limits-spacex">Read more</a></p>
+</li>
+<li><p><strong>The &quot;Agentic Wars&quot; heat up</strong>: Both Meta and Google are reportedly developing AI agents to compete with OpenClaw, signaling a major shift toward autonomous AI systems that can perform complex multi-step tasks. <a href="https://www.cnbc.com/2026/05/08/ai-agent-meta-google-agentic-wars-tech-download.html">Read more</a></p>
+</li>
+<li><p><strong>Google Gemini API upgrades</strong>: File Search is now multimodal with custom metadata and page-level citations, enabling more efficient and verifiable RAG implementations. <a href="https://blog.google/innovation-and-ai/technology/developers-tools/expanded-gemini-api-file-search-multimodal-rag/">Read more</a></p>
+</li>
+<li><p><strong>Big Tech commits to government AI testing</strong>: Microsoft, Google, and xAI have agreed to let the US government test their AI models before public launch—a significant step toward AI safety and regulation. <a href="https://www.cnn.com/2026/05/05/tech/microsoft-google-xai-government-test-ai-models">Read more</a></p>
+</li>
+</ul>
+<h2>Technology Trends</h2>
+<ul>
+<li><p><strong>Twilio launches Agent Connect</strong>: A model-agnostic bridge connecting AI agents to real customers, positioning Twilio as infrastructure for the &quot;Agentic Era.&quot; <a href="https://www.twilio.com/en-us/blog/products/launches/agent-connect">Read more</a></p>
+</li>
+<li><p><strong>IBM Sovereign Core goes GA</strong>: New capabilities help enterprises and governments operationalize digital sovereignty with continuous compliance across hybrid cloud environments. <a href="https://www.prnewswire.com/news-releases/think-2026-ibm-makes-digital-sovereignty-operational-with-general-availability-of-ibm-sovereign-core-302762056.html">Read more</a></p>
+</li>
+<li><p><strong>Gemini in Google Docs gets persistent instructions</strong>: Users can now add groundwork instructions that Gemini remembers across all projects, eliminating repetitive setup. <a href="https://9to5google.com/2026/05/05/gemini-for-google-docs-gets-persistent-instruction-support/">Read more</a></p>
+</li>
+</ul>
+<h2>Market Updates</h2>
+<ul>
+<li><p><strong>Record-breaking Q1 for AI funding</strong>: Private AI companies raised $226B in Q1 2026, surpassing the entire year of 2025. OpenAI&#39;s $122B corporate minority round alone comprised 54% of total funding. <a href="http://www.cbinsights.com/research/report/ai-trends-q1-2026/">Read more</a></p>
+</li>
+<li><p><strong>April 2026: Third-highest funding month</strong>: Global venture funding hit $56 billion in April, up 100% year-over-year, with 1,366 deals totaling $212B deployed. <a href="https://news.crunchbase.com/venture/global-startup-funding-april-2026-anthropic-jeff-bezos-project-prometheus-biggest-deals/">Read more</a></p>
+</li>
+<li><p><strong>Sierra raises $950M</strong>: The enterprise AI company secured massive funding as competition intensifies to own the enterprise AI stack. <a href="https://techcrunch.com/2026/05/04/sierra-raises-950m-as-the-race-to-own-enterprise-ai-gets-serious/">Read more</a></p>
+</li>
+<li><p><strong>SAP acquires NemoClaw for $1.16B</strong>: The 18-month-old German AI lab becomes SAP&#39;s major bet on AI infrastructure. <a href="https://techcrunch.com/2026/05/05/sap-bets-1-16b-on-18-month-old-german-ai-lab-and-says-yes-to-nemoclaw/">Read more</a></p>
+</li>
+<li><p><strong>NVIDIA restarts China AI chip manufacturing</strong>: CEO forecasts $1 trillion in orders as the company resumes production of China-compliant AI chips. <a href="https://finance.yahoo.com/news/nvidia-restarts-china-ai-chip-212419388.html">Read more</a></p>
+</li>
+</ul>
+<h2>World Tech</h2>
+<ul>
+<li><p><strong>Autonomous trucking expands</strong>: Volvo and Aurora launched a new autonomous truck route to Oklahoma City, expanding the freight network for driverless long-haul operations. <a href="https://www.volvoautonomoussolutions.com/en-en/news-and-insights/press-releases/2026/may/volvo-and-aurora-launch-autonomous-truck-route-to-oklahoma-city.html">Read more</a></p>
+</li>
+<li><p><strong>Nuro gets driverless testing permit</strong>: The autonomous vehicle company received permits ahead of its Uber robotaxi service launch, marking progress in commercializing driverless ride-hailing. <a href="https://techcrunch.com/2026/05/05/nuro-receives-driverless-testing-permit-ahead-of-uber-robotaxi-service-launch/">Read more</a></p>
+</li>
+<li><p><strong>Tesla Robotaxi expansion</strong>: Tesla&#39;s autonomous ride service in Austin continues to grow, achieving new milestones in fleet operations and geofence expansion. <a href="https://www.teslarati.com/tesla-robotaxi-service-austin-achieves-monumental-new-accomplishment/">Read more</a></p>
+</li>
+<li><p><strong>Humble Hauler debuts cab-less trailer</strong>: A fully driverless, battery-electric autonomous trailer that eliminates the need for a traditional truck cab—challenging conventional freight logistics. <a href="https://electrek.co/2026/05/06/humble-hauler-autonomous-trailer-takes-the-truck-out-of-trucking/">Read more</a></p>
+</li>
+</ul>
+<h3>Key Takeaway</h3>
+<p>The AI industry is experiencing unprecedented momentum. With Q1 2026 already surpassing all of 2025&#39;s funding, we&#39;re witnessing a fundamental shift toward &quot;agentic&quot; AI—systems that don&#39;t just respond but act autonomously. The race between OpenAI, Google, Meta, and others to build capable AI agents represents the next evolution beyond chatbots. For CTOs and technical leaders, the key question is no longer <em>if</em> to adopt AI, but how to build or buy the agentic infrastructure that will define competitive advantage in the coming years.</p>
+<hr>
+<p><em>Published: May 9, 2026</em></p>
+]]></content:encoded>
+      <category>daily-digest</category>
+    <category>AI</category>
+    <category>tech-news</category>
+    <category>market-updates</category>
+    <category>startups</category>
+    <category>technology-trends</category>
+    <category>artificial-intelligence</category>
+    </item>
     <item>
       <title>Daily AI Updates - May 8, 2026</title>
       <link>https://shamyl.github.io/blog/daily-ai-updates-2026-05-08</link>
