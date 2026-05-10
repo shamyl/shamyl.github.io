@@ -5,13 +5,96 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Sat, 09 May 2026 04:01:58 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 10 May 2026 04:01:20 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamyl.github.io/blog</link>
     </image>
+    <item>
+      <title>Daily AI Updates - May 10, 2026</title>
+      <link>https://shamyl.github.io/blog/daily-ai-updates-2026-05-10</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/daily-ai-updates-2026-05-10</guid>
+      <pubDate>Sun, 10 May 2026 00:00:00 GMT</pubDate>
+      <description>Latest AI developments, tech trends, market updates, and world tech news from May 10, 2026.</description>
+      <content:encoded><![CDATA[<p>Here&#39;s your daily roundup of AI and tech news for May 10, 2026:</p>
+<h2>AI Developments</h2>
+<ul>
+<li><p><strong>Anthropic x SpaceX Partnership</strong>: Anthropic announced a major compute deal with SpaceX to substantially boost AI computing power for Claude software. This will increase usage limits for Claude users significantly.</p>
+</li>
+<li><p><strong>The &quot;Agentic Wars&quot; Heat Up</strong>: Meta and Google are racing to build personal AI agents, responding to the viral success of OpenClaw earlier this year. Both companies are testing agents designed to complete complex tasks autonomously.</p>
+</li>
+<li><p><strong>Anthropic &amp; OpenAI Enterprise Push</strong>: Both companies are launching joint ventures focused on enterprise AI services, signaling a strategic shift toward B2B deployments.</p>
+</li>
+<li><p><strong>Microsoft Releases Global AI Diffusion Report</strong>: Microsoft&#39;s comprehensive study on the state of global AI diffusion in 2026 highlights adoption patterns across industries and regions.</p>
+</li>
+<li><p><strong>Twilio&#39;s Agentic Infrastructure</strong>: Twilio launched its next-generation platform designed as an infrastructure layer for conversations in the agentic AI era, including a new Conversation Orchestrator.</p>
+</li>
+</ul>
+<h2>Technology Trends</h2>
+<ul>
+<li><p><strong>China&#39;s Quantum Leap</strong>: China unveiled Hanyuan-2, the world&#39;s first dual-core quantum computer that doesn&#39;t require ultra-low temperatures, marking a significant breakthrough in quantum computing accessibility.</p>
+</li>
+<li><p><strong>SpaceX&#39;s Massive Chip Investment</strong>: SpaceX may invest up to $119 billion on &#39;Terafab,&#39; a chip factory in Texas, signaling vertical integration ambitions in the AI hardware space.</p>
+</li>
+<li><p><strong>OrcaRouter Launches Open LLM API Router</strong>: Continuum AI released OrcaRouter — an MIT-licensed, zero-markup router supporting 100+ models, offering free credits for developers worldwide.</p>
+</li>
+<li><p><strong>Operant AI Security Launch</strong>: Operant AI launched Endpoint Protector, a security solution for &quot;shadow AI,&quot; coding agents, and MCP (Model Context Protocol) across enterprise environments.</p>
+</li>
+<li><p><strong>Collibra&#39;s AI Command Center</strong>: Collibra launched an AI Command Center to help enterprises scale agentic AI with real-time oversight and continuous control, addressing &quot;agent sprawl&quot; concerns.</p>
+</li>
+</ul>
+<h2>Market Updates</h2>
+<ul>
+<li><p><strong>SAP&#39;s Big Bets on AI</strong>: SAP made two major acquisitions this week:</p>
+<ul>
+<li><strong>Prior Labs</strong> (€1B / ~$1.16B): An 18-month-old German AI lab specializing in tabular foundation models, establishing SAP&#39;s frontier AI lab in Europe.</li>
+<li><strong>Dremio</strong>: Open data lakehouse platform to unify SAP and non-SAP data for agentic AI.</li>
+</ul>
+</li>
+<li><p><strong>Nebius Acquires Eigen AI</strong>: Netherlands-based AI cloud company Nebius is acquiring Eigen AI in a $643M cash-and-stock deal to boost hardware efficiency and throughput.</p>
+</li>
+<li><p><strong>Cisco Acquires Astrix</strong>: Cisco acquired AI security startup Astrix for $400 million, bolstering its cybersecurity portfolio.</p>
+</li>
+<li><p><strong>China&#39;s Moonshot AI Raises $2B</strong>: Moonshot AI raised $2 billion at a $20 billion valuation as demand for open-source AI skyrockets in China.</p>
+</li>
+<li><p><strong>NVIDIA Stock Performance</strong>: NVIDIA (NVDA) trades at $215.20, up 1.75%, ahead of its Q1 FY27 earnings report scheduled for May 20, 2026.</p>
+</li>
+</ul>
+<h2>World Tech</h2>
+<ul>
+<li><p><strong>EU Considering U.S. Cloud Restrictions</strong>: The European Commission is reportedly considering rules to restrict the use of U.S. cloud platforms for processing sensitive government data across EU countries, citing sovereignty concerns.</p>
+</li>
+<li><p><strong>Global AI Adoption Accelerates</strong>: Microsoft&#39;s latest report indicates rapid AI diffusion across sectors, with particular growth in healthcare, finance, and manufacturing.</p>
+</li>
+<li><p><strong>Enterprise AI Security Focus</strong>: Multiple security-focused AI launches this week highlight growing enterprise concerns about &quot;shadow AI&quot; and agent governance.</p>
+</li>
+</ul>
+<h2>Key Takeaways</h2>
+<ol>
+<li><p><strong>The Agentic Era is Here</strong>: Personal AI agents have become the hottest battleground, with major players (Meta, Google, Anthropic, OpenAI) all racing to dominate this emerging space.</p>
+</li>
+<li><p><strong>Infrastructure Arms Race</strong>: From SpaceX&#39;s compute deals to NVIDIA&#39;s chip dominance and SpaceX&#39;s own $119B chip factory plans — compute infrastructure is the new oil.</p>
+</li>
+<li><p><strong>Enterprise Security is the New Bottleneck</strong>: With agentic AI adoption accelerating, security (Astrix acquisition, Operant AI launch, Collibra&#39;s Command Center) is becoming the critical gating factor for enterprise deployment.</p>
+</li>
+<li><p><strong>SAP&#39;s Aggressive AI Strategy</strong>: SAP is making bold moves ($1.16B+ in acquisitions) to transform from an ERP vendor to an AI-first platform, leveraging its massive enterprise data advantage.</p>
+</li>
+<li><p><strong>Geopolitical Tech Fragmentation</strong>: EU&#39;s potential cloud restrictions and China&#39;s quantum/AI advances signal increasing technological fragmentation along geopolitical lines.</p>
+</li>
+</ol>
+<hr>
+<p><em>Stay updated with the latest in AI and tech. Subscribe to the newsletter for daily insights.</em></p>
+]]></content:encoded>
+      <category>daily-digest</category>
+    <category>AI</category>
+    <category>tech-news</category>
+    <category>market-updates</category>
+    <category>startups</category>
+    <category>technology-trends</category>
+    <category>artificial-intelligence</category>
+    </item>
     <item>
       <title>Daily AI Updates - May 9, 2026</title>
       <link>https://shamyl.github.io/blog/daily-ai-updates-2026-05-09</link>
