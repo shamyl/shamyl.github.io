@@ -5,13 +5,75 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Sun, 10 May 2026 04:01:20 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 11 May 2026 04:03:47 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamyl.github.io/blog</link>
     </image>
+    <item>
+      <title>Daily AI Updates - May 11, 2026</title>
+      <link>https://shamyl.github.io/blog/daily-ai-updates-2026-05-11</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/daily-ai-updates-2026-05-11</guid>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <description>Latest AI developments, tech trends, market updates, and world tech news from May 11, 2026.</description>
+      <content:encoded><![CDATA[<p>Here&#39;s your daily roundup of AI and tech news for May 11, 2026:</p>
+<h2>AI Developments</h2>
+<ul>
+<li><p><strong>OpenAI brings GPT-5-class reasoning to Live Voice</strong>: OpenAI has upgraded its real-time voice capabilities with advanced reasoning models, enabling more sophisticated conversational AI experiences.</p>
+</li>
+<li><p><strong>Anthropic partners with SpaceX for compute power</strong>: Anthropic announced a major deal with SpaceX to substantially increase compute capacity for Claude, resulting in higher usage limits for users.</p>
+</li>
+<li><p><strong>Agentic AI wars intensify</strong>: Meta and Google are racing to build personal AI agents to compete with OpenClaw&#39;s viral success, while Anthropic and OpenAI maintain their lead in the enterprise joint venture space.</p>
+</li>
+<li><p><strong>Meta acquires robotics AI startup</strong>: Meta is pushing into physical AI with a strategic acquisition targeting robotics capabilities.</p>
+</li>
+</ul>
+<h2>Technology Trends</h2>
+<ul>
+<li><p><strong>monday.com launches AI Work Platform</strong>: The work management giant unveiled its biggest transformation yet—a platform where people and AI agents collaborate seamlessly to get work done.</p>
+</li>
+<li><p><strong>AWS launches Agent Toolkit</strong>: Amazon Web Services released a production-ready suite of tools to help AI coding agents build effectively on AWS infrastructure.</p>
+</li>
+<li><p><strong>Twilio unveils conversation layer for agentic era</strong>: At SIGNAL 2026, Twilio launched new infrastructure enabling businesses to integrate AI agents into customer communications.</p>
+</li>
+<li><p><strong>Sentry introduces Application Metrics</strong>: New high-cardinality, trace-connected metrics for developers to capture telemetry once and query it any way for debugging.</p>
+</li>
+</ul>
+<h2>Market Updates</h2>
+<ul>
+<li><p><strong>SAP acquires Prior Labs for €1B+</strong>: The German software giant made a major bet on structured data AI, acquiring the 18-month-old startup to unlock enterprise data potential.</p>
+</li>
+<li><p><strong>IronSource founders&#39; startup Zyg raises at $500M valuation</strong>: The AI startup founded by the duo behind IronSource secured significant funding, continuing the trend of repeat founders attracting major capital.</p>
+</li>
+<li><p><strong>Q1 2026 shatters funding records</strong>: Global startup investment reached $300B in Q1 2026, driven by the ongoing AI boom and massive enterprise adoption.</p>
+</li>
+<li><p><strong>April 2026 marks third-highest funding month</strong>: Global venture funding hit $56B in April, up 100% year-over-year, with billion-dollar AI rounds leading the charge.</p>
+</li>
+</ul>
+<h2>World Tech</h2>
+<ul>
+<li><p><strong>EU delays AI Act restrictions</strong>: EU legislators agreed to postpone high-risk AI restrictions by more than a year, giving companies more time to comply with the bloc&#39;s flagship AI law.</p>
+</li>
+<li><p><strong>Alphabet poised to become world&#39;s biggest company</strong>: AI wins are driving Alphabet&#39;s market capitalization toward potentially surpassing all competitors, including long-time rival NVIDIA.</p>
+</li>
+<li><p><strong>Microsoft releases Global AI Diffusion Report 2026</strong>: AI usage increased by 1.5 percentage points in Q1 2026, showing continued global acceleration in adoption.</p>
+</li>
+<li><p><strong>World Economic Forum highlights convergent technologies</strong>: Cognitive AI robotic systems are reaching maturity as part of a broader technology convergence wave.</p>
+</li>
+</ul>
+<h3>Key Takeaway</h3>
+<p>The agentic AI race is the defining story of 2026. With Meta and Google scrambling to catch up to OpenAI and Anthropic&#39;s enterprise dominance, and companies like monday.com and AWS building infrastructure for the agentic era, we&#39;re witnessing a fundamental shift in how businesses operate. The $300B Q1 funding milestone signals this isn&#39;t just hype—it&#39;s the new operating system for global commerce.</p>
+]]></content:encoded>
+      <category>daily-digest</category>
+    <category>AI</category>
+    <category>tech-news</category>
+    <category>market-updates</category>
+    <category>startups</category>
+    <category>technology-trends</category>
+    <category>artificial-intelligence</category>
+    </item>
     <item>
       <title>Daily AI Updates - May 10, 2026</title>
       <link>https://shamyl.github.io/blog/daily-ai-updates-2026-05-10</link>
