@@ -5,13 +5,69 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Mon, 11 May 2026 04:03:47 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 12 May 2026 04:01:56 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamyl.github.io/blog</link>
     </image>
+    <item>
+      <title>Daily AI Updates - May 12, 2026</title>
+      <link>https://shamyl.github.io/blog/daily-ai-updates-2026-05-12</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/daily-ai-updates-2026-05-12</guid>
+      <pubDate>Tue, 12 May 2026 00:00:00 GMT</pubDate>
+      <description>Latest AI developments, tech trends, market updates, and world tech news from May 12, 2026.</description>
+      <content:encoded><![CDATA[<p>Here&#39;s your daily roundup of AI and tech news for May 12, 2026:</p>
+<h2>AI Developments</h2>
+<ul>
+<li><p><strong>OpenAI Launches Deployment Company with $4B+ Investment</strong>: OpenAI has created a new company, OpenAI Deployment Company (DeployCo), to help organizations build and deploy AI systems at scale. The company launches with over $4 billion in initial investment from partners including TPG, Advent, Bain Capital, Brookfield, and consulting firms like Bain &amp; Company and McKinsey. They also acquired Tomoro, bringing 150+ Forward Deployed Engineers into the fold.</p>
+</li>
+<li><p><strong>Claude Platform on AWS Now Generally Available</strong>: Anthropic&#39;s Claude Platform is now available on AWS, offering full API feature parity with AWS authentication, billing, and commitment retirement. Key features include Claude Managed Agents, code execution, web search, prompt caching, and batch processing. This marks Anthropic&#39;s first offering outside its native infrastructure.</p>
+</li>
+<li><p><strong>OpenAI Gives EU Access to GPT-5.5-Cyber</strong>: OpenAI announced it will grant EU authorities limited preview access to GPT-5.5-Cyber, a model designed for cybersecurity applications. The move comes as cybersecurity teams increasingly use AI to identify vulnerabilities.</p>
+</li>
+<li><p><strong>Google Thwarts AI-Powered Zero-Day Exploit</strong>: Google&#39;s Threat Intelligence Group detected and stopped a sophisticated hacking attempt that used AI models to discover and exploit zero-day vulnerabilities. This marks one of the first confirmed cases of AI being weaponized for mass exploitation at scale.</p>
+</li>
+</ul>
+<h2>Technology Trends</h2>
+<ul>
+<li><p><strong>AWS Agent Toolkit for AI Coding Agents</strong>: AWS launched the Agent Toolkit, a production-ready suite to help AI coding agents build effectively on AWS infrastructure, streamlining enterprise development workflows.</p>
+</li>
+<li><p><strong>IBM&#39;s AI Operating Model Blueprint</strong>: IBM delivered a new framework for enterprise AI operating models at Think 2026, focusing on next-generation agent orchestration and agentic development at scale.</p>
+</li>
+<li><p><strong>Twilio SIGNAL 2026 Announcements</strong>: Twilio unveiled infrastructure for the &quot;agentic era,&quot; introducing a new conversation layer designed for AI-powered customer interactions and automation.</p>
+</li>
+</ul>
+<h2>Market Updates</h2>
+<ul>
+<li><p><strong>SAP Acquires Prior Labs for €1B (~$1.16B)</strong>: German enterprise software giant SAP is acquiring Prior Labs, an 18-month-old German AI lab focused on unlocking enterprise structured data. The deal signals SAP&#39;s aggressive push into AI-powered enterprise solutions.</p>
+</li>
+<li><p><strong>Nova Intelligence Raises $31.5M</strong>: The startup raised funding to bring agentic AI to SAP&#39;s massive $89 billion migration wave, targeting the 77% of global transactions that touch SAP systems.</p>
+</li>
+<li><p><strong>OpenAI Deployment Company Partnership</strong>: The new OpenAI unit has backing from 19 leading investment firms and system integrators, with sponsors representing over 2,000 businesses globally.</p>
+</li>
+</ul>
+<h2>World Tech</h2>
+<ul>
+<li><p><strong>EU Delays AI Act Implementation</strong>: EU lawmakers reached a provisional deal to postpone restrictions on high-risk AI systems by over a year, softening the bloc&#39;s flagship AI law amid competitive pressures.</p>
+</li>
+<li><p><strong>China&#39;s Agentic AI Policy Draft</strong>: China&#39;s Cyberspace Administration published draft regulations for AI agents, emphasizing keeping humans in the loop and establishing governance frameworks for autonomous AI systems.</p>
+</li>
+<li><p><strong>China Unveils Hanyuan-2 Quantum Computer</strong>: China announced the world&#39;s first dual-core quantum computer that doesn&#39;t require ultra-low temperatures, potentially making quantum computing more accessible and maintainable.</p>
+</li>
+</ul>
+<h3>Key Takeaway</h3>
+<p>The AI deployment race is accelerating. OpenAI&#39;s $4B+ DeployCo launch and Anthropic&#39;s AWS partnership signal a major shift from model development to enterprise deployment. With SAP&#39;s billion-dollar AI acquisition and EU regulatory adjustments, we&#39;re seeing the infrastructure layer mature while enterprises scramble to integrate AI into core operations. For CTOs, the message is clear: the window for experimental AI is closing—production deployment at scale is now the battlefield.</p>
+]]></content:encoded>
+      <category>daily-digest</category>
+    <category>AI</category>
+    <category>tech-news</category>
+    <category>market-updates</category>
+    <category>startups</category>
+    <category>technology-trends</category>
+    <category>artificial-intelligence</category>
+    </item>
     <item>
       <title>Daily AI Updates - May 11, 2026</title>
       <link>https://shamyl.github.io/blog/daily-ai-updates-2026-05-11</link>
