@@ -5,13 +5,71 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Tue, 12 May 2026 04:01:56 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 13 May 2026 04:01:21 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamyl.github.io/blog</link>
     </image>
+    <item>
+      <title>Daily AI Updates - May 13, 2026</title>
+      <link>https://shamyl.github.io/blog/daily-ai-updates-2026-05-13</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/daily-ai-updates-2026-05-13</guid>
+      <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
+      <description>Latest AI developments, tech trends, market updates, and world tech news from May 13, 2026.</description>
+      <content:encoded><![CDATA[<p>Here&#39;s your daily roundup of AI and tech news for May 13, 2026:</p>
+<h2>AI Developments</h2>
+<ul>
+<li><p><strong>Google Puts Gemini at the Center of Android</strong>: Google is rolling out new Gemini-powered Android features ahead of I/O, with AI that understands screen context and completes multi-step tasks like building shopping carts or booking reservations. The move comes ahead of Apple&#39;s expected Siri revamp.</p>
+</li>
+<li><p><strong>Meta AI Gets &quot;Live AI&quot; Feature</strong>: Meta&#39;s AI app now supports real-time camera interaction — point your camera at something, ask about it, and get instant responses. This brings Meta&#39;s multimodal capabilities into everyday use cases.</p>
+</li>
+<li><p><strong>OpenAI Brings GPT-5.5-Class Reasoning to Real-Time Voice</strong>: OpenAI has enhanced voice mode with advanced reasoning capabilities, enabling voice agents to orchestrate complex multi-step tasks in real-time conversations.</p>
+</li>
+<li><p><strong>Microsoft&#39;s AI Scanner Finds Critical Windows Vulnerabilities</strong>: Microsoft&#39;s MDASH AI vulnerability scanner discovered four critical remote code execution (RCE) bugs in Windows TCP/IP networking, demonstrating AI&#39;s growing role in cybersecurity.</p>
+</li>
+<li><p><strong>SAP Unveils the Autonomous Enterprise</strong>: SAP announced a unified Business AI Platform at Sapphire, deepening partnerships with Anthropic, AWS, Google Cloud, Microsoft, NVIDIA, and Palantir for enterprise automation.</p>
+</li>
+</ul>
+<h2>Technology Trends</h2>
+<ul>
+<li><p><strong>Agentic AI Goes Mainstream</strong>: Google&#39;s new Android features showcase &quot;vibe-coded widgets&quot; and agentic AI that can take actions on behalf of users, signaling a shift from passive assistants to active agents.</p>
+</li>
+<li><p><strong>Meta Llama 4 Solidifies Open-Source Leadership</strong>: With native multimodal vision capabilities released earlier this month, Meta&#39;s Llama 4 continues to close the gap with proprietary models while remaining open-source.</p>
+</li>
+<li><p><strong>NVIDIA Dynamo 1.0 Enters Production</strong>: NVIDIA&#39;s inference operating system for AI factories is now production-ready, optimizing how AI models run at scale in data centers.</p>
+</li>
+</ul>
+<h2>Market Updates</h2>
+<ul>
+<li><p><strong>Anthropic in Talks for $30B Raise at $900B Valuation</strong>: Anthropic is reportedly negotiating a massive funding round that would value the company at $900 billion, highlighting continued investor appetite for foundation model companies.</p>
+</li>
+<li><p><strong>NVIDIA Stock Hits Record $219.44</strong>: NVIDIA shares surged to an all-time closing high as AI demand continues to power gains ahead of May 20 earnings. The company has committed over $40 billion this year to AI supply chain investments.</p>
+</li>
+<li><p><strong>SAP Acquires Dremio for Data Lakehouse</strong>: SAP&#39;s acquisition of Dremio aims to unify SAP and non-SAP data to power agentic AI applications in the enterprise.</p>
+</li>
+<li><p><strong>Cisco Acquires Astrix Security for $400M</strong>: Cisco completed its acquisition of Israeli AI security startup Astrix Security, strengthening its cybersecurity portfolio.</p>
+</li>
+</ul>
+<h2>World Tech</h2>
+<ul>
+<li><p><strong>France Orders 2.5M Civil Servants to Switch to Linux</strong>: In a major digital sovereignty move, France has ordered its civil servants to ditch Microsoft Windows for Linux, reducing dependence on US tech giants.</p>
+</li>
+<li><p><strong>Google and SpaceX in Talks for Orbital Data Centers</strong>: Reports indicate Google and SpaceX are negotiating to launch data centers into orbit, potentially revolutionizing edge computing and data sovereignty.</p>
+</li>
+</ul>
+<h3>Key Takeaway</h3>
+<p>The AI race is accelerating on multiple fronts: Google is embedding Gemini deeply into Android before Apple&#39;s AI reboot, Meta is making AI multimodal and real-time, and enterprises like SAP are betting big on agentic automation. Meanwhile, the market continues to reward AI infrastructure players — NVIDIA&#39;s record stock price and Anthropic&#39;s potential $900B valuation show investors remain bullish despite regulatory concerns.</p>
+]]></content:encoded>
+      <category>daily-digest</category>
+    <category>AI</category>
+    <category>tech-news</category>
+    <category>market-updates</category>
+    <category>startups</category>
+    <category>technology-trends</category>
+    <category>artificial-intelligence</category>
+    </item>
     <item>
       <title>Daily AI Updates - May 12, 2026</title>
       <link>https://shamyl.github.io/blog/daily-ai-updates-2026-05-12</link>
