@@ -5,7 +5,7 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Wed, 13 May 2026 04:01:21 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 13 May 2026 05:54:28 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
@@ -69,6 +69,87 @@
     <category>startups</category>
     <category>technology-trends</category>
     <category>artificial-intelligence</category>
+    </item>
+    <item>
+      <title>Tech, Art &amp; Entertainment - May 13, 2026</title>
+      <link>https://shamyl.github.io/blog/tech-art-2026-05-13</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/tech-art-2026-05-13</guid>
+      <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
+      <description>Creative intersections of technology, art, and entertainment from May 13, 2026.</description>
+      <content:encoded><![CDATA[<p>Here&#39;s your Friday creative tech roundup for May 13, 2026:</p>
+<p><img src="/images/tech-art-2026-05-13-1.jpg" alt="Abstract digital art with colorful squares and lines">
+<em>Photo by MARIOLA GROBELSKA on Unsplash</em></p>
+<h2>AI Art &amp; Creative Tools</h2>
+<p>The AI art space continues to evolve rapidly with exciting developments from major players:</p>
+<ul>
+<li><p><strong>Midjourney V8.1 Alpha Released</strong> — Building on the success of V8, the new V8.1 Alpha brings 3x faster HD generation at 3x lower cost, along with 50% faster standard resolution outputs. Moodboards and style references (srefs) are now significantly more stable, making it easier to maintain consistent aesthetics across projects.</p>
+</li>
+<li><p><strong>Stable Diffusion 3.5 Updates</strong> — Stability AI has been iterating on their SD 3.5 release, including the Medium variant that offers a great balance of quality and efficiency. The open-source nature continues to drive innovation in the generative AI community.</p>
+</li>
+<li><p><strong>Claude for Creative Work</strong> — Anthropic has been pushing their Claude models for creative applications, helping artists and designers with ideation, repetitive tasks, and larger-scale projects. The focus is on augmenting human creativity rather than replacing it.</p>
+</li>
+</ul>
+<h2>Generative Art &amp; Creative Coding</h2>
+<p>The generative art scene is buzzing with new exhibitions and community projects:</p>
+<ul>
+<li><p><strong>Leander Herzog: runtime at HEK</strong> — The Swiss artist has transformed the HEK (House of Electronic Arts) homepage into a living exhibition space. From January through March 2026, one fullscreen generative work runs each day in real-time, constantly generating itself. This explores the ephemeral nature of digital art and challenges traditional exhibition formats.</p>
+</li>
+<li><p><strong>Genuary 2026</strong> — The annual month-long creative coding challenge continues to inspire artists worldwide. Participants create generative art based on daily prompts, sharing their process and outcomes. The community has been showcasing incredible algorithmic artworks using p5.js, Processing, and custom tools.</p>
+</li>
+<li><p><strong>Living Commons by Mark Walhimer</strong> — A series of browser-based generative works exploring what it means to share space in the digital age. Each piece runs live with no video, no recording, and no fixed state — emphasizing the performative aspect of generative systems.</p>
+</li>
+<li><p><strong>Rafael Lozano-Hemmer&#39;s &quot;Resurgent Streams&quot;</strong> — The renowned Mexican-Canadian artist&#39;s latest generative artwork is dedicated to contemporary Mexican Indigenous poetry. Beginning with twelve poems from indigenous writers, the piece creates dynamic visual responses to the spoken word.</p>
+</li>
+</ul>
+<h2>Tech in Film, Music &amp; Gaming</h2>
+<p>Creative industries are embracing AI-native tools at an accelerating pace:</p>
+<ul>
+<li><p><strong>yosAI Studio</strong> — Billing itself as the world&#39;s first AI-native DAW (Digital Audio Workstation), yosAI Studio features &quot;Ghost Lane&quot; for AI-assisted composition, Session Players for jamming with AI musicians, and lyric writing support in 30+ languages. This represents a paradigm shift in how music is produced.</p>
+</li>
+<li><p><strong>MiniMax Music 2.5</strong> — The latest version brings breakthrough capabilities across all dimensions of music generation. Users can now direct fine details with unprecedented precision, creating more realistic and emotionally resonant AI-generated music.</p>
+</li>
+<li><p><strong>CrumplePop 2026</strong> — This AI-powered audio demixing tool can instantly separate finished audio into stems. Musicians and producers can now extract individual instruments from mixed tracks with remarkable precision, opening new possibilities for remixing and sampling.</p>
+</li>
+<li><p><strong>Daydream</strong> — A new open-source platform for real-time AI video creation. Built for live performance and installation work, Daydream enables artists to generate video content on-the-fly using StreamDiffusion integrated with TouchDesigner.</p>
+</li>
+</ul>
+<h2>Interactive &amp; Immersive Experiences</h2>
+<p>VR and AR continue to blur the lines between physical and digital art:</p>
+<p><img src="/images/tech-art-2026-05-13-2.jpg" alt="People experiencing VR immersive art"></p>
+<ul>
+<li><p><strong>The Living Gallery by Nu:Reality</strong> — This VR program invites viewers to step inside artworks rather than just observe them. Moving through paintings and installations creates a fully embodied art experience that challenges traditional gallery formats.</p>
+</li>
+<li><p><strong>&quot;Blur&quot; at PHI Centre Montreal</strong> — Running through March 2026, this immersive XR theatre experience combines mixed reality with live performance, exploring themes of perception and identity. Audiences navigate between physical and virtual spaces in this groundbreaking work.</p>
+</li>
+<li><p><strong>Evolver at ArtScience Museum Singapore</strong> — This VR experience running through August 2026 takes viewers on an immersive journey through the human respiratory system. It&#39;s a fascinating example of how VR can be used for both artistic expression and educational impact.</p>
+</li>
+<li><p><strong>BODYVERSE by UNIVRSE</strong> — A free-roam multi-user location-based VR experience that takes visitors on an immersive journey inside the human body. With support for up to 30 simultaneous users, it&#39;s pushing the boundaries of social VR experiences.</p>
+</li>
+<li><p><strong>&quot;The Heart of the Earth&quot; Phygital Edition</strong> — Artist Cesare Catania&#39;s sculptural work combines physical materials with AR layers, creating a &quot;phygital&quot; (physical + digital) art piece where &quot;matter meets the digital&quot; — exploring balance, force, and perception.</p>
+</li>
+</ul>
+<h2>Cool Projects</h2>
+<ul>
+<li><p><strong>AI-Assisted Creative Coding</strong> — More artists are incorporating AI tools like Claude and GPT into their creative coding workflows, using them to generate algorithmic patterns, optimize performance, and explore new visual territories.</p>
+</li>
+<li><p><strong>Neural Style Transfer in Live Performance</strong> — Musicians and visual artists are collaborating to create real-time neural style transfer performances, where music drives the transformation of visual imagery.</p>
+</li>
+<li><p><strong>Blockchain-Free Digital Art Ownership</strong> — New models for digital art provenance are emerging that don&#39;t rely on blockchain technology, focusing instead on cryptographic signatures and trusted institutions.</p>
+</li>
+</ul>
+<h3>Key Takeaway</h3>
+<p>The theme of 2026 is <strong>integration</strong> — not just AI replacing human creativity, but AI and technology becoming seamless extensions of artistic expression. From real-time generative exhibitions to AI-native music production tools, we&#39;re seeing a shift from &quot;tech vs. art&quot; to &quot;tech as art medium.&quot; The tools are becoming invisible, letting creators focus on what matters: the work itself.</p>
+<p>Whether you&#39;re an artist exploring new tools or simply curious about where creativity and technology intersect, this is an incredibly exciting time. The barriers to entry have never been lower, and the possibilities have never been broader.</p>
+<hr>
+<p><em>What creative tech developments are you most excited about? Drop a comment below!</em></p>
+<p><em>Images: Photo 1 by MARIOLA GROBELSKA on Unsplash. Photo 2 via Pexels.</em></p>
+]]></content:encoded>
+      <category>tech-art</category>
+    <category>AI-art</category>
+    <category>creative-tech</category>
+    <category>digital-art</category>
+    <category>generative-art</category>
+    <category>interactive</category>
     </item>
     <item>
       <title>Daily AI Updates - May 12, 2026</title>
