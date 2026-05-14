@@ -5,13 +5,99 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Wed, 13 May 2026 06:12:16 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 14 May 2026 04:02:43 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamyl.github.io/blog</link>
     </image>
+    <item>
+      <title>3D Printing Roundup - May 14, 2026</title>
+      <link>https://shamyl.github.io/blog/3d-printing-2026-05-14</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/3d-printing-2026-05-14</guid>
+      <pubDate>Thu, 14 May 2026 00:00:00 GMT</pubDate>
+      <description>Latest in 3D printing technology, printers, materials, and maker projects from May 14, 2026.</description>
+      <content:encoded><![CDATA[<p><img src="/images/3d-printing-2026-05-14-1.jpg" alt="3D Printer in action">
+<em>Photo by Jakub Żerdzicki on Unsplash</em></p>
+<p>Here&#39;s your Thursday 3D printing roundup for May 14, 2026:</p>
+<h2>Printer News &amp; Releases</h2>
+<h3>Bambu Lab X2D: Dual-Nozzle Innovation</h3>
+<p>Bambu Lab has officially launched the <strong>X2D</strong>, the second-generation successor to their flagship X1 series. This isn&#39;t just an incremental update—it&#39;s a fundamental rethinking of multi-material workflows.</p>
+<p><strong>Key Features:</strong></p>
+<ul>
+<li><strong>Dual-nozzle system</strong> with mechanical switching (one nozzle for model, one for supports)</li>
+<li><strong>Hybrid extrusion</strong>: Direct drive for main nozzle + Bowden for auxiliary nozzle</li>
+<li><strong>Dynamic Flow Calibration</strong> that auto-compensates for wear and environmental changes</li>
+<li><strong>300°C nozzle temp</strong> and <strong>65°C chamber temp</strong> for engineering materials</li>
+<li>Starting at <strong>$649</strong></li>
+</ul>
+<p>The mechanical nozzle-switching mechanism eliminates purge waste and simplifies support removal—a game-changer for anyone tired of wrestling with soluble supports.</p>
+<h3>Creality&#39;s &quot;Desktop Micro-Factory&quot; at RAPID+TCT 2026</h3>
+<p>Creality made waves at Boston&#39;s premier additive manufacturing show with their comprehensive ecosystem approach:</p>
+<ul>
+<li><strong>SPARKX i7</strong>: Quick-swap hotend, four-color filament system, AI-powered assistance</li>
+<li><strong>HALOT X1 Combo</strong>: Next-gen 16K ultra-high-resolution resin printer with leveling-free operation</li>
+<li><strong>Sermoon P1 3D Scanner</strong>: 0.02mm accuracy for digitizing real-world objects</li>
+<li><strong>Filament Maker M1 + Shredder R1</strong>: Desktop filament recycling system (already raised over HK$40 million on crowdfunding)</li>
+</ul>
+<h3>Prusa CORE One INDX: The Toolchanger Arrives</h3>
+<p>Prusa has opened orders for the <strong>INDX conversion kit</strong>, turning compatible CORE One printers into 8-nozzle toolchangers. At $749 for the four-tool version, this brings professional multi-material capability to serious hobbyists.</p>
+<h2>Materials &amp; Filaments</h2>
+<h3>Wool-Based Filament from New Zealand</h3>
+<p>In a world-first, <strong>Wool Source</strong> and <strong>KiwiFil</strong> have developed <strong>WoolyFil</strong>—a filament using wool-based colorants. The pigments contain 92-98% bio-based content, offering a sustainable alternative to synthetic petrochemical dyes.</p>
+<p>Available in &quot;Green Marble&quot; and &quot;Riverstone&quot; colors, this rPLA filament features a unique textured surface while maintaining everyday printability. This could mark the beginning of a shift toward truly sustainable filament production.</p>
+<h3>Bambu Lab PLA Pure</h3>
+<p>Bambu Lab also introduced <strong>PLA Pure</strong>—their first food-contact-approved filament, opening new possibilities for kitchenware and food-safe applications.</p>
+<h2>Software Updates</h2>
+<h3>PrusaSlicer 3.0 Incoming</h3>
+<p>The long-awaited PrusaSlicer 3.0 could arrive within weeks following an extensive code overhaul. This major version promises significant improvements to the slicing engine and workflow.</p>
+<h3>Bambu Studio 2.6.1 Beta</h3>
+<p>Bambu Studio continues rapid iteration with version 2.6.1 now in public beta, adding refinements to the already excellent multi-material workflow.</p>
+<h2>Cool Projects &amp; Prints</h2>
+<h3>Working Electric Turbofan Model</h3>
+<p>Maker <strong>CADLY</strong> has created a fully functional electric turbofan model inspired by CFM56 engines. Features include:</p>
+<ul>
+<li>Thrust reverser doors that actually redirect airflow</li>
+<li>Arduino-controlled servos and motor</li>
+<li>37-hour print time on standard FDM machines</li>
+<li>Detailed core and compressor stages</li>
+</ul>
+<p>Perfect for aviation enthusiasts and engineering students!</p>
+<h3>Arduino Nano Tamagotchi</h3>
+<p>A nostalgic project combining 3D printing with electronics—build your own Tamagotchi emulator with a custom 3D-printed shell. The ArduinoGotchi firmware brings the 90s classic back to life.</p>
+<h3>3D-Printed Steam Locomotive Whistle</h3>
+<p>Maker <strong>AeroKoi</strong> spent months perfecting a working steam locomotive whistle using desktop 3D printing. After multiple iterations and testing, the result is a surprisingly loud, functional whistle printed in standard materials.</p>
+<h2>Industry Applications</h2>
+<h3>Rolls-Royce Opens Additive Manufacturing Facility</h3>
+<p>Rolls-Royce inaugurated a new <strong>350 m² additive manufacturing facility</strong> at their Bristol site, backed by UK Ministry of Defence funding. The facility supports the Global Combat Air Programme (GCAP) and represents a strategic shift in defense manufacturing.</p>
+<p>Using metal powder bed fusion technology, the cell produces complex super-alloy components that would be impossible through traditional machining. The UK estimates that 3D printing just 15% of defense inventory could save £110 million over 15 years.</p>
+<h3>Wire-Arc AM Delivers Critical Components</h3>
+<p>Wire-arc additive manufacturing (WAAM) delivered a critical Soo Lock component in just 3 months—a process that traditionally takes years. This showcases the technology&#39;s potential for rapid infrastructure repair and heavy industry.</p>
+<h3>Fleet Readiness Center East Delivers First Metal 3D Printed Parts</h3>
+<p>The U.S. Marine Corps&#39; Fleet Readiness Center East has delivered its first metal 3D printed parts to the fleet, marking a milestone in military adoption of additive manufacturing for operational readiness.</p>
+<h2>Crowdfunding Highlights</h2>
+<ul>
+<li><strong>Revopoint POP 4 3D Scanner</strong>: Now on Kickstarter, targeting reliable handheld scanning</li>
+<li><strong>xTool WonderPress</strong>: 3D auto heat press that raised $1 million in just 4 hours</li>
+<li><strong>iNEW3D QC2A</strong>: Bringing full-color material jetting 3D printing under €10,000</li>
+</ul>
+<hr>
+<p><img src="/images/3d-printing-2026-05-14-2.jpg" alt="3D Printer extruder detail">
+<em>Photo by Jakub Żerdzicki on Pexels</em></p>
+<h3>Key Takeaway</h3>
+<p>The theme for May 2026 is clear: <strong>workflow optimization over raw speed</strong>. From Bambu Lab&#39;s dual-nozzle system eliminating waste to Creality&#39;s integrated micro-factory concept, manufacturers are finally addressing the friction points that make desktop 3D printing painful. Multi-material printing is becoming practical, not just possible. Meanwhile, industrial AM continues its march into critical infrastructure and defense applications.</p>
+<p>Whether you&#39;re a hobbyist, educator, or industry professional, there&#39;s never been a better time to be involved in 3D printing.</p>
+<hr>
+<p><em>What caught your eye this week? Share your thoughts in the comments or tag me on social media with your latest prints!</em></p>
+]]></content:encoded>
+      <category>3d-printing</category>
+    <category>additive-manufacturing</category>
+    <category>maker</category>
+    <category>fdm</category>
+    <category>sla</category>
+    <category>filament</category>
+    </item>
     <item>
       <title>Daily AI Updates - May 13, 2026</title>
       <link>https://shamyl.github.io/blog/daily-ai-updates-2026-05-13</link>
