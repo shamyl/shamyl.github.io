@@ -5,13 +5,91 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Thu, 14 May 2026 04:02:43 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 15 May 2026 04:02:20 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamyl.github.io/blog</link>
     </image>
+    <item>
+      <title>Tech, Art &amp; Entertainment - May 15, 2026</title>
+      <link>https://shamyl.github.io/blog/tech-art-2026-05-15</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/tech-art-2026-05-15</guid>
+      <pubDate>Fri, 15 May 2026 00:00:00 GMT</pubDate>
+      <description>Creative intersections of technology, art, and entertainment from May 15, 2026.</description>
+      <content:encoded><![CDATA[<p>Here&#39;s your Friday creative tech roundup for May 15, 2026:</p>
+<p><img src="/images/tech-art-2026-05-15-1.jpg" alt="Abstract Technology Art">
+<em>Abstract technology visualization — Photo by Pexels</em></p>
+<h2>AI Art &amp; Creative Tools</h2>
+<ul>
+<li><p><strong>Midjourney V8.1 Alpha Ships with 3x Performance Boost</strong> — Released April 14, 2026, Midjourney&#39;s latest update delivers 3x faster HD generation at 3x lower cost, plus 50% faster standard resolution rendering. The update also restores beloved image prompt functionality that creators missed from earlier versions.</p>
+</li>
+<li><p><strong>Stability AI Launches SDXL 4</strong> — The newest iteration of Stability AI&#39;s foundational open image model brings game-changing features for high-resolution image generation, setting new standards for open-source AI art tools.</p>
+</li>
+<li><p><strong>MiniMax Music 2.5 Breakthrough</strong> — MiniMax released Music 2.5 with enhanced control across all dimensions, allowing creators to &quot;direct the detail&quot; and define realism in AI-generated music compositions.</p>
+</li>
+</ul>
+<h2>Generative Art</h2>
+<ul>
+<li><p><strong>&quot;Remix The Archive&quot; Exhibition Opens</strong> — The Finnish National Gallery launched a stunning generative art exhibition featuring works by artists including Agoston Nagy, Roni Kaufman, and Shaderism, reimagining archival collections through algorithmic creativity.</p>
+</li>
+<li><p><strong>Data Art 2026: Signals Exhibition</strong> — Running May 12 - June 5 at Pontio in Bangor, Wales, this celebration of creative visualization showcases data-driven artistry that transforms raw information into compelling visual narratives.</p>
+</li>
+<li><p><strong>Gray Area Creative Code Showcase Spring 2026</strong> — San Francisco&#39;s Gray Area foundation presents their biannual showcase May 20-21, where studio art meets computer science in an immersive exhibition of code-based creativity.</p>
+</li>
+<li><p><strong>The Generative Art Museum: Issue #06 &quot;Input Output&quot;</strong> — TGAM&#39;s latest edition explores different points of view within generative art, featuring works by Anna Carreras, Licia He, and Deafbeef.</p>
+</li>
+</ul>
+<h2>Tech in Film, Music &amp; Gaming</h2>
+<ul>
+<li><p><strong>Adobe&#39;s AI-Powered Video Revolution</strong> — Adobe extended its leadership in video with new AI-powered creation tools in Firefly and reinvented color editing in Premiere Pro, making professional-grade post-production more accessible than ever.</p>
+</li>
+<li><p><strong>Epidemic Sound Integrates AI Assistant</strong> — Music licensing platform Epidemic Sound now offers AI Assistant directly in plugins for Adobe Premiere and DaVinci Resolve Studio, streamlining soundtrack selection for video editors.</p>
+</li>
+<li><p><strong>Roblox Studio Goes Agentic</strong> — 44% of top Roblox creators now use new agentic workflows that enable faster planning, building, and testing using AI-powered automation within the platform.</p>
+</li>
+<li><p><strong>Phaser Editor v5 Released</strong> — The popular game development tool now features full AI integration and complete Phaser 4 support, empowering indie game creators with intelligent code assistance.</p>
+</li>
+</ul>
+<h2>Interactive &amp; Immersive Experiences</h2>
+<ul>
+<li><p><strong>&quot;The Metamorphoses of Guernica&quot; VR Experience</strong> — Musée national Picasso-Paris presents a unique VR journey into Picasso&#39;s masterpiece, running April 8 - September 6, 2026. Co-produced by Lucid Realities, this immersive experience redefines how we engage with iconic art.</p>
+</li>
+<li><p><strong>&quot;Evolver&quot; at ArtScience Museum Singapore</strong> — Running through August 16, 2026, this immersive VR journey takes visitors on a meditation of life and breath, showcasing the therapeutic potential of virtual reality experiences.</p>
+</li>
+<li><p><strong>Temporal Strata Immersive Dome</strong> — This new installation approaches time as matter — layered, unstable, and continuously in flux. In the dome, sound and image converge into an immersive field that loosens linear perception.</p>
+</li>
+<li><p><strong>Interstellar Arc: World&#39;s Largest VR Experience</strong> — AREA15 Las Vegas hosts daily departures for what claims to be the world&#39;s largest VR experience, representing a bold new direction for location-based entertainment.</p>
+</li>
+<li><p><strong>&quot;The Heart of the Earth&quot; Phygital Edition</strong> — Cesare Catania&#39;s sculptural system where matter meets the digital — a phygital art piece exploring balance, force, and perception in augmented reality.</p>
+</li>
+</ul>
+<h2>Cool Projects</h2>
+<ul>
+<li><p><strong>DoodlePi V2</strong> — A Raspberry Pi Pico pixel art drawing toy inspired by Etch A Sketch, allowing creators to draw, erase, and create retro-style art with a delightful DIY approach.</p>
+</li>
+<li><p><strong>Raspberry Pi Glitch Art Camera</strong> — A DIY camera project that transforms ordinary photos into incredible glitch art, offering an alternative to data-harvesting photo apps.</p>
+</li>
+<li><p><strong>Walabasquiat Interactive Installation</strong> — Using the Walabot 3D imaging sensor, Raspberry Pi, and Android, this interactive generative art installation creates unique visual experiences based on user movement and presence.</p>
+</li>
+<li><p><strong>Circular Servo Motor Array</strong> — An Arduino Mega 2560-powered kinetic art and robotic display system featuring mesmerizing mandala patterns created through precise servo motor choreography.</p>
+</li>
+</ul>
+<p><img src="/images/tech-art-2026-05-15-2.jpg" alt="Creative Technology">
+<em>Digital creativity visualization — Photo by Pexels</em></p>
+<h3>Key Takeaway</h3>
+<p>The creative technology landscape is accelerating rapidly, with AI tools becoming more powerful yet more accessible. What&#39;s particularly exciting is the convergence: AI assistants embedded directly in creative workflows (Adobe Premiere, DaVinci Resolve), generative art exhibitions gaining institutional recognition (Finnish National Gallery), and DIY maker projects democratizing creative expression. The boundary between artist and technologist continues to blur — and that&#39;s where the magic happens. Whether you&#39;re experimenting with Midjourney V8.1, building a Raspberry Pi glitch camera, or exploring VR art experiences, there&#39;s never been a better time to create at the intersection of tech and art.</p>
+<hr>
+<p><em>Images sourced from Pexels (free to use under Pexels License)</em></p>
+]]></content:encoded>
+      <category>tech-art</category>
+    <category>AI-art</category>
+    <category>creative-tech</category>
+    <category>digital-art</category>
+    <category>generative-art</category>
+    <category>interactive</category>
+    </item>
     <item>
       <title>3D Printing Roundup - May 14, 2026</title>
       <link>https://shamyl.github.io/blog/3d-printing-2026-05-14</link>
