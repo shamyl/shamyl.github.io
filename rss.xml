@@ -5,13 +5,114 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Sun, 17 May 2026 04:03:05 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 18 May 2026 04:04:21 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamyl.github.io/blog</link>
     </image>
+    <item>
+      <title>AI Updates - May 18, 2026</title>
+      <link>https://shamyl.github.io/blog/ai-updates-2026-05-18</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/ai-updates-2026-05-18</guid>
+      <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+      <description>Latest AI developments, tech trends, market updates, and world tech news from May 18, 2026.</description>
+      <content:encoded><![CDATA[<p>Here&#39;s your Monday roundup of AI and tech news for May 18, 2026:</p>
+<p><img src="/images/ai-updates-2026-05-18-2.jpg" alt="AI Neural Network Visualization"></p>
+<h2>AI Developments</h2>
+<p><strong>OpenAI Codex Goes Mobile</strong></p>
+<ul>
+<li>OpenAI has integrated Codex into the ChatGPT mobile app, allowing developers to monitor and manage AI coding agents directly from their phones</li>
+<li>This positions OpenAI as a serious competitor to Google Gemini and Anthropic Claude in the coding agent space</li>
+<li>The update builds groundwork for OpenAI&#39;s upcoming &quot;super app&quot; vision</li>
+</ul>
+<p><strong>Anthropic Overtakes OpenAI in Enterprise</strong></p>
+<ul>
+<li>For the first time, Anthropic has more verified business customers than OpenAI, according to Ramp data</li>
+<li>This signals growing enterprise trust in Claude&#39;s reliability and safety features</li>
+<li>A significant milestone in the competitive AI landscape</li>
+</ul>
+<p><strong>Google DeepMind&#39;s AI Pointer</strong></p>
+<ul>
+<li>DeepMind revealed &quot;Magic Pointer&quot; — an AI-enabled mouse pointer that understands context around the cursor</li>
+<li>Powered by Gemini, it captures visual and semantic context without needing to switch windows</li>
+<li>Could fundamentally change how humans interact with computers</li>
+</ul>
+<p><strong>OpenAI&#39;s Daybreak Security Initiative</strong></p>
+<ul>
+<li>OpenAI launched Daybreak, a cybersecurity platform pairing GPT-5.5 variants with Codex Security</li>
+<li>Designed to help defenders find vulnerabilities before attackers exploit them</li>
+<li>A direct response to Anthropic&#39;s Mythos in the cyber defense space</li>
+</ul>
+<h2>Technology Trends</h2>
+<p><strong>Vercel Labs Introduces Zero</strong></p>
+<ul>
+<li>A new systems programming language specifically designed for AI agents to read, repair, and ship native programs</li>
+<li>Targets the growing need for AI-readable codebases in enterprise environments</li>
+</ul>
+<p><strong>AxiomStudio.ai Launches VibeFlow</strong></p>
+<ul>
+<li>Enterprise-grade AI coding with compliance integration</li>
+<li>Connects with Jira, Confluence, Bitbucket, GitHub, and Figma</li>
+<li>Claims up to 60× faster development with AI agent teams</li>
+</ul>
+<p><strong>Vector Lakebase by Zilliz</strong></p>
+<ul>
+<li>New solution targeting the &quot;AI Data Silo&quot; problem</li>
+<li>Addresses data gravity challenges that every modern AI team faces</li>
+<li>End-to-end vector database architecture for enterprise AI</li>
+</ul>
+<h2>Market Updates</h2>
+<p><strong>Q1&#39;26: Record AI Funding</strong></p>
+<ul>
+<li>Private AI companies raised $226B in Q1 2026 — surpassing all of 2025&#39;s funding in a single quarter</li>
+<li>OpenAI&#39;s $122B corporate minority round alone comprised 54% of total funding</li>
+<li>Without that mega-round, Q1&#39;26 still saw $104B (45% YoY growth)</li>
+</ul>
+<p><strong>Moonshot AI&#39;s $20B Mega-Round</strong></p>
+<ul>
+<li>Dominated May&#39;s VC funding landscape</li>
+<li>Three mega-rounds defined the month: Moonshot AI ($20B), Plug and Play Japan ($6.15B), and major AI infrastructure plays</li>
+<li>37 AI deals in May captured nearly 45% of all venture activity</li>
+</ul>
+<p><strong>White Circle Raises $11M</strong></p>
+<ul>
+<li>Startup focused on preventing AI models from &quot;going rogue&quot; in workplace environments</li>
+<li>Addresses growing enterprise concerns about AI safety and control</li>
+</ul>
+<h2>World Tech</h2>
+<p><strong>Q-Day Approaches</strong></p>
+<ul>
+<li>CNN reports quantum computing threatens to unleash a cybersecurity crisis far worse than Y2K</li>
+<li>&quot;Q-Day&quot; — the moment quantum computers can break current encryption — could arrive sooner than expected</li>
+<li>Google has set a 2029 deadline for post-quantum cryptography transition</li>
+</ul>
+<p><strong>UK Commits £2B to Quantum</strong></p>
+<ul>
+<li>UK government announced up to £2 billion in quantum technology investment</li>
+<li>Launched ProQure: the world&#39;s first advanced quantum computing procurement program</li>
+</ul>
+<p><strong>UAE Goes Quantum-Safe</strong></p>
+<ul>
+<li>Cyber Security Council and ATRC partner to build a quantum-safe national security framework</li>
+<li>Accelerating transition to post-quantum cryptography</li>
+</ul>
+<p><strong>Coordination Gap in Quantum Security</strong></p>
+<ul>
+<li>World Economic Forum warns that coordination gaps are slowing the shift to quantum-safe security</li>
+<li>Each layer of the digital economy needs alignment</li>
+</ul>
+<h3>Key Takeaway</h3>
+<p>The AI landscape is shifting rapidly: Anthropic is winning enterprise trust, OpenAI is consolidating under Greg Brockman&#39;s unified vision, and Google is reimagining human-computer interaction. Meanwhile, the quantum threat looms closer than expected — organizations that aren&#39;t preparing for post-quantum cryptography now may face catastrophic security breaches by 2029.</p>
+<p><em>Images via Unsplash — Photo 1: Abstract AI neural network visualization | Photo 2: AI concept illustration</em></p>
+]]></content:encoded>
+      <category>AI</category>
+    <category>artificial-intelligence</category>
+    <category>tech-news</category>
+    <category>daily-digest</category>
+    <category>machine-learning</category>
+    </item>
     <item>
       <title>Space Tech Roundup - May 17, 2026</title>
       <link>https://shamyl.github.io/blog/space-tech-2026-05-17</link>
