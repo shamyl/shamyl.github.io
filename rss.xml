@@ -5,13 +5,112 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Mon, 18 May 2026 04:04:21 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 19 May 2026 04:02:07 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamyl.github.io/blog</link>
     </image>
+    <item>
+      <title>Robotics Roundup - May 19, 2026</title>
+      <link>https://shamyl.github.io/blog/robotics-2026-05-19</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/robotics-2026-05-19</guid>
+      <pubDate>Tue, 19 May 2026 00:00:00 GMT</pubDate>
+      <description>Latest in hobby and professional robotics from May 19, 2026.</description>
+      <content:encoded><![CDATA[<p>Here&#39;s your Tuesday robotics roundup for May 19, 2026:</p>
+<p><img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1600&q=80" alt="Industrial robotic arm at a manufacturing facility"></p>
+<h2>Industrial Robotics</h2>
+<p><strong>COMAU and OMRON Robotics Collaboration</strong></p>
+<ul>
+<li>COMAU and OMRON Robotics are collaborating to expand advanced industrial automation solutions across light industry, electronics, and medical manufacturing sectors</li>
+<li>This partnership aims to accelerate automation adoption in previously underserved industries</li>
+</ul>
+<p><strong>Yaskawa Launches Higher-Capacity Collaborative Robot</strong></p>
+<ul>
+<li>Yaskawa Electric has started sales of the MOTOMAN-HC35 collaborative robot with a 35-kilogram payload and 2,030-millimeter reach</li>
+<li>New model expands palletizing and screw-tightening applications with faster collision response and slimmer design</li>
+</ul>
+<p><strong>Johnson &amp; Johnson Advances Surgical Robotics</strong></p>
+<ul>
+<li>J&amp;J announced pivotal clinical study results for their new soft-tissue surgical robotic system, Ottava</li>
+<li>The Ottava robot met its goals in gastric bypass studies, positioning it as a competitor to established systems like da Vinci</li>
+</ul>
+<h2>Humanoids &amp; Research</h2>
+<p><strong>Boston Dynamics Atlas Reaches New Milestones</strong></p>
+<ul>
+<li>Boston Dynamics is shipping its electric Atlas humanoid to Hyundai factories this year, with 2026 deployments already fully committed</li>
+<li>The company revealed how Atlas learned to lift 100-pound industrial loads using reinforcement learning and millions of simulated training runs</li>
+<li>Atlas uses proprioception (internal body awareness) rather than just cameras to sense weight, balance, and grip while moving objects</li>
+<li>The robot features a simplified hardware architecture with only two actuator types, making accurate simulation easier and reducing the &quot;sim-to-real gap&quot;</li>
+</ul>
+<p><strong>Tesla Optimus Production Timeline</strong></p>
+<ul>
+<li>Tesla CEO Elon Musk confirmed Optimus robot production will begin at Fremont in late July or August 2026</li>
+<li>The company is converting the former Model S/X production line, aiming to dismantle and reinstall new equipment in just four months</li>
+<li>Musk admitted initial output will be &quot;quite slow,&quot; with over 10,000 unique parts creating manufacturing complexity</li>
+<li>A second Optimus factory at Giga Texas is expected to begin production around summer 2027</li>
+</ul>
+<h2>Medical Robotics</h2>
+<p><strong>Momentis Surgical Receives FDA Clearance</strong></p>
+<ul>
+<li>Momentis Surgical secured FDA clearance for its advanced Anovo® robotic platform</li>
+<li>The system sets new standards in single-incision surgery, expanding minimally invasive surgical options</li>
+</ul>
+<p><img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1600&q=80" alt="Robot working in technology environment"></p>
+<h2>Hobby &amp; DIY Projects</h2>
+<p><strong>ROS 2 DIY Robot Projects Gaining Traction</strong></p>
+<ul>
+<li><strong>LGDXRobot2</strong>: An open-source ROS 2-based DIY Mecanum-wheel mobile robot designed to inspire robotics enthusiasm</li>
+<li><strong>PuppyPi</strong>: Turn your Raspberry Pi into a real robot dog — train it to walk and see in simulation, then deploy AI to the real world</li>
+<li><strong>DIY ROS Robot</strong>: Community-driven mobile robot projects using differential drive, LiDAR, and autonomous navigation</li>
+</ul>
+<p><strong>Raspberry Pi Robotic Arm Developments</strong></p>
+<ul>
+<li>New projects combining Raspberry Pi with camera modules and motor drivers for vision-based robotics</li>
+<li>Arduino-powered autonomous obstacle avoidance robots with servo control gaining popularity among makers</li>
+</ul>
+<h2>Drones &amp; Mobility</h2>
+<p><strong>Amazon Expands Drone Delivery</strong></p>
+<ul>
+<li>Amazon became the first retailer in the UK to start drone delivery service with a limited launch in Darlington</li>
+<li>First UK parcels were delivered by drone in early May 2026, drawing crowds who came specifically to watch</li>
+</ul>
+<p><strong>DJI Faces Regulatory Challenges</strong></p>
+<ul>
+<li>FCC is weighing DJI&#39;s challenge to &quot;covered list&quot; rulings with public comment periods highlighting ongoing policy divides</li>
+<li>DJI now faces restrictions in both Beijing and Washington due to security concerns, despite controlling up to 80% of the global consumer drone market</li>
+<li>China has also tightened domestic drone regulations amid security risk concerns</li>
+</ul>
+<p><strong>FAA Advances Drone Restrictions</strong></p>
+<ul>
+<li>The FAA is moving forward with long-delayed rules to restrict drones over sensitive sites under Section 2209</li>
+<li>The proposal aims to balance security concerns with access to low-altitude airspace</li>
+</ul>
+<h2>Open Source &amp; Community</h2>
+<p><strong>ROS 2 and Simulation Ecosystem</strong></p>
+<ul>
+<li><strong>IFRA-Cranfield&#39;s ros2_RobotSimulation</strong>: Ready-to-use ROS 2 Gazebo + MoveIt 2 simulation packages for industrial and collaborative robots (308+ stars on GitHub)</li>
+<li><strong>MoveIt 2</strong>: The industry-standard motion planning framework continues to evolve with 1,700+ stars</li>
+<li><strong>Gazebo + MoveIt 2 Integration</strong>: Multiple projects now provide C++ and Python examples for using MoveIt 2 inside Gazebo simulation environments</li>
+<li><strong>Black Coffee Robotics&#39; BCR Arm</strong>: A 7-DOF robotic arm simulation with ROS 2 Control, MoveIt motion planning, and support for multiple ROS 2 distributions and NVIDIA Isaac Sim</li>
+</ul>
+<p><strong>GitHub Robotics Projects to Watch</strong></p>
+<ul>
+<li>DIY ROS mobile robot repositories gaining traction among hobbyists</li>
+<li>Integration examples for Franka Emika Panda with Gazebo and MoveIt 2</li>
+</ul>
+<h3>Key Takeaway</h3>
+<p>The robotics industry is accelerating on multiple fronts simultaneously. Industrial players like Boston Dynamics are moving from demos to real deployments, with Atlas already committed to factory floors. Meanwhile, the open-source ecosystem around ROS 2 continues to mature, making sophisticated robotics accessible to hobbyists and researchers. The humanoid race is heating up, but the real story is how quickly these technologies are transitioning from research to practical applications — from surgical suites to warehouse floors to your local delivery routes.</p>
+<p>The gap between professional and hobby robotics is narrowing. With platforms like ROS 2, affordable compute (Raspberry Pi, Arduino), and accessible simulation tools, today&#39;s maker project could be tomorrow&#39;s industrial solution. For Pakistan&#39;s growing tech ecosystem, this represents an opportunity to leapfrog into automation and robotics development.</p>
+]]></content:encoded>
+      <category>robotics</category>
+    <category>robot</category>
+    <category>automation</category>
+    <category>hobby-robotics</category>
+    <category>industrial-robotics</category>
+    <category>drones</category>
+    </item>
     <item>
       <title>AI Updates - May 18, 2026</title>
       <link>https://shamyl.github.io/blog/ai-updates-2026-05-18</link>
