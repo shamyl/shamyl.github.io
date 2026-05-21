@@ -5,13 +5,88 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Wed, 20 May 2026 04:02:46 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 21 May 2026 04:02:14 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamyl.github.io/blog</link>
     </image>
+    <item>
+      <title>3D Printing Roundup - May 21, 2026</title>
+      <link>https://shamyl.github.io/blog/3d-printing-2026-05-21</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/3d-printing-2026-05-21</guid>
+      <pubDate>Thu, 21 May 2026 00:00:00 GMT</pubDate>
+      <description>Latest in 3D printing technology, printers, materials, and maker projects from May 21, 2026.</description>
+      <content:encoded><![CDATA[<p>Here&#39;s your Thursday 3D printing roundup for May 21, 2026:</p>
+<p><img src="/images/3d-printing-2026-05-21-1.jpg" alt="3D printing workspace with filament and printed objects">
+<em>Photo: 3D printing workspace with filament spools and printed objects</em></p>
+<h2>Printer News &amp; Releases</h2>
+<ul>
+<li><p><strong>Bambu Lab X2D Officially Launched</strong>: The highly anticipated dual-nozzle 3D printer is now available, starting at $649. Features a mechanical nozzle switching system designed to reduce post-processing and material waste. The X2D Combo (with AMS) is priced at $1,199. The printer supports dual-nozzle printing up to 256mm × 256mm × 260mm.</p>
+</li>
+<li><p><strong>Creality RAPID+TCT 2026 Showcase</strong>: Creality unveiled their &quot;Desktop Micro-Factory&quot; concept at the Boston show, featuring the HALOT X1 16K resin printer, SPARKX i7 FDM printer, and the Sermoon P1 3D scanner with 0.02mm accuracy.</p>
+</li>
+<li><p><strong>Prusa vs Bambu Lab Licensing Drama</strong>: Josef Prusa has publicly warned that Bambu Studio allegedly violates the AGPL license with an &quot;un-auditable network black box.&quot; The controversy centers on whether Bambu&#39;s networking binary violates open-source licensing terms, raising concerns about security risks in Chinese 3D printing software.</p>
+</li>
+</ul>
+<h2>Materials &amp; Filaments</h2>
+<ul>
+<li><p><strong>Bambu Lab PLA Pure</strong>: New food-contact approved filament line introduced, making it safe for kitchen applications and food-adjacent prints. This addresses a long-standing gap in consumer-grade food-safe materials.</p>
+</li>
+<li><p><strong>Kexcelled K5 Eco-Aesthetic Series</strong>: New line of PLA filaments made from coffee grounds, tea leaves, and bamboo. These eco-friendly filaments not only reduce environmental impact but also give printed parts a unique aesthetic with natural textures.</p>
+</li>
+<li><p><strong>Wool-Based Color Filament</strong>: New Zealand&#39;s Wool Source and KiwiFil have partnered to create the world&#39;s first wool-based color 3D printing filament, offering a biodegradable alternative to traditional petroleum-based materials.</p>
+</li>
+<li><p><strong>ROSA3D Lightweight Foam Filaments</strong>: New PLA LW AERO and TPU Flex LW foam filaments can make printed parts up to 2.5 times lighter while maintaining structural integrity. Ideal for aerospace applications and drone builds.</p>
+</li>
+<li><p><strong>Synbotron PEBA Filament on Kickstarter</strong>: A faster-to-print TPU alternative that promises to dramatically outperform traditional TPU in terms of print speed and layer adhesion while maintaining flexibility.</p>
+</li>
+</ul>
+<p><img src="/images/3d-printing-2026-05-21-2.jpg" alt="Industrial 3D printing close-up">
+<em>Photo: High-precision 3D printer in action</em></p>
+<h2>Software Updates</h2>
+<ul>
+<li><p><strong>OrcaSlicer V2.3.2 Released</strong>: The popular community fork continues to improve support for Bambu Lab, Prusa, Voron, and other printers. This release focuses on better multi-material handling and improved bridging algorithms.</p>
+</li>
+<li><p><strong>Cura 5.12 Stable</strong>: UltiMaker has released the stable version of Cura 5.12, featuring enhanced tree support generation and better handling of fine details in intricate models.</p>
+</li>
+<li><p><strong>PrusaSlicer 2.9.5 Beta 2</strong>: The latest beta includes improvements to multi-material printing and better integration with the XL and CoreXY platforms.</p>
+</li>
+</ul>
+<h2>Cool Projects &amp; Prints</h2>
+<ul>
+<li><p><strong>Free UD4 Cheyenne Dropship Model</strong>: The iconic dropship from <em>Aliens</em> is now available as a free 3D model for printing, featuring detailed panel lines and functional landing gear.</p>
+</li>
+<li><p><strong>Steampunk Lamp Project</strong>: The maker community has been sharing impressive steampunk-inspired lamp designs with intricate gear mechanisms and Edison bulb housings.</p>
+</li>
+<li><p><strong>Foam Finger Light Parts</strong>: Lightweight foam filaments are enabling functional prints like RC plane components and drone frames that require minimal support and post-processing.</p>
+</li>
+</ul>
+<h2>Industry Applications</h2>
+<ul>
+<li><p><strong>ORNL Advanced Manufacturing Breakthrough</strong>: Oak Ridge National Laboratory has successfully combined 3D printing with high-pressure processing (PM-HIP) to reshape large-scale metal part production for nuclear and energy components. This breakthrough enables the creation of critical parts that were previously impossible to manufacture.</p>
+</li>
+<li><p><strong>UK Defense Robotic Post-Processing</strong>: The UK Ministry of Defence is now using robotic systems to automate finishing touches on 3D-printed parts, achieving human-like precision and consistency for military applications.</p>
+</li>
+<li><p><strong>US Army Special Forces 3D Printing Symposium</strong>: The 1st Special Forces Group at Joint Base Lewis-McChord hosted a symposium showcasing how 3D printing is redefining military readiness, from rapid prototyping of mission-critical parts to field repairs.</p>
+</li>
+<li><p><strong>BigRep + Endless Industries Partnership</strong>: The collaboration brings continuous fiber reinforcement to large-format additive manufacturing (LFAM), creating parts with structural properties comparable to traditional composites.</p>
+</li>
+</ul>
+<hr>
+<h3>Key Takeaway</h3>
+<p>The 3D printing industry continues its rapid evolution with dual-nozzle systems becoming mainstream, sustainable materials gaining traction, and industrial applications pushing the boundaries of what&#39;s possible. The Bambu Lab X2D at $649 makes multi-material printing accessible to hobbyists, while major research institutions like ORNL are proving that additive manufacturing can handle critical, large-scale industrial applications.</p>
+<hr>
+<p><em>Images sourced from Unsplash (free to use under Unsplash License)</em></p>
+]]></content:encoded>
+      <category>3d-printing</category>
+    <category>additive-manufacturing</category>
+    <category>maker</category>
+    <category>fdm</category>
+    <category>sla</category>
+    <category>filament</category>
+    </item>
     <item>
       <title>Tech Roundup - May 20, 2026</title>
       <link>https://shamyl.github.io/blog/tech-roundup-2026-05-20</link>
