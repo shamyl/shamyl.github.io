@@ -5,13 +5,60 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Thu, 21 May 2026 04:02:14 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 22 May 2026 04:02:47 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamyl.github.io/blog</link>
     </image>
+    <item>
+      <title>Tech, Art &amp; Entertainment - May 22, 2026</title>
+      <link>https://shamyl.github.io/blog/tech-art-2026-05-22</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/tech-art-2026-05-22</guid>
+      <pubDate>Fri, 22 May 2026 00:00:00 GMT</pubDate>
+      <description>Creative intersections of technology, art, and entertainment from May 22, 2026.</description>
+      <content:encoded><![CDATA[<p><img src="/images/tech-art-2026-05-22-1.jpg" alt="Generative Digital Art"></p>
+<p>Here&#39;s your Friday creative tech roundup for May 22, 2026:</p>
+<h2>AI Art &amp; Creative Tools</h2>
+<p><strong>Midjourney V8.1 Now Live</strong>: Midjourney&#39;s V8.1 model rolled out on April 30, bringing 5x faster generation speeds and HD quality by default. The update addresses many creator complaints about V8&#39;s unfamiliar aesthetics, bringing back beloved features while maintaining improved detail adherence.</p>
+<p><strong>Google&#39;s Gemini Omni Flash Unveiled</strong>: DeepMind&#39;s new conversational video-generation model can generate and edit video from any combination of image, audio, video, and text inputs. The &quot;Omni&quot; family marks a significant leap toward truly multimodal AI creative tools.</p>
+<p><strong>AI Image Generator Landscape 2026</strong>: CNET&#39;s latest rankings show Midjourney, DALL-E, Stable Diffusion, and Flux continuing to dominate the creative AI space, with each platform carving out distinct niches for artists and designers.</p>
+<p><img src="/images/tech-art-2026-05-22-2.jpg" alt="Creative Technology"></p>
+<h2>Generative Art &amp; Creative Coding</h2>
+<p><strong>Museum of Art + Light Celebrates Art Blocks&#39; 500th Project</strong>: A landmark generative art exhibition opened in Manhattan, Kansas, featuring one of the most significant collections of generative artwork assembled to date. The 100,000-square-foot museum showcases the growing institutional recognition of algorithmic art.</p>
+<p><strong>&quot;Run the Code&quot; at Blanton Museum</strong>: The Thoma Foundation and Blanton Museum&#39;s collaboration &quot;Data-Driven Art Decoded&quot; explores how code becomes canvas, featuring works like Marina Zurkow&#39;s &quot;Mesocosm&quot; — a 146-hour generative animation cycle.</p>
+<p><strong>&quot;Playgrounds&quot; Exhibition in Berlin</strong>: Artist loackme&#39;s &quot;Playgrounds&quot; at Met Digital brings together three years of algorithmic tinkering, demonstrating how simple generative premises can evolve into complex artistic systems.</p>
+<p><strong>Aargauer Kunsthaus: &quot;Artificial Creativity&quot;</strong>: Opening September 2026, this exhibition in cooperation with HEK (House of Electronic Arts) will explore the intersection of AI and artistic expression, featuring works that challenge our understanding of creative authorship.</p>
+<h2>Tech in Film, Music &amp; Gaming</h2>
+<p><strong>AI Sci-Fi Films Coming to Cannes</strong>: Filmmaker Chuck Russell unveiled two original sci-fi features built entirely on generative AI production pipelines at the Cannes Film Market. These represent some of the first major studio productions to embrace AI across the entire filmmaking process.</p>
+<p><strong>Splice × ElevenLabs Partnership</strong>: The music sampling platform is integrating ElevenLabs&#39; foundational music models to create new AI-powered tools for producers, enabling voice-to-instrument transformation and intelligent sample manipulation.</p>
+<p><strong>Tamber: AI-Powered Music Creation</strong>: Zoe Wrenn&#39;s new platform lets musicians describe sounds in natural language — making synthesizers sound like &quot;chocolate&quot; or creating textures from verbal descriptions. It&#39;s a glimpse at the future of intuitive music production.</p>
+<p><strong>Utopai Studios&#39; PAI Pro</strong>: Launched May 21, this character-persistent AI system for filmmakers allows characters to maintain consistency across scenes while responding dynamically to direction — potentially revolutionizing pre-visualization and indie production.</p>
+<h2>Interactive &amp; Immersive Experiences</h2>
+<p><strong>Picasso&#39;s Guernica in VR</strong>: The Musée national Picasso-Paris presents &quot;The Metamorphoses of Guernica&quot; — a unique VR experience running through September 6, 2026, co-produced by Lucid Realities. Viewers can step inside the masterpiece and explore its symbolism in immersive 3D.</p>
+<p><strong>&quot;Evolver&quot; at Marina Bay Sands</strong>: This VR Gallery experience (through August 16, 2026) takes visitors on a journey through the human respiratory system — blending art, education, and cutting-edge immersive technology.</p>
+<p><strong>DUMBO Projection Project Volume 7</strong>: Brooklyn&#39;s annual projection mapping event returns, transforming the neighborhood beneath the BQE with interactive art that explores the area&#39;s past, present, and future.</p>
+<p><strong>1minute Projection Mapping Competition Tokyo</strong>: The 13th international competition opens with a special program featuring music by Ado, showcasing the world&#39;s best short-form projection mapping artworks.</p>
+<p><strong>La Scala Milan Light Installation</strong>: Artist Marco Lodola transformed the iconic opera house with light sculptures and videomapping for Nabucco — demonstrating how traditional cultural institutions embrace digital art.</p>
+<h2>Cool Projects</h2>
+<p><strong>DIY AI Art Gallery with E-Ink</strong>: Developers are building ESP32-powered picture frames that generate and display unique AI artwork daily using local diffusion models — bringing generative art into living rooms with zero cloud dependency.</p>
+<p><strong>Raspberry Pi 5 + AI HAT+2</strong>: A new wave of makers is building low-cost, private content generation servers using Raspberry Pi and AI accelerator hardware, enabling local inference for image generation and creative workflows.</p>
+<p><strong>PaperPiAI</strong>: This open-source project (326+ stars on GitHub) demonstrates how to build a Raspberry Pi Zero-powered AI-generated e-ink picture frame — perfect for dynamic, ever-changing wall art.</p>
+<p><strong>DIY AI Art Installation Guide</strong>: An active open-source community (567+ stars) provides complete instructions for building museum-quality AI art installations from scratch using NVIDIA Jetson hardware.</p>
+<p><strong>Lumina for Smart TVs</strong>: Voice-controlled AI art generation for your TV — just connect via HDMI and describe what you want to see. The project showcases how generative AI is becoming part of everyday home entertainment.</p>
+<h3>Key Takeaway</h3>
+<p>We&#39;re witnessing the democratization of creative technology at an unprecedented pace. From AI-powered filmmaking tools to DIY generative art installations, the barriers between professional production and personal creativity are dissolving. The question is no longer &quot;Can AI create art?&quot; but rather &quot;How will human artists collaborate with these tools to create experiences we haven&#39;t yet imagined?&quot;</p>
+<hr>
+<p><em>Images via Unsplash. Weekly curated by Ash.</em></p>
+]]></content:encoded>
+      <category>tech-art</category>
+    <category>AI-art</category>
+    <category>creative-tech</category>
+    <category>digital-art</category>
+    <category>generative-art</category>
+    <category>interactive</category>
+    </item>
     <item>
       <title>3D Printing Roundup - May 21, 2026</title>
       <link>https://shamyl.github.io/blog/3d-printing-2026-05-21</link>
