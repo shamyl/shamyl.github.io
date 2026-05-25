@@ -5,13 +5,74 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Sun, 24 May 2026 04:02:21 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 25 May 2026 04:04:33 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamyl.github.io/blog</link>
     </image>
+    <item>
+      <title>AI Updates - May 25, 2026</title>
+      <link>https://shamyl.github.io/blog/ai-updates-2026-05-25</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/ai-updates-2026-05-25</guid>
+      <pubDate>Mon, 25 May 2026 00:00:00 GMT</pubDate>
+      <description>Latest AI developments, tech trends, market updates, and world tech news from May 25, 2026.</description>
+      <content:encoded><![CDATA[<p>Here&#39;s your Monday roundup of AI and tech news for May 25, 2026:</p>
+<p><img src="/images/ai-updates-2026-05-25-1.jpg" alt="AI Neural Network Visualization"></p>
+<h2>AI Developments</h2>
+<ul>
+<li><p><strong>Anthropic&#39;s $30B Funding Round</strong>: Anthropic is reportedly raising funds that would value the company at $900B, potentially surpassing OpenAI as the most valuable AI startup. This marks a major shift in the competitive landscape.</p>
+</li>
+<li><p><strong>Google I/O 2026 - Gemini 3.5 Launch</strong>: Google unveiled Gemini 3.5 with enhanced agentic capabilities, introducing &quot;Antigravity&quot; and &quot;Spark&quot; AI agents. The new version promises 24/7 proactive help with an intuitive redesigned UI.</p>
+</li>
+<li><p><strong>Gemini Omni Flash</strong>: Google also announced Gemini Omni Flash, a model that can create anything from any input—starting with video. This represents Google&#39;s push toward multimodal AI generation.</p>
+</li>
+<li><p><strong>Alibaba&#39;s Autonomous AI</strong>: Alibaba&#39;s Qwen team released Qwen3.7-Max, which ran autonomously for 35 hours optimizing code for its own custom chip—a significant milestone in self-improving AI systems.</p>
+</li>
+<li><p><strong>Claude Code Discoveries</strong>: Researchers used Anthropic&#39;s Claude Code to discover AI scaling algorithms that humans probably wouldn&#39;t have designed, showcasing emergent AI research capabilities.</p>
+</li>
+</ul>
+<h2>Technology Trends</h2>
+<ul>
+<li><p><strong>Agentic AI is the New Frontier</strong>: Google is betting its next wave on agents, not chatbots. The focus is shifting from conversational AI to proactive, task-completing agents that can work autonomously.</p>
+</li>
+<li><p><strong>Figma Design Agent</strong>: Figma launched its AI-powered Design Agent, bringing autonomous design capabilities to creative workflows.</p>
+</li>
+<li><p><strong>Managed Agents in Gemini API</strong>: Developers can now build custom agents with their own instructions, skills, and data in secure cloud sandboxes through the Gemini API.</p>
+</li>
+<li><p><strong>Sundar Pichai Acknowledges Gap</strong>: In a candid interview, Google CEO admitted they&#39;re &quot;a bit behind&quot; in agentic coding with tool use, signaling where the competitive battle lines are being drawn.</p>
+</li>
+</ul>
+<h2>Market Updates</h2>
+<ul>
+<li><p><strong>Claude Overtakes ChatGPT in Enterprise</strong>: Anthropic&#39;s Claude has officially surpassed OpenAI&#39;s ChatGPT in enterprise adoption, representing a significant market shift for CTOs evaluating AI tools.</p>
+</li>
+<li><p><strong>AI Funding Bifurcation</strong>: The AI startup ecosystem is sharply dividing. With 1,730 global unicorns (887 in AI), capital is flowing to exactly three categories: agentic infrastructure, frontier models, and vertical AI applications.</p>
+</li>
+<li><p><strong>$300B VC Deployed in Q1 2026</strong>: Venture capital deployed $300 billion in Q1 2026, with AI capturing a significant portion. The coming IPO wave is expected to reshape the public AI landscape.</p>
+</li>
+</ul>
+<h2>World Tech</h2>
+<ul>
+<li><p><strong>OpenAI Opens Singapore Lab</strong>: OpenAI expanded its global footprint with a new AI lab in Singapore as IMDA updates its AI governance framework, reflecting growing regulatory attention worldwide.</p>
+</li>
+<li><p><strong>The Singularity Debate</strong>: DeepMind&#39;s Demis Hassabis stated humanity is &quot;in the foothills of the singularity,&quot; while Meta&#39;s Yann LeCun argues current AI &quot;isn&#39;t intelligent&quot;—highlighting the philosophical divide among AI leaders.</p>
+</li>
+<li><p><strong>Andrej Karpathy&#39;s New Direction</strong>: AI luminary Andrej Karpathy is making moves that signal shifts in the AI development landscape, alongside Google&#39;s &quot;Colossus&quot; infrastructure announcements.</p>
+</li>
+</ul>
+<h3>Key Takeaway</h3>
+<p>The AI industry is pivoting from chatbots to agents—from reactive tools to proactive systems that can work independently. For CTOs and technology leaders, the strategic imperative is clear: evaluate how agentic AI can transform your workflows, not just augment them. The winners of 2026 will be those who embrace this shift early.</p>
+<hr>
+<p><em>Sources: TechTimes, TechCrunch, Google Blog, The Decoder, PitchBook, FetchLogic</em></p>
+]]></content:encoded>
+      <category>AI</category>
+    <category>artificial-intelligence</category>
+    <category>tech-news</category>
+    <category>daily-digest</category>
+    <category>machine-learning</category>
+    </item>
     <item>
       <title>Space Tech Roundup - May 24, 2026</title>
       <link>https://shamyl.github.io/blog/space-tech-2026-05-24</link>
