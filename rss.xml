@@ -5,13 +5,153 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Mon, 25 May 2026 04:04:33 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 26 May 2026 04:02:31 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamyl.github.io/blog</link>
     </image>
+    <item>
+      <title>Robotics Roundup - May 26, 2026</title>
+      <link>https://shamyl.github.io/blog/robotics-2026-05-26</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/robotics-2026-05-26</guid>
+      <pubDate>Tue, 26 May 2026 00:00:00 GMT</pubDate>
+      <description>Latest in hobby and professional robotics from May 26, 2026.</description>
+      <content:encoded><![CDATA[<p>Here&#39;s your Tuesday robotics roundup for May 26, 2026:</p>
+<p><img src="/images/robotics-2026-05-26-1.jpg" alt="Industrial robot arm"></p>
+<h2>Industrial Robotics</h2>
+<ul>
+<li><p><strong>Shanghai&#39;s CR5000-3700 sets a new world record</strong> — This five-ton industrial robot has pushed the certified payload mark to over 5,000 kg (5,000.36 kg to be exact), more than double the previous benchmark of 2,300 kg. A significant leap for heavy manufacturing applications.</p>
+<ul>
+<li>Source: <a href="https://webiano.digital/shanghais-five-ton-robot-turns-a-record-lift-into-an-industrial-signal/">Webbiano</a></li>
+</ul>
+</li>
+<li><p><strong>Hyundai commits to 25,000 Atlas robots</strong> — Hyundai Motor Group announced plans to deploy over 25,000 Boston Dynamics Atlas humanoid robots across its factories. However, the Korean Metal Workers&#39; Union is demanding labor negotiations before deployment, highlighting the growing tension between automation and workforce concerns.</p>
+<ul>
+<li>Source: <a href="https://www.techtimes.com/articles/317005/20260522/hyundai-commits-25000-atlas-robots-own-factories-union-blocks-deployment-without-labor-deal.htm">TechTimes</a></li>
+</ul>
+</li>
+</ul>
+<h2>Medical &amp; Surgical Robotics</h2>
+<ul>
+<li><p><strong>Sentante wins CE mark for endovascular robot</strong> — The Sentante robotic platform received European CE mark approval for endovascular procedures. This robotic system enables physicians to perform remote catheter-based interventions, potentially reducing radiation exposure and improving precision.</p>
+<ul>
+<li>Source: <a href="https://www.massdevice.com/sentante-wins-ce-mark-for-endovascular-surgical-robot/">MassDevice</a></li>
+</ul>
+</li>
+<li><p><strong>Neuralink reveals new robotic surgery system</strong> — Elon Musk&#39;s Neuralink showcased an advanced robotic system designed specifically for brain-computer interface (BCI) implant surgeries. The robot can now reach almost any part of the brain and automates key steps in the surgical process.</p>
+<ul>
+<li>Source: <a href="https://www.mobihealthnews.com/news/elon-musks-neuralink-reveals-new-robotic-system-bci-brain-implant-surgeries">MobiHealthNews</a></li>
+</ul>
+</li>
+<li><p><strong>Robots becoming surgical assistants at Technical University Munich</strong> — The ForNeRo research project is advancing how robots assist in surgery, working alongside human surgeons to improve outcomes and precision in complex procedures.</p>
+<ul>
+<li>Source: <a href="https://medicalxpress.com/news/2026-05-robots-surgical.html">MedicalXpress</a></li>
+</ul>
+</li>
+</ul>
+<h2>Humanoids &amp; Research</h2>
+<ul>
+<li><p><strong>Tesla Optimus V3 production delayed</strong> — During Tesla&#39;s Q1 2026 earnings call, Elon Musk confirmed that Optimus robot production at Fremont will begin in late July or August, pushing back the previously announced timeline.</p>
+<ul>
+<li>Source: <a href="https://electrek.co/2026/04/22/tesla-optimus-production-fremont-model-sx-line/">Electrek</a></li>
+</ul>
+</li>
+<li><p><strong>Tesla Optimus completes water handoff</strong> — A recent video shows Tesla&#39;s Optimus robot successfully completing a water bottle handoff, demonstrating grasp-transfer capabilities weeks before the planned Fremont production ramp. Progress is visible as the robot improves its manipulation skills.</p>
+<ul>
+<li>Source: <a href="https://www.techtimes.com/articles/316974/20260521/tesla-optimus-completes-water-handoff-grasp-transfer-progress-arrives-weeks-before-fremont-ramp.htm">TechTimes</a></li>
+</ul>
+</li>
+<li><p><strong>Tesla eyes Shanghai for Optimus mass production</strong> — Tesla&#39;s China president Wang Hao described the Shanghai Gigafactory as a &quot;golden key&quot; to mass-producing Optimus humanoid robots, marking the first time a Tesla executive has explicitly linked the facility to humanoid production.</p>
+<ul>
+<li>Source: <a href="https://thenextweb.com/news/tesla-shanghai-gigafactory-optimus-humanoid-robot-production">The Next Web</a></li>
+</ul>
+</li>
+</ul>
+<h2>Drones &amp; Mobility</h2>
+<p><img src="/images/robotics-2026-05-26-2.jpg" alt="Drone technology"></p>
+<ul>
+<li><p><strong>Amazon delivers first UK parcels by drone</strong> — Amazon Prime Air has officially launched in the UK, making its first drone deliveries to customers. The service marks a major milestone for commercial drone delivery in Europe.</p>
+<ul>
+<li>Source: <a href="https://www.bbc.com/news/articles/cx21k21vnmgo">BBC News</a></li>
+</ul>
+</li>
+<li><p><strong>Meituan&#39;s drone delivery goes commercial</strong> — China&#39;s Meituan has put its drone delivery infrastructure into commercial service, enabling autonomous aerial delivery for food and goods in select urban areas.</p>
+<ul>
+<li>Source: <a href="https://www.yicaiglobal.com/news/meituan-puts-drone-delivery-infrastructure-into-commercial-use">Yicai Global</a></li>
+</ul>
+</li>
+<li><p><strong>Flytrex manufactures drones in Dallas</strong> — Drone delivery operator Flytrex announced it&#39;s now manufacturing its delivery drones in Dallas, Texas — the same city where it operates delivery services. This vertical integration strategy sets it apart from competitors.</p>
+<ul>
+<li>Source: <a href="https://www.thedronegirl.com/2026/05/22/flytrex-manufacturing-texas/">The Drone Girl</a></li>
+</ul>
+</li>
+<li><p><strong>Amprius and Matternet partner on drone batteries</strong> — Silicon anode battery technology from Amprius is being integrated into Matternet&#39;s delivery drones, promising improved range, faster charging, and better delivery economics for logistics operations.</p>
+<ul>
+<li>Source: <a href="https://dronelife.com/2026/05/20/amprius-matternet-drone-delivery-batteries/">DroneLife</a></li>
+</ul>
+</li>
+<li><p><strong>CVS Air Response Drone Network revealed</strong> — At XPONENTIAL 2026, CVS, Skyfire AI, and Thales outlined a drone-based healthcare response network focused on logistics, emergency response, and disaster resilience.</p>
+<ul>
+<li>Source: <a href="https://dronelife.com/2026/05/13/cvs-skyfireai-and-thales-outline-drone-based-healthcare-response-network-at-xponential-2026/">DroneLife</a></li>
+</ul>
+</li>
+</ul>
+<h2>Open Source &amp; Community</h2>
+<ul>
+<li><p><strong>rbot: Open-source AMR stack for ROS 2 Jazzy</strong> — A new open-source simulation stack for Autonomous Mobile Robots has been released, built specifically for ROS 2 Jazzy and Gazebo Harmonic. This provides a complete end-to-end testing environment for AMR development.</p>
+<ul>
+<li>GitHub: <a href="https://github.com/rlxai/rbot">rlxai/rbot</a></li>
+<li>Source: <a href="https://discourse.openrobotics.org/t/rbot-an-open-source-amr-simulation-stack-for-ros-2-jazzy-and-gazebo-harmonic/54694">Open Robotics Discourse</a></li>
+</ul>
+</li>
+<li><p><strong>Pi_Li_AMR: Raspberry Pi 5 autonomous robot</strong> — A complete ROS 2 Jazzy implementation on Raspberry Pi 5, featuring RP2040-based motor control, YDLiDAR SLAM, and Nav2 for goal-based navigation. A great reference for sim-to-real autonomy projects.</p>
+<ul>
+<li>GitHub: <a href="https://github.com/madhubabugopisetti/Pi_Li_AMR">madhubabugopisetti/Pi_Li_AMR</a></li>
+</ul>
+</li>
+<li><p><strong>MowgliNext: ROS2 autonomous robot mower</strong> — An open-source autonomous lawn mower project using ROS 2, complete with Docker deployment, GUI, and firmware. The monorepo structure makes it easy to contribute and deploy.</p>
+<ul>
+<li>GitHub: <a href="https://github.com/cedbossneo/mowglinext">cedbossneo/mowglinext</a></li>
+</ul>
+</li>
+<li><p><strong>robot-lidar-fusion perception stack</strong> — A new open-source robotics stack for building autonomous systems with LiDAR and camera fusion, providing foundations for perception, navigation, obstacle avoidance, and safety-oriented control.</p>
+<ul>
+<li>GitHub: <a href="https://github.com/iceccarelli/robot-lidar-fusion">iceccarelli/robot-lidar-fusion</a></li>
+</ul>
+</li>
+</ul>
+<h2>Robotics Competitions</h2>
+<ul>
+<li><p><strong>Auburn wins VEX U Robotics World Championship</strong> — The Auburn University robotics team took home the top prize at the largest student robotics competition in the world, held recently in Houston, Texas.</p>
+<ul>
+<li>Source: <a href="https://wire.auburn.edu/content/ocm/2026/05/auburn-wins-vex-u-robotics-world-championships.php">Auburn University</a></li>
+</ul>
+</li>
+<li><p><strong>New England teams shine at FIRST Championship 2026</strong> — Multiple FIRST Robotics teams from New England achieved success at the highest level of competition in Houston, with surprising discoveries and innovative designs throughout the season.</p>
+<ul>
+<li>Source: <a href="https://www.nefirst.org/post/new-england-first-robotics-teams-from-uncover-success-at-the-highest-level-first-championship-2026">NE FIRST</a></li>
+</ul>
+</li>
+<li><p><strong>West Vancouver middle school makes history</strong> — A middle school robotics team from West Vancouver achieved a historic performance at the VEX Robotics World Championship, showcasing the incredible talent emerging from early STEM education.</p>
+<ul>
+<li>Source: <a href="https://www.northshoredailypost.com/westvan-robotics-world-champs/">North Shore Daily Post</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3>Key Takeaway</h3>
+<p>This week&#39;s robotics news highlights the field&#39;s rapid acceleration across all fronts: industrial robots are lifting record-breaking payloads, humanoid robots are approaching production scale, medical robotics are securing regulatory approvals, and open-source tools are democratizing access to advanced autonomy. The intersection of AI and robotics is creating capabilities that were science fiction just years ago. Whether you&#39;re building a ROS-powered AMR in your garage or deploying humanoids on factory floors, the tools and opportunities have never been more accessible.</p>
+<p><em>Images: Industrial robot arm and drone technology photos from Unsplash (free to use)</em></p>
+]]></content:encoded>
+      <category>robotics</category>
+    <category>robot</category>
+    <category>automation</category>
+    <category>hobby-robotics</category>
+    <category>industrial-robotics</category>
+    <category>drones</category>
+    </item>
     <item>
       <title>AI Updates - May 25, 2026</title>
       <link>https://shamyl.github.io/blog/ai-updates-2026-05-25</link>
