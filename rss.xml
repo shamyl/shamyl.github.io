@@ -5,13 +5,97 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Wed, 27 May 2026 07:44:38 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 28 May 2026 04:02:02 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamyl.github.io/blog</link>
     </image>
+    <item>
+      <title>3D Printing Roundup - May 28, 2026</title>
+      <link>https://shamyl.github.io/blog/3d-printing-2026-05-28</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/3d-printing-2026-05-28</guid>
+      <pubDate>Thu, 28 May 2026 00:00:00 GMT</pubDate>
+      <description>Latest in 3D printing technology, printers, materials, and maker projects from May 28, 2026.</description>
+      <content:encoded><![CDATA[<p><img src="/images/3d-printing-2026-05-28-1.jpg" alt="3D Printer in action">
+<em>Photo by Jakub Żerdzicki on Unsplash</em></p>
+<p>Here&#39;s your Thursday 3D printing roundup for May 28, 2026:</p>
+<h2>Printer News &amp; Releases</h2>
+<p>The 3D printer landscape continues to evolve rapidly, with both controversy and innovation dominating the headlines:</p>
+<ul>
+<li><p><strong>Bambu Lab&#39;s Legal Troubles</strong> — The multi-billion dollar 3D printer giant is facing backlash after threatening a solo developer with legal action over an OrcaSlicer fork that restored cloud printing features. The Software Freedom Conservancy (SFC) has stepped in, claiming Bambu Lab violated open-source licenses. This has sparked what some are calling a &quot;$250,000 open-source war,&quot; with community sentiment shifting toward open-source alternatives.</p>
+</li>
+<li><p><strong>Bambu Lab X2D Launched</strong> — Despite the controversy, Bambu Lab continues to innovate with the X2D, their next-generation flagship featuring a dual-extrusion system. The printer aims to make multi-material printing more accessible to consumers.</p>
+</li>
+<li><p><strong>Sovol SV08 Max on Kickstarter</strong> — Sovol is crowdfunding their SV08 Max, featuring impressive specs: 700mm/s speeds, 500×500×500mm³ build volume, CoreXY kinematics, eddy current scanning, and full open-source compatibility. This could be a serious contender for those seeking open alternatives.</p>
+</li>
+<li><p><strong>WonderMaker ZR Ultra</strong> — Another exciting Kickstarter campaign featuring a 4-toolhead system with fast material changing, multi-color/multi-material capabilities, and zero material waste. The 300×270×290mm build volume and CoreXY design make it appealing to makers.</p>
+</li>
+</ul>
+<h2>Materials &amp; Filaments</h2>
+<p>Sustainable and high-performance materials continue to drive innovation:</p>
+<ul>
+<li><p><strong>Wool-Based Color Filament</strong> — New Zealand companies Wool Source and KiwiFil have launched wool-based color 3D printing filament, bringing sustainable agriculture into additive manufacturing.</p>
+</li>
+<li><p><strong>Xenia Bio-Based PPA Carbon-Fiber</strong> — Italian manufacturer Xenia has launched a bio-based PPA carbon-fiber filament designed for high-stress applications, offering industrial-grade strength with eco-friendly credentials.</p>
+</li>
+<li><p><strong>Otsuka Chemical&#39;s Poticon</strong> — A new potassium titanate fiber reinforced filament from Japan brings unique material properties to MEX (Material Extrusion) 3D printing, potentially opening new industrial applications.</p>
+</li>
+<li><p><strong>Recycled PE Filaments</strong> — Research continues on developing 3D printing filaments from recycled low-density and high-density polyethylene (rLDPE and rHDPE) reinforced with lignin additives, pushing the circular economy forward.</p>
+</li>
+</ul>
+<p><img src="/images/3d-printing-2026-05-28-2.jpg" alt="3D Printed Objects">
+<em>Photo by Jakub Żerdzicki on Unsplash</em></p>
+<h2>Software Updates</h2>
+<ul>
+<li><p><strong>OrcaSlicer v2.4.0 Alpha</strong> — The headline feature is Orca Cloud, a new centralized platform for profile sync and preset management. This release comes amid the Bambu Lab controversy, with many users switching back to OrcaSlicer specifically for the improved cloud integration that works independently of Bambu&#39;s ecosystem.</p>
+</li>
+<li><p><strong>OrcaSlicer v2.3.2</strong> — The stable release continues to support an impressive range of printers including Bambu, Prusa, Voron, VzBot, RatRig, Creality, and more.</p>
+</li>
+</ul>
+<h2>Cool Projects &amp; Prints</h2>
+<p>The maker community continues to impress with creativity:</p>
+<ul>
+<li><p><strong>Zelda 3D Printed Game Maps</strong> — A fan has created downloadable 3D printed maps of Zelda games, available for free on MakerWorld. These detailed terrain models showcase how gaming and 3D printing continue to intersect.</p>
+</li>
+<li><p><strong>Cyber-Deco Lamp</strong> — A stunning mashup of cyberpunk aesthetics and art deco geometry, proving that functional prints can also be artistic statements.</p>
+</li>
+<li><p><strong>Twisted Helix Vortex Kinetic Wind Spinner</strong> — Available on MakerWorld with optimized profiles for multiple Bambu Lab printers (A1 mini, X1, H2D Pro, H2C, X2D, etc.), these mesmerizing kinetic sculptures are perfect for garden decoration.</p>
+</li>
+<li><p><strong>Alien Jellyfish Wind Spinner</strong> — Another kinetic creation that demonstrates the possibilities of articulated prints that require no assembly.</p>
+</li>
+<li><p><strong>GridCube Kickstarter</strong> — A 3D printable display and storage system that&#39;s raised nearly $300K (29,753% funded!), showing the commercial potential of well-designed printable organizers.</p>
+</li>
+<li><p><strong>Modi Case</strong> — A modular 3D-printable gaming storage system currently at 2,542% funding, organizing tabletop games with style.</p>
+</li>
+</ul>
+<h2>Industry Applications</h2>
+<p>Industrial additive manufacturing keeps pushing boundaries:</p>
+<ul>
+<li><p><strong>Airbus Titanium 3D Printing</strong> — Airbus is pioneering aircraft manufacturing with titanium 3D printing, growing structural components from wire rather than carving from blocks. This could revolutionize aerospace production.</p>
+</li>
+<li><p><strong>Lockheed Martin LPBF</strong> — The defense giant is accelerating operational readiness with Laser Powder-Bed Fusion additive manufacturing, driving supply chain resilience.</p>
+</li>
+<li><p><strong>NP Aerospace WAAM Production</strong> — NP Aerospace has successfully produced Mastiff suspension carriers using Wire Arc Additive Manufacturing (WAAM), cutting lead times by 50% compared to traditional manufacturing.</p>
+</li>
+<li><p><strong>Aerospace Patent Landscape</strong> — New analysis shows explosive growth in additive manufacturing patents for aerospace structures, covering everything from topology-optimized titanium airframe nodes to on-orbit fabrication concepts.</p>
+</li>
+<li><p><strong>Space Launcher Components</strong> — Research continues on qualification processes for additive manufactured metallic connecting flanges for space launchers, bringing 3D printing closer to critical space applications.</p>
+</li>
+</ul>
+<h3>Key Takeaway</h3>
+<p>This week&#39;s theme is clear: <strong>open-source vs. proprietary tensions are reshaping the 3D printing landscape</strong>. As Bambu Lab faces community backlash over license compliance issues, open-source alternatives like OrcaSlicer and printers from Sovol, WonderMaker, and others are gaining momentum. The message for makers: the future of 3D printing remains firmly rooted in openness and community-driven innovation.</p>
+<hr>
+<p><em>Have a 3D printing story to share? Drop me a line or tag me on social media!</em></p>
+]]></content:encoded>
+      <category>3d-printing</category>
+    <category>additive-manufacturing</category>
+    <category>maker</category>
+    <category>fdm</category>
+    <category>sla</category>
+    <category>filament</category>
+    </item>
     <item>
       <title>Tech Roundup - May 27, 2026</title>
       <link>https://shamyl.github.io/blog/tech-roundup-2026-05-27</link>
