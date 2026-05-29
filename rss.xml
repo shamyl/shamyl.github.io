@@ -5,7 +5,7 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Thu, 28 May 2026 04:02:02 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 29 May 2026 04:02:09 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
@@ -2491,6 +2491,97 @@ Research published in arXiv highlights breakthroughs in energy-efficient neuromo
     <category>startups</category>
     <category>technology-trends</category>
     <category>artificial-intelligence</category>
+    </item>
+    <item>
+      <title>Tech, Art &amp; Entertainment - May 29, 2025</title>
+      <link>https://shamyl.github.io/blog/tech-art-2025-05-29</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/tech-art-2025-05-29</guid>
+      <pubDate>Thu, 29 May 2025 00:00:00 GMT</pubDate>
+      <description>Creative intersections of technology, art, and entertainment from May 29, 2025.</description>
+      <content:encoded><![CDATA[<p>Here&#39;s your Friday creative tech roundup for May 29, 2025:</p>
+<p><img src="/images/tech-art-2025-05-29-1.jpg" alt="Digital Art Abstract"></p>
+<h2>AI Art &amp; Creative Tools</h2>
+<p><strong>Google&#39;s Veo 3 and Imagen 4 Launch</strong>
+Google unveiled its latest generative media models at I/O 2025, pushing creative boundaries significantly:</p>
+<ul>
+<li><strong>Veo 3</strong> now generates videos <em>with native audio</em> — environmental sounds, traffic, birdsong, even character dialogue with accurate lip-syncing</li>
+<li><strong>Imagen 4</strong> delivers remarkable clarity in fine details (intricate fabrics, water droplets, animal fur) and excels at typography — great for greeting cards, posters, and comics</li>
+<li><strong>Flow</strong> — Google&#39;s new AI filmmaking tool designed specifically for Veo, enabling cinematic storytelling with natural language prompting and character consistency</li>
+</ul>
+<p><strong>Adobe Firefly Expands to Video and Audio</strong>
+At Adobe MAX 2025, Firefly delivered groundbreaking AI innovations:</p>
+<ul>
+<li>New AI-powered audio generation and video editing tools</li>
+<li>All-in-one creative AI studio combining imaging, video, and audio</li>
+<li>Deep integration across Creative Cloud for seamless workflows</li>
+</ul>
+<p><strong>Stable Diffusion 3.5 Continues to Evolve</strong>
+Stability AI&#39;s latest model remains a powerhouse for open-source AI art:</p>
+<ul>
+<li>Versatile styles spanning 3D, photography, painting, line art, and more</li>
+<li>Strong competition to Midjourney for professional creators who prefer local control</li>
+</ul>
+<h2>Generative Art &amp; Creative Coding</h2>
+<p><strong>&quot;Compositions in Code&quot; Exhibition at Museum of the Moving Image</strong>
+Running through August 23, 2025 — an exhibition celebrating Processing and p5.js, the creative coding platforms that democratized generative art. The show highlights how code became a legitimate artistic medium.</p>
+<p><strong>Responsive Dreams Digital Arts Festival (Barcelona, September 2025)</strong>
+The first digital art festival in Barcelona dedicated entirely to art created through code, interaction, and adaptation. Features generative works that evolve, randomize, and respond to viewers.</p>
+<p><strong>Botto: &quot;Algorithmic Evolution&quot; Exhibition (London)</strong>
+The first autonomous AI artist celebrated its final body of generative code-based works in Fitzrovia. Botto creates, curates, and auctions its own art — a fascinating exploration of machine creativity.</p>
+<h2>Tech in Film, Music &amp; Gaming</h2>
+<p><strong>Venice Immersive 2025 Wraps Up</strong>
+The XR section at the 82nd Venice Film Festival was its largest ever:</p>
+<ul>
+<li>Grand Prize: <em>&quot;The Clouds Are 2000 Metres Up&quot;</em> by Singing Chen</li>
+<li>Achievement Award: <em>&quot;A Long Goodbye&quot;</em></li>
+<li>Special Jury Prize: <em>&quot;Less...&quot;</em></li>
+<li>Highlights included <em>&quot;Wayne McGregor: On the Other Earth&quot;</em> — an immersive dance film blending choreography with virtual worlds</li>
+</ul>
+<p><strong>Universal Music + Stability AI Partnership</strong>
+Major music industry collaboration to develop professional AI music creation tools. This signals the industry&#39;s acceptance of AI as a creative instrument rather than a threat.</p>
+<p><strong>Lyria 2 Expands to YouTube Shorts</strong>
+Google&#39;s music generation model now powers Music AI Sandbox, giving musicians and producers experimental tools for composition and endless sonic exploration.</p>
+<h2>Interactive &amp; Immersive Experiences</h2>
+<p><strong>EXPO 2025 Osaka Projection Mapping</strong>
+The &quot;Shining Hat&quot; pavilion features stunning projection mapping installations including:</p>
+<ul>
+<li><em>&quot;Ephemeral Bloom&quot;</em> — exploring themes of transformation and nature through technical artistry</li>
+<li>NTT Pavilion&#39;s &quot;PARALLEL TRAVEL&quot; — a four-zone immersive journey into digital humanities</li>
+</ul>
+<p><strong>&quot;The Garden Says…&quot; VR Experience</strong>
+Michelle &amp; Uri Kranot&#39;s interactive sensory garden in VR explores how technology, art, and human interaction merge into shared reality. A beautiful example of gentle, meditative immersive art.</p>
+<p><strong>Sunrise Explorer by Tellart</strong>
+An AI-powered experience commissioned by Prosus that transforms your imagination into a personal sunrise, then reveals the perfect real-world location to witness it. Generative AI meets travel and wonder.</p>
+<p><img src="/images/tech-art-2025-05-29-2.jpg" alt="Generative Art Patterns"></p>
+<h2>Cool Projects</h2>
+<p><strong>Soundverse AI Studio</strong>
+Building what they call &quot;the world&#39;s best AI studio&quot; for music production:</p>
+<ul>
+<li>Beat and chord generation</li>
+<li>Melody creation (Audio or MIDI)</li>
+<li>SFX generation and audio editing</li>
+<li>Real-time collaborative composition</li>
+</ul>
+<p><strong>PCB Art Boards</strong>
+The maker community continues creating stunning circuit board art — The Beetles PCB Art project combines music players with visual design, proving that functional electronics can also be beautiful objects.</p>
+<p><strong>Interactive Paintings (SoundingCanvas)</strong>
+Capacitive sensing meets AI-driven audio synthesis — paintings that respond to touch with immersive soundscapes. Built with Raspberry Pi, Arduino, Python, and C++.</p>
+<p><strong>&quot;Artea: Pie in the Rain&quot;</strong>
+A maker project exploring whether a matrix display can rain code like the movies — and respond with warmth. Where art and engineering meet in the most Pakistani way possible.</p>
+<hr>
+<h3>Key Takeaway</h3>
+<p>The lines between creator and tool are blurring beautifully. Whether it&#39;s Google&#39;s Flow enabling filmmakers to storyboard entire scenes with natural language, Venice Immersive proving XR is a legitimate cinematic medium, or makers combining Raspberry Pi with capacitive sensing to create interactive paintings — technology is becoming a collaborator, not just a canvas.</p>
+<p>The most exciting trend? <strong>Accessibility</strong>. AI tools that once required expensive software and technical expertise are now available to anyone with an idea. The barrier to entry for creative expression has never been lower, while the ceiling for what&#39;s possible keeps rising.</p>
+<p>Stay creative. 🔥</p>
+<hr>
+<p><em>Images: Abstract digital art via Unsplash</em></p>
+]]></content:encoded>
+      <category>tech-art</category>
+    <category>AI-art</category>
+    <category>creative-tech</category>
+    <category>digital-art</category>
+    <category>generative-art</category>
+    <category>interactive</category>
     </item>
     <item>
       <title>Speaking at PyCon Pakistan 2024</title>
