@@ -5,13 +5,74 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Sun, 31 May 2026 04:01:32 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jun 2026 04:05:03 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamyl.github.io/blog</link>
     </image>
+    <item>
+      <title>AI Updates - June 1, 2026</title>
+      <link>https://shamyl.github.io/blog/ai-updates-2026-06-01</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/ai-updates-2026-06-01</guid>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Latest AI developments, tech trends, market updates, and world tech news for June 1, 2026. Anthropic&apos;s massive funding round, OpenAI&apos;s robotics return, and Google&apos;s Gemini evolution.</description>
+      <content:encoded><![CDATA[<p>Here&#39;s your Monday roundup of AI and tech news for June 1, 2026:</p>
+<p><img src="/images/ai-updates-2026-06-01-1.jpg" alt="AI Neural Network Visualization"></p>
+<h2>AI Developments</h2>
+<p><strong>Anthropic&#39;s Monster $65B Round Hits $965B Valuation</strong>
+Anthropic has secured a massive $65 billion Series H funding round at a $965 billion post-money valuation — potentially its last private fundraise before IPO. The round was co-led by Altimeter Capital, Sequoia, and others, with strategic backing from Samsung, SK Hynix, and Micron. The company now runs a $47 billion revenue run rate with 130% growth expected to hit operating profitability.</p>
+<p><strong>Claude Opus 4.8 Launch</strong>
+Anthropic&#39;s flagship model gets a significant upgrade with Claude Opus 4.8, featuring improved agentic task performance, advanced coding capabilities, and notably — enhanced honesty (4x less likely to miss code flaws). New features include &quot;dynamic workflows&quot; for massive-scale coding projects, effort control settings, and 3x cheaper fast mode.</p>
+<p><strong>OpenAI Returns to Robotics</strong>
+OpenAI is aggressively hiring for robotics roles — 11 positions in San Francisco including 3D Printing Lab Technician, Actuator Design Engineer, and Simulation Applications Engineer. This marks a strategic pivot after previously abandoning robotics research. The move follows investments in Figure AI ($675M) and 1X Technologies, signaling OpenAI wants to build embodied AI capabilities in-house.</p>
+<p><strong>Google Gemini Goes Agentic</strong>
+Google&#39;s Gemini app is evolving from Q&amp;A assistant to proactive agent. New features announced:</p>
+<ul>
+<li><strong>Gemini Spark</strong>: 24/7 personal AI agent that works in the background</li>
+<li><strong>Daily Brief</strong>: Personalized morning digest across Gmail, Calendar, and apps</li>
+<li><strong>Gemini Omni</strong>: New model for cinematic video generation from text/images/video</li>
+<li><strong>Neural Expressive</strong>: Complete UI redesign with fluid animations</li>
+</ul>
+<p>Now serving 900 million monthly users across 230 countries.</p>
+<p><img src="/images/ai-updates-2026-06-01-2.jpg" alt="AI Technology Visualization"></p>
+<h2>Technology Trends</h2>
+<p><strong>AI Agents Become the Interface</strong>
+The week saw major announcements shifting AI from passive tools to active agents. Google&#39;s Gemini Spark, Anthropic&#39;s dynamic workflows, and OpenAI&#39;s robotics hiring all point to the same trend: 2026 is the year of agentic AI.</p>
+<p><strong>On-Device AI Acceleration</strong>
+Apple is doubling down on on-device AI at WWDC 2026, with powerhouse custom chips powering new Apple Intelligence features. This could be Apple&#39;s secret weapon in the AI war — privacy-first AI that doesn&#39;t rely on cloud processing.</p>
+<p><strong>65% of Americans Now Use AI Weekly</strong>
+New Edison Research data shows AI adoption hit 65% of Americans using AI weekly — that&#39;s 36 million new users in just three months. AI has officially crossed from early adopters to mainstream.</p>
+<h2>Market Updates</h2>
+<p><strong>M&amp;A Activity Surges</strong></p>
+<ul>
+<li><strong>Asana</strong> acquired no-code agent-builder <strong>StackAI</strong> to bolster AI workflow capabilities</li>
+<li><strong>Greenhouse</strong> completed acquisition of <strong>Ezra AI Labs</strong> for conversational hiring tech</li>
+<li><strong>Palo Alto Networks</strong> acquired <strong>Portkey</strong> to secure AI agent deployments</li>
+<li><strong>Autodesk</strong> purchased <strong>MaintainX</strong> for $3.6B in industrial maintenance AI</li>
+</ul>
+<p><strong>Cybersecurity for AI Agents</strong>
+<strong>Geordie AI</strong> raised $30M Series A for AI agent security and governance — a critical emerging category as enterprises deploy autonomous agents.</p>
+<h2>World Tech</h2>
+<p><strong>EU Tech Sovereignty Package</strong>
+The EU unveiled a sweeping digital sovereignty package covering AI, cloud, and chips. The revised Chips Act would let Brussels override chipmaker contracts during shortages. The package aims to cut dependence on US and Chinese tech while boosting local manufacturing.</p>
+<p><strong>China&#39;s AI Models Flood Global Markets</strong>
+Chinese AI models are gaining traction worldwide, forcing Europe to decide: integrate them or fall behind. This comes amid EU AI Act negotiations to postpone high-risk AI deadlines.</p>
+<p><strong>Tencent Open Sources Hy3</strong>
+Tencent launched and open-sourced Hy3 preview — a Mixture-of-Experts model enhancing agent capabilities and real-world usability. This adds to the growing wave of Chinese open-weight models challenging US dominance.</p>
+<hr>
+<h3>Key Takeaway</h3>
+<p><strong>The agentic shift is here.</strong> This week&#39;s biggest story isn&#39;t any single product — it&#39;s the wholesale transformation of AI from passive assistant to active agent. Anthropic&#39;s $65B raise values agentic reliability. Google&#39;s Spark promises 24/7 background work. OpenAI is building robots. The race isn&#39;t just about model intelligence anymore — it&#39;s about which AI can take action in the real world. For leaders: the time to pilot agentic workflows was yesterday.</p>
+<hr>
+<p><em>Images courtesy of Unsplash. Blog post compiled on June 1, 2026.</em></p>
+]]></content:encoded>
+      <category>AI</category>
+    <category>artificial-intelligence</category>
+    <category>tech-news</category>
+    <category>daily-digest</category>
+    <category>machine-learning</category>
+    </item>
     <item>
       <title>Space Tech Roundup - May 31, 2026</title>
       <link>https://shamyl.github.io/blog/space-tech-2026-05-31</link>
