@@ -5,13 +5,83 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Mon, 01 Jun 2026 04:05:03 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 02 Jun 2026 04:02:14 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamyl.github.io/blog</link>
     </image>
+    <item>
+      <title>Robotics Roundup - June 2, 2026</title>
+      <link>https://shamyl.github.io/blog/robotics-2026-06-02</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/robotics-2026-06-02</guid>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Latest in hobby and professional robotics from June 2, 2026.</description>
+      <content:encoded><![CDATA[<p>Here&#39;s your Tuesday robotics roundup for June 2, 2026:</p>
+<p><img src="/images/robotics-2026-06-02-1.jpg" alt="Industrial Robot Arm">
+<em>Photo by Homa Appliances on Unsplash</em></p>
+<h2>Industrial Robotics</h2>
+<p>The industrial robotics sector continues its rapid evolution with major deployments and AI integration:</p>
+<ul>
+<li><strong>BMW declares humanoid robots &#39;the future&#39; of car production</strong> — Following successful trials, BMW is scaling up humanoid robot deployment across its manufacturing lines, citing their adaptability for complex assembly tasks</li>
+<li><strong>Hyundai deploys 25,000 Atlas robots</strong> — Hyundai Motor Group&#39;s massive rollout of Boston Dynamics&#39; Atlas humanoid robots marks one of the largest industrial automation commitments in history</li>
+<li><strong>NVIDIA Factory Operations Blueprint</strong> — NVIDIA&#39;s new AI brain for factories connects live machine signals, quality systems, and operational alerts into unified decision-making systems, moving beyond isolated automation to plant-wide intelligence</li>
+<li><strong>PUDU D7 Semi-Humanoid Robot Launched</strong> — Pudu Robotics unveiled its next-generation PUDU D7, designed for industrial applications with improved mobility and manipulation capabilities</li>
+</ul>
+<p><img src="/images/robotics-2026-06-02-2.jpg" alt="AI Robot Concept">
+<em>Photo by Mathew Schwartz on Unsplash</em></p>
+<h2>Humanoids &amp; Research</h2>
+<p>The humanoid race is heating up with production scaling and new capabilities:</p>
+<ul>
+<li><strong>Tesla Optimus V3 production begins</strong> — Tesla has begun production of Optimus V3 at its Fremont facility, with Shanghai Gigafactory also being prepared for mass production. Recent demonstrations show the robot completing water handoff tasks with improved grasp-transfer capabilities</li>
+<li><strong>Figure 03 development continues</strong> — Figure AI&#39;s latest humanoid continues development with advanced manipulation skills for warehouse and logistics applications</li>
+<li><strong>EngineAI T800 enters mass production</strong> — Shenzhen-based EngineAI has launched its intelligent manufacturing base and begun mass production of the T800 humanoid robot, targeting both industrial and service applications</li>
+<li><strong>Boston Dynamics Atlas vs Tesla Optimus vs Figure 03 comparison</strong> — Industry analysis shows three distinct strategies: Atlas prioritizes agility and research, Optimus focuses on manufacturing scalability, and Figure targets warehouse logistics</li>
+</ul>
+<h2>Hobby/DIY Projects</h2>
+<p>The maker community continues to produce impressive robotics projects:</p>
+<ul>
+<li><strong>PS5-Controlled 6DOF Robotic Arm</strong> — A new project combines Raspberry Pi 5, Arduino Nano, and PS5 controller to create an affordable 6-degree-of-freedom robotic arm controlled via Bluetooth</li>
+<li><strong>Hexapod Robot with Vision and Voice Control</strong> — Atharv Chougule&#39;s open-source hexapod project demonstrates autonomous navigation with computer vision and voice command integration</li>
+<li><strong>Sentinel: Home Sentry Robot</strong> — A Raspberry Pi-based home monitoring robot integrating with Home Assistant, featuring remote monitoring capabilities and autonomous patrol modes</li>
+<li><strong>Autonomous Robot Building Series</strong> — Puja Chaudhury&#39;s Medium series documents building a robot from bare hardware to ROS 2 integration with voice and mapping capabilities</li>
+<li><strong>ROS 2 Autonomous Explorer</strong> — New frontier-based exploration framework for mobile robots using ROS 2, enabling autonomous mapping of unknown environments</li>
+</ul>
+<h2>Drones &amp; Mobility</h2>
+<p>Drone technology advances continue across delivery and heavy-lift applications:</p>
+<ul>
+<li><strong>DJI FlyCart 200 heavy-lift cargo drone</strong> — DJI&#39;s 200kg capacity cargo drone is redefining industrial delivery operations with its massive payload capability</li>
+<li><strong>DJI DeliveryHub launch</strong> — Centralized management platform for drone delivery operations, enabling coordinated fleet management and route optimization</li>
+<li><strong>Jinhua drone-to-door delivery network</strong> — Chinese city deploys comprehensive autonomous delivery system combining drones, driverless vans, and unmanned lockers, handling over 2 million parcels</li>
+<li><strong>DJI independent audit</strong> — DJI undergoes independent security audit as part of efforts to address US regulatory concerns and potential ban threats</li>
+</ul>
+<h2>Medical Robotics</h2>
+<p>Healthcare robotics sees continued FDA clearances and clinical advancements:</p>
+<ul>
+<li><strong>Medtronic Stealth AXiS Surgical System</strong> — Received FDA clearance for cranial and ENT procedures, with CE Mark following in April, expanding access to precise surgical navigation</li>
+<li><strong>Johnson &amp; Johnson soft-tissue surgical robot</strong> — Announced pivotal clinical study results for new soft-tissue surgical robotic system, entering competitive market against Da Vinci</li>
+<li><strong>Cornerstone Sentire Surgical System</strong> — Received CE Mark (MDR) approval, enabling European expansion for their surgical robotics platform</li>
+<li><strong>Robotic surgery trends for 2026</strong> — Industry analysis highlights soft tissue robotics expansion, AI-assisted procedures, and democratization of surgical robotics access</li>
+</ul>
+<h2>Open Source &amp; Community</h2>
+<p>The robotics open-source ecosystem continues to mature:</p>
+<ul>
+<li><strong>Navigation2 for ROS 2</strong> — The ROS 2 navigation framework continues active development with 4,100+ GitHub stars, providing production-ready autonomous navigation for mobile robots</li>
+<li><strong>Universal Robots ROS 2 Driver</strong> — Official ROS 2 driver for UR cobots with 749 stars, enabling seamless integration of collaborative robots into ROS ecosystems</li>
+<li><strong>ROS 2 Controllers</strong> — Generic robotic controllers for ros2_control continue development with improved hardware abstraction and control algorithms</li>
+<li><strong>RLX Robotics (rbot)</strong> — New open-source end-to-end Autonomous Mobile Robot simulation stack for ROS 2 Jazzy and Gazebo Harmonic, making simulation more accessible</li>
+</ul>
+<h3>Key Takeaway</h3>
+<p><strong>June 2026 marks a pivotal moment for humanoid robots transitioning from research to production at scale.</strong> With Hyundai deploying 25,000 Atlas units, Tesla ramping Optimus production, and multiple companies entering mass production, we&#39;re witnessing the industrialization phase of humanoid robotics. Combined with NVIDIA&#39;s AI factory brain and continued advances in medical and drone applications, the robotics industry is experiencing unprecedented convergence of hardware capability, AI intelligence, and real-world deployment.</p>
+]]></content:encoded>
+      <category>robotics</category>
+    <category>robot</category>
+    <category>automation</category>
+    <category>hobby-robotics</category>
+    <category>industrial-robotics</category>
+    <category>drones</category>
+    </item>
     <item>
       <title>AI Updates - June 1, 2026</title>
       <link>https://shamyl.github.io/blog/ai-updates-2026-06-01</link>
