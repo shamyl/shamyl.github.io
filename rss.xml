@@ -5,13 +5,91 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Tue, 02 Jun 2026 04:02:14 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jun 2026 04:01:45 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamyl.github.io/blog</link>
     </image>
+    <item>
+      <title>Tech Roundup - June 3, 2026</title>
+      <link>https://shamyl.github.io/blog/tech-roundup-2026-06-03</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/tech-roundup-2026-06-03</guid>
+      <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Latest in Bio-Tech, Space Tech, IT, FinTech and emerging technology from June 3, 2026.</description>
+      <content:encoded><![CDATA[<p>Here&#39;s your Wednesday tech roundup for June 3, 2026:</p>
+<p><img src="/images/tech-roundup-2026-06-03-1.jpg" alt="Lab Research">
+<em>Photo by Unsplash - Laboratory research</em></p>
+<h2>Bio-Tech</h2>
+<ul>
+<li><p><strong>Scribe Therapeutics Clears Human Trial for Cholesterol CRISPR</strong>: Scribe Therapeutics announced successful first human trial results for their CRISPR-based cholesterol treatment, demonstrating years of LDL-C lowering after a single dose using their novel epigenetic silencing therapy STX-1150.</p>
+</li>
+<li><p><strong>New SMArT Platform Improves CRISPR Safety</strong>: Researchers at San Raffaele Telethon Institute for Gene Therapy have developed the SMArT platform, significantly improving the safety profile of CRISPR gene editing by reducing off-target effects.</p>
+</li>
+<li><p><strong>Casgevy 36-Month Data Confirms Sickle Cell Cure</strong>: CRISPR Therapeutics and Vertex Pharmaceuticals presented 36-month follow-up data for Casgevy, confirming durable sickle cell disease cure with continued efficacy.</p>
+</li>
+<li><p><strong>Base Editing Therapy Shows Promise</strong>: CorrectSequence Therapeutics reported positive 15-month follow-up data for CS-206, their high-precision base-editing therapy for sickle cell disease, demonstrating durable VOC-free efficacy.</p>
+</li>
+</ul>
+<h2>Space Tech</h2>
+<p><img src="/images/tech-roundup-2026-06-03-2.jpg" alt="Data Center">
+<em>Photo by Unsplash - Advanced technology infrastructure</em></p>
+<ul>
+<li><p><strong>Blue Origin New Glenn Explosion</strong>: Blue Origin&#39;s New Glenn rocket exploded on its launch pad at Cape Canaveral, representing a significant setback for the company&#39;s lunar ambitions and NASA&#39;s moon plans. The rocket was scheduled for a critical test flight.</p>
+</li>
+<li><p><strong>Blue Origin Vows Recovery</strong>: Despite the explosion, Blue Origin has committed to resuming New Glenn flights by year&#39;s end, with CEO Jeff Bezos stating the company will learn from the failure and move forward with their heavy-lift rocket program.</p>
+</li>
+<li><p><strong>SpaceX Starship Test Flight</strong>: SpaceX successfully launched its biggest Starship mega rocket yet on a test flight, continuing to advance the most powerful rocket ever built as part of their Mars colonization roadmap.</p>
+</li>
+</ul>
+<h2>IT &amp; DevOps</h2>
+<ul>
+<li><p><strong>Red Hat Supply Chain Attack</strong>: Over 32 Red Hat npm packages were compromised in a sophisticated supply chain attack distributing the &quot;Shai-Hulud&quot; credential stealer. Developers using @redhat-cloud-services packages should immediately audit and rotate credentials.</p>
+</li>
+<li><p><strong>Megalodon Attack Hits 5,500+ GitHub Repos</strong>: A massive supply chain attack named &quot;Megalodon&quot; has infected over 5,500 GitHub repositories with backdoors and credential stealers, highlighting the ongoing security challenges in open-source ecosystems.</p>
+</li>
+<li><p><strong>Security Alert for npm Users</strong>: The Red Hat incident is part of a broader wave of supply chain attacks targeting popular npm packages, emphasizing the need for robust software supply chain security measures.</p>
+</li>
+</ul>
+<h2>FinTech</h2>
+<ul>
+<li><p><strong>Coinbase Enables Stablecoin Payments</strong>: Coinbase has integrated stablecoin payments across Checkout.com&#39;s network of 1,000+ merchants, allowing businesses to accept USDC and USDT through existing payment infrastructure.</p>
+</li>
+<li><p><strong>SoFi Launches Bank-Issued Stablecoin</strong>: SoFi has brought a bank-issued stablecoin to its 15 million users, enabling members to trade, transfer, and eventually earn yield through the fintech platform&#39;s crypto offerings.</p>
+</li>
+<li><p><strong>MoneyGram Enters Crypto</strong>: MoneyGram launched MGUSD stablecoin on the Stellar Network, marking the remittance giant&#39;s entry into blockchain-based payments and cross-border transactions.</p>
+</li>
+<li><p><strong>Movement Secures Global Payment Rails</strong>: Movement secured licensed payment rails access in the US, Canada, and EU, committing to stablecoin settlement infrastructure for emerging markets.</p>
+</li>
+<li><p><strong>Franklin Templeton Tokenization</strong>: Moonpay partnered with Franklin Templeton to connect institutions to tokenized funds, advancing traditional finance&#39;s integration with on-chain assets.</p>
+</li>
+</ul>
+<h2>Emerging Tech</h2>
+<ul>
+<li><p><strong>Intel Bets on Quantum &amp; Neuromorphic</strong>: Playing catch-up in AI chips, Intel is pivoting toward quantum and neuromorphic processors, positioning for the next generation of computing beyond current AI hardware.</p>
+</li>
+<li><p><strong>USC Neuromorphic System Runs on Air</strong>: USC scientists developed a tiny neuromorphic system that thinks like a brain and runs on energy harvested from the environment, representing a breakthrough in ultra-low-power AI.</p>
+</li>
+<li><p><strong>Quantum Computing Inc. Deploys NeuraWave</strong>: Quantum Computing Inc. announced NeuraWave, a photonic computing platform for real-time AI inference at the edge, targeting deployment-ready edge computing applications.</p>
+</li>
+<li><p><strong>Microsoft Majorana 2 Quantum Chip</strong>: Microsoft unveiled Majorana 2, their next-generation topological quantum chip developed with agentic AI assistance, bringing fault-tolerant quantum computing closer to reality.</p>
+</li>
+<li><p><strong>Neuromorphic Architectures Boost Quantum Reliability</strong>: Washington University researchers developed neuromorphic architectures that improve quantum solution reliability, addressing a critical challenge in quantum computing.</p>
+</li>
+</ul>
+<h3>Key Takeaway</h3>
+<p>This week&#39;s tech news reveals a landscape of both breakthroughs and setbacks. While CRISPR therapies show remarkable promise with multi-year efficacy data and stablecoin adoption accelerates in traditional finance, the space industry faces reality checks with Blue Origin&#39;s explosion and the software world grapples with massive supply chain vulnerabilities. The convergence of quantum, neuromorphic, and photonic computing suggests we&#39;re on the cusp of a new computational paradigm—making these emerging technologies worth watching closely.</p>
+<hr>
+<p><em>Stay tuned for next week&#39;s tech roundup!</em></p>
+]]></content:encoded>
+      <category>tech</category>
+    <category>biotech</category>
+    <category>fintech</category>
+    <category>space-tech</category>
+    <category>emerging-tech</category>
+    <category>IT</category>
+    </item>
     <item>
       <title>Robotics Roundup - June 2, 2026</title>
       <link>https://shamyl.github.io/blog/robotics-2026-06-02</link>
