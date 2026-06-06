@@ -5,13 +5,82 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Wed, 03 Jun 2026 04:01:45 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jun 2026 04:25:32 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamyl.github.io/blog</link>
     </image>
+    <item>
+      <title>Pakistan Tech Roundup - June 6, 2026</title>
+      <link>https://shamyl.github.io/blog/pakistan-tech-2026-06-06</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/pakistan-tech-2026-06-06</guid>
+      <pubDate>Sat, 06 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Latest technology happenings in Pakistan from June 6, 2026.</description>
+      <content:encoded><![CDATA[<p>Here&#39;s your Saturday Pakistan tech roundup for June 6, 2026:</p>
+<p><img src="/images/pakistan-tech-2026-06-06-1.jpg" alt="Pakistan tech ecosystem"></p>
+<h2>Startups &amp; Funding</h2>
+<p><strong>Abhi Raises $17 Million in Series A</strong>
+Pakistani fintech Abhi secured $17 million in Series A funding, marking a significant milestone for the startup ecosystem. According to Alpha Beta Core, this reflects growing investor confidence in Pakistan&#39;s financial technology sector. Abhi&#39;s earned wage access platform continues to address critical liquidity challenges faced by the country&#39;s workforce.</p>
+<p><strong>inDrive Launches Aurora Ventures for Women Founders</strong>
+Global mobility platform inDrive officially launched Aurora Ventures, a dedicated early-stage investment program targeting Pakistani women tech founders. The initiative aims to bridge the significant venture capital funding gap that women entrepreneurs face. With ticket sizes ranging from $180,000 to $250,000 at pre-seed and seed stages, Aurora Ventures represents a meaningful step toward a more inclusive startup ecosystem.</p>
+<p><strong>Metal (Airlift Founder&#39;s New AI Venture) Secures Rebel Fund Investment</strong>
+Usman Gul, co-founder of the now-defunct Airlift, announced this week that his new startup Metal has secured strategic investment from US-based Rebel Fund. The AI-focused venture is already generating buzz in the ecosystem, with many watching to see how lessons from Airlift&#39;s rapid rise and collapse will inform this new chapter.</p>
+<p><strong>Pakistan&#39;s Startup Future: Talent, Trust, and Long-Term Thinking</strong>
+The conversation around Pakistan&#39;s startup ecosystem continues to mature, moving beyond the hype cycles of previous years. Industry observers emphasize the need for sustainable business models, founder resilience, and patience from both investors and entrepreneurs.</p>
+<h2>IT Exports &amp; Economy</h2>
+<p><strong>IT Exports Hit $3.81 Billion in 10 Months</strong>
+Pakistan&#39;s IT and IT-enabled services exports reached $3.81 billion in the first 10 months of fiscal year 2026 — nearly matching the entire FY25 total. This represents approximately 20% year-on-year growth. The sector earned $413 million in March 2026 alone, showing strong recovery after two months of decline.</p>
+<p><strong>Freelance Exports Hit $959 Million</strong>
+IT freelancers contributed $959 million in foreign exchange during the first 10 months of FY26, according to State Bank data. This growth has been supported by recent SBP reforms that eased freelancer rules, including scrapped Form R reporting for exports up to $25,000 and allowing freelancers to retain up to 50% of income in foreign currency accounts.</p>
+<h2>Government Initiatives</h2>
+<p><strong>Rs. 3 Billion National AI Adoption Fund Proposed</strong>
+A policy proposal submitted ahead of the Federal Budget 2026-27 recommends creating a Rs. 3 billion National AI Adoption Fund aimed at accelerating AI use across 600 Pakistani companies. The fund would support AI adoption in key sectors including agriculture, healthcare, and manufacturing.</p>
+<p><strong>$1 Billion National AI Program Proposed</strong>
+The Ministry of Information Technology and Telecommunication has proposed an ambitious $1 billion National AI Program alongside a Rs. 70 billion Digital Connectivity Plan. These initiatives aim to position Pakistan as a regional hub for AI development and digital infrastructure.</p>
+<p><strong>MoITT Seeks Record Rs. 71.8 Billion PSDP Allocation</strong>
+The Ministry of IT has requested a record Rs. 71.84 billion allocation for 20 development projects under the Public Sector Development Programme (PSDP). The budget focuses on IT parks, startups, and telecom expansion. Additionally, IT and Telecom projects are likely to receive Rs. 20 billion in the upcoming budget FY2026-27.</p>
+<p><strong>Cloud Service Provider Registration Begins</strong>
+The IT ministry has started registering cloud service providers to ensure data security compliance. This move is part of broader efforts to build trust in Pakistan&#39;s digital infrastructure and attract international cloud providers.</p>
+<h2>Telecom &amp; Connectivity</h2>
+<p><strong>5G Rollout Begins in 22 Cities</strong>
+The Pakistan Telecommunication Authority (PTA) informed the National Assembly that 5G rollout has officially begun in 22 cities through pilot deployments. As part of this transition, 4G speeds are expected to rise to around 40 Mbps as infrastructure upgrades continue.</p>
+<p><strong>iPhone 17 Gets Official 5G Support</strong>
+PTA and MoITT successfully collaborated to launch official 5G services for iPhone 17 in Pakistan. This represents a significant milestone as Apple maintains strict carrier certification requirements, and Pakistani networks now meet those standards.</p>
+<p><strong>MoITT Recommends Lower Import Duties for Telecom Equipment</strong>
+To accelerate 5G deployment, the Ministry of IT has proposed major tax relief measures including lower import duties on telecom equipment. The ministry is also urging tax relief extension for the telecom sector to ensure continued infrastructure investment.</p>
+<h2>E-commerce &amp; FinTech</h2>
+<p><strong>JazzCash Yeylo Shopping Ecosystem Launch</strong>
+JazzCash launched Yeylo, a comprehensive shopping ecosystem featuring &quot;Pay in 3&quot; installment options. This move represents JazzCash&#39;s evolution from a pure payments platform to a full-fledged e-commerce enabler, competing directly with Easypaisa&#39;s digital banking ambitions.</p>
+<p><strong>JazzCash Onboards 1 Millionth Merchant</strong>
+JazzCash celebrated a major milestone by onboarding its 1 millionth merchant onto Pakistan&#39;s National Digital Payments Platform (Raast). This achievement advances the country&#39;s cashless economy goals and demonstrates the rapid digitization of Pakistan&#39;s payment infrastructure.</p>
+<p><strong>&quot;Make Cash More Expensive Than Digital&quot;</strong>
+The easypaisa Digital Bank chief made headlines with a bold statement advocating policy measures to make cash transactions more expensive than digital alternatives. This reflects the ongoing competition between Pakistan&#39;s leading fintech players to drive digital adoption.</p>
+<p><strong>Raast Reaches 48 Million Users</strong>
+Pakistan&#39;s instant payment rail Raast, operated by SBP, has reached 48 million users in 2025, processing PKR 50 trillion across the platform. This positions Pakistan as a leader in real-time payments in South Asia.</p>
+<p><img src="/images/pakistan-tech-2026-06-06-2.jpg" alt="Pakistan innovation"></p>
+<h2>Events &amp; Community</h2>
+<p><strong>KHI NEXT 2026: Asia&#39;s First Multidomain AI Summit</strong>
+Announced this week, KHI NEXT 2026 will be Asia&#39;s first multidomain AI and innovation summit, uniting leaders, innovators, and policymakers under the theme &quot;AI in Everything.&quot; The summit promises to showcase Pakistan&#39;s growing AI capabilities on the regional stage.</p>
+<p><strong>National AI Hackathon 2026</strong>
+Powered by Atomcamp, the National AI Hackathon series continues across 5 cities in Pakistan. The 2-day multi-city hackathon series brings together students to learn, build, and compete on real-world AI innovation challenges.</p>
+<p><strong>Kirothon 2026</strong>
+AWS Community Pakistan presents Kirothon 2026, a hackathon focused on building with Kiro — AWS&#39;s agentic AI IDE that transforms prompts into working code. This event highlights the growing interest in AI-assisted development tools among Pakistani developers.</p>
+<p><strong>JTECH&#39;26 - Women-Led Tech Event</strong>
+Jinnah University for Women presents JTECH&#39;26, Pakistan&#39;s leading women-led tech event where innovation meets opportunity. The event continues to build on the momentum of supporting women in Pakistan&#39;s technology sector.</p>
+<p><strong>Imam Gaming: From PUBG to Real-World Entertainment</strong>
+Content creator Imam Bakhsh, founder of Imam Gaming, continues to make waves by bringing PUBG culture into real-world entertainment. This reflects the growing influence of gaming content creators in Pakistan&#39;s digital entertainment landscape.</p>
+<h3>Key Takeaway</h3>
+<p>Pakistan&#39;s tech ecosystem is showing remarkable resilience and growth. With IT exports approaching $4 billion, major government AI initiatives in the pipeline, and 5G finally rolling out across 22 cities, the sector is hitting its stride. The influx of Series A funding for fintech startups like Abhi, combined with inDrive&#39;s Aurora Ventures targeting women founders, suggests a maturing investment landscape that values sustainable business models over hypergrowth-at-all-costs. Meanwhile, JazzCash and easypaisa&#39;s battle for digital payments dominance is driving rapid financial inclusion. The challenge remains converting policy proposals into execution — turning the ambitious Rs. 3 billion AI fund and $1 billion national program into tangible outcomes that benefit businesses and citizens across the country.</p>
+]]></content:encoded>
+      <category>pakistan-tech</category>
+    <category>pakistan</category>
+    <category>startups</category>
+    <category>IT-exports</category>
+    <category>telecom</category>
+    <category>ecosystem</category>
+    </item>
     <item>
       <title>Tech Roundup - June 3, 2026</title>
       <link>https://shamyl.github.io/blog/tech-roundup-2026-06-03</link>
