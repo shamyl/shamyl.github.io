@@ -5,13 +5,71 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Sat, 06 Jun 2026 04:25:32 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 07 Jun 2026 04:02:23 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamyl.github.io/blog</link>
     </image>
+    <item>
+      <title>Space Tech Roundup - June 7, 2026</title>
+      <link>https://shamyl.github.io/blog/space-tech-2026-06-07</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/space-tech-2026-06-07</guid>
+      <pubDate>Sun, 07 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Latest in space exploration, satellite technology, and aerospace developments from June 7, 2026.</description>
+      <content:encoded><![CDATA[<p>Here&#39;s your Sunday space tech roundup for June 7, 2026:</p>
+<h2>Launches &amp; Missions</h2>
+<ul>
+<li><p><strong>SpaceX&#39;s Starship V3 Makes Debut</strong> — SpaceX launched the first Starship V3 vehicle on Flight 12 in late May, marking a significant evolution in the world&#39;s largest rocket. The new version incorporates design improvements as SpaceX continues pushing toward orbital refueling and lunar missions.</p>
+</li>
+<li><p><strong>Back-to-Back Starlink Launches</strong> — SpaceX demonstrated its rapid launch cadence with Starlink missions from both coasts just 19 hours apart. One mission also carried 2 Starshield satellites, SpaceX&#39;s military-focused communications platform.</p>
+</li>
+<li><p><strong>Blue Origin Targets Year-End Return</strong> — Despite the May 28 explosion at Launch Complex 36, Blue Origin CEO Dave Limp announced that New Glenn could return to flight by the end of 2026. Key infrastructure survived, and the company is working on an alternative vertical integration concept.</p>
+</li>
+<li><p><strong>Amazon LEO Constellation Growth</strong> — Amazon&#39;s LEO satellite constellation now exceeds 330 satellites, with an upcoming Ariane 6 launch set to carry 36 more using upgraded boosters for more efficient deployment.</p>
+</li>
+</ul>
+<p><img src="/images/space-tech-2026-06-07-2.jpg" alt="SpaceX Falcon 9 on Launch Pad"></p>
+<h2>Satellites &amp; Constellations</h2>
+<ul>
+<li><p><strong>FCC Grants Amazon Deployment Waiver</strong> — The FCC approved a waiver allowing Amazon to meet a 50% constellation deployment deadline, saving the company&#39;s home internet service from regulatory setbacks. This gives Amazon more breathing room to compete with SpaceX&#39;s Starlink.</p>
+</li>
+<li><p><strong>Launch Market Constraints Continue</strong> — The New Glenn failure has exacerbated an already constrained launch market, affecting satellite deployment timelines across the industry.</p>
+</li>
+</ul>
+<h2>Deep Space &amp; Exploration</h2>
+<ul>
+<li><p><strong>NASA&#39;s MAVEN Mission Ends</strong> — After 11 years studying Mars&#39; atmosphere, NASA declared the MAVEN orbiter dead following six months of silence. The spacecraft began unexpectedly rotating on December 6, 2025, losing solar power and entering an unrecoverable state. During its mission, MAVEN revolutionized our understanding of atmospheric escape at Mars and served as a critical communications relay for surface missions.</p>
+</li>
+<li><p><strong>Curiosity Rover Continues Journey</strong> — NASA&#39;s Curiosity rover is departing &quot;Campo Marte&quot; after completing studies in the region, continuing its decade-plus exploration of the Red Planet.</p>
+</li>
+<li><p><strong>ISS Emergency Shelter Incident</strong> — NASA astronauts aboard the International Space Station briefly sheltered in a SpaceX Dragon capsule on June 5 while Roscosmos attempted repairs on a persistent air leak in the Zvezda service module. The leak rate had increased to two pounds per day, prompting heightened safety protocols. The repair was paused for additional assessments, and crews have returned to normal operations.</p>
+</li>
+</ul>
+<h2>Research &amp; Discoveries</h2>
+<ul>
+<li><p><strong>Webb Detects Methane on Interstellar Comet</strong> — For the first time, NASA&#39;s James Webb Space Telescope detected methane on an interstellar object. Observations of comet 3I/ATLAS revealed methane buried beneath the surface, released after the comet&#39;s close pass by the Sun. The findings suggest a very different formation environment than solar system comets.</p>
+</li>
+<li><p><strong>Hot Jupiter Magnetic Fields Discovered</strong> — Astronomers have found the first evidence of magnetic fields on exoplanets, detected through winds blasting at over 15,000 mph on &quot;Hot Jupiter&quot; planets.</p>
+</li>
+<li><p><strong>Webb &quot;Weighs&quot; Distant Black Hole</strong> — The JWST has measured a dormant black hole 10 billion light-years away, providing new insights into the early universe.</p>
+</li>
+<li><p><strong>Ancient Star Cluster Mystery</strong> — A brightness gap discovered in an ancient star cluster has revealed missing red dwarfs, challenging our understanding of stellar populations.</p>
+</li>
+</ul>
+<h3>Key Takeaway</h3>
+<p>The space industry continues to demonstrate both its resilience and vulnerability this week. While SpaceX maintains its relentless launch cadence and NASA&#39;s Webb telescope delivers groundbreaking discoveries, setbacks like the New Glenn explosion and the end of MAVEN remind us that space exploration remains challenging. The rapid response to the ISS leak shows international cooperation in action, while the race between satellite constellations intensifies with Amazon gaining regulatory relief. The future of space access depends on building robust infrastructure—and having backup plans when things go wrong.</p>
+<p><em>Images courtesy of NASA (public domain)</em></p>
+]]></content:encoded>
+      <category>space-tech</category>
+    <category>space</category>
+    <category>spacex</category>
+    <category>nasa</category>
+    <category>satellites</category>
+    <category>rockets</category>
+    <category>mars</category>
+    </item>
     <item>
       <title>Pakistan Tech Roundup - June 6, 2026</title>
       <link>https://shamyl.github.io/blog/pakistan-tech-2026-06-06</link>
