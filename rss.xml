@@ -5,13 +5,99 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Tue, 09 Jun 2026 04:02:06 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jun 2026 04:01:44 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamyl.github.io/blog</link>
     </image>
+    <item>
+      <title>Tech Roundup - June 10, 2026</title>
+      <link>https://shamyl.github.io/blog/tech-roundup-2026-06-10</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/tech-roundup-2026-06-10</guid>
+      <pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Latest in Bio-Tech, Space Tech, IT, FinTech and emerging technology from June 10, 2026.</description>
+      <content:encoded><![CDATA[<p>Here&#39;s your Wednesday tech roundup for June 10, 2026:</p>
+<p><img src="/images/tech-roundup-2026-06-10-1.jpg" alt="DNA research lab"></p>
+<h2>Bio-Tech</h2>
+<ul>
+<li><p><strong>CRISPR-Based Mpox Diagnostic Successfully Field-Tested in Sierra Leone</strong>: A portable, low-cost CRISPR assay was rapidly developed and deployed during the 2025 Mpox clade IIb outbreak in Sierra Leone, demonstrating the potential for decentralized pandemic response. Published in <em>Nature Communications</em>.</p>
+</li>
+<li><p><strong>Base-Editing Therapy Shows Durable Results for Sickle Cell Disease</strong>: CorrectSequence Therapeutics reported positive 15-month follow-up data for CS-206, a high-precision base-editing therapy demonstrating durable VOC-free efficacy and favorable safety profile.</p>
+</li>
+<li><p><strong>New &#39;SMArT&#39; Platform Advances Gene Editing</strong>: A novel platform makes gene editing in hematopoietic stem cells more efficient and safer, addressing key challenges in genetic disease treatment.</p>
+</li>
+<li><p><strong>CRISPR Therapeutics Stock Jumps 12%</strong>: Investor confidence in gene editing continues to grow as CRISPR Therapeutics saw significant gains in New York trading.</p>
+</li>
+<li><p><strong>World&#39;s First AI-Designed Vaccine Enters Human Trials</strong>: A groundbreaking vaccine created entirely by AI is being tested in humans for the first time, potentially revolutionizing drug development timelines.</p>
+</li>
+</ul>
+<h2>Space Tech</h2>
+<p><img src="/images/tech-roundup-2026-06-10-2.jpg" alt="Space and satellite technology"></p>
+<ul>
+<li><p><strong>SpaceX Sets New Reusability Record</strong>: Falcon 9 booster B1067 completed its record-breaking 35th flight, launching 29 Starlink satellites. SpaceX continues to push toward its goal of 40 flights per booster.</p>
+</li>
+<li><p><strong>NASA Names Artemis 3 Crew</strong>: NASA announced the four-person international crew for the Artemis 3 mission, humanity&#39;s next step toward returning to the Moon. The crew includes astronauts from multiple space agencies.</p>
+</li>
+<li><p><strong>Starshield Satellites Deployed</strong>: SpaceX launched 2 Starshield satellites during a recent Starlink mission, expanding its national security satellite capabilities.</p>
+</li>
+<li><p><strong>Back-to-Back Starlink Launches</strong>: SpaceX executed two Starlink missions from both coasts just 19 hours apart, demonstrating unprecedented launch cadence.</p>
+</li>
+<li><p><strong>Blue Origin New Glenn Test Incident</strong>: A prelaunch static fire test of Blue Origin&#39;s New Glenn rocket resulted in an explosion at Cape Canaveral, highlighting the challenges of heavy-lift rocket development.</p>
+</li>
+</ul>
+<h2>IT &amp; DevOps</h2>
+<ul>
+<li><p><strong>2026 State of Application &amp; AI Security Released</strong>: Cloud Security Alliance&#39;s latest report, based on survey data from 900+ cybersecurity leaders, highlights production environments as the decisive layer where exposure becomes operational risk.</p>
+</li>
+<li><p><strong>Google Cloud Threat Horizons Report H1 2026</strong>: New strategic intelligence on cloud threats across all major providers reveals emerging attack patterns targeting containerized workloads.</p>
+</li>
+<li><p><strong>Cloud-Native Security Evolution</strong>: Security practices for 2026 now cover substantially different attack surfaces than pre-2020 paradigms, with the shift to container-based deployment and Kubernetes orchestration requiring new defensive strategies.</p>
+</li>
+<li><p><strong>Securing AI-Powered DevOps Stacks</strong>: Organizations are implementing multi-layered defenses across endpoints, API gateways, and Git hosting platforms to counter emerging AI-specific threat vectors in development pipelines.</p>
+</li>
+<li><p><strong>NVIDIA Nemotron 3 Ultra Released</strong>: A 550-billion parameter open-weight Mixture-of-Experts (MoE) model designed specifically for AI agents represents a fundamental shift in accessible AI capabilities.</p>
+</li>
+</ul>
+<h2>FinTech</h2>
+<ul>
+<li><p><strong>Mastercard Expands On-Chain Settlement</strong>: Betting on stablecoins and &quot;always-on finance,&quot; Mastercard plans to offer stablecoin settlement and weekend/holiday processing as demand grows for real-time money movement.</p>
+</li>
+<li><p><strong>Kraken Partners with Tempo for Global Payments</strong>: The crypto exchange and fintech company are collaborating on global payments infrastructure and stablecoin solutions for cross-border transactions.</p>
+</li>
+<li><p><strong>$1 Billion Cross-Border DeFi Corridor Announced</strong>: Movement and Zoth signed a definitive agreement to build institutional-grade cross-border payments infrastructure with global vault capabilities.</p>
+</li>
+<li><p><strong>Fireblocks Flow Enables Stablecoin Merchant Payments</strong>: New infrastructure allows merchants to accept stablecoin payments as easily as credit cards, with payment service providers racing to integrate.</p>
+</li>
+<li><p><strong>Revolut Plans US Bank with Stablecoin Services</strong>: The neobank&#39;s planned US banking entity will reportedly offer stablecoin services alongside FDIC-insured accounts, signaling mainstream crypto adoption.</p>
+</li>
+</ul>
+<h2>Emerging Tech</h2>
+<ul>
+<li><p><strong>World-First &quot;Brain-Like&quot; Chip from HKU</strong>: Hong Kong University engineers developed a neuromorphic chip to advance quantum computing and deep-space exploration, bridging biological and quantum computing paradigms.</p>
+</li>
+<li><p><strong>Quantum Computing Inc. Launches NeuraWave</strong>: A deployment-ready photonic computing platform for real-time AI inference at the edge, enabling quantum-inspired processing in embedded systems.</p>
+</li>
+<li><p><strong>Cryogenic Silicon Carbide Hardware Breakthrough</strong>: New cryogenic silicon carbide addresses quantum computing&#39;s thermal management bottleneck, bringing practical quantum systems closer to reality.</p>
+</li>
+<li><p><strong>Neuro-Cognitive Quantum Architecture for Medical AI</strong>: Researchers published a novel architecture combining neuromorphic and quantum computing for trustworthy AI in resource-scarce medical environments.</p>
+</li>
+<li><p><strong>Apple&#39;s AI Siri Overhaul Arrives</strong>: Two years after its initial announcement, Apple has finally unveiled its overhauled Siri with advanced AI capabilities, integrating large language models into the voice assistant.</p>
+</li>
+</ul>
+<h3>Key Takeaway</h3>
+<p>This week&#39;s tech landscape shows convergence across multiple domains: <strong>AI is accelerating everything</strong>—from vaccine design to voice assistants—while <strong>reusability becomes the norm</strong> in both space tech (Falcon 9&#39;s 35th flight) and financial infrastructure (stablecoin settlement). The lines between traditional sectors continue to blur as quantum computing, neuromorphic chips, and AI-powered biotech create entirely new paradigms. We&#39;re witnessing not just incremental improvements but fundamental shifts in how we approach healthcare, finance, space exploration, and computing itself.</p>
+<hr>
+<p><em>Images courtesy of Unsplash</em></p>
+]]></content:encoded>
+      <category>tech</category>
+    <category>biotech</category>
+    <category>fintech</category>
+    <category>space-tech</category>
+    <category>emerging-tech</category>
+    <category>IT</category>
+    </item>
     <item>
       <title>Robotics Roundup - June 9, 2026</title>
       <link>https://shamyl.github.io/blog/robotics-2026-06-09</link>
