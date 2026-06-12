@@ -5,13 +5,75 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Wed, 10 Jun 2026 04:01:44 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jun 2026 04:01:54 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamyl.github.io/blog</link>
     </image>
+    <item>
+      <title>3D Printing Roundup - June 11, 2026</title>
+      <link>https://shamyl.github.io/blog/3d-printing-2026-06-11</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/3d-printing-2026-06-11</guid>
+      <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Latest in 3D printing technology, printers, materials, and maker projects from June 11, 2026.</description>
+      <content:encoded><![CDATA[<p>Here&#39;s your Thursday 3D printing roundup for June 11, 2026:</p>
+<h2>Printer News &amp; Releases</h2>
+<p><strong>Bambu Lab Launches the A2L - &quot;Creative Playground&quot;</strong>
+Bambu Lab continues its relentless innovation streak with the new A2L 3D printer. Following closely on the heels of the X2D release, the A2L expands the A-Series lineup with a larger build volume and modular add-on capabilities. This printer targets makers who need more space for ambitious projects while maintaining the accessibility that made the A-Series popular.</p>
+<p><strong>Formlabs Announces the Fuse X1 - Accessible Industrial SLS</strong>
+Formlabs has released the Fuse X1, a low-cost industrial large-format SLS (Selective Laser Sintering) 3D printer. This marks a significant democratization of SLS technology, traditionally reserved for high-end industrial applications. The Fuse X1 makes nylon powder printing accessible to smaller businesses and serious makers.</p>
+<p><strong>Yidimu MagPro - Closing the Resin Printer Gap</strong>
+Shenzhen-based Yidimu has launched a Kickstarter campaign for the MagPro resin 3D printer, aiming to fill a significant market gap in the MSLA (Masked Stereolithography) space with innovative features at competitive pricing.</p>
+<h2>Materials &amp; Filaments</h2>
+<p><strong>Polymaker Expands ABS Lineup</strong>
+Polymaker launched two new engineering-grade ABS filaments:</p>
+<ul>
+<li><strong>ABS Pro</strong>: A versatile high-speed option designed for enclosed printers</li>
+<li><strong>ABS Max</strong>: Maximum strength variant for demanding applications</li>
+</ul>
+<p><strong>Xenia Bio-Based PPA Carbon-Fiber Filament</strong>
+Italian composite specialist Xenia has introduced a bio-based PPA (polyphthalamide) carbon-fiber filament specifically engineered for high-stress 3D printing applications. This combines sustainability with industrial-grade performance.</p>
+<p><strong>Voltage Eclipse X9 - Basalt-PETG Composite</strong>
+Hawaiian company Voltage Materials launched the Eclipse X9, a basalt-PETG composite filament designed for large-format additive manufacturing. Basalt fiber reinforcement provides excellent strength-to-weight ratio and temperature resistance.</p>
+<p><strong>Wool-Based Color Filament from New Zealand</strong>
+An innovative collaboration between Wool Source and KiwiFil has produced wool-based color 3D printing filament. This sustainable material opens new possibilities for textile-like printed objects and eco-conscious manufacturing.</p>
+<p><img src="/images/3d-printing-2026-06-11-2.jpg" alt="3D Printing Filament"></p>
+<h2>Software Updates</h2>
+<p><strong>Cura 5.12 Stable Released</strong>
+UltiMaker has released Cura 5.12 with improved slicing algorithms and new features. Version 5.12.1 followed quickly with a bug fix for <code>.makerbot</code> file export issues.</p>
+<p><strong>PrusaSlicer 2.9.5 &amp; ColorMix</strong>
+Prusa released PrusaSlicer 2.9.5 with stability improvements. More excitingly, they&#39;ve introduced an open-source ColorMix feature for both EasyPrint and PrusaSlicer, enabling multi-color printing with dozens of colors through advanced filament mixing.</p>
+<h2>Crowdfunding Projects</h2>
+<p><strong>Revopoint POP 4 3D Scanner</strong>
+The Revopoint POP 4 3D Scanner Kickstarter campaign has raised nearly $2 million (against a $60,000 goal) with 2,500+ backers. This affordable 3D scanning solution brings professional-grade scanning to the maker community.</p>
+<p><strong>TOP.E Five-Axis R1</strong>
+Hong Kong-based TOP.E is preparing to launch a crowdfunding campaign for their five-axis FFF printer, claiming up to 60% reduction in material waste and improved print quality through multi-axis printing capabilities.</p>
+<p><strong>STARFIELD 3D All-in-One SLA Printer</strong>
+A new Kickstarter campaign for the STARFIELD 3D promises printing and post-curing in a single integrated SLA machine, streamlining the resin printing workflow.</p>
+<h2>Industry Applications</h2>
+<p><strong>ExxonMobil Adopts Wire-Based Metal 3D Printing</strong>
+ExxonMobil is using wire-based metal 3D printing technology to significantly cut production costs for oil and gas industry components. This marks continued industrial adoption of WAAM (Wire Arc Additive Manufacturing).</p>
+<p><strong>Norsk Titanium &amp; Airbus Partnership</strong>
+Norsk Titanium has signed a Cooperation &amp; Research Agreement with Airbus to move their Rapid Plasma Deposition (RPD) technology from proof-of-concept to full-scale production for aerospace components.</p>
+<p><strong>Aurelia Technologies Partners with Velo3D</strong>
+Aurelia Technologies is exploring metal 3D printing for turbine parts through a partnership with Velo3D, leveraging their support-free metal printing technology for complex geometries.</p>
+<h2>Key Takeaway</h2>
+<p>The 3D printing industry is experiencing rapid democratization across all segments. Bambu Lab continues to dominate the consumer/desktop space with relentless innovation cycles. Formlabs is bringing industrial SLS to a broader audience with the Fuse X1. Meanwhile, materials innovation is accelerating with sustainable options like wool-based and bio-based composites entering the market. The boundary between consumer and industrial 3D printing continues to blur, giving makers and small businesses access to capabilities that were enterprise-only just a few years ago.</p>
+<hr>
+<p><em>Images: Photo 1 by Jakub Żerdzicki on Unsplash | Photo 2 by Jakub Żerdzicki on Pexels</em></p>
+]]></content:encoded>
+      <category>3d-printing</category>
+    <category>additive-manufacturing</category>
+    <category>maker</category>
+    <category>fdm</category>
+    <category>sla</category>
+    <category>filament</category>
+    <category>bambu-lab</category>
+    <category>formlabs</category>
+    <category>cura</category>
+    </item>
     <item>
       <title>Tech Roundup - June 10, 2026</title>
       <link>https://shamyl.github.io/blog/tech-roundup-2026-06-10</link>
@@ -3200,6 +3262,92 @@ Research published in arXiv highlights breakthroughs in energy-efficient neuromo
     <category>startups</category>
     <category>technology-trends</category>
     <category>artificial-intelligence</category>
+    </item>
+    <item>
+      <title>Tech, Art &amp; Entertainment - June 12, 2025</title>
+      <link>https://shamyl.github.io/blog/tech-art-2025-06-12</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/tech-art-2025-06-12</guid>
+      <pubDate>Thu, 12 Jun 2025 00:00:00 GMT</pubDate>
+      <description>Creative intersections of technology, art, and entertainment from June 12, 2025.</description>
+      <content:encoded><![CDATA[<p>Here&#39;s your Friday creative tech roundup for June 12, 2025:</p>
+<p><img src="/images/tech-art-2025-06-12-1.jpg" alt="Abstract digital art with flowing gradients">
+<em>Photo by Unsplash</em></p>
+<h2>AI Art &amp; Creative Tools</h2>
+<p>The AI art space continues to evolve at breakneck speed with some major developments this week:</p>
+<ul>
+<li><p><strong>Midjourney Enters Video Generation</strong>: After dominating the static image generation space, Midjourney has launched its V1 video model. The tool can animate user-uploaded images or ones created on the platform, marking a significant expansion of their creative suite. The company envisions this as a stepping stone toward &quot;real-time open-world simulations.&quot;</p>
+</li>
+<li><p><strong>Stable Diffusion 3.5 Gets Faster</strong>: Stability AI announced that Stable Diffusion 3.5 models optimized with NVIDIA TensorRT now deliver 2X faster performance while using 40% less memory on RTX GPUs. This makes high-quality AI generation more accessible to creators with consumer hardware.</p>
+</li>
+<li><p><strong>Copyright Battles Heat Up</strong>: In a significant legal development, Disney and Universal have filed a 110-page lawsuit against Midjourney, claiming the AI company used &quot;countless&quot; copyrighted works to train its models without authorization. This case could set important precedents for the future of AI training data.</p>
+</li>
+</ul>
+<h2>Generative Art &amp; Creative Coding</h2>
+<p>The generative art scene is flourishing with new exhibitions and installations worldwide:</p>
+<ul>
+<li><p><strong>&quot;Future You: Code and Soul&quot; in Beijing</strong>: Universal Everything&#39;s first major solo exhibition in China opens at 798CUBE on June 28. Running through October 8, the show explores future visions for humanity, technology, and evolution through immersive generative artworks.</p>
+</li>
+<li><p><strong>Kevin Abosch&#39;s &quot;Parallax&quot; at Palazzo Citterio</strong>: The conceptual artist&#39;s generative video work is on display in Milan through September 14, 2025. Abosch, known for his exploration of identity and value in the digital age, brings his signature style to this historic venue.</p>
+</li>
+<li><p><strong>&quot;Nebula&quot; by Chris May</strong>: This multimedia art installation explores inner space through an immersive, meditative descent into an otherworldly mineral-like form. The piece uses generative techniques to create textures and transformations that draw viewers inward.</p>
+</li>
+</ul>
+<h2>Interactive &amp; Immersive Experiences</h2>
+<p>VR, AR, and immersive installations are pushing the boundaries of audience engagement:</p>
+<ul>
+<li><p><strong>INSIDER-OUTSIDER at Grand Palais</strong>: A musical VR experience inspired by the visionary outsider artist Henry Darger opens June 20 in Paris. Running through September 21, the experience transforms Darger&#39;s elaborate fantasy world into an immersive digital journey.</p>
+</li>
+<li><p><strong>La Magie Opéra Celebrates 150 Years</strong>: The Palais Garnier in Paris debuted &quot;La Magie Opéra&quot; in May—an immersive, multi-user, geolocated experience that plunges visitors into dreamlike scenes inspired by legendary operas and the iconic opera house itself.</p>
+</li>
+<li><p><strong>Rarible at NFC Lisbon</strong>: The NFT platform showcased six interactive art installations featuring works by established and emerging artists using TouchDesigner and other cutting-edge interactive technologies.</p>
+</li>
+</ul>
+<h2>Tech in Film, Music &amp; Gaming</h2>
+<p>Creative industries are seeing exciting integrations and new tools:</p>
+<ul>
+<li><p><strong>Sony Opens 360 Audio Tech</strong>: Sony Corporation is expanding access to its 360 Virtual Mixing Environment (360VME) audio technology to creators across music, education, and more. This spatial audio tech was previously limited to select professional studios.</p>
+</li>
+<li><p><strong>Avid + Splice Integration</strong>: Pro Tools now features seamless integration with Splice&#39;s massive sample library, making millions of sounds directly accessible within the industry-standard DAW. This partnership streamlines workflows for music producers worldwide.</p>
+</li>
+<li><p><strong>Korg Gadget Comes to PlayStation 5</strong>: The popular mobile music production suite has evolved into an immersive 3D virtual music studio for PS5, allowing gamers to create music in a visually stunning environment.</p>
+</li>
+<li><p><strong>Suno Acquires WavTool</strong>: The AI music generation company has acquired WavTool, an AI-accelerated browser-based DAW, signaling deeper integration between AI composition and traditional music production workflows.</p>
+</li>
+</ul>
+<h2>Cool Projects &amp; Maker Art</h2>
+<p>The maker community continues to blend traditional craft with modern technology:</p>
+<p><img src="/images/tech-art-2025-06-12-2.jpg" alt="Abstract flowing art">
+<em>Photo by Unsplash</em></p>
+<ul>
+<li><p><strong>Rotary Phone Pensieve</strong>: Designer Adrian Granchelli embedded a vintage rotary phone with a modern microcontroller to create an interactive art activation. The piece bridges analog nostalgia with digital interactivity.</p>
+</li>
+<li><p><strong>10-Foot Painting Robot</strong>: Former US Air Force engineer Paul Kirby created &quot;Dulcinea&quot;—a fully automated fine art painting robot standing 10 feet tall. The machine merges art and automation to create unique paintings.</p>
+</li>
+<li><p><strong>Thermochromic Sunshine Clock</strong>: A delightful Paper Sunshine Clock by maker &quot;anneosaur&quot; uses thermochromic materials to create a sun-ray display that changes with time, offering a fresh take on analog timekeeping.</p>
+</li>
+</ul>
+<h2>Projection Mapping &amp; Digital Festivals</h2>
+<p>Large-scale projection art continues to transform public spaces:</p>
+<ul>
+<li><p><strong>Digital Graffiti Festival 2025</strong>: The annual event at Alys Beach transformed the Florida community into an immersive open-air gallery of light, motion, and interactive art using Panasonic projection technology.</p>
+</li>
+<li><p><strong>ART on THE MART Summer Season</strong>: The world&#39;s largest permanent digital art projection—covering 2.5 acres on Chicago&#39;s Merchandise Mart—debuts &quot;Currents of Chicago – A Moving Artwork&quot; by Perkins&amp;Will, celebrating the city&#39;s dynamic urban flow.</p>
+</li>
+<li><p><strong>Threshold at Uncontained Festival</strong>: Artist Laura Alice&#39;s large-scale sculpture projected with particle simulations creates an otherworldly architectural experience for festival-goers.</p>
+</li>
+</ul>
+<h3>Key Takeaway</h3>
+<p>This week underscores a fascinating tension in creative technology: while AI tools like Midjourney and Stable Diffusion are democratizing creation like never before, they&#39;re also sparking serious conversations about copyright, authorship, and the future of creative industries. Meanwhile, immersive experiences, projection mapping, and maker projects remind us that the most compelling art often emerges at the intersection of cutting-edge tech and human imagination—not replacement, but collaboration.</p>
+<p>The lines between creator and tool, digital and physical, professional and amateur continue to blur. For artists and technologists alike, the question isn&#39;t whether to embrace these tools, but how to use them to tell stories that resonate with the human experience.</p>
+<hr>
+<p><em>What creative tech projects are inspiring you this week? Let me know in the comments or on social media.</em></p>
+]]></content:encoded>
+      <category>tech-art</category>
+    <category>AI-art</category>
+    <category>creative-tech</category>
+    <category>digital-art</category>
+    <category>generative-art</category>
+    <category>interactive</category>
     </item>
     <item>
       <title>Tech, Art &amp; Entertainment - May 29, 2025</title>
