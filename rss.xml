@@ -5,13 +5,107 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Fri, 12 Jun 2026 04:01:54 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jun 2026 04:01:49 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamyl.github.io/blog</link>
     </image>
+    <item>
+      <title>Pakistan Tech Roundup - June 13, 2026</title>
+      <link>https://shamyl.github.io/blog/pakistan-tech-2026-06-13</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/pakistan-tech-2026-06-13</guid>
+      <pubDate>Sat, 13 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Latest technology happenings in Pakistan from June 13, 2026 - featuring record IT exports, 5G rollout, new startup incubators, and major government tech initiatives.</description>
+      <content:encoded><![CDATA[<p>Here&#39;s your Saturday Pakistan tech roundup for June 13, 2026:</p>
+<h2>Startups &amp; Funding</h2>
+<p>The Pakistani startup ecosystem got a major boost this week with news of new incubators and investments:</p>
+<ul>
+<li><p><strong>NIC Sialkot Launches</strong>: Ignite (under Ministry of IT &amp; Telecom) partnered with Mobilink Bank to establish the National Incubation Center in Sialkot. This is Pakistan&#39;s 8th NIC, expanding beyond major metros to support local entrepreneurs. The center will incubate up to 25 startups annually, focusing on sports technology, healthcare/surgical tech, manufacturing innovation, e-commerce, and AI. Applications for Cohort 1 are now open at <a href="https://www.nicsialkot.com">nicsialkot.com</a>.</p>
+</li>
+<li><p><strong>Myco Holdings Leads BuyPass Pre-Seed</strong>: Myco Holdings has led a pre-seed round in BuyPass, a Pakistani video-commerce startup. This signals continued investor interest in Pakistan&#39;s digital commerce space.</p>
+</li>
+<li><p><strong>Telenor Eyes Easypaisa Sale</strong>: Reports emerged that Telenor is looking to sell Easypaisa, Pakistan&#39;s leading mobile wallet, as part of a broader Pakistan exit strategy. This could reshape the fintech landscape.</p>
+</li>
+</ul>
+<p><img src="/images/pakistan-tech-2026-06-13-2.jpg" alt="Tech team collaboration"></p>
+<h2>IT Exports &amp; Economy</h2>
+<p>The IT sector continues to be a bright spot in Pakistan&#39;s economy:</p>
+<ul>
+<li><p><strong>Record $3.4 Billion in Exports</strong>: Pakistan&#39;s ICT exports hit a record $3.388 billion in the first nine months of FY2025-26, marking a 19.7% increase year-over-year. The trade surplus in IT and IT-enabled services stood at $2.911 billion.</p>
+</li>
+<li><p><strong>Freelancer Remittances at $856 Million</strong>: The freelance economy contributed $856.3 million in remittances, highlighting the growing role of Pakistan&#39;s digital workforce in earning foreign exchange.</p>
+</li>
+<li><p><strong>$7.3 Billion Target for 2026-27</strong>: The government has set an ambitious target of $7.3 billion in IT and IT-enabled services exports for the upcoming fiscal year, backed by the &quot;URAAN Pakistan&quot; initiative.</p>
+</li>
+<li><p><strong>Structural Challenges Remain</strong>: Despite positive numbers, experts warn that growth is concentrated in outsourcing and freelance services rather than high-value product development. Much work remains to transition from a &quot;low-value trap&quot; to innovation-driven industries.</p>
+</li>
+</ul>
+<h2>Government Initiatives</h2>
+<p>The federal budget brought significant developments for the tech sector:</p>
+<ul>
+<li><p><strong>Tax Benefits Extended to 2029</strong>: The government has extended the preferential 0.25% tax rate on IT exports under the Final Tax Regime until June 30, 2029. This provides crucial policy certainty for IT companies and freelancers.</p>
+</li>
+<li><p><strong>$1 Billion National AI Program</strong>: The National Artificial Intelligence Ecosystem Development Program (NAIEDP) is a flagship $1 billion initiative to accelerate Pakistan&#39;s AI transformation. It&#39;s part of a broader vision targeting $10 billion in annual IT exports (and $15 billion by 2030).</p>
+</li>
+<li><p><strong>Rs 19.58 Billion PSDP Allocation</strong>: The government allocated over Rs 19.58 billion for IT and digital transformation projects under the Public Sector Development Programme.</p>
+</li>
+<li><p><strong>PM Protects IT Budget</strong>: Prime Minister Shehbaz Sharif ordered no cuts to the IT Ministry&#39;s development budget, ensuring Digital Pakistan projects continue uninterrupted.</p>
+</li>
+<li><p><strong>Cybersecurity for Digital Pakistan</strong>: Phase I of this program becomes operational this year, including digital forensic labs and integrated Security Operations Centers.</p>
+</li>
+</ul>
+<h2>Telecom &amp; Connectivity</h2>
+<p>Pakistan is officially entering the 5G era:</p>
+<ul>
+<li><p><strong>5G Services in 22 Cities</strong>: PTA has launched 5G services across 22 cities through pilot deployments. Jazz is eyeing a mid-2026 commercial rollout.</p>
+</li>
+<li><p><strong>$509.6 Million from Spectrum Auction</strong>: The March 2026 5G spectrum auction generated significant revenue. Total telecom sector revenues reached Rs837 billion.</p>
+</li>
+<li><p><strong>161 Million Broadband Subscriptions</strong>: Broadband penetration has reached 63%, with total telecom subscriptions approaching 207 million (82.6% teledensity).</p>
+</li>
+<li><p><strong>National Fiberization Policy</strong>: The government plans to expand fiber-to-the-home connectivity and strengthen the national telecom backbone.</p>
+</li>
+</ul>
+<h2>E-commerce &amp; FinTech</h2>
+<p>Digital commerce continues to evolve:</p>
+<ul>
+<li><p><strong>Yeylo Launches in JazzCash</strong>: A new &quot;Pay-in-3&quot; transparent shopping option is now available through JazzCash, making BNPL more accessible.</p>
+</li>
+<li><p><strong>Government Consults with Daraz &amp; Alibaba</strong>: Pre-budget consultations included major e-commerce players, with calls for improved digital commerce policies.</p>
+</li>
+<li><p><strong>Visa Study: 82% Shop with AI</strong>: A new study reveals 82% of Pakistani consumers use AI for shopping, though trust at checkout remains a key concern.</p>
+</li>
+<li><p><strong>New Withholding Tax on Social Media Income</strong>: Content creators will now face tax deductions on earnings from YouTube, Instagram, and TikTok, sparking concerns from the creator community.</p>
+</li>
+</ul>
+<h2>Events &amp; Community</h2>
+<p>Upcoming events to watch:</p>
+<ul>
+<li><p><strong>SOCByte Phishing Hackathon 2026</strong>: A cybersecurity competition launching in Karachi to train talent through simulation-based challenges.</p>
+</li>
+<li><p><strong>Kirothon 2026</strong>: Presented by AWS Community Pakistan, this hackathon focuses on building with Kiro IDE (AWS&#39;s agentic AI development environment).</p>
+</li>
+<li><p><strong>Uraan AI Techathon 1.0</strong>: Pakistan&#39;s first national AI techathon under Indus AI Week 2026, organized by the Ministry of Planning.</p>
+</li>
+<li><p><strong>SEE Pakistan WSC26</strong>: Pakistan&#39;s biggest entrepreneurial expo returns to Lahore Expo Center.</p>
+</li>
+<li><p><strong>MAKER&#39;S ARENA 2.0</strong>: A 24-hour hard-tech hackathon hosted by AIC RAISE, focusing on physical hardware builds rather than just software.</p>
+</li>
+</ul>
+<h3>Key Takeaway</h3>
+<p>Pakistan&#39;s tech sector is riding high with record exports ($3.4B), ambitious targets ($7.3B for FY2027), and major policy wins like the extended 0.25% tax rate through 2029. The launch of NIC Sialkot shows the ecosystem is expanding beyond Karachi, Lahore, and Islamabad. However, the challenge remains moving from low-margin outsourcing to high-value product development. With 5G rolling out, a $1B AI initiative, and expanding incubators, the foundations are being laid—but execution will determine whether Pakistan can become a regional tech hub.</p>
+<hr>
+<p><em>Images courtesy of Unsplash. Data compiled from ProPakistani, The Express Tribune, TechJuice, Nukta, and official government sources.</em></p>
+]]></content:encoded>
+      <category>pakistan-tech</category>
+    <category>pakistan</category>
+    <category>startups</category>
+    <category>IT-exports</category>
+    <category>telecom</category>
+    <category>ecosystem</category>
+    </item>
     <item>
       <title>3D Printing Roundup - June 11, 2026</title>
       <link>https://shamyl.github.io/blog/3d-printing-2026-06-11</link>
