@@ -5,13 +5,83 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Sat, 13 Jun 2026 04:01:49 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jun 2026 04:01:45 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamyl.github.io/blog</link>
     </image>
+    <item>
+      <title>Space Tech Roundup - June 14, 2026</title>
+      <link>https://shamyl.github.io/blog/space-tech-2026-06-14</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/space-tech-2026-06-14</guid>
+      <pubDate>Sun, 14 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Latest in space exploration, satellite technology, and aerospace developments from June 14, 2026.</description>
+      <content:encoded><![CDATA[<p>Here&#39;s your Sunday space tech roundup for June 14, 2026:</p>
+<h2>Launches &amp; Missions</h2>
+<ul>
+<li><p><strong>SpaceX IPO Launch and Stock Trading</strong> — SpaceX launched a Starlink mission from Cape Canaveral on June 12, 2026, marking a historic moment as the company began publicly trading its stock on the Nasdaq for the first time. The Falcon 9 mission lifted off as investors eagerly watched the company&#39;s market debut, making it one of the most anticipated space IPOs in history.</p>
+</li>
+<li><p><strong>Starship V3 Cost Equation Rewrite</strong> — SpaceX&#39;s Starship V3 first flight is already rewriting the commercial launch cost equation. Every assumption commercial payload customers made about per-kilogram pricing is now under review, potentially disrupting the entire launch services market with dramatically lower costs.</p>
+</li>
+<li><p><strong>Parker Solar Probe&#39;s 28th Sun Pass</strong> — NASA&#39;s Parker Solar Probe completed its 28th close approach to the Sun on June 8, again matching its record distance of just 3.8 million miles from the solar surface. The spacecraft also equaled its record speed of 430,000 mph. During its 9-day autonomous operation, the probe gathered data from inside the Sun&#39;s corona, critical for understanding space weather that affects astronauts, satellites, and power grids on Earth.</p>
+</li>
+</ul>
+<p><img src="/images/space-tech-2026-06-14-2.jpg" alt="Earth from Space"></p>
+<h2>SpaceX &amp; Commercial Space</h2>
+<ul>
+<li><p><strong>Starlink Growth Challenges</strong> — SpaceX&#39;s satellite internet service reached 10.3 million subscribers at the end of Q1 2026, more than double the 4.4 million from a year earlier. However, maintaining this extraordinary growth rate is becoming increasingly challenging as the market matures and competition intensifies.</p>
+</li>
+<li><p><strong>SpaceX Orbital AI Data Centers</strong> — The company&#39;s IPO valuation increasingly depends on Starship capabilities and ambitious plans for orbital AI data centers. These space-based computing facilities could revolutionize both the AI industry and SpaceX&#39;s revenue streams.</p>
+</li>
+<li><p><strong>Blue Origin Return to Flight Plans</strong> — Despite the spectacular explosion of a New Glenn rocket on the launch pad, Blue Origin has vowed to resume flights before year&#39;s end. The company claims damage was less severe than initially feared and is targeting a return to flight in 2026, though industry analysts remain skeptical of this aggressive timeline.</p>
+</li>
+</ul>
+<h2>Satellites &amp; Constellations</h2>
+<ul>
+<li><p><strong>China&#39;s Qianfan Constellation Reaches 200 Satellites</strong> — Shanghai Spacesail Technologies&#39; Qianfan constellation has deployed 200 satellites following a Long March 8 mission from Wenchang. Customer connectivity services are expected to begin before year-end, positioning China as a major player in the global satellite internet race.</p>
+</li>
+<li><p><strong>Amazon LEO Largest Launch Yet</strong> — Amazon is preparing its largest LEO satellite deployment to date, with an upcoming Ariane 6 launch featuring upgraded boosters capable of carrying 36 satellites simultaneously. The constellation now exceeds 330 satellites, steadily building toward global coverage.</p>
+</li>
+<li><p><strong>Rocket Lab Launch Cadence Expands</strong> — Rocket Lab continues to increase its launch frequency, enhancing reliability and meeting diverse customer needs. The company&#39;s expansion signals growing competition in the small-to-medium launch market.</p>
+</li>
+</ul>
+<h2>Deep Space &amp; Exploration</h2>
+<ul>
+<li><p><strong>NASA Artemis III Crew Assigned</strong> — NASA has unveiled the crew for its Artemis III mission, the first lunar landing since Apollo 17 in 1972. The agency has set an aggressive timeline for flying the mission, marking a critical step toward sustainable lunar presence and future Mars missions.</p>
+</li>
+<li><p><strong>Mars Sample Discovery in Jezero Crater</strong> — New research published in Science reveals that NASA&#39;s Perseverance rover has sampled aqueously altered igneous rocks on the floor of Jezero crater, Mars. These findings provide crucial insights into the Red Planet&#39;s ancient water history and potential for past life.</p>
+</li>
+<li><p><strong>ExoMars Rosalind Franklin Targets Clay Bed</strong> — The upcoming ExoMars Rosalind Franklin astrobiology rover is targeting a vast bed of clay in its search for life on Mars. Clay minerals are particularly promising for preserving biosignatures, making this site a high-priority target for the European-Russian mission.</p>
+</li>
+<li><p><strong>NASA Nuclear Reactor for Mars Spacecraft</strong> — NASA is quietly working to put a nuclear reactor on a Mars-bound spacecraft by 2028. The ambitious plan involves stitching together two programs that were never originally intended to meet, potentially providing unprecedented power for deep space missions.</p>
+</li>
+</ul>
+<h2>Research &amp; Discoveries</h2>
+<ul>
+<li><p><strong>Webb Finds Strongest Evidence for &quot;Black Hole Stars&quot;</strong> — NASA&#39;s James Webb Space Telescope has captured the deepest spectrum to date of a &quot;little red dot&quot;—GLIMPSE-17775. Over 40 spectral lines were detected, with multiple independent lines of evidence supporting the theory that these mysterious objects are supermassive black holes enveloped in dense gas cocoons. This discovery helps solve the puzzle of how galaxies grew so massive so early in cosmic history.</p>
+</li>
+<li><p><strong>Webb Discovers Cosmic Winds in Early Galaxies</strong> — The JWST has detected powerful cosmic winds that may explain the deaths of early galaxies. These winds could regulate star formation and explain why some massive galaxies stopped growing.</p>
+</li>
+<li><p><strong>ISS Botany and Biology Research Wraps Up</strong> — NASA astronauts aboard the International Space Station completed a busy week of botany and biology research as a Dragon cargo spacecraft prepared for its return to Earth. The aurora australis provided a spectacular backdrop to ongoing scientific operations.</p>
+</li>
+<li><p><strong>Swift Observatory Rocket Integration Complete</strong> — NASA&#39;s Neil Gehrels Swift Observatory has completed rocket integration for the Katalyst-Swift boost mission, advancing capabilities for detecting gamma-ray bursts and studying the universe&#39;s most energetic phenomena.</p>
+</li>
+</ul>
+<h3>Key Takeaway</h3>
+<p>This week&#39;s space tech developments showcase the industry&#39;s dual nature of breakthrough achievements and persistent challenges. SpaceX&#39;s historic IPO debut while launching rockets epitomizes the commercial space revolution, while Parker Solar Probe continues to push the boundaries of solar science. Meanwhile, Blue Origin&#39;s rapid recovery promises and NASA&#39;s ambitious Artemis III timeline demonstrate the competitive pressures driving faster innovation cycles. The James Webb Space Telescope&#39;s &quot;black hole star&quot; discovery reminds us that even as we commercialize low Earth orbit, profound cosmic mysteries remain to be solved. With China&#39;s satellite constellation growing, Amazon building LEO presence, and nuclear propulsion on the horizon for Mars missions, the space sector is accelerating on multiple fronts simultaneously.</p>
+<p><em>Images: Unsplash (free to use)</em></p>
+]]></content:encoded>
+      <category>space-tech</category>
+    <category>space</category>
+    <category>spacex</category>
+    <category>nasa</category>
+    <category>satellites</category>
+    <category>rockets</category>
+    <category>mars</category>
+    <category>webb</category>
+    </item>
     <item>
       <title>Pakistan Tech Roundup - June 13, 2026</title>
       <link>https://shamyl.github.io/blog/pakistan-tech-2026-06-13</link>
