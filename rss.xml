@@ -5,13 +5,78 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Sun, 14 Jun 2026 04:01:45 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 15 Jun 2026 04:04:07 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamyl.github.io/blog</link>
     </image>
+    <item>
+      <title>AI Updates - June 15, 2026</title>
+      <link>https://shamyl.github.io/blog/ai-updates-2026-06-15</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/ai-updates-2026-06-15</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Latest AI developments, tech trends, market updates, and world tech news from June 15, 2026.</description>
+      <content:encoded><![CDATA[<p>Here&#39;s your Monday roundup of AI and tech news for June 15, 2026:</p>
+<p><img src="/images/ai-updates-2026-06-15-1.jpg" alt="AI Technology Concept"></p>
+<h2>AI Developments</h2>
+<ul>
+<li><p><strong>White House Forces Anthropic to Disable Frontier Models</strong>: The U.S. Commerce Department issued a sweeping export control order forcing Anthropic to disable global access to its Fable 5 and Mythos 5 models. The ban applies to all &quot;foreign nationals,&quot; including allied nations and Anthropic&#39;s own foreign employees. The order was triggered by jailbreak reports from the UK&#39;s AI Safety Institute and Amazon, raising urgent security concerns.</p>
+</li>
+<li><p><strong>Dario Amodei&#39;s Policy Essay</strong>: Anthropic&#39;s CEO published &quot;Policy on the AI Exponential&quot; alongside two framework documents for regulating frontier AI and addressing job losses. The essay uses a Lord of the Rings metaphor to argue for mandatory third-party testing across four risk areas: cybersecurity, biological weapons, AI system control loss, and automated R&amp;D. Amodei calls for a government agency with FAA-like authority to block risky models before deployment.</p>
+</li>
+<li><p><strong>Gemini 3.5 Live Translate Launches</strong>: Google&#39;s new audio model delivers near real-time speech-to-speech translation in 70+ languages. Unlike turn-based systems, it generates translation continuously while preserving speaker intonation, pacing, and pitch. Rolling out now via Google Translate apps, Google Meet for enterprises, and the Gemini Live API for developers.</p>
+</li>
+<li><p><strong>Microsoft Scout Enters Private Preview</strong>: Microsoft&#39;s first &quot;Autopilot&quot; agent is now available to select customers. Scout operates continuously across Microsoft 365 apps with its own governed Entra identity, proactively scheduling meetings, flagging important events, and identifying deliverables. The system uses &quot;Work IQ&quot; to learn user patterns over time.</p>
+</li>
+</ul>
+<p><img src="/images/ai-updates-2026-06-15-2.jpg" alt="AI Neural Network Visualization"></p>
+<h2>Technology Trends</h2>
+<ul>
+<li><p><strong>Apple Intelligence Expansion</strong>: Apple continues rolling out new AI capabilities across its ecosystem, with enhanced on-device processing and improved Siri functionality reaching more users this week.</p>
+</li>
+<li><p><strong>Zoom Launches ZoomMate</strong>: The first AI teammate built to turn conversations into completed work, marking another entry in the increasingly crowded AI assistant market.</p>
+</li>
+<li><p><strong>DeepMind&#39;s Agent Interaction Research</strong>: Google DeepMind is funding research into potential dangers when millions of AI agents interact online, highlighting concerns about emergent behaviors in multi-agent systems.</p>
+</li>
+</ul>
+<h2>Market Updates</h2>
+<ul>
+<li><p><strong>Jeff Bezos&#39;s Prometheus Raises $12B</strong>: The physical AI startup co-founded by Bezos and former Verily co-founder Vik Bajaj raised $12 billion at a $41 billion valuation. Investors include JPMorgan Chase, Goldman Sachs, and BlackRock. Prometheus is building an &quot;artificial general engineer&quot; to automate design and manufacturing of complex physical systems.</p>
+</li>
+<li><p><strong>Google Backstops $35B Chip Deal for Anthropic</strong>: Google agreed to backstop lease payments for a $35 billion chip financing deal that keeps Anthropic running on Google&#39;s TPUs across five U.S. data centers. The deal deepens the financial entanglement between the AI competitors, with Google serving as investor, cloud provider, chip vendor, and now lease guarantor.</p>
+</li>
+<li><p><strong>Visa Partners With OpenAI</strong>: Visa is integrating directly into OpenAI&#39;s platform, enabling AI agents to execute payments on behalf of users—signaling that AI agents are graduating from chat interfaces to transaction-level autonomy.</p>
+</li>
+<li><p><strong>Other Funding Rounds</strong>:</p>
+<ul>
+<li><strong>Coram AI</strong>: $35M Series B for autonomous agents protecting physical spaces</li>
+<li><strong>Equal AI</strong>: $30M for AI-powered call screening in India</li>
+<li><strong>Pints AI</strong>: $5.6M (Singapore) for auditable AI in regulated financial institutions</li>
+</ul>
+</li>
+</ul>
+<h2>World Tech</h2>
+<ul>
+<li><p><strong>EU AI Act Updates</strong>: MEPs are voting this week on delaying provisions for high-risk AI systems and banning &quot;AI nudifier&quot; apps. High-risk AI obligations will now apply from December 2027, with safety component obligations from August 2028. The legislation also bans AI systems creating non-consensual intimate material.</p>
+</li>
+<li><p><strong>AI Sovereignty Anxiety</strong>: A Chinese expert argues that EU tech sovereignty may be an illusion as US and Chinese tech dominates. The choice for middle powers increasingly looks like selecting between American and Chinese AI ecosystems.</p>
+</li>
+<li><p><strong>European Reaction to Anthropic Ban</strong>: The US export control has ignited criticism from allies. French politicians Jordan Bardella and Bruno Retailleau called it a &quot;wake-up call&quot; for Europeans to back homegrown companies like Mistral AI. British MP Tom Tugendhat noted that &quot;sovereignty is more about code than cannons.&quot;</p>
+</li>
+<li><p><strong>Anthropic IPO Implications</strong>: The timing couldn&#39;t be worse for Anthropic, which just filed IPO documents with the SEC. The ban could dent its reputation with enterprise customers, reduce revenue, and dissuade investors—potentially altering the IPO timeline in the race against OpenAI for a $1 trillion valuation.</p>
+</li>
+</ul>
+<h3>Key Takeaway</h3>
+<p>This week&#39;s developments reveal the collision of two powerful forces: the exponential growth of AI capabilities and the institutional scramble to control them. The Anthropic export ban represents the most aggressive US government intervention in commercial AI to date—driven not by hypothetical future risks but by demonstrated jailbreaks discovered by allied nations. Meanwhile, massive infrastructure bets ($35B for Anthropic chips, $12B for Prometheus) show that despite regulatory headwinds, capital continues flooding into the sector. For CTOs and CEOs, the key question is no longer whether AI will reshape your business, but whether you&#39;ll have reliable access to the frontier models you depend on.</p>
+]]></content:encoded>
+      <category>AI</category>
+    <category>artificial-intelligence</category>
+    <category>tech-news</category>
+    <category>daily-digest</category>
+    <category>machine-learning</category>
+    </item>
     <item>
       <title>Space Tech Roundup - June 14, 2026</title>
       <link>https://shamyl.github.io/blog/space-tech-2026-06-14</link>
