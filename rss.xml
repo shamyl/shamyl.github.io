@@ -5,13 +5,70 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Mon, 15 Jun 2026 04:04:07 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jun 2026 04:02:18 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamyl.github.io/blog</link>
     </image>
+    <item>
+      <title>Robotics Roundup - June 16, 2026</title>
+      <link>https://shamyl.github.io/blog/robotics-2026-06-16</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/robotics-2026-06-16</guid>
+      <pubDate>Tue, 16 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Latest in hobby and professional robotics from June 16, 2026.</description>
+      <content:encoded><![CDATA[<p>Here&#39;s your Tuesday robotics roundup for June 16, 2026:</p>
+<p><img src="/images/robotics-2026-06-16-1.jpg" alt="Robotic Arm"></p>
+<h2>Industrial Robotics</h2>
+<p><strong>Foxconn and NVIDIA Deploy AI Agents in Taiwan Hospitals</strong><br>Foxconn and NVIDIA are collaborating to deploy AI-powered robotic agents in Taiwanese hospitals. The trio of robots—CoDoctor, Scrub Bot, and Nurabot—are designed to support clinical workflows, assist with diagnostics, and help with logistics operations. This partnership represents a significant step toward integrating AI and robotics into healthcare environments.</p>
+<p><strong>Samsung Humanoids to Work at Coupang</strong><br>Samsung&#39;s humanoid robots are being deployed at Coupang, South Korea&#39;s largest e-commerce platform. The robots will assist with warehouse operations and logistics, marking a major commercial deployment for Samsung&#39;s humanoid robotics initiative.</p>
+<p><strong>Burro Launches Grande 44 for Heavy Industry</strong><br>Burro has introduced the Grande 44, its most powerful autonomous platform to date and its first specifically built for heavy industry. Leveraging advances in physical AI, the Grande 44 brings proven outdoor autonomy to demanding industrial environments.</p>
+<p><strong>South Korean Shipyard Adopts AI-Powered Welding Robots</strong><br>HD Hyundai Heavy Industries is deploying AI-powered welding robots at its South Korean shipyard. The robots use machine learning to optimize welding quality and consistency, addressing labor shortages while improving safety and precision in shipbuilding.</p>
+<p><strong>BayCare Expands Hospital Robot Fleet</strong><br>BayCare Health System is expanding its autonomous hospital delivery program with new Relay robots at its Winter Haven hospitals. The expanded fleet addresses critical healthcare labor shortages by automating non-clinical tasks, allowing staff to focus on patient care.</p>
+<h2>Humanoids &amp; Research</h2>
+<p><strong>NVIDIA CEO: Optimus Could Eclipse SpaceX Value</strong><br>Jensen Huang, CEO of NVIDIA, recently stated that Tesla&#39;s Optimus humanoid robot could potentially exceed SpaceX&#39;s value. Huang sees humanoid robotics as the next multi-trillion-dollar industry, and Tesla&#39;s early mover advantage could make it the dominant player.</p>
+<p><strong>Tesla Optimus vs Figure 02: Mid-2026 Scoreboard</strong><br>The humanoid robot race is heating up. While Tesla is building its dedicated Optimus factory in Texas, Figure AI&#39;s Figure 02 humanoid is already deployed in BMW factories for pilot testing. Figure currently leads in real-world industrial deployments, while Tesla is positioning for massive scale production starting in 2027.</p>
+<p><strong>Leading Humanoid Robot Makers of 2026</strong><br>By commercial deployment activity in 2026, the leading humanoid robot makers are:</p>
+<ul>
+<li><strong>Tesla</strong> (Optimus, factory pilots)</li>
+<li><strong>Figure AI</strong> (Figure 02, BMW pilot)</li>
+<li><strong>Agility Robotics</strong> (Digit, warehouse operations)</li>
+<li><strong>Apptronik</strong> (Apollo, various pilots)</li>
+<li><strong>Boston Dynamics</strong> (Atlas, research/demonstration)</li>
+</ul>
+<h2>Drones &amp; Mobility</h2>
+<p><strong>Wing and Walmart Expand Drone Delivery</strong><br>Wing (Alphabet&#39;s drone delivery subsidiary) and Walmart have announced seven new drone delivery markets: Memphis, New Orleans, Philadelphia, Phoenix, San Diego, the San Francisco Bay Area, and Salt Lake City. This expansion continues the rapid growth of commercial drone delivery across the United States.</p>
+<p><strong>Matternet Goes Public</strong><br>After completing over 60,000 deliveries, drone delivery company Matternet has made its Wall Street debut. The company became the first publicly reporting pure-play drone delivery company through a reverse merger, raising $33M and signaling growing investor confidence in the sector.</p>
+<p><strong>Pyka&#39;s DropShip Nails Precision Airdrop</strong><br>Pyka&#39;s DropShip autonomous cargo drone successfully completed precision airdrop tests with no pilot aboard. The system demonstrates the potential for autonomous drones to deliver supplies to remote or inaccessible locations with high accuracy.</p>
+<p><strong>Ohio&#39;s First Food Drone Delivery Takes Flight</strong><br>Dayton, Ohio—the birthplace of aviation—just executed its first food drone delivery. Local autonomous logistics firm Dexa partnered with All The Best Delicatessen to deliver a New York-style pastrami sandwich, marking a milestone for drone delivery in the Midwest.</p>
+<p><strong>DJI Highlights RTK Precision Landing Technology</strong><br>DJI has released new details about its RTK (Real-Time Kinematic) precision landing technology, enabling fully automated drone operations with centimeter-level accuracy. This advancement is crucial for automated docking, charging, and deployment systems.</p>
+<h2>Hobby/DIY Projects</h2>
+<p><strong>Droiid: A Package Delivery Robot Powered by Raspberry Pi</strong><br>Featured in the official Raspberry Pi Magazine, Droiid is an open-source package delivery robot built around a Raspberry Pi. The project demonstrates how accessible robotics development has become, with makers creating sophisticated autonomous systems using affordable components.</p>
+<p><strong>PS5-Controlled 6DOF Robotic Arm with Raspberry Pi 5</strong><br>A new project on Hackster.io showcases a 6-degree-of-freedom robotic arm controlled via a PlayStation 5 gamepad, using a Raspberry Pi 5, Arduino Nano, Python, Bluetooth, and USB serial commands. It&#39;s an excellent example of how gaming controllers can serve as intuitive interfaces for robotics projects.</p>
+<p><strong>Hexapod Robot on GitHub</strong><br>The Hexapod project by AtharvSc is a six-legged walking robot built with Python and C++. The open-source project demonstrates insect-inspired locomotion algorithms and provides a platform for studying multi-legged robot kinematics.</p>
+<p><strong>Fenrir Project: Educational Robotics Platform</strong><br>The Fenrir Project by Robotics-BUT is an educational robotics platform featuring ROS 2 integration, simulation environments, and hands-on learning modules for students entering the field of robotics.</p>
+<h2>Open Source &amp; Community</h2>
+<p><strong>ROS 2 Jazzy and Gazebo Harmonic Gain Traction</strong><br>The open-source robotics community is increasingly adopting ROS 2 Jazzy Jalisco (the latest ROS 2 LTS release) paired with Gazebo Harmonic for simulation. New projects like rbot (91 stars on GitHub) provide complete end-to-end autonomous mobile robot simulation stacks, lowering the barrier to entry for robotics development.</p>
+<p><strong>IndusNav-AMR: Open Source Warehouse Navigation</strong><br>The IndusNav-AMR project provides a complete autonomous mobile robot simulation stack featuring Nav2 integration, MPPI control, and battery-aware autonomous docking—demonstrating the sophistication now available in open-source robotics.</p>
+<p><strong>ROS 2 Autonomous Explorer Framework</strong><br>A new frontier-based exploration and mapping framework for mobile robots is gaining attention. Built for ROS 2, it enables autonomous exploration of unknown environments—perfect for research and educational applications.</p>
+<h2>Robotics Competitions &amp; Events</h2>
+<p><strong>RoboCup 2026 Coming to Incheon, South Korea</strong><br>For the first time in its history, RoboCup—the world&#39;s largest and most prestigious robotics and AI competition—will be held in South Korea. The event runs from June 30 to July 6, 2026, in Incheon. Teams from around the world will compete in soccer, rescue, home service robot, and industrial robot leagues.</p>
+<p><strong>FIRST Robotics Championship 2026</strong><br>The 2026 FIRST Championship presented by BAE Systems will bring together 600 FIRST Robotics Competition teams. The event showcases student-built robots competing in complex challenges, inspiring the next generation of engineers and roboticists.</p>
+<p><strong>Robotics Fair 2026 in Silicon Valley</strong><br>The Robotics Fair 2026 will take place August 8-9 in San Mateo, California. Billed as Silicon Valley&#39;s premier interactive robotics and AI experience, the event will feature competitions, exhibitions, and learning opportunities for robotics enthusiasts.</p>
+<p><img src="/images/robotics-2026-06-16-2.jpg" alt="ROS Development"></p>
+<h3>Key Takeaway</h3>
+<p>The robotics industry is at an inflection point. Humanoid robots are transitioning from research projects to commercial deployments in factories and warehouses. Drone delivery is rapidly scaling across the United States with major retail partnerships. Open-source tools like ROS 2 and affordable hardware like Raspberry Pi are democratizing robotics development. Whether you&#39;re a professional engineer or a weekend maker, there&#39;s never been a better time to build, learn, and innovate in robotics.</p>
+<hr>
+<p><em>Images via Pexels (CC0 license)</em></p>
+]]></content:encoded>
+      <category>robotics</category>
+    <category>robot</category>
+    <category>automation</category>
+    <category>hobby-robotics</category>
+    <category>industrial-robotics</category>
+    <category>drones</category>
+    </item>
     <item>
       <title>AI Updates - June 15, 2026</title>
       <link>https://shamyl.github.io/blog/ai-updates-2026-06-15</link>
