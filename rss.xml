@@ -5,13 +5,82 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Tue, 16 Jun 2026 04:02:18 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jun 2026 04:02:34 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamyl.github.io/blog</link>
     </image>
+    <item>
+      <title>Tech Roundup - June 17, 2026</title>
+      <link>https://shamyl.github.io/blog/tech-roundup-2026-06-17</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/tech-roundup-2026-06-17</guid>
+      <pubDate>Wed, 17 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Latest in Bio-Tech, Space Tech, IT, FinTech and emerging technology from June 17, 2026.</description>
+      <content:encoded><![CDATA[<p>Here&#39;s your Wednesday tech roundup for June 17, 2026:</p>
+<p><img src="/images/tech-roundup-2026-06-17-1.jpg" alt="DNA helix research - Photo by TSD Studio on Unsplash"></p>
+<h2>Bio-Tech</h2>
+<h3>Intellia&#39;s CRISPR Gene Editor Shows Promise for Hereditary Angioedema</h3>
+<p>Intellia Therapeutics&#39; CRISPR-based gene editing therapy, lonvoguran ziclumeran (lonvo-z), demonstrated remarkable results in Phase 3 HAELO study for hereditary angioedema (HAE). Patients receiving a single infusion saw an <strong>89% reduction</strong> in monthly attacks requiring on-demand treatment compared to placebo. The therapy also delivered <strong>91% fewer moderate or severe HAE attacks per month</strong>. With its one-time dosing profile, lonvo-z could challenge Ionis Pharmaceuticals&#39; Dawnzera, which launched in August 2025. Intellia expects FDA approval in H1 2027.</p>
+<h3>Revolutionary CRISPR-Cas12a2 Tool Targets &quot;Undruggable&quot; Cancers</h3>
+<p>Researchers at UC Berkeley&#39;s Innovative Genomics Institute (IGI) have developed a groundbreaking CRISPR tool that turns cancer cells&#39; own RNA against them. The system uses <strong>Cas12a2 enzyme</strong>, which, when triggered by cancer-specific mutant RNA transcripts (like mutated p53), begins shredding all nucleic acids in the cell—effectively a &quot;molecular kill switch.&quot; In mouse models, single treatments reduced tumor volume by approximately 50%. This approach could target the roughly <strong>50% of cancers</strong> carrying p53 mutations previously considered &quot;undruggable.&quot;</p>
+<h3>Sickle Cell Gene Editing Shows Durable Efficacy</h3>
+<p>A high-precision base-editing therapy for sickle cell disease demonstrated <strong>durable VOC-free efficacy</strong> with favorable safety profiles in recent trials. Additionally, China&#39;s CS-206 gene-editing therapy freed the first trial participant from SCD symptoms entirely, with the study still recruiting patients for broader clinical testing.</p>
+<hr>
+<p><img src="/images/tech-roundup-2026-06-17-2.jpg" alt="SpaceX rocket launch - Photo by Planet Volumes on Unsplash"></p>
+<h2>Space Tech</h2>
+<h3>SpaceX Launches Massive BlueBird Direct-to-Cell Satellites</h3>
+<p>Early this morning (June 17), SpaceX successfully launched <strong>three Block 2 BlueBird satellites</strong> for AST SpaceMobile aboard a Falcon 9 rocket from Florida. These massive satellites are designed to provide direct-to-cell connectivity, essentially turning regular smartphones into satellite phones without additional hardware. This marks another step toward global cellular coverage from space.</p>
+<h3>NASA Prepares for Dragon Cargo Departure</h3>
+<p>NASA is covering the <strong>34th SpaceX resupply mission</strong> departure from the International Space Station. The Dragon cargo spacecraft has completed its mission delivering supplies and experiments to the ISS and is scheduled for return to Earth with scientific samples.</p>
+<h3>SpaceX Stock Now Trading on Nasdaq</h3>
+<p>In a significant financial milestone, SpaceX stock began publicly trading on the Nasdaq for the first time, making it easier for investors to gain exposure to the space industry leader without needing private market access.</p>
+<hr>
+<h2>IT &amp; DevOps</h2>
+<h3>AI Infrastructure Race Heats Up Cloud Computing</h3>
+<p>The cloud computing landscape is seeing intensified competition around <strong>AI infrastructure</strong>, with AWS and Google Cloud reportedly joining forces on multi-cloud solutions. WebAssembly is reshaping edge computing, enabling faster, more efficient deployments at the network edge.</p>
+<h3>Forrester Releases Top Cybersecurity Threats for 2026</h3>
+<p>Forrester has identified <strong>AI innovation</strong> and <strong>geopolitical tensions</strong> as the two primary forces reshaping the cybersecurity threat landscape. The 2026 Vulnerability Forecast Update highlights a structural shift in how vulnerabilities emerge and are exploited, with AI-generated attacks becoming increasingly sophisticated.</p>
+<h3>DevSecOps Becomes Non-Negotiable</h3>
+<p>A new report emphasizes that embedding security into development pipelines is no longer optional. <strong>DevSecOps</strong> adoption is accelerating as organizations recognize that security cannot be bolted on at the end of the development cycle. Cloud security threats in 2026 increasingly focus on credential abuse and supply chain compromises rather than dramatic exploits.</p>
+<hr>
+<h2>FinTech</h2>
+<h3>Ripple Expands into Africa with Flutterwave Partnership</h3>
+<p>Ripple has <strong>acquired a stake in Flutterwave</strong>, Africa&#39;s leading payments technology company, to push its RLUSD stablecoin across the continent. This strategic move aims to streamline cross-border remittances and payments in one of the world&#39;s fastest-growing digital payment markets.</p>
+<h3>Stablecoin Infrastructure Expands Globally</h3>
+<ul>
+<li><strong>Munify</strong> integrated with Circle&#39;s Payments Network to enable USDC-powered local payouts in the Philippines</li>
+<li><strong>Coins.ph</strong> added Bitcoin and Ethereum to the Philippines&#39; national QR system, reaching <strong>700,000+ merchants</strong></li>
+<li><strong>Fireblocks</strong> launched &quot;Flow,&quot; a stablecoin acceptance infrastructure for payment service providers and fintechs</li>
+<li><strong>BitGo Singapore</strong> partnered with <strong>dtcpay</strong> to advance secure digital asset infrastructure across global markets</li>
+</ul>
+<p>The stablecoin ecosystem is maturing rapidly, with major players building the infrastructure needed for mainstream adoption.</p>
+<hr>
+<h2>Emerging Tech</h2>
+<h3>HKU Develops World&#39;s First Cryogenic Neuromorphic Chip</h3>
+<p>Researchers at the University of Hong Kong have achieved a <strong>material physics breakthrough</strong> with a programmable, brain-like neuromorphic hardware platform that operates near absolute zero (10 mK). Published in Nature Communications, this silicon carbide (SiC)-based chip could eliminate the severe wiring bottlenecks limiting quantum computer scalability.</p>
+<p>The key innovation is <strong>electron-donor impact ionization (EDII)</strong>, which enables energy-efficient &quot;spiking&quot; behavior similar to biological neurons. Operating thousands of times more efficiently than conventional silicon, these chips could:</p>
+<ul>
+<li>Enable real-time quantum error correction inside dilution refrigerators</li>
+<li>Be manufactured on standard 300-mm wafers using existing supply chains</li>
+<li>Support deep-space exploration with radiation-tolerant, unheated autonomous instruments</li>
+</ul>
+<h3>Neuro-Cognitive Quantum Architecture for Medical AI</h3>
+<p>New research published in Springer Nature explores <strong>neuro-cognitive quantum architectures</strong> for trustworthy AI in ultra-scarce medical environments. This emerging field combines quantum computing with brain-inspired algorithms to solve complex healthcare challenges.</p>
+<hr>
+<h3>Key Takeaway</h3>
+<p>This week&#39;s tech landscape is defined by <strong>convergence and democratization</strong>: CRISPR is moving from rare diseases toward common cancers; quantum computing is getting practical brain-like control chips; space-based cellular connectivity is becoming reality; and stablecoins are building the infrastructure for global financial inclusion. The gap between science fiction and reality continues to shrink at an accelerating pace.</p>
+<hr>
+<p><em>Images via Unsplash. Bio-Tech photo by TSD Studio, Space Tech photo by Planet Volumes.</em></p>
+]]></content:encoded>
+      <category>tech</category>
+    <category>biotech</category>
+    <category>fintech</category>
+    <category>space-tech</category>
+    <category>emerging-tech</category>
+    <category>IT</category>
+    </item>
     <item>
       <title>Robotics Roundup - June 16, 2026</title>
       <link>https://shamyl.github.io/blog/robotics-2026-06-16</link>
