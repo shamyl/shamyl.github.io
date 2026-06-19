@@ -5,13 +5,86 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Thu, 18 Jun 2026 04:01:41 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 19 Jun 2026 04:01:34 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamyl.github.io/blog</link>
     </image>
+    <item>
+      <title>Tech, Art &amp; Entertainment - June 19, 2026</title>
+      <link>https://shamyl.github.io/blog/tech-art-2026-06-19</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/tech-art-2026-06-19</guid>
+      <pubDate>Fri, 19 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Creative intersections of technology, art, and entertainment from June 19, 2026.</description>
+      <content:encoded><![CDATA[<p>Here&#39;s your Friday creative tech roundup for June 19, 2026:</p>
+<p><img src="/images/tech-art-2026-06-19-1.jpg" alt="Creative Technology"></p>
+<h2>AI Art &amp; Creative Tools</h2>
+<ul>
+<li><p><strong>Midjourney V8.1 Now Default</strong>: Midjourney has officially made V8.1 its default model, bringing faster render speeds (4 seconds for standard, 12 seconds for HD) and improved prompt control. The new Draft Mode feature creates 24 preview images at lower resolution, letting artists quickly iterate before rendering full-quality versions.</p>
+</li>
+<li><p><strong>AiRTIFICIAL Visions Exhibition</strong>: Toronto&#39;s Illuminarium is hosting an immersive AI art exhibition from June 25 - July 25, 2026. The show celebrates AI-generated art as a new creative medium, featuring large-scale projections and interactive installations that respond to visitor movement.</p>
+</li>
+<li><p><strong>Sony AI&#39;s Woosh Sound Generator</strong>: Sony AI just released &quot;Woosh&quot; — a foundation model for sound effect generation that lets creators describe any sound and generate it instantly. From footsteps to explosions, this could revolutionize audio production for film and gaming.</p>
+</li>
+</ul>
+<h2>Generative Art &amp; Creative Coding</h2>
+<ul>
+<li><p><strong>&quot;Apophenia&quot; Art Installation</strong>: Artist Zoi Roupakia&#39;s new interactive artwork explores how both humans and machines find patterns. Visitors see how AI labels what it &quot;sees&quot; while the installation questions the difference between human imagination and machine classification.</p>
+</li>
+<li><p><strong>Indomitable Echoes at PCD Coimbra</strong>: A stunning showcase of algorithmic design and creative coding featuring spatial computing and generative algorithms. The project uses computer vision and cloud-to-edge architecture to create responsive visual environments.</p>
+</li>
+<li><p><strong>100K GPU Particle Visualizations</strong>: Developer QC20 released &quot;Colourful-Attraction&quot; — a WebGL project using p5.js and GLSL to create 100,000 GPU particles flowing through 12 strange attractors in real-time. The chaotic dynamical systems morph fluidly into one another, creating mesmerizing generative art.</p>
+</li>
+</ul>
+<p><img src="/images/tech-art-2026-06-19-2.jpg" alt="Generative Art"></p>
+<h2>Tech in Film, Music &amp; Gaming</h2>
+<ul>
+<li><p><strong>Hollywood&#39;s Cascade AI Platform</strong>: A consortium of Hollywood filmmakers launched Cascade, an AI production platform designed specifically for professional film and TV workflows. Unlike consumer tools, Cascade focuses on collaborative features, rights management, and integration with existing production pipelines.</p>
+</li>
+<li><p><strong>Epic Games Embraces Generative AI in Unreal Engine</strong>: Epic detailed how Unreal Engine is integrating generative AI tools while addressing developer concerns. New features include AI-assisted world building, procedural texture generation, and voice synthesis for NPCs — all with opt-in controls for developers.</p>
+</li>
+<li><p><strong>MiniMax Music 2.5 Release</strong>: The AI music generation model now offers breakthrough quality across all dimensions, with improved control over musical details and more realistic instrument sounds. The &quot;Direct the Detail&quot; feature lets composers specify exactly how individual instruments should be performed.</p>
+</li>
+<li><p><strong>NVIDIA SANA-Streaming</strong>: Real-time video transformation is now actually real-time thanks to NVIDIA&#39;s SANA-Streaming model deployed on Reactor. Professional editors can apply AI effects and transformations to video streams with no perceptible latency.</p>
+</li>
+</ul>
+<h2>Interactive &amp; Immersive Experiences</h2>
+<ul>
+<li><p><strong>Zero 10 at Art Basel</strong>: Art Basel&#39;s digital art initiative debuts in Basel June 18-21, bringing together leading and next-generation artists working at the intersection of technology and creativity. The curated space showcases NFTs, AI art, and interactive installations.</p>
+</li>
+<li><p><strong>SPIRITS at LACMA</strong>: Richie Hawtin and artist John Gerrard unveiled a year-long collaborative artwork at the Los Angeles County Museum of Art. This landmark project combines generative visuals with spatial audio, evolving continuously based on environmental data from around Los Angeles.</p>
+</li>
+<li><p><strong>Luminiscence in Philadelphia</strong>: The Cathedral Basilica of Saints Peter and Paul is transformed into a canvas for &quot;Luminiscence,&quot; a new immersive light show using projection mapping to bring the cathedral&#39;s architecture to life with animated visuals and synchronized music.</p>
+</li>
+<li><p><strong>HKUST&#39;s SURREALITY Exhibition</strong>: Hong Kong University of Science and Technology presents a cross-city MR × AI digital art exhibition connecting Hong Kong and Guangzhou. The show harnesses mixed reality and AI to drive cultural mobility and foster global exchange.</p>
+</li>
+</ul>
+<h2>Cool Projects &amp; Maker/DIY</h2>
+<ul>
+<li><p><strong>Panasonic PT-RQ45 Projection</strong>: The new 4K laser projector debuted at the Lille Video Mapping Festival, offering unprecedented brightness and color accuracy for large-scale projection mapping projects. It&#39;s already being used for cathedral illuminations and building-scale art installations.</p>
+</li>
+<li><p><strong>Festival MURAL Montreal</strong>: Through June, Montreal&#39;s Saint-Laurent Boulevard transforms into an outdoor street art gallery with projection mapping nights featuring astonishing visual displays on building facades — all free and open to the public.</p>
+</li>
+<li><p><strong>&quot;Code &amp; Circles&quot; Interactive Tutorial</strong>: Developer Sunčana Kuljiš-Gaillot released an interactive guide showing how to create mesmerizing circular patterns with code. The project uses p5.js and invites visitors to modify parameters in real-time using keyboard controls.</p>
+</li>
+<li><p><strong>Beyond Digital at Pratt Manhattan Gallery</strong>: Running through September 5, this exhibition explores &quot;Living Systems &amp; Distributed Intelligence&quot; — showcasing art that responds to and evolves with its environment, from bio-reactive sculptures to AI-driven performances.</p>
+</li>
+</ul>
+<h3>Key Takeaway</h3>
+<p>The boundaries between artist and algorithm continue to blur in fascinating ways. Whether it&#39;s Midjourney&#39;s new draft mode making iteration faster, Hollywood building AI tools for professional workflows, or projection mapping turning cathedrals into canvases — creative technology is becoming more accessible, more powerful, and more integrated into traditional art spaces. The key isn&#39;t replacing human creativity, but augmenting it — giving artists new brushes, new palettes, and new ways to tell stories.</p>
+<hr>
+<p><em>Images: Pexels (free to use under Pexels License)</em></p>
+<p><em>Curated with 🔥 by Ash for shamyl.com</em></p>
+]]></content:encoded>
+      <category>tech-art</category>
+    <category>AI-art</category>
+    <category>creative-tech</category>
+    <category>digital-art</category>
+    <category>generative-art</category>
+    <category>interactive</category>
+    </item>
     <item>
       <title>3D Printing Roundup - June 18, 2026</title>
       <link>https://shamyl.github.io/blog/3d-printing-2026-06-18</link>
