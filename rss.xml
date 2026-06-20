@@ -5,13 +5,105 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Fri, 19 Jun 2026 04:01:34 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 20 Jun 2026 04:01:52 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamyl.github.io/blog</link>
     </image>
+    <item>
+      <title>Pakistan Tech Roundup - June 20, 2026</title>
+      <link>https://shamyl.github.io/blog/pakistan-tech-2026-06-20</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/pakistan-tech-2026-06-20</guid>
+      <pubDate>Sat, 20 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Latest technology happenings in Pakistan from June 20, 2026. IT exports hit $4.2B, Apple launches on Daraz, 5G rollout ahead, and Pakistani founder raises $62.5M.</description>
+      <content:encoded><![CDATA[<p>Here&#39;s your Saturday Pakistan tech roundup for June 20, 2026:</p>
+<p><img src="/images/pakistan-tech-2026-06-20-1.jpg" alt="Aerial view of Karachi&#39;s skyline"></p>
+<h2>IT Exports &amp; Economy</h2>
+<p><strong>Record-Breaking Achievement:</strong> Pakistan&#39;s IT exports have crossed <strong>$4.18 billion</strong> in the first 11 months of fiscal year 2026, marking a 20% year-over-year growth according to State Bank of Pakistan data. This is the first time the sector has surpassed the $4 billion milestone.</p>
+<ul>
+<li>Freelancer earnings have nearly doubled, driving significant portion of this growth</li>
+<li>The government has set an ambitious target of <strong>$7.3 billion</strong> in IT exports for fiscal year 2026-27</li>
+<li>Freelancer boom continues to fuel international revenue as Pakistani developers and designers gain global recognition</li>
+</ul>
+<p><img src="/images/pakistan-tech-2026-06-20-2.jpg" alt="Tech workspace"></p>
+<h2>Startups &amp; Funding</h2>
+<p><strong>Major International Win:</strong> Pakistani co-founder <strong>Hassan Ahmed</strong> from Peshawar helped secure a <strong>$62.5 million Series B</strong> funding round for Respond.io, a Malaysia-based customer conversation platform. This single round nearly matches or exceeds the entire local startup ecosystem&#39;s annual funding.</p>
+<ul>
+<li>Respond.io serves 10,000+ businesses across 180+ countries</li>
+<li>Processes 2 billion messages quarterly</li>
+<li>Pakistan-based startups raised approximately $36.6-74 million in 2025 (depending on calculation method)</li>
+<li>Airlift co-founder&#39;s new startup <strong>Metal</strong> secured strategic investment</li>
+<li><strong>BuyPass.ai</strong>, a Pakistani video commerce platform, received funding from Myco Holdings to scale across South Asia</li>
+</ul>
+<h2>E-commerce &amp; FinTech</h2>
+<p><strong>Apple Officially Enters Pakistan E-commerce:</strong> Daraz Pakistan launched an official <strong>Apple Flagship Store</strong> on DarazMall in partnership with GNext, Apple&#39;s authorized distributor.</p>
+<ul>
+<li>Customers get authentic products with official distributor-backed warranty</li>
+<li>Launch offers include free 20W charger, free shipping, next-day delivery for iPhone 17 series</li>
+<li>Extended warranty: 1 year Apple + 1 year GNext warranty</li>
+<li>0% EMI plans available for purchases</li>
+<li>Up to 14% discount with best price guarantee</li>
+</ul>
+<p><strong>FinTech Developments:</strong></p>
+<ul>
+<li><strong>easypaisa</strong> signed MoU with Binance to explore emerging financial technology growth</li>
+<li><strong>JazzCash</strong> launched Government of Pakistan Treasury Bills feature in-app</li>
+<li><strong>easypaisa</strong> leads digitization of payments at Islamabad International Airport</li>
+</ul>
+<h2>Telecom &amp; Connectivity</h2>
+<p><strong>5G Countdown:</strong> Pakistan&#39;s 5G commercial launch is on track for <strong>mid-August 2026</strong>:</p>
+<ul>
+<li>PTA has granted NGMS/5G licenses to cellular mobile operators</li>
+<li>Jazz plans to expand 5G rollout to <strong>1,000 sites</strong> by mid-August</li>
+<li>Four-phase nationwide rollout plan with $700 million investment</li>
+<li>Target speeds: 100 Mbps minimum</li>
+<li>Limited 5G handset availability remains a challenge</li>
+</ul>
+<h2>Government Initiatives</h2>
+<p><strong>Digital Transformation Push:</strong></p>
+<ul>
+<li>Government allocates <strong>Rs 19.58 billion</strong> for IT division under PSDP 2026-27</li>
+<li>Proposed <strong>$1 billion National AI Program</strong> and Rs 70 billion Digital Connectivity Plan</li>
+<li>PM Shehbaz Sharif initiating real-time digital oversight transformation for government monitoring</li>
+<li>Pakistan targeting $7.3 billion IT exports with sweeping digital transformation agenda</li>
+</ul>
+<h2>Events &amp; Community</h2>
+<p><strong>Hackathon Season Active:</strong></p>
+<ul>
+<li><strong>National AI Hackathon&#39;26</strong> - Multi-city series across 5 cities</li>
+<li><strong>AI for Civic Innovation Hackathon</strong> - Transforming civic challenges with AI</li>
+<li><strong>VYROTHON 2026</strong> - Pakistan&#39;s largest in-house hackathon with ~$5,000 in prizes</li>
+<li><strong>Kirothon 2026</strong> - Build with AWS&#39;s agentic AI IDE</li>
+<li><strong>AeroFusion 2026</strong> - Aerospace, aviation, and emerging technologies hackathon</li>
+</ul>
+<h2>Gaming &amp; Content Creator Economy</h2>
+<p>Pakistan&#39;s youth are increasingly turning to gaming and esports as alternative income streams amid rising unemployment:</p>
+<ul>
+<li><strong>TCL Champions Arena</strong> esports tournament launched with PKR 2 million prize pool</li>
+<li><strong>Arslan Ash</strong> continues to represent Pakistan globally as Tekken world champion</li>
+<li>Esports gaining recognition as viable career path</li>
+<li>Content creation and streaming becoming legitimate income sources</li>
+</ul>
+<h2>Global Pakistani Talent</h2>
+<p>The Respond.io funding highlights a growing trend: Pakistani founders are building globally competitive tech companies. While many operate from hubs like Singapore, Dubai, or Kuala Lumpur, they&#39;re demonstrating that Pakistani technical talent can compete at the highest levels.</p>
+<h3>Key Takeaway</h3>
+<p><strong>Pakistan&#39;s tech ecosystem is at an inflection point.</strong> Crossing $4 billion in IT exports proves the sector&#39;s viability as an economic driver. The gap between local startup funding and what Pakistani founders raise internationally highlights both a challenge and an opportunity. As 5G launches and government digital initiatives take hold, the infrastructure is being laid for the next phase of growth. The question isn&#39;t whether Pakistani tech can compete globally—it&#39;s already doing so. The question is how to bring more of that success home.</p>
+<hr>
+<p><em>Images: Photo by Tahamie Farooqui (Pexels) and Tech Workspace (Pexels)</em></p>
+<p><em>Sources: Pakistan Today, Dawn, ProPakistani, TechJuice, Business Recorder, PTA, Data Darbar</em></p>
+]]></content:encoded>
+      <category>pakistan-tech</category>
+    <category>pakistan</category>
+    <category>startups</category>
+    <category>IT-exports</category>
+    <category>telecom</category>
+    <category>ecosystem</category>
+    <category>5G</category>
+    <category>fintech</category>
+    <category>Apple</category>
+    </item>
     <item>
       <title>Tech, Art &amp; Entertainment - June 19, 2026</title>
       <link>https://shamyl.github.io/blog/tech-art-2026-06-19</link>
