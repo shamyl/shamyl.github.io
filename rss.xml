@@ -5,13 +5,80 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Sat, 20 Jun 2026 04:01:52 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jun 2026 04:02:12 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamyl.github.io/blog</link>
     </image>
+    <item>
+      <title>Space Tech Roundup - June 21, 2026</title>
+      <link>https://shamyl.github.io/blog/space-tech-2026-06-21</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/space-tech-2026-06-21</guid>
+      <pubDate>Sun, 21 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Latest in space exploration, satellite technology, and aerospace developments from June 21, 2026.</description>
+      <content:encoded><![CDATA[<p>Here&#39;s your Sunday space tech roundup for June 21, 2026:</p>
+<p><img src="/images/space-tech-2026-06-21-1.jpg" alt="James Webb Space Telescope image of galaxy cluster Abell S1063 with GLIMPSE-17775">
+<em>NASA&#39;s James Webb Space Telescope captured the deepest spectrum to date of a &quot;little red dot&quot; — GLIMPSE-17775 — providing the strongest evidence yet for &quot;black hole stars.&quot; Image: NASA, ESA, CSA, Vasily Kokorev (UT Austin); Image Processing: Alyssa Pagan (STScI)</em></p>
+<h2>Launches &amp; Missions</h2>
+<ul>
+<li><p><strong>SpaceX Starlink Constellation Growth</strong>: SpaceX continues its relentless pace of Starlink deployments, with over <strong>10,600 active satellites</strong> now in orbit — representing approximately 59% of all active satellites around Earth. The company launched 24 additional Starlink satellites from Vandenberg on June 20, maintaining its position as the dominant player in the global satellite internet market.</p>
+</li>
+<li><p><strong>Blue Origin Rebuilding After Setback</strong>: Blue Origin has begun reconstructing Launch Complex 36 at Cape Canaveral following the May 28 explosion of a New Glenn rocket during a static-fire test. Founder Jeff Bezos and CEO Dave Limp expressed optimism, stating they &quot;got really lucky&quot; as critical infrastructure including the propellant tank farm and a previous New Glenn booster survived. The company aims to return to flight by the end of 2026.</p>
+</li>
+<li><p><strong>Relativity Space Mars Mission Announced</strong>: Relativity Space, now led by former Google CEO Eric Schmidt, unveiled its Interplanetary Sciences Program with plans to launch a <strong>Mars orbiter mission in late 2028</strong>. The spacecraft will carry NASA&#39;s Aeolus atmospheric profiling instrument suite and a radar instrument to map subsurface ice and geology, while also serving as a high-bandwidth communications node.</p>
+</li>
+</ul>
+<h2>SpaceX &amp; Commercial Space</h2>
+<ul>
+<li><p><strong>SpaceX Stock Trading on Nasdaq</strong>: In a major milestone for the commercial space industry, SpaceX stock began trading on the Nasdaq for the first time, marking the company&#39;s transition to public markets while continuing its aggressive Starlink and Starship development programs.</p>
+</li>
+<li><p><strong>Rocket Lab&#39;s Rapid Launch Cadence</strong>: Rocket Lab successfully launched its 67th Electron mission and scheduled another launch within 48 hours, demonstrating the company&#39;s ability to maintain high-frequency small satellite launch operations from its New Zealand facility.</p>
+</li>
+</ul>
+<h2>Satellites &amp; Constellations</h2>
+<ul>
+<li><p><strong>Starlink Dominance</strong>: With nearly 10,600 active satellites, SpaceX&#39;s Starlink constellation continues to expand, providing global internet coverage and representing a staggering 59% of all operational satellites in orbit. The rapid deployment demonstrates the company&#39;s manufacturing and launch capabilities.</p>
+</li>
+<li><p><strong>Global SSA Market Growth</strong>: The Space Situational Awareness (SSA) market is projected to reach <strong>$61 billion</strong> as governments worldwide prioritize space security, resilience, and orbital safety. This reflects growing concerns about space debris and the need for comprehensive tracking systems.</p>
+</li>
+</ul>
+<h2>Deep Space &amp; Exploration</h2>
+<p><img src="/images/space-tech-2026-06-21-2.jpg" alt="Perseverance Mars rover view of Santa Cruz">
+<em>NASA&#39;s Perseverance Mars rover looks out at an expanse of boulders on the landscape. The rover recently completed a marathon distance on Mars — only the second robot to achieve this milestone. Image: NASA/JPL-Caltech/ASU/MSSS</em></p>
+<ul>
+<li><p><strong>Perseverance Completes Marathon on Mars</strong>: NASA&#39;s Perseverance rover achieved a historic milestone on June 14, 2026, becoming only the second robot to complete a <strong>marathon distance (26.2 miles / 42.2 km)</strong> on another world. Remarkably, Perseverance accomplished this in just 5 years — compared to Opportunity&#39;s 11 years. The rover set a new single-day driving record of 411.7 meters on June 19, 2025, thanks to its sophisticated autonomous navigation capabilities.</p>
+</li>
+<li><p><strong>NASA&#39;s Lucy Asteroid Discoveries</strong>: New findings from NASA&#39;s Lucy mission reveal that asteroid Donaldjohanson — encountered on April 20, 2025 — is a wobbly, peanut-shaped body formed 155 million years ago from fragments of a violent collision. The asteroid exhibits a complex two-axis rotation and shows evidence of brief water exposure in its distant past. This flyby served as a crucial dress rehearsal before Lucy&#39;s primary mission to explore Jupiter&#39;s Trojan asteroids beginning in August 2027.</p>
+</li>
+<li><p><strong>Parker Solar Probe Corona Discoveries</strong>: NASA&#39;s Parker Solar Probe, having flown in and out of the Sun&#39;s corona, discovered a source of high-energy particles that no existing model had predicted — opening new avenues for understanding solar physics.</p>
+</li>
+</ul>
+<h2>Research &amp; Discoveries</h2>
+<p><img src="/images/space-tech-2026-06-21-3.jpg" alt="Perseverance rover&#39;s panoramic view of Mars surface">
+<em>A panoramic view from NASA&#39;s Perseverance Mars rover showing the rugged Martian terrain. The rover has traveled over 26 miles, collecting samples and searching for signs of ancient microbial life. Image: NASA/JPL-Caltech/ASU/MSSS</em></p>
+<ul>
+<li><p><strong>Webb Telescope Finds &quot;Black Hole Stars&quot;</strong>: NASA&#39;s James Webb Space Telescope has captured the strongest evidence yet for &quot;black hole stars&quot; — supermassive black holes enveloped in dense cocoons of partially ionized gas. The deepest spectrum to date of &quot;little red dot&quot; GLIMPSE-17775 reveals more than 40 spectral lines supporting this interpretation. Located about 1.8 billion years after the Big Bang, this discovery helps explain how these mysterious objects fit into our understanding of cosmic evolution.</p>
+</li>
+<li><p><strong>Curiosity Rover&#39;s Ancient Life Clues</strong>: NASA&#39;s Curiosity rover continues to uncover new evidence suggesting Mars could have supported ancient life, with recent findings pointing to the planet&#39;s potential habitability in its distant past.</p>
+</li>
+<li><p><strong>Fermi Mission Uncovers Sibling Supernovae</strong>: NASA&#39;s Fermi Gamma-ray Space Telescope has identified possible sibling supernova remnants — debris from stars that exploded in close proximity, providing insights into stellar evolution and cosmic ray production.</p>
+</li>
+</ul>
+<h3>Key Takeaway</h3>
+<p>The space industry continues to demonstrate remarkable resilience and innovation. From SpaceX&#39;s market dominance and Blue Origin&#39;s recovery efforts to NASA&#39;s groundbreaking deep space discoveries, we&#39;re witnessing an era where commercial and government space activities are increasingly intertwined. Perseverance&#39;s marathon achievement on Mars and Webb&#39;s black hole star discoveries remind us that while we&#39;re expanding our presence in space, we&#39;re also expanding our understanding of the universe. The next few years promise even more excitement with missions to the Moon, Mars, and beyond.</p>
+<hr>
+<p><em>All NASA images featured are public domain. Blue Origin New Glenn image courtesy of U.S. Space Force (public domain).</em></p>
+]]></content:encoded>
+      <category>space-tech</category>
+    <category>space</category>
+    <category>spacex</category>
+    <category>nasa</category>
+    <category>satellites</category>
+    <category>rockets</category>
+    <category>mars</category>
+    </item>
     <item>
       <title>Pakistan Tech Roundup - June 20, 2026</title>
       <link>https://shamyl.github.io/blog/pakistan-tech-2026-06-20</link>
