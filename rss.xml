@@ -5,13 +5,87 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Mon, 22 Jun 2026 04:03:30 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jun 2026 04:01:50 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamyl.github.io/blog</link>
     </image>
+    <item>
+      <title>Robotics Roundup - June 23, 2026</title>
+      <link>https://shamyl.github.io/blog/robotics-2026-06-23</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/robotics-2026-06-23</guid>
+      <pubDate>Tue, 23 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Latest in hobby and professional robotics from June 23, 2026. NVIDIA&apos;s Halos, RoboCup in South Korea, and the humanoid robot race heats up.</description>
+      <content:encoded><![CDATA[<p><img src="/images/robotics-2026-06-23-1.jpg" alt="Futuristic Humanoid Robot">
+<em>Photo by Alex Knight on Pexels</em></p>
+<p>Here&#39;s your Tuesday robotics roundup for June 23, 2026:</p>
+<h2>Industrial Robotics</h2>
+<p>The industrial robotics sector continues its AI-powered evolution:</p>
+<ul>
+<li><p><strong>NVIDIA Halos for Robotics</strong>: NVIDIA announced the industry&#39;s first full-stack safety system for physical AI. Halos integrates NVIDIA&#39;s AI compute, Isaac simulation tools, and safety frameworks to enable safer autonomous robots in industrial settings. This could be a game-changer for deployment certifications.</p>
+</li>
+<li><p><strong>Doosan Robotics PalletizHD+</strong>: Unveiled at Automate 2026, this AI-powered palletizing solution uses machine vision to automatically detect box sizes and optimize stacking patterns—no programming required for new SKUs.</p>
+</li>
+<li><p><strong>Vention + FANUC Partnership</strong>: Vention&#39;s AI-driven automation platform now supports FANUC industrial robots, expanding from cobots to full-scale industrial applications. This bridges the gap between rapid prototyping and production-grade automation.</p>
+</li>
+<li><p><strong>Kawasaki&#39;s Physical AI Platform</strong>: The new RL030N 8DoF robot platform debuted at Automate 2026, designed specifically for physical AI applications with patented Pulseboard inspection technology.</p>
+</li>
+</ul>
+<h2>Hobby/DIY Projects</h2>
+<p>The maker community keeps pushing boundaries:</p>
+<ul>
+<li><p><strong>Pi_Li_AMR</strong>: A complete ROS2 Jazzy autonomous mobile robot running on Raspberry Pi 5, integrating RP2040-based motor control, YDLiDAR SLAM, and Nav2 navigation. Fully open-source and end-to-end sim-to-real capable.</p>
+</li>
+<li><p><strong>Autonomous Mobile Manipulator</strong>: An articulated ROS 2 system combining a mobile base with a robotic arm for complete navigation and manipulation tasks. Great for researchers and advanced hobbyists.</p>
+</li>
+<li><p><strong>Arduino-Raspberry Pi ROS Car</strong>: COONEO&#39;s popular open-source project (89+ GitHub stars) demonstrates how to bridge Arduino actuator control with Raspberry Pi ROS nodes—a perfect starting point for robotics newcomers.</p>
+</li>
+</ul>
+<h2>Humanoids &amp; Research</h2>
+<p>The humanoid race is intensifying:</p>
+<ul>
+<li><p><strong>Tesla Optimus Update</strong>: Taiwanese suppliers are reportedly gearing up for Optimus mass production, suggesting Tesla is moving beyond pilot programs toward serious scale. The Gen 2 pilot is reportedly in testing with select industrial partners.</p>
+</li>
+<li><p><strong>Robot.com&#39;s Pivot</strong>: The delivery robot startup is betting its future on workplace humanoids. Their R-noid wheeled humanoid, powered by foundation models, represents a shift from outdoor delivery to indoor automation.</p>
+</li>
+<li><p><strong>Competition Heats Up</strong>: Figure 02, Tesla Optimus, and Boston Dynamics Atlas are now in direct competition for industrial deployment contracts. Early reports suggest Figure is ahead on unit deployment, while Tesla has the manufacturing advantage.</p>
+</li>
+</ul>
+<h2>Drones &amp; Mobility</h2>
+<ul>
+<li><p><strong>Walmart Hits 1 Million Drone Deliveries</strong>: A major milestone achieved through their partnership with Wing, demonstrating that drone delivery is moving from novelty to utility—at least in suburban areas.</p>
+</li>
+<li><p><strong>Arrive AI&#39;s Autonomous Platform</strong>: The company (formerly DroneDek) unveiled Arrive OS, transforming autonomous delivery from isolated pilots into scalable, commercially deployable logistics networks.</p>
+</li>
+<li><p><strong>DJI O4 Ground Station</strong>: Expands wide-area transmission capabilities for enterprise drones, enabling longer-range operations for inspection and surveying.</p>
+</li>
+<li><p><strong>FCC Drone Ruling Concerns</strong>: Industry groups warn that new FCC regulations could slow U.S. aerial development by adding compliance complexity for commercial operators.</p>
+</li>
+</ul>
+<h2>Open Source &amp; Community</h2>
+<ul>
+<li><p><strong>rbot</strong>: A new open-source end-to-end AMR simulation stack for ROS 2 Jazzy and Gazebo Harmonic. Already gaining traction with 91 GitHub stars.</p>
+</li>
+<li><p><strong>RoboCup 2026</strong>: Just a week away! For the first time, RoboCup will be held in South Korea (Incheon, June 30 - July 6). The world&#39;s premier robotics competition will feature soccer, rescue, and home assistance leagues. South Korea&#39;s robotics ecosystem continues to punch above its weight.</p>
+</li>
+<li><p><strong>PlanSys2 for ROS 2</strong>: The PDDL-based planning system is maturing, making AI planning accessible to ROS developers for complex multi-step robot tasks.</p>
+</li>
+</ul>
+<p><img src="/images/robotics-2026-06-23-2.jpg" alt="Robotic Technology">
+<em>Photo by Kindel Media on Pexels</em></p>
+<h3>Key Takeaway</h3>
+<p><strong>Safety and scalability are the themes of 2026.</strong> NVIDIA&#39;s Halos announcement signals that the industry is moving from &quot;can we build it?&quot; to &quot;can we deploy it safely at scale?&quot; Meanwhile, the humanoid robot race is shifting from demonstrations to real industrial pilots, and open-source tools like ROS 2 Jazzy are making advanced robotics accessible to makers and researchers worldwide.</p>
+<p>The gap between research and production is closing faster than ever. Whether you&#39;re a factory engineer, a garage tinkerer, or a researcher, there&#39;s never been a better time to build robots.</p>
+]]></content:encoded>
+      <category>robotics</category>
+    <category>robot</category>
+    <category>automation</category>
+    <category>hobby-robotics</category>
+    <category>industrial-robotics</category>
+    <category>drones</category>
+    </item>
     <item>
       <title>AI Updates - June 22, 2026</title>
       <link>https://shamyl.github.io/blog/ai-updates-2026-06-22</link>
