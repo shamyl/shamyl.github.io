@@ -5,13 +5,88 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Tue, 23 Jun 2026 04:01:50 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jun 2026 04:01:24 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamyl.github.io/blog</link>
     </image>
+    <item>
+      <title>Tech Roundup - June 24, 2026</title>
+      <link>https://shamyl.github.io/blog/tech-roundup-2026-06-24</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/tech-roundup-2026-06-24</guid>
+      <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Latest in Bio-Tech, Space Tech, IT, FinTech and emerging technology from June 24, 2026.</description>
+      <content:encoded><![CDATA[<p>Here&#39;s your Wednesday tech roundup for June 24, 2026:</p>
+<p><img src="/images/tech-roundup-2026-06-24-1.jpg" alt="Modern science laboratory equipment"></p>
+<p><em>Photo by Unsplash - Science laboratory setting</em></p>
+<h2>Bio-Tech</h2>
+<ul>
+<li><p><strong>In-Vivo CRISPR Therapy Hits Phase 3 Success</strong>: Researchers from Amsterdam UMC have successfully completed the first Phase III trial of in vivo CRISPR therapy for hereditary angioedema, significantly reducing attack frequency in patients. This marks a major milestone for gene editing treatments.</p>
+</li>
+<li><p><strong>New CRISPR Nuclease Cas12a2 Unveiled</strong>: A new CRISPR nuclease called Cas12a2 has been developed that can shred diseased DNA with unprecedented precision. Dubbed a &quot;targeted paper shredder for the genome,&quot; this technology could revolutionize how we treat genetic diseases.</p>
+</li>
+<li><p><strong>CRISPR in 2026: Beyond Rare Diseases</strong>: CRISPR gene editing continues to expand beyond rare diseases into cancer treatment and autoimmune disorders, with multiple therapies in late-stage clinical trials.</p>
+</li>
+</ul>
+<h2>Space Tech</h2>
+<ul>
+<li><p><strong>SpaceX Launches Starfall Demo Mission</strong>: SpaceX launched its first Starfall reentry capsule Tuesday morning from Cape Canaveral, testing a new vehicle designed for rapid global cargo delivery from orbit. This could enable point-to-point delivery anywhere on Earth in under an hour.</p>
+</li>
+<li><p><strong>Falcon 9 Flies Record 29th Mission</strong>: The same Falcon 9 booster achieved its 29th flight, launching the Starfall demo mission and continuing SpaceX&#39;s push for rapid reusability.</p>
+</li>
+<li><p><strong>Starlink Constellation Expansion</strong>: Scheduled Falcon 9 launch from Vandenberg Space Force Base continues building out the Starlink satellite network for global internet coverage.</p>
+</li>
+</ul>
+<h2>IT &amp; DevOps</h2>
+<ul>
+<li><p><strong>OpenAI&#39;s &quot;Patch the Planet&quot; Initiative</strong>: OpenAI has launched an ambitious program using AI to systematically identify and fix vulnerabilities in open-source software. The initiative combines automated analysis with expert review to secure core infrastructure.</p>
+</li>
+<li><p><strong>IBM Joins OpenAI&#39;s Cyber Program</strong>: IBM has partnered with OpenAI&#39;s Daybreak Cyber Partner Program, bringing frontier AI models into enterprise security operations for enhanced threat detection.</p>
+</li>
+<li><p><strong>Major Supply Chain Security Alerts</strong>: </p>
+<ul>
+<li>LastPass confirmed a data breach through the Klue supply chain attack</li>
+<li>Critical Cordyceps supply chain bug discovered, enabling code execution and credential theft</li>
+<li>Tenable reveals new Miasma campaign targeting developer credentials in supply chains</li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/tech-roundup-2026-06-24-2.jpg" alt="Data center server racks"></p>
+<p><em>Photo by Brett Sayles on Pexels - Modern data center infrastructure</em></p>
+<h2>FinTech</h2>
+<ul>
+<li><p><strong>Chainlink&#39;s Project Pangea</strong>: Chainlink has teamed up with 47 South Korean and European banks to accelerate international money transfers using stablecoins for settlement. The alliance aims to eliminate multi-day FX delays with real-time cross-border payments.</p>
+</li>
+<li><p><strong>South Korean Digital Bank Adopts Solana</strong>: A major South Korean digital bank with 15 million users has turned to Solana stablecoins for overseas transfers, signaling growing institutional crypto adoption in Asia.</p>
+</li>
+<li><p><strong>Telcoin Launches First Regulated On-Chain Bank Accounts</strong>: Telcoin has launched the first regulated on-chain bank accounts in the US, becoming the first fully chartered digital asset bank in Nebraska to offer bank accounts directly linked to on-chain dollars.</p>
+</li>
+</ul>
+<h2>Emerging Tech</h2>
+<ul>
+<li><p><strong>HKU&#39;s &quot;Brain-Like&quot; Chip for Quantum Computing</strong>: Hong Kong University engineers have developed a world-first neuromorphic chip that could advance both quantum computing and deep-space exploration capabilities.</p>
+</li>
+<li><p><strong>Q.ANT Runs Generative AI on Photonic Hardware</strong>: German company Q.ANT demonstrated running generative AI and recurrent networks on their second-generation photonic processor, marking a significant step toward optical computing.</p>
+</li>
+<li><p><strong>Amphibian-Inspired Neuromorphic Vision</strong>: Researchers have developed dynamic vision sensors based on ferroelectric field-effect transistors, inspired by amphibian visual systems, enabling high-speed imaging with reduced power consumption.</p>
+</li>
+<li><p><strong>Quandela-NVIDIA Quantum Integration</strong>: Quandela has validated low-latency photonic QPU integration with NVIDIA&#39;s NVQLink, bridging the gap between quantum and classical computing systems.</p>
+</li>
+</ul>
+<hr>
+<h3>Key Takeaway</h3>
+<p>This week underscores three major trends: <strong>gene editing is entering mainstream medicine</strong> with CRISPR therapies achieving Phase 3 success; <strong>financial infrastructure is being rebuilt on blockchain rails</strong> as traditional banks embrace stablecoins for cross-border payments; and <strong>the AI-security arms race is intensifying</strong> with both defensive AI tools and sophisticated supply chain attacks emerging simultaneously. The convergence of quantum, photonic, and neuromorphic computing also signals we&#39;re approaching a fundamental shift in how we process information.</p>
+<p><em>Stay curious, stay informed.</em></p>
+]]></content:encoded>
+      <category>tech</category>
+    <category>biotech</category>
+    <category>fintech</category>
+    <category>space-tech</category>
+    <category>emerging-tech</category>
+    <category>IT</category>
+    </item>
     <item>
       <title>Robotics Roundup - June 23, 2026</title>
       <link>https://shamyl.github.io/blog/robotics-2026-06-23</link>
