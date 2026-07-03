@@ -5,13 +5,102 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Fri, 03 Jul 2026 09:23:08 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 03 Jul 2026 09:24:14 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamyl.github.io/blog</link>
     </image>
+    <item>
+      <title>Robotics Roundup - July 3, 2026</title>
+      <link>https://shamyl.github.io/blog/robotics-2026-07-03</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/robotics-2026-07-03</guid>
+      <pubDate>Fri, 03 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Latest in hobby and professional robotics from July 3, 2026. Humanoid robots scaling up, NVIDIA&apos;s Isaac upgrades, and the future of warehouse automation.</description>
+      <content:encoded><![CDATA[<p><img src="/images/robotics-2026-07-03-1.jpg" alt="Industrial Robot in Action"></p>
+<p>Here&#39;s your Friday robotics roundup for July 3, 2026:</p>
+<h2>Industrial Robotics</h2>
+<p>The industrial automation sector continues to evolve with AI integration at its core:</p>
+<ul>
+<li><p><strong>NVIDIA Isaac Sim 5.0 Release</strong>: The latest update brings photorealistic ray-traced simulation to robot training workflows. Engineers can now train robots in hyper-realistic environments before deployment, dramatically reducing iteration cycles and improving real-world performance.</p>
+</li>
+<li><p><strong>ABB Robotics Opens New Training Center in Singapore</strong>: Expanding its presence in Asia-Pacific, ABB&#39;s new facility will train 10,000+ engineers annually on AI-driven robotics applications for manufacturing and logistics.</p>
+</li>
+<li><p><strong>Universal Robots Launches UR30 Cobot</strong>: The newest addition to UR&#39;s lineup features enhanced AI vision capabilities and a 30kg payload capacity, targeting heavy assembly tasks that previously required human strength.</p>
+</li>
+<li><p><strong>Siemens Digital Industries Partners with Intrinsic</strong>: The collaboration aims to simplify robot programming through AI-powered automation design, making industrial robotics accessible to small and medium manufacturers.</p>
+</li>
+</ul>
+<h2>Hobby/DIY Projects</h2>
+<p>The maker community continues pushing boundaries with accessible robotics:</p>
+<ul>
+<li><p><strong>OpenBot 2.0 Released</strong>: Intel&#39;s smartphone-powered robotics platform now supports ROS 2 Humble and includes pre-trained navigation models. Makers can build a fully autonomous robot for under $100 using an old Android phone.</p>
+</li>
+<li><p><strong>Pico-ROS: Raspberry Pi Pico + ROS 2</strong>: A new lightweight implementation allows the $4 microcontroller to run a minimal ROS 2 node, opening robotics development to ultra-low-cost projects.</p>
+</li>
+<li><p><strong>3D-Printed Bionic Hand with EMG Control</strong>: The latest iteration of the OpenBionics project features improved myoelectric sensors and a completely 3D-printed design, costing under $50 in materials.</p>
+</li>
+<li><p><strong>MicroROS on ESP32-S3</strong>: The ESP32-S3 now has full MicroROS support, enabling affordable WiFi-connected robots with AI acceleration for voice control and computer vision tasks.</p>
+</li>
+</ul>
+<h2>Humanoids &amp; Research</h2>
+<p>The humanoid race accelerates as we approach mass production:</p>
+<ul>
+<li><p><strong>Tesla Optimus Production Line Begins</strong>: Reports from Texas indicate Tesla has begun pilot production runs of Optimus humanoids, with initial deliveries expected to industrial partners by Q3 2026. Units are reportedly capable of repetitive manufacturing tasks with 95% accuracy.</p>
+</li>
+<li><p><strong>Figure AI Announces Figure 03 Prototype</strong>: Figure unveiled their next-generation humanoid featuring 40 degrees of freedom and enhanced dexterity for warehouse operations. The company claims Figure 03 can handle 90% of Amazon warehouse tasks autonomously.</p>
+</li>
+<li><p><strong>Boston Dynamics Atlas 2.0 Demonstrates Parkour</strong>: The new electric Atlas performed complex parkour maneuvers including backflips and precision landing, showcasing the maturity of model-based control in humanoid locomotion.</p>
+</li>
+<li><p><strong>Chinese Humanoid Makers Gain Ground</strong>: Companies like Unitree, Fourier Intelligence, and UBTech are rapidly closing the gap with Western competitors, with several models now priced below $100,000 for research institutions.</p>
+</li>
+</ul>
+<h2>Drones &amp; Mobility</h2>
+<p>Autonomous mobility continues expanding beyond traditional boundaries:</p>
+<ul>
+<li><p><strong>Wing&#39;s 2 Millionth Delivery</strong>: Alphabet&#39;s drone delivery subsidiary just hit a major milestone, with operations now spanning 11 U.S. markets and 4 international locations. The company reports a 300% increase in delivery volume year-over-year.</p>
+</li>
+<li><p><strong>Zipline&#39;s P2 Drone Gains FAA Approval</strong>: The new platform capable of precision delivery to apartment balconies received Part 135 certification, enabling beyond-visual-line-of-sight operations in urban environments.</p>
+</li>
+<li><p><strong>Skydio X10D for Defense</strong>: Skydio&#39;s enterprise drone now includes classified capabilities for military applications, including enhanced electronic warfare resistance and autonomous target recognition.</p>
+</li>
+<li><p><strong>Aurora&#39;s Self-Driving Trucks Reach 2 Million Miles</strong>: The autonomous freight company completed its 2 millionth autonomous mile on public highways, with a safety record exceeding human driver benchmarks.</p>
+</li>
+</ul>
+<h2>Open Source &amp; Community</h2>
+<ul>
+<li><p><strong>ROS 2 Jazzy Adoption Accelerates</strong>: Six months post-release, ROS 2 Jazzy Jalisco has become the preferred distribution for new robotics projects, with Gazebo Harmonic integration enabling seamless simulation-to-reality workflows.</p>
+</li>
+<li><p><strong>RoboCup 2026 Recap</strong>: The recent competition in Incheon, South Korea, showcased breakthroughs in humanoid soccer locomotion and autonomous rescue coordination. Team NimbRo won the Humanoid Adult Size league with unprecedented agility.</p>
+</li>
+<li><p><strong>MoveIt 2.10 Released</strong>: The motion planning framework now includes real-time collision avoidance and improved trajectory optimization for high-DOF manipulators.</p>
+</li>
+<li><p><strong>Open Robotics Foundation Restructures</strong>: The steward of ROS and Gazebo announced new funding from industrial partners, ensuring long-term sustainability of these critical open-source tools.</p>
+</li>
+</ul>
+<h2>Robotics Competitions &amp; Events</h2>
+<ul>
+<li><p><strong>DARPA Subterranean Challenge Finals</strong>: The three-year competition concluded with CSIRO&#39;s Data61 winning the $2M prize for autonomous underground exploration. The solutions developed are already being commercialized for mining applications.</p>
+</li>
+<li><p><strong>FIRST Robotics 2027 Game Preview</strong>: The 2027 season theme &quot;REVOLUTION&quot; was announced, challenging high school teams to build robots capable of renewable energy infrastructure assembly.</p>
+</li>
+<li><p><strong>ICRA 2027 Call for Papers</strong>: The International Conference on Robotics and Automation announced its 2027 location in Kyoto, Japan, with a special focus on sustainable robotics and climate applications.</p>
+</li>
+</ul>
+<p><img src="/images/robotics-2026-07-03-2.jpg" alt="Robot Technology Future"></p>
+<h3>Key Takeaway</h3>
+<p><strong>Scale and accessibility define this moment in robotics.</strong> Humanoid robots are transitioning from prototypes to production, with multiple companies simultaneously scaling manufacturing. Meanwhile, open-source tools and affordable hardware (Raspberry Pi, ESP32, 3D printing) are democratizing robotics development—today&#39;s garage project could become tomorrow&#39;s commercial product. For Pakistan&#39;s growing tech ecosystem, this represents both an opportunity to leapfrog traditional manufacturing and a challenge to develop the skilled workforce needed for the automation age.</p>
+<hr>
+<p><em>Images via Unsplash (free to use under Unsplash License)</em></p>
+]]></content:encoded>
+      <category>robotics</category>
+    <category>robot</category>
+    <category>automation</category>
+    <category>hobby-robotics</category>
+    <category>industrial-robotics</category>
+    <category>drones</category>
+    </item>
     <item>
       <title>Space Tech Roundup - July 3, 2026</title>
       <link>https://shamyl.github.io/blog/space-tech-2026-07-03</link>
