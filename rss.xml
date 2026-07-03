@@ -5,7 +5,7 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Fri, 03 Jul 2026 09:21:25 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 03 Jul 2026 09:23:08 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
@@ -88,6 +88,66 @@
     <category>satellites</category>
     <category>rockets</category>
     <category>mars</category>
+    </item>
+    <item>
+      <title>Tech, Art &amp; Entertainment - July 3, 2026</title>
+      <link>https://shamyl.github.io/blog/tech-art-2026-07-03</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/tech-art-2026-07-03</guid>
+      <pubDate>Fri, 03 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Creative intersections of technology, art, and entertainment from July 3, 2026.</description>
+      <content:encoded><![CDATA[<p><img src="/images/tech-art-2026-07-03-1.jpg" alt="Digital Art Abstract">
+<em>Image from Unsplash - Neon Art Installation</em></p>
+<p>Here&#39;s your Friday creative tech roundup for July 3, 2026:</p>
+<h2>AI Art &amp; Creative Tools</h2>
+<ul>
+<li><p><strong>Cloudflare&#39;s AI Crawler Crackdown</strong>: Starting September 15th, Cloudflare will block bots that scrape ad-supported websites for both search indexing and AI training simultaneously. The goal is to encourage AI companies to separate their crawlers for different purposes, giving publishers more control over what content is used for AI training.</p>
+</li>
+<li><p><strong>Paper Boy S3 - E Ink Game Boy Clone</strong>: Developer Wenting Zhang created a Game Boy alternative using M5Stack&#39;s M5PaperS3 development hardware and an E Ink touchscreen. The device uses the Playdate&#39;s open source CrankBoy emulator, offering an easy-on-the-eyes retro gaming experience.</p>
+</li>
+<li><p><strong>Isaac 1 Home Robot for $8,000</strong>: Weave Robotics launched Isaac 1, a fuzzy home robot that promises to collect dirty clothes, fold and put away laundry, make beds, and tidy clutter. Shipping slated for later this year with a $250 deposit required.</p>
+</li>
+</ul>
+<h2>Generative Art &amp; Creative Coding</h2>
+<ul>
+<li><p><strong>The Rise of Off-Grid Internet</strong>: A DIY creator built a complete self-hosted backup internet in a 3D-printed briefcase, featuring photo syncing, messaging, streaming media, and offline Wikipedia. A fascinating intersection of maker culture and creative tech.</p>
+</li>
+<li><p><strong>TV Time App Shutdown</strong>: After 15 years, the popular show tracking app TV Time is shutting down on July 15th. The developers cited that operating the free app &quot;was no longer sustainable&quot; - a reminder of the challenges facing creative digital tools.</p>
+</li>
+</ul>
+<h2>Tech in Film, Music &amp; Gaming</h2>
+<ul>
+<li><p><strong>Influencer Screenings Controversy</strong>: The Verge explores how influencer screenings are reshaping the film industry and fan culture. The piece examines parasocial fandoms in the age of social media and their impact on entertainment marketing.</p>
+</li>
+<li><p><strong>BitTorrent Turns 25</strong>: The file-sharing protocol that changed entertainment forever celebrates its anniversary. The retrospective examines how BitTorrent unleashed a wave of piracy that shook Hollywood to its core - and its lasting legacy on digital content distribution.</p>
+</li>
+<li><p><strong>Silo Season 3</strong>: The Apple TV+ mystery box series continues to grow bigger and more complex, with the showrunners discussing the challenges of managing an expanding narrative universe.</p>
+</li>
+</ul>
+<h2>Interactive &amp; Immersive Experiences</h2>
+<ul>
+<li><p><strong>Amazon Leo Satellite Internet</strong>: Amazon now has enough satellites to launch its Starlink competitor service, offering a new option for high-speed internet access worldwide - crucial infrastructure for digital artists and remote creative work.</p>
+</li>
+<li><p><strong>Honor Magic V6 Foldable</strong>: The latest foldable smartphone is now available in Europe, offering new canvas possibilities for digital artists and creators on the go.</p>
+</li>
+</ul>
+<h2>Cool Projects</h2>
+<ul>
+<li><strong>DIY Post-Apocalyptic Tech Kit</strong>: YouTuber Urban Circles created a complete off-grid internet system including messaging, media streaming, and offline Wikipedia - all contained in a 3D-printed briefcase. Perfect for makers interested in resilient technology.</li>
+</ul>
+<p><img src="/images/tech-art-2026-07-03-2.jpg" alt="Generative Art">
+<em>Image from Unsplash - Abstract Digital Art</em></p>
+<h3>Key Takeaway</h3>
+<p>This week highlights the tension between creative technology and sustainability. While we&#39;re seeing incredible DIY projects and new creative tools emerge, established platforms like TV Time are shutting down due to sustainability challenges. The intersection of AI, art, and entertainment continues to evolve rapidly, with both exciting innovations and sobering reminders of the economics of digital creativity.</p>
+<p>Stay tuned for more creative tech updates next week!</p>
+<hr>
+<p><em>Images courtesy of Unsplash. Content curated from The Verge, TechCrunch, and various creative tech sources.</em></p>
+]]></content:encoded>
+      <category>tech-art</category>
+    <category>AI-art</category>
+    <category>creative-tech</category>
+    <category>digital-art</category>
+    <category>generative-art</category>
+    <category>interactive</category>
     </item>
     <item>
       <title>Pakistan Tech Roundup - June 27, 2026</title>
