@@ -5,13 +5,77 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Fri, 03 Jul 2026 09:24:14 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 03 Jul 2026 09:25:04 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamyl.github.io/blog</link>
     </image>
+    <item>
+      <title>3D Printing Roundup - July 3, 2026</title>
+      <link>https://shamyl.github.io/blog/3d-printing-2026-07-03</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/3d-printing-2026-07-03</guid>
+      <pubDate>Fri, 03 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Latest in 3D printing technology, printers, materials, and maker projects from July 3, 2026.</description>
+      <content:encoded><![CDATA[<p>Here&#39;s your Thursday 3D printing roundup for July 3, 2026:</p>
+<p><img src="/images/3d-printing-2026-07-03-1.jpg" alt="3D printing technology">
+<em>Image credit: Unsplash</em></p>
+<h2>Printer News &amp; Releases</h2>
+<ul>
+<li><p><strong>Formlabs Launches Fuse X1 Industrial SLS Printer</strong> — Formlabs has introduced the Fuse X1, their latest industrial Selective Laser Sintering printer, starting at $84,999. This brings production-grade SLS capabilities to a wider range of businesses and continues Formlabs&#39; push into industrial additive manufacturing.</p>
+</li>
+<li><p><strong>Snapmaker U1 Anniversary Price Drop</strong> — For Snapmaker&#39;s 10th anniversary, the U1 hybrid 3D printer has dropped to just $849. The U1 combines 3D printing, laser engraving, and CNC carving in one machine, making it an attractive entry point for makers wanting multi-functionality without breaking the bank.</p>
+</li>
+<li><p><strong>Superfeet Launches iPhone Scanning for Custom Insoles</strong> — The custom insole company now lets customers scan their feet using an iPhone to create personalized 3D-printed orthotics, showing how 3D printing continues to democratize custom manufacturing for everyday consumers.</p>
+</li>
+</ul>
+<h2>Industry &amp; Materials News</h2>
+<ul>
+<li><p><strong>TDK Acquires Fabric8Labs for Up to $400 Million</strong> — In one of the biggest deals in recent 3D printing history, Japanese electronics giant TDK is acquiring Fabric8Labs. The San Diego-based company holds patents on Electrochemical Additive Manufacturing (ECAM), a process that builds high-precision metal components through electrochemical deposition. This technology is already being used for thermal management components in data center cooling systems.</p>
+</li>
+<li><p><strong>Singapore Materials Research Hub</strong> — ATLANT 3D, A*STAR Institute of Materials Research and Engineering, and the National Additive Manufacturing Innovation Cluster have signed an agreement to build the &quot;Advanced Materials Development Hub&quot; (A-HUB) in Singapore. The facility will combine ATLANT 3D&#39;s Direct Atomic Layer Processing (DALP®) with advanced materials research to explore applications in semiconductor packaging and silicon photonics.</p>
+</li>
+<li><p><strong>Phase3D Raises $2.9M for Metal AM Inspection</strong> — Phase3D closed an oversubscribed funding round to scale their Fringe Inspection technology for metal 3D printing. Their system uses structured-light metrology to provide real-time quality monitoring during metal powder bed fusion builds. The company counts NASA, the U.S. Air Force, and U.S. Navy among its 25 enterprise customers.</p>
+</li>
+</ul>
+<h2>Software &amp; AI Updates</h2>
+<ul>
+<li><strong>Hi3D: From Prompt to Printable in 5 Minutes</strong> — A new AI platform called Hi3D is promising to compress the entire idea-to-print pipeline into a single workflow. Type a sentence, wait five minutes, and walk away with a printable 3MF project file. The platform was tested by creating an original &quot;Blokees-style mecha&quot; from just a text prompt, demonstrating how AI is rapidly simplifying the 3D modeling workflow that previously required years of CAD and mesh repair experience.</li>
+</ul>
+<p><img src="/images/3d-printing-2026-07-03-2.jpg" alt="Robotic manufacturing">
+<em>Image credit: Unsplash</em></p>
+<h2>Cool Projects &amp; Maker Builds</h2>
+<ul>
+<li><p><strong>Oomwoo: The Open-Source, Offline Robot Vacuum</strong> — Maker&#39;s Pet is developing Oomwoo, a fully open-source robot vacuum built with 3D-printed parts and Raspberry Pi. Unlike commercial robot vacuums that require cloud connections (and have documented security vulnerabilities), Oomwoo navigates using 2D LiDAR and bumper sensors with no camera. The project is being developed transparently &quot;from the first commit&quot; with modular, self-contained components.</p>
+</li>
+<li><p><strong>3D Printed Roman Board Game Replica</strong> — Newcastle University and the Vindolanda Charitable Trust used 3D scanning and printing to create a playable replica of a 1,700-year-old Roman board game called <em>Ludus Latrunculorum</em> (&quot;the game of little brigands&quot;). The original stone board was excavated at Vindolanda in 2019, and the 3D-printed PLA replica now sits at the Roman Army Museum for visitors to actually play.</p>
+</li>
+<li><p><strong>322 Custom Ceramic Tiles for Dutch Transformer Station</strong> — A Rotterdam studio covered a Dutch transformer station in 322 custom 3D-printed ceramic tiles, showcasing how additive manufacturing enables unique architectural applications that would be impossible with traditional tile production.</p>
+</li>
+</ul>
+<h2>Medical &amp; Professional Applications</h2>
+<ul>
+<li><strong>IU Health Opens FDA-Cleared 3D Print Studio</strong> — IU Health has launched one of the country&#39;s first hospital-based, FDA-cleared 3D printing programs. The studio allows physicians to produce patient-specific anatomical models in-house within 24 hours for pre-surgery planning, particularly benefiting cancer patients who need rapid surgical intervention. The program provides significant cost savings by reducing reliance on third-party vendors.</li>
+</ul>
+<h2>Events &amp; Community</h2>
+<ul>
+<li><strong>Addidex Connect 2026</strong> — A two-day symposium on robotic large-format additive manufacturing was held at 3D Makers Zone in Haarlem. The event brought together designers, integrators, and researchers to address the lack of standards in the field and encourage knowledge sharing. A key theme: Europe needs to pay more attention to large-format AM, which remains &quot;too quiet&quot; despite its potential for construction and manufacturing applications.</li>
+</ul>
+<p><img src="/images/3d-printing-2026-07-03-3.jpg" alt="Additive manufacturing technology">
+<em>Image credit: Unsplash</em></p>
+<h3>Key Takeaway</h3>
+<p>This week&#39;s roundup shows 3D printing maturing on multiple fronts simultaneously: TDK&#39;s $400M acquisition signals serious industrial validation, AI tools like Hi3D are democratizing design workflows, and projects like Oomwoo demonstrate the maker community&#39;s continued focus on privacy and open-source values. Meanwhile, healthcare adoption accelerates with IU Health&#39;s FDA-cleared program, proving that 3D printing isn&#39;t just prototyping anymore—it&#39;s becoming core infrastructure across industries.</p>
+<hr>
+<p><em>What caught your eye this week? Drop a comment or reach out if you&#39;d like me to cover a specific 3D printing topic!</em></p>
+]]></content:encoded>
+      <category>3d-printing</category>
+    <category>additive-manufacturing</category>
+    <category>maker</category>
+    <category>fdm</category>
+    <category>sla</category>
+    <category>filament</category>
+    </item>
     <item>
       <title>Robotics Roundup - July 3, 2026</title>
       <link>https://shamyl.github.io/blog/robotics-2026-07-03</link>
@@ -237,6 +301,92 @@
     <category>digital-art</category>
     <category>generative-art</category>
     <category>interactive</category>
+    </item>
+    <item>
+      <title>Tech Roundup - July 3, 2026</title>
+      <link>https://shamyl.github.io/blog/tech-roundup-2026-07-03</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/tech-roundup-2026-07-03</guid>
+      <pubDate>Fri, 03 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Latest in Bio-Tech, Space Tech, IT, FinTech and emerging technology from July 3, 2026.</description>
+      <content:encoded><![CDATA[<p>Here&#39;s your Friday tech roundup for July 3, 2026:</p>
+<p><img src="/images/tech-roundup-2026-07-03-1.jpg" alt="DNA double helix structure"></p>
+<p><em>Photo by Unsplash - Molecular biotechnology visualization</em></p>
+<h2>Bio-Tech</h2>
+<ul>
+<li><p><strong>Mystery of &#39;Green Boots&#39; Climber Solved via DNA Test</strong>: The identity of the famous &#39;Green Boots&#39; climber on Mount Everest has finally been solved after 25 years through DNA testing. This case highlights the power of genetic identification technology in forensic science.</p>
+</li>
+<li><p><strong>Biotech Sector Booming at Mid-2026</strong>: According to STAT reports, biotech is experiencing significant growth halfway through 2026, with increased funding and new therapeutic breakthroughs in development.</p>
+</li>
+<li><p><strong>Roche Drug Sets New Standard for KRAS-Driven Lung Cancer</strong>: Roche has achieved a breakthrough with a new drug setting the standard for treating KRAS-driven lung cancer, one of the most challenging mutation types to treat.</p>
+</li>
+<li><p><strong>Artificial Cell Manages Cell Division</strong>: Researchers have created an artificial cell capable of multiple rounds of cell division, bringing us closer to creating synthetic life for medical and research applications.</p>
+</li>
+</ul>
+<h2>Space Tech</h2>
+<ul>
+<li><p><strong>NASA Chief Praises Blue Origin Progress</strong>: NASA Administrator Bill Nelson praised the progress Blue Origin is making following the recent New Glenn launch failure, indicating continued support for private space development despite setbacks.</p>
+</li>
+<li><p><strong>Blue Origin Outlines New Launch Pad Approach</strong>: Following the launch failure, Blue Origin is revising its approach to launch pad operations as it works to return New Glenn to flight status.</p>
+</li>
+<li><p><strong>Final Atlas 5 Amazon LEO Mission Launches</strong>: United Launch Alliance successfully launched the final Atlas 5 mission for Amazon&#39;s Project Kuiper satellite constellation, marking the end of an era for the venerable rocket.</p>
+</li>
+<li><p><strong>Isar Aerospace to Launch German-Built Planet Imaging Satellite</strong>: German launch provider Isar Aerospace is preparing to launch a domestically built Earth observation satellite, expanding Europe&#39;s independent space capabilities.</p>
+</li>
+<li><p><strong>Report Links Starliner Problems to Overconfidence</strong>: A new investigation attributes Boeing&#39;s Starliner problems to overconfidence and unrealistic schedules, highlighting the challenges of human spaceflight development.</p>
+</li>
+</ul>
+<p><img src="/images/tech-roundup-2026-07-03-2.jpg" alt="Space rocket launch"></p>
+<p><em>Photo by SpaceX on Unsplash - Space technology and exploration</em></p>
+<h2>IT &amp; DevOps</h2>
+<ul>
+<li><p><strong>Virginia Bans Sale of Geolocation Data</strong>: Virginia has passed legislation banning the sale of precise geolocation data, becoming one of the first states to take action on this privacy issue. This could set precedent for other states.</p>
+</li>
+<li><p><strong>Google Loses Appeal of $4.7 Billion EU Fine</strong>: Google has lost its long-running appeal against a record European Union fine and will have to pay $4.7 billion, marking a significant moment in tech antitrust enforcement.</p>
+</li>
+<li><p><strong>Google&#39;s AI Buildout Drove 37% Electricity Increase</strong>: Google&#39;s massive AI infrastructure expansion led to a 37% increase in electricity consumption in 2025, highlighting the energy demands of the AI revolution.</p>
+</li>
+<li><p><strong>Podman v6.0.0 Released</strong>: The container management tool Podman has released version 6.0.0 with significant improvements for developers working with containerized applications.</p>
+</li>
+<li><p><strong>Safari MCP Server for Web Developers</strong>: Apple introduced the Safari MCP (Model Context Protocol) server, enabling AI-powered debugging and development tools directly in the browser.</p>
+</li>
+<li><p><strong>T-Mobile Moving VMs Off VMware</strong>: T-Mobile is migrating tens of thousands of virtual machines off VMware amid ongoing litigation, signaling broader enterprise shifts in virtualization strategies.</p>
+</li>
+</ul>
+<h2>FinTech</h2>
+<ul>
+<li><p><strong>OpenAI Proposes 5% US Sovereign Wealth Fund Stake</strong>: OpenAI has proposed donating 5% of its equity to a US sovereign wealth fund, far below Senator Bernie Sanders&#39; target of 20% but still a significant move toward public benefit.</p>
+</li>
+<li><p><strong>Trump Gets OpenAI to Offer Lower US Stake</strong>: Reports indicate that the Trump administration negotiated OpenAI down from higher proposed stakes to the current 5% offer for the US government.</p>
+</li>
+<li><p><strong>Travel App Hopper to Pay $35M FTC Settlement</strong>: Travel booking app Hopper will pay $35 million to settle FTC charges over hidden fees, marking increased regulatory scrutiny of fintech apps.</p>
+</li>
+<li><p><strong>Microsoft Launches $2.5B AI Deployment Company</strong>: Microsoft has launched its own AI deployment company with a $2.5 billion commitment, further cementing its position in the enterprise AI market.</p>
+</li>
+</ul>
+<h2>Emerging Tech</h2>
+<ul>
+<li><p><strong>HKU Develops &quot;Brain-Like&quot; Chip for Quantum Computing</strong>: Hong Kong University engineers have created a world-first neuromorphic chip that could advance both quantum computing and deep-space exploration capabilities.</p>
+</li>
+<li><p><strong>IQM Admits Quantum Future Uncertain</strong>: Europe&#39;s first public quantum computing company, IQM, has acknowledged that the future of quantum technology remains uncertain despite recent advances.</p>
+</li>
+<li><p><strong>Perovskite Solar Startup Shifts to Space Market</strong>: Verde Technologies, a perovskite solar panel startup, is pivoting from terrestrial to space applications, where the efficiency advantages of next-gen solar cells can be maximized.</p>
+</li>
+<li><p><strong>US Home Battery Installations Hit Record High</strong>: Home battery installations reached an all-time high driven by rising electricity costs, signaling mainstream adoption of distributed energy storage.</p>
+</li>
+<li><p><strong>Superworms for Forensic Science</strong>: Researchers have found that superworms could replace beetles for cleaning skeletal remains in forensic investigations, offering a faster alternative for law enforcement.</p>
+</li>
+</ul>
+<hr>
+<h3>Key Takeaway</h3>
+<p>This week highlights three critical developments: <strong>state governments are taking the lead on tech regulation</strong> with Virginia&#39;s geolocation ban and the massive Google fine standing firm; <strong>the AI infrastructure boom is creating measurable environmental impact</strong> with Google&#39;s 37% electricity jump; and <strong>space development continues despite setbacks</strong>, with both public and private sectors showing resilience after failures. The convergence of AI, energy, and space technologies is accelerating faster than regulation can adapt.</p>
+<p><em>Stay curious, stay informed.</em></p>
+]]></content:encoded>
+      <category>tech</category>
+    <category>biotech</category>
+    <category>fintech</category>
+    <category>space-tech</category>
+    <category>emerging-tech</category>
+    <category>IT</category>
     </item>
     <item>
       <title>Pakistan Tech Roundup - June 27, 2026</title>
