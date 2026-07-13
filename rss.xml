@@ -5,7 +5,7 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Mon, 13 Jul 2026 05:31:45 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2026 05:32:51 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
@@ -140,6 +140,165 @@
     <category>hobby-robotics</category>
     <category>industrial-robotics</category>
     <category>drones</category>
+    </item>
+    <item>
+      <title>Space Tech Roundup - July 13, 2026</title>
+      <link>https://shamyl.github.io/blog/space-tech-2026-07-13</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/space-tech-2026-07-13</guid>
+      <pubDate>Mon, 13 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Latest in space exploration, satellite technology, and aerospace developments from July 13, 2026.</description>
+      <content:encoded><![CDATA[<p>Here&#39;s your Sunday space tech roundup for July 13, 2026:</p>
+<p><img src="/images/space-tech-2026-07-13-1.jpg" alt="NASA F-18 Flight Photography">
+<em>NASA photographer captures stunning aerial images from F-18 over Washington — Image: NASA (Public Domain)</em></p>
+<h2>Launches &amp; Missions</h2>
+<ul>
+<li><p><strong>SpaceX Starship Flight 13</strong>: SpaceX is gearing up for its next Starship launch as soon as July 16 to test fixes to issues from the previous flight and deploy functioning Starlink satellites. This flight represents another crucial step toward making Starship operational.</p>
+</li>
+<li><p><strong>Booster 20 Record Static Fire</strong>: SpaceX completed a record-duration static fire test with all 33 engines on Booster 20, pushing hard toward the next flight campaign. This milestone validates the engineering improvements made since Flight 12.</p>
+</li>
+<li><p><strong>Starlink 17-48 Mission</strong>: SpaceX launched 24 additional satellites from Vandenberg Space Force Base, continuing the rapid expansion of the world&#39;s largest satellite constellation.</p>
+</li>
+<li><p><strong>Falcon 9 Booster B1067</strong>: SpaceX set a new record with booster B1067 completing its 36th flight — a testament to the remarkable reusability of the Falcon 9 system.</p>
+</li>
+</ul>
+<p><img src="/images/space-tech-2026-07-13-2.jpg" alt="Nancy Grace Roman Space Telescope">
+<em>NASA&#39;s Nancy Grace Roman Space Telescope arrives at Kennedy Space Center for prelaunch servicing — Image: NASA (Public Domain)</em></p>
+<h2>SpaceX &amp; Commercial Space</h2>
+<ul>
+<li><p><strong>Starship Florida Operations</strong>: Starship launches from Cape Canaveral are getting closer, with SpaceX and its contractors making significant progress toward activating the Florida launch pad for super-heavy lift operations.</p>
+</li>
+<li><p><strong>ispace Partners with SpaceX</strong>: Japanese lunar exploration company ispace announced plans to send larger payloads to the Moon aboard SpaceX&#39;s Starship, opening new possibilities for commercial lunar missions.</p>
+</li>
+<li><p><strong>ElevationSpace Reentry Vehicle</strong>: A Japanese startup developing commercial reentry vehicles is signing up customers while keeping a watchful eye on SpaceX&#39;s entry into the market, showing healthy competition in the space services sector.</p>
+</li>
+</ul>
+<h2>Satellites &amp; Constellations</h2>
+<ul>
+<li><p><strong>Reflect Orbital Sunlight Satellite</strong>: The FCC approved its first satellite designed to reflect sunlight into nighttime regions. This experimental project, while controversial among astronomers and environmentalists, could enable new applications in agriculture and emergency response.</p>
+</li>
+<li><p><strong>Nuclear Battery in Orbit</strong>: City Labs is testing tritium-powered electrical sources for satellites and lunar systems that could operate where solar power falls short — a potential game-changer for deep space missions.</p>
+</li>
+<li><p><strong>Parabilis Propulsion</strong>: The Space Force is backing development of hybrid engine technology for maneuverable cubesats, promising enhanced capabilities for small satellite constellations.</p>
+</li>
+<li><p><strong>European Space Industry Rebound</strong>: Earth observation satellites have now surpassed telecom satellites in European space industry sales, with 2025 showing significant recovery after 2024&#39;s contraction.</p>
+</li>
+</ul>
+<h2>Deep Space &amp; Exploration</h2>
+<ul>
+<li><p><strong>NASA&#39;s Roman Space Telescope</strong>: The Nancy Grace Roman Space Telescope has arrived at Kennedy Space Center for prelaunch servicing. Set to launch in 2027, it will provide unprecedented wide-field infrared imaging of the cosmos.</p>
+</li>
+<li><p><strong>James Webb 4th Anniversary</strong>: Celebrating four years of science operations, Webb revealed stunning new images of Centaurus A showing millions of stars previously hidden by dust — demonstrating how the telescope continues to transform our understanding of the universe.</p>
+</li>
+<li><p><strong>China&#39;s Long March 10B</strong>: China successfully launched and caught the Long March 10B rocket&#39;s first stage using a drone — a significant advancement in reusable rocket technology.</p>
+</li>
+<li><p><strong>China&#39;s Commercial Space Consortium</strong>: The Chinese government unveiled its state-backed commercial space consortium membership list, indicating which companies Beijing considers established players in the sector.</p>
+</li>
+</ul>
+<h2>Research &amp; Discoveries</h2>
+<ul>
+<li><p><strong>IXPE Maps Pulsar Magnetic Fields</strong>: NASA&#39;s Imaging X-ray Polarimetry Explorer mapped the magnetic fields of PSR J1101–6101 within the Lighthouse Nebula for the first time, providing new insights into these extreme cosmic objects.</p>
+</li>
+<li><p><strong>Planet Surviving Star&#39;s Death</strong>: Webb studied WD 1856 b, a Jupiter-sized exoplanet orbiting a white dwarf, revealing how planets can survive the death of their host stars — a glimpse into the far future of our own solar system.</p>
+</li>
+<li><p><strong>Hubble Captures Star-Studded Cluster</strong>: Hubble&#39;s image of Messier 3 showcases one of the Milky Way&#39;s most massive globular clusters, revealing ancient stars that formed billions of years ago.</p>
+</li>
+<li><p><strong>Zooniverse Milestone</strong>: NASA-supported citizen science platform Zooniverse reached 1 billion classifications contributed by volunteers worldwide — demonstrating the power of public participation in astronomical research.</p>
+</li>
+<li><p><strong>Nuclear Battery Technology</strong>: A new tritium-powered electrical source is being validated in orbit, potentially enabling long-duration missions to the Moon and beyond where solar power isn&#39;t viable.</p>
+</li>
+</ul>
+<h3>Key Takeaway</h3>
+<p>The space industry continues its remarkable acceleration in July 2026. SpaceX&#39;s Starship program is moving toward operational status with Flight 13, while reusability records keep falling with each Falcon 9 launch. International competition is intensifying with China&#39;s reusable rocket advances and Japan&#39;s growing commercial space ecosystem. Meanwhile, groundbreaking discoveries from Webb, Roman, and IXPE are reshaping our cosmic understanding. The transition from government-led exploration to commercial space infrastructure is now undeniable — we&#39;re witnessing the birth of a true space economy.</p>
+<hr>
+<p><em>Images courtesy of NASA (Public Domain). News compiled from SpaceNews, Spaceflight Now, NASASpaceflight, NASA, ESA, and Ars Technica.</em></p>
+]]></content:encoded>
+      <category>space-tech</category>
+    <category>space</category>
+    <category>spacex</category>
+    <category>nasa</category>
+    <category>satellites</category>
+    <category>rockets</category>
+    <category>mars</category>
+    </item>
+    <item>
+      <title>Tech, Art &amp; Entertainment - July 13, 2026</title>
+      <link>https://shamyl.github.io/blog/tech-art-2026-07-13</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/tech-art-2026-07-13</guid>
+      <pubDate>Mon, 13 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Creative intersections of technology, art, and entertainment from July 13, 2026.</description>
+      <content:encoded><![CDATA[<p>Here&#39;s your Friday creative tech roundup for July 13, 2026:</p>
+<p><img src="/images/tech-art-2026-07-13-1.jpg" alt="Creative Tech Abstract"></p>
+<h2>AI Art &amp; Creative Tools</h2>
+<p>The creative AI space continues to evolve with some fascinating developments:</p>
+<ul>
+<li><p><strong>Midjourney Video Model V1</strong> — Midjourney expanded beyond static images with their inaugural Video Model, allowing creators to transform single images (AI-generated or uploaded) into dynamic short clips. This marks a significant shift toward animated visual storytelling for digital artists and filmmakers.</p>
+</li>
+<li><p><strong>ImageNav Directory</strong> — A curated directory of 55+ AI image generation tools launched, cataloging everything from Midjourney and DALL-E to FLUX and Stable Diffusion. The platform aims to help artists navigate the rapidly expanding ecosystem of generative tools without requiring technical setup expertise.</p>
+</li>
+<li><p><strong>FLUX.1 Schnell</strong> — Now available through Cloudflare Workers AI, this 12B parameter image generation model joins 60+ other free AI models available for developers and artists.</p>
+</li>
+<li><p><strong>Copyright Debates Continue</strong> — The Supreme Court declined to review AI-generated art copyright cases, leaving questions about ownership and protection unresolved. Meanwhile, SAG-AFTRA continues advocating for AI protections for performers and voice actors.</p>
+</li>
+</ul>
+<h2>Generative Art &amp; Creative Coding</h2>
+<p>The creative coding community is thriving with innovative projects:</p>
+<ul>
+<li><p><strong>Photogenesis App</strong> — An offline iOS/Android app applies generative art effects to photos without AI, using techniques like circle packing, line walkers, mosaic grid patterns, marching squares, voronoi tessellation, glitch art, string art, and perlin flow fields. Pure algorithmic art inspired by Coding Train tutorials.</p>
+</li>
+<li><p><strong>PRISM</strong> — An open-source AI-driven generative art system that &quot;evolves&quot; over time by remembering past successes and failures. It fuses multiple AI models (OpenAI, Anthropic, FAL API) with Processing to create geometric art that adapts its creative approach through an evolutionary memory system.</p>
+</li>
+<li><p><strong>Sandspiel Studio</strong> — Max Bittker&#39;s cellular automata toy now includes a visual programming interface, letting users define their own particle rules using block-based coding. It&#39;s like Scratch meets falling sand physics.</p>
+</li>
+<li><p><strong>Hack Club Blot</strong> — A CNC drawing machine for programmatic art built by teenagers. Create code that generates line art, and they&#39;ll send you a free robot that draws it in real life. The &quot;You Ship, We Ship&quot; model encourages creative coding education.</p>
+</li>
+</ul>
+<p><img src="/images/tech-art-2026-07-13-2.jpg" alt="Creative Technology"></p>
+<h2>Tech in Film, Music &amp; Gaming</h2>
+<p>Entertainment technology continues pushing boundaries:</p>
+<ul>
+<li><p><strong>ScaryStories.Live</strong> — A new platform using real-time video generation models (LTXV, Sora-class) to create interactive POV horror videos. Users upload photos of any location and watch AI transform them into personalized horror experiences with adjustable fear levels.</p>
+</li>
+<li><p><strong>Cloudflare&#39;s Free AI Suite</strong> — Developers now have access to 100,000 free daily requests across 60+ models including Llama 4 Scout, DeepSeek R1 Distill, QwQ reasoning models, and FLUX.1 for image generation. Democratizing access to creative AI tools.</p>
+</li>
+<li><p><strong>Digital Human Progress</strong> — Real-time game graphics from 2024 now match pre-rendered CGI from 2016&#39;s Rogue One (Tarkin). The uncanny valley is narrowing as neural rendering and AI-assisted animation mature.</p>
+</li>
+</ul>
+<h2>Interactive &amp; Immersive Experiences</h2>
+<p>VR, AR, and interactive art are creating new creative canvases:</p>
+<ul>
+<li><p><strong>LinkXR</strong> — A social platform connecting VR, AR, and MR experiences across different social apps and games. Born from the VRChat community exodus, it aims to help users maintain friendships across fragmented XR platforms.</p>
+</li>
+<li><p><strong>NEVO Project</strong> — EPFL researchers developed AI that generates videos specifically designed to maximally activate targeted brain regions. While primarily for neuroscience research, it hints at future personalized media that adapts to individual neural responses.</p>
+</li>
+<li><p><strong>Deji&#39;s Interactive Diary</strong> — An upcoming digital exhibition (Q2 2026) blending audiobooks, art galleries, and memory palaces. Each artwork contains 100-300 interactive hotspots triggering audio narration and layered stories, creating immersive narrative experiences.</p>
+</li>
+</ul>
+<h2>Cool Projects</h2>
+<p>Community-driven creative tech worth exploring:</p>
+<ul>
+<li><p><strong>Cables.gl</strong> — Node-based creative coding environment gaining traction among creative technologists for real-time graphics and interactive installations.</p>
+</li>
+<li><p><strong>Wave Function Collapse</strong> — Constraint-solving algorithms for generative tile-based art continue inspiring game developers and digital artists. The technique lets artists define rules simply by drawing examples.</p>
+</li>
+<li><p><strong>Cellular Automata Renaissance</strong> — From Sandspiel to CAM-6 simulators, there&#39;s renewed interest in emergent behavior from simple rules. The intersection of artificial life and visual art.</p>
+</li>
+<li><p><strong>TouchDesigner</strong> — Still the go-to tool for immersive installations, projection mapping, and real-time visual performances in the creative technology world.</p>
+</li>
+</ul>
+<h3>Key Takeaway</h3>
+<blockquote>
+<p>The creative technology landscape is experiencing a fascinating tension: AI tools are democratizing creation like never before, while simultaneously sparking debates about authenticity, copyright, and the nature of creativity itself. The most exciting developments aren&#39;t just the AI models—it&#39;s how creative coders are building unique hybrid workflows, combining algorithmic art, traditional techniques, and AI assistance in ways that feel genuinely new.</p>
+</blockquote>
+<p>Whether you&#39;re Processing sketches, training LoRAs, or building VR experiences, the barrier between &quot;consumer&quot; and &quot;creator&quot; has never been lower—or more interesting to navigate.</p>
+<hr>
+<p><em>Images courtesy of Lorem Picsum. This post focuses on publicly available tools and research in the creative technology space.</em></p>
+]]></content:encoded>
+      <category>tech-art</category>
+    <category>AI-art</category>
+    <category>creative-tech</category>
+    <category>digital-art</category>
+    <category>generative-art</category>
+    <category>interactive</category>
     </item>
     <item>
       <title>3D Printing Roundup - July 3, 2026</title>
