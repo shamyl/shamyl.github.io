@@ -5,7 +5,7 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Mon, 13 Jul 2026 05:29:06 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2026 05:31:45 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
@@ -84,6 +84,62 @@
     <category>IT-exports</category>
     <category>telecom</category>
     <category>ecosystem</category>
+    </item>
+    <item>
+      <title>Robotics Roundup - July 13, 2026</title>
+      <link>https://shamyl.github.io/blog/robotics-2026-07-13</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/robotics-2026-07-13</guid>
+      <pubDate>Mon, 13 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Latest in hobby and professional robotics from July 13, 2026.</description>
+      <content:encoded><![CDATA[<p>Here&#39;s your Tuesday robotics roundup for July 13, 2026:</p>
+<p><img src="/images/robotics-2026-07-13-1.jpg" alt="Industrial Robot Arm"></p>
+<h2>Industrial Robotics</h2>
+<p>The US robotics sector continues its unprecedented growth with <strong>$20 billion in new projects</strong>, marking one of the largest investment waves in the industry&#39;s history. This surge spans manufacturing automation, logistics, and next-gen factory solutions.</p>
+<ul>
+<li><strong>Mitsubishi</strong> is deploying humanoid robots in its Japanese factories to address the country&#39;s shrinking workforce, marking a significant shift in industrial automation strategy.</li>
+<li><strong>PCBA Coating Machines Market</strong> is forecasted to grow through 2035, driven by miniaturization demands and reliability requirements in electronics manufacturing.</li>
+<li><strong>World Motion Control Sensors Market</strong> analysis shows continued expansion across industrial applications.</li>
+</ul>
+<h2>Humanoids &amp; Research</h2>
+<p>The humanoid robotics space is seeing massive funding and breakthrough applications:</p>
+<ul>
+<li><strong>Meta</strong> has reportedly acquired a robotics AI company to fast-track humanoid robot development, signaling serious intent to compete in this space.</li>
+<li><strong>Holiday Robotics</strong> raised <strong>$103.4 million</strong> in Series A funding to scale humanoid robot manufacturing, demonstrating investor confidence in commercial viability.</li>
+<li>A <strong>Chinese humanoid robot</strong> performed the world&#39;s first live pig surgery—a groundbreaking milestone proving humanoid robots can handle delicate medical procedures.</li>
+<li><strong>Ukraine</strong> became the first country to fund combat humanoid robots, though battlefield feedback suggests wheeled platforms still have advantages for now.</li>
+<li><strong>Eno</strong>, a new humanoid robot, has been engineered specifically for everyday household tasks.</li>
+</ul>
+<p><img src="/images/robotics-2026-07-13-2.jpg" alt="Humanoid Robot Concept"></p>
+<h2>Drones &amp; Mobility</h2>
+<p>Autonomous aerial systems continue to expand into new domains:</p>
+<ul>
+<li><strong>Autonomous drones</strong> are now measuring volcanic gas clouds, providing clearer warning signs for potential eruptions.</li>
+<li><strong>Kraken</strong>, a British drone-boat maker, became Europe&#39;s newest defense unicorn, highlighting the growing importance of maritime autonomous systems.</li>
+<li><strong>Australia</strong> is testing the Vector AI reconnaissance drone, developed using battlefield data from Ukraine.</li>
+<li>The concept of <strong>&quot;Jellyfish&quot; drone swarms</strong> is raising concerns about their potential dangers in warfare scenarios.</li>
+<li><strong>Fincantieri</strong> acquired four companies to expand its underwater drone business, targeting commercial and defense applications.</li>
+</ul>
+<h2>Medical &amp; Surgical Robotics</h2>
+<ul>
+<li><strong>Japan&#39;s Surgical Robotic System Market</strong> continues growing, with new analysis forecasting expansion through 2035.</li>
+<li><strong>BlackBerry&#39;s QNX</strong> is positioning itself for physical AI and smart vehicle growth, expanding beyond automotive into robotics.</li>
+<li>AI is getting a <strong>&#39;cerebellum&#39;</strong>—brain-inspired electronics could make AI faster, leaner, and more reactive for robotic applications.</li>
+</ul>
+<h2>Open Source &amp; Community</h2>
+<ul>
+<li>Research on <strong>AI cerebellum architectures</strong> suggests new pathways for more reactive and efficient robotic control systems using neuromorphic computing principles.</li>
+</ul>
+<hr>
+<h3>Key Takeaway</h3>
+<p><strong>The humanoid robotics race is heating up.</strong> With Meta&#39;s acquisition, Holiday Robotics&#39; massive funding round, and the first-ever live animal surgery performed by a humanoid robot, we&#39;re witnessing the transition from research curiosity to practical application. Meanwhile, industrial robotics continues its $20B boom, and drones are finding ever more specialized niches—from volcanology to defense. The line between experimental and practical robotics is blurring fast.</p>
+<p><em>Images sourced from Unsplash. This post covers robotics news from the past 48 hours.</em></p>
+]]></content:encoded>
+      <category>robotics</category>
+    <category>robot</category>
+    <category>automation</category>
+    <category>hobby-robotics</category>
+    <category>industrial-robotics</category>
+    <category>drones</category>
     </item>
     <item>
       <title>3D Printing Roundup - July 3, 2026</title>
