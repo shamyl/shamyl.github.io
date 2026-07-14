@@ -5,13 +5,97 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Mon, 13 Jul 2026 05:32:51 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2026 05:41:38 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamyl.github.io/blog</link>
     </image>
+    <item>
+      <title>3D Printing Roundup - July 13, 2026</title>
+      <link>https://shamyl.github.io/blog/3d-printing-2026-07-13</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/3d-printing-2026-07-13</guid>
+      <pubDate>Mon, 13 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Latest in 3D printing technology, printers, materials, and maker projects from July 13, 2026.</description>
+      <content:encoded><![CDATA[<p>Here&#39;s your Thursday 3D printing roundup for July 13, 2026:</p>
+<p><img src="/images/3d-printing-2026-07-13-1.jpg" alt="3D printer in action"></p>
+<h2>Printer News &amp; Releases</h2>
+<ul>
+<li><p><strong>Kentstrapper Releases Mille System</strong>: Italian manufacturer Kentstrapper has launched the Mille System, a massive 1 cubic meter build volume material extrusion printer priced at €40,000. This brings industrial-scale FDM printing to a more accessible price point.</p>
+</li>
+<li><p><strong>Prusa Summer Flash Deal</strong>: Original Prusa is running their Flash Summer Deal 2026 with 20% off the MK4S and reduced shipping on the CORE One+. Perfect timing if you&#39;ve been considering upgrading your workshop.</p>
+</li>
+<li><p><strong>Beehive Industries Orders NXG 600E</strong>: Beehive Industries is betting big on ultra-large-format metal additive manufacturing with a multi-unit order of NXG 600E systems. The demand for large-scale metal AM continues to grow.</p>
+</li>
+<li><p><strong>Prusa INDX July Update</strong>: The Prusa INDX Founder&#39;s Edition is shipping with updates on what&#39;s next for the platform. The modular tool-changing system is gaining traction among serious makers.</p>
+</li>
+</ul>
+<h2>Materials &amp; Filaments</h2>
+<ul>
+<li><p><strong>Elegoo x Emoji® Collaboration</strong>: Elegoo has partnered with Emoji® to introduce more people to 3D printing. This fun collaboration aims to make 3D printing more approachable for beginners through familiar characters and designs.</p>
+</li>
+<li><p><strong>Prusament PLA High Speed</strong>: Prusa released a new Prusament PLA optimized for high-speed printing. Perfect for rapid prototyping when you need quality prints fast.</p>
+</li>
+<li><p><strong>Prusament Resin Model+</strong>: A new generation resin with safer health profile and better impact resistance. The ongoing push for safer resin formulations continues.</p>
+</li>
+<li><p><strong>EOS Partners with Constellium</strong>: EOS is expanding their aluminum portfolio for additive manufacturing through a partnership with Constellium, bringing more aerospace-grade aluminum options to the AM market.</p>
+</li>
+</ul>
+<h2>Software &amp; Updates</h2>
+<ul>
+<li><p><strong>Open Community License v1.1</strong>: Prusa has released the new Open Community License with an improved plugin system, more examples, and addressed community questions. The ecosystem around PrusaSlicer continues to mature.</p>
+</li>
+<li><p><strong>ColorMix for EasyPrint and PrusaSlicer</strong>: A new open-source ColorMix feature allows printing with dozens of colors. Multi-material printing without the hardware complexity of MMU or Palette systems.</p>
+</li>
+<li><p><strong>Tripo AI Raises $150M</strong>: Tripo AI secured a massive $150M Series A3 round, showing continued investor confidence in AI-powered 3D generation and modeling tools.</p>
+</li>
+</ul>
+<h2>Cool Projects &amp; Prints</h2>
+<ul>
+<li><p><strong>Zaha Hadid Architects&#39; 6-Meter Tower</strong>: The renowned architecture firm has 3D printed a six-meter tower for Terminal Expo using large-scale additive manufacturing. Architectural concrete printing continues to push boundaries.</p>
+</li>
+<li><p><strong>3D Printed Macropad for Smart Home</strong>: A custom 3D-printed macropad project for controlling smart home devices shows how functional prints can integrate into daily life.</p>
+</li>
+<li><p><strong>3D-Printed Stencil Airbrushing</strong>: Simple 3D-printed stencil tips and tricks are making airbrushing more versatile and accessible for hobbyists and professionals alike.</p>
+</li>
+<li><p><strong>Fake Studio Lighting with Filament Mixing</strong>: A clever technique using filament mixing and a free app to create fake studio lighting effects on 3D prints. The community never stops innovating!</p>
+</li>
+</ul>
+<h2>Industry Applications</h2>
+<ul>
+<li><p><strong>Venus Aerospace Closes $91M</strong>: Venus Aerospace raised $91M to scale detonation engine production, likely leveraging AM for complex engine components that are impossible to manufacture traditionally.</p>
+</li>
+<li><p><strong>Protolabs Adds New Resin</strong>: Protolabs added a new resin to their Hi-Speed SLA lineup on Axtra3D&#39;s Lumia X1, expanding their rapid prototyping capabilities.</p>
+</li>
+<li><p><strong>Nigeria&#39;s New STEAM Centre</strong>: Nigeria is betting on hands-on 3D printing skills with a new Czech-backed STEAM Centre. Global AM education initiatives continue to expand.</p>
+</li>
+<li><p><strong>RIMPAC 2026 Military Applications</strong>: Military applications of 3D printing were highlighted at RIMPAC 2026, showing how armed forces worldwide are adopting additive for field repair and rapid manufacturing.</p>
+</li>
+</ul>
+<p><img src="/images/3d-printing-2026-07-13-2.jpg" alt="3D printed objects"></p>
+<h2>Kickstarter &amp; Campaigns</h2>
+<ul>
+<li><p><strong>Bambu Lab Earthquake Relief</strong>: Bambu Lab is turning filament sales into earthquake relief for Venezuela, showing how the maker community can drive positive social impact.</p>
+</li>
+<li><p><strong>XTPL Adds Japanese Customer</strong>: 3D printed packaging OEM XTPL has added another Japanese customer, showing growing Asian market adoption of micro-precision AM technologies.</p>
+</li>
+<li><p><strong>Formnext Asia Shenzhen</strong>: New Maker Day and dealer matching events at Formnext Asia Shenzhen are connecting manufacturers with regional partners.</p>
+</li>
+</ul>
+<h3>Key Takeaway</h3>
+<p>The 3D printing industry continues its rapid evolution with massive funding rounds ($150M for Tripo AI, $91M for Venus Aerospace) signaling strong investor confidence. Meanwhile, practical innovations like Prusa&#39;s ColorMix and high-speed filaments make advanced techniques more accessible to everyday makers. The line between industrial and desktop additive manufacturing keeps blurring—whether you&#39;re running a NXG 600E for metal parts or a MK4S in your garage, the tools for creation are more capable than ever.</p>
+<p>Keep printing! 🔥</p>
+<hr>
+<p><em>Images from Unsplash. Want more 3D printing content? Check back for weekly roundups!</em></p>
+]]></content:encoded>
+      <category>3d-printing</category>
+    <category>additive-manufacturing</category>
+    <category>maker</category>
+    <category>fdm</category>
+    <category>sla</category>
+    <category>filament</category>
+    </item>
     <item>
       <title>Pakistan Tech Roundup - July 13, 2026</title>
       <link>https://shamyl.github.io/blog/pakistan-tech-2026-07-13</link>
