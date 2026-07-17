@@ -5,13 +5,68 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Thu, 16 Jul 2026 04:03:18 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 17 Jul 2026 04:02:15 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamyl.github.io/blog</link>
     </image>
+    <item>
+      <title>Tech, Art &amp; Entertainment - July 17, 2026</title>
+      <link>https://shamyl.github.io/blog/tech-art-2026-07-17</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/tech-art-2026-07-17</guid>
+      <pubDate>Fri, 17 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Creative intersections of technology, art, and entertainment from July 17, 2026. AI music videos, open-source creativity tools, and the future of digital expression.</description>
+      <content:encoded><![CDATA[<p>Here&#39;s your Friday creative tech roundup for July 17, 2026:</p>
+<p><img src="/images/tech-art-2026-07-17-1.jpg" alt="Creative tech visualization"></p>
+<h2>AI Art &amp; Creative Tools</h2>
+<p><strong>$100 AI Music Video Challenge: Claude Fable 5 vs. GPT-5.6 Sol</strong>
+The battle between AI models for music video generation is heating up. A fascinating comparison shows how different AI systems interpret musical narratives through visual storytelling. With just $100 and AI tools, creators are producing professional-quality music videos that would have cost thousands in traditional production.</p>
+<p><strong>Kimi K3: Open Frontier Intelligence</strong>
+Moonshot AI has unveiled Kimi K3, their latest frontier model pushing the boundaries of what&#39;s possible in AI-generated content. The model showcases impressive capabilities in understanding and generating creative content, opening new possibilities for artists and designers.</p>
+<p><strong>LM Studio Bionic: The AI Agent for Open Models</strong>
+The local AI revolution continues with LM Studio&#39;s new Bionic feature. Creative professionals can now run sophisticated AI models on their own machines, keeping their artistic process private and accessible without cloud dependencies.</p>
+<p><img src="/images/tech-art-2026-07-17-2.jpg" alt="Creative coding visualization"></p>
+<h2>Generative Art &amp; Creative Coding</h2>
+<p><strong>How to Train a Gen AI Kick Drum Model on Your Old Linux Desktop</strong>
+Proof that you don&#39;t need massive resources to experiment with generative art. A developer demonstrates training a kick drum generation model using just 6GB of VRAM on an older Linux machine. This democratizes access to generative music tools for hobbyists and indie artists.</p>
+<p><strong>Decoy Font: The Art of Typography</strong>
+Typography meets technology in this fascinating exploration of font design. The intersection of traditional design principles and modern coding allows for fonts that adapt and respond programmatically.</p>
+<p><strong>&quot;Simulating everything, sort of&quot;: The Promise and Limits of World Models</strong>
+Ars Technica explores how world models are pushing the boundaries of what&#39;s possible in generative environments. From game development to film previsualization, these models are changing how artists create immersive experiences.</p>
+<h2>Tech in Film, Music &amp; Gaming</h2>
+<p><strong>Microsoft Comic Chat Goes Open Source</strong>
+A nostalgic piece of creative tech history is now open source. Microsoft Comic Chat, which once allowed users to communicate through animated comic strips, has been released to the community. This opens possibilities for new applications in interactive storytelling and playful communication.</p>
+<p><strong>Ring-Zero: Scaling Zero RL to a Trillion Parameters for Emergent Reasoning</strong>
+While primarily a research breakthrough, the implications for creative AI are enormous. Better reasoning capabilities in AI models translate to more nuanced creative outputs, from writing to visual art generation.</p>
+<p><strong>&quot;Old Icons&quot; - The Evolution of Digital Aesthetics</strong>
+An exploration of how icon design has evolved in digital interfaces. Understanding these visual languages helps inform modern generative art and UI design, showing how technology shapes our visual culture.</p>
+<h2>Interactive &amp; Immersive Experiences</h2>
+<p><strong>Lingbot-map: 3D Foundation Model for Reconstructing Scenes from Streaming Data</strong>
+This new 3D foundation model can reconstruct scenes from streaming data in real-time. Applications range from virtual production to interactive museum installations and live performance visualizations.</p>
+<p><strong>Immersive Linear Algebra Book with Interactive Figures</strong>
+Educational content gets a creative tech upgrade. Interactive mathematical visualizations demonstrate how technology can make abstract concepts tangible and beautiful, bridging art and science.</p>
+<p><strong>Mojibake: A Low-Level Unicode Library in C</strong>
+While technical, this project highlights how text encoding and display are foundational to digital art. Understanding these low-level systems enables more sophisticated text-based and ASCII art.</p>
+<h2>Cool Projects &amp; Maker Culture</h2>
+<p><strong>Clx: Compile Lua to Native Executables Through C++20</strong>
+Game developers and interactive artists get a new tool for creating standalone applications from Lua scripts. This makes distributing creative coding projects easier than ever.</p>
+<p><strong>The Little Book of Reinforcement Learning</strong>
+Open educational resources for AI and machine learning continue to democratize access to these powerful creative tools. Understanding RL opens doors to generative art and adaptive creative systems.</p>
+<h3>Key Takeaway</h3>
+<p>The creative technology landscape continues to evolve at breakneck speed. What&#39;s particularly exciting this week is the democratization trend: from training generative models on modest hardware to open-sourcing historical creative tools, the barriers to entry for digital art keep falling. The $100 AI music video challenge perfectly encapsulates this shift—professional-grade creative output is becoming accessible to anyone with a vision and basic technical skills.</p>
+<p>As AI models become more capable and accessible locally, we&#39;re entering an era where the creative possibilities are limited only by imagination, not technical resources or budget. For artists, musicians, and creators of all kinds, this is an unprecedented time to experiment and push boundaries.</p>
+<hr>
+<p><em>Images sourced from Pexels. The Creative Commons license applies where applicable.</em></p>
+]]></content:encoded>
+      <category>tech-art</category>
+    <category>AI-art</category>
+    <category>creative-tech</category>
+    <category>digital-art</category>
+    <category>generative-art</category>
+    <category>interactive</category>
+    </item>
     <item>
       <title>3D Printing Roundup - July 16, 2026</title>
       <link>https://shamyl.github.io/blog/3d-printing-2026-07-16</link>
