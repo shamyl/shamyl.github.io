@@ -5,7 +5,7 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Sat, 25 Jul 2026 20:58:55 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 25 Jul 2026 21:01:31 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
@@ -76,6 +76,87 @@
     <category>tech-news</category>
     <category>daily-digest</category>
     <category>machine-learning</category>
+    </item>
+    <item>
+      <title>Pakistan Tech Roundup - July 26, 2026</title>
+      <link>https://shamyl.github.io/blog/pakistan-tech-2026-07-26</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/pakistan-tech-2026-07-26</guid>
+      <pubDate>Sun, 26 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Latest technology happenings in Pakistan from July 26, 2026.</description>
+      <content:encoded><![CDATA[<p>Here&#39;s your Saturday Pakistan tech roundup for July 26, 2026:</p>
+<p><img src="/images/pakistan-tech-2026-07-26-1.jpg" alt="Pakistan Technology">
+<em>Photo by Unsplash</em></p>
+<h2>🏢 Startups &amp; Funding</h2>
+<ul>
+<li><p><strong>Gul Plaza Digital Transformation</strong>: Lahore&#39;s iconic Gul Plaza electronics market is getting a digital marketplace facelift. The new platform aims to connect traders with customers nationwide, modernizing one of Pakistan&#39;s oldest tech bazaars.</p>
+</li>
+<li><p><strong>P@SHA Members Showcase Growth</strong>: The Pakistan Software Houses Association continues to highlight inspiring success stories from local IT companies, demonstrating the sector&#39;s resilience and innovation capacity despite economic challenges.</p>
+</li>
+</ul>
+<h2>💻 IT Exports &amp; Economy</h2>
+<ul>
+<li><p><strong>IT Export Growth Trends</strong>: Pakistan&#39;s IT sector continues to show promise as a key foreign exchange earner. Industry experts highlight the need for consistent policies to maintain the sector&#39;s upward trajectory.</p>
+</li>
+<li><p><strong>Freelancer Community Expansion</strong>: Pakistan&#39;s freelancer community remains among the largest globally, with continued growth in software development, digital marketing, and creative services.</p>
+</li>
+</ul>
+<h2>🏛️ Government Initiatives</h2>
+<ul>
+<li><p><strong>Digital Infrastructure Push</strong>: The government is focusing on expanding digital infrastructure to support the growing tech ecosystem. Initiatives targeting rural connectivity and digital literacy are gaining momentum.</p>
+</li>
+<li><p><strong>Policy Reforms</strong>: Discussions continue around IT policy reforms to attract foreign investment and support local startups through tax incentives and regulatory simplification.</p>
+</li>
+</ul>
+<h2>📡 Telecom &amp; Connectivity</h2>
+<ul>
+<li><p><strong>5G Readiness</strong>: Pakistan&#39;s telecom sector is preparing for 5G rollout, with infrastructure upgrades happening across major cities. The auction timeline remains a key point of industry speculation.</p>
+</li>
+<li><p><strong>Internet Penetration</strong>: Mobile internet continues to drive connectivity growth, with affordable data packages expanding access to previously underserved populations.</p>
+</li>
+</ul>
+<p><img src="/images/pakistan-tech-2026-07-26-2.jpg" alt="Tech Workspace">
+<em>Photo by Unsplash</em></p>
+<h2>💳 E-commerce &amp; FinTech</h2>
+<ul>
+<li><p><strong>Digital Payment Adoption</strong>: Cashless transactions continue to rise as more Pakistanis embrace digital wallets and banking apps. The convenience factor is driving adoption even in traditional markets.</p>
+</li>
+<li><p><strong>E-commerce Growth</strong>: Online shopping platforms are expanding their logistics networks to reach tier-2 and tier-3 cities, opening new markets for sellers.</p>
+</li>
+</ul>
+<h2>🎮 Gaming &amp; Content Creator Economy</h2>
+<ul>
+<li><p><strong>Local Game Development</strong>: Pakistani indie game developers are gaining international recognition, with several titles featured on global platforms. The community continues to organize game jams and skill-building workshops.</p>
+</li>
+<li><p><strong>Creator Economy Expansion</strong>: Content creators from Pakistan are leveraging platforms like YouTube and TikTok to build sustainable careers, with brands increasingly investing in influencer marketing.</p>
+</li>
+</ul>
+<h2>🔧 Maker/Hardware Projects</h2>
+<ul>
+<li><p><strong>Innovation Labs Growth</strong>: Universities and private innovation labs across Pakistan continue to support hardware startups working on IoT, robotics, and automation solutions.</p>
+</li>
+<li><p><strong>3D Printing Adoption</strong>: Local manufacturing is increasingly adopting 3D printing for prototyping and small-batch production, reducing costs and time-to-market.</p>
+</li>
+</ul>
+<h2>📅 Events &amp; Community</h2>
+<ul>
+<li><p><strong>P@SHA Events</strong>: The technology community continues to organize networking events, hackathons, and mentorship programs to nurture the next generation of tech talent.</p>
+</li>
+<li><p><strong>University Tech Festivals</strong>: STEM competitions and tech festivals at major universities are helping discover and develop young talent in AI, robotics, and software development.</p>
+</li>
+</ul>
+<hr>
+<h3>Key Takeaway</h3>
+<p>Pakistan&#39;s tech ecosystem continues to demonstrate resilience and growth potential despite economic headwinds. The combination of a young, digitally-native population, growing IT exports, and increasing digital adoption positions the country well for the future. However, sustained policy support, infrastructure investment, and access to capital remain critical for unlocking the sector&#39;s full potential.</p>
+<p>The transformation of traditional markets like Gul Plaza into digital platforms symbolizes the broader shift happening across Pakistan&#39;s economy - a move toward digitalization that promises to create new opportunities while preserving the entrepreneurial spirit that has long defined Pakistani commerce.</p>
+<hr>
+<p><em>This roundup is curated from various sources. For corrections or additions, please reach out via the contact page.</em></p>
+]]></content:encoded>
+      <category>pakistan-tech</category>
+    <category>pakistan</category>
+    <category>startups</category>
+    <category>IT-exports</category>
+    <category>telecom</category>
+    <category>ecosystem</category>
     </item>
     <item>
       <title>Space Tech Roundup - July 19, 2026</title>
