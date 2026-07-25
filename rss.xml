@@ -5,7 +5,7 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Sat, 25 Jul 2026 21:01:56 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 25 Jul 2026 21:02:23 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
@@ -226,6 +226,124 @@
     <category>hobby-robotics</category>
     <category>industrial-robotics</category>
     <category>drones</category>
+    </item>
+    <item>
+      <title>Tech Roundup - July 26, 2026</title>
+      <link>https://shamyl.github.io/blog/tech-roundup-2026-07-26</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/tech-roundup-2026-07-26</guid>
+      <pubDate>Sun, 26 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Latest in Bio-Tech, Space Tech, IT, FinTech and emerging technology from July 26, 2026.</description>
+      <content:encoded><![CDATA[<p>Here&#39;s your Sunday tech roundup for July 26, 2026:</p>
+<p><img src="/images/tech-roundup-2026-07-26-1.jpg" alt="Space Technology"></p>
+<h2>Space Tech</h2>
+<p><strong>SpaceX Starship Achieves Historic Intact Splashdown</strong>
+SpaceX conducted its 13th Starship test flight on July 24, achieving a major milestone with the first intact splashdown of the vehicle in the Indian Ocean. The Starship V3 successfully deployed 20 Starlink V3 satellites and performed an in-space engine restart before gently tipping over and floating in the ocean west of Australia. This marks a critical step toward tower capture on the next flight and eventual orbital refueling demonstrations for NASA&#39;s Artemis program.</p>
+<p><strong>NASA Deep Space Network Evacuated Due to Wildfire</strong>
+A fast-moving wildfire in Spain forced the evacuation of NASA&#39;s Madrid Deep Space Communications Complex on July 24. The tracking station, part of the global Deep Space Network supporting over 40 missions including Artemis and Voyager, suspended operations as flames approached the facility. The DSN provides crucial communications coverage as Earth&#39;s rotation brings spacecraft in and out of view.</p>
+<p><strong>NASA Programs Feel Workforce Reduction Impact</strong>
+More than two dozen major NASA projects report being affected by the loss of approximately 20% of the agency&#39;s civil servant workforce over the past year. Programs including Orion, SLS, and DaVinci are experiencing delays and challenges as they adapt to reduced staffing levels.</p>
+<p><strong>China&#39;s Long March 3B Survives Lightning Strike</strong>
+In a dramatic display of engineering resilience, a Chinese Long March 3B rocket was struck by lightning seconds after liftoff on July 23 but still successfully delivered its payload to orbit. The mission launched the Tianlian-2 06 data relay satellite from the Xichang Satellite Launch Center.</p>
+<p><strong>EU Restricts Satellite Imagery Over Iran War Region</strong>
+At the request of the United States, the European Union has implemented a 24-hour delay on releasing Copernicus Sentinel-1 and Sentinel-2 satellite imagery over the Gulf of Oman and Strait of Hormuz region. The restriction coincides with renewed US military operations in the area.</p>
+<p><img src="/images/tech-roundup-2026-07-26-2.jpg" alt="Technology Abstract"></p>
+<h2>AI &amp; Emerging Tech</h2>
+<p><strong>Anthropic Launches Opus 5</strong>
+Anthropic has rolled out Opus 5, the latest update to its flagship coding and software development model. While not a dramatic capability leap like Opus 4.5, the new version focuses on token efficiency and reduced restrictions compared to Fable, making it more accessible for a wider range of use cases.</p>
+<p><strong>Open-Weight AI Having Its &quot;Kubernetes Moment&quot;</strong>
+The open-weight AI ecosystem is experiencing explosive growth similar to Kubernetes in the container orchestration space. More organizations are deploying and fine-tuning open models locally, driving innovation in inference optimization and model serving infrastructure.</p>
+<p><strong>Prentis AI Lab Raises $100M</strong>
+Prentis, a new AI lab co-founded by LinkedIn&#39;s Reid Hoffman and Zynga&#39;s Mark Pincus, is reportedly raising $100 million. The neolab is betting that automating routine computer tasks will soon outpace coding as AI&#39;s biggest use case.</p>
+<p><strong>Anduril Defense Tech Valued at $100 Billion</strong>
+Defense technology company Anduril is reportedly in talks to raise funding at a $100 billion valuation—more than triple its previous mark. Founded by Oculus creator Palmer Luckey, the company has become a major player in military AI and autonomous systems.</p>
+<p><strong>Meta Pauses Smart Glasses Rate-Limiting After Backlash</strong>
+Following significant public backlash, Meta has paused plans to charge a $20 monthly subscription for &quot;Conversation Focus&quot;—an accessibility feature for its Ray-Ban smart glasses that runs locally and doesn&#39;t require cloud services. The company still plans to introduce subscription-based premium features but will keep the accessibility feature free for now.</p>
+<h2>IT &amp; DevOps</h2>
+<p><strong>Android May Restrict On-Device ADB</strong>
+Google is reportedly planning changes that would restrict on-device Android Debug Bridge (ADB) access, potentially affecting developers and power users who rely on local debugging capabilities. The move could impact automation workflows and development tools that depend on ADB connectivity.</p>
+<p><strong>PyTorch Monarch Comes to AMD GPUs</strong>
+AMD and PyTorch announced support for PyTorch Monarch on AMD GPUs, enabling single-controller distributed training on ROCm. This brings advanced model parallelism capabilities to AMD&#39;s GPU ecosystem and provides more hardware options for AI training workloads.</p>
+<p><strong>AI Data Center Grid Vulnerabilities Exposed</strong>
+A recent incident where a single fallen power line nearly disrupted operations in Northern Virginia has highlighted growing vulnerabilities in AI data center infrastructure. The region&#39;s massive concentration of AI computing facilities has created new challenges for electrical grid stability and disaster recovery planning.</p>
+<p><strong>Librarians Host &quot;Avoiding AI&quot; Workshops</strong>
+Libraries across the United States are seeing unprecedented demand for workshops teaching people how to avoid AI and Big Tech services. The viral workshops reflect growing public interest in digital privacy and alternatives to AI-powered platforms.</p>
+<h2>Bio-Tech</h2>
+<p><strong>FDA Committee Approves Peptide Manufacture</strong>
+An FDA advisory committee organized by Health and Human Services Secretary Robert F. Kennedy Jr. has voted to recommend lifting restrictions on peptide manufacturing for human use. The decision comes despite limited human safety and efficacy data for the compounds, which have gained popularity in longevity and health optimization circles.</p>
+<p><strong>Varda Space Advances Orbital Pharmaceuticals</strong>
+Varda Space Industries continues development of its orbital pharmaceutical manufacturing capabilities. The company is working to leverage microgravity conditions in low Earth orbit to produce novel drug formulations that are difficult or impossible to create on Earth.</p>
+<h2>FinTech &amp; Business</h2>
+<p><strong>TechCrunch Disrupt 2026 Announces Smart Money Stage</strong>
+TechCrunch Disrupt 2026 will feature a new &quot;Smart Money Stage&quot; focused on fintech, payments, AI, and everything in between. The expansion reflects the growing convergence of financial technology with artificial intelligence and the broader tech ecosystem.</p>
+<p><strong>Memory Shortage Drives Hardware Price Increases</strong>
+Roku has raised streaming device prices by up to 60%, joining Apple, Nintendo, Microsoft, and others in hiking costs due to RAM supply constraints. The shortage, driven by explosive demand from AI data centers, is rippling through the consumer electronics industry.</p>
+<hr>
+<h3>Key Takeaway</h3>
+<p>This week highlights the dual nature of technological progress: SpaceX achieved a historic milestone with Starship&#39;s first intact ocean landing, bringing us closer to reusable interplanetary transport, while the industry grapples with infrastructure challenges—from AI data centers straining electrical grids to memory shortages driving up consumer electronics prices. The tension between rapid AI advancement and growing concerns about its impact is also evident, with Meta retreating from controversial monetization plans and librarians teaching people how to opt out. As we push technological boundaries in space and AI, ensuring robust infrastructure and ethical deployment remains crucial.</p>
+<hr>
+<p><em>Images courtesy of Unsplash. This post was auto-generated on July 26, 2026.</em></p>
+]]></content:encoded>
+      <category>tech</category>
+    <category>biotech</category>
+    <category>fintech</category>
+    <category>space-tech</category>
+    <category>emerging-tech</category>
+    <category>IT</category>
+    </item>
+    <item>
+      <title>3D Printing Roundup - July 25, 2026</title>
+      <link>https://shamyl.github.io/blog/3d-printing-2026-07-25</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/3d-printing-2026-07-25</guid>
+      <pubDate>Sat, 25 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Latest in 3D printing technology, printers, materials, and maker projects from July 2026.</description>
+      <content:encoded><![CDATA[<p>Here&#39;s your Thursday 3D printing roundup for July 25, 2026:</p>
+<p><img src="/images/3d-printing-2026-07-25-1.jpg" alt="3D printing in action"></p>
+<h2>Printer News &amp; Releases</h2>
+<ul>
+<li><strong>Bambu Lab overtakes Creality as the world&#39;s top-selling budget 3D printer brand</strong> — The resurgence in the 3D printer market continues to be fueled by affordable yet powerful options from Bambu Lab.</li>
+<li><strong>HeyGears G1 Series launches on Kickstarter</strong> — Bringing full-color 3D and UV printing to the desktop, expanding creative possibilities for makers and professionals alike.</li>
+<li><strong>New generation of 3D printers is changing the hobby</strong> — Advanced features like automated bed leveling and AI-powered error detection are making 3D printing more accessible than ever.</li>
+<li><strong>Best budget 3D printer deals 2026</strong> — Huge deals available on Bambu Lab, Prusa, Creality, Elegoo, and more from major retailers.</li>
+<li><strong>Best Multicolor 3D Printers of 2026</strong> — Reviews highlight the latest machines capable of &quot;printing the rainbow&quot; with multiple extruders and filament swapping systems.</li>
+<li><strong>Bambu Lab and Prusa show off new 3D printers at Formnext</strong> — The H2C dual-nozzle uses Vortek nozzle technology to eliminate 3D printer &quot;poop&quot; (waste from tool changes).</li>
+</ul>
+<h2>Materials &amp; Filaments</h2>
+<ul>
+<li><strong>Color 3D printing from voxel-level jetting to sub-$500 filament extrusion</strong> — New technologies are making full-color printing accessible at various price points.</li>
+<li><strong>Protopasta shows latest materials at CES 2026</strong> — New specialty filaments including conductive, glow-in-the-dark, and composite materials.</li>
+</ul>
+<h2>Software Updates</h2>
+<ul>
+<li><strong>Slicer improvements across the board</strong> — Major slicer updates including Cura, PrusaSlicer, and Bambu Studio have added better multi-material support and improved print quality algorithms.</li>
+<li><strong>AI-powered print monitoring</strong> — More slicers are integrating AI to detect and prevent print failures before they waste time and filament.</li>
+</ul>
+<h2>Cool Projects &amp; Prints</h2>
+<ul>
+<li><strong>RIC Robotics collaborates with K4k Construction on 3D Printed ADU in Sacramento</strong> — Additive manufacturing enters mainstream construction with a 3D printed accessory dwelling unit.</li>
+<li><strong>3D Printing News Briefs: Distribution, Board Game, &amp; More</strong> — Community continues to innovate with creative applications of 3D printing technology.</li>
+<li><strong>8 Cool New Gadgets For 3D Printing Coming In 2026</strong> — From advanced nozzles to smart filament dryers, the accessory market is booming.</li>
+</ul>
+<h2>Industry Applications</h2>
+<ul>
+<li><strong>GKN Aerospace &amp; Pratt &amp; Whitney to use Additive for the F135 Engine</strong> — Major aerospace manufacturers are increasingly relying on 3D printing for critical engine components.</li>
+<li><strong>R3 Printing bets on American-made Industrial FFF 3D Printers</strong> — Domestic manufacturing of industrial-grade FDM printers gains momentum.</li>
+<li><strong>Lithoz revenue up 40% as customers scale ceramic 3D printing</strong> — Ceramic additive manufacturing sees significant growth across multiple industries.</li>
+<li><strong>Beyond Thermoplastics: Why JuggerBot is betting on Hybrid AM</strong> — Hybrid manufacturing approaches combining multiple technologies are gaining traction.</li>
+<li><strong>Beehive Industries invests $70M in Ohio to support its advanced manufacturing buildup for propulsion</strong> — Major investment in additive manufacturing for aerospace propulsion systems.</li>
+<li><strong>AM Research Data shows 3D printing markets increased from $4.29B in Q4 2025 to $4.35B in Q1 2026</strong> — The additive manufacturing market continues its steady growth trajectory.</li>
+</ul>
+<p><img src="/images/3d-printing-2026-07-25-2.jpg" alt="Filament and 3D printed objects"></p>
+<h3>Key Takeaway</h3>
+<p>The 3D printing landscape in mid-2026 is characterized by democratization and industrial adoption happening simultaneously. While Bambu Lab is dominating the consumer market with affordable, high-performance machines, aerospace giants like Pratt &amp; Whitney are trusting additive manufacturing with mission-critical engine components. The introduction of full-color desktop printers and AI-powered error prevention is lowering the barrier to entry, while ceramic and hybrid manufacturing technologies are opening new industrial applications. With market growth exceeding $4.35 billion and major investments like Beehive&#39;s $70M facility, 3D printing has firmly established itself as both a maker hobby and a serious manufacturing technology.</p>
+<hr>
+<p><em>Images courtesy of Pexels</em></p>
+]]></content:encoded>
+      <category>3d-printing</category>
+    <category>additive-manufacturing</category>
+    <category>maker</category>
+    <category>fdm</category>
+    <category>sla</category>
+    <category>filament</category>
     </item>
     <item>
       <title>Space Tech Roundup - July 19, 2026</title>
