@@ -5,7 +5,7 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Sat, 25 Jul 2026 21:01:31 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 25 Jul 2026 21:01:56 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
@@ -157,6 +157,75 @@
     <category>IT-exports</category>
     <category>telecom</category>
     <category>ecosystem</category>
+    </item>
+    <item>
+      <title>Robotics Roundup - July 26, 2026</title>
+      <link>https://shamyl.github.io/blog/robotics-2026-07-26</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/robotics-2026-07-26</guid>
+      <pubDate>Sun, 26 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Latest in hobby and professional robotics from July 26, 2026.</description>
+      <content:encoded><![CDATA[<p>Here&#39;s your Tuesday robotics roundup for July 26, 2026:</p>
+<p><img src="/images/robotics-2026-07-26-1.jpg" alt="Industrial Robotics"></p>
+<h2>Industrial Robotics</h2>
+<ul>
+<li><p><strong>Gritt Exits Stealth with $32 Million for Solar Panel Installation Robots</strong>: A Carnegie Mellon-founded startup is tackling the solar industry&#39;s labor shortage with AI-powered construction robots. Gritt uses off-the-shelf hardware (Kawasaki robotic arms, rented skidders) controlled by proprietary AI models to install solar panels with sub-millimeter accuracy. Their systems enable an 8-person crew to install 3,000-4,000 panels daily versus the typical 800. Already contracted for 2.8 gigawatts of installations, Gritt represents a shift toward generalizable AI in chaotic outdoor environments — a major departure from traditional industrial robotics that require controlled factory settings.</p>
+</li>
+<li><p><strong>Vicarious Surgical Shutting Down</strong>: In sobering news, Vicarious Surgical — which raised approximately $300 million including a SPAC merger in 2021 — has officially voted to liquidate. The soft-tissue surgical robotics developer couldn&#39;t reach design freeze despite burning $50 million annually. With only $3.7 million in cash and $9 million in liabilities by March, the company couldn&#39;t secure additional funding or a buyer. It&#39;s a stark reminder that in robotics, technical innovation alone isn&#39;t enough — sustainable business models and capital efficiency matter.</p>
+</li>
+<li><p><strong>Bear Robotics Acquires Kinisi</strong>: Service robotics leader Bear Robotics announced the acquisition of Kinisi, expanding their capabilities in restaurant and hospitality automation. The move signals continued consolidation in the service robotics market as players compete for dominance in the post-pandemic labor shortage era.</p>
+</li>
+</ul>
+<h2>Humanoids &amp; Research</h2>
+<ul>
+<li><p><strong>Agility Robotics Opens Fremont Training Facility</strong>: The Digit humanoid manufacturer is doubling down on proximity to Tesla&#39;s Optimus operations, opening a 60,000-square-foot facility in Fremont, California. Agility&#39;s CEO Peggy Johnson isn&#39;t worried about the competition — Digit is already generating revenue moving totes for Amazon, GXO, Schaeffler, and Toyota, with over $300 million in contract orders secured. Unlike Tesla&#39;s vision of home humanoids, Agility is staying focused on warehouse and manufacturing applications. The upcoming Digit v5 will feature human-sensing capabilities, allowing it to operate safely alongside workers rather than in robot-only zones.</p>
+</li>
+<li><p><strong>Italian Humanoid &#39;ErgoBot&#39; Unveiled</strong>: IEEE Spectrum&#39;s Video Friday showcased a striking Italian humanoid robot with red armor and glowing lights, demonstrating that European robotics research continues to push aesthetic and functional boundaries. The design philosophy emphasizes both form and function — a reminder that humanoid robots will need to be accepted by humans in shared spaces.</p>
+</li>
+<li><p><strong>Physical AI and Embodied Intelligence</strong>: The intersection of large language models and robotics is reaching critical mass. Startups like General Intuition are betting $2.3 billion that video game environments can train AI agents for real-world robotics — a &quot;ChatGPT moment&quot; for embodied AI that could finally bridge the simulation-to-reality gap that has plagued robotics for decades.</p>
+</li>
+</ul>
+<h2>Hobby/DIY Projects</h2>
+<ul>
+<li><p><strong>Kindalive: Simulating Neurochemistry for Robot Emotions</strong>: Drew Smith&#39;s innovative project models eight key neurochemicals (including dopamine and cortisol) to generate emotional states for robot faces. Rather than simple sentiment analysis, Kindalive simulates decay and interplay between neurochemicals, driving facial expressions via the Facial Action Coding System (FACS). It&#39;s a fascinating intersection of psychology and robotics that could make human-robot interaction significantly more natural.</p>
+</li>
+<li><p><strong>Reachy Mini Gets Local Conversational AI</strong>: Hugging Face&#39;s desktop robot now runs fully local conversational AI with low-latency responses and interruption capabilities. Using Qwen3-4B-Instruct for the LLM and smaller models for voice activity detection and speech-to-text, the entire pipeline can run on modest hardware. The move toward edge AI for robotics is accelerating — robots that don&#39;t phone home for every interaction.</p>
+</li>
+<li><p><strong>3D Printed Robot Arm for Learning</strong>: James Gullberg&#39;s impressive 6-DOF robot arm is built primarily from 3D printed components, featuring split-ring planetary gearboxes and magnetic encoders. Controlled by an STM32 with ROS 2 support planned, it&#39;s designed as an educational platform for learning robot kinematics, control theory, and motion planning. Projects like this democratize robotics education — you no longer need $50k lab equipment to learn industrial robotics concepts.</p>
+</li>
+<li><p><strong>Hauntimator for Animatronics</strong>: The open-source Hauntimator platform by 1031-Systems uses Raspberry Pi Pico controllers to synchronize servo movements, lights, and audio for animatronic displays. With an intuitive GUI for creating control channels, it makes sophisticated animatronics accessible to makers and hobbyists.</p>
+</li>
+</ul>
+<h2>Drones &amp; Mobility</h2>
+<ul>
+<li><p><strong>FCC Targets Drone Companies Over National Security</strong>: The Federal Communications Commission proposed $25,000 forfeitures against eight drone-related companies for failing to respond to investigations about equipment on the Covered List (Chinese-made gear subject to national security restrictions). As drone adoption accelerates across industries, regulatory scrutiny is tightening — compliance is becoming a competitive differentiator.</p>
+</li>
+<li><p><strong>ideaForge Drones Support Religious Pilgrimage</strong>: Eight megaphone-equipped ideaForge Q6 V2 drones supported crowd monitoring and public address along a 250-kilometer pilgrimage route to Pandharpur, India. It&#39;s the second consecutive year the company has deployed for this event, demonstrating how drones can enhance public safety at scale.</p>
+</li>
+<li><p><strong>ePropelled SKYLARK Series</strong>: The new integrated motor/controller system for UAVs combines components into a single unit, reducing wiring and assembly time. Targeting light and medium duty unmanned aircraft, it represents the continued march toward modular, scalable drone manufacturing.</p>
+</li>
+<li><p><strong>Archer Aviation Unveils &quot;Halo&quot; Commercial Variant</strong>: Archer launched the commercial version of its jointly developed dual-use platform, with Japan&#39;s Marubeni Aerospace as the first strategic partner. The electric vertical takeoff and landing (eVTOL) market continues to mature as players secure international partnerships and regulatory approvals.</p>
+</li>
+</ul>
+<h2>Open Source &amp; Community</h2>
+<ul>
+<li><p><strong>ROS 2 Adoption Accelerates</strong>: The Robot Operating System 2 continues to become the de facto standard for robotics development. With improved real-time capabilities, DDS middleware, and growing package ecosystem, it&#39;s enabling more sophisticated robotics projects from hobbyists and industry alike.</p>
+</li>
+<li><p><strong>RoboBusiness Startup Alley Applications Open</strong>: The annual robotics business conference is accepting applications for Startup Alley, providing early-stage companies exposure to investors, partners, and customers. For robotics startups, events like this remain critical for ecosystem building and funding access.</p>
+</li>
+</ul>
+<p><img src="/images/robotics-2026-07-26-2.jpg" alt="Robotic Arm"></p>
+<h3>Key Takeaway</h3>
+<p>The robotics industry is at an inflection point. On one hand, we&#39;re seeing real commercial traction — Agility Robotics has $300M in contracts, Gritt is scaling solar installation, and service robots are consolidating. On the other, the Vicarious Surgical failure reminds us that technical prowess without capital discipline can be fatal. The emerging pattern? AI is finally enabling generalizable robotics — systems that adapt to new tasks without complete re-engineering. For makers and professionals alike, the barrier to entry is dropping while the ceiling for impact is rising. The question is no longer &quot;can robots do this?&quot; but &quot;what should we build first?&quot;</p>
+<hr>
+<p><em>Image attribution: Photos by Unsplash</em></p>
+<p><em>Want to stay updated on robotics developments? Follow along for weekly roundups of the most important robotics news.</em></p>
+]]></content:encoded>
+      <category>robotics</category>
+    <category>robot</category>
+    <category>automation</category>
+    <category>hobby-robotics</category>
+    <category>industrial-robotics</category>
+    <category>drones</category>
     </item>
     <item>
       <title>Space Tech Roundup - July 19, 2026</title>
