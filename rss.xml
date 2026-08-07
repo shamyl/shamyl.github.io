@@ -5,13 +5,96 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Sat, 25 Jul 2026 21:02:29 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 07 Aug 2026 05:16:17 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamyl.github.io/blog</link>
     </image>
+    <item>
+      <title>Tech, Art &amp; Entertainment - August 7, 2026</title>
+      <link>https://shamyl.github.io/blog/tech-art-2026-08-07</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/tech-art-2026-08-07</guid>
+      <pubDate>Fri, 07 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Creative intersections of technology, art, and entertainment from August 7, 2026. AI film festivals, creative coding revolutions, immersive art experiences, and the tools reshaping digital expression.</description>
+      <content:encoded><![CDATA[<p>Here&#39;s your Friday creative tech roundup for August 7, 2026:</p>
+<p><img src="/images/tech-art-2026-08-07-1.jpg" alt="Creative tech visualization">
+<em>Photo: Abstract digital technology art (Pexels)</em></p>
+<h2>AI Art &amp; Creative Tools</h2>
+<p>The AI creative tooling space continues to accelerate with notable developments this week:</p>
+<ul>
+<li><p><strong>Autodesk Flow Studio 3D Editor + Canvas Launches</strong> — Autodesk rolled out a major update to its Flow Studio creative platform on August 4, introducing a new 3D editor and canvas interface designed to streamline creative workflows for artists and designers. The tool aims to bridge the gap between conceptual design and production-ready 3D assets, putting more creative control directly in artists&#39; hands. <a href="https://www.autodesk.com">Autodesk News</a></p>
+</li>
+<li><p><strong>Crun AI Releases Open-Source AI Media Generation Skill Set</strong> — On August 5, Crun AI published an open-source collection of AI media generation skills designed for AI agents, simplifying AI-powered content creation. This move continues the trend of democratizing creative AI tools by making them freely available to developers and makers. <a href="https://www.24-7pressrelease.com">24-7 Press Release</a></p>
+</li>
+<li><p><strong>Best 50+ Open Source AI Agents Catalogued</strong> — AIMultiple compiled a comprehensive list of over 50 open-source AI agents, many of which are focused on creative tasks including image generation, music composition, video editing, and code-assisted design. The catalog reflects how the open-source community is rapidly building alternatives to commercial creative AI tools. <a href="https://aimultiple.com">AIMultiple</a></p>
+</li>
+<li><p><strong>GPT Image 2 Platforms Compared</strong> — A detailed comparison of eight platforms leveraging GPT Image 2 technology was published on August 6, helping artists and creators navigate the expanding landscape of conversational AI image generation tools. The comparison evaluated quality, speed, cost, and creative flexibility across platforms. <a href="https://www.breakingacnews.com">Breaking AC News</a></p>
+</li>
+</ul>
+<p><img src="/images/tech-art-2026-08-07-2.jpg" alt="Interactive creative technology">
+<em>Photo: Interactive digital art installation (Pexels)</em></p>
+<h2>Generative Art &amp; Creative Coding</h2>
+<p>The creative coding community keeps pushing boundaries with innovative projects and tools:</p>
+<ul>
+<li><p><strong>Mario Meets Pareto</strong> — Developer Tai-Danae Bradley published a fascinating project exploring the intersection of game design, optimization theory, and generative art. The interactive visualization uses Mario-style platforming mechanics to demonstrate Pareto frontiers — the mathematical concept of optimal trade-offs. It&#39;s a beautiful example of how game mechanics can make abstract mathematical concepts tangible and visually compelling. The project went viral on Hacker News, reaching nearly 950 upvotes. <a href="https://www.mayerowitz.io/blog/mario-meets-pareto">mayerowitz.io</a></p>
+</li>
+<li><p><strong>ChipTycoon: Learn Chip Manufacturing Through Rollercoaster Tycoon-Style Animation</strong> — An interactive web animation that teaches how semiconductor chips are made, using the beloved Rollercoaster Tycoon visual style. The project combines education, nostalgia, and creative coding to make complex manufacturing processes accessible and entertaining. It&#39;s a perfect example of how creative coding can transform dry technical content into engaging visual experiences. <a href="https://laurentiugabriel.github.io/ChipTycoon/">laurentiugabriel.github.io</a></p>
+</li>
+<li><p><strong>NVIDIA&#39;s ComfyUI Scaling Guide for Creator Workflows</strong> — NVIDIA published a detailed technical guide on building, running, and scaling high-quality creator workflows in ComfyUI, the open-source node-based AI image generation tool. The guide covers everything from local setups to enterprise-scale deployments, making it easier for artists and studios to integrate AI-powered creative pipelines professionally. <a href="https://developer.nvidia.com">NVIDIA Developer Blog</a></p>
+</li>
+<li><p><strong>SIGGRAPH 2026: AI as Creative Partner</strong> — SIGGRAPH 2026, held in July, showcased AI working as a creative partner across research, art, and industry. The conference&#39;s Experience Hall featured five interactive programs demonstrating how AI is being used in real-time graphics, digital art, and immersive experiences — blurring the line between tool and collaborator. <a href="https://www.nonstoplocal.com">Nonstop Local News</a></p>
+</li>
+</ul>
+<h2>Tech in Film, Music &amp; Gaming</h2>
+<p>Entertainment technology continues evolving at a remarkable pace:</p>
+<ul>
+<li><p><strong>Hong Kong AI International Film Festival Releases 2026 White Paper</strong> — The festival, held in late July, opened with a comprehensive white paper establishing a new framework for AI-native cinema. The document addresses how AI is being used across the filmmaking pipeline — from scriptwriting and storyboarding to visual effects and post-production — while proposing standards for transparency and attribution in AI-assisted films. <a href="https://macaubusiness.com">Macau Business</a></p>
+</li>
+<li><p><strong>Quake 30th Anniversary Update</strong> — Bethesda released a major anniversary update for the original Quake, the seminal 3D first-person shooter that revolutionized real-time 3D rendering in games. The update includes new episodes, enhanced graphics, and modern quality-of-life features. It&#39;s a testament to how classic creative tech continues to inspire and entertain decades later. <a href="https://slayersclub.bethesda.net">Slayers Club</a></p>
+</li>
+<li><p><strong>Suno Hires Atlantic Records and YouTube Alums</strong> — AI music startup Suno, which raised $400 million at a $5.4 billion valuation in June, continues its push toward mainstream music industry legitimacy by hiring veterans from Atlantic Records and YouTube to lead marketing and music business development. The move signals AI music tools are maturing from experimental novelties to industry-grade platforms. <a href="https://variety.com">Variety</a></p>
+</li>
+<li><p><strong>AI Music Flooding Spotify — But Listeners Like It Less</strong> — NPR reported in May that AI-generated music is flooding streaming platforms, yet listener engagement metrics show declining satisfaction with AI-made content. A Luminate consumer survey found increasing discomfort with generative AI in music, particularly among younger demographics. This tension between supply and reception is shaping how platforms and labels approach AI-generated content. <a href="https://www.npr.org">NPR</a></p>
+</li>
+</ul>
+<h2>Interactive &amp; Immersive Experiences</h2>
+<p>The boundaries between physical and digital art continue to blur:</p>
+<ul>
+<li><p><strong>Browser-Based Generative Music Visualiser Tool</strong> — A new browser-based generative tool allows musicians to create their own visualisers with trippy geometry, no coding required. The tool, highlighted by It&#39;s Nice That in July, democratizes real-time visual performance art for independent musicians who can&#39;t afford professional VJ services. <a href="https://www.itsnicethat.com">It&#39;s Nice That</a></p>
+</li>
+<li><p><strong>Cao Fei&#39;s Swiss Exhibition Reimagines the Art Gallery</strong> — Chinese artist Cao Fei&#39;s exhibition in Switzerland, running through July, reimagines what an art gallery can be in the digital age. The show blends physical installations with digital and virtual elements, challenging traditional notions of exhibition space and audience participation. <a href="https://www.stirworld.com">STIRworld</a></p>
+</li>
+<li><p><strong>SIGGRAPH 2026 Experience Hall Interactive Programs</strong> — The SIGGRAPH Experience Hall featured five interactive showcases: real-time AI art generation, VR-based scientific visualization, haptic feedback art installations, crowd-sourced generative art, and a retrospective of computer graphics pioneers. The programs demonstrated how research and art continue to cross-pollinate in the creative tech space. <a href="https://www.awn.com">Animation World Network</a></p>
+</li>
+<li><p><strong>FPV Drone AI Flight Coach</strong> — A developer published a project using AI to teach FPV (first-person view) drone flying, combining machine learning with the increasingly popular creative hobby of drone videography. The AI coach analyzes flight patterns and provides real-time feedback, making the creative medium of aerial cinematography more accessible to newcomers. <a href="https://blog.divyendusingh.com">blog.divyendusingh.com</a></p>
+</li>
+</ul>
+<h2>Cool Projects &amp; Maker Culture</h2>
+<p>Community-driven creative tech worth exploring:</p>
+<ul>
+<li><p><strong>STV: Full-Motion Video Codec for the Atari ST</strong> — A developer created a full-motion video codec that runs on the Atari ST, a computer released in 1985. This feat of creative engineering brings modern video playback to decades-old hardware, demonstrating how constraints can inspire remarkable creative coding solutions. The project was featured on Hacker News with significant community engagement. <a href="https://medium.com/@jonas.eschenburg">Medium</a></p>
+</li>
+<li><p><strong>AI Agents and Permission Security in Gaming</strong> — ScaleX published research showing humans missed 1 in 3 threats when approving AI agent commands across 40,000 game runs. While primarily a security study, the findings have implications for creative AI tools that operate with autonomous permissions — a reminder that creative AI systems need thoughtful guardrails. <a href="https://scalex.dev/blog/ai-agent-permissions-stats">ScaleX Blog</a></p>
+</li>
+<li><p><strong>LearnOBots-Style STEAM Education Through Creative Tech</strong> — The continuing maker education movement, exemplified by programs teaching kids to build, code, and create with technology, reflects the same democratization ethos driving the tools covered above. When creative coding and AI tools become accessible to younger audiences, the next generation of digital artists and makers gets their start.</p>
+</li>
+</ul>
+<h3>Key Takeaway</h3>
+<p>This week&#39;s landscape reveals a fascinating tension in creative technology. On one hand, AI creative tools are more powerful and accessible than ever — open-source agent frameworks, browser-based visualisers, and democratized 3D editing are putting professional-grade capabilities into everyone&#39;s hands. On the other hand, audiences are becoming more discerning: the NPR/Luminate data showing declining satisfaction with AI-generated music suggests that access to tools doesn&#39;t automatically translate to audience acceptance.</p>
+<p>The most exciting developments aren&#39;t the AI tools themselves, but how creative coders are using them in unexpected ways — teaching chip manufacturing through game animations, bringing full-motion video to 40-year-old computers, and making Pareto optimization viscerally understandable through platformer mechanics. The tools are means, not ends.</p>
+<p>As the Hong Kong AI Film Festival&#39;s white paper suggests, the industry is moving toward frameworks that distinguish between AI-as-tool and AI-as-creator. That distinction matters — not because AI-assisted work is lesser, but because transparency builds the trust that audiences clearly want.</p>
+<hr>
+<p><em>Images: <a href="https://www.pexels.com">Pexels</a> — free for commercial use, no attribution required.</em></p>
+]]></content:encoded>
+      <category>tech-art</category>
+    <category>AI-art</category>
+    <category>creative-tech</category>
+    <category>digital-art</category>
+    <category>generative-art</category>
+    <category>interactive</category>
+    </item>
     <item>
       <title>AI Updates - July 26, 2026</title>
       <link>https://shamyl.github.io/blog/ai-updates-2026-07-26</link>
