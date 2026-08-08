@@ -5,13 +5,95 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Fri, 07 Aug 2026 05:22:19 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 08 Aug 2026 04:03:20 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamyl.github.io/blog</link>
     </image>
+    <item>
+      <title>Pakistan Tech Roundup - August 8, 2026</title>
+      <link>https://shamyl.github.io/blog/pakistan-tech-2026-08-08</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/pakistan-tech-2026-08-08</guid>
+      <pubDate>Sat, 08 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Latest technology happenings in Pakistan from August 8, 2026.</description>
+      <content:encoded><![CDATA[<p>Here&#39;s your Saturday Pakistan tech roundup for August 8, 2026:</p>
+<p><img src="/images/pakistan-tech-2026-08-08-1.jpg" alt="Pakistan Technology">
+<em>Photo by Unsplash</em></p>
+<h2>💻 IT Exports &amp; Economy</h2>
+<p>Pakistan&#39;s IT sector has achieved a historic milestone, even as new challenges emerge:</p>
+<ul>
+<li><p><strong>IT exports hit record $4.6 billion in FY2025-26</strong>, marking the highest annual export earnings in the sector&#39;s history. Export receipts rose 20 percent year-on-year from $3.814 billion in FY25, according to State Bank of Pakistan data. However, exports still fell around $400 million short of the government&#39;s $5 billion target. (<a href="https://propakistani.pk/2026/07/17/pakistans-it-exports-reach-all-time-high-of-4-6-billion/">ProPakistani</a>, July 17; <a href="https://tribune.com.pk">Express Tribune</a>, July 18)</p>
+</li>
+<li><p><strong>PM Shehbaz praised 21% growth in IT exports</strong>, highlighting the sector&#39;s growing contribution to the national economy during a briefing on export performance. (<a href="https://www.brecorder.com">Business Recorder</a>, July 24)</p>
+</li>
+<li><p><strong>IT and telecom export remittances reached Rs. 1.2 trillion</strong> during fiscal year 2025-26, up 20.6 percent from the previous year. (<a href="https://propakistani.pk/2026/08/07/ai-is-ending-junior-tech-jobs-in-pakistan/">ProPakistani</a>, August 7)</p>
+</li>
+<li><p><strong>AI adoption drives call centre exports beyond $300 million</strong>, as global outsourcing shifts toward AI-enhanced operations benefit Pakistan&#39;s BPO sector. (<a href="https://www.brecorder.com">Business Recorder</a>, July 7)</p>
+</li>
+</ul>
+<h2>🤖 AI &amp; Innovation</h2>
+<p>Artificial intelligence is reshaping Pakistan&#39;s tech landscape in complex ways:</p>
+<ul>
+<li><p><strong>AI is reducing demand for junior tech jobs in Pakistan</strong>, with P@SHA reporting a 25% decline in entry-level hiring and employment among developers aged 22-25 falling nearly 20% since 2024. Entry-level freelance projects have dropped from 15% to below 9% of listings. However, IT Minister Shaza Fatima Khawaja said the government&#39;s National AI Policy 2025 aims to create 3 million AI-related jobs by 2030. (<a href="https://propakistani.pk/2026/08/07/ai-is-ending-junior-tech-jobs-in-pakistan/">ProPakistani</a>, August 7; <a href="https://tribune.com.pk">Express Tribune</a>, August 3)</p>
+</li>
+<li><p><strong>Pakistan rises in Global Responsible AI Rankings</strong>, improving from 68th to 51st in the 2026 Global Index on Responsible AI. The improvement reflects the National AI Policy, Digital Nation Pakistan Act, the newly established Pakistan Digital Authority, and the Draft Data Governance Policy. (<a href="https://propakistani.pk/perspective/pakistan-rises-in-global-responsible-ai-rankings/">ProPakistani</a>)</p>
+</li>
+<li><p><strong>IT sector sets sights on AI edge</strong>, with industry leaders pushing for greater AI adoption and integration across Pakistan&#39;s technology landscape. (<a href="https://tribune.com.pk">Express Tribune</a>, August 3)</p>
+</li>
+</ul>
+<p><img src="/images/pakistan-tech-2026-08-08-2.jpg" alt="Pakistan Tech Ecosystem">
+<em>Photo by Unsplash</em></p>
+<h2>🏢 Startups &amp; Funding</h2>
+<p>Pakistan&#39;s startup ecosystem shows continued vitality across sectors:</p>
+<ul>
+<li><p><strong>NayaPay wins Fintech Startup - Pakistan at the Asian Banking &amp; Finance Awards 2026</strong>, recognized for its product innovation and impact in building Pakistan&#39;s digital payments infrastructure. NayaPay launched as Pakistan&#39;s first licensed EMI and has expanded into business payments, positioning itself as a key player in the digital economy. (<a href="https://propakistani.pk/2026/08/07/nayapay-wins-fintech-startup-at-the-asian-banking-finance-awards-2026/">ProPakistani</a>, August 7)</p>
+</li>
+<li><p><strong>Saudi-backed Wafi Energy expands Pakistan outreach with startup competition</strong>, adding fresh momentum to the local startup ecosystem with cross-border investment interest. (<a href="https://www.arabnews.com">Arab News</a>, July 24)</p>
+</li>
+<li><p><strong>Pakistan-Japan startup and innovation event</strong> was held to boost bilateral cooperation in AI, Web3, and emerging technologies, signaling growing international interest in Pakistan&#39;s tech talent. (<a href="https://www.nation.com.pk">The Nation</a>, July 17)</p>
+</li>
+</ul>
+<h2>📡 Telecom &amp; Connectivity</h2>
+<p>Regulatory and infrastructure developments in Pakistan&#39;s telecom sector:</p>
+<ul>
+<li><p><strong>PTA announces new eSIM rates and rules</strong>, capping the maximum initial issuance fee at Rs. 1,500 and allowing subscribers up to 10 free transfers between compatible handsets. The revised policy takes effect by mid-August 2026, aimed at making eSIM services more affordable and encouraging digital SIM adoption. (<a href="https://propakistani.pk/2026/08/07/pta-announces-new-rates-and-rules-for-esims/">ProPakistani</a>, August 7)</p>
+</li>
+<li><p><strong>Indus RAS Expo 2026 was held in Islamabad</strong>, organized by Ignite and the Ministry of IT, showcasing Pakistan&#39;s progress in robotics and autonomous systems. PM Shehbaz hailed the country&#39;s &quot;remarkable progress&quot; in drone development, noting that 60 percent of drones are now locally manufactured. (<a href="https://www.app.com.pk">Associated Press of Pakistan</a>, July 21-22; <a href="https://www.arabnews.com">Arab News</a>, July 22; <a href="https://www.dawn.com">Dawn</a>, July 22)</p>
+</li>
+</ul>
+<h2>🔧 Research &amp; Industry Partnerships</h2>
+<p>Bridging academia and industry for technology development:</p>
+<ul>
+<li><p><strong>DynaSys Networks and NUST SEECS signed a strategic MoU</strong> to accelerate IoT, AIoT, smart agriculture, digital health, and environmental sensing research in Pakistan. The partnership brings together NUST&#39;s expertise in AI, Industrial IoT, and Embedded Systems with DynaSys&#39;s industrial IoT capabilities, with emphasis on student projects, research, and internships. (<a href="https://propakistani.pk/2026/08/07/dynasys-networks-and-nust-sign-trailblazing-academia-industry-partnership-on-iot-in-pakistan/">ProPakistani</a>, August 7)</p>
+</li>
+<li><p><strong>Kazakhstan and Pakistan deepen cooperation in digital technologies</strong>, expanding bilateral tech ties and opening new avenues for cross-border collaboration in the digital economy. (<a href="https://www.inform.kz">Qazinform</a>, July 31)</p>
+</li>
+</ul>
+<h2>💳 E-commerce &amp; FinTech</h2>
+<p>Digital commerce and financial services continue to expand:</p>
+<ul>
+<li><p><strong>Daraz Pakistan&#39;s 8.8 Azadi Sale</strong> runs from August 7-14, featuring Brand Rush Hours with up to 50% off from participating brands including Enviro, J., Maybelline, Carrefour, and Levi&#39;s. The campaign includes Prime Rush Hour vouchers offering extra 14% off (up to PKR 10,000) and daily flash vouchers. (<a href="https://propakistani.pk/2026/08/07/your-game-plan-for-bigger-savings-during-daraz-pakistans-8-8-azadi-sale/">ProPakistani</a>, August 7)</p>
+</li>
+<li><p><strong>YouTube and WhatsApp top PTA&#39;s list for most blocked URLs in Pakistan</strong>, highlighting the ongoing tension between content regulation and digital freedoms. (<a href="https://propakistani.pk/2026/08/07/youtube-whatsapp-top-pta-list-for-most-blocked-urls-in-pakistan/">ProPakistani</a>, August 7)</p>
+</li>
+</ul>
+<hr>
+<h3>Key Takeaway</h3>
+<p>This week&#39;s developments paint a nuanced picture of Pakistan&#39;s tech trajectory. The <strong>record $4.6 billion in IT exports</strong> demonstrates the sector&#39;s continued growth and global competitiveness, yet the <strong>$400 million shortfall</strong> against the government target and the <strong>25% decline in junior-level hiring</strong> reveal structural pressures. AI is simultaneously creating new opportunities — driving call centre exports past $300 million and pushing Pakistan up 17 places in global responsible AI rankings — while disrupting entry-level employment.</p>
+<p>On the positive side, <strong>NayaPay&#39;s regional recognition</strong>, the <strong>DynaSys-NUST IoT partnership</strong>, the <strong>Indus RAS Expo</strong> showcasing 60% indigenous drone manufacturing, and the <strong>PTA&#39;s progressive eSIM framework</strong> all point to an ecosystem maturing across fintech, academia-industry collaboration, defense technology, and telecom regulation. The key challenge going forward will be balancing AI-driven productivity gains with workforce transition, ensuring that the 3 million AI-related jobs the government targets by 2030 materialize fast enough to offset the roles being automated away.</p>
+<hr>
+<p><em>This roundup is curated from various sources. For corrections or additions, please reach out via the contact page.</em></p>
+]]></content:encoded>
+      <category>pakistan-tech</category>
+    <category>pakistan</category>
+    <category>startups</category>
+    <category>IT-exports</category>
+    <category>AI</category>
+    <category>telecom</category>
+    <category>ecosystem</category>
+    </item>
     <item>
       <title>Tech, Art &amp; Entertainment - August 7, 2026</title>
       <link>https://shamyl.github.io/blog/tech-art-2026-08-07</link>
