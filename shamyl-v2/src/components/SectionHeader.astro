@@ -4,14 +4,18 @@ interface Props {
   subtitle?: string;
   link?: string;
   linkText?: string;
+  figNumber?: string;
 }
 
-const { title, subtitle, link, linkText = "View All" } = Astro.props;
+const { title, subtitle, link, linkText = "View All", figNumber } = Astro.props;
 ---
 
 <div class="section-header">
   <div class="section-header-text">
-    <h2 class="section-title">{title}</h2>
+    <div class="section-title-row">
+      {figNumber && <span class="fig-number">{figNumber}</span>}
+      <h2 class="section-title">{title}</h2>
+    </div>
     {subtitle && <p class="section-subtitle">{subtitle}</p>}
   </div>
   {link && (
@@ -33,26 +37,50 @@ const { title, subtitle, link, linkText = "View All" } = Astro.props;
     margin-bottom: var(--space-xl);
     flex-wrap: wrap;
     gap: var(--space-md);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: var(--space-md);
+  }
+  
+  .section-title-row {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-md);
+  }
+  
+  .fig-number {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--accent);
+    font-weight: 700;
+    letter-spacing: 0.05em;
   }
   
   .section-title {
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: -0.02em;
+    text-transform: uppercase;
+    margin: 0;
   }
   
   .section-subtitle {
     color: var(--text-secondary);
-    font-size: 1rem;
+    font-size: 0.85rem;
     margin-top: var(--space-xs);
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
   }
   
   .section-link {
     display: inline-flex;
     align-items: center;
     gap: var(--space-sm);
-    font-size: 0.9rem;
-    font-weight: 500;
+    font-size: 0.75rem;
+    font-weight: 600;
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
     color: var(--text-secondary);
     transition: all var(--transition-fast);
   }

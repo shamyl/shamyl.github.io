@@ -34,9 +34,15 @@ const inspirations = [
       <div class="about-intro">
         <div class="about-image">
           <img src="/images/shamyl.jpg" alt="Shamyl Bin Mansoor" />
+          <div class="corner-marker tl"></div>
+          <div class="corner-marker br"></div>
         </div>
         <div class="about-text">
-          <h1 class="page-title">About Me</h1>
+          <div class="page-meta">
+            <span class="meta-label">FIG. 01 — PROFILE</span>
+            <span class="meta-status"><span class="status-dot"></span>AVAILABLE</span>
+          </div>
+          <h1 class="page-title">About<br><span class="title-outline">Me</span></h1>
           <p class="about-lead">
             I'm the co-founder and CTO of <a href="https://www.learnobots.com" target="_blank" rel="noopener noreferrer">LearnOBots</a>, 
             an EdTech company rethinking education through playful and fun learning.
@@ -58,7 +64,10 @@ const inspirations = [
   <!-- Career Timeline -->
   <section class="section">
     <div class="container">
-      <h2 class="section-title">Career Timeline</h2>
+      <div class="section-title-row">
+        <span class="fig-number">02</span>
+        <h2 class="section-title">Career Timeline</h2>
+      </div>
       <div class="career-timeline">
         {career.map(item => (
           <div class="career-item">
@@ -87,7 +96,10 @@ const inspirations = [
   <!-- Inspirations -->
   <section class="section">
     <div class="container">
-      <h2 class="section-title">People Who Inspire Me</h2>
+      <div class="section-title-row">
+        <span class="fig-number">03</span>
+        <h2 class="section-title">People Who Inspire Me</h2>
+      </div>
       <div class="inspirations">
         {inspirations.map(person => (
           <a href={person.link} target="_blank" rel="noopener noreferrer" class="inspiration-link">
@@ -106,7 +118,10 @@ const inspirations = [
   <!-- Media Mentions -->
   <section class="section">
     <div class="container">
-      <h2 class="section-title">Media & Mentions</h2>
+      <div class="section-title-row">
+        <span class="fig-number">04</span>
+        <h2 class="section-title">Media & Mentions</h2>
+      </div>
       <div class="mentions-grid">
         {mentions.map(item => (
           <a href={item.link} target="_blank" rel="noopener noreferrer" class="mention-card">
@@ -125,7 +140,10 @@ const inspirations = [
   <!-- Contact -->
   <section class="section" id="contact">
     <div class="container">
-      <h2 class="section-title">Get in Touch</h2>
+      <div class="section-title-row">
+        <span class="fig-number">05</span>
+        <h2 class="section-title">Get in Touch</h2>
+      </div>
       <p class="contact-text">
         Interested in similar projects or collaborations? Feel free to reach out!
       </p>
@@ -180,6 +198,7 @@ const inspirations = [
     overflow: hidden;
     background: var(--bg-tertiary);
     border: 2px solid var(--border);
+    position: relative;
   }
   
   .about-image img {
@@ -188,9 +207,72 @@ const inspirations = [
     object-fit: cover;
   }
   
+  .corner-marker {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    z-index: 1;
+  }
+  
+  .corner-marker.tl {
+    top: 4px;
+    left: 4px;
+    border-top: 2px solid var(--accent);
+    border-left: 2px solid var(--accent);
+  }
+  
+  .corner-marker.br {
+    bottom: 4px;
+    right: 4px;
+    border-bottom: 2px solid var(--accent);
+    border-right: 2px solid var(--accent);
+  }
+  
+  .page-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-md);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+  }
+  
+  .meta-label {
+    font-weight: 700;
+    color: var(--text-secondary);
+  }
+  
+  .meta-status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  
+  .status-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  
   .page-title {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    line-height: 0.85;
     margin-bottom: var(--space-lg);
+  }
+  
+  .title-outline {
+    -webkit-text-stroke: 2px var(--text-primary);
+    color: transparent;
   }
   
   .about-lead {
@@ -204,9 +286,28 @@ const inspirations = [
     max-width: 600px;
   }
   
+  .section-title-row {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: var(--space-md);
+  }
+  
+  .fig-number {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--accent);
+    font-weight: 700;
+  }
+  
   .section-title {
     font-size: 1.5rem;
-    margin-bottom: var(--space-xl);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    margin: 0;
   }
   
   /* Career Timeline */
@@ -227,9 +328,12 @@ const inspirations = [
   }
   
   .career-years {
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     color: var(--text-muted);
-    font-weight: 500;
+    font-weight: 600;
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
   }
   
   .career-role {

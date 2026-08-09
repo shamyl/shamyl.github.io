@@ -49,12 +49,16 @@ const currentYear = new Date().getFullYear();
       </div>
     </div>
   </div>
+  <div class="container footer-meta">
+    <span>END_OF_LINE</span>
+    <span>EST. 2014 — {currentYear}</span>
+  </div>
 </footer>
 
 <style>
   .footer {
     border-top: 1px solid var(--border);
-    padding: var(--space-xl) 0;
+    padding: var(--space-xl) 0 var(--space-lg);
     margin-top: var(--space-3xl);
   }
   
@@ -68,13 +72,33 @@ const currentYear = new Date().getFullYear();
   
   .copyright {
     color: var(--text-secondary);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
   }
   
   .tagline {
     color: var(--text-muted);
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     margin-top: var(--space-xs);
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .footer-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--space-lg);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--border);
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
   }
   
   .social-links {

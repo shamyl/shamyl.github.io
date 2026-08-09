@@ -51,11 +51,43 @@ const formatDate = (date: Date) => {
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
     transition: all var(--transition-base);
+    position: relative;
   }
   
   .blog-card:hover {
     border-color: var(--text-muted);
     background: var(--card-hover);
+  }
+  
+  /* Corner markers */
+  .blog-card::before,
+  .blog-card::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-color: var(--accent);
+    opacity: 0;
+    transition: opacity var(--transition-fast);
+  }
+  
+  .blog-card::before {
+    top: -1px;
+    left: -1px;
+    border-top: 2px solid;
+    border-left: 2px solid;
+  }
+  
+  .blog-card::after {
+    bottom: -1px;
+    right: -1px;
+    border-bottom: 2px solid;
+    border-right: 2px solid;
+  }
+  
+  .blog-card:hover::before,
+  .blog-card:hover::after {
+    opacity: 1;
   }
   
   .card-link {
@@ -69,9 +101,12 @@ const formatDate = (date: Date) => {
   }
   
   .card-date {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     color: var(--text-muted);
     font-weight: 500;
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
   }
   
   .card-title {

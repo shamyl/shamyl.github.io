@@ -27,7 +27,10 @@ const typeIcons = {
 <BaseLayout title="Speaking & Awards" description="Talks, panels, podcasts, and recognition">
   <section class="page-header">
     <div class="container">
-      <h1 class="page-title">Speaking & Awards</h1>
+      <div class="page-meta">
+        <span class="meta-label">FIG. 01 — SPEAKING</span>
+      </div>
+      <h1 class="page-title">Speaking<br>& Awards</h1>
       <p class="page-subtitle">Talks, panels, podcasts, and recognition</p>
     </div>
   </section>
@@ -133,7 +136,6 @@ const typeIcons = {
       });
       
       timelineYears.forEach(yearSection => {
-        const visibleItems = yearSection.querySelectorAll('.timeline-item[style="display: flex;"], .timeline-item:not([style*="display: none"])');
         const allItems = yearSection.querySelectorAll('.timeline-item');
         let hasVisible = false;
         
@@ -155,14 +157,38 @@ const typeIcons = {
     padding-bottom: var(--space-xl);
   }
   
+  .page-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-md);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+  }
+  
+  .meta-label {
+    font-weight: 700;
+    color: var(--text-secondary);
+  }
+  
   .page-title {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
     margin-bottom: var(--space-sm);
+    line-height: 0.9;
   }
   
   .page-subtitle {
     color: var(--text-secondary);
-    font-size: 1.1rem;
+    font-size: 0.85rem;
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
   }
   
   .filters {
@@ -170,29 +196,6 @@ const typeIcons = {
     gap: var(--space-sm);
     margin-bottom: var(--space-2xl);
     flex-wrap: wrap;
-  }
-  
-  .filter-btn {
-    padding: var(--space-sm) var(--space-lg);
-    font-size: 0.9rem;
-    font-weight: 500;
-    background: transparent;
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
-    color: var(--text-secondary);
-    cursor: pointer;
-    transition: all var(--transition-fast);
-  }
-  
-  .filter-btn:hover {
-    border-color: var(--text-muted);
-    color: var(--text-primary);
-  }
-  
-  .filter-btn[aria-pressed="true"] {
-    background: var(--accent);
-    border-color: var(--accent);
-    color: white;
   }
   
   .timeline {
@@ -205,11 +208,14 @@ const typeIcons = {
   
   .year-label {
     font-size: 1.25rem;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--text-muted);
     margin-bottom: var(--space-lg);
     padding-bottom: var(--space-sm);
     border-bottom: 1px solid var(--border);
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
   }
   
   .year-items {
@@ -256,6 +262,8 @@ const typeIcons = {
   .item-title {
     font-size: 1.1rem;
     margin: var(--space-xs) 0;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
   }
   
   .item-title a {
@@ -276,9 +284,12 @@ const typeIcons = {
   }
   
   .item-venue {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: var(--text-muted);
     margin-top: var(--space-sm);
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
   }
   
   .empty-state {

@@ -26,6 +26,8 @@ const href = link || (slug ? `/work/${slug}` : '#');
           </svg>
         </div>
       )}
+      <div class="corner-marker tl"></div>
+      <div class="corner-marker br"></div>
     </div>
     <div class="card-content">
       <span class="tag tag-accent">{category}</span>
@@ -91,6 +93,34 @@ const href = link || (slug ? `/work/${slug}` : '#');
     color: var(--text-muted);
   }
   
+  /* Corner markers on image */
+  .corner-marker {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    opacity: 0;
+    transition: opacity var(--transition-fast);
+    z-index: 1;
+  }
+  
+  .corner-marker.tl {
+    top: 6px;
+    left: 6px;
+    border-top: 2px solid var(--accent);
+    border-left: 2px solid var(--accent);
+  }
+  
+  .corner-marker.br {
+    bottom: 6px;
+    right: 6px;
+    border-bottom: 2px solid var(--accent);
+    border-right: 2px solid var(--accent);
+  }
+  
+  .project-card:hover .corner-marker {
+    opacity: 1;
+  }
+  
   .card-content {
     padding: var(--space-lg);
   }
@@ -99,6 +129,8 @@ const href = link || (slug ? `/work/${slug}` : '#');
     font-size: 1.1rem;
     margin: var(--space-sm) 0;
     color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
   }
   
   .card-description {
