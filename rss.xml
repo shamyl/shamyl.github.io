@@ -5,13 +5,101 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Sat, 08 Aug 2026 04:03:20 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 09 Aug 2026 04:00:51 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamyl.github.io/blog</link>
     </image>
+    <item>
+      <title>Space Tech Roundup - August 9, 2026</title>
+      <link>https://shamyl.github.io/blog/space-tech-2026-08-09</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/space-tech-2026-08-09</guid>
+      <pubDate>Sun, 09 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Latest in space exploration, satellite technology, and aerospace developments from August 9, 2026.</description>
+      <content:encoded><![CDATA[<p>Here&#39;s your Sunday space tech roundup for August 9, 2026:</p>
+<p><img src="/images/space-tech-2026-08-09-1.jpg" alt="Space Technology"></p>
+<h2>Launches &amp; Missions</h2>
+<ul>
+<li><p><strong>SpaceX Launches 24 Starlink Satellites from California</strong> — SpaceX continued its rapid launch cadence, deploying 24 additional Starlink satellites from Vandenberg Space Force Base. The Falcon 9 booster executed another successful droneship landing, reinforcing the reliability of SpaceX&#39;s reusable launch architecture. (<a href="https://www.space.com">space.com</a>)</p>
+</li>
+<li><p><strong>Rocket Lab Launches Japanese Earth-Observing Satellite</strong> — After a five-week delay, Rocket Lab successfully launched the 8th iQPS satellite for Japanese synthetic aperture radar (SAR) constellation operator iQPS. The Electron rocket delivered the payload to low Earth orbit, expanding Japan&#39;s commercial Earth-observation capabilities. (<a href="https://spacenews.com/rocket-lab-launches-8th-iqps-satellite/">SpaceNews</a>)</p>
+</li>
+<li><p><strong>Chinese Company Landspace Targets August 10 for Historic Launch and Landing Attempt</strong> — Chinese private launch startup Landspace is targeting August 10 for what could be a historic first-stage recovery attempt with its Zhuque-3 rocket. If successful, it would mark a major milestone for China&#39;s commercial reusable rocket program, following SpaceX&#39;s paradigm. (<a href="https://www.space.com">space.com</a>)</p>
+</li>
+<li><p><strong>ISS Spacewalk 97 Prepares for Final Solar Array Upgrade</strong> — NASA astronauts conducted a 6.5-hour spacewalk to prepare the International Space Station for its final roll-out solar array installation. The crew completed cable routing and bracket installations, with one astronaut describing the work as &quot;one more step&quot; toward completing the station&#39;s power system upgrades. The next U.S. spacewalk is now scheduled. (<a href="https://www.nasa.gov">NASA</a>, <a href="https://aviationweek.com">Aviation Week</a>)</p>
+</li>
+</ul>
+<h2>SpaceX &amp; Commercial Space</h2>
+<ul>
+<li><p><strong>SpaceX Q2 Revenue Surge and $16.8 Billion Terafab Unveiled</strong> — SpaceX (now publicly traded as NASDAQ: SPCX) reported strong Q2 revenue results and unveiled plans for a massive $16.8 billion manufacturing facility dubbed &quot;Terafab.&quot; The stock surged 15% on the news, buoyed by lockup relief and progress on the Terafab megaproject, which aims to dramatically scale Starship production. The company also announced a new mobile network service. (<a href="https://finance.yahoo.com">Yahoo Finance</a>, <a href="https://simplywall.st">simplywall.st</a>)</p>
+</li>
+<li><p><strong>Starship Flight 13 Vehicle Likely Lost at Sea</strong> — Two weeks after its epic 13th test flight, Elon Musk indicated that the Starship vehicle is &quot;likely to be lost at sea.&quot; Despite the setback, the flight provided valuable data and the company is already preparing for the next iteration. The rapid test-fly-fix-repeat cycle continues to define Starship development. (<a href="https://www.space.com">space.com</a>)</p>
+</li>
+<li><p><strong>SpaceX Serious About Lunar Factories</strong> — Elon Musk stated that SpaceX is &quot;serious&quot; about building factories on the Moon, declaring &quot;it&#39;s going to happen.&quot; The comments signal an ambitious long-term vision for lunar industrialization beyond transportation, potentially leveraging Starship&#39;s heavy-lift capacity for surface infrastructure. (<a href="https://www.space.com">space.com</a>)</p>
+</li>
+<li><p><strong>Blue Origin Traces New Glenn Explosion to Oxygen Valve</strong> — Blue Origin CEO announced that the root cause of the huge New Glenn rocket explosion has been traced to an oxygen valve issue. The company is implementing fixes and plans to return to flight, keeping the competitive pressure on in the heavy-lift launch market. (<a href="https://www.space.com">space.com</a>)</p>
+</li>
+</ul>
+<p><img src="/images/space-tech-2026-08-09-2.jpg" alt="Space Exploration"></p>
+<h2>Satellites &amp; Constellations</h2>
+<ul>
+<li><p><strong>Europe Expands IRIS² Constellation</strong> — The European Commission reached an agreement with an industrial consortium (SES, Eutelsat, Hispasat) to proceed with the IRIS² secure connectivity constellation, increasing both the number of satellites and the total cost. The expanded constellation reflects growing European ambitions for sovereign space-based communications. (<a href="https://spacenews.com/europe-increases-size-and-cost-of-iris%c2%b2-constellation/">SpaceNews</a>)</p>
+</li>
+<li><p><strong>FCC Space Bureau Leadership Transition</strong> — The FCC&#39;s Space Bureau deputy chief Jennifer Gilsenan is taking the reins as chief Jay Schwarz prepares to retire later this month. The transition comes amid a broader satellite licensing overhaul that aims to streamline regulatory processes for the growing commercial space industry. (<a href="https://spacenews.com/fcc-space-bureau-deputy-takes-the-reins-amid-licensing-overhaul/">SpaceNews</a>)</p>
+</li>
+<li><p><strong>Senate Confirms New Space Force Chief</strong> — The U.S. Senate confirmed Schiess to lead the Space Force as the service prepares for rapid growth, acquisition reforms, and the Golden Dome missile defense initiative. The confirmation ensures leadership continuity as the Space Force scales to meet emerging threats. (<a href="https://spacenews.com/u-s-senate-confirms-schiess-to-lead-space-force/">SpaceNews</a>)</p>
+</li>
+<li><p><strong>Senate Installs New Chiefs for Military Space Acquisition and Spy Satellites</strong> — Erich Hernandez-Baquero will take over military space acquisition, while Roger Mason will lead the National Reconnaissance Office. These appointments reshape the top of U.S. national security space as both organizations face growing demands. (<a href="https://spacenews.com/senate-installs-new-chiefs-for-u-s-military-space-acquisition-spy-satellites/">SpaceNews</a>)</p>
+</li>
+</ul>
+<h2>Deep Space &amp; Exploration</h2>
+<ul>
+<li><p><strong>NASA Engineers Save Voyager 2 for Another Year</strong> — NASA engineers figured out how to keep the 48-year-old Voyager 2 probe running for yet another year by creatively managing its dwindling power resources. The legendary spacecraft, now in interstellar space, continues to return scientific data nearly half a century after launch. (<a href="https://www.space.com">space.com</a>)</p>
+</li>
+<li><p><strong>Engineers Race to Save Stricken LINK Rescue Spacecraft</strong> — A spacecraft designed to rescue a falling NASA observatory is facing issues of its own, creating a tense double-emergency. Engineers are working against the clock to save both the LINK rescue vehicle and the observatory it was sent to service. (<a href="https://www.space.com">space.com</a>, <a href="https://www.cnn.com">CNN</a>)</p>
+</li>
+<li><p><strong>NASA, Northrop Grumman Repurpose Gateway for Moon Base</strong> — NASA and Northrop Grumman, along with the Canadian Space Agency, are repurposing elements originally designed for the Lunar Gateway station for a planned lunar base demonstration mission. The pivot signals a shift in NASA&#39;s lunar architecture strategy, adapting existing investments toward surface operations. (<a href="https://spacenews.com/northrop-grumman-canadian-space-agency-repurpose-their-gateway-projects/">SpaceNews</a>, <a href="https://spaceflightnow.com">Spaceflight Now</a>)</p>
+</li>
+<li><p><strong>China&#39;s Lunar Research Station Could Feature Robot Watchdogs</strong> — Chinese scientists are developing robot &quot;watchdogs&quot; to guard the country&#39;s planned lunar research station. The autonomous robots would provide security and monitoring capabilities for the uncrewed portions of the International Lunar Research Station, showcasing China&#39;s growing ambitions for sustained lunar presence. (<a href="https://www.scmp.com">South China Morning Post</a>)</p>
+</li>
+</ul>
+<h2>Research &amp; Discoveries</h2>
+<ul>
+<li><p><strong>First Photos of SpaceX Rocket Impact Crater on the Moon</strong> — The Korean lunar orbiter captured the first photographs of the impact crater created by a SpaceX Falcon 9 rocket stage that crashed into the Moon. The images reveal a blackened hole torn into the lunar surface, providing a stark visual reminder of the growing debris problem in cislunar space. (<a href="https://www.space.com">space.com</a>, <a href="https://www.livescience.com">Live Science</a>)</p>
+</li>
+<li><p><strong>Three Companies Building Tech to Grow Crops on the Moon</strong> — SpaceLab Technologies, Interstellar Lab, and SafetySpect are developing technologies to enable agriculture on the lunar surface, from growth chambers to real-time plant health monitoring devices. These efforts are critical for sustaining long-term human presence on the Moon. (<a href="https://spacenews.com/three-companies-building-the-tech-to-grow-crops-on-the-moon/">SpaceNews</a>)</p>
+</li>
+<li><p><strong>NASA Funds 18 Innovation Concepts for Future Exploration</strong> — NASA is helping to fund 18 innovation concepts through its NIAC program, spanning a wide range of forward-looking technologies for future space exploration missions. (<a href="https://www.openaccessgovernment.org">Open Access Government</a>)</p>
+</li>
+<li><p><strong>&#39;Plasma Gun&#39; Technology for Space Laundry and Sanitation</strong> — Researchers are developing plasma gun technology that could transform laundry and sanitation for future space missions, potentially solving one of the most practical challenges of long-duration spaceflight. (<a href="https://phys.org">Phys.org</a>)</p>
+</li>
+<li><p><strong>NASA Admin: Fission is the Fuel to Get Us to Mars</strong> — NASA Administrator emphasized that nuclear fission is the key technology needed to enable human missions to Mars, highlighting ongoing developments in space nuclear propulsion and surface power systems. (<a href="https://www.deseret.com">Deseret News</a>)</p>
+</li>
+</ul>
+<h2>International Developments</h2>
+<ul>
+<li><p><strong>US-China Space Race: Clues Emerging on Who&#39;s Pulling Ahead</strong> — A CNN analysis examined the intensifying US-China space competition, noting that while the U.S. maintains advantages in launch capability and deep space exploration, China is rapidly closing gaps in lunar surface operations, satellite constellations, and reusable rocket technology. (<a href="https://www.cnn.com">CNN</a>)</p>
+</li>
+<li><p><strong>Bipartisan Senate Bill Would Sharpen Space Force Training for China Conflict</strong> — Senators Cortez Masto and Britt introduced bipartisan legislation to expand Space Force wargaming and require an unclassified assessment of China&#39;s commercial space sector, reflecting growing congressional focus on the space dimension of strategic competition. (<a href="https://spacenews.com/bipartisan-senate-bill-would-sharpen-space-force-training-for-conflict-with-china/">SpaceNews</a>)</p>
+</li>
+<li><p><strong>NASA Brings Space Exploration to the FIFA World Cup</strong> — NASA partnered with the FIFA World Cup to showcase space exploration, bringing educational exhibits and astronaut appearances to the global sporting event. (<a href="https://www.nasa.gov">NASA</a>)</p>
+</li>
+</ul>
+<h3>Key Takeaway</h3>
+<p>This first week of August 2026 underscores the accelerating pace and widening scope of space activity. SpaceX&#39;s public market debut continues to reshape the financial landscape of the space industry, with Terafab representing an unprecedented industrial bet on Starship scale. Meanwhile, the Starship vehicle itself appears lost at sea after Flight 13 — a reminder that even the most ambitious programs face engineering reality checks. The reshuffling of U.S. national security space leadership, Europe&#39;s expanding IRIS² constellation, and China&#39;s reusable rocket and lunar base ambitions all point to a world where space capability is increasingly tied to national strategy. Voyager 2&#39;s continued survival — 48 years and counting — stands as a quiet counterpoint to the frenzy of new development: sometimes the most profound achievements in space are the ones that simply refuse to end.</p>
+<hr>
+<p><em>Images: Lorem Picsum (CC0 license). News compiled from SpaceNews, space.com, NASA, CNN, Spaceflight Now, Aviation Week, and Phys.org.</em></p>
+]]></content:encoded>
+      <category>space-tech</category>
+    <category>space</category>
+    <category>spacex</category>
+    <category>nasa</category>
+    <category>satellites</category>
+    <category>rockets</category>
+    <category>mars</category>
+    </item>
     <item>
       <title>Pakistan Tech Roundup - August 8, 2026</title>
       <link>https://shamyl.github.io/blog/pakistan-tech-2026-08-08</link>
