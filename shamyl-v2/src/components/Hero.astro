@@ -13,6 +13,10 @@ const {
 ---
 
 <section class="hero">
+  <div class="hero-portrait">
+    <img src="/images/shamyl-portrait.jpg" alt="Shamyl Bin Mansoor" />
+    <div class="portrait-fade"></div>
+  </div>
   <div class="container hero-content">
     <div class="hero-text">
       <h1 class="hero-title animate-fade-in">{title}</h1>
@@ -41,14 +45,18 @@ const {
     display: flex;
     align-items: center;
     padding-top: 64px;
+    position: relative;
+    overflow: hidden;
   }
   
   .hero-content {
     padding: var(--space-3xl) 0;
+    position: relative;
+    z-index: 2;
   }
   
   .hero-text {
-    max-width: 700px;
+    max-width: 650px;
   }
   
   .hero-title {
@@ -71,7 +79,7 @@ const {
   .hero-description {
     font-size: 1.1rem;
     color: var(--text-secondary);
-    margin-bottom: var(--space-lg);
+    margin-bottom: var(--space-sm);
     opacity: 0;
   }
   
@@ -89,11 +97,75 @@ const {
     flex-wrap: wrap;
     opacity: 0;
   }
+
+  .hero-portrait {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 45%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  .hero-portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    opacity: 0.35;
+    filter: grayscale(0.3) contrast(1.05);
+  }
+
+  :global([data-theme="light"]) .hero-portrait img {
+    opacity: 0.5;
+    filter: grayscale(0.15) contrast(1);
+  }
+
+  .portrait-fade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right,
+      var(--bg-primary) 0%,
+      var(--bg-primary) 15%,
+      transparent 60%,
+      transparent 100%
+    );
+  }
+
+  :global([data-theme="light"]) .portrait-fade {
+    background: linear-gradient(to right,
+      var(--bg-primary) 0%,
+      var(--bg-primary) 15%,
+      transparent 60%,
+      transparent 100%
+    );
+  }
   
+  @media (max-width: 768px) {
+    .hero-portrait {
+      width: 55%;
+      opacity: 0.7;
+    }
+    .portrait-fade {
+      background: linear-gradient(to right,
+        var(--bg-primary) 0%,
+        var(--bg-primary) 20%,
+        transparent 70%
+      );
+    }
+  }
+
   @media (max-width: 600px) {
     .hero {
       min-height: auto;
       padding-top: calc(64px + var(--space-xl));
+    }
+    
+    .hero-portrait {
+      width: 60%;
+      opacity: 0.5;
     }
     
     .hero-actions {
