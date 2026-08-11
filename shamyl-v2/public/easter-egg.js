@@ -157,6 +157,96 @@
     });
   }
 
+  // ── Touch Controls (mobile) ──
+  var touchControls = null;
+  var isTouch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
+
+  function createTouchControls() {
+    var wrap = document.createElement('div');
+    wrap.style.cssText = 'position:fixed;bottom:0;left:0;right:0;z-index:1000000;pointer-events:none;display:flex;justify-content:space-between;align-items:flex-end;padding:16px 20px;';
+
+    // ── Left side: D-pad for steering ──
+    var dpad = document.createElement('div');
+    dpad.style.cssText = 'position:relative;width:140px;height:140px;pointer-events:auto;';
+
+    var dpadBg = document.createElement('div');
+    dpadBg.style.cssText = 'position:absolute;inset:0;background:rgba(0,0,0,0.6);border-radius:50%;border:2px solid rgba(255,50,50,0.5);';
+    dpad.appendChild(dpadBg);
+
+    // Left button
+    var btnL = makeTouchBtn('◀', 8, 45, 'left');
+    var btnR = makeTouchBtn('▶', 72, 45, 'right');
+    var btnU = makeTouchBtn('▲', 45, 8, 'up');
+    var btnD = makeTouchBtn('▼', 45, 72, 'down');
+    dpad.appendChild(btnL);
+    dpad.appendChild(btnR);
+    dpad.appendChild(btnU);
+    dpad.appendChild(btnD);
+
+    // ── Right side: Gas, Brake, Honk, Exit ──
+    var rightSide = document.createElement('div');
+    rightSide.style.cssText = 'display:flex;flex-direction:column;gap:10px;align-items:flex-end;pointer-events:auto;';
+
+    var btnExit = document.createElement('button');
+    btnExit.textContent = '✕ Exit';
+    btnExit.style.cssText = 'background:rgba(180,20,20,0.85);color:#fff;border:1px solid #ff4444;border-radius:8px;padding:8px 16px;font-family:monospace;font-size:13px;font-weight:bold;cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation;';
+    btnExit.addEventListener('touchstart', function(e) { e.preventDefault(); stopGame(); }, { passive: false });
+    btnExit.addEventListener('click', function(e) { stopGame(); });
+
+    var btnHonk = document.createElement('button');
+    btnHonk.textContent = '📯 Honk';
+    btnHonk.style.cssText = 'background:rgba(255,180,40,0.85);color:#1a1a1a;border:1px solid #ffaa00;border-radius:8px;padding:8px 16px;font-family:monospace;font-size:13px;font-weight:bold;cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation;';
+    btnHonk.addEventListener('touchstart', function(e) { e.preventDefault(); if(car){car.honkTimer=30;} startHorn(); }, { passive: false });
+    btnHonk.addEventListener('touchend', function(e) { e.preventDefault(); stopHorn(); }, { passive: false });
+
+    rightSide.appendChild(btnExit);
+    rightSide.appendChild(btnHonk);
+
+    wrap.appendChild(dpad);
+    wrap.appendChild(rightSide);
+    document.body.appendChild(wrap);
+
+    touchControls = wrap;
+  }
+
+  function makeTouchBtn(label, x, y, dir) {
+    var btn = document.createElement('div');
+    btn.textContent = label;
+    btn.style.cssText = 'position:absolute;left:' + x + 'px;top:' + y + 'px;width:50px;height:50px;display:flex;align-items:center;justify-content:center;font-size:20px;color:#ff5555;background:rgba(255,50,50,0.15);border:1px solid rgba(255,50,50,0.4);border-radius:8px;cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:none;user-select:none;-webkit-user-select:none;';
+    
+    var keyMap = { 'left': 'arrowleft', 'right': 'arrowright', 'up': 'arrowup', 'down': 'arrowdown' };
+    var key = keyMap[dir];
+
+    btn.addEventListener('touchstart', function(e) {
+      e.preventDefault();
+      keys[key] = true;
+      btn.style.background = 'rgba(255,50,50,0.5)';
+      btn.style.color = '#fff';
+    }, { passive: false });
+
+    btn.addEventListener('touchend', function(e) {
+      e.preventDefault();
+      keys[key] = false;
+      btn.style.background = 'rgba(255,50,50,0.15)';
+      btn.style.color = '#ff5555';
+    }, { passive: false });
+
+    btn.addEventListener('touchcancel', function(e) {
+      keys[key] = false;
+      btn.style.background = 'rgba(255,50,50,0.15)';
+      btn.style.color = '#ff5555';
+    });
+
+    return btn;
+  }
+
+  function removeTouchControls() {
+    if (touchControls && touchControls.parentNode) {
+      touchControls.parentNode.removeChild(touchControls);
+      touchControls = null;
+    }
+  }
+
   // ── Canvas Setup ──
   function startGame() {
     gameActive = true;
@@ -171,7 +261,10 @@
 
     hintEl = document.createElement('div');
     hintEl.style.cssText = 'position:fixed;top:20px;left:50%;transform:translateX(-50%);z-index:1000000;background:rgba(0,0,0,0.85);color:#ff3333;font-family:monospace;font-size:14px;padding:12px 24px;border-radius:8px;border:1px solid #ff3333;pointer-events:none;text-align:center;letter-spacing:1px;';
-    hintEl.innerHTML = '🚙 LAND CRUISER 79 — DRIVE MODE<br><span style="color:#aaa;font-size:11px">Arrow keys / WASD to drive · ESC to exit · H to honk</span>';
+    hintEl.innerHTML = '🚙 LAND CRUISER 79 — DRIVE MODE<br><span style="color:#aaa;font-size:11px">Arrows/WASD to drive · ESC to exit · H to honk</span>';
+    if (isTouch) {
+      hintEl.innerHTML = '🚙 LAND CRUISER 79 — DRIVE MODE<br><span style="color:#aaa;font-size:11px">Use on-screen controls · Exit button to quit · 📯 to honk</span>';
+    }
     document.body.appendChild(hintEl);
 
     timerInterval = setInterval(function () {
@@ -203,6 +296,12 @@
     window.addEventListener('keydown', onKeyDown, { passive: false });
     window.addEventListener('keyup', onKeyUp, { passive: false });
     window.addEventListener('resize', onResize);
+
+    // Touch controls for mobile
+    var isTouch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
+    if (isTouch) {
+      createTouchControls();
+    }
 
     startScreech();
     render();
@@ -405,6 +504,7 @@
     clearInterval(timerInterval);
     stopScreech();
     stopHorn();
+    removeTouchControls();
     window.removeEventListener('keydown', onKeyDown);
     window.removeEventListener('keyup', onKeyUp);
     window.removeEventListener('resize', onResize);
