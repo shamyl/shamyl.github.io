@@ -14,10 +14,23 @@
     const title = document.querySelector('h1.hero-title');
     if (!title) return;
 
-    title.addEventListener('dblclick', function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-      if (!gameActive) startGame();
+    // Prevent text selection from interfering with double-click
+    title.style.userSelect = 'none';
+    title.style.webkitUserSelect = 'none';
+    title.style.cursor = 'pointer';
+
+    // Use mousedown detection for more reliable double-click counting
+    let lastClick = 0;
+    title.addEventListener('mousedown', function (e) {
+      const now = Date.now();
+      if (now - lastClick < 400) {
+        e.preventDefault();
+        e.stopPropagation();
+        if (!gameActive) startGame();
+        lastClick = 0; // reset so it doesn't fire again
+      } else {
+        lastClick = now;
+      }
     });
 
     // Also support double-tap on mobile
