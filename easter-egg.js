@@ -1,6 +1,6 @@
 /**
  * Easter Egg: Land Cruiser Pickup 79
- * Triple-click "Get in Touch" button to activate.
+ * Double-click the hero title ("Shamyl Bin Mansoor") to activate.
  * Drive a cartoonish red & black Land Cruiser across the website.
  * Controls: Arrow keys / WASD to drive, ESC to exit.
  */
@@ -9,25 +9,26 @@
 
   let gameActive = false;
   let canvas, ctx, car, keys = {}, animationId, hintEl, timerInterval;
-  let clickCount = 0;
-  let clickTimer = null;
-
-  // ── Trigger: triple-click on "Get in Touch" button ──
+  // ── Trigger: double-click on hero title ("Shamyl Bin Mansoor") ──
   function setupTrigger() {
-    const btn = document.querySelector('a.btn.btn-secondary[href*="about#contact"]');
-    if (!btn) return;
+    const title = document.querySelector('h1.hero-title');
+    if (!title) return;
 
-    btn.addEventListener('click', function (e) {
-      clickCount++;
-      clearTimeout(clickTimer);
-      clickTimer = setTimeout(function () { clickCount = 0; }, 800);
+    title.addEventListener('dblclick', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      if (!gameActive) startGame();
+    });
 
-      if (clickCount >= 3) {
-        clickCount = 0;
+    // Also support double-tap on mobile
+    let lastTap = 0;
+    title.addEventListener('touchend', function (e) {
+      const now = Date.now();
+      if (now - lastTap < 400) {
         e.preventDefault();
-        e.stopPropagation();
         if (!gameActive) startGame();
       }
+      lastTap = now;
     });
   }
 
