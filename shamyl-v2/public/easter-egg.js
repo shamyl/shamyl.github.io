@@ -187,9 +187,10 @@
       y: canvas.height / 2,
       angle: 0,
       speed: 0,
-      maxSpeed: 14,
+      maxSpeed: 7,
       acceleration: 0.12,
       friction: 0.04,
+      brakeFriction: 0.25,
       turnSpeed: 0.045,
       width: 120,
       height: 72,
@@ -242,8 +243,14 @@
       var accelFactor = 1 - (Math.abs(car.speed) / car.maxSpeed) * 0.7;
       car.speed = Math.min(car.speed + car.acceleration * accelFactor, car.maxSpeed);
     } else if (keys['arrowdown'] || keys['s']) {
-      var decelFactor = 1 - (Math.abs(car.speed) / (car.maxSpeed * 0.6)) * 0.7;
-      car.speed = Math.max(car.speed - car.acceleration * decelFactor, -car.maxSpeed * 0.6);
+      // Braking: strong deceleration with screech when moving forward
+      if (car.speed > 0.5) {
+        car.speed = Math.max(car.speed - car.brakeFriction, 0);
+      } else {
+        // Once stopped, reverse
+        var decelFactor = 1 - (Math.abs(car.speed) / (car.maxSpeed * 0.6)) * 0.7;
+        car.speed = Math.max(car.speed - car.acceleration * decelFactor, -car.maxSpeed * 0.6);
+      }
     } else {
       if (Math.abs(car.speed) < car.friction) { car.speed = 0; }
       else { car.speed -= Math.sign(car.speed) * car.friction; }
@@ -267,10 +274,20 @@
       car.wheelAngle *= 0.8;
     }
 
-    // Tire screech volume based on speed + steering
+    // Tire screech volume based on speed + steering or braking
     var screechVol = 0;
-    if (steering && Math.abs(car.speed) > 1.5) {
+    var isBraking = (keys['arrowdown'] || keys['s']) && car.speed > 0.5;
+    if (isBraking) {
+      // Braking screech — louder, lower pitched
+      screechVol = Math.min(0.2, car.speed / car.maxSpeed * 0.25);
+      if (screechNodes && screechNodes.bp) {
+        screechNodes.bp.frequency.setTargetAtTime(700, audioCtx.currentTime, 0.05);
+      }
+    } else if (steering && Math.abs(car.speed) > 1.5) {
       screechVol = Math.min(0.12, Math.abs(car.speed) / car.maxSpeed * 0.15);
+      if (screechNodes && screechNodes.bp) {
+        screechNodes.bp.frequency.setTargetAtTime(1000, audioCtx.currentTime, 0.05);
+      }
     }
     setScreechVolume(screechVol);
 
@@ -286,14 +303,14 @@
     // Vertical: clamp to viewport (page scrolls instead)
     var minY = 40;
     var maxY = canvas.height - 40;
-    // Multiply scroll by 3 for faster page traversal
-    var scrollMultiplier = 3;
-    if (car.y < minY) {
-      window.scrollBy(0, (car.y - minY) * scrollMultiplier);
+    // Use speed-based scroll for natural page traversal
+    var vy = Math.sin(car.angle) * car.speed;
+    if (car.y < minY && vy < 0) {
+      window.scrollBy(0, vy * 6);
       car.y = minY;
     }
-    if (car.y > maxY) {
-      window.scrollBy(0, (car.y - maxY) * scrollMultiplier);
+    if (car.y > maxY && vy > 0) {
+      window.scrollBy(0, vy * 6);
       car.y = maxY;
     }
 
