@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Easter Egg Test — Land Cruiser 79</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0a0a0a;
+    color: #e0e0e0;
+    font-family: 'Inter', system-ui, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+  h1 { font-size: 2rem; color: #ff3333; }
+  p { color: #888; max-width: 500px; text-align: center; line-height: 1.6; }
+  .btn-secondary {
+    display: inline-block;
+    padding: 12px 28px;
+    background: transparent;
+    border: 1px solid #555;
+    border-radius: 8px;
+    color: #ccc;
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .btn-secondary:hover {
+    border-color: #ff3333;
+    color: #ff3333;
+  }
+  .hint {
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: #555;
+    font-family: monospace;
+  }
+</style>
+</head>
+<body>
+  <h1>🚙 Easter Egg Test</h1>
+  <p>Click the "Get in Touch" button below <strong>3 times</strong> quickly to activate the Land Cruiser Pickup 79 easter egg.</p>
+  <a href="/about#contact" class="btn btn-secondary">Get in Touch</a>
+  <div class="hint">Arrow keys / WASD to drive · ESC to exit · H to honk</div>
+  <script src="easter-egg.js"></script>
+</body>
+</html>
