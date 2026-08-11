@@ -5,8 +5,9 @@
  * Controls: Arrow keys / WASD to drive, ESC to exit, H to honk.
  *
  *  - SVG sprite image (2.5D shaded Land Cruiser 79 pickup)
- *  - Tire screech sound while turning at speed
- *  - Two-tone jeep horn (400Hz + 500Hz square waves with blare)
+ *  - Tire screech sound while turning at speed (plays screech.mp3)
+ *  - Jeep horn (plays horn.mp3)
+ *  - Brake screech (plays brake.mp3)
  *  - Page scrolls beneath the car when driving up/down
  */
 (function () {
@@ -17,111 +18,86 @@
   var carSprite = new Image();
   carSprite.src = '/images/land-cruiser-sprite.svg';
 
-  // ── Audio ──
-  var audioCtx = null;
-  var screechNodes = null;
-  var hornNodes = null;
+  // ── Audio (HTML5 Audio elements) ──
+  var screechAudio = null;
+  var hornAudio = null;
+  var hornPool = [];     // pool of horn Audio elements for overlapping playback
+  var hornPoolIdx = 0;
+  var brakeAudio = null;
+  var lastBrakeTime = 0;
 
   function ensureAudio() {
-    if (!audioCtx) {
-      try { audioCtx = new (window.AudioContext || window.webkitAudioContext)(); } catch (e) {}
-    }
-    if (audioCtx && audioCtx.state === 'suspended') audioCtx.resume();
+    if (screechAudio) return;
+    try {
+      // Screech — loopable, volume controlled dynamically
+      screechAudio = new Audio('/sounds/screech.mp3');
+      screechAudio.loop = true;
+      screechAudio.volume = 0;
+      screechAudio.preload = 'auto';
+
+      // Horn — create a small pool so overlapping honks work
+      for (var i = 0; i < 3; i++) {
+        var h = new Audio('/sounds/horn.mp3');
+        h.preload = 'auto';
+        hornPool.push(h);
+      }
+
+      // Brake — play once per event
+      brakeAudio = new Audio('/sounds/brake.mp3');
+      brakeAudio.preload = 'auto';
+    } catch (e) {}
   }
 
-  // ── Tire Screech (looping filtered noise) ──
+  // ── Tire Screech ──
   function startScreech() {
-    if (!audioCtx || screechNodes) return;
+    if (!screechAudio) return;
     try {
-      var bufferSize = audioCtx.sampleRate * 2;
-      var buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
-      var data = buffer.getChannelData(0);
-      for (var i = 0; i < bufferSize; i++) data[i] = Math.random() * 2 - 1;
-
-      var source = audioCtx.createBufferSource();
-      source.buffer = buffer;
-      source.loop = true;
-
-      var bp = audioCtx.createBiquadFilter();
-      bp.type = 'bandpass';
-      bp.frequency.value = 1000;
-      bp.Q.value = 3;
-
-      var hp = audioCtx.createBiquadFilter();
-      hp.type = 'highpass';
-      hp.frequency.value = 600;
-
-      var gain = audioCtx.createGain();
-      gain.gain.value = 0;
-
-      source.connect(hp);
-      hp.connect(bp);
-      bp.connect(gain);
-      gain.connect(audioCtx.destination);
-      source.start();
-
-      screechNodes = { source: source, gain: gain, bp: bp };
+      screechAudio.currentTime = 0;
+      screechAudio.volume = 0;
+      screechAudio.play().catch(function() {});
     } catch (e) {}
   }
 
   function setScreechVolume(v) {
-    if (screechNodes && audioCtx) {
-      screechNodes.gain.gain.setTargetAtTime(v, audioCtx.currentTime, 0.05);
+    if (screechAudio) {
+      screechAudio.volume = Math.min(1, Math.max(0, v));
     }
   }
 
   function stopScreech() {
-    if (screechNodes) {
+    if (screechAudio) {
       try {
-        screechNodes.source.stop();
+        screechAudio.pause();
+        screechAudio.currentTime = 0;
+        screechAudio.volume = 0;
       } catch (e) {}
-      screechNodes = null;
     }
   }
 
-  // ── Jeep Horn (dual-tone square wave) ──
-  function startHorn() {
-    if (!audioCtx || hornNodes) return;
+  // ── Brake sound (play once per brake event) ──
+  function playBrake() {
+    if (!brakeAudio) return;
+    var now = Date.now();
+    if (now - lastBrakeTime < 800) return; // throttle: don't replay too often
+    lastBrakeTime = now;
     try {
-      var osc1 = audioCtx.createOscillator();
-      var osc2 = audioCtx.createOscillator();
-      var gain = audioCtx.createGain();
-      var lfo = audioCtx.createOscillator();
-      var lfoGain = audioCtx.createGain();
+      brakeAudio.currentTime = 0;
+      brakeAudio.play().catch(function() {});
+    } catch (e) {}
+  }
 
-      osc1.type = 'square';
-      osc1.frequency.value = 400;
-      osc2.type = 'square';
-      osc2.frequency.value = 500;
-
-      // Blare effect — subtle LFO on gain
-      lfo.frequency.value = 8;
-      lfoGain.gain.value = 0.04;
-      lfo.connect(lfoGain);
-      lfoGain.connect(gain.gain);
-
-      gain.gain.value = 0.15;
-
-      osc1.connect(gain);
-      osc2.connect(gain);
-      gain.connect(audioCtx.destination);
-      lfo.start();
-      osc1.start();
-      osc2.start();
-
-      hornNodes = { osc1: osc1, osc2: osc2, gain: gain, lfo: lfo };
+  // ── Jeep Horn ──
+  function startHorn() {
+    try {
+      var h = hornPool[hornPoolIdx];
+      hornPoolIdx = (hornPoolIdx + 1) % hornPool.length;
+      h.currentTime = 0;
+      h.play().catch(function() {});
     } catch (e) {}
   }
 
   function stopHorn() {
-    if (hornNodes) {
-      try {
-        hornNodes.osc1.stop();
-        hornNodes.osc2.stop();
-        hornNodes.lfo.stop();
-      } catch (e) {}
-      hornNodes = null;
-    }
+    // Horn plays through naturally; nothing to stop
   }
 
   // ── Trigger: double-click on hero title ──
@@ -377,16 +353,11 @@
     var screechVol = 0;
     var isBraking = (keys['arrowdown'] || keys['s']) && car.speed > 0.5;
     if (isBraking) {
-      // Braking screech — louder, lower pitched
+      // Braking screech — louder
       screechVol = Math.min(0.2, car.speed / car.maxSpeed * 0.25);
-      if (screechNodes && screechNodes.bp) {
-        screechNodes.bp.frequency.setTargetAtTime(700, audioCtx.currentTime, 0.05);
-      }
+      playBrake();
     } else if (steering && Math.abs(car.speed) > 1.5) {
       screechVol = Math.min(0.12, Math.abs(car.speed) / car.maxSpeed * 0.15);
-      if (screechNodes && screechNodes.bp) {
-        screechNodes.bp.frequency.setTargetAtTime(1000, audioCtx.currentTime, 0.05);
-      }
     }
     setScreechVolume(screechVol);
 
