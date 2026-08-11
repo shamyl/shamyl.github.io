@@ -187,10 +187,10 @@
       y: canvas.height / 2,
       angle: 0,
       speed: 0,
-      maxSpeed: 7,
-      acceleration: 0.3,
-      friction: 0.06,
-      turnSpeed: 0.05,
+      maxSpeed: 14,
+      acceleration: 0.12,
+      friction: 0.04,
+      turnSpeed: 0.045,
       width: 120,
       height: 72,
       wheelAngle: 0,
@@ -238,9 +238,12 @@
   // ── Physics ──
   function updateCar() {
     if (keys['arrowup'] || keys['w']) {
-      car.speed = Math.min(car.speed + car.acceleration, car.maxSpeed);
+      // Gradual ramp: acceleration decreases as speed increases (diminishing returns)
+      var accelFactor = 1 - (Math.abs(car.speed) / car.maxSpeed) * 0.7;
+      car.speed = Math.min(car.speed + car.acceleration * accelFactor, car.maxSpeed);
     } else if (keys['arrowdown'] || keys['s']) {
-      car.speed = Math.max(car.speed - car.acceleration, -car.maxSpeed * 0.6);
+      var decelFactor = 1 - (Math.abs(car.speed) / (car.maxSpeed * 0.6)) * 0.7;
+      car.speed = Math.max(car.speed - car.acceleration * decelFactor, -car.maxSpeed * 0.6);
     } else {
       if (Math.abs(car.speed) < car.friction) { car.speed = 0; }
       else { car.speed -= Math.sign(car.speed) * car.friction; }
@@ -283,14 +286,14 @@
     // Vertical: clamp to viewport (page scrolls instead)
     var minY = 40;
     var maxY = canvas.height - 40;
+    // Multiply scroll by 3 for faster page traversal
+    var scrollMultiplier = 3;
     if (car.y < minY) {
-      // Scroll page up
-      window.scrollBy(0, car.y - minY);
+      window.scrollBy(0, (car.y - minY) * scrollMultiplier);
       car.y = minY;
     }
     if (car.y > maxY) {
-      // Scroll page down
-      window.scrollBy(0, car.y - maxY);
+      window.scrollBy(0, (car.y - maxY) * scrollMultiplier);
       car.y = maxY;
     }
 
