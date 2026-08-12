@@ -430,11 +430,10 @@
       if (p.life <= 0) car.exhaustParticles.splice(i, 1);
     }
 
-    // ── Skid marks — leave dark tracks when turning at speed or braking hard ──
+    // ── Skid marks — leave dark tracks whenever the car is moving ──
     var speedAbs = Math.abs(car.speed);
-    var isBrakingHard = (keys['arrowdown'] || keys['s']) && car.speed > 2;
-    var isSharpTurn = speedAbs > 2.5 && steering;
-    var isSkidding = (isBrakingHard || isSharpTurn) && speedAbs > 1;
+    var isBrakingHard = (keys['arrowdown'] || keys['s']) && car.speed > 1;
+    var isSkidding = speedAbs > 0.5;
 
     if (isSkidding) {
       var halfW = car.width / 2;
@@ -457,10 +456,13 @@
       var dist = Math.sqrt(dx * dx + dy * dy);
 
       if (dist >= car.skidSpacing) {
-        var alpha = isBrakingHard ? 0.35 : 0.22;
-        var markWidth = isBrakingHard ? 3.5 : 2.5;
+        // Heavier marks when braking or turning at speed
+        var alpha = 0.15;
+        var markWidth = 2.5;
+        if (isBrakingHard) { alpha = 0.4; markWidth = 4; }
+        else if (steering && speedAbs > 2) { alpha = 0.3; markWidth = 3; }
 
-        skidCtx.strokeStyle = 'rgba(30,30,30,' + alpha + ')';
+        skidCtx.strokeStyle = 'rgba(25,25,25,' + alpha + ')';
         skidCtx.lineWidth = markWidth;
         skidCtx.lineCap = 'round';
 
@@ -558,7 +560,7 @@
     if (skidCanvas) {
       // Very slow fade so old marks eventually disappear
       skidCtx.globalCompositeOperation = 'destination-out';
-      skidCtx.fillStyle = 'rgba(0,0,0,0.003)';
+      skidCtx.fillStyle = 'rgba(0,0,0,0.001)';
       skidCtx.fillRect(0, 0, skidCanvas.width, skidCanvas.height);
       skidCtx.globalCompositeOperation = 'source-over';
 
