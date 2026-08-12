@@ -1,0 +1,240 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 144" width="240" height="144">
+  <defs>
+    <!-- Gradients for 2.5D shading -->
+    <linearGradient id="bodyRed" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e84444"/>
+      <stop offset="30%" stop-color="#cc1a1a"/>
+      <stop offset="70%" stop-color="#a01515"/>
+      <stop offset="100%" stop-color="#700808"/>
+    </linearGradient>
+    <linearGradient id="bodyRedFlat" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#b01818"/>
+      <stop offset="100%" stop-color="#800c0c"/>
+    </linearGradient>
+    <linearGradient id="cabTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff5555"/>
+      <stop offset="100%" stop-color="#cc1a1a"/>
+    </linearGradient>
+    <linearGradient id="windowGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4a7a9a"/>
+      <stop offset="40%" stop-color="#2a5070"/>
+      <stop offset="60%" stop-color="#1a3a5a"/>
+      <stop offset="100%" stop-color="#0a2a4a"/>
+    </linearGradient>
+    <linearGradient id="tireGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a2a2a"/>
+      <stop offset="50%" stop-color="#1a1a1a"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </linearGradient>
+    <linearGradient id="chromeGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8e8ee"/>
+      <stop offset="50%" stop-color="#a8a8b0"/>
+      <stop offset="100%" stop-color="#686870"/>
+    </linearGradient>
+    <linearGradient id="bedGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1a1a"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </linearGradient>
+    <radialGradient id="headlightGrad" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#fff8d0"/>
+      <stop offset="50%" stop-color="#ffd440"/>
+      <stop offset="100%" stop-color="#aa8810"/>
+    </radialGradient>
+    <radialGradient id="shadowGrad" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur4">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+  </defs>
+
+  <!-- Drop shadow -->
+  <ellipse cx="120" cy="138" rx="100" ry="10" fill="url(#shadowGrad)" filter="url(#blur4)"/>
+
+  <!-- ==================== WHEELS (behind body) ==================== -->
+  <!-- Front-left wheel -->
+  <g>
+    <rect x="150" y="14" width="14" height="22" rx="3" fill="url(#tireGrad)"/>
+    <rect x="152" y="16" width="10" height="18" rx="2" fill="#333"/>
+    <rect x="154" y="18" width="6" height="14" rx="1" fill="#555"/>
+    <circle cx="157" cy="25" r="2.5" fill="#888"/>
+    <circle cx="157" cy="25" r="1" fill="#444"/>
+  </g>
+  <!-- Front-right wheel -->
+  <g>
+    <rect x="150" y="108" width="14" height="22" rx="3" fill="url(#tireGrad)"/>
+    <rect x="152" y="110" width="10" height="18" rx="2" fill="#333"/>
+    <rect x="154" y="112" width="6" height="14" rx="1" fill="#555"/>
+    <circle cx="157" cy="119" r="2.5" fill="#888"/>
+    <circle cx="157" cy="119" r="1" fill="#444"/>
+  </g>
+  <!-- Rear-left wheel -->
+  <g>
+    <rect x="40" y="14" width="14" height="22" rx="3" fill="url(#tireGrad)"/>
+    <rect x="42" y="16" width="10" height="18" rx="2" fill="#333"/>
+    <rect x="44" y="18" width="6" height="14" rx="1" fill="#555"/>
+    <circle cx="47" cy="25" r="2.5" fill="#888"/>
+    <circle cx="47" cy="25" r="1" fill="#444"/>
+  </g>
+  <!-- Rear-right wheel -->
+  <g>
+    <rect x="40" y="108" width="14" height="22" rx="3" fill="url(#tireGrad)"/>
+    <rect x="42" y="110" width="10" height="18" rx="2" fill="#333"/>
+    <rect x="44" y="112" width="6" height="14" rx="1" fill="#555"/>
+    <circle cx="47" cy="119" r="2.5" fill="#888"/>
+    <circle cx="47" cy="119" r="1" fill="#444"/>
+  </g>
+
+  <!-- ==================== FLATBED (rear) ==================== -->
+  <!-- Bed floor -->
+  <rect x="22" y="26" width="96" height="92" rx="4" fill="url(#bedGrad)" stroke="#333" stroke-width="1"/>
+  
+  <!-- Diamond plate texture -->
+  <g opacity="0.3">
+    <polygon points="28,32 31,32 34,35 34,38 31,38 28,35" fill="#444"/>
+    <polygon points="36,32 39,32 42,35 42,38 39,38 36,35" fill="#444"/>
+    <polygon points="44,32 47,32 50,35 50,38 47,38 44,35" fill="#444"/>
+    <polygon points="52,32 55,32 58,35 58,38 55,38 52,35" fill="#444"/>
+    <polygon points="60,32 63,32 66,35 66,38 63,38 60,35" fill="#444"/>
+    <polygon points="68,32 71,32 74,35 74,38 71,38 68,35" fill="#444"/>
+    <polygon points="76,32 79,32 82,35 82,38 79,38 76,35" fill="#444"/>
+    <polygon points="84,32 87,32 90,35 90,38 87,38 84,35" fill="#444"/>
+    <polygon points="92,32 95,32 98,35 98,38 95,38 92,35" fill="#444"/>
+    <polygon points="100,32 103,32 106,35 106,38 103,38 100,35" fill="#444"/>
+    <polygon points="108,32 111,32 114,35 114,38 111,38 108,35" fill="#444"/>
+  </g>
+  
+  <!-- Side rails (red, raised) -->
+  <rect x="22" y="26" width="96" height="8" rx="3" fill="url(#bodyRedFlat)" stroke="#1a1a1a" stroke-width="1"/>
+  <rect x="22" y="110" width="96" height="8" rx="3" fill="url(#bodyRedFlat)" stroke="#1a1a1a" stroke-width="1"/>
+  
+  <!-- Tie-down hooks -->
+  <circle cx="35" cy="30" r="1.5" fill="url(#chromeGrad)"/>
+  <circle cx="55" cy="30" r="1.5" fill="url(#chromeGrad)"/>
+  <circle cx="75" cy="30" r="1.5" fill="url(#chromeGrad)"/>
+  <circle cx="95" cy="30" r="1.5" fill="url(#chromeGrad)"/>
+  <circle cx="35" cy="114" r="1.5" fill="url(#chromeGrad)"/>
+  <circle cx="55" cy="114" r="1.5" fill="url(#chromeGrad)"/>
+  <circle cx="75" cy="114" r="1.5" fill="url(#chromeGrad)"/>
+  <circle cx="95" cy="114" r="1.5" fill="url(#chromeGrad)"/>
+
+  <!-- ==================== CAB (front) ==================== -->
+  <!-- Main cab body -->
+  <rect x="118" y="26" width="100" height="92" rx="10" fill="url(#bodyRed)" stroke="#600505" stroke-width="2"/>
+  
+  <!-- 2.5D highlight on top -->
+  <rect x="122" y="28" width="92" height="40" rx="8" fill="url(#cabTop)" opacity="0.5"/>
+  <!-- Bright highlight strip -->
+  <rect x="124" y="30" width="88" height="6" rx="3" fill="#ff7777" opacity="0.4"/>
+  
+  <!-- Lower body shadow -->
+  <rect x="120" y="70" width="96" height="46" rx="8" fill="#700808" opacity="0.4"/>
+
+  <!-- ==================== CAB ROOF ==================== -->
+  <rect x="126" y="34" width="84" height="76" rx="6" fill="#9a1010" stroke="#1a1a1a" stroke-width="1"/>
+  
+  <!-- Roof rack -->
+  <g stroke="#666" stroke-width="1.5" fill="none">
+    <line x1="130" y1="38" x2="206" y2="38"/>
+    <line x1="130" y1="106" x2="206" y2="106"/>
+    <line x1="134" y1="40" x2="134" y2="104"/>
+    <line x1="142" y1="40" x2="142" y2="104"/>
+    <line x1="150" y1="40" x2="150" y2="104"/>
+    <line x1="158" y1="40" x2="158" y2="104"/>
+    <line x1="166" y1="40" x2="166" y2="104"/>
+    <line x1="174" y1="40" x2="174" y2="104"/>
+    <line x1="182" y1="40" x2="182" y2="104"/>
+    <line x1="190" y1="40" x2="190" y2="104"/>
+    <line x1="198" y1="40" x2="198" y2="104"/>
+  </g>
+  <rect x="130" y="38" width="76" height="2" fill="#777" opacity="0.6"/>
+
+  <!-- TOYOTA on roof -->
+  <text x="168" y="76" font-family="sans-serif" font-size="7" font-weight="bold" 
+        fill="#777" text-anchor="middle" letter-spacing="1">TOYOTA</text>
+
+  <!-- ==================== WINDSHIELD ==================== -->
+  <rect x="202" y="32" width="12" height="80" rx="2" fill="#1a1a1a"/>
+  <rect x="204" y="34" width="8" height="76" rx="1" fill="url(#windowGrad)"/>
+  <!-- Divider -->
+  <line x1="208" y1="34" x2="208" y2="110" stroke="#0a0a0a" stroke-width="1.5"/>
+  <!-- Reflection -->
+  <line x1="206" y1="36" x2="210" y2="42" stroke="#a0d0f0" stroke-width="1" opacity="0.6"/>
+  <line x1="206" y1="38" x2="210" y2="44" stroke="#a0d0f0" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- ==================== SIDE WINDOWS ==================== -->
+  <rect x="130" y="30" width="68" height="6" rx="1" fill="url(#windowGrad)" stroke="#0a0a0a" stroke-width="0.5"/>
+  <rect x="130" y="108" width="68" height="6" rx="1" fill="url(#windowGrad)" stroke="#0a0a0a" stroke-width="0.5"/>
+
+  <!-- ==================== DOOR LINES ==================== -->
+  <line x1="165" y1="28" x2="165" y2="36" stroke="#1a1a1a" stroke-width="1"/>
+  <line x1="165" y1="108" x2="165" y2="116" stroke="#1a1a1a" stroke-width="1"/>
+  
+  <!-- Door handles (chrome) -->
+  <rect x="160" y="31" width="4" height="2" rx="0.5" fill="url(#chromeGrad)"/>
+  <rect x="160" y="111" width="4" height="2" rx="0.5" fill="url(#chromeGrad)"/>
+
+  <!-- ==================== HEADLIGHTS ==================== -->
+  <!-- Left headlight -->
+  <rect x="213" y="34" width="7" height="12" rx="2" fill="#333" stroke="#1a1a1a" stroke-width="0.5"/>
+  <ellipse cx="216.5" cy="40" rx="2.5" ry="4" fill="url(#headlightGrad)"/>
+  <!-- Right headlight -->
+  <rect x="213" y="98" width="7" height="12" rx="2" fill="#333" stroke="#1a1a1a" stroke-width="0.5"/>
+  <ellipse cx="216.5" cy="104" rx="2.5" ry="4" fill="url(#headlightGrad)"/>
+
+  <!-- ==================== GRILLE ==================== -->
+  <rect x="213" y="50" width="5" height="44" fill="#0a0a0a"/>
+  <g stroke="#444" stroke-width="0.5">
+    <line x1="213" y1="52" x2="218" y2="52"/>
+    <line x1="213" y1="55" x2="218" y2="55"/>
+    <line x1="213" y1="58" x2="218" y2="58"/>
+    <line x1="213" y1="61" x2="218" y2="61"/>
+    <line x1="213" y1="64" x2="218" y2="64"/>
+    <line x1="213" y1="67" x2="218" y2="67"/>
+    <line x1="213" y1="70" x2="218" y2="70"/>
+    <line x1="213" y1="73" x2="218" y2="73"/>
+    <line x1="213" y1="76" x2="218" y2="76"/>
+    <line x1="213" y1="79" x2="218" y2="79"/>
+    <line x1="213" y1="82" x2="218" y2="82"/>
+    <line x1="213" y1="85" x2="218" y2="85"/>
+    <line x1="213" y1="88" x2="218" y2="88"/>
+    <line x1="213" y1="91" x2="218" y2="91"/>
+  </g>
+  <!-- Toyota badge -->
+  <circle cx="215.5" cy="72" r="2.5" fill="url(#chromeGrad)" stroke="#800" stroke-width="0.5"/>
+
+  <!-- ==================== TAILLIGHTS ==================== -->
+  <rect x="18" y="32" width="6" height="12" rx="1" fill="#cc1010" stroke="#0a0a0a" stroke-width="0.5"/>
+  <rect x="18" y="100" width="6" height="12" rx="1" fill="#cc1010" stroke="#0a0a0a" stroke-width="0.5"/>
+  <!-- Tail light glow -->
+  <rect x="17" y="33" width="4" height="10" rx="1" fill="#ff2020" opacity="0.6"/>
+  <rect x="17" y="101" width="4" height="10" rx="1" fill="#ff2020" opacity="0.6"/>
+
+  <!-- ==================== BUMPER (chrome) ==================== -->
+  <rect x="218" y="46" width="3" height="52" fill="url(#chromeGrad)"/>
+  <rect x="218" y="46" width="1" height="52" fill="#fff" opacity="0.6"/>
+
+  <!-- ==================== SNORKEL ==================== -->
+  <rect x="132" y="14" width="4" height="18" fill="#1a1a1a"/>
+  <rect x="132" y="14" width="8" height="4" rx="1" fill="#1a1a1a"/>
+  <rect x="133" y="15" width="3" height="2" rx="0.5" fill="#333"/>
+  <line x1="134" y1="18" x2="134" y2="30" stroke="#444" stroke-width="0.5"/>
+
+  <!-- ==================== SIDE MIRRORS ==================== -->
+  <!-- Left mirror -->
+  <rect x="196" y="20" width="10" height="6" rx="2" fill="#1a1a1a"/>
+  <rect x="197" y="21" width="8" height="4" rx="1" fill="url(#chromeGrad)"/>
+  <rect x="198" y="22" width="6" height="2" rx="0.5" fill="#bbb"/>
+  <!-- Right mirror -->
+  <rect x="196" y="118" width="10" height="6" rx="2" fill="#1a1a1a"/>
+  <rect x="197" y="119" width="8" height="4" rx="1" fill="url(#chromeGrad)"/>
+  <rect x="198" y="120" width="6" height="2" rx="0.5" fill="#bbb"/>
+
+  <!-- ==================== RED ACCENT STRIPE ==================== -->
+  <rect x="24" y="71" width="192" height="2" fill="#ff3838" opacity="0.7"/>
+
+  <!-- ==================== INDICATOR (turn signal) ==================== -->
+  <rect x="213" y="48" width="5" height="3" rx="0.5" fill="#ff8800" opacity="0.7"/>
+  <rect x="213" y="93" width="5" height="3" rx="0.5" fill="#ff8800" opacity="0.7"/>
+</svg>
