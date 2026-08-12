@@ -15,6 +15,7 @@
 
   var gameActive = false;
   var canvas, ctx, car, keys = {}, animationId, hintEl, timerInterval;
+  var skidCanvas, skidCtx;
   var carSprite = new Image();
   carSprite.src = '/images/land-cruiser-sprite.svg';
 
@@ -251,6 +252,12 @@
       if (hintEl) { hintEl.style.transition = 'opacity 1s'; hintEl.style.opacity = '0'; }
     }, 5000);
 
+    // Skid marks layer (separate canvas so marks persist on the ground)
+    skidCanvas = document.createElement('canvas');
+    skidCanvas.width = window.innerWidth;
+    skidCanvas.height = window.innerHeight;
+    skidCtx = skidCanvas.getContext('2d');
+
     car = {
       x: canvas.width / 2,
       y: canvas.height / 2,
@@ -266,7 +273,14 @@
       wheelAngle: 0,
       honkTimer: 0,
       exhaustParticles: [],
-      prevSteering: false
+      prevSteering: false,
+      lastSkidX: 0,
+      lastSkidY: 0,
+      skidSpacing: 4,
+      prevLeftSkidX: null,
+      prevLeftSkidY: null,
+      prevRightSkidX: null,
+      prevRightSkidY: null
     };
 
     window.addEventListener('keydown', onKeyDown, { passive: false });
@@ -307,8 +321,20 @@
   }
 
   function onResize() {
+    var oldSkid = null;
+    if (skidCanvas) {
+      oldSkid = document.createElement('canvas');
+      oldSkid.width = skidCanvas.width;
+      oldSkid.height = skidCanvas.height;
+      oldSkid.getContext('2d').drawImage(skidCanvas, 0, 0);
+    }
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+    if (skidCanvas) {
+      skidCanvas.width = window.innerWidth;
+      skidCanvas.height = window.innerHeight;
+      if (oldSkid) skidCtx.drawImage(oldSkid, 0, 0);
+    }
   }
 
   // ── Physics ──
@@ -404,6 +430,69 @@
       if (p.life <= 0) car.exhaustParticles.splice(i, 1);
     }
 
+    // ── Skid marks — leave dark tracks when turning at speed or braking hard ──
+    var speedAbs = Math.abs(car.speed);
+    var isBrakingHard = (keys['arrowdown'] || keys['s']) && car.speed > 2;
+    var isSharpTurn = speedAbs > 2.5 && steering;
+    var isSkidding = (isBrakingHard || isSharpTurn) && speedAbs > 1;
+
+    if (isSkidding) {
+      var halfW = car.width / 2;
+      var halfH = car.height / 2;
+      var rearOffsetX = -halfW + car.width * 0.15;
+      var wheelSpread = halfH + 2;
+
+      var cosA = Math.cos(car.angle);
+      var sinA = Math.sin(car.angle);
+
+      // Left rear wheel world position
+      var lx = car.x + cosA * rearOffsetX - sinA * (-wheelSpread);
+      var ly = car.y + sinA * rearOffsetX + cosA * (-wheelSpread);
+      // Right rear wheel world position
+      var rx = car.x + cosA * rearOffsetX - sinA * wheelSpread;
+      var ry = car.y + sinA * rearOffsetX + cosA * wheelSpread;
+
+      var dx = car.x - car.lastSkidX;
+      var dy = car.y - car.lastSkidY;
+      var dist = Math.sqrt(dx * dx + dy * dy);
+
+      if (dist >= car.skidSpacing) {
+        var alpha = isBrakingHard ? 0.35 : 0.22;
+        var markWidth = isBrakingHard ? 3.5 : 2.5;
+
+        skidCtx.strokeStyle = 'rgba(30,30,30,' + alpha + ')';
+        skidCtx.lineWidth = markWidth;
+        skidCtx.lineCap = 'round';
+
+        // Left skid mark segment
+        if (car.prevLeftSkidX !== null) {
+          skidCtx.beginPath();
+          skidCtx.moveTo(car.prevLeftSkidX, car.prevLeftSkidY);
+          skidCtx.lineTo(lx, ly);
+          skidCtx.stroke();
+        }
+        // Right skid mark segment
+        if (car.prevRightSkidX !== null) {
+          skidCtx.beginPath();
+          skidCtx.moveTo(car.prevRightSkidX, car.prevRightSkidY);
+          skidCtx.lineTo(rx, ry);
+          skidCtx.stroke();
+        }
+
+        car.prevLeftSkidX = lx;
+        car.prevLeftSkidY = ly;
+        car.prevRightSkidX = rx;
+        car.prevRightSkidY = ry;
+        car.lastSkidX = car.x;
+        car.lastSkidY = car.y;
+      }
+    } else {
+      car.prevLeftSkidX = null;
+      car.prevLeftSkidY = null;
+      car.prevRightSkidX = null;
+      car.prevRightSkidY = null;
+    }
+
     if (car.honkTimer > 0) car.honkTimer--;
   }
 
@@ -464,6 +553,18 @@
     if (!gameActive) return;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     updateCar();
+
+    // Draw skid marks (persist on the ground, fade slowly)
+    if (skidCanvas) {
+      // Very slow fade so old marks eventually disappear
+      skidCtx.globalCompositeOperation = 'destination-out';
+      skidCtx.fillStyle = 'rgba(0,0,0,0.003)';
+      skidCtx.fillRect(0, 0, skidCanvas.width, skidCanvas.height);
+      skidCtx.globalCompositeOperation = 'source-over';
+
+      ctx.drawImage(skidCanvas, 0, 0);
+    }
+
     drawCar();
     animationId = requestAnimationFrame(render);
   }
@@ -481,6 +582,8 @@
     window.removeEventListener('resize', onResize);
     if (canvas && canvas.parentNode) canvas.parentNode.removeChild(canvas);
     if (hintEl && hintEl.parentNode) hintEl.parentNode.removeChild(hintEl);
+    skidCanvas = null;
+    skidCtx = null;
     car = null; keys = {};
   }
 
