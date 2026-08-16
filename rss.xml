@@ -5,13 +5,109 @@
     <link>https://shamyl.github.io/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Sun, 16 Aug 2026 08:55:02 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 16 Aug 2026 09:21:41 GMT</lastBuildDate>
     <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamyl.github.io/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamyl.github.io/blog</link>
     </image>
+    <item>
+      <title>Why Godot Is Becoming the Go-To Game Engine for STEAM Education</title>
+      <link>https://shamyl.github.io/blog/godot-game-engine-steam-education</link>
+      <guid isPermaLink="true">https://shamyl.github.io/blog/godot-game-engine-steam-education</guid>
+      <pubDate>Sun, 16 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Godot&apos;s MIT license, free pricing, and rapid feature growth make it the strongest open-source game engine for classrooms, maker spaces, and STEAM programs. Here is what educators and program builders need to know.</description>
+      <content:encoded><![CDATA[<p><img src="/images/godot-editor-screenshot.jpg" alt="Godot Engine editor showing a 3D scene with the scene tree dock, filesystem dock, and inspector panel">
+<em>Screenshot: Godot Engine editor interface (official screenshot from the <a href="https://github.com/godotengine/godot-design">Godot design repository</a>, licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>)</em></p>
+<p>Godot, the open-source game engine licensed under MIT, has grown from a niche project into a serious competitor to Unity and Unreal — and for STEAM educators, it may now be the best choice available. With Godot 4.7 stable released in June 2026, version 4.8 already in active development, and a community of over 115,000 GitHub stars, the engine offers a combination of zero-cost licensing, a built-in scripting language, and a feature set that rivals proprietary tools — without the pricing surprises that have driven indie developers and educators away from Unity.</p>
+<h2>In Brief</h2>
+<ul>
+<li>Godot is fully free and MIT-licensed — no runtime fees, no revenue thresholds, no subscription tiers</li>
+<li>Godot 4.7 stable shipped June 18, 2026, with 4.7.1 following on July 14; Godot 4.8 is already in dev snapshots</li>
+<li>The engine has over 115,000 GitHub stars, making it one of the most popular open-source projects in the world</li>
+<li>Unity&#39;s September 2023 &quot;runtime fee&quot; announcement pushed many indie developers and educators toward Godot</li>
+<li>Godot&#39;s GDScript is beginner-friendly and Python-adjacent, making it well-suited for classroom adoption</li>
+<li>The Godot Foundation&#39;s June 2026 contribution policy update addresses AI-generated code — a concern directly relevant to CS educators</li>
+</ul>
+<h2>What Makes Godot Different from Unity and Unreal</h2>
+<p>Most game engines used in education fall into one of two categories: powerful but expensive (Unity, Unreal Engine), or free but limited (Scratch, older versions of Stencyl). Godot breaks this tradeoff.</p>
+<p><strong>Licensing is the biggest differentiator.</strong> Godot is released under the MIT license, which means anyone can use it, modify it, redistribute it, or even fork it — commercially or non-commercially — without paying royalties or asking permission. There are no install-count fees, no revenue thresholds, and no &quot;Personal vs. Pro&quot; tiers. For a school running 30 machines in a computer lab, this matters: no license management, no per-seat costs, no risk of audit.</p>
+<p>The contrast with Unity is stark. On September 12, 2023, Unity announced a &quot;runtime fee&quot; — a per-installation charge that would apply once a game crossed certain revenue and install thresholds. According to <a href="https://en.wikipedia.org/wiki/Unity_(game_engine)#Runtime_fee_controversy">Wikipedia&#39;s summary of the controversy</a>, the announcement faced immediate backlash from indie developers, with studios like Innersloth ( makers of <em>Among Us</em>) and Mega Crit ( makers of <em>Slay the Spire</em>) publicly committing to switch engines. Mega Crit specifically named Godot as their choice for <em>Slay the Spire 2</em>. Unity revised the terms on September 22, 2023, but the damage to trust was lasting. For educators, the episode raised a practical question: how can you build a curriculum around a tool whose licensing terms might change mid-semester?</p>
+<p>Unreal Engine remains free until a project earns $1 million in revenue, after which Epic takes a 5% royalty. That model is generous for students and small studios, but the engine itself is heavyweight — the installed size, hardware requirements, and complexity of Unreal&#39;s C++ and Blueprint systems make it impractical for most K-12 settings and many introductory university courses.</p>
+<p>Godot sits in a different position entirely. The editor is a single executable under 100 MB. It runs on Windows, macOS, Linux, and from a web browser. Projects can be exported to desktop, mobile, web, and consoles (with publisher permission). There is no account to create, no license to accept, and no phone-home mechanism.</p>
+<h2>Godot 4.7 and 4.8: What Is New and Why It Matters for Education</h2>
+<p>Godot&#39;s development pace has accelerated dramatically. The <a href="https://github.com/godotengine/godot/releases/tag/4.7-stable">4.7 stable release</a> shipped on June 18, 2026, with a maintenance update (<a href="https://github.com/godotengine/godot/releases/tag/4.7.1-stable">4.7.1</a>) following on July 14. Combined, these releases have been downloaded over 700,000 times from GitHub alone.</p>
+<p>The <a href="https://godotengine.org/article/dev-snapshot-godot-4-8-dev-3/">4.8 dev 3 snapshot</a>, published August 7, 2026, shows where the engine is heading. Several features are particularly relevant for educational use:</p>
+<p><strong>Docked game view by default.</strong> Previously, running a project from the editor opened a separate window. Now, the game view embeds directly within the editor by default — a small change that makes a large difference in classroom settings where students are working on laptops with limited screen space.</p>
+<p><strong>GDScript error underlines.</strong> Godot&#39;s built-in scripting language now underlines the specific portion of code causing a warning or error, rather than highlighting the entire line. For beginners learning to debug, this precision helps them understand <em>what</em> went wrong, not just <em>where</em>.</p>
+<p><strong>Touch support for CodeEdit.</strong> For schools using tablets or touchscreen laptops — common in Pakistani classrooms and many developing-country education settings — the code editor now has proper touch support. This addresses a real gap: previously, editing code on a tablet required a Bluetooth keyboard or a different tool entirely.</p>
+<p><strong>Pseudolocalization preview.</strong> A built-in tool that simulates how text will look when translated to other languages. For international education programs, this makes localization planning visible early in development — useful for any program building educational games for non-English-speaking audiences.</p>
+<p><strong>FileSystem improvements.</strong> Glob-based searching and zoom controls make the editor more approachable for new users navigating a project for the first time.</p>
+<h2>GDScript: A Learning Language That Scales</h2>
+<p>One of Godot&#39;s most education-friendly features is GDScript, a Python-adjacent language designed specifically for the engine. For educators comparing Godot to Unity (which uses C#) or Unreal (C++ and Blueprints), GDScript offers a distinct advantage: it is readable enough for beginners while being capable enough for production games.</p>
+<p>The syntax will be immediately familiar to anyone who has taught Python:</p>
+<pre><code class="language-gdscript">extends RigidBody2D
+
+func _ready():
+    var tween = create_tween()
+    tween.tween_property(self, &quot;modulate&quot;, Color.RED, 1.0)
+    tween.tween_callback(queue_free)
+</code></pre>
+<p>For STEAM programs that already teach Python — and many do, given Python&#39;s dominance in data science and machine learning — GDScript provides a natural transition into game development without asking students to learn an entirely new syntax. This is not a trivial benefit. As <a href="https://blog.pickcode.io/program-with-paint-brushes-not-pencils/">noted in a July 2026 blog post by educator Charlie Meyer</a>, the key to motivating students to write code is giving them abstractions that produce tangible, visual results. Meyer&#39;s &quot;PaintBrush&quot; Python class — which lets students draw with code — demonstrates the same principle that makes GDScript effective: when code produces something you can see, engagement follows.</p>
+<p>The Godot 4.7 release also added <code>AwaitTweener</code> — the ability to chain animations that wait for specific signals — and optimized animation systems that make it easier to build interactive, visually rich experiences without writing complex state machines.</p>
+<h2>The AI Contribution Policy: Why It Matters for CS Education</h2>
+<p>In June 2026, the <a href="https://godotengine.org/article/contribution-policy-2026/">Godot Foundation published updated contribution policies</a> that directly address AI-generated code. The policy states that the project will enforce stricter rules on AI contributions because &quot;reviewing PRs is already tedious work, but it is rewarding because reviewers generally feel that their efforts are contributing to educating a new contributor. If your feedback on PRs is just being absorbed by a machine and not going towards mentoring a potential future maintainer, it becomes much harder to justify spending your free time on PR review.&quot;</p>
+<p>This position is worth examining from an education perspective. The Godot Foundation is explicitly naming a tension that every CS educator faces in 2026: AI can generate code, but the learning happens in the struggle of writing, debugging, and understanding. When an AI agent submits a pull request, no one learns — not the agent, and not the reviewer. The same logic applies in a classroom. A student who pastes AI-generated code without understanding it has produced output, but not learning. This is a challenge <a href="/blog/ai-summit-2023">Shamyl discussed at the AI Summit Islamabad</a> in the context of AI-powered assessment — the tool should support learning, not replace it.</p>
+<p>The policy does not ban AI assistance outright. Instead, it requires that contributors take responsibility for their code and be &quot;able and willing to fix it when needed.&quot; This is a reasonable middle ground — and it mirrors what many educators are arriving at independently: AI as a tutor or reference is fine; AI as a replacement for student effort is not.</p>
+<h2>Godot for Educational Simulators and Interactive Content</h2>
+<p>Game engines are not only for games. For anyone building educational simulations, interactive lessons, or virtual labs, Godot offers a compelling platform.</p>
+<p>The 2D and 3D rendering pipelines support the kinds of visual content that make educational tools engaging. The physics engine (with Jolt Physics integration in 4.7+) handles simulations that need real-world behavior. The animation system supports everything from character animation to procedural motion. And because Godot projects can be exported to the web, interactive content built in Godot can be embedded in learning management systems or accessed from any browser.</p>
+<p>For product teams building EdTech tools, Godot&#39;s open-source nature means you are never at the mercy of a single vendor. If a feature is missing, you can build it. If the engine stops meeting your needs, you can fork it. If the project disappears tomorrow (unlikely, given its momentum), your code still runs. This is the same logic that has driven enterprise adoption of open-source infrastructure — and it applies equally to education technology.</p>
+<h2>What This Means for Pakistan and Emerging Markets</h2>
+<p>In Pakistan and similar markets, the economics of game engine selection are amplified. A school in Karachi or Lahore evaluating Unity faces not just the licensing cost but the hardware requirements, the bandwidth needed for downloads and updates, and the complexity of account management across shared machines. Godot&#39;s single-executable editor, low hardware requirements, and offline capability address each of these constraints.</p>
+<p>The skills transfer matters too. Students who learn GDScript are one syntax shift away from Python, which is the dominant language in Pakistan&#39;s growing data science and AI community. This is why <a href="/blog/pycon-2024">programming robots with Python</a> — a talk Shamyl gave at PyCon Pakistan 2024 — translates so naturally into Godot-based curricula. Students who learn Godot&#39;s node-based architecture understand component-based design — a concept that transfers to Unity, to web development, to robotics programming, and to any system built on composable parts.</p>
+<p>For programs like <a href="https://learnobots.com">LearnOBots</a>, which bring hands-on STEAM education to Pakistani schools and build tools like <a href="/work/robosim">RoboSim</a> for teaching programming through 3D simulation, open-source tools are not just a cost savings — they are an alignment of values. When the tools you teach with are themselves community-built and freely available, students can continue learning at home, on their own machines, without hitting a paywall.</p>
+<h2>Practical Recommendations for Educators</h2>
+<p>If you are considering Godot for a STEAM program, here is a starting framework:</p>
+<ol>
+<li><strong>Start with 2D.</strong> Godot&#39;s 2D system is mature and approachable. Have students build a simple platformer or interactive story before moving to 3D.</li>
+<li><strong>Use the web editor for introductions.</strong> Godot&#39;s <a href="https://godotengine.org/article/dev-snapshot-godot-4-8-dev-3/">web editor</a> lets students try the engine without installing anything — ideal for a first session.</li>
+<li><strong>Teach GDScript alongside Python.</strong> The syntax overlap means you can reinforce concepts across both environments. Students who know Python basics can be productive in GDScript within a single session.</li>
+<li><strong>Use the node system to teach systems thinking.</strong> Godot&#39;s scene-as-tree architecture is itself a lesson in how complex systems are built from simple, composable parts — the same principle behind <a href="/work/buddy-bot">Buddy Bot&#39;s modular robotics platform</a>, where students combine a brain, backpacks, and bases into working robots.</li>
+<li><strong>Let students ship.</strong> Godot&#39;s one-click web export means students can share their work as a URL — which, for a young person, is a fundamentally different experience than &quot;it runs on my laptop.&quot;</li>
+<li><strong>Address AI honestly.</strong> Students will use AI tools. Teach them to use AI as a reference and tutor, not as a replacement for their own thinking. The Godot Foundation&#39;s contribution policy provides a useful real-world example of why this distinction matters.</li>
+</ol>
+<h2>What to Watch Next</h2>
+<ul>
+<li><strong>Godot 4.8 stable</strong> is expected in late 2026 or early 2027, pending feature freeze and the remaining dev snapshots.</li>
+<li><strong>Godot Community Poll 2026</strong> results will be published after submissions close, offering the most detailed picture yet of who uses Godot and for what purposes. The <a href="https://godotengine.org/article/godot-community-poll-2026/">poll was announced July 16</a> and covers user demographics, use cases, and feature priorities.</li>
+<li><strong>XR and visionOS support</strong> is expanding in 4.8, with a new visionOS module — relevant for any program exploring VR/AR in education.</li>
+<li><strong>Console support</strong> remains a paid service through third-party publishers like W4 Games, but the engine&#39;s open architecture means the gap between &quot;student project&quot; and &quot;shipped game&quot; is narrower than ever.</li>
+</ul>
+<h2>Conclusion</h2>
+<p>Godot&#39;s rise in STEAM education is not accidental. It results from a specific combination: MIT licensing that removes barriers, a scripting language that bridges to Python, an architecture that teaches systems thinking, and a community that has explicitly chosen to invest in education and mentorship — even pushing back against AI-generated contributions to protect the learning process.</p>
+<p>For educators, school leaders, and EdTech product teams evaluating game engines, the question is no longer whether Godot is &quot;ready.&quot; Godot 4.7 is stable, capable, and production-tested. The question is whether your curriculum, your hardware, and your teaching approach are ready to take advantage of a tool that is free in every sense that matters.</p>
+<p>If you are building educational simulations, interactive lessons, or game-development curricula, what engine are you currently using — and what would make you switch?</p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://godotengine.org/article/dev-snapshot-godot-4-8-dev-3/">Godot 4.8 dev 3 release notes</a> — Godot Engine blog, August 7, 2026</li>
+<li><a href="https://github.com/godotengine/godot/releases/tag/4.7-stable">Godot 4.7 release (GitHub)</a> — Published June 18, 2026</li>
+<li><a href="https://github.com/godotengine/godot/releases/tag/4.7.1-stable">Godot 4.7.1 release (GitHub)</a> — Published July 14, 2026</li>
+<li><a href="https://godotengine.org/article/contribution-policy-2026/">Changes to our Contribution Policies</a> — Godot Foundation, June 30, 2026</li>
+<li><a href="https://godotengine.org/article/godot-community-poll-2026/">Godot Community Poll 2026</a> — Godot Engine blog, July 16, 2026</li>
+<li><a href="https://github.com/godotengine/godot">Godot Engine on GitHub</a> — 115,726 stars, MIT License</li>
+<li><a href="https://en.wikipedia.org/wiki/Unity_(game_engine)#Runtime_fee_controversy">Unity runtime fee controversy</a> — Wikipedia</li>
+<li><a href="https://blog.pickcode.io/program-with-paint-brushes-not-pencils/">Program with Paint Brushes, Not Pencils</a> — Charlie Meyer, Pickcode blog, July 23, 2026</li>
+</ul>
+]]></content:encoded>
+      <category>game-engine</category>
+    <category>godot</category>
+    <category>steam-education</category>
+    <category>open-source</category>
+    <category>creative-coding</category>
+    <category>edtech</category>
+    </item>
     <item>
       <title>How NASA&apos;s SR-1 Freedom Nuclear Propulsion Mission Works and Why It Matters</title>
       <link>https://shamyl.github.io/blog/space-tech-2026-08-16</link>
