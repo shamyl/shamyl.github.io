@@ -7,7 +7,7 @@ const allPosts = await getCollection('blog');
 const posts = allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
 
-<BaseLayout title="Blog" description="Updates, thoughts, and announcements">
+<BaseLayout title="Blog" description="Updates, thoughts, and announcements" ogType="website" canonical="https://shamylmansoor.com/blog/">
   <section class="page-header">
     <div class="container">
       <div class="page-meta">

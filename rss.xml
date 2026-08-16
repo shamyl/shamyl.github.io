@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Shamyl Bin Mansoor - Blog</title>
-    <link>https://shamyl.github.io/blog</link>
+    <link>https://shamylmansoor.com/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Sun, 16 Aug 2026 09:21:41 GMT</lastBuildDate>
-    <atom:link href="https://shamyl.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>Sun, 16 Aug 2026 10:10:11 GMT</lastBuildDate>
+    <atom:link href="https://shamylmansoor.com/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
-      <url>https://shamyl.github.io/favicon.svg</url>
+      <url>https://shamylmansoor.com/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
-      <link>https://shamyl.github.io/blog</link>
+      <link>https://shamylmansoor.com/blog</link>
     </image>
     <item>
       <title>Why Godot Is Becoming the Go-To Game Engine for STEAM Education</title>
-      <link>https://shamyl.github.io/blog/godot-game-engine-steam-education</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/godot-game-engine-steam-education</guid>
+      <link>https://shamylmansoor.com/blog/godot-game-engine-steam-education</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/godot-game-engine-steam-education</guid>
       <pubDate>Sun, 16 Aug 2026 00:00:00 GMT</pubDate>
       <description>Godot&apos;s MIT license, free pricing, and rapid feature growth make it the strongest open-source game engine for classrooms, maker spaces, and STEAM programs. Here is what educators and program builders need to know.</description>
       <content:encoded><![CDATA[<p><img src="/images/godot-editor-screenshot.jpg" alt="Godot Engine editor showing a 3D scene with the scene tree dock, filesystem dock, and inspector panel">
@@ -68,6 +68,65 @@ func _ready():
 <p>In Pakistan and similar markets, the economics of game engine selection are amplified. A school in Karachi or Lahore evaluating Unity faces not just the licensing cost but the hardware requirements, the bandwidth needed for downloads and updates, and the complexity of account management across shared machines. Godot&#39;s single-executable editor, low hardware requirements, and offline capability address each of these constraints.</p>
 <p>The skills transfer matters too. Students who learn GDScript are one syntax shift away from Python, which is the dominant language in Pakistan&#39;s growing data science and AI community. This is why <a href="/blog/pycon-2024">programming robots with Python</a> — a talk Shamyl gave at PyCon Pakistan 2024 — translates so naturally into Godot-based curricula. Students who learn Godot&#39;s node-based architecture understand component-based design — a concept that transfers to Unity, to web development, to robotics programming, and to any system built on composable parts.</p>
 <p>For programs like <a href="https://learnobots.com">LearnOBots</a>, which bring hands-on STEAM education to Pakistani schools and build tools like <a href="/work/robosim">RoboSim</a> for teaching programming through 3D simulation, open-source tools are not just a cost savings — they are an alignment of values. When the tools you teach with are themselves community-built and freely available, students can continue learning at home, on their own machines, without hitting a paywall.</p>
+<h2>Engine Comparison at a Glance</h2>
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Godot</th>
+<th>Unity</th>
+<th>Unreal Engine</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Licensing</td>
+<td>MIT license, fully free</td>
+<td>Free under revenue thresholds, paid tiers above</td>
+<td>Free until $1M revenue, then 5% royalty</td>
+</tr>
+<tr>
+<td>Account required</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes (Epic Games)</td>
+</tr>
+<tr>
+<td>Primary language</td>
+<td>GDScript, C#</td>
+<td>C#</td>
+<td>C++, Blueprints</td>
+</tr>
+<tr>
+<td>Beginner suitability</td>
+<td>High — Python-like GDScript</td>
+<td>Medium — C# learning curve</td>
+<td>Low — C++ complexity</td>
+</tr>
+<tr>
+<td>Hardware requirements</td>
+<td>Low (~100MB editor)</td>
+<td>Medium</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Offline classroom use</td>
+<td>Yes, fully offline</td>
+<td>Limited without account</td>
+<td>Limited</td>
+</tr>
+<tr>
+<td>Web export</td>
+<td>Yes, one-click</td>
+<td>Yes (WebGL)</td>
+<td>Yes (limited)</td>
+</tr>
+<tr>
+<td>Best educational use</td>
+<td>STEAM, indie, 2D/3D</td>
+<td>Game dev courses, AR/VR</td>
+<td>AAA, high-end 3D</td>
+</tr>
+</tbody></table>
 <h2>Practical Recommendations for Educators</h2>
 <p>If you are considering Godot for a STEAM program, here is a starting framework:</p>
 <ol>
@@ -110,8 +169,8 @@ func _ready():
     </item>
     <item>
       <title>How NASA&apos;s SR-1 Freedom Nuclear Propulsion Mission Works and Why It Matters</title>
-      <link>https://shamyl.github.io/blog/space-tech-2026-08-16</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/space-tech-2026-08-16</guid>
+      <link>https://shamylmansoor.com/blog/space-tech-2026-08-16</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/space-tech-2026-08-16</guid>
       <pubDate>Sun, 16 Aug 2026 00:00:00 GMT</pubDate>
       <description>NASA&apos;s SR-1 Freedom mission will use a 20-kW space nuclear reactor to power electric propulsion to Mars by 2028. Here&apos;s how the technology works and what it means for space exploration.</description>
       <content:encoded><![CDATA[<p>NASA&#39;s SR-1 Freedom mission, slated for launch in late 2028, will demonstrate the first operational space nuclear reactor for propulsion since the 1960s — a 20-kilowatt-electric system that could cut travel time to Mars and lay the groundwork for crewed deep-space missions. After a recent visit by NASA leadership to the Idaho National Laboratory, the agency expressed growing confidence that the mission will meet its aggressive launch window.</p>
@@ -186,8 +245,8 @@ func _ready():
     </item>
     <item>
       <title>Pakistan Tech Roundup - August 15, 2026</title>
-      <link>https://shamyl.github.io/blog/pakistan-tech-2026-08-15</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/pakistan-tech-2026-08-15</guid>
+      <link>https://shamylmansoor.com/blog/pakistan-tech-2026-08-15</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/pakistan-tech-2026-08-15</guid>
       <pubDate>Sat, 15 Aug 2026 00:00:00 GMT</pubDate>
       <description>Latest technology happenings in Pakistan from August 15, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Saturday Pakistan tech roundup for August 15, 2026 — published on Independence Day:</p>
@@ -279,8 +338,8 @@ func _ready():
     </item>
     <item>
       <title>Tech, Art &amp; Entertainment - August 14, 2026</title>
-      <link>https://shamyl.github.io/blog/tech-art-2026-08-14</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/tech-art-2026-08-14</guid>
+      <link>https://shamylmansoor.com/blog/tech-art-2026-08-14</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/tech-art-2026-08-14</guid>
       <pubDate>Fri, 14 Aug 2026 00:00:00 GMT</pubDate>
       <description>Creative intersections of technology, art, and entertainment from August 14, 2026. AI filmmaking reaches new heights, Spotify labels AI artists, Suno launches browser-based DAW, and the homogenization of culture through algorithms.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Friday creative tech roundup for August 14, 2026:</p>
@@ -341,8 +400,8 @@ func _ready():
     </item>
     <item>
       <title>3D Printing Roundup - August 13, 2026</title>
-      <link>https://shamyl.github.io/blog/3d-printing-2026-08-13</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/3d-printing-2026-08-13</guid>
+      <link>https://shamylmansoor.com/blog/3d-printing-2026-08-13</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/3d-printing-2026-08-13</guid>
       <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
       <description>Latest in 3D printing technology, printers, materials, and maker projects from August 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Thursday 3D printing roundup for August 13, 2026:</p>
@@ -417,8 +476,8 @@ func _ready():
     </item>
     <item>
       <title>Tech Roundup - August 12, 2026</title>
-      <link>https://shamyl.github.io/blog/tech-roundup-2026-08-12</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/tech-roundup-2026-08-12</guid>
+      <link>https://shamylmansoor.com/blog/tech-roundup-2026-08-12</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/tech-roundup-2026-08-12</guid>
       <pubDate>Wed, 12 Aug 2026 00:00:00 GMT</pubDate>
       <description>Latest in Bio-Tech, Space Tech, IT, FinTech and emerging technology from August 12, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Wednesday tech roundup for August 12, 2026:</p>
@@ -498,8 +557,8 @@ Researchers have created the largest 2D map of the universe, featuring 5.6 trill
     </item>
     <item>
       <title>Robotics Roundup - August 11, 2026</title>
-      <link>https://shamyl.github.io/blog/robotics-2026-08-11</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/robotics-2026-08-11</guid>
+      <link>https://shamylmansoor.com/blog/robotics-2026-08-11</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/robotics-2026-08-11</guid>
       <pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
       <description>Latest in hobby and professional robotics from August 11, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Tuesday robotics roundup for August 11, 2026:</p>
@@ -577,8 +636,8 @@ Researchers have created the largest 2D map of the universe, featuring 5.6 trill
     </item>
     <item>
       <title>AI Updates - August 10, 2026</title>
-      <link>https://shamyl.github.io/blog/ai-updates-2026-08-10</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/ai-updates-2026-08-10</guid>
+      <link>https://shamylmansoor.com/blog/ai-updates-2026-08-10</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/ai-updates-2026-08-10</guid>
       <pubDate>Mon, 10 Aug 2026 00:00:00 GMT</pubDate>
       <description>Latest AI developments, tech trends, market updates, and world tech news from August 10, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Monday roundup of AI and tech news for August 10, 2026:</p>
@@ -644,8 +703,8 @@ Researchers have created the largest 2D map of the universe, featuring 5.6 trill
     </item>
     <item>
       <title>Space Tech Roundup - August 9, 2026</title>
-      <link>https://shamyl.github.io/blog/space-tech-2026-08-09</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/space-tech-2026-08-09</guid>
+      <link>https://shamylmansoor.com/blog/space-tech-2026-08-09</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/space-tech-2026-08-09</guid>
       <pubDate>Sun, 09 Aug 2026 00:00:00 GMT</pubDate>
       <description>Latest in space exploration, satellite technology, and aerospace developments from August 9, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Sunday space tech roundup for August 9, 2026:</p>
@@ -732,8 +791,8 @@ Researchers have created the largest 2D map of the universe, featuring 5.6 trill
     </item>
     <item>
       <title>Pakistan Tech Roundup - August 8, 2026</title>
-      <link>https://shamyl.github.io/blog/pakistan-tech-2026-08-08</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/pakistan-tech-2026-08-08</guid>
+      <link>https://shamylmansoor.com/blog/pakistan-tech-2026-08-08</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/pakistan-tech-2026-08-08</guid>
       <pubDate>Sat, 08 Aug 2026 00:00:00 GMT</pubDate>
       <description>Latest technology happenings in Pakistan from August 8, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Saturday Pakistan tech roundup for August 8, 2026:</p>
@@ -814,8 +873,8 @@ Researchers have created the largest 2D map of the universe, featuring 5.6 trill
     </item>
     <item>
       <title>Tech, Art &amp; Entertainment - August 7, 2026</title>
-      <link>https://shamyl.github.io/blog/tech-art-2026-08-07</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/tech-art-2026-08-07</guid>
+      <link>https://shamylmansoor.com/blog/tech-art-2026-08-07</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/tech-art-2026-08-07</guid>
       <pubDate>Fri, 07 Aug 2026 00:00:00 GMT</pubDate>
       <description>Creative intersections of technology, art, and entertainment from August 7, 2026. AI film festivals, creative coding revolutions, immersive art experiences, and the tools reshaping digital expression.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Friday creative tech roundup for August 7, 2026:</p>
@@ -897,8 +956,8 @@ Researchers have created the largest 2D map of the universe, featuring 5.6 trill
     </item>
     <item>
       <title>AI Updates - July 26, 2026</title>
-      <link>https://shamyl.github.io/blog/ai-updates-2026-07-26</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/ai-updates-2026-07-26</guid>
+      <link>https://shamylmansoor.com/blog/ai-updates-2026-07-26</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/ai-updates-2026-07-26</guid>
       <pubDate>Sun, 26 Jul 2026 00:00:00 GMT</pubDate>
       <description>Latest AI developments, tech trends, market updates, and world tech news from July 26, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Monday roundup of AI and tech news for July 26, 2026:</p>
@@ -962,8 +1021,8 @@ Researchers have created the largest 2D map of the universe, featuring 5.6 trill
     </item>
     <item>
       <title>Pakistan Tech Roundup - July 26, 2026</title>
-      <link>https://shamyl.github.io/blog/pakistan-tech-2026-07-26</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/pakistan-tech-2026-07-26</guid>
+      <link>https://shamylmansoor.com/blog/pakistan-tech-2026-07-26</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/pakistan-tech-2026-07-26</guid>
       <pubDate>Sun, 26 Jul 2026 00:00:00 GMT</pubDate>
       <description>Latest technology happenings in Pakistan from July 26, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Saturday Pakistan tech roundup for July 26, 2026:</p>
@@ -1043,8 +1102,8 @@ Researchers have created the largest 2D map of the universe, featuring 5.6 trill
     </item>
     <item>
       <title>Robotics Roundup - July 26, 2026</title>
-      <link>https://shamyl.github.io/blog/robotics-2026-07-26</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/robotics-2026-07-26</guid>
+      <link>https://shamylmansoor.com/blog/robotics-2026-07-26</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/robotics-2026-07-26</guid>
       <pubDate>Sun, 26 Jul 2026 00:00:00 GMT</pubDate>
       <description>Latest in hobby and professional robotics from July 26, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Tuesday robotics roundup for July 26, 2026:</p>
@@ -1112,8 +1171,8 @@ Researchers have created the largest 2D map of the universe, featuring 5.6 trill
     </item>
     <item>
       <title>Tech Roundup - July 26, 2026</title>
-      <link>https://shamyl.github.io/blog/tech-roundup-2026-07-26</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/tech-roundup-2026-07-26</guid>
+      <link>https://shamylmansoor.com/blog/tech-roundup-2026-07-26</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/tech-roundup-2026-07-26</guid>
       <pubDate>Sun, 26 Jul 2026 00:00:00 GMT</pubDate>
       <description>Latest in Bio-Tech, Space Tech, IT, FinTech and emerging technology from July 26, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Sunday tech roundup for July 26, 2026:</p>
@@ -1175,8 +1234,8 @@ Roku has raised streaming device prices by up to 60%, joining Apple, Nintendo, M
     </item>
     <item>
       <title>3D Printing Roundup - July 25, 2026</title>
-      <link>https://shamyl.github.io/blog/3d-printing-2026-07-25</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/3d-printing-2026-07-25</guid>
+      <link>https://shamylmansoor.com/blog/3d-printing-2026-07-25</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/3d-printing-2026-07-25</guid>
       <pubDate>Sat, 25 Jul 2026 00:00:00 GMT</pubDate>
       <description>Latest in 3D printing technology, printers, materials, and maker projects from July 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Thursday 3D printing roundup for July 25, 2026:</p>
@@ -1230,8 +1289,8 @@ Roku has raised streaming device prices by up to 60%, joining Apple, Nintendo, M
     </item>
     <item>
       <title>Space Tech Roundup - July 19, 2026</title>
-      <link>https://shamyl.github.io/blog/space-tech-2026-07-19</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/space-tech-2026-07-19</guid>
+      <link>https://shamylmansoor.com/blog/space-tech-2026-07-19</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/space-tech-2026-07-19</guid>
       <pubDate>Sun, 19 Jul 2026 00:00:00 GMT</pubDate>
       <description>Latest in space exploration, satellite technology, and aerospace developments from July 19, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Sunday space tech roundup for July 19, 2026:</p>
@@ -1304,8 +1363,8 @@ Roku has raised streaming device prices by up to 60%, joining Apple, Nintendo, M
     </item>
     <item>
       <title>Tech, Art &amp; Entertainment - July 17, 2026</title>
-      <link>https://shamyl.github.io/blog/tech-art-2026-07-17</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/tech-art-2026-07-17</guid>
+      <link>https://shamylmansoor.com/blog/tech-art-2026-07-17</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/tech-art-2026-07-17</guid>
       <pubDate>Fri, 17 Jul 2026 00:00:00 GMT</pubDate>
       <description>Creative intersections of technology, art, and entertainment from July 17, 2026. AI music videos, open-source creativity tools, and the future of digital expression.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Friday creative tech roundup for July 17, 2026:</p>
@@ -1359,8 +1418,8 @@ Open educational resources for AI and machine learning continue to democratize a
     </item>
     <item>
       <title>3D Printing Roundup - July 16, 2026</title>
-      <link>https://shamyl.github.io/blog/3d-printing-2026-07-16</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/3d-printing-2026-07-16</guid>
+      <link>https://shamylmansoor.com/blog/3d-printing-2026-07-16</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/3d-printing-2026-07-16</guid>
       <pubDate>Thu, 16 Jul 2026 00:00:00 GMT</pubDate>
       <description>Latest in 3D printing technology, printers, materials, and maker projects from July 16, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Thursday 3D printing roundup for July 16, 2026:</p>
@@ -1432,8 +1491,8 @@ Open educational resources for AI and machine learning continue to democratize a
     </item>
     <item>
       <title>Robotics Roundup - July 14, 2026</title>
-      <link>https://shamyl.github.io/blog/robotics-2026-07-14</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/robotics-2026-07-14</guid>
+      <link>https://shamylmansoor.com/blog/robotics-2026-07-14</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/robotics-2026-07-14</guid>
       <pubDate>Tue, 14 Jul 2026 00:00:00 GMT</pubDate>
       <description>Latest in hobby and professional robotics from July 14, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Tuesday robotics roundup for July 14, 2026:</p>
@@ -1486,8 +1545,8 @@ Hugging Face&#39;s Reachy Mini desktop robot now supports fully local conversati
     </item>
     <item>
       <title>3D Printing Roundup - July 13, 2026</title>
-      <link>https://shamyl.github.io/blog/3d-printing-2026-07-13</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/3d-printing-2026-07-13</guid>
+      <link>https://shamylmansoor.com/blog/3d-printing-2026-07-13</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/3d-printing-2026-07-13</guid>
       <pubDate>Mon, 13 Jul 2026 00:00:00 GMT</pubDate>
       <description>Latest in 3D printing technology, printers, materials, and maker projects from July 13, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Thursday 3D printing roundup for July 13, 2026:</p>
@@ -1570,8 +1629,8 @@ Hugging Face&#39;s Reachy Mini desktop robot now supports fully local conversati
     </item>
     <item>
       <title>Pakistan Tech Roundup - July 13, 2026</title>
-      <link>https://shamyl.github.io/blog/pakistan-tech-2026-07-13</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/pakistan-tech-2026-07-13</guid>
+      <link>https://shamylmansoor.com/blog/pakistan-tech-2026-07-13</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/pakistan-tech-2026-07-13</guid>
       <pubDate>Mon, 13 Jul 2026 00:00:00 GMT</pubDate>
       <description>Latest technology happenings in Pakistan from July 13, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Saturday Pakistan tech roundup for July 13, 2026:</p>
@@ -1643,8 +1702,8 @@ Hugging Face&#39;s Reachy Mini desktop robot now supports fully local conversati
     </item>
     <item>
       <title>Robotics Roundup - July 13, 2026</title>
-      <link>https://shamyl.github.io/blog/robotics-2026-07-13</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/robotics-2026-07-13</guid>
+      <link>https://shamylmansoor.com/blog/robotics-2026-07-13</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/robotics-2026-07-13</guid>
       <pubDate>Mon, 13 Jul 2026 00:00:00 GMT</pubDate>
       <description>Latest in hobby and professional robotics from July 13, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Tuesday robotics roundup for July 13, 2026:</p>
@@ -1699,8 +1758,8 @@ Hugging Face&#39;s Reachy Mini desktop robot now supports fully local conversati
     </item>
     <item>
       <title>Space Tech Roundup - July 13, 2026</title>
-      <link>https://shamyl.github.io/blog/space-tech-2026-07-13</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/space-tech-2026-07-13</guid>
+      <link>https://shamylmansoor.com/blog/space-tech-2026-07-13</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/space-tech-2026-07-13</guid>
       <pubDate>Mon, 13 Jul 2026 00:00:00 GMT</pubDate>
       <description>Latest in space exploration, satellite technology, and aerospace developments from July 13, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Sunday space tech roundup for July 13, 2026:</p>
@@ -1778,8 +1837,8 @@ Hugging Face&#39;s Reachy Mini desktop robot now supports fully local conversati
     </item>
     <item>
       <title>Tech, Art &amp; Entertainment - July 13, 2026</title>
-      <link>https://shamyl.github.io/blog/tech-art-2026-07-13</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/tech-art-2026-07-13</guid>
+      <link>https://shamylmansoor.com/blog/tech-art-2026-07-13</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/tech-art-2026-07-13</guid>
       <pubDate>Mon, 13 Jul 2026 00:00:00 GMT</pubDate>
       <description>Creative intersections of technology, art, and entertainment from July 13, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Friday creative tech roundup for July 13, 2026:</p>
@@ -1858,8 +1917,8 @@ Hugging Face&#39;s Reachy Mini desktop robot now supports fully local conversati
     </item>
     <item>
       <title>3D Printing Roundup - July 3, 2026</title>
-      <link>https://shamyl.github.io/blog/3d-printing-2026-07-03</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/3d-printing-2026-07-03</guid>
+      <link>https://shamylmansoor.com/blog/3d-printing-2026-07-03</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/3d-printing-2026-07-03</guid>
       <pubDate>Fri, 03 Jul 2026 00:00:00 GMT</pubDate>
       <description>Latest in 3D printing technology, printers, materials, and maker projects from July 3, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Thursday 3D printing roundup for July 3, 2026:</p>
@@ -1922,8 +1981,8 @@ Hugging Face&#39;s Reachy Mini desktop robot now supports fully local conversati
     </item>
     <item>
       <title>Robotics Roundup - July 3, 2026</title>
-      <link>https://shamyl.github.io/blog/robotics-2026-07-03</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/robotics-2026-07-03</guid>
+      <link>https://shamylmansoor.com/blog/robotics-2026-07-03</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/robotics-2026-07-03</guid>
       <pubDate>Fri, 03 Jul 2026 00:00:00 GMT</pubDate>
       <description>Latest in hobby and professional robotics from July 3, 2026. Humanoid robots scaling up, NVIDIA&apos;s Isaac upgrades, and the future of warehouse automation.</description>
       <content:encoded><![CDATA[<p><img src="/images/robotics-2026-07-03-1.jpg" alt="Industrial Robot in Action"></p>
@@ -2011,8 +2070,8 @@ Hugging Face&#39;s Reachy Mini desktop robot now supports fully local conversati
     </item>
     <item>
       <title>Space Tech Roundup - July 3, 2026</title>
-      <link>https://shamyl.github.io/blog/space-tech-2026-07-03</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/space-tech-2026-07-03</guid>
+      <link>https://shamylmansoor.com/blog/space-tech-2026-07-03</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/space-tech-2026-07-03</guid>
       <pubDate>Fri, 03 Jul 2026 00:00:00 GMT</pubDate>
       <description>Latest in space exploration, satellite technology, and aerospace developments from July 3, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Sunday space tech roundup for July 3, 2026:</p>
@@ -2088,8 +2147,8 @@ Hugging Face&#39;s Reachy Mini desktop robot now supports fully local conversati
     </item>
     <item>
       <title>Tech, Art &amp; Entertainment - July 3, 2026</title>
-      <link>https://shamyl.github.io/blog/tech-art-2026-07-03</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/tech-art-2026-07-03</guid>
+      <link>https://shamylmansoor.com/blog/tech-art-2026-07-03</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/tech-art-2026-07-03</guid>
       <pubDate>Fri, 03 Jul 2026 00:00:00 GMT</pubDate>
       <description>Creative intersections of technology, art, and entertainment from July 3, 2026.</description>
       <content:encoded><![CDATA[<p><img src="/images/tech-art-2026-07-03-1.jpg" alt="Digital Art Abstract">
@@ -2148,8 +2207,8 @@ Hugging Face&#39;s Reachy Mini desktop robot now supports fully local conversati
     </item>
     <item>
       <title>Tech Roundup - July 3, 2026</title>
-      <link>https://shamyl.github.io/blog/tech-roundup-2026-07-03</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/tech-roundup-2026-07-03</guid>
+      <link>https://shamylmansoor.com/blog/tech-roundup-2026-07-03</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/tech-roundup-2026-07-03</guid>
       <pubDate>Fri, 03 Jul 2026 00:00:00 GMT</pubDate>
       <description>Latest in Bio-Tech, Space Tech, IT, FinTech and emerging technology from July 3, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Friday tech roundup for July 3, 2026:</p>
@@ -2234,8 +2293,8 @@ Hugging Face&#39;s Reachy Mini desktop robot now supports fully local conversati
     </item>
     <item>
       <title>Pakistan Tech Roundup - June 27, 2026</title>
-      <link>https://shamyl.github.io/blog/pakistan-tech-2026-06-27</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/pakistan-tech-2026-06-27</guid>
+      <link>https://shamylmansoor.com/blog/pakistan-tech-2026-06-27</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/pakistan-tech-2026-06-27</guid>
       <pubDate>Sat, 27 Jun 2026 00:00:00 GMT</pubDate>
       <description>Latest technology happenings in Pakistan from June 27, 2026. IT exports surge past $4.2B, 5G launch countdown, government tech initiatives, and startup ecosystem updates.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Saturday Pakistan tech roundup for June 27, 2026:</p>
@@ -2327,8 +2386,8 @@ Hugging Face&#39;s Reachy Mini desktop robot now supports fully local conversati
     </item>
     <item>
       <title>Tech, Art &amp; Entertainment - June 26, 2026</title>
-      <link>https://shamyl.github.io/blog/tech-art-2026-06-26</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/tech-art-2026-06-26</guid>
+      <link>https://shamylmansoor.com/blog/tech-art-2026-06-26</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/tech-art-2026-06-26</guid>
       <pubDate>Fri, 26 Jun 2026 00:00:00 GMT</pubDate>
       <description>Creative intersections of technology, art, and entertainment from June 26, 2026.</description>
       <content:encoded><![CDATA[<p><img src="/images/tech-art-2026-06-26-1.jpg" alt="Digital Art Technology">
@@ -2409,8 +2468,8 @@ Hugging Face&#39;s Reachy Mini desktop robot now supports fully local conversati
     </item>
     <item>
       <title>3D Printing Roundup - June 25, 2026</title>
-      <link>https://shamyl.github.io/blog/3d-printing-2026-06-25</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/3d-printing-2026-06-25</guid>
+      <link>https://shamylmansoor.com/blog/3d-printing-2026-06-25</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/3d-printing-2026-06-25</guid>
       <pubDate>Thu, 25 Jun 2026 00:00:00 GMT</pubDate>
       <description>Latest in 3D printing technology, printers, materials, and maker projects from June 25, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Thursday 3D printing roundup for June 25, 2026:</p>
@@ -2563,8 +2622,8 @@ Hugging Face&#39;s Reachy Mini desktop robot now supports fully local conversati
     </item>
     <item>
       <title>Tech Roundup - June 24, 2026</title>
-      <link>https://shamyl.github.io/blog/tech-roundup-2026-06-24</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/tech-roundup-2026-06-24</guid>
+      <link>https://shamylmansoor.com/blog/tech-roundup-2026-06-24</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/tech-roundup-2026-06-24</guid>
       <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
       <description>Latest in Bio-Tech, Space Tech, IT, FinTech and emerging technology from June 24, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Wednesday tech roundup for June 24, 2026:</p>
@@ -2638,8 +2697,8 @@ Hugging Face&#39;s Reachy Mini desktop robot now supports fully local conversati
     </item>
     <item>
       <title>Robotics Roundup - June 23, 2026</title>
-      <link>https://shamyl.github.io/blog/robotics-2026-06-23</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/robotics-2026-06-23</guid>
+      <link>https://shamylmansoor.com/blog/robotics-2026-06-23</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/robotics-2026-06-23</guid>
       <pubDate>Tue, 23 Jun 2026 00:00:00 GMT</pubDate>
       <description>Latest in hobby and professional robotics from June 23, 2026. NVIDIA&apos;s Halos, RoboCup in South Korea, and the humanoid robot race heats up.</description>
       <content:encoded><![CDATA[<p><img src="/images/robotics-2026-06-23-1.jpg" alt="Futuristic Humanoid Robot">
@@ -2712,8 +2771,8 @@ Hugging Face&#39;s Reachy Mini desktop robot now supports fully local conversati
     </item>
     <item>
       <title>AI Updates - June 22, 2026</title>
-      <link>https://shamyl.github.io/blog/ai-updates-2026-06-22</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/ai-updates-2026-06-22</guid>
+      <link>https://shamylmansoor.com/blog/ai-updates-2026-06-22</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/ai-updates-2026-06-22</guid>
       <pubDate>Mon, 22 Jun 2026 00:00:00 GMT</pubDate>
       <description>Latest AI developments, tech trends, market updates, and world tech news from June 22, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Monday roundup of AI and tech news for June 22, 2026:</p>
@@ -2784,8 +2843,8 @@ Hugging Face&#39;s Reachy Mini desktop robot now supports fully local conversati
     </item>
     <item>
       <title>Space Tech Roundup - June 21, 2026</title>
-      <link>https://shamyl.github.io/blog/space-tech-2026-06-21</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/space-tech-2026-06-21</guid>
+      <link>https://shamylmansoor.com/blog/space-tech-2026-06-21</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/space-tech-2026-06-21</guid>
       <pubDate>Sun, 21 Jun 2026 00:00:00 GMT</pubDate>
       <description>Latest in space exploration, satellite technology, and aerospace developments from June 21, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Sunday space tech roundup for June 21, 2026:</p>
@@ -2851,8 +2910,8 @@ Hugging Face&#39;s Reachy Mini desktop robot now supports fully local conversati
     </item>
     <item>
       <title>Pakistan Tech Roundup - June 20, 2026</title>
-      <link>https://shamyl.github.io/blog/pakistan-tech-2026-06-20</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/pakistan-tech-2026-06-20</guid>
+      <link>https://shamylmansoor.com/blog/pakistan-tech-2026-06-20</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/pakistan-tech-2026-06-20</guid>
       <pubDate>Sat, 20 Jun 2026 00:00:00 GMT</pubDate>
       <description>Latest technology happenings in Pakistan from June 20, 2026. IT exports hit $4.2B, Apple launches on Daraz, 5G rollout ahead, and Pakistani founder raises $62.5M.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Saturday Pakistan tech roundup for June 20, 2026:</p>
@@ -2943,8 +3002,8 @@ Hugging Face&#39;s Reachy Mini desktop robot now supports fully local conversati
     </item>
     <item>
       <title>Tech, Art &amp; Entertainment - June 19, 2026</title>
-      <link>https://shamyl.github.io/blog/tech-art-2026-06-19</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/tech-art-2026-06-19</guid>
+      <link>https://shamylmansoor.com/blog/tech-art-2026-06-19</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/tech-art-2026-06-19</guid>
       <pubDate>Fri, 19 Jun 2026 00:00:00 GMT</pubDate>
       <description>Creative intersections of technology, art, and entertainment from June 19, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Friday creative tech roundup for June 19, 2026:</p>
@@ -3016,8 +3075,8 @@ Hugging Face&#39;s Reachy Mini desktop robot now supports fully local conversati
     </item>
     <item>
       <title>3D Printing Roundup - June 18, 2026</title>
-      <link>https://shamyl.github.io/blog/3d-printing-2026-06-18</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/3d-printing-2026-06-18</guid>
+      <link>https://shamylmansoor.com/blog/3d-printing-2026-06-18</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/3d-printing-2026-06-18</guid>
       <pubDate>Thu, 18 Jun 2026 00:00:00 GMT</pubDate>
       <description>Latest in 3D printing technology, printers, materials, and maker projects from June 18, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Thursday 3D printing roundup for June 18, 2026:</p>
@@ -3148,8 +3207,8 @@ Hugging Face&#39;s Reachy Mini desktop robot now supports fully local conversati
     </item>
     <item>
       <title>Tech Roundup - June 17, 2026</title>
-      <link>https://shamyl.github.io/blog/tech-roundup-2026-06-17</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/tech-roundup-2026-06-17</guid>
+      <link>https://shamylmansoor.com/blog/tech-roundup-2026-06-17</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/tech-roundup-2026-06-17</guid>
       <pubDate>Wed, 17 Jun 2026 00:00:00 GMT</pubDate>
       <description>Latest in Bio-Tech, Space Tech, IT, FinTech and emerging technology from June 17, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Wednesday tech roundup for June 17, 2026:</p>
@@ -3217,8 +3276,8 @@ Hugging Face&#39;s Reachy Mini desktop robot now supports fully local conversati
     </item>
     <item>
       <title>Robotics Roundup - June 16, 2026</title>
-      <link>https://shamyl.github.io/blog/robotics-2026-06-16</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/robotics-2026-06-16</guid>
+      <link>https://shamylmansoor.com/blog/robotics-2026-06-16</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/robotics-2026-06-16</guid>
       <pubDate>Tue, 16 Jun 2026 00:00:00 GMT</pubDate>
       <description>Latest in hobby and professional robotics from June 16, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Tuesday robotics roundup for June 16, 2026:</p>
@@ -3274,8 +3333,8 @@ Hugging Face&#39;s Reachy Mini desktop robot now supports fully local conversati
     </item>
     <item>
       <title>AI Updates - June 15, 2026</title>
-      <link>https://shamyl.github.io/blog/ai-updates-2026-06-15</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/ai-updates-2026-06-15</guid>
+      <link>https://shamylmansoor.com/blog/ai-updates-2026-06-15</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/ai-updates-2026-06-15</guid>
       <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
       <description>Latest AI developments, tech trends, market updates, and world tech news from June 15, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Monday roundup of AI and tech news for June 15, 2026:</p>
@@ -3339,8 +3398,8 @@ Hugging Face&#39;s Reachy Mini desktop robot now supports fully local conversati
     </item>
     <item>
       <title>Space Tech Roundup - June 14, 2026</title>
-      <link>https://shamyl.github.io/blog/space-tech-2026-06-14</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/space-tech-2026-06-14</guid>
+      <link>https://shamylmansoor.com/blog/space-tech-2026-06-14</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/space-tech-2026-06-14</guid>
       <pubDate>Sun, 14 Jun 2026 00:00:00 GMT</pubDate>
       <description>Latest in space exploration, satellite technology, and aerospace developments from June 14, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Sunday space tech roundup for June 14, 2026:</p>
@@ -3409,8 +3468,8 @@ Hugging Face&#39;s Reachy Mini desktop robot now supports fully local conversati
     </item>
     <item>
       <title>Pakistan Tech Roundup - June 13, 2026</title>
-      <link>https://shamyl.github.io/blog/pakistan-tech-2026-06-13</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/pakistan-tech-2026-06-13</guid>
+      <link>https://shamylmansoor.com/blog/pakistan-tech-2026-06-13</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/pakistan-tech-2026-06-13</guid>
       <pubDate>Sat, 13 Jun 2026 00:00:00 GMT</pubDate>
       <description>Latest technology happenings in Pakistan from June 13, 2026 - featuring record IT exports, 5G rollout, new startup incubators, and major government tech initiatives.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Saturday Pakistan tech roundup for June 13, 2026:</p>
@@ -3503,8 +3562,8 @@ Hugging Face&#39;s Reachy Mini desktop robot now supports fully local conversati
     </item>
     <item>
       <title>3D Printing Roundup - June 11, 2026</title>
-      <link>https://shamyl.github.io/blog/3d-printing-2026-06-11</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/3d-printing-2026-06-11</guid>
+      <link>https://shamylmansoor.com/blog/3d-printing-2026-06-11</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/3d-printing-2026-06-11</guid>
       <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
       <description>Latest in 3D printing technology, printers, materials, and maker projects from June 11, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Thursday 3D printing roundup for June 11, 2026:</p>
@@ -3565,8 +3624,8 @@ Aurelia Technologies is exploring metal 3D printing for turbine parts through a 
     </item>
     <item>
       <title>Tech Roundup - June 10, 2026</title>
-      <link>https://shamyl.github.io/blog/tech-roundup-2026-06-10</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/tech-roundup-2026-06-10</guid>
+      <link>https://shamylmansoor.com/blog/tech-roundup-2026-06-10</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/tech-roundup-2026-06-10</guid>
       <pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate>
       <description>Latest in Bio-Tech, Space Tech, IT, FinTech and emerging technology from June 10, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Wednesday tech roundup for June 10, 2026:</p>
@@ -3651,8 +3710,8 @@ Aurelia Technologies is exploring metal 3D printing for turbine parts through a 
     </item>
     <item>
       <title>Robotics Roundup - June 9, 2026</title>
-      <link>https://shamyl.github.io/blog/robotics-2026-06-09</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/robotics-2026-06-09</guid>
+      <link>https://shamylmansoor.com/blog/robotics-2026-06-09</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/robotics-2026-06-09</guid>
       <pubDate>Tue, 09 Jun 2026 00:00:00 GMT</pubDate>
       <description>Latest in hobby and professional robotics from June 9, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Tuesday robotics roundup for June 9, 2026:</p>
@@ -3697,8 +3756,8 @@ Aurelia Technologies is exploring metal 3D printing for turbine parts through a 
     </item>
     <item>
       <title>AI Updates - June 8, 2026</title>
-      <link>https://shamyl.github.io/blog/ai-updates-2026-06-08</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/ai-updates-2026-06-08</guid>
+      <link>https://shamylmansoor.com/blog/ai-updates-2026-06-08</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/ai-updates-2026-06-08</guid>
       <pubDate>Mon, 08 Jun 2026 00:00:00 GMT</pubDate>
       <description>Latest AI developments, tech trends, market updates, and world tech news from June 8, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Monday roundup of AI and tech news for June 8, 2026:</p>
@@ -3765,8 +3824,8 @@ Aurelia Technologies is exploring metal 3D printing for turbine parts through a 
     </item>
     <item>
       <title>Space Tech Roundup - June 7, 2026</title>
-      <link>https://shamyl.github.io/blog/space-tech-2026-06-07</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/space-tech-2026-06-07</guid>
+      <link>https://shamylmansoor.com/blog/space-tech-2026-06-07</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/space-tech-2026-06-07</guid>
       <pubDate>Sun, 07 Jun 2026 00:00:00 GMT</pubDate>
       <description>Latest in space exploration, satellite technology, and aerospace developments from June 7, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Sunday space tech roundup for June 7, 2026:</p>
@@ -3823,8 +3882,8 @@ Aurelia Technologies is exploring metal 3D printing for turbine parts through a 
     </item>
     <item>
       <title>Pakistan Tech Roundup - June 6, 2026</title>
-      <link>https://shamyl.github.io/blog/pakistan-tech-2026-06-06</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/pakistan-tech-2026-06-06</guid>
+      <link>https://shamylmansoor.com/blog/pakistan-tech-2026-06-06</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/pakistan-tech-2026-06-06</guid>
       <pubDate>Sat, 06 Jun 2026 00:00:00 GMT</pubDate>
       <description>Latest technology happenings in Pakistan from June 6, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Saturday Pakistan tech roundup for June 6, 2026:</p>
@@ -3892,8 +3951,8 @@ Content creator Imam Bakhsh, founder of Imam Gaming, continues to make waves by 
     </item>
     <item>
       <title>Tech Roundup - June 3, 2026</title>
-      <link>https://shamyl.github.io/blog/tech-roundup-2026-06-03</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/tech-roundup-2026-06-03</guid>
+      <link>https://shamylmansoor.com/blog/tech-roundup-2026-06-03</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/tech-roundup-2026-06-03</guid>
       <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
       <description>Latest in Bio-Tech, Space Tech, IT, FinTech and emerging technology from June 3, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Wednesday tech roundup for June 3, 2026:</p>
@@ -3970,8 +4029,8 @@ Content creator Imam Bakhsh, founder of Imam Gaming, continues to make waves by 
     </item>
     <item>
       <title>Robotics Roundup - June 2, 2026</title>
-      <link>https://shamyl.github.io/blog/robotics-2026-06-02</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/robotics-2026-06-02</guid>
+      <link>https://shamylmansoor.com/blog/robotics-2026-06-02</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/robotics-2026-06-02</guid>
       <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
       <description>Latest in hobby and professional robotics from June 2, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Tuesday robotics roundup for June 2, 2026:</p>
@@ -4040,8 +4099,8 @@ Content creator Imam Bakhsh, founder of Imam Gaming, continues to make waves by 
     </item>
     <item>
       <title>AI Updates - June 1, 2026</title>
-      <link>https://shamyl.github.io/blog/ai-updates-2026-06-01</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/ai-updates-2026-06-01</guid>
+      <link>https://shamylmansoor.com/blog/ai-updates-2026-06-01</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/ai-updates-2026-06-01</guid>
       <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
       <description>Latest AI developments, tech trends, market updates, and world tech news for June 1, 2026. Anthropic&apos;s massive funding round, OpenAI&apos;s robotics return, and Google&apos;s Gemini evolution.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Monday roundup of AI and tech news for June 1, 2026:</p>
@@ -4101,8 +4160,8 @@ Tencent launched and open-sourced Hy3 preview — a Mixture-of-Experts model enh
     </item>
     <item>
       <title>Space Tech Roundup - May 31, 2026</title>
-      <link>https://shamyl.github.io/blog/space-tech-2026-05-31</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/space-tech-2026-05-31</guid>
+      <link>https://shamylmansoor.com/blog/space-tech-2026-05-31</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/space-tech-2026-05-31</guid>
       <pubDate>Sun, 31 May 2026 00:00:00 GMT</pubDate>
       <description>Latest in space exploration, satellite technology, and aerospace developments from May 31, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Sunday space tech roundup for May 31, 2026:</p>
@@ -4218,8 +4277,8 @@ Tencent launched and open-sourced Hy3 preview — a Mixture-of-Experts model enh
     </item>
     <item>
       <title>Pakistan Tech Roundup - May 30, 2026</title>
-      <link>https://shamyl.github.io/blog/pakistan-tech-2026-05-30</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/pakistan-tech-2026-05-30</guid>
+      <link>https://shamylmansoor.com/blog/pakistan-tech-2026-05-30</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/pakistan-tech-2026-05-30</guid>
       <pubDate>Sat, 30 May 2026 00:00:00 GMT</pubDate>
       <description>Latest technology happenings in Pakistan from May 30, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Saturday Pakistan tech roundup for May 30, 2026:</p>
@@ -4274,8 +4333,8 @@ Pakistan&#39;s premier technology competition, Techverse 2026, continues through
     </item>
     <item>
       <title>3D Printing Roundup - May 28, 2026</title>
-      <link>https://shamyl.github.io/blog/3d-printing-2026-05-28</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/3d-printing-2026-05-28</guid>
+      <link>https://shamylmansoor.com/blog/3d-printing-2026-05-28</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/3d-printing-2026-05-28</guid>
       <pubDate>Thu, 28 May 2026 00:00:00 GMT</pubDate>
       <description>Latest in 3D printing technology, printers, materials, and maker projects from May 28, 2026.</description>
       <content:encoded><![CDATA[<p><img src="/images/3d-printing-2026-05-28-1.jpg" alt="3D Printer in action">
@@ -4358,8 +4417,8 @@ Pakistan&#39;s premier technology competition, Techverse 2026, continues through
     </item>
     <item>
       <title>Tech Roundup - May 27, 2026</title>
-      <link>https://shamyl.github.io/blog/tech-roundup-2026-05-27</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/tech-roundup-2026-05-27</guid>
+      <link>https://shamylmansoor.com/blog/tech-roundup-2026-05-27</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/tech-roundup-2026-05-27</guid>
       <pubDate>Wed, 27 May 2026 00:00:00 GMT</pubDate>
       <description>Latest in Bio-Tech, Space Tech, IT, FinTech and emerging technology from May 27, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Wednesday tech roundup for May 27, 2026:</p>
@@ -4449,8 +4508,8 @@ Facing challenges in the AI chip market, Intel is betting big on next-generation
     </item>
     <item>
       <title>Robotics Roundup - May 26, 2026</title>
-      <link>https://shamyl.github.io/blog/robotics-2026-05-26</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/robotics-2026-05-26</guid>
+      <link>https://shamylmansoor.com/blog/robotics-2026-05-26</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/robotics-2026-05-26</guid>
       <pubDate>Tue, 26 May 2026 00:00:00 GMT</pubDate>
       <description>Latest in hobby and professional robotics from May 26, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Tuesday robotics roundup for May 26, 2026:</p>
@@ -4589,8 +4648,8 @@ Facing challenges in the AI chip market, Intel is betting big on next-generation
     </item>
     <item>
       <title>AI Updates - May 25, 2026</title>
-      <link>https://shamyl.github.io/blog/ai-updates-2026-05-25</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/ai-updates-2026-05-25</guid>
+      <link>https://shamylmansoor.com/blog/ai-updates-2026-05-25</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/ai-updates-2026-05-25</guid>
       <pubDate>Mon, 25 May 2026 00:00:00 GMT</pubDate>
       <description>Latest AI developments, tech trends, market updates, and world tech news from May 25, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Monday roundup of AI and tech news for May 25, 2026:</p>
@@ -4650,8 +4709,8 @@ Facing challenges in the AI chip market, Intel is betting big on next-generation
     </item>
     <item>
       <title>Space Tech Roundup - May 24, 2026</title>
-      <link>https://shamyl.github.io/blog/space-tech-2026-05-24</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/space-tech-2026-05-24</guid>
+      <link>https://shamylmansoor.com/blog/space-tech-2026-05-24</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/space-tech-2026-05-24</guid>
       <pubDate>Sun, 24 May 2026 00:00:00 GMT</pubDate>
       <description>Latest in space exploration, satellite technology, and aerospace developments from May 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Sunday space tech roundup for May 24, 2026:</p>
@@ -4771,8 +4830,8 @@ Facing challenges in the AI chip market, Intel is betting big on next-generation
     </item>
     <item>
       <title>Pakistan Tech Roundup - May 23, 2026</title>
-      <link>https://shamyl.github.io/blog/pakistan-tech-2026-05-23</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/pakistan-tech-2026-05-23</guid>
+      <link>https://shamylmansoor.com/blog/pakistan-tech-2026-05-23</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/pakistan-tech-2026-05-23</guid>
       <pubDate>Sat, 23 May 2026 00:00:00 GMT</pubDate>
       <description>Latest technology happenings in Pakistan from May 23, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Saturday Pakistan tech roundup for May 23, 2026:</p>
@@ -4878,8 +4937,8 @@ Facing challenges in the AI chip market, Intel is betting big on next-generation
     </item>
     <item>
       <title>Tech, Art &amp; Entertainment - May 22, 2026</title>
-      <link>https://shamyl.github.io/blog/tech-art-2026-05-22</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/tech-art-2026-05-22</guid>
+      <link>https://shamylmansoor.com/blog/tech-art-2026-05-22</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/tech-art-2026-05-22</guid>
       <pubDate>Fri, 22 May 2026 00:00:00 GMT</pubDate>
       <description>Creative intersections of technology, art, and entertainment from May 22, 2026.</description>
       <content:encoded><![CDATA[<p><img src="/images/tech-art-2026-05-22-1.jpg" alt="Generative Digital Art"></p>
@@ -4925,8 +4984,8 @@ Facing challenges in the AI chip market, Intel is betting big on next-generation
     </item>
     <item>
       <title>3D Printing Roundup - May 21, 2026</title>
-      <link>https://shamyl.github.io/blog/3d-printing-2026-05-21</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/3d-printing-2026-05-21</guid>
+      <link>https://shamylmansoor.com/blog/3d-printing-2026-05-21</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/3d-printing-2026-05-21</guid>
       <pubDate>Thu, 21 May 2026 00:00:00 GMT</pubDate>
       <description>Latest in 3D printing technology, printers, materials, and maker projects from May 21, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Thursday 3D printing roundup for May 21, 2026:</p>
@@ -5000,8 +5059,8 @@ Facing challenges in the AI chip market, Intel is betting big on next-generation
     </item>
     <item>
       <title>Tech Roundup - May 20, 2026</title>
-      <link>https://shamyl.github.io/blog/tech-roundup-2026-05-20</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/tech-roundup-2026-05-20</guid>
+      <link>https://shamylmansoor.com/blog/tech-roundup-2026-05-20</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/tech-roundup-2026-05-20</guid>
       <pubDate>Wed, 20 May 2026 00:00:00 GMT</pubDate>
       <description>Latest in Bio-Tech, Space Tech, IT, FinTech and emerging technology from May 20, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Wednesday tech roundup for May 20, 2026:</p>
@@ -5103,8 +5162,8 @@ Research published in arXiv highlights breakthroughs in energy-efficient neuromo
     </item>
     <item>
       <title>Robotics Roundup - May 19, 2026</title>
-      <link>https://shamyl.github.io/blog/robotics-2026-05-19</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/robotics-2026-05-19</guid>
+      <link>https://shamylmansoor.com/blog/robotics-2026-05-19</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/robotics-2026-05-19</guid>
       <pubDate>Tue, 19 May 2026 00:00:00 GMT</pubDate>
       <description>Latest in hobby and professional robotics from May 19, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Tuesday robotics roundup for May 19, 2026:</p>
@@ -5202,8 +5261,8 @@ Research published in arXiv highlights breakthroughs in energy-efficient neuromo
     </item>
     <item>
       <title>AI Updates - May 18, 2026</title>
-      <link>https://shamyl.github.io/blog/ai-updates-2026-05-18</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/ai-updates-2026-05-18</guid>
+      <link>https://shamylmansoor.com/blog/ai-updates-2026-05-18</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/ai-updates-2026-05-18</guid>
       <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
       <description>Latest AI developments, tech trends, market updates, and world tech news from May 18, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Monday roundup of AI and tech news for May 18, 2026:</p>
@@ -5303,8 +5362,8 @@ Research published in arXiv highlights breakthroughs in energy-efficient neuromo
     </item>
     <item>
       <title>Space Tech Roundup - May 17, 2026</title>
-      <link>https://shamyl.github.io/blog/space-tech-2026-05-17</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/space-tech-2026-05-17</guid>
+      <link>https://shamylmansoor.com/blog/space-tech-2026-05-17</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/space-tech-2026-05-17</guid>
       <pubDate>Sun, 17 May 2026 00:00:00 GMT</pubDate>
       <description>Latest in space exploration, satellite technology, and aerospace developments from May 17, 2026. SpaceX Starship V3 debut, James Webb cosmic web discoveries, and Mars communications infrastructure.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Sunday space tech roundup for May 17, 2026:</p>
@@ -5375,8 +5434,8 @@ Research published in arXiv highlights breakthroughs in energy-efficient neuromo
     </item>
     <item>
       <title>Pakistan Tech Roundup - May 16, 2026</title>
-      <link>https://shamyl.github.io/blog/pakistan-tech-2026-05-16</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/pakistan-tech-2026-05-16</guid>
+      <link>https://shamylmansoor.com/blog/pakistan-tech-2026-05-16</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/pakistan-tech-2026-05-16</guid>
       <pubDate>Sat, 16 May 2026 00:00:00 GMT</pubDate>
       <description>Latest technology happenings in Pakistan from May 16, 2026. IT exports surge, 5G launch, major startup acquisitions, and government digitization initiatives.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Saturday Pakistan tech roundup for May 16, 2026:</p>
@@ -5445,8 +5504,8 @@ Research published in arXiv highlights breakthroughs in energy-efficient neuromo
     </item>
     <item>
       <title>Tech, Art &amp; Entertainment - May 15, 2026</title>
-      <link>https://shamyl.github.io/blog/tech-art-2026-05-15</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/tech-art-2026-05-15</guid>
+      <link>https://shamylmansoor.com/blog/tech-art-2026-05-15</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/tech-art-2026-05-15</guid>
       <pubDate>Fri, 15 May 2026 00:00:00 GMT</pubDate>
       <description>Creative intersections of technology, art, and entertainment from May 15, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Friday creative tech roundup for May 15, 2026:</p>
@@ -5523,8 +5582,8 @@ Research published in arXiv highlights breakthroughs in energy-efficient neuromo
     </item>
     <item>
       <title>3D Printing Roundup - May 14, 2026</title>
-      <link>https://shamyl.github.io/blog/3d-printing-2026-05-14</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/3d-printing-2026-05-14</guid>
+      <link>https://shamylmansoor.com/blog/3d-printing-2026-05-14</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/3d-printing-2026-05-14</guid>
       <pubDate>Thu, 14 May 2026 00:00:00 GMT</pubDate>
       <description>Latest in 3D printing technology, printers, materials, and maker projects from May 14, 2026.</description>
       <content:encoded><![CDATA[<p><img src="/images/3d-printing-2026-05-14-1.jpg" alt="3D Printer in action">
@@ -5609,8 +5668,8 @@ Research published in arXiv highlights breakthroughs in energy-efficient neuromo
     </item>
     <item>
       <title>Daily AI Updates - May 13, 2026</title>
-      <link>https://shamyl.github.io/blog/daily-ai-updates-2026-05-13</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/daily-ai-updates-2026-05-13</guid>
+      <link>https://shamylmansoor.com/blog/daily-ai-updates-2026-05-13</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/daily-ai-updates-2026-05-13</guid>
       <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
       <description>Latest AI developments, tech trends, market updates, and world tech news from May 13, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your daily roundup of AI and tech news for May 13, 2026:</p>
@@ -5667,8 +5726,8 @@ Research published in arXiv highlights breakthroughs in energy-efficient neuromo
     </item>
     <item>
       <title>Tech, Art &amp; Entertainment - May 13, 2026</title>
-      <link>https://shamyl.github.io/blog/tech-art-2026-05-13</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/tech-art-2026-05-13</guid>
+      <link>https://shamylmansoor.com/blog/tech-art-2026-05-13</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/tech-art-2026-05-13</guid>
       <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
       <description>Creative intersections of technology, art, and entertainment from May 13, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Friday creative tech roundup for May 13, 2026:</p>
@@ -5748,8 +5807,8 @@ Research published in arXiv highlights breakthroughs in energy-efficient neuromo
     </item>
     <item>
       <title>Daily AI Updates - May 12, 2026</title>
-      <link>https://shamyl.github.io/blog/daily-ai-updates-2026-05-12</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/daily-ai-updates-2026-05-12</guid>
+      <link>https://shamylmansoor.com/blog/daily-ai-updates-2026-05-12</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/daily-ai-updates-2026-05-12</guid>
       <pubDate>Tue, 12 May 2026 00:00:00 GMT</pubDate>
       <description>Latest AI developments, tech trends, market updates, and world tech news from May 12, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your daily roundup of AI and tech news for May 12, 2026:</p>
@@ -5804,8 +5863,8 @@ Research published in arXiv highlights breakthroughs in energy-efficient neuromo
     </item>
     <item>
       <title>Daily AI Updates - May 11, 2026</title>
-      <link>https://shamyl.github.io/blog/daily-ai-updates-2026-05-11</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/daily-ai-updates-2026-05-11</guid>
+      <link>https://shamylmansoor.com/blog/daily-ai-updates-2026-05-11</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/daily-ai-updates-2026-05-11</guid>
       <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
       <description>Latest AI developments, tech trends, market updates, and world tech news from May 11, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your daily roundup of AI and tech news for May 11, 2026:</p>
@@ -5866,8 +5925,8 @@ Research published in arXiv highlights breakthroughs in energy-efficient neuromo
     </item>
     <item>
       <title>Daily AI Updates - May 10, 2026</title>
-      <link>https://shamyl.github.io/blog/daily-ai-updates-2026-05-10</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/daily-ai-updates-2026-05-10</guid>
+      <link>https://shamylmansoor.com/blog/daily-ai-updates-2026-05-10</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/daily-ai-updates-2026-05-10</guid>
       <pubDate>Sun, 10 May 2026 00:00:00 GMT</pubDate>
       <description>Latest AI developments, tech trends, market updates, and world tech news from May 10, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your daily roundup of AI and tech news for May 10, 2026:</p>
@@ -5949,8 +6008,8 @@ Research published in arXiv highlights breakthroughs in energy-efficient neuromo
     </item>
     <item>
       <title>Daily AI Updates - May 9, 2026</title>
-      <link>https://shamyl.github.io/blog/daily-ai-updates-2026-05-09</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/daily-ai-updates-2026-05-09</guid>
+      <link>https://shamylmansoor.com/blog/daily-ai-updates-2026-05-09</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/daily-ai-updates-2026-05-09</guid>
       <pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate>
       <description>Latest AI developments, tech trends, market updates, and world tech news from May 9, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your daily roundup of AI and tech news for May 9, 2026:</p>
@@ -6017,8 +6076,8 @@ Research published in arXiv highlights breakthroughs in energy-efficient neuromo
     </item>
     <item>
       <title>Daily AI Updates - May 8, 2026</title>
-      <link>https://shamyl.github.io/blog/daily-ai-updates-2026-05-08</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/daily-ai-updates-2026-05-08</guid>
+      <link>https://shamylmansoor.com/blog/daily-ai-updates-2026-05-08</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/daily-ai-updates-2026-05-08</guid>
       <pubDate>Fri, 08 May 2026 00:00:00 GMT</pubDate>
       <description>Latest AI developments, tech trends, market updates, and world tech news from May 8, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your daily roundup of AI and tech news for May 8, 2026:</p>
@@ -6079,8 +6138,8 @@ Research published in arXiv highlights breakthroughs in energy-efficient neuromo
     </item>
     <item>
       <title>Daily AI Updates - May 7, 2026</title>
-      <link>https://shamyl.github.io/blog/daily-ai-updates-2026-05-07</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/daily-ai-updates-2026-05-07</guid>
+      <link>https://shamylmansoor.com/blog/daily-ai-updates-2026-05-07</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/daily-ai-updates-2026-05-07</guid>
       <pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate>
       <description>Latest AI developments, tech trends, market updates, and world tech news from May 7, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your daily roundup of AI and tech news for May 7, 2026:</p>
@@ -6133,8 +6192,8 @@ Research published in arXiv highlights breakthroughs in energy-efficient neuromo
     </item>
     <item>
       <title>Daily AI Updates - May 6, 2026</title>
-      <link>https://shamyl.github.io/blog/daily-ai-updates-2026-05-06</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/daily-ai-updates-2026-05-06</guid>
+      <link>https://shamylmansoor.com/blog/daily-ai-updates-2026-05-06</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/daily-ai-updates-2026-05-06</guid>
       <pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate>
       <description>Latest AI developments, tech trends, market updates, and world tech news from May 6, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your daily roundup of AI and tech news for May 6, 2026:</p>
@@ -6192,8 +6251,8 @@ Research published in arXiv highlights breakthroughs in energy-efficient neuromo
     </item>
     <item>
       <title>Daily AI Updates - May 5, 2026</title>
-      <link>https://shamyl.github.io/blog/daily-ai-updates-2026-05-05</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/daily-ai-updates-2026-05-05</guid>
+      <link>https://shamylmansoor.com/blog/daily-ai-updates-2026-05-05</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/daily-ai-updates-2026-05-05</guid>
       <pubDate>Tue, 05 May 2026 00:00:00 GMT</pubDate>
       <description>Latest AI developments, tech trends, market updates, and world tech news from May 5, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your daily roundup of AI and tech news for May 5, 2026:</p>
@@ -6258,8 +6317,8 @@ Research published in arXiv highlights breakthroughs in energy-efficient neuromo
     </item>
     <item>
       <title>The Real Cost of Technical Debt: A Startup CTO&apos;s Perspective</title>
-      <link>https://shamyl.github.io/blog/technical-debt-startup-cto-lessons</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/technical-debt-startup-cto-lessons</guid>
+      <link>https://shamylmansoor.com/blog/technical-debt-startup-cto-lessons</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/technical-debt-startup-cto-lessons</guid>
       <pubDate>Tue, 05 May 2026 00:00:00 GMT</pubDate>
       <description>Reflections on technical debt, infrastructure scaling challenges, and lessons learned from the &apos;Fix it Later&apos; mentality.</description>
       <content:encoded><![CDATA[<p>I recently came across <a href="https://www.producthunt.com/p/rankfender/the-cost-of-technical-debt-a-longitudinal-study-of-100-startups">a study on Product Hunt</a> analyzing technical debt across 100 startups. The research was conducted by <a href="https://www.rankfender.com/">Rankfender</a>, a technical debt monitoring platform that tracked code quality metrics across early-stage companies over five years. Reading through it felt like looking in a mirror—every pattern they described, I&#39;ve lived through as a CTO.</p>
@@ -6315,8 +6374,8 @@ Research published in arXiv highlights breakthroughs in energy-efficient neuromo
     </item>
     <item>
       <title>Daily AI Updates - May 4, 2026</title>
-      <link>https://shamyl.github.io/blog/daily-ai-updates-2026-05-04</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/daily-ai-updates-2026-05-04</guid>
+      <link>https://shamylmansoor.com/blog/daily-ai-updates-2026-05-04</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/daily-ai-updates-2026-05-04</guid>
       <pubDate>Mon, 04 May 2026 00:00:00 GMT</pubDate>
       <description>Latest AI developments, tech trends, market updates, and world tech news from May 4, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your daily roundup of AI and tech news for <strong>May 4, 2026</strong>:</p>
@@ -6406,8 +6465,8 @@ Research published in arXiv highlights breakthroughs in energy-efficient neuromo
     </item>
     <item>
       <title>Daily AI Updates - May 3, 2026</title>
-      <link>https://shamyl.github.io/blog/daily-ai-updates-2026-05-03</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/daily-ai-updates-2026-05-03</guid>
+      <link>https://shamylmansoor.com/blog/daily-ai-updates-2026-05-03</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/daily-ai-updates-2026-05-03</guid>
       <pubDate>Sun, 03 May 2026 00:00:00 GMT</pubDate>
       <description>Latest AI developments, tech trends, market updates, and world tech news from May 3, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your daily roundup of AI and tech news for <strong>May 3, 2026</strong>:</p>
@@ -6487,8 +6546,8 @@ Research published in arXiv highlights breakthroughs in energy-efficient neuromo
     </item>
     <item>
       <title>Daily AI Updates - May 2, 2026</title>
-      <link>https://shamyl.github.io/blog/daily-ai-updates-2026-05-02</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/daily-ai-updates-2026-05-02</guid>
+      <link>https://shamylmansoor.com/blog/daily-ai-updates-2026-05-02</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/daily-ai-updates-2026-05-02</guid>
       <pubDate>Sat, 02 May 2026 00:00:00 GMT</pubDate>
       <description>Latest AI developments, tech trends, market updates, and world tech news from May 2, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your daily roundup of AI and tech news for May 2, 2026:</p>
@@ -6554,8 +6613,8 @@ Research published in arXiv highlights breakthroughs in energy-efficient neuromo
     </item>
     <item>
       <title>Daily AI Updates - May 1, 2026</title>
-      <link>https://shamyl.github.io/blog/daily-ai-updates-2026-05-01</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/daily-ai-updates-2026-05-01</guid>
+      <link>https://shamylmansoor.com/blog/daily-ai-updates-2026-05-01</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/daily-ai-updates-2026-05-01</guid>
       <pubDate>Fri, 01 May 2026 00:00:00 GMT</pubDate>
       <description>Latest AI developments, tech trends, market updates, and world tech news from May 1, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your daily roundup of AI and tech news for May 1, 2026:</p>
@@ -6620,8 +6679,8 @@ Research published in arXiv highlights breakthroughs in energy-efficient neuromo
     </item>
     <item>
       <title>Daily AI Updates - April 30, 2026</title>
-      <link>https://shamyl.github.io/blog/daily-ai-updates-2026-04-30</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/daily-ai-updates-2026-04-30</guid>
+      <link>https://shamylmansoor.com/blog/daily-ai-updates-2026-04-30</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/daily-ai-updates-2026-04-30</guid>
       <pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate>
       <description>Latest AI developments, tech trends, market updates, and world tech news from April 30, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your daily roundup of AI and tech news for April 30, 2026:</p>
@@ -6700,8 +6759,8 @@ Research published in arXiv highlights breakthroughs in energy-efficient neuromo
     </item>
     <item>
       <title>Daily AI Updates - April 29, 2026</title>
-      <link>https://shamyl.github.io/blog/daily-ai-updates-2026-04-29</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/daily-ai-updates-2026-04-29</guid>
+      <link>https://shamylmansoor.com/blog/daily-ai-updates-2026-04-29</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/daily-ai-updates-2026-04-29</guid>
       <pubDate>Wed, 29 Apr 2026 00:00:00 GMT</pubDate>
       <description>Latest AI developments, tech trends, market updates, and world tech news from April 29, 2026.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your daily roundup of AI and tech news for April 29, 2026:</p>
@@ -6756,8 +6815,8 @@ Research published in arXiv highlights breakthroughs in energy-efficient neuromo
     </item>
     <item>
       <title>Tech, Art &amp; Entertainment - June 12, 2025</title>
-      <link>https://shamyl.github.io/blog/tech-art-2025-06-12</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/tech-art-2025-06-12</guid>
+      <link>https://shamylmansoor.com/blog/tech-art-2025-06-12</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/tech-art-2025-06-12</guid>
       <pubDate>Thu, 12 Jun 2025 00:00:00 GMT</pubDate>
       <description>Creative intersections of technology, art, and entertainment from June 12, 2025.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Friday creative tech roundup for June 12, 2025:</p>
@@ -6842,8 +6901,8 @@ Research published in arXiv highlights breakthroughs in energy-efficient neuromo
     </item>
     <item>
       <title>Tech, Art &amp; Entertainment - May 29, 2025</title>
-      <link>https://shamyl.github.io/blog/tech-art-2025-05-29</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/tech-art-2025-05-29</guid>
+      <link>https://shamylmansoor.com/blog/tech-art-2025-05-29</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/tech-art-2025-05-29</guid>
       <pubDate>Thu, 29 May 2025 00:00:00 GMT</pubDate>
       <description>Creative intersections of technology, art, and entertainment from May 29, 2025.</description>
       <content:encoded><![CDATA[<p>Here&#39;s your Friday creative tech roundup for May 29, 2025:</p>
@@ -6933,8 +6992,8 @@ A maker project exploring whether a matrix display can rain code like the movies
     </item>
     <item>
       <title>Speaking at PyCon Pakistan 2024</title>
-      <link>https://shamyl.github.io/blog/pycon-2024</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/pycon-2024</guid>
+      <link>https://shamylmansoor.com/blog/pycon-2024</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/pycon-2024</guid>
       <pubDate>Fri, 01 Mar 2024 00:00:00 GMT</pubDate>
       <description>I&apos;ll be speaking at PyCon Pakistan 2024 at LUMS, Lahore on March 9th. My talk covers programming robots using Python.</description>
       <content:encoded><![CDATA[<p>I&#39;m excited to announce that I&#39;ll be <a href="https://pycon.pk/speakers/2024/">speaking</a> at <a href="https://pycon.pk/">PyCon Pakistan 2024</a> to be held on Saturday, March 9th at <a href="https://lums.edu.pk/">LUMS</a>, Lahore.</p>
@@ -6963,8 +7022,8 @@ A maker project exploring whether a matrix display can rain code like the movies
     </item>
     <item>
       <title>Using AI at LearnOBots - AI Summit Islamabad</title>
-      <link>https://shamyl.github.io/blog/ai-summit-2023</link>
-      <guid isPermaLink="true">https://shamyl.github.io/blog/ai-summit-2023</guid>
+      <link>https://shamylmansoor.com/blog/ai-summit-2023</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/ai-summit-2023</guid>
       <pubDate>Mon, 20 Nov 2023 00:00:00 GMT</pubDate>
       <description>Recap of my talk at the AI Summit Islamabad where I discussed how we&apos;re leveraging AI in EdTech at LearnOBots.</description>
       <content:encoded><![CDATA[<p>Last week, I had the opportunity to speak at the <a href="https://www.linkedin.com/posts/atom-camp_get-ready-for-our-highly-anticipated-ai-activity-7130184331708313600-uvO6">AI Summit Islamabad</a> organized by atomcamp.</p>

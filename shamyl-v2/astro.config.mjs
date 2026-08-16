@@ -3,7 +3,7 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://shamyl.github.io',
+  site: 'https://shamylmansoor.com',
   output: 'static',
   build: {
     assets: 'assets',

@@ -7,9 +7,31 @@ import GeometricBackground from '../components/GeometricBackground.astro';
 interface Props {
   title: string;
   description?: string;
+  seoTitle?: string;
+  seoDescription?: string;
+  ogImage?: string;
+  ogType?: 'website' | 'article';
+  canonical?: string;
+  jsonLd?: string;
 }
 
-const { title, description = "Co-founder & CTO @ LearnOBots | Technologist, Maker, Educator" } = Astro.props;
+const {
+  title,
+  description = "Co-founder & CTO @ LearnOBots | Technologist, Maker, Educator",
+  seoTitle,
+  seoDescription,
+  ogImage,
+  ogType = 'website',
+  canonical,
+  jsonLd,
+} = Astro.props;
+
+const siteOrigin = 'https://shamylmansoor.com';
+const pageTitle = seoTitle || title;
+const metaDescription = seoDescription || description;
+const currentUrl = Astro.url.pathname;
+const canonicalUrl = canonical || `${siteOrigin}${currentUrl.endsWith('/') ? currentUrl : currentUrl + '/'}`;
+const ogImageUrl = ogImage ? (ogImage.startsWith('http') ? ogImage : `${siteOrigin}${ogImage}`) : `${siteOrigin}/images/shamyl.jpg`;
 ---
 
 <!DOCTYPE html>
@@ -17,13 +39,28 @@ const { title, description = "Co-founder & CTO @ LearnOBots | Technologist, Make
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content={description} />
+    <meta name="description" content={metaDescription} />
+    <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="alternate" type="application/rss+xml" title="RSS Feed for Shamyl Bin Mansoor's Blog" href="/rss.xml" />
-    <title>{title} | Shamyl Bin Mansoor</title>
+    <title>{pageTitle} | Shamyl Bin Mansoor</title>
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content={ogType} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={metaDescription} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:site_name" content="Shamyl Bin Mansoor" />
+    {ogImage && <meta property="og:image" content={ogImageUrl} />}
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={metaDescription} />
+    {ogImage && <meta name="twitter:image" content={ogImageUrl} />}
     
     <script is:inline>
       const theme = localStorage.getItem('theme') || 'dark';
@@ -31,6 +68,8 @@ const { title, description = "Co-founder & CTO @ LearnOBots | Technologist, Make
     </script>
     <script data-goatcounter="https://shamyl.goatcounter.com/count"
      async src="//gc.zgo.at/count.js"></script>
+    
+    {jsonLd && <script type="application/ld+json" set:html={jsonLd} />}
   </head>
   <body>
     <GeometricBackground />

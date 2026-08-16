@@ -16,9 +16,29 @@ const featuredProjects = allProjects
   .filter(p => p.data.featured)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, 4);
+
+const personJsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Shamyl Bin Mansoor",
+  "url": "https://shamylmansoor.com",
+  "image": "https://shamylmansoor.com/images/shamyl.jpg",
+  "jobTitle": "Co-founder & CTO",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "LearnOBots",
+    "url": "https://learnobots.com"
+  },
+  "sameAs": [
+    "https://x.com/shamylmansoor",
+    "https://linkedin.com/in/shamylbinmansoor",
+    "https://github.com/shamyl",
+    "https://hackaday.io/shamyl"
+  ]
+});
 ---
 
-<BaseLayout title="Home">
+<BaseLayout title="Home" jsonLd={personJsonLd}>
   <Hero />
   
   <!-- Latest Updates Section -->

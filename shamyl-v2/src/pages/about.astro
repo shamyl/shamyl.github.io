@@ -26,9 +26,49 @@ const inspirations = [
   { name: 'TeamLab', link: 'https://www.teamlab.art/' },
   { name: 'Umair Najeeb Khan', link: 'https://www.umairnajeebkhan.com' },
 ];
+
+const aboutPersonJsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Shamyl Bin Mansoor",
+  "url": "https://shamylmansoor.com/about/",
+  "image": "https://shamylmansoor.com/images/shamyl.jpg",
+  "jobTitle": "Co-founder & CTO",
+  "description": "Technologist, product designer, entrepreneur, maker and former teacher. Co-founder and CTO of LearnOBots, an EdTech company rethinking education through playful and fun learning.",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "LearnOBots",
+    "url": "https://learnobots.com"
+  },
+  "alumniOf": [
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "Seoul National University"
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "NUST"
+    }
+  ],
+  "knowsAbout": [
+    "Educational Technology",
+    "Robotics",
+    "STEAM Education",
+    "Product Design",
+    "Product Management",
+    "Full Stack Development",
+    "OpenClaw & AI Automation"
+  ],
+  "sameAs": [
+    "https://x.com/shamylmansoor",
+    "https://linkedin.com/in/shamylbinmansoor",
+    "https://github.com/shamyl",
+    "https://hackaday.io/shamyl"
+  ]
+});
 ---
 
-<BaseLayout title="About" description="Co-founder & CTO of LearnOBots | Technologist, Maker, Educator">
+<BaseLayout title="About" description="Co-founder & CTO of LearnOBots | Technologist, Maker, Educator" jsonLd={aboutPersonJsonLd}>
   <section class="page-header">
     <div class="container">
       <div class="about-intro">
