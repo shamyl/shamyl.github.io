@@ -75,4 +75,4 @@ This week of August 16, 2026 may be remembered as the moment space investment we
 
 ---
 
-*Images: Lorem Picsum (CC0 license). News compiled from SpaceNews, Space.com, Spaceflight Now, Ars Technica, NASA, CNBC, and TechCrunch.*
+*Images courtesy of Pexels. News compiled from SpaceNews, Space.com, Spaceflight Now, Ars Technica, NASA, CNBC, and TechCrunch.*
