@@ -12,7 +12,7 @@
   </url>
   <url>
     <loc>https://shamylmansoor.com/blog/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
@@ -29,6 +29,11 @@
     <loc>https://shamylmansoor.com/consulting/</loc>
     
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://shamylmansoor.com/blog/nvidia-isaac-groot-reference-humanoid-robot-academic-research/</loc>
+    <lastmod>2026-08-18</lastmod>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shamylmansoor.com/blog/multi-agent-ai-systems-coordination-problems/</loc>
