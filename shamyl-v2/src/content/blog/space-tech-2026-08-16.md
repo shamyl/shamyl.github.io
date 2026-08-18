@@ -55,7 +55,7 @@ NASA's investment in nuclear propulsion has implications beyond the United State
 
 Pakistan's space program, led by SUPARCO, has historically focused on Earth observation and communication satellites. But the global shift toward reusable launch vehicles (exemplified by SpaceX's Falcon 9 and the upcoming Starship) and advanced propulsion systems is lowering the barrier to deep-space participation. If nuclear propulsion matures and becomes commercially available — as NASA intends by developing a design that can be handed to industry — it could enable smaller nations to pursue interplanetary missions at costs that were previously prohibitive.
 
-For educators and technology builders in Pakistan, SR-1 Freedom also demonstrates an important principle: that solving hard engineering problems requires combining multiple disciplines — nuclear physics, aerospace engineering, software systems, and materials science. This is precisely the kind of interdisciplinary STEAM thinking that [LearnOBots](https://learnobots.com) and platforms like [LearnOSTEAM](/projects/learnosteam) aim to cultivate in the next generation of Pakistani engineers and scientists.
+For educators and technology builders in Pakistan, SR-1 Freedom also demonstrates an important principle: that solving hard engineering problems requires combining multiple disciplines — nuclear physics, aerospace engineering, software systems, and materials science. This is precisely the kind of interdisciplinary STEAM thinking that [LearnOBots](https://learnobots.com) and platforms like [LearnOSTEAM](https://learnobots.com/products/learnosteam) aim to cultivate in the next generation of Pakistani engineers and scientists.
 
 ## What Comes After SR-1 Freedom?
 
@@ -77,7 +77,7 @@ INL's Coleman said the goal is to develop a reactor design that works, then hand
 
 ## Shamyl's Take
 
-As a technology product builder and CTO, what stands out about SR-1 Freedom is not just the engineering ambition but the program's design philosophy. NASA is deliberately building a system that is extensible — not a one-off prototype, but a foundation for a product line. This mirrors a principle I've learned building [educational robotics platforms](/projects/buddy-bot): the first version should prove the concept, but the architecture should be ready to scale.
+As a technology product builder and CTO, what stands out about SR-1 Freedom is not just the engineering ambition but the program's design philosophy. NASA is deliberately building a system that is extensible — not a one-off prototype, but a foundation for a product line. This mirrors a principle I've learned building [educational robotics platforms](https://learnobots.com/products/diy-kits): the first version should prove the concept, but the architecture should be ready to scale.
 
 The decision to repurpose the Gateway's Power and Propulsion Element rather than build a new spacecraft from scratch is a pragmatic engineering choice that reduces both cost and schedule risk. In startup terms, NASA is "pivoting" an existing asset rather than starting from zero — something every founder can appreciate. The $2.1 billion preliminary budget for a first-of-its-kind nuclear space mission is significant, but it is a fraction of what the Apollo program cost in comparable dollars, and the knowledge gained will compound across future SR missions.
 
