@@ -1,0 +1,281 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-37fxchfa> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="How I used an open-source MCP server, OAuth, and a content generation pipeline to automate daily LinkedIn posts — no paid tools, no manual posting."><link rel="canonical" href="https://shamylmansoor.com/blog/linkedin-automation-pipeline-2026-08-24/"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="alternate" type="application/rss+xml" title="RSS Feed for Shamyl Bin Mansoor's Blog" href="/rss.xml"><title>I Built an Autonomous LinkedIn Posting Pipeline with Open Source Tools | Shamyl Bin Mansoor</title><!-- Open Graph --><meta property="og:type" content="article"><meta property="og:title" content="I Built an Autonomous LinkedIn Posting Pipeline with Open Source Tools"><meta property="og:description" content="How I used an open-source MCP server, OAuth, and a content generation pipeline to automate daily LinkedIn posts — no paid tools, no manual posting."><meta property="og:url" content="https://shamylmansoor.com/blog/linkedin-automation-pipeline-2026-08-24/"><meta property="og:site_name" content="Shamyl Bin Mansoor"><!-- Twitter Cards --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="I Built an Autonomous LinkedIn Posting Pipeline with Open Source Tools"><meta name="twitter:description" content="How I used an open-source MCP server, OAuth, and a content generation pipeline to automate daily LinkedIn posts — no paid tools, no manual posting."><script>
+      const theme = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', theme);
+    </script><script data-goatcounter="https://shamyl.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"I Built an Autonomous LinkedIn Posting Pipeline with Open Source Tools","description":"How I used an open-source MCP server, OAuth, and a content generation pipeline to automate daily LinkedIn posts — no paid tools, no manual posting.","image":"https://shamylmansoor.com/images/shamyl.jpg","author":{"@type":"Person","name":"Shamyl Bin Mansoor","url":"https://shamylmansoor.com/about/"},"datePublished":"2026-08-24T00:00:00.000Z","dateModified":"2026-08-24T00:00:00.000Z","mainEntityOfPage":{"@type":"WebPage","@id":"https://shamylmansoor.com/blog/linkedin-automation-pipeline-2026-08-24/"},"url":"https://shamylmansoor.com/blog/linkedin-automation-pipeline-2026-08-24/","keywords":"linkedin, automation, mcp, opensource, nodejs","publisher":{"@type":"Person","name":"Shamyl Bin Mansoor","url":"https://shamylmansoor.com"}}</script><link rel="stylesheet" href="/assets/BaseLayout.BbqrZc9Z.css">
+<link rel="stylesheet" href="/assets/_..BOA9lJfk.css"></head> <body data-astro-cid-37fxchfa> <div class="geometric-bg" aria-hidden="true"> <div class="grid-lines"></div> <div class="glow glow-1"></div> <div class="glow glow-2"></div> <div class="noise"></div> </div> <header class="header" data-astro-cid-pux6a34n> <nav class="nav container" data-astro-cid-pux6a34n> <a href="/" class="logo" data-astro-cid-pux6a34n> <span class="logo-text" data-astro-cid-pux6a34n>SBM</span> </a> <ul class="nav-links" data-astro-cid-pux6a34n> <li data-astro-cid-pux6a34n> <a href="/" class="nav-link" data-astro-cid-pux6a34n> Home </a> </li><li data-astro-cid-pux6a34n> <a href="/about" class="nav-link" data-astro-cid-pux6a34n> About </a> </li><li data-astro-cid-pux6a34n> <a href="/work" class="nav-link" data-astro-cid-pux6a34n> Work </a> </li><li data-astro-cid-pux6a34n> <a href="/speaking" class="nav-link" data-astro-cid-pux6a34n> Speaking </a> </li><li data-astro-cid-pux6a34n> <a href="/consulting" class="nav-link" data-astro-cid-pux6a34n> Consulting </a> </li><li data-astro-cid-pux6a34n> <a href="/blog" class="nav-link active" data-astro-cid-pux6a34n> Blog </a> </li> </ul> <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" data-astro-cid-pux6a34n> <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-pux6a34n> <circle cx="12" cy="12" r="5" data-astro-cid-pux6a34n></circle> <line x1="12" y1="1" x2="12" y2="3" data-astro-cid-pux6a34n></line> <line x1="12" y1="21" x2="12" y2="23" data-astro-cid-pux6a34n></line> <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" data-astro-cid-pux6a34n></line> <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" data-astro-cid-pux6a34n></line> <line x1="1" y1="12" x2="3" y2="12" data-astro-cid-pux6a34n></line> <line x1="21" y1="12" x2="23" y2="12" data-astro-cid-pux6a34n></line> <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" data-astro-cid-pux6a34n></line> <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" data-astro-cid-pux6a34n></line> </svg> <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-pux6a34n> <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" data-astro-cid-pux6a34n></path> </svg> </button> <button class="mobile-menu-btn" aria-label="Toggle menu" data-astro-cid-pux6a34n> <span data-astro-cid-pux6a34n></span> <span data-astro-cid-pux6a34n></span> <span data-astro-cid-pux6a34n></span> </button> </nav> </header>  <script type="module">const e=document.querySelector(".mobile-menu-btn"),n=document.querySelector(".nav-links");e?.addEventListener("click",()=>{n?.classList.toggle("show")});</script> <main data-astro-cid-37fxchfa>  <article class="post" data-astro-cid-7jjqptxk> <header class="post-header" data-astro-cid-7jjqptxk> <div class="container" data-astro-cid-7jjqptxk> <a href="/blog" class="back-link" data-astro-cid-7jjqptxk> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-7jjqptxk> <line x1="19" y1="12" x2="5" y2="12" data-astro-cid-7jjqptxk></line> <polyline points="12 19 5 12 12 5" data-astro-cid-7jjqptxk></polyline> </svg>
+Back to Blog
+</a> <time class="post-date" datetime="2026-08-24T00:00:00.000Z" data-astro-cid-7jjqptxk> August 24, 2026 </time>  <span class="reading-time" data-astro-cid-7jjqptxk>· 10 min read</span> <h1 class="post-title" data-astro-cid-7jjqptxk>I Built an Autonomous LinkedIn Posting Pipeline with Open Source Tools</h1> <div class="post-tags" data-astro-cid-7jjqptxk> <span class="tag" data-astro-cid-7jjqptxk>#linkedin</span><span class="tag" data-astro-cid-7jjqptxk>#automation</span><span class="tag" data-astro-cid-7jjqptxk>#mcp</span><span class="tag" data-astro-cid-7jjqptxk>#opensource</span><span class="tag" data-astro-cid-7jjqptxk>#nodejs</span> </div> </div> </header> <div class="post-content container" data-astro-cid-7jjqptxk> <div class="prose" data-astro-cid-7jjqptxk> <blockquote>
+<p>This is the story of how I went from manually posting on LinkedIn to having a fully autonomous pipeline that generates content, schedules posts, and publishes daily — using only open source tools and the official LinkedIn API.</p>
+</blockquote>
+<h2 id="the-problem">The Problem</h2>
+<p>LinkedIn is my most valuable professional network. High net-worth individuals, investors, founders, and researchers follow my work in edtech, robotics, and Pakistan’s tech ecosystem. But I kept neglecting it.</p>
+<p>Not because I didn’t have anything to say — I’ve been building <a href="https://learnobots.com">LearnOBots</a> for 12 years, ran a research lab at NUST, and write the “Made in Pakistan” newsletter. The problem was <strong>consistency</strong>. Writing a good LinkedIn post takes 20 minutes. Remembering to post takes discipline I don’t have when I’m running a company.</p>
+<p>I looked at paid tools (Taplio, Buffer, Hootsuite) but they all required manual content creation. I wanted something that would:</p>
+<ol>
+<li><strong>Generate</strong> posts automatically based on my expertise and interests</li>
+<li><strong>Schedule</strong> them at optimal times</li>
+<li><strong>Publish</strong> them without any manual intervention</li>
+<li><strong>Do it all with open source tools</strong> — no subscription, no vendor lock-in</li>
+</ol>
+<p>Here’s how I built it.</p>
+<h2 id="the-stack">The Stack</h2>
+<ul>
+<li><strong>LinkedIn API Layer</strong>: <a href="https://github.com/gacabartosz/linkedin-mcp-server">linkedin-mcp-server</a> — open source, 25+ tools, official API</li>
+<li><strong>Content Generation</strong>: Custom Node.js module with hand-crafted post library</li>
+<li><strong>Scheduling</strong>: JSON queue + cron</li>
+<li><strong>Automation</strong>: <a href="https://openclaw.ai">OpenClaw</a> cron jobs</li>
+</ul>
+<h2 id="step-1-create-a-linkedin-developer-app">Step 1: Create a LinkedIn Developer App</h2>
+<p>Go to the <a href="https://developer.linkedin.com/">LinkedIn Developer Portal</a> and create a new app. You’ll need:</p>
+<ul>
+<li>A LinkedIn Company Page (mandatory — create one if you don’t have it)</li>
+<li>These products enabled:
+<ul>
+<li><strong>Share on LinkedIn</strong> (for posting)</li>
+<li><strong>Sign In with LinkedIn using OpenID Connect</strong> (for profile access)</li>
+</ul>
+</li>
+<li>A redirect URL: <code>http://localhost:8585/callback</code></li>
+<li>Your <strong>Client ID</strong> and <strong>Client Secret</strong> (save these)</li>
+</ul>
+<p>This is the only step that requires manual setup. Everything else is automated.</p>
+<h2 id="step-2-install-the-mcp-server">Step 2: Install the MCP Server</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">npm</span><span style="color:#9ECBFF"> install</span><span style="color:#79B8FF"> -g</span><span style="color:#9ECBFF"> linkedin-mcp-server</span></span></code></pre>
+<p>This gives you a binary <code>linkedin-mcp-server</code> with 25+ tools: posting, scheduling, media upload, comments, reactions, content templates, and more.</p>
+<h2 id="step-3-oauth-authentication">Step 3: OAuth Authentication</h2>
+<p>LinkedIn uses OAuth 2.0 — there’s no API key shortcut. You need to authorize your app to post on your behalf.</p>
+<p>I wrote a small Node.js script that starts a local HTTP server, generates the OAuth URL, and handles the callback:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> http </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> 'http'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> crypto </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> 'crypto'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> fs </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> 'fs'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> path </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> 'path'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> os </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> 'os'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> CLIENT_ID</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> 'your_client_id'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> CLIENT_SECRET</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> 'your_client_secret'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> REDIRECT_URI</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> 'http://localhost:8585/callback'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> SCOPES</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> [</span><span style="color:#9ECBFF">'openid'</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">'profile'</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">'email'</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">'w_member_social'</span><span style="color:#E1E4E8">];</span></span>
+<span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> TOKEN_FILE</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> path.</span><span style="color:#B392F0">join</span><span style="color:#E1E4E8">(os.</span><span style="color:#B392F0">homedir</span><span style="color:#E1E4E8">(), </span><span style="color:#9ECBFF">'.linkedin-mcp'</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">'tokens_default.json'</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> state</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> crypto.</span><span style="color:#B392F0">randomBytes</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">32</span><span style="color:#E1E4E8">).</span><span style="color:#B392F0">toString</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">'hex'</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> authUrl</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> 'https://www.linkedin.com/oauth/v2/authorization?'</span><span style="color:#F97583"> +</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> URLSearchParams</span><span style="color:#E1E4E8">({</span></span>
+<span class="line"><span style="color:#E1E4E8">  response_type: </span><span style="color:#9ECBFF">'code'</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">  client_id: </span><span style="color:#79B8FF">CLIENT_ID</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">  redirect_uri: </span><span style="color:#79B8FF">REDIRECT_URI</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">  state: state,</span></span>
+<span class="line"><span style="color:#E1E4E8">  scope: </span><span style="color:#79B8FF">SCOPES</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">join</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">' '</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">}).</span><span style="color:#B392F0">toString</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">'</span><span style="color:#79B8FF">\n</span><span style="color:#9ECBFF">🔗 OPEN THIS URL IN YOUR BROWSER:</span><span style="color:#79B8FF">\n</span><span style="color:#9ECBFF">'</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(authUrl);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> server</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> http.</span><span style="color:#B392F0">createServer</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">async</span><span style="color:#E1E4E8"> (</span><span style="color:#FFAB70">req</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">res</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">=></span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">  const</span><span style="color:#79B8FF"> reqUrl</span><span style="color:#F97583"> =</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> URL</span><span style="color:#E1E4E8">(req.url, </span><span style="color:#9ECBFF">'http://localhost:8585'</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">  if</span><span style="color:#E1E4E8"> (reqUrl.pathname </span><span style="color:#F97583">===</span><span style="color:#9ECBFF"> '/callback'</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#79B8FF"> code</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> reqUrl.searchParams.</span><span style="color:#B392F0">get</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">'code'</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#79B8FF"> returnedState</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> reqUrl.searchParams.</span><span style="color:#B392F0">get</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">'state'</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#E1E4E8"> (</span><span style="color:#F97583">!</span><span style="color:#E1E4E8">code </span><span style="color:#F97583">||</span><span style="color:#E1E4E8"> returnedState </span><span style="color:#F97583">!==</span><span style="color:#E1E4E8"> state) {</span></span>
+<span class="line"><span style="color:#E1E4E8">      res.</span><span style="color:#B392F0">writeHead</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">200</span><span style="color:#E1E4E8">, { </span><span style="color:#9ECBFF">'Content-Type'</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">'text/html'</span><span style="color:#E1E4E8"> });</span></span>
+<span class="line"><span style="color:#E1E4E8">      res.</span><span style="color:#B392F0">end</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">'&#x3C;h1>❌ State mismatch&#x3C;/h1>'</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">      server.</span><span style="color:#B392F0">close</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#F97583">      return</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">    // Exchange code for tokens</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#79B8FF"> tokenRes</span><span style="color:#F97583"> =</span><span style="color:#F97583"> await</span><span style="color:#B392F0"> fetch</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">'https://www.linkedin.com/oauth/v2/accessToken'</span><span style="color:#E1E4E8">, {</span></span>
+<span class="line"><span style="color:#E1E4E8">      method: </span><span style="color:#9ECBFF">'POST'</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">      headers: { </span><span style="color:#9ECBFF">'Content-Type'</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">'application/x-www-form-urlencoded'</span><span style="color:#E1E4E8"> },</span></span>
+<span class="line"><span style="color:#E1E4E8">      body: </span><span style="color:#F97583">new</span><span style="color:#B392F0"> URLSearchParams</span><span style="color:#E1E4E8">({</span></span>
+<span class="line"><span style="color:#E1E4E8">        grant_type: </span><span style="color:#9ECBFF">'authorization_code'</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">        code,</span></span>
+<span class="line"><span style="color:#E1E4E8">        client_id: </span><span style="color:#79B8FF">CLIENT_ID</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">        client_secret: </span><span style="color:#79B8FF">CLIENT_SECRET</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">        redirect_uri: </span><span style="color:#79B8FF">REDIRECT_URI</span></span>
+<span class="line"><span style="color:#E1E4E8">      })</span></span>
+<span class="line"><span style="color:#E1E4E8">    });</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#79B8FF"> tokens</span><span style="color:#F97583"> =</span><span style="color:#F97583"> await</span><span style="color:#E1E4E8"> tokenRes.</span><span style="color:#B392F0">json</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">    // Get profile</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#79B8FF"> profileRes</span><span style="color:#F97583"> =</span><span style="color:#F97583"> await</span><span style="color:#B392F0"> fetch</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">'https://api.linkedin.com/v2/userinfo'</span><span style="color:#E1E4E8">, {</span></span>
+<span class="line"><span style="color:#E1E4E8">      headers: { Authorization: </span><span style="color:#9ECBFF">`Bearer ${</span><span style="color:#E1E4E8">tokens</span><span style="color:#9ECBFF">.</span><span style="color:#E1E4E8">access_token</span><span style="color:#9ECBFF">}`</span><span style="color:#E1E4E8"> }</span></span>
+<span class="line"><span style="color:#E1E4E8">    });</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#79B8FF"> profile</span><span style="color:#F97583"> =</span><span style="color:#F97583"> await</span><span style="color:#E1E4E8"> profileRes.</span><span style="color:#B392F0">json</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">    // Save tokens</span></span>
+<span class="line"><span style="color:#E1E4E8">    fs.</span><span style="color:#B392F0">writeFileSync</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">TOKEN_FILE</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">JSON</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">stringify</span><span style="color:#E1E4E8">({</span></span>
+<span class="line"><span style="color:#E1E4E8">      accessToken: tokens.access_token,</span></span>
+<span class="line"><span style="color:#E1E4E8">      refreshToken: tokens.refresh_token,</span></span>
+<span class="line"><span style="color:#E1E4E8">      expiresAt: Date.</span><span style="color:#B392F0">now</span><span style="color:#E1E4E8">() </span><span style="color:#F97583">+</span><span style="color:#E1E4E8"> (tokens.expires_in </span><span style="color:#F97583">*</span><span style="color:#79B8FF"> 1000</span><span style="color:#E1E4E8">),</span></span>
+<span class="line"><span style="color:#E1E4E8">      profile: { name: profile.name, email: profile.email, sub: profile.sub }</span></span>
+<span class="line"><span style="color:#E1E4E8">    }, </span><span style="color:#79B8FF">null</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">2</span><span style="color:#E1E4E8">));</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">    res.</span><span style="color:#B392F0">writeHead</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">200</span><span style="color:#E1E4E8">, { </span><span style="color:#9ECBFF">'Content-Type'</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">'text/html'</span><span style="color:#E1E4E8"> });</span></span>
+<span class="line"><span style="color:#E1E4E8">    res.</span><span style="color:#B392F0">end</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">'&#x3C;h1>✅ Authenticated!&#x3C;/h1>'</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">    console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">'✅ Authentication successful!'</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">    server.</span><span style="color:#B392F0">close</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">});</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">server.</span><span style="color:#B392F0">listen</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">8585</span><span style="color:#E1E4E8">);</span></span></code></pre>
+<p>The key scope here is <code>w_member_social</code> — without it, you can only read your profile, not post.</p>
+<p><strong>Important:</strong> Tokens expire in ~60 days. You’ll need to re-authorize when that happens. Your pipeline should detect expired tokens and alert you.</p>
+<h2 id="step-4-the-content-generation-engine">Step 4: The Content Generation Engine</h2>
+<p>This is where most automation tools fail. They either:</p>
+<ul>
+<li>Use generic templates that sound like a bot wrote them</li>
+<li>Require manual content input (defeating the purpose)</li>
+</ul>
+<p>I built a content library with <strong>hand-crafted posts</strong> organized by topic. Each topic has 1-2 unique variations with real stories, specific details, and an authentic voice.</p>
+<h3 id="content-pillars">Content Pillars</h3>
+<p>I defined 4 content pillars based on my expertise:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "content_pillars"</span><span style="color:#E1E4E8">: [</span></span>
+<span class="line"><span style="color:#E1E4E8">    { </span><span style="color:#79B8FF">"name"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"EdTech &#x26; STEAM Education"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"weight"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">30</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">      "topics"</span><span style="color:#E1E4E8">: [</span><span style="color:#9ECBFF">"Maker culture in Pakistan"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"STEAM education"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"Kids learning robotics"</span><span style="color:#E1E4E8">] },</span></span>
+<span class="line"><span style="color:#E1E4E8">    { </span><span style="color:#79B8FF">"name"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Robotics &#x26; Hardware"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"weight"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">25</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">      "topics"</span><span style="color:#E1E4E8">: [</span><span style="color:#9ECBFF">"Hardware products from Pakistan"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"3D printing"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"DIY robotics"</span><span style="color:#E1E4E8">] },</span></span>
+<span class="line"><span style="color:#E1E4E8">    { </span><span style="color:#79B8FF">"name"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Pakistan Tech Ecosystem"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"weight"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">25</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">      "topics"</span><span style="color:#E1E4E8">: [</span><span style="color:#9ECBFF">"Startup ecosystem"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"Local manufacturing"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"Tech talent"</span><span style="color:#E1E4E8">] },</span></span>
+<span class="line"><span style="color:#E1E4E8">    { </span><span style="color:#79B8FF">"name"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"AI &#x26; Technology Trends"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"weight"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">20</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">      "topics"</span><span style="color:#E1E4E8">: [</span><span style="color:#9ECBFF">"AI in education"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"Open source AI"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"Future of work"</span><span style="color:#E1E4E8">] }</span></span>
+<span class="line"><span style="color:#E1E4E8">  ]</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>The weights determine how often each pillar appears. EdTech gets 30% because that’s my core work. AI gets 20% because it’s relevant but not my primary focus.</p>
+<h3 id="the-post-library">The Post Library</h3>
+<p>Each topic has hand-crafted posts like this:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#9ECBFF">"Maker culture in Pakistan"</span><span style="color:#E1E4E8">: [</span></span>
+<span class="line"><span style="color:#E1E4E8">  {</span></span>
+<span class="line"><span style="color:#E1E4E8">    hook: </span><span style="color:#9ECBFF">"Pakistan has 70M+ kids under 15. Most are taught to memorize. Almost none are taught to make."</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">    body: </span><span style="color:#9ECBFF">"I've spent over a decade building LearnOBots around a simple belief: kids should build things, not just remember things.</span><span style="color:#79B8FF">\n\n</span><span style="color:#9ECBFF">At our workshops, a 12-year-old who struggled in school designed and 3D-printed a functional prosthetic hand. She didn't just learn CAD — she learned that her ideas can become real objects that help real people.</span><span style="color:#79B8FF">\n\n</span><span style="color:#9ECBFF">That shift from consumer to creator? That's the entire game."</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">    cta: </span><span style="color:#9ECBFF">"If you're working on maker education in your country, I'd love to compare notes."</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">]</span></span></code></pre>
+<p>The generator picks topics using a weighted random selection, rotates through variations to avoid repetition, and tracks used topics in a JSON file.</p>
+<h3 id="why-hand-crafted-instead-of-llm-generated">Why hand-crafted instead of LLM-generated?</h3>
+<p>I tried LLM-generated posts first. They were generic. They sounded like every other AI-written LinkedIn post. The hooks were weak. The stories were abstract. They didn’t reference my actual work.</p>
+<p>Hand-crafted posts take more upfront effort but produce dramatically better content. I wrote ~26 unique posts across all topics, each with specific references to LearnOBots, my experiences at MIT and Seoul National University, real stories from workshops, and the Pakistan tech ecosystem I know intimately.</p>
+<p>The generator rotates through them, so a follower won’t see the same post twice for at least a month. And when the library runs out, I write more.</p>
+<h2 id="step-5-the-publishing-pipeline">Step 5: The Publishing Pipeline</h2>
+<p>The publisher is dead simple:</p>
+<ol>
+<li>Read the queue (a JSON file)</li>
+<li>Find posts where <code>publishAt &#x3C;= now</code> and <code>approved = true</code></li>
+<li>Call the LinkedIn Posts API</li>
+<li>Mark them as posted</li>
+</ol>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#F97583">async</span><span style="color:#F97583"> function</span><span style="color:#B392F0"> createPost</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">text</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">  const</span><span style="color:#79B8FF"> tokens</span><span style="color:#F97583"> =</span><span style="color:#79B8FF"> JSON</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">parse</span><span style="color:#E1E4E8">(fs.</span><span style="color:#B392F0">readFileSync</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">TOKEN_FILE</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">'utf8'</span><span style="color:#E1E4E8">));</span></span>
+<span class="line"><span style="color:#F97583">  const</span><span style="color:#79B8FF"> personUrn</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> `urn:li:person:${</span><span style="color:#E1E4E8">tokens</span><span style="color:#9ECBFF">.</span><span style="color:#E1E4E8">profile</span><span style="color:#9ECBFF">.</span><span style="color:#E1E4E8">sub</span><span style="color:#9ECBFF">}`</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">  const</span><span style="color:#79B8FF"> res</span><span style="color:#F97583"> =</span><span style="color:#F97583"> await</span><span style="color:#B392F0"> fetch</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">'https://api.linkedin.com/rest/posts'</span><span style="color:#E1E4E8">, {</span></span>
+<span class="line"><span style="color:#E1E4E8">    method: </span><span style="color:#9ECBFF">'POST'</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">    headers: {</span></span>
+<span class="line"><span style="color:#9ECBFF">      'Authorization'</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">`Bearer ${</span><span style="color:#E1E4E8">tokens</span><span style="color:#9ECBFF">.</span><span style="color:#E1E4E8">accessToken</span><span style="color:#9ECBFF">}`</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#9ECBFF">      'LinkedIn-Version'</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">'202503'</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#9ECBFF">      'X-Restli-Protocol-Version'</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">'2.0.0'</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#9ECBFF">      'Content-Type'</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">'application/json'</span></span>
+<span class="line"><span style="color:#E1E4E8">    },</span></span>
+<span class="line"><span style="color:#E1E4E8">    body: </span><span style="color:#79B8FF">JSON</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">stringify</span><span style="color:#E1E4E8">({</span></span>
+<span class="line"><span style="color:#E1E4E8">      author: personUrn,</span></span>
+<span class="line"><span style="color:#E1E4E8">      commentary: text,</span></span>
+<span class="line"><span style="color:#E1E4E8">      visibility: </span><span style="color:#9ECBFF">'PUBLIC'</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">      distribution: { feedDistribution: </span><span style="color:#9ECBFF">'MAIN_FEED'</span><span style="color:#E1E4E8"> },</span></span>
+<span class="line"><span style="color:#E1E4E8">      lifecycleState: </span><span style="color:#9ECBFF">'PUBLISHED'</span></span>
+<span class="line"><span style="color:#E1E4E8">    })</span></span>
+<span class="line"><span style="color:#E1E4E8">  });</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">  return</span><span style="color:#E1E4E8"> res.ok</span></span>
+<span class="line"><span style="color:#F97583">    ?</span><span style="color:#E1E4E8"> { success: </span><span style="color:#79B8FF">true</span><span style="color:#E1E4E8">, id: res.headers.</span><span style="color:#B392F0">get</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">'x-linkedin-id'</span><span style="color:#E1E4E8">) }</span></span>
+<span class="line"><span style="color:#F97583">    :</span><span style="color:#E1E4E8"> { success: </span><span style="color:#79B8FF">false</span><span style="color:#E1E4E8">, status: res.status, body: </span><span style="color:#F97583">await</span><span style="color:#E1E4E8"> res.</span><span style="color:#B392F0">text</span><span style="color:#E1E4E8">() };</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h2 id="step-6-full-automation">Step 6: Full Automation</h2>
+<p>Two cron jobs run the entire system:</p>
+<p><strong>Cron Job 1 — Content Generator (Weekly)</strong></p>
+<ul>
+<li>Runs every Sunday at 10 PM PKT</li>
+<li>Generates 7 posts for the upcoming week</li>
+<li>Picks topics, selects variations, assigns posting times</li>
+<li>Saves to queue</li>
+</ul>
+<p><strong>Cron Job 2 — Publisher (Every 30 minutes)</strong></p>
+<ul>
+<li>Checks the queue for due posts</li>
+<li>Publishes them via the LinkedIn API</li>
+<li>Handles failures and retries</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>Sunday 10 PM → Generate 7 posts for the week</span></span>
+<span class="line"><span>Every 30 min → Check queue → Publish due posts → Mark as posted</span></span></code></pre>
+<p>That’s it. The system runs silently in the background. I never have to think about LinkedIn again.</p>
+<h2 id="posting-schedule">Posting Schedule</h2>
+<p>I defined optimal posting times based on when my audience is most active:</p>
+<ul>
+<li><strong>Monday</strong> — 9:00 AM PKT</li>
+<li><strong>Tuesday</strong> — 9:00 AM PKT</li>
+<li><strong>Wednesday</strong> — 1:00 PM PKT</li>
+<li><strong>Thursday</strong> — 9:00 AM PKT</li>
+<li><strong>Friday</strong> — 10:00 AM PKT</li>
+<li><strong>Saturday</strong> — 11:00 AM PKT</li>
+<li><strong>Sunday</strong> — 7:00 PM PKT</li>
+</ul>
+<p>Daily posting. The content rotates across 4 pillars so my feed doesn’t feel repetitive.</p>
+<h2 id="what-i-learned">What I Learned</h2>
+<p><strong>1. LinkedIn’s API is gated for a reason.</strong> They don’t want spam. The OAuth flow ensures only authorized apps post on behalf of real users. This is good — it keeps the platform quality high.</p>
+<p><strong>2. Content quality > automation sophistication.</strong> The most impressive automation pipeline is worthless if the posts sound like a bot wrote them. I spent more time on the content library than on the entire technical infrastructure.</p>
+<p><strong>3. Hand-crafted beats LLM-generated for personal branding.</strong> My LinkedIn network includes investors, founders, and high net-worth individuals. Generic AI posts would damage that. The hand-crafted approach ensures every post sounds like me — because I wrote them.</p>
+<p><strong>4. Open source tools are sufficient.</strong> The <code>linkedin-mcp-server</code> project gave me everything I needed: OAuth, posting, scheduling, profile management. No paid tools required.</p>
+<p><strong>5. The 60-day token expiry is the only manual touchpoint.</strong> Every ~60 days, I re-authorize. It takes 30 seconds. Everything else is fully autonomous.</p>
+<h2 id="limitations--honest-tradeoffs">Limitations &#x26; Honest Tradeoffs</h2>
+<ul>
+<li><strong>No images yet.</strong> The LinkedIn API supports image uploads, and the MCP server has Gemini image generation built in, but I haven’t enabled it. Text-only posts for now.</li>
+<li><strong>No engagement automation.</strong> I don’t auto-comment or auto-reply. That would feel inauthentic on a professional network.</li>
+<li><strong>Token refresh isn’t automated.</strong> LinkedIn doesn’t return refresh tokens for the consumer OAuth flow, so re-auth is needed every 60 days.</li>
+<li><strong>Content is pre-written, not live.</strong> The system can’t react to breaking news or current events. It posts from a curated library, not from today’s headlines.</li>
+</ul>
+<h2 id="whats-next">What’s Next</h2>
+<ul>
+<li><strong>Image generation</strong> — integrating Gemini Imagen 4 for auto-generated banners on each post</li>
+<li><strong>Analytics</strong> — tracking engagement metrics to optimize posting times and content</li>
+<li><strong>A/B testing</strong> — trying different hooks and CTAs to see what resonates</li>
+<li><strong>Multi-platform</strong> — extending to Twitter/X using the same content pipeline</li>
+</ul>
+<h2 id="the-full-architecture">The Full Architecture</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>┌─────────────────────┐</span></span>
+<span class="line"><span>│  Content Config     │</span></span>
+<span class="line"><span>│  (4 pillars, topics) │</span></span>
+<span class="line"><span>└──────────┬──────────┘</span></span>
+<span class="line"><span>           │</span></span>
+<span class="line"><span>           ▼</span></span>
+<span class="line"><span>┌─────────────────────┐     ┌──────────────────┐</span></span>
+<span class="line"><span>│  Content Generator  │────▶│   Post Queue     │</span></span>
+<span class="line"><span>│  (weekly, 7 posts)  │     │   (JSON file)    │</span></span>
+<span class="line"><span>└─────────────────────┘     └────────┬─────────┘</span></span>
+<span class="line"><span>                                     │</span></span>
+<span class="line"><span>                                     ▼</span></span>
+<span class="line"><span>┌─────────────────────┐     ┌──────────────────┐</span></span>
+<span class="line"><span>│  Publisher          │◀────│  Cron (30 min)   │</span></span>
+<span class="line"><span>│  (LinkedIn API)     │     │  Check &#x26; publish │</span></span>
+<span class="line"><span>└──────────┬──────────┘     └──────────────────┘</span></span>
+<span class="line"><span>           │</span></span>
+<span class="line"><span>           ▼</span></span>
+<span class="line"><span>┌─────────────────────┐</span></span>
+<span class="line"><span>│  LinkedIn Profile   │</span></span>
+<span class="line"><span>│  (daily posts)      │</span></span>
+<span class="line"><span>└─────────────────────┘</span></span></code></pre>
+<h2 id="getting-started">Getting Started</h2>
+<p>If you want to build something similar:</p>
+<ol>
+<li>Create a LinkedIn Developer App</li>
+<li><code>npm install -g linkedin-mcp-server</code></li>
+<li>Set up OAuth (use the script above)</li>
+<li>Define your content pillars and write your post library</li>
+<li>Set up two cron jobs — one to generate, one to publish</li>
+<li>Let it run</li>
+</ol>
+<p>The entire setup takes about 2 hours. The content library takes longer — but that’s the part that matters. Invest in your content, not your infrastructure.</p>
+<hr>
+<p><em>If you found this helpful, consider <a href="https://github.com/sponsors/shamyl">supporting my work on GitHub Sponsors</a>. I write about building things in Pakistan — robots, education tools, and the occasional automation pipeline.</em></p>
+<p><em>You can also follow my “Made in Pakistan” newsletter on <a href="https://shamylmansoor.com">Substack</a> for more on Pakistan’s tech ecosystem.</em></p> </div> <!-- Author Byline --> <div class="author-byline" data-astro-cid-7jjqptxk> <div class="author-avatar" data-astro-cid-7jjqptxk> <img src="/images/shamyl.jpg" alt="Shamyl Bin Mansoor" loading="lazy" data-astro-cid-7jjqptxk> </div> <div class="author-text" data-astro-cid-7jjqptxk> <p data-astro-cid-7jjqptxk> <strong data-astro-cid-7jjqptxk>Shamyl Bin Mansoor</strong> is a technology entrepreneur, product builder and STEAM educator. He is Co-founder and CTO of <a href="https://learnobots.com" target="_blank" rel="noopener noreferrer" data-astro-cid-7jjqptxk>LearnOBots</a> and works on educational technology, robotics and interactive learning products. <a href="/about/" data-astro-cid-7jjqptxk>Learn more about him</a>.
+</p> </div> </div> <!-- Prev/Next Navigation --> <nav class="post-nav" aria-label="Article navigation" data-astro-cid-7jjqptxk> <a href="/blog/space-tech-2026-08-23/" class="post-nav-item post-nav-prev" data-astro-cid-7jjqptxk> <span class="post-nav-label" data-astro-cid-7jjqptxk>← Previous</span> <span class="post-nav-title" data-astro-cid-7jjqptxk>China&#39;s Chang&#39;e-7 Lunar South Pole Mission: How It Will Hunt for Water Ice on the Moon</span> </a> <a href="/blog/ai-coding-agent-hidden-costs-vibe-tax/" class="post-nav-item post-nav-next" data-astro-cid-7jjqptxk> <span class="post-nav-label" data-astro-cid-7jjqptxk>Next →</span> <span class="post-nav-title" data-astro-cid-7jjqptxk>The Hidden Cost of AI Coding Agents: What the Vibe Tax Means for Product Teams</span> </a> </nav> <!-- Related Articles --> <section class="related-articles" data-astro-cid-7jjqptxk> <h2 class="related-title" data-astro-cid-7jjqptxk>Related Articles</h2> <div class="related-grid" data-astro-cid-7jjqptxk> <a href="/blog/robotics-2026-08-11/" class="related-card" data-astro-cid-7jjqptxk> <time class="related-date" datetime="2026-08-11T00:00:00.000Z" data-astro-cid-7jjqptxk> August 11, 2026 </time> <h3 class="related-card-title" data-astro-cid-7jjqptxk>Robotics Roundup - August 11, 2026</h3> <p class="related-card-desc" data-astro-cid-7jjqptxk>Latest in hobby and professional robotics from August 11, 2026.</p> </a><a href="/blog/robotics-2026-07-26/" class="related-card" data-astro-cid-7jjqptxk> <time class="related-date" datetime="2026-07-26T00:00:00.000Z" data-astro-cid-7jjqptxk> July 26, 2026 </time> <h3 class="related-card-title" data-astro-cid-7jjqptxk>Robotics Roundup - July 26, 2026</h3> <p class="related-card-desc" data-astro-cid-7jjqptxk>Latest in hobby and professional robotics from July 26, 2026.</p> </a><a href="/blog/robotics-2026-07-14/" class="related-card" data-astro-cid-7jjqptxk> <time class="related-date" datetime="2026-07-14T00:00:00.000Z" data-astro-cid-7jjqptxk> July 14, 2026 </time> <h3 class="related-card-title" data-astro-cid-7jjqptxk>Robotics Roundup - July 14, 2026</h3> <p class="related-card-desc" data-astro-cid-7jjqptxk>Latest in hobby and professional robotics from July 14, 2026.</p> </a> </div> </section> </div> </article>  </main> <footer class="footer" data-astro-cid-sz7xmlte> <div class="container footer-content" data-astro-cid-sz7xmlte> <div class="footer-left" data-astro-cid-sz7xmlte> <p class="copyright" data-astro-cid-sz7xmlte>© 2026 Shamyl Bin Mansoor</p> <p class="tagline" data-astro-cid-sz7xmlte>Building Products that matter</p> </div> <div class="footer-right" data-astro-cid-sz7xmlte> <div class="social-links" data-astro-cid-sz7xmlte> <a href="https://x.com/shamylmansoor" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="X" data-astro-cid-sz7xmlte> <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" data-astro-cid-sz7xmlte> <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" data-astro-cid-sz7xmlte></path> </svg>     </a><a href="https://linkedin.com/in/shamylbinmansoor" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn" data-astro-cid-sz7xmlte>  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" data-astro-cid-sz7xmlte> <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" data-astro-cid-sz7xmlte></path> </svg>    </a><a href="https://github.com/shamyl" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub" data-astro-cid-sz7xmlte>   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" data-astro-cid-sz7xmlte> <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" data-astro-cid-sz7xmlte></path> </svg>   </a><a href="https://hackaday.io/shamyl" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Hackaday" data-astro-cid-sz7xmlte>    <img src="/images/hackaday-logo.png" alt="Hackaday" width="20" height="20" class="hackaday-icon" style="object-fit: contain;" data-astro-cid-sz7xmlte>  </a><a href="/rss.xml" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="RSS Feed" data-astro-cid-sz7xmlte>     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" data-astro-cid-sz7xmlte> <path d="M6.503 20.752c0 1.794-1.456 3.248-3.251 3.248-1.796 0-3.252-1.454-3.252-3.248 0-1.794 1.456-3.248 3.252-3.248 1.795.001 3.251 1.454 3.251 3.248zm-6.503-12.572v4.811c6.05.062 10.96 4.966 11.022 11.009h4.817c-.062-8.758-7.061-15.814-15.839-15.82zm0-3.368v4.811c9.143.062 16.566 7.461 16.627 16.577h4.818c-.062-11.74-9.612-21.255-21.445-21.388z" data-astro-cid-sz7xmlte></path> </svg> </a> </div> </div> </div> <div class="container footer-meta" data-astro-cid-sz7xmlte> <span data-astro-cid-sz7xmlte>END_OF_LINE</span> <span data-astro-cid-sz7xmlte>EST. 2014 — 2026</span> </div> </footer> <script type="module">const t=document.getElementById("theme-toggle");t?.addEventListener("click",()=>{const e=document.documentElement.getAttribute("data-theme")==="dark"?"light":"dark";document.documentElement.setAttribute("data-theme",e),localStorage.setItem("theme",e)});</script> <script src="/easter-egg.js" defer></script> </body> </html> 

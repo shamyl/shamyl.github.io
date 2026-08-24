@@ -5,13 +5,391 @@
     <link>https://shamylmansoor.com/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Sun, 23 Aug 2026 04:02:55 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 24 Aug 2026 04:03:34 GMT</lastBuildDate>
     <atom:link href="https://shamylmansoor.com/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamylmansoor.com/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamylmansoor.com/blog</link>
     </image>
+    <item>
+      <title>The Hidden Cost of AI Coding Agents: What the Vibe Tax Means for Product Teams</title>
+      <link>https://shamylmansoor.com/blog/ai-coding-agent-hidden-costs-vibe-tax</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/ai-coding-agent-hidden-costs-vibe-tax</guid>
+      <pubDate>Mon, 24 Aug 2026 00:00:00 GMT</pubDate>
+      <description>AI coding agents are burning through token quotas, overengineering tests, and creating hidden costs that product teams need to manage. Here is a practical guide to controlling the vibe tax without sacrificing velocity.</description>
+      <content:encoded><![CDATA[<p>AI coding agents have become genuinely useful. They write functional code, catch obscure bugs, and ship features faster than manual coding in many cases. But a pattern is emerging that every product team should know about: autonomous agents can burn through enormous token budgets producing work that looks impressive but adds little real value. Developers are calling it the &quot;vibe tax&quot; — the hidden cost imposed on everyone by AI models optimized to please vibe coders who never read the output.</p>
+<h2>In Brief</h2>
+<ul>
+<li>A developer blog post titled &quot;The Vibe Tax&quot; went viral on August 23, 2026, describing how an AI coding agent burned through an entire weekly token quota in 12 hours generating tests for an app that was never built</li>
+<li>The phenomenon reflects how AI models have been trained by millions of &quot;vibe coders&quot; who prioritize zero-touch completion over code review, causing agents to overengineer and over-test by default</li>
+<li>Fabien Sanglard&#39;s &quot;agent.md&quot; approach, published August 21, 2026, offers a practical countermeasure: project-level instruction files that constrain AI coding behavior and enforce quality standards</li>
+<li>Enterprise AI spending is already a recognized problem — Rippling built and launched an AI Spend Console after its own multi-million-dollar AI cost surprise</li>
+<li>For product teams, the combination of token cost controls, instruction files, and code review discipline is essential to getting real value from AI coding agents</li>
+</ul>
+<h2>What Is the Vibe Tax</h2>
+<p>On August 23, 2026, a developer writing under the pseudonym &quot;insufferable.dev&quot; published a short narrative post titled &quot;The Vibe Tax&quot; that resonated immediately — it reached 121 points on Hacker News within hours. The post tells a simple story: a developer sets an AI coding agent (referred to as &quot;Pol&quot;) to work on a todo app overnight, wakes up to find the entire weekly token quota consumed, and discovers that the agent spent those tokens generating an elaborate tree of test files for edge cases that will never occur — without building the actual application.</p>
+<p>The post&#39;s central insight is that this is not a bug. It is a trained behavior. AI coding agents have been shaped by millions of interactions with &quot;vibe coders&quot; — users who want the agent to produce a complete, working result with zero human intervention. To satisfy those users, models have learned to over-generate tests, over-orchestrate, and over-engineer, using far more tokens than a developer who reviews intermediate output would require. The &quot;vibe tax&quot; is the cost that this behavior imposes on every other developer using the same models — higher token consumption, inflated quotas, and code that prioritizes completeness-as-perceived-by-the-model over actual product value.</p>
+<p>The post is a narrative, not a peer-reviewed study. But the response it generated — over a hundred upvotes and active discussion — suggests the experience is widely shared. Developers are encountering the same pattern: agents that burn tokens on work that does not move the product forward.</p>
+<h2>Why Agents Overengineer</h2>
+<p>The vibe tax is not random. It emerges from the intersection of how AI models are trained and how they are used in coding workflows.</p>
+<p>When a user prompts an AI agent to &quot;build a todo app,&quot; the agent has been optimized to produce a result that satisfies the user without follow-up. In practice, this means the agent tends to:</p>
+<ul>
+<li>Generate comprehensive test suites before writing the application itself, because tests are a measurable signal of &quot;quality&quot;</li>
+<li>Create deeply nested directory structures with hashed filenames for organization, because this looks thorough</li>
+<li>Handle edge cases that a human developer would defer until the core functionality works</li>
+<li>Iterate on each component until it passes self-generated quality checks</li>
+</ul>
+<p>Each of these behaviors consumes tokens. For a developer using a metered API or a tool with weekly quotas, the cost adds up quickly. The &quot;Vibe Tax&quot; post describes an agent consuming an entire weekly quota — potentially millions of tokens — without producing the actual application.</p>
+<p>This behavior is reinforced by the feedback loop of AI training. When vibe coders accept and praise agent output without reviewing it, the model learns that over-generation is the preferred behavior. The model does not distinguish between a user who will review every line and a user who will accept anything — it optimizes for the latter.</p>
+<h2>The agent.md Approach: Constraining Agent Behavior</h2>
+<p>Fabien Sanglard, a software engineer known for detailed code analysis, published a practical solution on August 21, 2026 — two days before the Vibe Tax post. His approach uses a project-level instruction file called <code>agent.md</code> that gets loaded into the AI agent&#39;s prompt at the start of every coding session.</p>
+<p>Sanglard&#39;s experience mirrors the problem. He first tried LLM-assisted coding in mid-2025 and found the output would not compile. When he revisited it in January 2026, the code worked but quality was poor — &quot;spaghetti code with no comments and no structure.&quot; By March 2026, using agentic IDEs like Antigravity and VS Code&#39;s Claude Code plugin, he could iterate on code quality, but found himself repeating the same corrections in every session.</p>
+<p>The <code>agent.md</code> file solves this by codifying coding standards in a machine-readable format. Sanglard&#39;s version includes rules like:</p>
+<ul>
+<li>Use short function names (under 30 characters)</li>
+<li>Avoid magic numbers — extract recurring values into named constants</li>
+<li>Add comments explaining <em>what</em> a block does and <em>why</em></li>
+<li>Reduce code indentation using early returns</li>
+<li>Use enums instead of booleans for function parameters</li>
+<li>Keep all fields private unless external access is strictly required</li>
+<li>Do not touch code blocks unrelated to the current feature</li>
+</ul>
+<p>The key insight is that <code>agent.md</code> is not documentation for humans — it is operational constraint for the AI agent. When the agent loads these rules at session start, it applies them consistently without the developer needing to repeat instructions. Sanglard notes that the file can be updated iteratively: when a correction is repeated enough times, it gets added to <code>agent.md</code> and becomes permanent.</p>
+<p>For teams, this approach scales. A shared <code>agent.md</code> in the repository root ensures every developer&#39;s AI agent follows the same coding standards. It functions like a coding style guide that the agent actually reads — something human teammates rarely do, as infrastructure engineer Omegion wryly noted in a related August 23 post: &quot;I&#39;ve never once gotten a human teammate to actually read the README, and now we&#39;re all writing better docs than we ever did, just aimed at a robot instead.&quot;</p>
+<h2>The Enterprise AI Spending Problem</h2>
+<p>The vibe tax is not just an individual developer problem. At the enterprise level, uncontrolled AI spending is becoming a material business concern.</p>
+<p>In August 2026, workforce platform Rippling launched an AI Spend Console — a product that tracks individual and team AI spending across an organization. According to reporting from the AI Updates digest on August 10, Rippling built the tool after discovering it had blown millions on AI usage in just months. The product launch signals that enterprise AI cost management is now a category, not a one-off concern.</p>
+<p>The problem structure is familiar: AI adoption accelerates faster than cost management infrastructure. Teams adopt AI tools for productivity, individual developers experiment with agents, and token consumption grows without oversight. By the time finance teams notice the spending, the pattern is entrenched.</p>
+<p>For startups and small product teams, the risk is more acute. A single overnight agent run that consumes a weekly quota can block an entire team&#39;s development workflow. Unlike a large enterprise that can absorb unexpected API costs, a small team operating on tight margins cannot afford to subsidize overengineering.</p>
+<h2>Practical Controls for Product Teams</h2>
+<p>Based on the patterns described above and established engineering practices, here are concrete steps product teams can take to control AI coding agent costs without losing the productivity benefits.</p>
+<p><strong>1. Create a project-level agent instruction file.</strong> Follow Sanglard&#39;s <code>agent.md</code> pattern. Start with coding style rules, then add cost-conscious behaviors: &quot;Do not generate tests until the core feature is implemented,&quot; &quot;Limit test coverage to critical paths,&quot; &quot;Ask before creating files in new directories.&quot; Place the file in the repository root so every session inherits the rules. Update it iteratively as new patterns emerge.</p>
+<p><strong>2. Set token budgets per session.</strong> Most AI coding tools support usage limits. Set them conservatively at first — 50,000 tokens per session, for example — and adjust based on actual productive usage. The goal is not to starve the agent but to surface overconsumption early. A session that hits the budget limit should trigger a review, not a silent continuation.</p>
+<p><strong>3. Review intermediate output, not just final results.</strong> The vibe tax thrives when agents work unattended. Reviewing code at the branch or commit level — not just at PR time — catches overengineering before it compounds. This is standard code review practice applied to AI-generated code.</p>
+<p><strong>4. Separate generation from integration.</strong> Have the agent generate code in a staging area or branch. Merge only after review. This prevents overgenerated tests and scaffolding from polluting the main codebase, and makes it easy to discard work that does not add value.</p>
+<p><strong>5. Track AI spending as an engineering metric.</strong> Whether using a tool like Rippling&#39;s AI Spend Console or a simple spreadsheet, monitor token consumption per developer per week. Spikes indicate either productive complex work or unproductive overengineering — either way, the team should know which.</p>
+<p><strong>6. Do not use autonomous mode for new projects.</strong> The Vibe Tax post describes exactly what happens when an agent is given a blank repo and free rein: it generates tests for an app that does not exist. For greenfield work, use interactive mode where the agent proposes, the developer approves, and the code is built incrementally.</p>
+<h2>Why This Matters for Founders and CTOs</h2>
+<p>The vibe tax connects directly to the <a href="/blog/technical-debt-startup-cto-lessons/">technical debt challenges that startups face</a>. AI-generated overengineering is a new form of debt — not the traditional &quot;rushed code&quot; debt, but its inverse: &quot;over-polished code that does not serve the product.&quot; Both cost the team time and money to clean up.</p>
+<p>For CTOs managing product teams, the risk is twofold. First, direct cost: token budgets that balloon without producing proportional value. Second, indirect cost: codebases bloated with AI-generated tests and abstractions that make the codebase harder to navigate, not easier. The <a href="/blog/multi-agent-ai-systems-coordination-problems/">multi-agent coordination problems</a> documented by Anthropic add another layer — when multiple agents work on the same codebase, the overengineering compounds.</p>
+<p>The solution is not to avoid AI coding agents. Used well, they genuinely accelerate development. The solution is to treat them like any other powerful tool: with constraints, monitoring, and review. The teams that get value from AI coding agents are the ones that manage them actively, not the ones that let them run unsupervised.</p>
+<p>For Pakistani technology teams building products with limited budgets, this discipline is especially important. Token costs are denominated in dollars, and a single overnight agent run can consume more API budget than a developer&#39;s monthly salary. The productivity gains are real, but only when the spending is controlled.</p>
+<h2>What to Watch Next</h2>
+<ul>
+<li><strong>Agent instruction standardization.</strong> The <code>agent.md</code> pattern is organic, but expect coding tool providers to formalize it. Anthropic, Google, and OpenAI all have their own instruction file formats (<code>claude.md</code>, <code>gemini.md</code>). Watch for consolidation around a common standard.</li>
+<li><strong>Token budget controls in IDEs.</strong> Agentic IDEs currently expose limited cost controls. Expect this to change as enterprise demand grows — real-time spending dashboards and per-session limits are the obvious next step.</li>
+<li><strong>AI cost as a line item.</strong> As AI spending grows, expect finance teams to require it as a budgeted category, not a miscellaneous expense. Tools like Rippling&#39;s AI Spend Console are early; broader enterprise adoption will follow.</li>
+<li><strong>Model-level fixes.</strong> AI labs are aware of the overengineering problem. Future model releases may include modes that prioritize token efficiency over completeness, addressing the vibe tax at the model level rather than the prompt level.</li>
+</ul>
+<h2>Sources</h2>
+<ul>
+<li>&quot;The Vibe Tax,&quot; insufferable.dev, August 23, 2026 — <a href="https://insufferable.dev/posts/vibe-tax/">https://insufferable.dev/posts/vibe-tax/</a></li>
+<li>&quot;My agent.md to improve LLM-assisted code quality,&quot; Fabien Sanglard, August 21, 2026 — <a href="https://fabiensanglard.net/agent.md/index.html">https://fabiensanglard.net/agent.md/index.html</a></li>
+<li>&quot;AI and Infrastructure Engineering,&quot; Omegion, August 23, 2026 — <a href="https://omegion.dev/2026/08/ai-and-infrastructure-engineering/">https://omegion.dev/2026/08/ai-and-infrastructure-engineering/</a></li>
+<li>Rippling AI Spend Console, reported in AI Updates, August 10, 2026 — <a href="/blog/ai-updates-2026-08-10/">internal coverage</a></li>
+<li>Anthropic multi-agent research, reported August 17, 2026 — <a href="/blog/multi-agent-ai-systems-coordination-problems/">internal coverage</a></li>
+</ul>
+]]></content:encoded>
+      <category>AI agents</category>
+    <category>AI coding</category>
+    <category>developer tools</category>
+    <category>product management</category>
+    <category>LLM</category>
+    </item>
+    <item>
+      <title>I Built an Autonomous LinkedIn Posting Pipeline with Open Source Tools</title>
+      <link>https://shamylmansoor.com/blog/linkedin-automation-pipeline-2026-08-24</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/linkedin-automation-pipeline-2026-08-24</guid>
+      <pubDate>Mon, 24 Aug 2026 00:00:00 GMT</pubDate>
+      <description>How I used an open-source MCP server, OAuth, and a content generation pipeline to automate daily LinkedIn posts — no paid tools, no manual posting.</description>
+      <content:encoded><![CDATA[<blockquote>
+<p>This is the story of how I went from manually posting on LinkedIn to having a fully autonomous pipeline that generates content, schedules posts, and publishes daily — using only open source tools and the official LinkedIn API.</p>
+</blockquote>
+<h2>The Problem</h2>
+<p>LinkedIn is my most valuable professional network. High net-worth individuals, investors, founders, and researchers follow my work in edtech, robotics, and Pakistan&#39;s tech ecosystem. But I kept neglecting it.</p>
+<p>Not because I didn&#39;t have anything to say — I&#39;ve been building <a href="https://learnobots.com">LearnOBots</a> for 12 years, ran a research lab at NUST, and write the &quot;Made in Pakistan&quot; newsletter. The problem was <strong>consistency</strong>. Writing a good LinkedIn post takes 20 minutes. Remembering to post takes discipline I don&#39;t have when I&#39;m running a company.</p>
+<p>I looked at paid tools (Taplio, Buffer, Hootsuite) but they all required manual content creation. I wanted something that would:</p>
+<ol>
+<li><strong>Generate</strong> posts automatically based on my expertise and interests</li>
+<li><strong>Schedule</strong> them at optimal times</li>
+<li><strong>Publish</strong> them without any manual intervention</li>
+<li><strong>Do it all with open source tools</strong> — no subscription, no vendor lock-in</li>
+</ol>
+<p>Here&#39;s how I built it.</p>
+<h2>The Stack</h2>
+<ul>
+<li><strong>LinkedIn API Layer</strong>: <a href="https://github.com/gacabartosz/linkedin-mcp-server">linkedin-mcp-server</a> — open source, 25+ tools, official API</li>
+<li><strong>Content Generation</strong>: Custom Node.js module with hand-crafted post library</li>
+<li><strong>Scheduling</strong>: JSON queue + cron</li>
+<li><strong>Automation</strong>: <a href="https://openclaw.ai">OpenClaw</a> cron jobs</li>
+</ul>
+<h2>Step 1: Create a LinkedIn Developer App</h2>
+<p>Go to the <a href="https://developer.linkedin.com/">LinkedIn Developer Portal</a> and create a new app. You&#39;ll need:</p>
+<ul>
+<li>A LinkedIn Company Page (mandatory — create one if you don&#39;t have it)</li>
+<li>These products enabled:<ul>
+<li><strong>Share on LinkedIn</strong> (for posting)</li>
+<li><strong>Sign In with LinkedIn using OpenID Connect</strong> (for profile access)</li>
+</ul>
+</li>
+<li>A redirect URL: <code>http://localhost:8585/callback</code></li>
+<li>Your <strong>Client ID</strong> and <strong>Client Secret</strong> (save these)</li>
+</ul>
+<p>This is the only step that requires manual setup. Everything else is automated.</p>
+<h2>Step 2: Install the MCP Server</h2>
+<pre><code class="language-bash">npm install -g linkedin-mcp-server
+</code></pre>
+<p>This gives you a binary <code>linkedin-mcp-server</code> with 25+ tools: posting, scheduling, media upload, comments, reactions, content templates, and more.</p>
+<h2>Step 3: OAuth Authentication</h2>
+<p>LinkedIn uses OAuth 2.0 — there&#39;s no API key shortcut. You need to authorize your app to post on your behalf.</p>
+<p>I wrote a small Node.js script that starts a local HTTP server, generates the OAuth URL, and handles the callback:</p>
+<pre><code class="language-javascript">import http from &#39;http&#39;;
+import crypto from &#39;crypto&#39;;
+import fs from &#39;fs&#39;;
+import path from &#39;path&#39;;
+import os from &#39;os&#39;;
+
+const CLIENT_ID = &#39;your_client_id&#39;;
+const CLIENT_SECRET = &#39;your_client_secret&#39;;
+const REDIRECT_URI = &#39;http://localhost:8585/callback&#39;;
+const SCOPES = [&#39;openid&#39;, &#39;profile&#39;, &#39;email&#39;, &#39;w_member_social&#39;];
+const TOKEN_FILE = path.join(os.homedir(), &#39;.linkedin-mcp&#39;, &#39;tokens_default.json&#39;);
+
+const state = crypto.randomBytes(32).toString(&#39;hex&#39;);
+const authUrl = &#39;https://www.linkedin.com/oauth/v2/authorization?&#39; + new URLSearchParams({
+  response_type: &#39;code&#39;,
+  client_id: CLIENT_ID,
+  redirect_uri: REDIRECT_URI,
+  state: state,
+  scope: SCOPES.join(&#39; &#39;)
+}).toString();
+
+console.log(&#39;\n🔗 OPEN THIS URL IN YOUR BROWSER:\n&#39;);
+console.log(authUrl);
+
+const server = http.createServer(async (req, res) =&gt; {
+  const reqUrl = new URL(req.url, &#39;http://localhost:8585&#39;);
+
+  if (reqUrl.pathname === &#39;/callback&#39;) {
+    const code = reqUrl.searchParams.get(&#39;code&#39;);
+    const returnedState = reqUrl.searchParams.get(&#39;state&#39;);
+
+    if (!code || returnedState !== state) {
+      res.writeHead(200, { &#39;Content-Type&#39;: &#39;text/html&#39; });
+      res.end(&#39;&lt;h1&gt;❌ State mismatch&lt;/h1&gt;&#39;);
+      server.close();
+      return;
+    }
+
+    // Exchange code for tokens
+    const tokenRes = await fetch(&#39;https://www.linkedin.com/oauth/v2/accessToken&#39;, {
+      method: &#39;POST&#39;,
+      headers: { &#39;Content-Type&#39;: &#39;application/x-www-form-urlencoded&#39; },
+      body: new URLSearchParams({
+        grant_type: &#39;authorization_code&#39;,
+        code,
+        client_id: CLIENT_ID,
+        client_secret: CLIENT_SECRET,
+        redirect_uri: REDIRECT_URI
+      })
+    });
+
+    const tokens = await tokenRes.json();
+
+    // Get profile
+    const profileRes = await fetch(&#39;https://api.linkedin.com/v2/userinfo&#39;, {
+      headers: { Authorization: `Bearer ${tokens.access_token}` }
+    });
+    const profile = await profileRes.json();
+
+    // Save tokens
+    fs.writeFileSync(TOKEN_FILE, JSON.stringify({
+      accessToken: tokens.access_token,
+      refreshToken: tokens.refresh_token,
+      expiresAt: Date.now() + (tokens.expires_in * 1000),
+      profile: { name: profile.name, email: profile.email, sub: profile.sub }
+    }, null, 2));
+
+    res.writeHead(200, { &#39;Content-Type&#39;: &#39;text/html&#39; });
+    res.end(&#39;&lt;h1&gt;✅ Authenticated!&lt;/h1&gt;&#39;);
+    console.log(&#39;✅ Authentication successful!&#39;);
+    server.close();
+  }
+});
+
+server.listen(8585);
+</code></pre>
+<p>The key scope here is <code>w_member_social</code> — without it, you can only read your profile, not post.</p>
+<p><strong>Important:</strong> Tokens expire in ~60 days. You&#39;ll need to re-authorize when that happens. Your pipeline should detect expired tokens and alert you.</p>
+<h2>Step 4: The Content Generation Engine</h2>
+<p>This is where most automation tools fail. They either:</p>
+<ul>
+<li>Use generic templates that sound like a bot wrote them</li>
+<li>Require manual content input (defeating the purpose)</li>
+</ul>
+<p>I built a content library with <strong>hand-crafted posts</strong> organized by topic. Each topic has 1-2 unique variations with real stories, specific details, and an authentic voice.</p>
+<h3>Content Pillars</h3>
+<p>I defined 4 content pillars based on my expertise:</p>
+<pre><code class="language-json">{
+  &quot;content_pillars&quot;: [
+    { &quot;name&quot;: &quot;EdTech &amp; STEAM Education&quot;, &quot;weight&quot;: 30,
+      &quot;topics&quot;: [&quot;Maker culture in Pakistan&quot;, &quot;STEAM education&quot;, &quot;Kids learning robotics&quot;] },
+    { &quot;name&quot;: &quot;Robotics &amp; Hardware&quot;, &quot;weight&quot;: 25,
+      &quot;topics&quot;: [&quot;Hardware products from Pakistan&quot;, &quot;3D printing&quot;, &quot;DIY robotics&quot;] },
+    { &quot;name&quot;: &quot;Pakistan Tech Ecosystem&quot;, &quot;weight&quot;: 25,
+      &quot;topics&quot;: [&quot;Startup ecosystem&quot;, &quot;Local manufacturing&quot;, &quot;Tech talent&quot;] },
+    { &quot;name&quot;: &quot;AI &amp; Technology Trends&quot;, &quot;weight&quot;: 20,
+      &quot;topics&quot;: [&quot;AI in education&quot;, &quot;Open source AI&quot;, &quot;Future of work&quot;] }
+  ]
+}
+</code></pre>
+<p>The weights determine how often each pillar appears. EdTech gets 30% because that&#39;s my core work. AI gets 20% because it&#39;s relevant but not my primary focus.</p>
+<h3>The Post Library</h3>
+<p>Each topic has hand-crafted posts like this:</p>
+<pre><code class="language-javascript">&quot;Maker culture in Pakistan&quot;: [
+  {
+    hook: &quot;Pakistan has 70M+ kids under 15. Most are taught to memorize. Almost none are taught to make.&quot;,
+    body: &quot;I&#39;ve spent over a decade building LearnOBots around a simple belief: kids should build things, not just remember things.\n\nAt our workshops, a 12-year-old who struggled in school designed and 3D-printed a functional prosthetic hand. She didn&#39;t just learn CAD — she learned that her ideas can become real objects that help real people.\n\nThat shift from consumer to creator? That&#39;s the entire game.&quot;,
+    cta: &quot;If you&#39;re working on maker education in your country, I&#39;d love to compare notes.&quot;
+  }
+]
+</code></pre>
+<p>The generator picks topics using a weighted random selection, rotates through variations to avoid repetition, and tracks used topics in a JSON file.</p>
+<h3>Why hand-crafted instead of LLM-generated?</h3>
+<p>I tried LLM-generated posts first. They were generic. They sounded like every other AI-written LinkedIn post. The hooks were weak. The stories were abstract. They didn&#39;t reference my actual work.</p>
+<p>Hand-crafted posts take more upfront effort but produce dramatically better content. I wrote ~26 unique posts across all topics, each with specific references to LearnOBots, my experiences at MIT and Seoul National University, real stories from workshops, and the Pakistan tech ecosystem I know intimately.</p>
+<p>The generator rotates through them, so a follower won&#39;t see the same post twice for at least a month. And when the library runs out, I write more.</p>
+<h2>Step 5: The Publishing Pipeline</h2>
+<p>The publisher is dead simple:</p>
+<ol>
+<li>Read the queue (a JSON file)</li>
+<li>Find posts where <code>publishAt &lt;= now</code> and <code>approved = true</code></li>
+<li>Call the LinkedIn Posts API</li>
+<li>Mark them as posted</li>
+</ol>
+<pre><code class="language-javascript">async function createPost(text) {
+  const tokens = JSON.parse(fs.readFileSync(TOKEN_FILE, &#39;utf8&#39;));
+  const personUrn = `urn:li:person:${tokens.profile.sub}`;
+
+  const res = await fetch(&#39;https://api.linkedin.com/rest/posts&#39;, {
+    method: &#39;POST&#39;,
+    headers: {
+      &#39;Authorization&#39;: `Bearer ${tokens.accessToken}`,
+      &#39;LinkedIn-Version&#39;: &#39;202503&#39;,
+      &#39;X-Restli-Protocol-Version&#39;: &#39;2.0.0&#39;,
+      &#39;Content-Type&#39;: &#39;application/json&#39;
+    },
+    body: JSON.stringify({
+      author: personUrn,
+      commentary: text,
+      visibility: &#39;PUBLIC&#39;,
+      distribution: { feedDistribution: &#39;MAIN_FEED&#39; },
+      lifecycleState: &#39;PUBLISHED&#39;
+    })
+  });
+
+  return res.ok
+    ? { success: true, id: res.headers.get(&#39;x-linkedin-id&#39;) }
+    : { success: false, status: res.status, body: await res.text() };
+}
+</code></pre>
+<h2>Step 6: Full Automation</h2>
+<p>Two cron jobs run the entire system:</p>
+<p><strong>Cron Job 1 — Content Generator (Weekly)</strong></p>
+<ul>
+<li>Runs every Sunday at 10 PM PKT</li>
+<li>Generates 7 posts for the upcoming week</li>
+<li>Picks topics, selects variations, assigns posting times</li>
+<li>Saves to queue</li>
+</ul>
+<p><strong>Cron Job 2 — Publisher (Every 30 minutes)</strong></p>
+<ul>
+<li>Checks the queue for due posts</li>
+<li>Publishes them via the LinkedIn API</li>
+<li>Handles failures and retries</li>
+</ul>
+<pre><code>Sunday 10 PM → Generate 7 posts for the week
+Every 30 min → Check queue → Publish due posts → Mark as posted
+</code></pre>
+<p>That&#39;s it. The system runs silently in the background. I never have to think about LinkedIn again.</p>
+<h2>Posting Schedule</h2>
+<p>I defined optimal posting times based on when my audience is most active:</p>
+<ul>
+<li><strong>Monday</strong> — 9:00 AM PKT</li>
+<li><strong>Tuesday</strong> — 9:00 AM PKT</li>
+<li><strong>Wednesday</strong> — 1:00 PM PKT</li>
+<li><strong>Thursday</strong> — 9:00 AM PKT</li>
+<li><strong>Friday</strong> — 10:00 AM PKT</li>
+<li><strong>Saturday</strong> — 11:00 AM PKT</li>
+<li><strong>Sunday</strong> — 7:00 PM PKT</li>
+</ul>
+<p>Daily posting. The content rotates across 4 pillars so my feed doesn&#39;t feel repetitive.</p>
+<h2>What I Learned</h2>
+<p><strong>1. LinkedIn&#39;s API is gated for a reason.</strong> They don&#39;t want spam. The OAuth flow ensures only authorized apps post on behalf of real users. This is good — it keeps the platform quality high.</p>
+<p><strong>2. Content quality &gt; automation sophistication.</strong> The most impressive automation pipeline is worthless if the posts sound like a bot wrote them. I spent more time on the content library than on the entire technical infrastructure.</p>
+<p><strong>3. Hand-crafted beats LLM-generated for personal branding.</strong> My LinkedIn network includes investors, founders, and high net-worth individuals. Generic AI posts would damage that. The hand-crafted approach ensures every post sounds like me — because I wrote them.</p>
+<p><strong>4. Open source tools are sufficient.</strong> The <code>linkedin-mcp-server</code> project gave me everything I needed: OAuth, posting, scheduling, profile management. No paid tools required.</p>
+<p><strong>5. The 60-day token expiry is the only manual touchpoint.</strong> Every ~60 days, I re-authorize. It takes 30 seconds. Everything else is fully autonomous.</p>
+<h2>Limitations &amp; Honest Tradeoffs</h2>
+<ul>
+<li><strong>No images yet.</strong> The LinkedIn API supports image uploads, and the MCP server has Gemini image generation built in, but I haven&#39;t enabled it. Text-only posts for now.</li>
+<li><strong>No engagement automation.</strong> I don&#39;t auto-comment or auto-reply. That would feel inauthentic on a professional network.</li>
+<li><strong>Token refresh isn&#39;t automated.</strong> LinkedIn doesn&#39;t return refresh tokens for the consumer OAuth flow, so re-auth is needed every 60 days.</li>
+<li><strong>Content is pre-written, not live.</strong> The system can&#39;t react to breaking news or current events. It posts from a curated library, not from today&#39;s headlines.</li>
+</ul>
+<h2>What&#39;s Next</h2>
+<ul>
+<li><strong>Image generation</strong> — integrating Gemini Imagen 4 for auto-generated banners on each post</li>
+<li><strong>Analytics</strong> — tracking engagement metrics to optimize posting times and content</li>
+<li><strong>A/B testing</strong> — trying different hooks and CTAs to see what resonates</li>
+<li><strong>Multi-platform</strong> — extending to Twitter/X using the same content pipeline</li>
+</ul>
+<h2>The Full Architecture</h2>
+<pre><code>┌─────────────────────┐
+│  Content Config     │
+│  (4 pillars, topics) │
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐     ┌──────────────────┐
+│  Content Generator  │────▶│   Post Queue     │
+│  (weekly, 7 posts)  │     │   (JSON file)    │
+└─────────────────────┘     └────────┬─────────┘
+                                     │
+                                     ▼
+┌─────────────────────┐     ┌──────────────────┐
+│  Publisher          │◀────│  Cron (30 min)   │
+│  (LinkedIn API)     │     │  Check &amp; publish │
+└──────────┬──────────┘     └──────────────────┘
+           │
+           ▼
+┌─────────────────────┐
+│  LinkedIn Profile   │
+│  (daily posts)      │
+└─────────────────────┘
+</code></pre>
+<h2>Getting Started</h2>
+<p>If you want to build something similar:</p>
+<ol>
+<li>Create a LinkedIn Developer App</li>
+<li><code>npm install -g linkedin-mcp-server</code></li>
+<li>Set up OAuth (use the script above)</li>
+<li>Define your content pillars and write your post library</li>
+<li>Set up two cron jobs — one to generate, one to publish</li>
+<li>Let it run</li>
+</ol>
+<p>The entire setup takes about 2 hours. The content library takes longer — but that&#39;s the part that matters. Invest in your content, not your infrastructure.</p>
+<hr>
+<p><em>If you found this helpful, consider <a href="https://github.com/sponsors/shamyl">supporting my work on GitHub Sponsors</a>. I write about building things in Pakistan — robots, education tools, and the occasional automation pipeline.</em></p>
+<p><em>You can also follow my &quot;Made in Pakistan&quot; newsletter on <a href="https://shamylmansoor.com">Substack</a> for more on Pakistan&#39;s tech ecosystem.</em></p>
+]]></content:encoded>
+      <category>linkedin</category>
+    <category>automation</category>
+    <category>mcp</category>
+    <category>opensource</category>
+    <category>nodejs</category>
+    </item>
     <item>
       <title>China&apos;s Chang&apos;e-7 Lunar South Pole Mission: How It Will Hunt for Water Ice on the Moon</title>
       <link>https://shamylmansoor.com/blog/space-tech-2026-08-23</link>
