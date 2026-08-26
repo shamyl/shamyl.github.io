@@ -5,13 +5,121 @@
     <link>https://shamylmansoor.com/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Tue, 25 Aug 2026 04:04:55 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 26 Aug 2026 04:05:57 GMT</lastBuildDate>
     <atom:link href="https://shamylmansoor.com/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamylmansoor.com/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamylmansoor.com/blog</link>
     </image>
+    <item>
+      <title>AI Coding Tools May Be Preventing the Next Generation of Developers From Building Real Expertise</title>
+      <link>https://shamylmansoor.com/blog/ai-coding-tools-developer-skill-atrophy</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/ai-coding-tools-developer-skill-atrophy</guid>
+      <pubDate>Wed, 26 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Research from Anthropic, UPenn, and ACM shows that AI coding assistants can reduce skill mastery by 17% and create an illusion of competence. Here is what CTOs, product teams, and educators should do about it.</description>
+      <content:encoded><![CDATA[<p>AI coding assistants are now standard equipment for most software teams. They write functions, debug errors, and scaffold entire features. But a growing body of research — including a randomized controlled trial from Anthropic and a large-scale study from the University of Pennsylvania — reveals a troubling trade-off: developers who lean heavily on AI assistance build weaker mental models of the code they produce, score lower on comprehension tests, and may be short-circuiting the friction that turns novices into experts.</p>
+<p>For CTOs, engineering leaders, and anyone running a product team that includes junior developers, this is not a hypothetical concern. It is a workforce pipeline problem.</p>
+<h2>In Brief</h2>
+<ul>
+<li>Anthropic&#39;s randomized controlled trial, published January 29, 2026, found that developers using AI assistance scored 17% lower on a comprehension quiz than those who coded by hand — roughly two letter grades</li>
+<li>A University of Pennsylvania study published in PNAS found that high school students using unguarded AI assistance performed worse than students using only a textbook, while those using a Socratic &quot;tutor&quot; mode performed 127% better in practice sessions</li>
+<li>An ACM study analyzing 21 lab sessions found that novice programmers with heavy AI assistance skipped crucial planning stages and developed an &quot;illusion of competence&quot; rather than true understanding</li>
+<li>A widely discussed essay by developer Lars Faye, published July 22, 2026, argues that AI coding tools create an &quot;inverted learning&quot; model where novices must guide a mentor before they understand the domain — a precarious arrangement</li>
+<li>The core finding across all three studies: cognitive friction is not a bug to be eliminated. It is the mechanism through which expertise forms</li>
+</ul>
+<h2>What the Anthropic Study Found</h2>
+<p>Anthropic recruited 52 software engineers, mostly junior, with at least a year of Python experience. The study split them into two groups: one coded a feature using an AI assistant with access to their code, the other coded without assistance. Both groups worked with Trio, a Python library for asynchronous programming that none had used before — designed to mimic the real-world experience of learning a new tool through a self-guided tutorial.</p>
+<p>After the coding task, participants took a quiz covering debugging, code reading, code writing, and conceptual understanding. The AI-assisted group scored 17% lower on average — the equivalent of nearly two letter grades. The AI group completed the task slightly faster, but the speed difference did not reach statistical significance.</p>
+<p>Crucially, not every AI-assisted participant scored poorly. Those who used the AI tool interactively — asking follow-up questions, requesting explanations, and posing conceptual questions while coding independently — showed stronger mastery. The damage occurred when participants treated the AI as an answer generator rather than a thinking partner.</p>
+<p>Anthropic&#39;s conclusion, in their own words: &quot;cognitive effort — and even getting painfully stuck — is likely important for fostering mastery.&quot;</p>
+<p>The study is relatively small (52 participants) and focused on a single library. But its methodology — a randomized controlled trial with a comprehension assessment — is more rigorous than most industry commentary on AI coding tools, and its findings align with independent research from other institutions.</p>
+<h2>The UPenn Study: Guardrails Matter More Than Access</h2>
+<p>A study published in PNAS by researchers at the University of Pennsylvania followed nearly 1,000 students learning mathematics with varying levels of AI access. The findings were stark:</p>
+<ul>
+<li>Students using unguarded AI assistance performed <strong>17% worse</strong> than students working from a textbook alone</li>
+<li>Students using a &quot;tutor&quot; version — where the AI provided guidance but required the student to solve problems independently — performed <strong>127% better</strong> in practice sessions</li>
+<li>On post-tests, the tutor group scored roughly the same as the textbook group, suggesting that the benefit was in engagement and practice rather than deeper retention</li>
+</ul>
+<p>The pattern mirrors the Anthropic findings: AI as an answer engine degrades learning. AI as a Socratic partner enhances it. The difference is not whether AI is present but how it is used.</p>
+<p>The PNAS study&#39;s title — &quot;Generative AI without guardrails can harm learning&quot; — captures the core insight. The tool is not the problem. The absence of friction is.</p>
+<h2>The ACM Study: Novices Skip the Hard Parts</h2>
+<p>A study presented at ACM SIGCSE 2024, titled &quot;The Widening Gap: The Benefits and Harms of Generative AI for Novice Programmers,&quot; observed 21 novice programmers in lab sessions with eye tracking and interviews. The researchers found that participants with heavy AI assistance:</p>
+<ul>
+<li>Often skipped crucial planning stages, finding that &quot;because they hadn&#39;t reasoned themselves into this position, Copilot had&quot;</li>
+<li>Finished with an &quot;illusion of competence&quot; rather than true understanding</li>
+<li>Became dependent on the AI to fix errors that the AI itself had introduced</li>
+</ul>
+<p>The participants who performed best were those who developed &quot;negative expertise&quot; — the ability to recognize and reject incorrect AI suggestions. These students mitigated their AI usage and used it to accelerate code they already intended to write, rather than letting the AI dictate the approach.</p>
+<p>One participant who demonstrated strong fundamentals was nonetheless &quot;enticed by Copilot into quickly producing code&quot; and had to rely on the LLM to fix errors it had introduced — a circular dependency that mirrors a pattern many development teams will recognize.</p>
+<h2>The Friction Problem</h2>
+<p>Lars Faye&#39;s essay, published July 22, 2026, and widely discussed on Hacker News (544 upvotes, 537 comments), synthesizes these findings into a framework he calls &quot;inverted learning.&quot; The argument is straightforward:</p>
+<p>Expertise in programming develops through repeated exposure to difficulty — tracing obscure errors, debugging without logs, rewriting approaches that will not scale, experiencing the performance differences between methods. This friction builds what Faye calls &quot;Fingerspitzengefühl&quot; — fingertip feeling, or developer intuition.</p>
+<p>AI coding tools are designed to eliminate friction. They complete your code, fix your errors, and scaffold your architecture. For experienced developers who already have the mental models to evaluate AI output, this is genuine productivity. For novices who lack those models, it is cognitive offloading that feels like learning but is not.</p>
+<p>Faye draws on Joel Spolsky&#39;s 2002 essay &quot;The Law of Leaky Abstractions&quot; to make the point: abstractions save time working, but they do not save time learning. AI coding tools are the ultimate leaky abstraction. They hide the mechanics of the struggle, and the struggle is where the learning lives.</p>
+<p>The irony is sharp: the developers who benefit most from AI coding tools are those who least need them. The developers who need them most — juniors building their first mental models — are the ones most likely to be harmed by unrestricted use.</p>
+<h2>Why This Matters for Product Teams</h2>
+<p>For CTOs and engineering leaders, the research points to a specific risk: the junior developer pipeline.</p>
+<p>Most product teams now operate with a mix of senior engineers who use AI tools to accelerate work they understand, and junior engineers who use AI tools to produce work they do not fully understand. The senior engineers are faster. The junior engineers appear faster — their pull requests arrive on time, the code passes tests, the features seem to work. But the comprehension gap is invisible until something breaks at 2 AM and the junior developer cannot explain why the AI-generated code is failing.</p>
+<p>This is not a hypothetical scenario. David Cramer, co-founder of Sentry, described the dynamic bluntly in a recent interview: &quot;You want to flex that you can generate all of your code and have hundreds of things going in parallel, I will flex and show you how broken the code is 100% of the time.&quot;</p>
+<p>The practical implications for product teams are:</p>
+<p><strong>1. Differentiate AI policies by experience level.</strong> Senior engineers who can audit AI output should be encouraged to use it freely. Junior engineers should have guardrails — not bans, but structured workflows that require them to explain what the AI generated before merging.</p>
+<p><strong>2. Make code review non-negotiable for AI-generated code.</strong> The ACM study&#39;s finding that novices skip planning stages when using AI is directly relevant to code review. If a junior developer cannot explain why the AI wrote a particular function, they are not ready to ship it.</p>
+<p><strong>3. Preserve deliberate friction in onboarding.</strong> New hires who immediately use AI tools to scaffold features will miss the architectural understanding that comes from building things badly the first time. Consider having new engineers complete their first few tasks without AI assistance — not as punishment, but as orientation.</p>
+<p><strong>4. Use AI as a Socratic tool, not an answer engine.</strong> The UPenn study&#39;s 127% improvement with tutor-mode AI is the strongest evidence that the tool itself is not the problem. Prompting patterns that ask &quot;what approach should I consider?&quot; rather than &quot;write this function&quot; shift the cognitive work back to the developer.</p>
+<h2>What This Means for STEAM Education</h2>
+<p>The findings are equally relevant to education — and not just for computer science classrooms.</p>
+<p>At LearnOBots, the approach to <a href="https://learnobots.com">STEAM education</a> has always emphasized hands-on building over passive consumption. Students program <a href="/work/buddy-bot">Buddy Bot</a> to navigate a maze. They build and test robots with modular backpacks. They learn programming through <a href="/work/robosim">RoboSim</a>, a 3D simulator where code controls virtual robots. The friction — the robot that does not turn, the sensor that reads the wrong value, the code that compiles but does not work — is the curriculum.</p>
+<p>AI coding tools threaten this model if used carelessly. A student who asks an AI to write the maze-navigation code and pastes it into the robot learns nothing about logic, sequencing, or debugging. But the same student who uses AI to explain why their code is failing — to understand the difference between a syntax error and a logic error — gains a powerful learning tool.</p>
+<p>The lesson from the UPenn study applies directly here: the guardrails determine whether AI helps or harms. A classroom where AI writes the code is a classroom where students do not learn. A classroom where AI explains the code, asks questions, and requires independent problem-solving is a classroom where students learn faster.</p>
+<p>This connects to a broader question about <a href="/blog/humanoid-robot-classroom-salamanca-what-went-wrong/">technology adoption in education</a> that we explored in the context of the Salamanca humanoid robot case: the technology itself is rarely the decisive factor. What matters is whether the deployment design preserves the cognitive work that produces learning.</p>
+<h2>Relevance for Pakistani Technology Teams</h2>
+<p>For technology teams in Pakistan, the skill-atrophy problem has an additional dimension. The Pakistani tech industry has a large population of junior developers relative to senior engineers — a function of rapid growth in CS enrollment and a relatively young workforce. AI coding tools are widely available and heavily used.</p>
+<p>The risk is that the productivity gains from AI tools mask a comprehension deficit that only surfaces during complex debugging, system design, or incident response. For a Pakistani product company scaling from 10 to 50 engineers, the junior developers hired today are the senior engineers of 2030. If their formative years are spent generating code they do not understand, the senior engineer pool in five years will be shallower than it appears.</p>
+<p>The opportunity is the opposite. Pakistani teams that implement structured AI usage — Socratic prompting patterns, mandatory code review for AI output, and deliberate practice without AI during onboarding — can build a workforce that is both fast and deeply skilled. The research suggests this is not a trade-off. Done correctly, AI tools can accelerate learning rather than bypass it.</p>
+<h2>What to Watch Next</h2>
+<ul>
+<li><strong>Anthropic&#39;s follow-up research.</strong> The January 2026 study focused on a single library and a short task. Longer-term studies tracking developers over months or years would provide stronger evidence about whether the skill gap persists or narrows over time.</li>
+<li><strong>Enterprise AI coding policies.</strong> Some companies have already begun restricting AI tool usage for junior developers. Expect more structured policies — potentially tiered by experience level — as the research base grows.</li>
+<li><strong>AI tool design changes.</strong> The UPenn study&#39;s &quot;tutor mode&quot; finding suggests an opportunity for AI coding tools to add Socratic modes that guide rather than generate. Whether commercial tools will adopt this is an open question — the market incentives favor answer-generation over pedagogy.</li>
+<li><strong>Educational institution responses.</strong> CS programs are grappling with how to integrate AI tools without undermining learning. The schools that develop effective frameworks first will produce stronger graduates.</li>
+</ul>
+<h2>Practical Recommendations</h2>
+<p>For CTOs and engineering leaders:</p>
+<ol>
+<li><strong>Audit your team&#39;s AI usage patterns.</strong> Are junior developers using AI to generate code they cannot explain? The ACM study&#39;s &quot;illusion of competence&quot; is difficult to detect in pull requests.</li>
+<li><strong>Implement structured code review for AI-generated code.</strong> Require the author to explain the logic, not just the output.</li>
+<li><strong>Create AI usage guidelines that differentiate by experience.</strong> This is not about restricting tools — it is about matching usage patterns to comprehension levels.</li>
+<li><strong>Invest in mentorship that includes AI literacy.</strong> Senior engineers should explicitly teach junior developers how to evaluate AI output, not just how to produce it.</li>
+</ol>
+<p>For educators:</p>
+<ol>
+<li><strong>Use AI in Socratic mode, not generation mode.</strong> The UPenn data is unambiguous: tutor-mode AI helps; answer-mode AI harms.</li>
+<li><strong>Preserve debugging friction.</strong> Students who never struggle with errors do not develop debugging intuition.</li>
+<li><strong>Teach &quot;negative expertise&quot; explicitly.</strong> The ACM study found that the ability to recognize and reject bad AI suggestions is a learnable skill — and it may be the most important AI-era coding skill.</li>
+</ol>
+<h2>Conclusion</h2>
+<p>The evidence is now strong enough to act on: AI coding tools, used without structure, can prevent the development of programming expertise. The Anthropic RCT, the UPenn classroom study, and the ACM observational study converge on the same finding. The friction that AI tools eliminate is the same friction that builds expertise.</p>
+<p>This does not mean AI coding tools should be banned. It means they should be managed — differently for senior engineers who can audit output, and for junior developers who cannot. For product teams, the cost of ignoring this is a generation of developers who appear productive but lack the deep understanding needed for complex problem-solving. For educators, the cost is students who graduate with an illusion of competence rather than real skill.</p>
+<p>The most productive learning happens when AI is used not to generate code, but to generate understanding. The distinction is small in practice and enormous in outcome.</p>
+<hr>
+<p><strong>Sources:</strong></p>
+<ul>
+<li><a href="https://www.anthropic.com/research/AI-assistance-coding-skills">Anthropic — &quot;How AI assistance impacts the formation of coding skills,&quot; January 29, 2026</a></li>
+<li><a href="https://www.pnas.org/doi/10.1073/pnas.2422633122">PNAS — &quot;Generative AI without guardrails can harm learning: Evidence from high school math&quot;</a></li>
+<li><a href="https://arxiv.org/abs/2405.17739">ACM SIGCSE — &quot;The Widening Gap: The Benefits and Harms of Generative AI for Novice Programmers,&quot; May 28, 2024</a></li>
+<li><a href="https://larsfaye.com/articles/ai-coding-will-prevent-expertise">Lars Faye — &quot;AI Coding will Prevent Expertise,&quot; July 22, 2026</a></li>
+<li><a href="https://www.joelonsoftware.com/2002/11/11/the-law-of-leaky-abstractions/">Joel Spolsky — &quot;The Law of Leaky Abstractions,&quot; November 11, 2002</a></li>
+<li><a href="https://www.infoq.com/news/2026/02/ai-coding-skill-formation/">InfoQ — &quot;Anthropic Study: AI Coding Assistance Reduces Developer Skill Mastery by 17%,&quot; February 2026</a></li>
+</ul>
+]]></content:encoded>
+      <category>AI coding</category>
+    <category>developer skills</category>
+    <category>product engineering</category>
+    <category>CTO</category>
+    <category>education</category>
+    <category>LLM</category>
+    </item>
     <item>
       <title>What the Salamanca Robot Teacher Backlash Teaches Us About Humanoid Robots in Schools</title>
       <link>https://shamylmansoor.com/blog/humanoid-robot-classroom-salamanca-what-went-wrong</link>
