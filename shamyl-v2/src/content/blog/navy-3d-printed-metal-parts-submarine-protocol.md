@@ -63,7 +63,7 @@ For Pakistani technology teams and manufacturers, the Navy's protocol is relevan
 
 Pakistan has a growing additive manufacturing footprint, primarily in [desktop FDM printing for education and prototyping](https://shamylmansoor.com/blog/3d-printing-2026-08-13/). Metal AM adoption remains limited, concentrated in a few research institutions and defense-adjacent organizations. But the principle applies equally to polymer printing: moving from "we can print this part" to "we have a standard process for qualifying printed parts" is what separates a hobby from a manufacturing capability.
 
-Organizations like [LearnOBots](https://shamylmansoor.com/projects/learnosteam/) that work on building maker and engineering skills in Pakistan consistently run into the same gap: students learn to print objects, but the step from printing to producing qualified, reproducible parts is rarely taught. The Navy's risk-tiered approach — streamlining approval for low-risk parts while maintaining strict checks for safety-critical ones — is a model that educational programs and local manufacturers could adapt.
+Organizations like [LearnOBots](https://shamylmansoor.com/work/learnosteam/) that work on building maker and engineering skills in Pakistan consistently run into the same gap: students learn to print objects, but the step from printing to producing qualified, reproducible parts is rarely taught. The Navy's risk-tiered approach — streamlining approval for low-risk parts while maintaining strict checks for safety-critical ones — is a model that educational programs and local manufacturers could adapt.
 
 ## What to Watch Next
 

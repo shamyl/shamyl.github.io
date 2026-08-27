@@ -5,7 +5,7 @@
     <link>https://shamylmansoor.com/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Thu, 27 Aug 2026 19:19:46 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 27 Aug 2026 19:22:40 GMT</lastBuildDate>
     <atom:link href="https://shamylmansoor.com/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamylmansoor.com/favicon.svg</url>
@@ -49,7 +49,7 @@
 <h2>Relevance for Pakistan and Emerging Manufacturing Ecosystems</h2>
 <p>For Pakistani technology teams and manufacturers, the Navy&#39;s protocol is relevant in a specific way: it demonstrates that the bottleneck for AM adoption at scale is not hardware but process standardization.</p>
 <p>Pakistan has a growing additive manufacturing footprint, primarily in <a href="https://shamylmansoor.com/blog/3d-printing-2026-08-13/">desktop FDM printing for education and prototyping</a>. Metal AM adoption remains limited, concentrated in a few research institutions and defense-adjacent organizations. But the principle applies equally to polymer printing: moving from &quot;we can print this part&quot; to &quot;we have a standard process for qualifying printed parts&quot; is what separates a hobby from a manufacturing capability.</p>
-<p>Organizations like <a href="https://shamylmansoor.com/projects/learnosteam/">LearnOBots</a> that work on building maker and engineering skills in Pakistan consistently run into the same gap: students learn to print objects, but the step from printing to producing qualified, reproducible parts is rarely taught. The Navy&#39;s risk-tiered approach — streamlining approval for low-risk parts while maintaining strict checks for safety-critical ones — is a model that educational programs and local manufacturers could adapt.</p>
+<p>Organizations like <a href="https://shamylmansoor.com/work/learnosteam/">LearnOBots</a> that work on building maker and engineering skills in Pakistan consistently run into the same gap: students learn to print objects, but the step from printing to producing qualified, reproducible parts is rarely taught. The Navy&#39;s risk-tiered approach — streamlining approval for low-risk parts while maintaining strict checks for safety-critical ones — is a model that educational programs and local manufacturers could adapt.</p>
 <h2>What to Watch Next</h2>
 <p>Several developments will determine whether the Navy&#39;s protocol becomes a genuine inflection point or remains a narrow defense initiative:</p>
 <ul>
