@@ -5,13 +5,87 @@
     <link>https://shamylmansoor.com/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Thu, 27 Aug 2026 19:22:40 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 28 Aug 2026 04:03:10 GMT</lastBuildDate>
     <atom:link href="https://shamylmansoor.com/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamylmansoor.com/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamylmansoor.com/blog</link>
     </image>
+    <item>
+      <title>Microduck: The $399 Open-Source Biped Robot That Learns to Walk Through Reinforcement Learning</title>
+      <link>https://shamylmansoor.com/blog/microduck-open-source-biped-robot-reinforcement-learning</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/microduck-open-source-biped-robot-reinforcement-learning</guid>
+      <pubDate>Fri, 28 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Pollen Robotics&apos; Microduck is a 25 cm open-source bipedal robot with 15 motors, LiDAR, and a camera — pre-ordering at $399 with fully open-source RL training. Here is what it means for educators, makers, and robotics builders.</description>
+      <content:encoded><![CDATA[<p>Pollen Robotics opened pre-orders for Microduck on August 27, 2026 — a 25 cm, 800-gram bipedal robot that walks, kicks, grabs objects, and even roller-skates using reinforcement learning policies trained in simulation. At $399 before taxes and shipping, it is one of the most affordable programmable robots with sim-to-real RL capabilities ever made available to the public. The entire software stack is open-source under the Apache-2.0 license, and the robot ships with seven pre-trained behaviors ready to use out of the box.</p>
+<h2>In Brief</h2>
+<ul>
+<li>Microduck is a 25 cm bipedal robot with 15 servo motors, a camera, LiDAR, and two IMUs, built by Pollen Robotics (now part of Hugging Face)</li>
+<li>Pre-orders opened August 27, 2026 at $399; shipping is targeted before Christmas 2026</li>
+<li>All robot software is Apache-2.0 licensed, with the RL training stack in a separate repository using MuJoCo and PPO</li>
+<li>The robot ships with 7 pre-trained policies: walk, sit/stand, kick, grab, roller skate, get back up, and quack</li>
+<li>Behaviors are trained in a physics simulator and deployed to the robot — users can retrain and share new policies through Hugging Face</li>
+</ul>
+<h2>What Is Microduck?</h2>
+<p>Microduck is the newest robot from Pollen Robotics, a French company now part of Hugging Face that previously built Reachy, a larger interactive robot used in research and education. Where Reachy was designed as a social robot for human-robot interaction studies, Microduck is explicitly built for locomotion and reinforcement learning.</p>
+<p>The robot is small — about 25 centimeters tall and weighing roughly 800 grams. Its brain is a Rockchip RK3566 system-on-chip running a 50 Hz control loop that drives fifteen servos. The sensor stack includes a camera, a time-of-flight LiDAR sensor, and two inertial measurement units. It connects via USB-C for charging and Bluetooth for gamepad control.</p>
+<p>According to the company, every Microduck ships with seven pre-trained policies that work immediately: a velocity-tracking walking gait, sitting and standing, kicking a ball, grabbing objects with its beak, roller skating (when skate attachments are equipped), self-recovery from a fallen position, and a quacking voice. Each behavior is a neural network policy that can be swapped, retrained, or replaced.</p>
+<h2>How the Reinforcement Learning Pipeline Works</h2>
+<p>The technical architecture is what sets Microduck apart from other affordable robots. The project is split across two GitHub repositories:</p>
+<ul>
+<li><strong><a href="https://github.com/pollen-robotics/microduck">microduck</a></strong> — the robot&#39;s onboard software, written in Rust. It includes the control loop daemon (<code>robotd</code>), the update system (<code>updaterd</code>), Bluetooth daemon (<code>btd</code>), gamepad handler (<code>padd</code>), camera streaming via WebRTC (<code>mediad</code>), and the depth sensor service (<code>tofd</code>). All daemons communicate over JSON-RPC on Unix sockets.</li>
+<li><strong><a href="https://github.com/pollen-robotics/microduck_rl">microduck_rl</a></strong> — the training stack, which uses MuJoCo for physics simulation and Proximal Policy Optimization (PPO) for policy learning. Trained policies are exported to ONNX format, which the robot loads and executes.</li>
+</ul>
+<p>The sim-to-real workflow follows a well-established pattern in robotics research: train a policy in a physics simulator with domain randomization (varying friction, mass, motor dynamics, and other physical parameters to make the policy robust), then deploy the resulting neural network directly on the physical robot. Users can train new behaviors on their own machine or use Hugging Face Jobs for cloud training, then deploy to the robot in what the company describes as &quot;one step from simulation to the real thing.&quot;</p>
+<p>The robot also supports SSH access (<code>ssh microduck</code>) and provides command-line tools (<code>robotctl</code>) for configuration, monitoring, and updates. This makes it a genuine developer platform rather than a closed consumer toy.</p>
+<h2>Why This Matters for Education</h2>
+<p>For STEAM educators and educational robotics programs, Microduck represents a significant shift in what is accessible. Consider the typical educational robotics landscape: most affordable robots under $400 use either remote control with no autonomous behavior, or simple pre-programmed movements via block-based coding. Reinforcement learning — the same technique used to train humanoid robots like Boston Dynamics&#39; Atlas and Tesla&#39;s Optimus — has been largely inaccessible at this price point.</p>
+<p>The closest comparisons in the educational space are platforms like the <a href="/blog/nvidia-isaac-groot-reference-humanoid-robot-academic-research/">NVIDIA Isaac GR00T reference humanoid</a>, which targets university research labs at a significantly higher cost, or simulation-only environments where students train policies that never touch real hardware. Microduck bridges this gap by providing both the physical robot and the full training pipeline at a price that individual learners or small school programs could realistically afford.</p>
+<p>From a curriculum perspective, the sim-to-real loop is one of the most important concepts in modern robotics. Students can see, in a concrete and hands-on way, how a policy trained in a simulated environment transfers (or fails to transfer) to physical hardware. This is not a theoretical exercise — it is the same workflow used by professional robotics engineers at companies like Boston Dynamics, Agility Robotics, and Unitree. The domain randomization challenges, the sim-to-real gap, and the iteration cycle of train-deploy-refine are all real engineering problems that Microduck makes tangible.</p>
+<h2>What This Means for Makers and Hardware Builders</h2>
+<p>The open-source hardware approach is notable. While the mechanical designs are not fully open-source in the traditional sense (the CAD files are not explicitly listed as open hardware), the software stack is permissively licensed under Apache-2.0, and the entire system architecture is documented in the repository&#39;s design docs. This includes the daemon architecture, the motor bus design, the update verification system, and the JSON-RPC communication protocol.</p>
+<p>For hardware product builders, there are practical lessons in how Pollen Robotics has structured the robot&#39;s software. The decision to use Rust for all system daemons, the JSON-RPC-over-Unix-sockets communication pattern, and the signed-update-with-rollback system are all design choices that smaller robotics teams can learn from. The update system in particular — where every update is verified, health-gated, and reversible — addresses a problem that many hardware startups underestimate: how to safely push software updates to devices in the field without bricking them.</p>
+<p>The integration with Hugging Face for policy sharing and cloud training is also worth studying. By making policy sharing a first-class citizen of the platform (the workflow explicitly includes &quot;publish the policy&quot; as step four), Pollen Robotics is betting that community-created behaviors will drive the robot&#39;s long-term value. This is the same dynamic that has made Hugging Face central to the NLP and computer vision communities, applied to physical robotics.</p>
+<h2>Relevance to Pakistan and Emerging Tech Ecosystems</h2>
+<p>For technology builders in Pakistan and similar emerging markets, Microduck is relevant in two ways.</p>
+<p>First, as a learning tool. The $399 price point, while still significant in local currency terms, is within reach of university labs, maker spaces, and serious self-learners. The fact that the full training pipeline is open-source means that students can learn reinforcement learning for robotics without needing access to a university robotics lab with expensive equipment. A student with a decent GPU and a Microduck can run the same sim-to-real pipeline that top research labs use.</p>
+<p>Second, as a product design case study. Pollen Robotics is a relatively small company that has managed to build a sophisticated robot at a consumer-accessible price point. Their approach — using a commodity SoC (Rockchip RK3566) rather than a custom chip, standard servos rather than proprietary actuators, and leveraging the Hugging Face ecosystem for infrastructure — demonstrates that meaningful robotics products can be built without the resources of a Boston Dynamics or Tesla. For Pakistani hardware startups thinking about <a href="/projects/learnosteam/">building educational robotics platforms</a>, the Microduck playbook is worth studying.</p>
+<p>The challenges of doing this in Pakistan are real: component sourcing, import duties on electronics, and the lack of local PCB manufacturing all add cost and complexity. But the Microduck bill of materials — commodity SoC, standard servos, ToF sensor, camera — consists of parts that are globally available and individually inexpensive. The expensive part of robotics is not the parts; it is the integration, the software, and the sim-to-real pipeline. Pollen Robotics has shown that a small team can nail that integration.</p>
+<h2>Product Builder&#39;s Perspective</h2>
+<p>From a product-building perspective, several design decisions in Microduck stand out.</p>
+<p>The choice of a bipedal form factor is bold. Bipedal locomotion is significantly harder than wheeled or quadrupedal locomotion, and most educational robots at this price point use wheels. By committing to bipedal walking via RL, Pollen Robotics is making a statement: reinforcement learning for locomotion has matured enough that a small robot can do it reliably at a consumer price point. This was not true two years ago.</p>
+<p>The decision to ship pre-trained policies rather than asking users to train everything from scratch is important for the out-of-box experience. A robot that does nothing on day one is a poor educational tool — it needs to work immediately to build confidence, then open up for deeper exploration. The seven shipped policies provide that immediate gratification, while the open training stack provides the depth.</p>
+<p>The Hugging Face integration is a strategic advantage that few robotics companies can match. Being part of Hugging Face gives Microduck access to the largest community of machine learning practitioners in the world, a familiar platform for sharing models, and cloud training infrastructure. For an independent robotics company, building this kind of community platform from scratch would be nearly impossible.</p>
+<p>One open question is durability. A bipedal robot that is 25 cm tall and weighs 800 grams will fall, and falling is where small robots often break. The accessory pack includes spare motors and cables, which suggests Pollen Robotics expects wear and tear. How well the robot survives months of student use in a classroom setting remains to be seen.</p>
+<h2>What to Watch Next</h2>
+<ul>
+<li><strong>Shipping and real-world reviews</strong>: Microduck is scheduled to ship before Christmas 2026. The gap between pre-order and shipping means that independent reviews of build quality, battery life, and sim-to-real reliability are still months away.</li>
+<li><strong>Community policy development</strong>: The success of the platform depends on whether users actually create and share new behaviors. Watch the <a href="https://github.com/pollen-robotics/microduck">Microduck GitHub repository</a> and Hugging Face for community-contributed policies.</li>
+<li><strong>Educational adoption</strong>: Whether universities and schools integrate Microduck into robotics curricula will determine its long-term impact. The sim-to-real pipeline is pedagogically valuable, but curriculum integration requires more than a good robot — it needs teaching materials, lesson plans, and instructor support.</li>
+<li><strong>Competitive response</strong>: If Microduck proves popular, expect similar products from other open-source robotics companies. The combination of RL locomotion and sub-$400 pricing is a new market segment.</li>
+<li><strong>Pakistan-specific opportunities</strong>: If import costs can be managed, Microduck could be a viable platform for advanced robotics education in Pakistani universities. Maker spaces in Islamabad, Lahore, and Karachi that already have 3D printing and basic electronics capacity would be well-positioned to use it.</li>
+</ul>
+<h2>Conclusion</h2>
+<p>Microduck is not just another educational robot. It is the first time that sim-to-real reinforcement learning for locomotion has been packaged into a $399 consumer product with fully open-source software. For educators, it offers a way to teach one of the most important concepts in modern robotics — the sim-to-real pipeline — with physical hardware that students can hold in their hands. For makers and hardware builders, it is a reference design for how small teams can build sophisticated robotics products using commodity components and open-source tooling.</p>
+<p>The robot is not without limitations: it is small, bipedal walking is inherently fragile, and the real-world durability and sim-to-real gap will only become clear after shipping. But the approach — open-source, community-driven, integrated with the leading ML platform — is exactly the direction that educational robotics should be moving.</p>
+<p>For anyone building <a href="/projects/robosim/">educational robotics platforms</a> or working at the intersection of <a href="/projects/buddy-bot/">STEAM education and hardware</a>, Microduck is worth paying attention to.</p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://pollen-robotics.com/microduck/">Pollen Robotics — Microduck product page</a></li>
+<li><a href="https://github.com/pollen-robotics/microduck">GitHub — pollen-robotics/microduck</a> (Apache-2.0, 559 stars as of August 28, 2026)</li>
+<li><a href="https://github.com/pollen-robotics/microduck_rl">GitHub — pollen-robotics/microduck_rl</a> (RL training stack)</li>
+<li><a href="https://pollen-robotics.com/">Pollen Robotics homepage</a> (confirms Hugging Face acquisition)</li>
+<li><a href="https://huggingface.co/pollen-robotics">Hugging Face — pollen-robotics profile</a></li>
+</ul>
+]]></content:encoded>
+      <category>robotics</category>
+    <category>open-source</category>
+    <category>reinforcement-learning</category>
+    <category>EdTech</category>
+    <category>maker</category>
+    <category>hardware</category>
+    </item>
     <item>
       <title>How the U.S. Navy&apos;s New 3D Printing Protocol Could Change Metal Manufacturing Beyond Submarines</title>
       <link>https://shamylmansoor.com/blog/navy-3d-printed-metal-parts-submarine-protocol</link>
