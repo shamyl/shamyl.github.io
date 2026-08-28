@@ -60,7 +60,7 @@ For technology builders in Pakistan and similar emerging markets, Microduck is r
 
 First, as a learning tool. The $399 price point, while still significant in local currency terms, is within reach of university labs, maker spaces, and serious self-learners. The fact that the full training pipeline is open-source means that students can learn reinforcement learning for robotics without needing access to a university robotics lab with expensive equipment. A student with a decent GPU and a Microduck can run the same sim-to-real pipeline that top research labs use.
 
-Second, as a product design case study. Pollen Robotics is a relatively small company that has managed to build a sophisticated robot at a consumer-accessible price point. Their approach — using a commodity SoC (Rockchip RK3566) rather than a custom chip, standard servos rather than proprietary actuators, and leveraging the Hugging Face ecosystem for infrastructure — demonstrates that meaningful robotics products can be built without the resources of a Boston Dynamics or Tesla. For Pakistani hardware startups thinking about [building educational robotics platforms](/projects/learnosteam/), the Microduck playbook is worth studying.
+Second, as a product design case study. Pollen Robotics is a relatively small company that has managed to build a sophisticated robot at a consumer-accessible price point. Their approach — using a commodity SoC (Rockchip RK3566) rather than a custom chip, standard servos rather than proprietary actuators, and leveraging the Hugging Face ecosystem for infrastructure — demonstrates that meaningful robotics products can be built without the resources of a Boston Dynamics or Tesla. For Pakistani hardware startups thinking about [building educational robotics platforms](/work/learnosteam/), the Microduck playbook is worth studying.
 
 The challenges of doing this in Pakistan are real: component sourcing, import duties on electronics, and the lack of local PCB manufacturing all add cost and complexity. But the Microduck bill of materials — commodity SoC, standard servos, ToF sensor, camera — consists of parts that are globally available and individually inexpensive. The expensive part of robotics is not the parts; it is the integration, the software, and the sim-to-real pipeline. Pollen Robotics has shown that a small team can nail that integration.
 
@@ -90,7 +90,7 @@ Microduck is not just another educational robot. It is the first time that sim-t
 
 The robot is not without limitations: it is small, bipedal walking is inherently fragile, and the real-world durability and sim-to-real gap will only become clear after shipping. But the approach — open-source, community-driven, integrated with the leading ML platform — is exactly the direction that educational robotics should be moving.
 
-For anyone building [educational robotics platforms](/projects/robosim/) or working at the intersection of [STEAM education and hardware](/projects/buddy-bot/), Microduck is worth paying attention to.
+For anyone building [educational robotics platforms](/work/robosim/) or working at the intersection of [STEAM education and hardware](/work/buddy-bot/), Microduck is worth paying attention to.
 
 ## Sources
 
