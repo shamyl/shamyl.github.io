@@ -68,7 +68,7 @@ const aboutPersonJsonLd = JSON.stringify({
 });
 ---
 
-<BaseLayout title="About" description="Co-founder & CTO of LearnOBots | Technologist, Maker, Educator" jsonLd={aboutPersonJsonLd}>
+<BaseLayout title="About" description="About Shamyl Bin Mansoor — robotics entrepreneur, STEAM educator, and Co-founder & CTO of LearnOBots. Based in Islamabad, Pakistan." jsonLd={aboutPersonJsonLd}>
   <section class="page-header">
     <div class="container">
       <div class="about-intro">
@@ -80,9 +80,10 @@ const aboutPersonJsonLd = JSON.stringify({
         <div class="about-text">
           <div class="page-meta">
             <span class="meta-label">01 — PROFILE</span>
-            <span class="meta-status"><span class="status-dot"></span>AVAILABLE</span>
+            <a href="#contact" class="meta-status" style="text-decoration:none;"><span class="status-dot"></span>AVAILABLE ↓</a>
           </div>
           <h1 class="page-title">About<br><span class="title-outline">Me</span></h1>
+          <p class="about-fullname">Shamyl Bin Mansoor</p>
           <p class="about-lead">
             I'm the co-founder and CTO of <a href="https://www.learnobots.com" target="_blank" rel="noopener noreferrer">LearnOBots</a>, 
             an EdTech company rethinking education through playful and fun learning.
@@ -291,6 +292,17 @@ const aboutPersonJsonLd = JSON.stringify({
     gap: 6px;
     font-weight: 700;
     color: var(--accent);
+    text-decoration: none;
+  }
+
+  .about-fullname {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+    margin-top: var(--space-xs);
+    margin-bottom: var(--space-lg);
   }
   
   .status-dot {

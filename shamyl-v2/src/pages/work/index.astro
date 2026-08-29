@@ -10,14 +10,14 @@ const projects = allProjects.sort((a, b) => b.data.date.valueOf() - a.data.date.
 const categories = ['all', 'software', 'hardware', 'research', 'publication'];
 ---
 
-<BaseLayout title="Work" description="Projects spanning software, hardware, and research" ogType="website" canonical="https://shamylmansoor.com/work/">
+<BaseLayout title="Work" description="Active products, EdTech platforms, and research publications by Shamyl Bin Mansoor — hardware robots, software platforms, and academic work spanning 2007 to present." ogType="website" canonical="https://shamylmansoor.com/work/">
   <section class="page-header">
     <div class="container">
       <div class="page-meta">
         <span class="meta-label">01 — WORK</span>
       </div>
       <h1 class="page-title">Work</h1>
-      <p class="page-subtitle">Projects spanning software, hardware, and research</p>
+      <p class="page-subtitle">Active products, EdTech platforms, and research publications</p>
     </div>
   </section>
   
@@ -38,18 +38,52 @@ const categories = ['all', 'software', 'hardware', 'research', 'publication'];
       
       <!-- Projects Grid -->
       <div class="projects-grid">
-        {projects.map(project => (
-          <div class="project-item" data-category={project.data.category}>
-            <ProjectCard
-              title={project.data.title}
-              description={project.data.description}
-              category={project.data.category}
-              image={project.data.image}
-              link={project.data.link}
-              slug={project.id}
-            />
-          </div>
-        ))}
+        {(() => {
+          const active = projects.filter(p => p.data.category !== 'publication' && p.data.category !== 'research');
+          const research = projects.filter(p => p.data.category === 'publication' || p.data.category === 'research');
+          return (
+            <>
+              {active.length > 0 && (
+                <div class="section-divider" data-divider="active">
+                  <div class="divider-line"></div>
+                  <span class="divider-label">Active Projects</span>
+                  <div class="divider-line"></div>
+                </div>
+              )}
+              {active.map(project => (
+                <div class="project-item" data-category={project.data.category}>
+                  <ProjectCard
+                    title={project.data.title}
+                    description={project.data.description}
+                    category={project.data.category}
+                    image={project.data.image}
+                    link={project.data.link}
+                    slug={project.id}
+                  />
+                </div>
+              ))}
+              {research.length > 0 && (
+                <div class="section-divider" data-divider="research">
+                  <div class="divider-line"></div>
+                  <span class="divider-label">Research &amp; Publications</span>
+                  <div class="divider-line"></div>
+                </div>
+              )}
+              {research.map(project => (
+                <div class="project-item" data-category={project.data.category}>
+                  <ProjectCard
+                    title={project.data.title}
+                    description={project.data.description}
+                    category={project.data.category}
+                    image={project.data.image}
+                    link={project.data.link}
+                    slug={project.id}
+                  />
+                </div>
+              ))}
+            </>
+          );
+        })()}
       </div>
       
       {projects.length === 0 && (
@@ -63,20 +97,27 @@ const categories = ['all', 'software', 'hardware', 'research', 'publication'];
   const filterBtns = document.querySelectorAll('.filter-btn');
   const projectItems = document.querySelectorAll('.project-item');
   
+  const dividers = document.querySelectorAll('.section-divider');
+
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       const category = btn.getAttribute('data-category');
       
       filterBtns.forEach(b => b.setAttribute('aria-pressed', 'false'));
       btn.setAttribute('aria-pressed', 'true');
+
+      // Show/hide dividers only in 'all' view
+      dividers.forEach(d => {
+        (d as HTMLElement).style.display = category === 'all' ? 'flex' : 'none';
+      });
       
       projectItems.forEach(item => {
         const itemCategory = item.getAttribute('data-category');
         if (category === 'all' || itemCategory === category) {
-          item.style.display = 'block';
-          item.style.animation = 'fadeIn 0.3s ease forwards';
+          (item as HTMLElement).style.display = 'block';
+          (item as HTMLElement).style.animation = 'fadeIn 0.3s ease forwards';
         } else {
-          item.style.display = 'none';
+          (item as HTMLElement).style.display = 'none';
         }
       });
     });
@@ -148,6 +189,31 @@ const categories = ['all', 'software', 'hardware', 'research', 'publication'];
     }
   }
   
+  .section-divider {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-md) 0 var(--space-sm);
+    margin-top: var(--space-md);
+  }
+
+  .divider-line {
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .divider-label {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+    white-space: nowrap;
+  }
+
   .empty-state {
     color: var(--text-muted);
     font-style: italic;

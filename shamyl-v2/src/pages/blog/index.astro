@@ -7,7 +7,7 @@ const allPosts = await getCollection('blog');
 const posts = allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
 
-<BaseLayout title="Blog" description="Updates, thoughts, and announcements" ogType="website" canonical="https://shamylmansoor.com/blog/">
+<BaseLayout title="Blog" description="Writing on robotics, EdTech, STEAM education, hardware, and tech in Pakistan by Shamyl Bin Mansoor." ogType="website" canonical="https://shamylmansoor.com/blog/">
   <section class="page-header">
     <div class="container">
       <div class="page-meta">
@@ -15,17 +15,20 @@ const posts = allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueO
       </div>
       <h1 class="page-title">Blog</h1>
       <p class="page-subtitle">Updates, thoughts, and announcements</p>
+      <div class="blog-header-actions">
       <a href="/rss.xml" class="rss-link" target="_blank" rel="noopener noreferrer">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
           <path d="M6.503 20.752c0 1.794-1.456 3.248-3.251 3.248-1.796 0-3.252-1.454-3.252-3.248 0-1.794 1.456-3.248 3.252-3.248 1.795.001 3.251 1.454 3.251 3.248zm-6.503-12.572v4.811c6.05.062 10.96 4.966 11.022 11.009h4.817c-.062-8.758-7.061-15.814-15.839-15.82zm0-3.368v4.811c9.143.062 16.566 7.461 16.627 16.577h4.818c-.062-11.74-9.612-21.255-21.445-21.388z"/>
         </svg>
         Subscribe via RSS
       </a>
+      </div>
     </div>
   </section>
   
   <section class="section">
     <div class="container">
+      <div id="tag-filter" class="tag-filter" aria-label="Filter by topic"></div>
       <div class="posts-list">
         {posts.length > 0 ? (
           posts.map(post => (
@@ -127,4 +130,56 @@ const posts = allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueO
   .rss-link svg {
     fill: currentColor;
   }
+
+  .tag-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    max-width: 800px;
+  }
 </style>
+
+<script>
+(function () {
+  const cards = document.querySelectorAll('.blog-card, article');
+  if (!cards.length) return;
+  const tagMap = new Map<string, number>();
+  cards.forEach(card => {
+    card.querySelectorAll('.tag').forEach(t => {
+      const txt = t.textContent?.trim().replace(/^#/, '') || '';
+      if (txt) tagMap.set(txt, (tagMap.get(txt) || 0) + 1);
+    });
+  });
+  const topTags = Array.from(tagMap.entries()).sort((a, b) => b[1] - a[1]).slice(0, 14).map(e => e[0]);
+  if (!topTags.length) return;
+  const container = document.getElementById('tag-filter');
+  if (!container) return;
+  const makeBtn = (label: string, tag: string, active = false) => {
+    const b = document.createElement('button');
+    b.textContent = label;
+    b.dataset.tag = tag;
+    b.style.cssText = `font-family:var(--font-mono);font-size:.65rem;font-weight:${active ? 700 : 600};text-transform:uppercase;letter-spacing:.06em;padding:.3rem .8rem;border:1px solid ${active ? 'var(--accent)' : 'var(--border)'};border-radius:99px;background:${active ? 'color-mix(in srgb,var(--accent) 12%,transparent)' : 'transparent'};color:${active ? 'var(--accent)' : 'var(--text-muted)'};cursor:pointer;transition:all .15s;`;
+    return b;
+  };
+  const allBtn = makeBtn('All', '', true);
+  container.appendChild(allBtn);
+  topTags.forEach(tag => container.appendChild(makeBtn('#' + tag, tag)));
+  container.addEventListener('click', e => {
+    const btn = (e.target as HTMLElement).closest('button');
+    if (!btn) return;
+    const filter = btn.dataset.tag || '';
+    container.querySelectorAll('button').forEach((b: HTMLElement) => {
+      const active = b === btn;
+      b.style.color = active ? 'var(--accent)' : 'var(--text-muted)';
+      b.style.borderColor = active ? 'var(--accent)' : 'var(--border)';
+      b.style.fontWeight = active ? '700' : '600';
+      b.style.background = active ? 'color-mix(in srgb,var(--accent) 12%,transparent)' : 'transparent';
+    });
+    cards.forEach(card => {
+      const tags = Array.from(card.querySelectorAll('.tag')).map(t => t.textContent?.trim().replace(/^#/, '') || '');
+      (card as HTMLElement).style.display = (!filter || tags.includes(filter)) ? '' : 'none';
+    });
+  });
+})();
+</script>

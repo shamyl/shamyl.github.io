@@ -38,35 +38,8 @@ const personJsonLd = JSON.stringify({
 });
 ---
 
-<BaseLayout title="Home" jsonLd={personJsonLd}>
+<BaseLayout title="Home" description="Shamyl Bin Mansoor — Co-founder & CTO of LearnOBots. Robotics entrepreneur, maker, and STEAM educator building products that matter in Pakistan." jsonLd={personJsonLd}>
   <Hero />
-  
-  <!-- Latest Updates Section -->
-  <section class="section">
-    <div class="container">
-      <SectionHeader 
-        title="Latest Updates" 
-        link="/blog"
-        linkText="View All Posts"
-        figNumber="01"
-      />
-      <div class="posts-grid">
-        {latestPosts.length > 0 ? (
-          latestPosts.map(post => (
-            <BlogCard
-              title={post.data.title}
-              date={post.data.date}
-              description={post.data.description}
-              tags={post.data.tags}
-              slug={post.id}
-            />
-          ))
-        ) : (
-          <p class="empty-state">No posts yet. Check back soon!</p>
-        )}
-      </div>
-    </div>
-  </section>
   
   <!-- Featured Work Section -->
   <section class="section">
@@ -76,7 +49,7 @@ const personJsonLd = JSON.stringify({
         subtitle="Selected projects across software, hardware, and research"
         link="/work"
         linkText="View All Projects"
-        figNumber="02"
+        figNumber="01"
       />
       <div class="projects-grid">
         {featuredProjects.length > 0 ? (
@@ -92,6 +65,33 @@ const personJsonLd = JSON.stringify({
           ))
         ) : (
           <p class="empty-state">Projects coming soon!</p>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest Updates Section -->
+  <section class="section">
+    <div class="container">
+      <SectionHeader 
+        title="Latest Updates" 
+        link="/blog"
+        linkText="View All Posts"
+        figNumber="02"
+      />
+      <div class="posts-grid">
+        {latestPosts.length > 0 ? (
+          latestPosts.map(post => (
+            <BlogCard
+              title={post.data.title}
+              date={post.data.date}
+              description={post.data.description}
+              tags={post.data.tags}
+              slug={post.id}
+            />
+          ))
+        ) : (
+          <p class="empty-state">No posts yet. Check back soon!</p>
         )}
       </div>
     </div>

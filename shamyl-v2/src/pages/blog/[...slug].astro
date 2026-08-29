@@ -143,6 +143,13 @@ const canonicalUrl = post.data.canonical || postUrl;
         </div>
       </div>
       
+      <!-- Newsletter CTA -->
+      <div class="newsletter-cta">
+        <p class="newsletter-label">Made in Pakistan — Weekly Newsletter</p>
+        <p class="newsletter-desc">Tech, robotics, and EdTech stories from Pakistan and beyond — every week.</p>
+        <a href="https://shamylmansoor.substack.com" target="_blank" rel="noopener noreferrer" class="newsletter-link">Subscribe on Substack →</a>
+      </div>
+
       <!-- Prev/Next Navigation -->
       <nav class="post-nav" aria-label="Article navigation">
         {prevPost && (
@@ -463,6 +470,48 @@ const canonicalUrl = post.data.canonical || postUrl;
     overflow: hidden;
   }
   
+  /* Newsletter CTA */
+  .newsletter-cta {
+    margin: var(--space-2xl) 0;
+    padding: var(--space-xl);
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: var(--radius-lg);
+    max-width: 720px;
+  }
+
+  .newsletter-label {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin-bottom: var(--space-sm);
+    font-weight: 700;
+  }
+
+  .newsletter-desc {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: var(--space-md);
+  }
+
+  .newsletter-link {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .newsletter-link:hover {
+    text-decoration: underline;
+  }
+
   @media (max-width: 768px) {
     .related-grid {
       grid-template-columns: 1fr;
@@ -476,3 +525,45 @@ const canonicalUrl = post.data.canonical || postUrl;
     }
   }
 </style>
+
+<script>
+  // Auto-generate Table of Contents from h2 headings
+  (function () {
+    const prose = document.querySelector('.prose') as HTMLElement | null;
+    if (!prose) return;
+    const headings = prose.querySelectorAll('h2');
+    if (headings.length < 3) return;
+    const toc = document.createElement('nav');
+    toc.setAttribute('aria-label', 'Table of Contents');
+    toc.style.cssText = 'margin:1.5rem 0 2rem;padding:1rem 1.25rem;background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius-lg);max-width:720px;';
+    const label = document.createElement('p');
+    label.textContent = 'Contents';
+    label.style.cssText = 'font-family:var(--font-mono);font-size:.65rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-muted);margin-bottom:.75rem;font-weight:700;margin-top:0;';
+    toc.appendChild(label);
+    const ol = document.createElement('ol');
+    ol.style.cssText = 'list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.4rem;';
+    headings.forEach((h, i) => {
+      if (!h.id) h.id = 'toc-h-' + i;
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = '#' + h.id;
+      a.style.cssText = 'font-family:var(--font-mono);font-size:.75rem;color:var(--text-secondary);text-decoration:none;display:flex;align-items:baseline;gap:.5rem;';
+      const num = document.createElement('span');
+      num.textContent = String(i + 1).padStart(2, '0');
+      num.style.cssText = 'color:var(--text-muted);font-size:.6rem;flex-shrink:0;';
+      a.appendChild(num);
+      a.appendChild(document.createTextNode(h.textContent || ''));
+      a.addEventListener('mouseenter', () => { a.style.color = 'var(--accent)'; });
+      a.addEventListener('mouseleave', () => { a.style.color = 'var(--text-secondary)'; });
+      li.appendChild(a);
+      ol.appendChild(li);
+    });
+    toc.appendChild(ol);
+    const firstP = prose.querySelector('p');
+    if (firstP && firstP.nextSibling) {
+      prose.insertBefore(toc, firstP.nextSibling);
+    } else {
+      prose.prepend(toc);
+    }
+  })();
+</script>
