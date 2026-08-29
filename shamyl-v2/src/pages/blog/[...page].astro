@@ -1,0 +1,638 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogCard from '../../components/BlogCard.astro';
+import { getCollection } from 'astro:content';
+
+const PAGE_SIZE = 20;
+
+export async function getStaticPaths({ paginate }: any) {
+  const allPosts = await getCollection('blog');
+  const sorted = allPosts.sort(
+    (a: any, b: any) => b.data.date.valueOf() - a.data.date.valueOf()
+  );
+
+  // Build full month archive for sidebar (runs once at build time)
+  const monthMap = new Map<string, {
+    label: string;
+    count: number;
+    pageNum: number;
+    slug: string;
+    year: number;
+  }>();
+
+  sorted.forEach((post: any, idx: number) => {
+    const d: Date = post.data.date;
+    const ym = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`;
+    if (!monthMap.has(ym)) {
+      monthMap.set(ym, {
+        label: d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' }),
+        count: 0,
+        pageNum: Math.ceil((idx + 1) / PAGE_SIZE),
+        slug: d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
+             .toLowerCase().replace(' ', '-'),
+        year: d.getFullYear(),
+      });
+    }
+    monthMap.get(ym)!.count++;
+  });
+
+  const monthArchive = Array.from(monthMap.values());
+
+  return paginate(sorted, {
+    pageSize: PAGE_SIZE,
+    props: { monthArchive },
+  });
+}
+
+interface MonthEntry {
+  label: string;
+  count: number;
+  pageNum: number;
+  slug: string;
+  year: number;
+}
+
+const { page, monthArchive } = Astro.props as {
+  page: any;
+  monthArchive: MonthEntry[];
+};
+
+const posts = page.data;
+
+// Group this page's posts by month for section headers
+const monthGroups: Array<{ ym: string; label: string; slug: string; posts: any[] }> = [];
+posts.forEach((post: any) => {
+  const d: Date = post.data.date;
+  const ym = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`;
+  const label = d.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+  const slug = d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
+               .toLowerCase().replace(' ', '-');
+  const last = monthGroups[monthGroups.length - 1];
+  if (!last || last.ym !== ym) {
+    monthGroups.push({ ym, label, slug, posts: [post] });
+  } else {
+    last.posts.push(post);
+  }
+});
+
+// Group sidebar entries by year
+const yearMap = new Map<number, MonthEntry[]>();
+monthArchive.forEach((m: MonthEntry) => {
+  if (!yearMap.has(m.year)) yearMap.set(m.year, []);
+  yearMap.get(m.year)!.push(m);
+});
+const years = Array.from(yearMap.keys()).sort((a, b) => b - a);
+
+const isFirstPage = page.currentPage === 1;
+const canonicalUrl = isFirstPage
+  ? 'https://shamylmansoor.com/blog/'
+  : `https://shamylmansoor.com/blog/${page.currentPage}/`;
+const pageTitle = isFirstPage ? 'Blog' : `Blog — Page ${page.currentPage}`;
+---
+
+<BaseLayout
+  title={pageTitle}
+  description="Writing on robotics, EdTech, STEAM education, hardware, and tech in Pakistan by Shamyl Bin Mansoor."
+  ogType="website"
+  canonical={canonicalUrl}
+>
+  <section class="page-header">
+    <div class="container">
+      <div class="page-meta">
+        <span class="meta-label">01 — BLOG</span>
+      </div>
+      <h1 class="page-title">Blog</h1>
+      <p class="page-subtitle">Writing on robotics, EdTech, and technology</p>
+      <a href="/rss.xml" class="rss-link" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M6.503 20.752c0 1.794-1.456 3.248-3.251 3.248-1.796 0-3.252-1.454-3.252-3.248 0-1.794 1.456-3.248 3.252-3.248 1.795.001 3.251 1.454 3.251 3.248zm-6.503-12.572v4.811c6.05.062 10.96 4.966 11.022 11.009h4.817c-.062-8.758-7.061-15.814-15.839-15.82zm0-3.368v4.811c9.143.062 16.566 7.461 16.627 16.577h4.818c-.062-11.74-9.612-21.255-21.445-21.388z"/>
+        </svg>
+        Subscribe via RSS
+      </a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="blog-layout">
+
+        <!-- ── Main posts column ── -->
+        <div class="posts-main">
+
+          <!-- Tag filter (filters current page) -->
+          <div id="tag-filter" class="tag-filter" aria-label="Filter by topic"></div>
+
+          <!-- Month-grouped post sections -->
+          {monthGroups.map(group => (
+            <div class="month-group">
+              <div class="month-header" id={group.slug}>
+                <h2 class="month-heading">{group.label}</h2>
+                <div class="month-line" aria-hidden="true"></div>
+              </div>
+              <div class="month-posts">
+                {group.posts.map((post: any) => (
+                  <BlogCard
+                    title={post.data.title}
+                    date={post.data.date}
+                    description={post.data.description}
+                    tags={post.data.tags}
+                    slug={post.id}
+                  />
+                ))}
+              </div>
+            </div>
+          ))}
+
+          {posts.length === 0 && (
+            <p class="empty-state">No posts yet. Check back soon!</p>
+          )}
+
+          <!-- Pagination -->
+          {page.lastPage > 1 && (
+            <nav class="pagination" aria-label="Blog pagination">
+              <div class="page-prev">
+                {page.url.prev ? (
+                  <a href={page.url.prev} class="page-btn">← Newer</a>
+                ) : (
+                  <span class="page-btn page-btn-disabled">← Newer</span>
+                )}
+              </div>
+
+              <div class="page-numbers">
+                {Array.from({ length: page.lastPage }, (_, i) => i + 1).map((n: number) => (
+                  <a
+                    href={n === 1 ? '/blog/' : `/blog/${n}/`}
+                    class={`page-num${n === page.currentPage ? ' page-num-active' : ''}`}
+                    aria-current={n === page.currentPage ? 'page' : undefined}
+                  >
+                    {n}
+                  </a>
+                ))}
+              </div>
+
+              <div class="page-next">
+                {page.url.next ? (
+                  <a href={page.url.next} class="page-btn">Older →</a>
+                ) : (
+                  <span class="page-btn page-btn-disabled">Older →</span>
+                )}
+              </div>
+            </nav>
+          )}
+        </div>
+
+        <!-- ── Right sidebar: month/year archive ── -->
+        <aside class="archive-sidebar" aria-label="Archive navigation">
+          <div class="sidebar-sticky">
+            <p class="sidebar-label">Archive</p>
+            {years.map((year: number) => (
+              <div class="year-group">
+                <span class="year-header">{year}</span>
+                {yearMap.get(year)?.map((m: MonthEntry) => (
+                  <a
+                    href={m.pageNum === 1 ? `/blog/#${m.slug}` : `/blog/${m.pageNum}/#${m.slug}`}
+                    class="month-link"
+                    data-slug={m.slug}
+                  >
+                    <span>{m.label}</span>
+                    <span class="month-count">{m.count}</span>
+                  </a>
+                ))}
+              </div>
+            ))}
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* ── Page header ── */
+  .page-header {
+    padding-top: calc(64px + var(--space-3xl));
+    padding-bottom: var(--space-xl);
+  }
+
+  .page-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-md);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+  }
+
+  .meta-label { font-weight: 700; color: var(--text-secondary); }
+
+  .page-title {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    margin-bottom: var(--space-sm);
+    line-height: 0.9;
+  }
+
+  .page-subtitle {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .rss-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-top: var(--space-md);
+    padding: var(--space-sm) var(--space-md);
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+  }
+  .rss-link:hover { color: var(--accent); border-color: var(--accent); background: var(--bg-secondary); }
+
+  /* ── Two-column layout ── */
+  .blog-layout {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    gap: var(--space-3xl);
+    align-items: start;
+  }
+
+  .posts-main { min-width: 0; }
+
+  /* ── Tag filter ── */
+  .tag-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.75rem;
+  }
+
+  /* ── Month groups ── */
+  .month-group { margin-bottom: var(--space-2xl); }
+
+  .month-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+    scroll-margin-top: 84px;
+  }
+
+  .month-heading {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    white-space: nowrap;
+    margin: 0;
+  }
+
+  .month-line {
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .month-posts {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  /* ── Pagination ── */
+  .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-xl) 0;
+    margin-top: var(--space-xl);
+    border-top: 1px solid var(--border);
+    gap: var(--space-md);
+  }
+
+  .page-btn {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.45rem 0.9rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: all 0.15s;
+    white-space: nowrap;
+  }
+  .page-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .page-btn-disabled { opacity: 0.3; cursor: default; }
+
+  .page-numbers {
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .page-num {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 600;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-sm);
+    color: var(--text-muted);
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: all 0.15s;
+  }
+  .page-num:hover { color: var(--accent); border-color: var(--border); }
+  .page-num-active {
+    color: var(--accent);
+    border-color: var(--accent);
+    font-weight: 700;
+    background: color-mix(in srgb, var(--accent) 10%, transparent);
+  }
+
+  /* ── Sidebar ── */
+  .sidebar-sticky {
+    position: sticky;
+    top: 84px;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+  }
+
+  .sidebar-label {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+    margin-bottom: var(--space-md);
+    padding-bottom: var(--space-sm);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .year-group { margin-bottom: var(--space-lg); }
+
+  .year-header {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-secondary);
+    margin-bottom: 0.35rem;
+  }
+
+  .month-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.22rem 0.4rem;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    border-radius: 4px;
+    border-left: 2px solid transparent;
+    transition: all 0.15s;
+    gap: 0.4rem;
+  }
+  .month-link:hover {
+    color: var(--accent);
+    background: var(--bg-secondary);
+    border-left-color: var(--accent);
+  }
+  .month-link.active {
+    color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 8%, transparent);
+    border-left-color: var(--accent);
+    font-weight: 700;
+  }
+
+  .month-count {
+    font-size: 0.6rem;
+    color: var(--text-muted);
+    background: var(--bg-tertiary);
+    padding: 0.05rem 0.3rem;
+    border-radius: 3px;
+    flex-shrink: 0;
+  }
+
+  .empty-state {
+    color: var(--text-muted);
+    font-style: italic;
+    padding: var(--space-3xl);
+    text-align: center;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+  }
+
+  /* ── Mobile ── */
+  @media (max-width: 900px) {
+    .blog-layout {
+      grid-template-columns: 1fr;
+    }
+
+    /* Sidebar becomes a horizontal scroll strip above posts */
+    .archive-sidebar {
+      order: -1;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: var(--space-md);
+      margin-bottom: var(--space-lg);
+    }
+
+    .sidebar-sticky {
+      position: static;
+      max-height: none;
+      display: flex;
+      gap: var(--space-lg);
+      overflow-x: auto;
+      padding-bottom: 4px;
+      scrollbar-width: none;
+    }
+    .sidebar-sticky::-webkit-scrollbar { display: none; }
+
+    .sidebar-label { display: none; }
+
+    .year-group {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      margin-bottom: 0;
+      flex-shrink: 0;
+    }
+
+    .year-header {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-size: 0.55rem;
+      margin-bottom: 0;
+      margin-right: 0.25rem;
+    }
+
+    .month-link {
+      white-space: nowrap;
+      padding: 0.25rem 0.6rem;
+      border: 1px solid var(--border);
+      border-left: 1px solid var(--border);
+      border-radius: 99px;
+      font-size: 0.65rem;
+    }
+    .month-link.active {
+      border-color: var(--accent);
+      border-left-color: var(--accent);
+    }
+
+    .month-count { display: none; }
+  }
+</style>
+
+<script>
+  // ── Tag filter (scoped to current page posts) ──
+  (function () {
+    const cards = document.querySelectorAll('.blog-card, article.blog-card');
+    if (!cards.length) return;
+
+    const tagMap = new Map<string, number>();
+    cards.forEach(card => {
+      card.querySelectorAll('.tag').forEach(t => {
+        const txt = (t.textContent || '').trim().replace(/^#/, '');
+        if (txt) tagMap.set(txt, (tagMap.get(txt) || 0) + 1);
+      });
+    });
+
+    const topTags = Array.from(tagMap.entries())
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 14)
+      .map(e => e[0]);
+
+    if (!topTags.length) return;
+
+    const container = document.getElementById('tag-filter');
+    if (!container) return;
+
+    const makeBtn = (label: string, tag: string, active = false) => {
+      const b = document.createElement('button');
+      b.textContent = label;
+      b.dataset.tag = tag;
+      b.style.cssText = [
+        'font-family:var(--font-mono)',
+        'font-size:.65rem',
+        `font-weight:${active ? 700 : 600}`,
+        'text-transform:uppercase',
+        'letter-spacing:.06em',
+        'padding:.28rem .8rem',
+        `border:1px solid ${active ? 'var(--accent)' : 'var(--border)'}`,
+        'border-radius:99px',
+        `background:${active ? 'color-mix(in srgb,var(--accent) 12%,transparent)' : 'transparent'}`,
+        `color:${active ? 'var(--accent)' : 'var(--text-muted)'}`,
+        'cursor:pointer',
+        'transition:all .15s',
+      ].join(';');
+      return b;
+    };
+
+    container.appendChild(makeBtn('All', '', true));
+    topTags.forEach(tag => container.appendChild(makeBtn('#' + tag, tag)));
+
+    container.addEventListener('click', (e: MouseEvent) => {
+      const btn = (e.target as HTMLElement).closest('button') as HTMLButtonElement | null;
+      if (!btn) return;
+      const filter = btn.dataset.tag || '';
+
+      container.querySelectorAll('button').forEach((b: Element) => {
+        const el = b as HTMLElement;
+        const active = el === btn;
+        el.style.color = active ? 'var(--accent)' : 'var(--text-muted)';
+        el.style.borderColor = active ? 'var(--accent)' : 'var(--border)';
+        el.style.fontWeight = active ? '700' : '600';
+        el.style.background = active
+          ? 'color-mix(in srgb,var(--accent) 12%,transparent)'
+          : 'transparent';
+      });
+
+      cards.forEach((card: Element) => {
+        const tags = Array.from(card.querySelectorAll('.tag'))
+          .map(t => (t.textContent || '').trim().replace(/^#/, ''));
+        (card as HTMLElement).style.display =
+          !filter || tags.includes(filter) ? '' : 'none';
+      });
+
+      // Hide month groups that become entirely empty after filtering
+      document.querySelectorAll('.month-group').forEach((group: Element) => {
+        const anyVisible = Array.from(group.querySelectorAll('.blog-card'))
+          .some(c => (c as HTMLElement).style.display !== 'none');
+        (group as HTMLElement).style.display = anyVisible ? '' : 'none';
+      });
+    });
+  })();
+
+  // ── Sidebar: smooth scroll for on-page month links ──
+  document.querySelectorAll('.month-link').forEach((link: Element) => {
+    link.addEventListener('click', (e: Event) => {
+      const href = (link as HTMLAnchorElement).getAttribute('href') || '';
+      const hashIdx = href.indexOf('#');
+      if (hashIdx === -1) return;
+      const targetId = href.slice(hashIdx + 1);
+      const target = document.getElementById(targetId);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        history.pushState(null, '', '#' + targetId);
+      }
+    });
+  });
+
+  // ── Sidebar: highlight active month as you scroll ──
+  const monthHeaders = document.querySelectorAll('.month-header[id]');
+  const sidebarLinks = document.querySelectorAll('.month-link[data-slug]');
+
+  if (monthHeaders.length && sidebarLinks.length) {
+    const setActive = (id: string) => {
+      sidebarLinks.forEach((link: Element) => {
+        const slug = (link as HTMLElement).dataset.slug || '';
+        link.classList.toggle('active', slug === id);
+      });
+    };
+
+    const observer = new IntersectionObserver(
+      (entries: IntersectionObserverEntry[]) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setActive(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: '-80px 0px -60% 0px', threshold: 0 }
+    );
+
+    monthHeaders.forEach((el: Element) => observer.observe(el));
+  }
+</script>
