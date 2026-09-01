@@ -4,7 +4,7 @@ description: "An educational robot kit with modular backpacks and interchangeabl
 category: "hardware"
 date: 2024-01-15
 featured: true
-image: "/work/buddy-bot/images/buddy-bot-front.png"
+image: "/work/buddy-bot/images/buddy-bot-front-card.png"
 ---
 
 **Buddy Bot** is an educational robot kit designed to make STEM learning accessible and engaging for students. Developed in collaboration with an industrial product designer, this modular robotics platform allows learners to explore coding, electronics, computational thinking, and problem-solving through hands-on experimentation.
