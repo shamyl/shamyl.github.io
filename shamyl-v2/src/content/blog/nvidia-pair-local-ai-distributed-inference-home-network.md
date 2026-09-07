@@ -77,9 +77,9 @@ For educators and educational institutions, PAIR has a specific and practical ap
 
 Schools and universities in emerging markets often have computer labs with multiple PCs but limited budgets for cloud AI services. A lab with ten mid-range gaming PCs — each with an RTX 3060 or similar — could use PAIR to create a local inference cluster for AI coursework. Students could run real models, experiment with agentic workflows, and learn AI engineering without the institution paying for API credits or worrying about data leaving the network.
 
-This connects directly to the challenge of [building scalable educational robotics platforms](/projects/learnosteam/) where infrastructure costs are a persistent barrier. The same principle — using existing hardware more efficiently rather than buying new hardware — applies to both robotics simulation and AI education.
+This connects directly to the challenge of [building scalable educational robotics platforms](/work/learnosteam/) where infrastructure costs are a persistent barrier. The same principle — using existing hardware more efficiently rather than buying new hardware — applies to both robotics simulation and AI education.
 
-For STEAM programs that already use [educational robot kits](/projects/buddy-bot/) or [3D simulation environments](/projects/robosim/), PAIR could power local AI assistants that help students with coding, debugging, and project planning — all without sending student data to a cloud API.
+For STEAM programs that already use [educational robot kits](/work/buddy-bot/) or [3D simulation environments](/work/robosim/), PAIR could power local AI assistants that help students with coding, debugging, and project planning — all without sending student data to a cloud API.
 
 ## Relevance to Pakistan and Emerging Markets
 

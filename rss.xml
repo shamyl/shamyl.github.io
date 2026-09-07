@@ -5,7 +5,7 @@
     <link>https://shamylmansoor.com/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Mon, 07 Sep 2026 04:10:12 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 07 Sep 2026 04:11:25 GMT</lastBuildDate>
     <atom:link href="https://shamylmansoor.com/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamylmansoor.com/favicon.svg</url>
@@ -59,8 +59,8 @@
 <h2>Why This Matters for Education</h2>
 <p>For educators and educational institutions, PAIR has a specific and practical appeal.</p>
 <p>Schools and universities in emerging markets often have computer labs with multiple PCs but limited budgets for cloud AI services. A lab with ten mid-range gaming PCs — each with an RTX 3060 or similar — could use PAIR to create a local inference cluster for AI coursework. Students could run real models, experiment with agentic workflows, and learn AI engineering without the institution paying for API credits or worrying about data leaving the network.</p>
-<p>This connects directly to the challenge of <a href="/projects/learnosteam/">building scalable educational robotics platforms</a> where infrastructure costs are a persistent barrier. The same principle — using existing hardware more efficiently rather than buying new hardware — applies to both robotics simulation and AI education.</p>
-<p>For STEAM programs that already use <a href="/projects/buddy-bot/">educational robot kits</a> or <a href="/projects/robosim/">3D simulation environments</a>, PAIR could power local AI assistants that help students with coding, debugging, and project planning — all without sending student data to a cloud API.</p>
+<p>This connects directly to the challenge of <a href="/work/learnosteam/">building scalable educational robotics platforms</a> where infrastructure costs are a persistent barrier. The same principle — using existing hardware more efficiently rather than buying new hardware — applies to both robotics simulation and AI education.</p>
+<p>For STEAM programs that already use <a href="/work/buddy-bot/">educational robot kits</a> or <a href="/work/robosim/">3D simulation environments</a>, PAIR could power local AI assistants that help students with coding, debugging, and project planning — all without sending student data to a cloud API.</p>
 <h2>Relevance to Pakistan and Emerging Markets</h2>
 <p>In Pakistan, the cost barrier to AI adoption is not theoretical. Cloud AI APIs are priced in U.S. dollars, and the rupee&#39;s exchange rate makes per-token costs significantly higher in local terms than they are for a developer in the United States or Europe. A startup or university lab that wants to experiment with agentic AI workflows faces a choice: pay international API rates, or find a way to run models locally.</p>
 <p>PAIR makes the local option more viable. A technology company in Islamabad with a few developer workstations — each with a consumer GPU — can set up a local inference cluster in an afternoon. No data leaves the office. No recurring API costs accrue. The main investment is the hardware that the team likely already owns.</p>
