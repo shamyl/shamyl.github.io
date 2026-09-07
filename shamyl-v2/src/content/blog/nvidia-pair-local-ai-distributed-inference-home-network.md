@@ -15,6 +15,10 @@ Nvidia released the Personal AI Router (PAIR) on September 3, 2026, at IFA 2026 
 
 The tool is available now in beta for Windows, Linux, and macOS, works with Ollama and LM Studio, and carries an Apache-2.0 license. It is not a hardware product. It is software that turns the gaming PC, the work laptop, and the spare desktop in a household or small office into a coordinated inference cluster.
 
+![Nvidia PAIR desktop application showing two paired compute nodes with live GPU utilization and distributed inference traffic routing across a local network.](/images/nvidia-pair-distributed-inference-traffic.png)
+
+*Screenshot from the Nvidia Personal AI Router GitHub repository (Apache-2.0 license), showing the PAIR desktop application with two paired nodes and live inference traffic distribution.*
+
 ## In Brief
 
 - Nvidia PAIR is a free, open-source local inference router that distributes AI requests across multiple PCs on the same network
