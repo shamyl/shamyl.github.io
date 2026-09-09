@@ -5,13 +5,113 @@
     <link>https://shamylmansoor.com/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Tue, 08 Sep 2026 04:08:28 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 09 Sep 2026 04:03:40 GMT</lastBuildDate>
     <atom:link href="https://shamylmansoor.com/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamylmansoor.com/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamylmansoor.com/blog</link>
     </image>
+    <item>
+      <title>AI Coding Agents Can&apos;t Test: What Dan Luu&apos;s 26-Condition Eval Reveals About Agent Quality</title>
+      <link>https://shamylmansoor.com/blog/ai-coding-agents-testing-techniques-dan-luu-eval</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/ai-coding-agents-testing-techniques-dan-luu-eval</guid>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Dan Luu tested 26 testing techniques across 4,000+ agent runs implementing Zstd in Rust. The result: agents don&apos;t know how to test, telling them to use specific techniques makes things worse, and the best approach is active human guidance. Here is what product teams should take from it.</description>
+      <content:encoded><![CDATA[<p>AI coding agents can write functional code, scaffold features, and pass their own tests. But when software engineer Dan Luu ran 4,000+ agent implementations of the Zstd compression algorithm across 26 different testing techniques — TDD, property-based testing, formal methods, fuzzing, model checking — almost none of them improved correctness. In several cases, instructing agents to use a specific technique made things worse. The finding has direct implications for any product team relying on AI-assisted development.</p>
+<h2>In Brief</h2>
+<ul>
+<li>Dan Luu published an evaluation on September 7, 2026, testing 26 different testing and verification techniques across 80 runs each (4,160 total runs) using Codex with GPT-5.6 Sol implementing Zstd in Rust</li>
+<li>The &quot;Default&quot; condition — giving agents no testing instructions at all — outperformed most named techniques, because agents largely failed to use the techniques effectively</li>
+<li>TDD underperformed: agents wrote more tests but worse tests, often encoding incorrect behavior and missing bug-prone edge cases</li>
+<li>Formal methods tools (Verus, Lean 4, Alloy, Creusot, TLA+, ACL2, Kani) were used superficially — agents proved trivial properties and avoided verifying the parts most likely to contain bugs</li>
+<li>Property-based testing libraries (QuickCheck, Proptest, Hegel) showed slightly better results, with Proptest&#39;s shrinking mechanism occasionally catching real bugs</li>
+<li>A custom skill with five practical directives outperformed everything else, suggesting that targeted behavioral nudges work better than naming techniques</li>
+<li>The core finding: agents know <em>which</em> areas are risky but not <em>how</em> to test them effectively, and no amount of technique-naming fixes this without active human guidance</li>
+</ul>
+<h2>What the Eval Tested</h2>
+<p>Dan Luu, known for rigorous large-scale software experiments, used the Zstd compression algorithm as a benchmark. Zstd is a good test subject because it involves bit manipulation, state machines, and multiple interacting subsystems (Huffman coding, FSE tables, jump tables) where bugs hide in specific edge cases — not unlike the kind of complexity real product code accumulates.</p>
+<p>The eval covered 26 prompt conditions. Each condition told the agent to implement Zstd in Rust with an additional instruction: &quot;Use TDD,&quot; &quot;Use Verus,&quot; &quot;Use QuickCheck,&quot; &quot;Use fuzzing,&quot; and so on. A &quot;Default&quot; condition gave no testing instructions. Each condition was run 80 times at two effort levels (medium and xhigh) using Codex with GPT-5.6 Sol. The hidden test suite — the one that actually measured correctness — was separate from whatever tests the agents wrote for themselves.</p>
+<p>The 26 conditions spanned four categories:</p>
+<ul>
+<li><strong>Formal methods</strong>: Verus, Lean 4, Alloy, Creusot, TLA+, ACL2, Kani, SMT solvers, Spin</li>
+<li><strong>Property-based testing</strong>: QuickCheck, Proptest, Hegel, Property-based testing (generic)</li>
+<li><strong>Other testing techniques</strong>: TDD, Fuzzing, Differential testing, Mutation testing, Metamorphic testing, Snapshot testing (Insta), rstest, Rust built-in tests</li>
+<li><strong>Audit-based approaches</strong>: Audit, Audit and fuzz risky areas, Judgement (agents choose), Make no mistakes</li>
+</ul>
+<p>Additionally, four &quot;skills&quot; (pre-packaged instruction sets) were tested: the official Hegel skill, the ECC Rust test skill, the Trail of Bits property testing skill, and a custom skill Luu wrote in a few minutes.</p>
+<h2>The Headline Finding: Nothing Helped Much</h2>
+<p>The most striking result is how flat the performance distribution is. No technique wildly outperformed the Default condition. Most named techniques produced slightly worse results because agents spent time and tokens on the named technique without getting value from it, then relied on standard unit tests for actual correctness — the same tests they would have written anyway.</p>
+<p>As Luu put it: &quot;It turns out, asking them to use a particular test technique or test library, this approach doesn&#39;t change as much as you&#39;d hope.&quot;</p>
+<p>The failure pattern was consistent across techniques. Agents would:</p>
+<ol>
+<li>Read the specification and implement the code</li>
+<li>Write standard Rust unit tests</li>
+<li>Superficially use the named technique (write a trivial property, prove an obvious invariant, generate a few random inputs)</li>
+<li>Pass their own tests while failing hidden tests that covered edge cases they never tested</li>
+</ol>
+<p>This is not a story about any particular testing technique being bad. It is a story about agents not knowing how to <em>apply</em> techniques — the gap between knowing that &quot;property-based testing&quot; exists and knowing how to generate structured random inputs that explore interesting state transitions rather than flooding the same error-rejection code path with garbage.</p>
+<h2>TDD Made Things Worse</h2>
+<p>Test-driven development was one of the conditions Luu explicitly predicted would underperform. It did. Agents instructed to use TDD wrote roughly twice as many tests as the Default condition, but the tests were worse. Specifically, TDD agents were more likely to:</p>
+<ul>
+<li>Write tests with palindromic inputs that couldn&#39;t catch bit-reversal bugs</li>
+<li>Encode incorrect expected outputs in test assertions</li>
+<li>Write tests covering trivial cases while missing hard cases like the four-stream jump table</li>
+</ul>
+<p>Developer Yossi Kreinin offered a possible explanation: if you write tests before the code, you know less about what will be hard, so you&#39;re less likely to steer tests toward the areas where bugs actually live. TDD effectively pushes agents toward black-box testing, which is less effective for complex internal logic.</p>
+<p>This connects directly to what we discussed in <a href="/blog/ai-coding-agent-hidden-costs-vibe-tax/">The Hidden Cost of AI Coding Agents: What the Vibe Tax Means for Product Teams</a> — agents optimizing for the appearance of completeness rather than the substance of it. More tests that pass does not mean more correct code. It means more tests that encode the same incorrect assumptions.</p>
+<h2>Formal Methods: Agents Prove the Wrong Things</h2>
+<p>The formal methods conditions (Verus, Lean 4, Alloy, Creusot, TLA+, Kani, ACL2, Spin, SMT) showed a consistent pattern: agents could use the tools mechanically but not purposefully.</p>
+<p>With Verus, agents proved properties like &quot;given valid inputs, the operation stays in bounds&quot; — true but irrelevant, since the bugs were in areas like bitstream order reversal and jump table indexing. With Lean 4, agents did arithmetic proofs. With Alloy, agents modeled state machines but didn&#39;t connect them to the actual Rust code&#39;s failure modes.</p>
+<p>One exception: Kani, a Rust model checker, was at least applied to the actual code rather than abstract properties. In one out of 160 runs, Kani caught a real bug that led to a code fix. That is a low hit rate, but it demonstrates that agents <em>can</em> stumble into effective tool use — which suggests that with training or better guidance, this could improve significantly.</p>
+<p>Luu raised an important question for AI labs: why haven&#39;t they created RL environments to train agents on effective testing? Runtime optimization has improved dramatically because it is easy to create RL environments for bounded problems. Testing well is harder to package, but the payoff — agents that catch their own bugs — seems worth the investment.</p>
+<h2>Property-Based Testing: Slightly Better, Still Poor</h2>
+<p>Property-based testing libraries (Proptest, QuickCheck, Hegel) showed marginally better results than formal methods, largely because Proptest&#39;s shrinking mechanism — automatically simplifying failing inputs to minimal reproducing cases — occasionally caught real bugs.</p>
+<p>But agents still fell into a common trap: generating fully random inputs that overwhelmingly hit error-rejection code paths. A Zstd implementation receiving 100% random bytes will almost always reject the input immediately. The interesting bugs live in the narrow band between &quot;clearly invalid&quot; and &quot;clearly valid&quot; — and agents did not steer their randomization toward that band.</p>
+<p>In 10 out of 160 fuzzing runs, agents generated random <em>structured</em> inputs rather than raw random bytes. Half of those found real bugs. This suggests agents have latent capability for effective testing but don&#39;t exercise it by default.</p>
+<h2>The Custom Skill: Targeted Nudges Beat Technique Names</h2>
+<p>The one condition that outperformed Default was a custom skill Luu wrote in a few minutes, containing five directives:</p>
+<ol>
+<li>Think about areas likely to have subtle bugs before implementing; state likely mistakes and alternative interpretations</li>
+<li>After implementing, independently re-derive results in a fresh context for high-risk areas</li>
+<li>Use property-based testing or randomized inputs, but minimize no-panic randomization</li>
+<li>When randomizing, lean toward inputs that explore interesting state transitions</li>
+<li>If unsure about details, use independent reasoning to check correctness</li>
+</ol>
+<p>This skill didn&#39;t produce perfect results — agents still missed bugs, wrote some trivial tests, and didn&#39;t use fresh contexts as instructed. But it outperformed every named technique and every pre-existing skill. The key difference: it gave agents <em>behavioral directives</em> rather than <em>technique names</em>. Instead of &quot;use TDD,&quot; it said &quot;think about what&#39;s likely to be hard, then check those areas specifically.&quot;</p>
+<p>Luu noted that the pre-existing skills (Hegel&#39;s official skill, ECC, Trail of Bits) were written like human tutorials — long, explanatory, covering how the technique works conceptually. His custom skill was short and directive: do this, then this, then this. The tutorial-style skills consumed enormous context (the Hegel skill was 34,000 characters plus a 45,000-character Rust reference) and increased token costs by 16-18% without improving correctness.</p>
+<p>This parallels the lesson from Fabien Sanglard&#39;s <code>agent.md</code> approach covered in our <a href="/blog/ai-coding-agent-hidden-costs-vibe-tax/">vibe tax analysis</a>: effective agent instruction is operational constraint, not documentation.</p>
+<h2>Why This Matters for Product Teams</h2>
+<p>The implications for teams shipping AI-assisted code go beyond testing philosophy. Three practical takeaways:</p>
+<p><strong>1. Passing tests do not mean correct code.</strong> Agents are good at writing tests that their own code passes. If the agent&#39;s understanding of the spec is wrong, the tests encode the same wrong understanding. Code review by a human who understands the spec is still essential — not as a formality, as the primary quality gate.</p>
+<p><strong>2. Naming techniques is counterproductive.</strong> Telling an agent to &quot;use TDD&quot; or &quot;use property-based testing&quot; without detailed guidance on <em>how</em> to use it will likely produce worse results than no instruction. The agent will spend tokens going through the motions of the technique without getting its value.</p>
+<p><strong>3. Behavioral directives work better than technique names.</strong> Instead of &quot;use TDD,&quot; try &quot;before implementing, list the three areas most likely to have subtle bugs. After implementing, write tests that specifically target those areas with boundary inputs on both sides of the expected behavior.&quot; This is harder to write but dramatically more effective.</p>
+<p>For a deeper look at how AI coding tools affect developer expertise more broadly, see our analysis of the <a href="/blog/ai-coding-tools-developer-skill-atrophy/">Anthropic and UPenn studies on AI-assisted skill atrophy</a>. The research showed that developers using AI assistance score 17% lower on code comprehension — and the testing eval here suggests one mechanism: agents handle the testing surface, so developers never develop the testing intuition that comes from writing tests manually.</p>
+<h2>What This Means for Pakistani Technology Teams</h2>
+<p>For Pakistani technology teams building products with AI assistance — and many are — this eval highlights a specific risk. When budgets are tight and teams are small, the temptation is to let agents handle both implementation and testing. Luu&#39;s data shows this produces code that <em>looks</em> tested but isn&#39;t meaningfully verified.</p>
+<p>The cost structure compounds the problem. Named techniques like formal methods or TDD increase token consumption without improving correctness. For teams paying for API access in dollars, this is direct waste. The custom skill approach — short, behavioral, directive — costs less and works better.</p>
+<p>The practical recommendation: invest in one person on the team who understands testing deeply enough to write effective agent directives. This person does not need to write all the tests. They need to write the instructions that tell agents <em>what</em> to test and <em>how</em> to think about risk. Luu&#39;s custom skill was five sentences and outperformed 34,000-character tutorial skills. The leverage is in the direction, not the volume.</p>
+<h2>What to Watch Next</h2>
+<ul>
+<li><strong>AI lab investment in testing RL environments.</strong> Luu&#39;s question about why labs haven&#39;t trained agents on effective testing is worth tracking. If OpenAI, Anthropic, or Google create RL environments for testing, agent testing quality could improve as rapidly as runtime optimization has.</li>
+<li><strong>Skill standardization.</strong> The gap between tutorial-style skills and directive-style skills is large. Expect tooling to emerge that helps teams write effective behavioral skills rather than documentation-flavored ones.</li>
+<li><strong>Fresh-context auditing.</strong> Luu&#39;s custom skill instructed agents to re-derive results in a fresh context — agents mostly ignored this. If harnesses add first-class support for independent verification passes, this could become a reliable technique.</li>
+<li><strong>Model-level testing improvements.</strong> GPT-5.6 already changed optimal prompting strategies from GPT-5.5. Future models may internalize better testing behavior, making the technique-naming problem moot.</li>
+</ul>
+<h2>Sources</h2>
+<ul>
+<li>&quot;How well do agents use test/verification techniques?,&quot; Dan Luu, September 7, 2026 — <a href="https://danluu.com/agentic-testing/">https://danluu.com/agentic-testing/</a></li>
+<li>Dan Luu&#39;s previous analysis of AI coding quality and testing defaults — <a href="https://danluu.com/ai-coding/">https://danluu.com/ai-coding/</a></li>
+<li>Hacker News discussion, September 7-8, 2026 — <a href="https://news.ycombinator.com/">https://news.ycombinator.com/item?id=49598009</a></li>
+</ul>
+]]></content:encoded>
+      <category>AI coding</category>
+    <category>software testing</category>
+    <category>AI agents</category>
+    <category>CTO</category>
+    <category>product engineering</category>
+    <category>developer tools</category>
+    </item>
     <item>
       <title>XPENG&apos;s IRON Humanoid Robot Walks Off the Production Line: What It Means for Robotics Manufacturing</title>
       <link>https://shamylmansoor.com/blog/xpeng-iron-humanoid-robot-production-line-manufacturing</link>
