@@ -75,7 +75,7 @@ For Pakistani technology teams and manufacturers, Apple's adoption of metal 3D p
 
 However, the same dynamics that pushed Apple, Oppo, and Honor toward 3D printed titanium apply to any manufacturer facing complex geometry challenges in expensive materials. As metal AM equipment costs continue to decline and service providers proliferate, the barrier to entry drops. Pakistani manufacturers in aerospace, medical devices, and precision tooling — areas where the country already has growing capability — could benefit from adopting additive approaches for specific high-value components rather than treating 3D printing as exclusively a prototyping tool.
 
-For educators and STEAM programs, the iPhone Duo hinge cover is a concrete, relatable example of how 3D printing has moved beyond hobbyist FDM printers into industrial mass production. Students who learn design for additive manufacturing principles today are preparing for a manufacturing landscape where AM is a mainstream production process, not a novelty. Platforms like [LearnOSTEAM](/projects/learnosteam) that introduce students to digital fabrication concepts are building exactly the foundational literacy this transition requires.
+For educators and STEAM programs, the iPhone Duo hinge cover is a concrete, relatable example of how 3D printing has moved beyond hobbyist FDM printers into industrial mass production. Students who learn design for additive manufacturing principles today are preparing for a manufacturing landscape where AM is a mainstream production process, not a novelty. Platforms like [LearnOSTEAM](/work/learnosteam/) that introduce students to digital fabrication concepts are building exactly the foundational literacy this transition requires.
 
 ## Product Builder's Perspective
 
