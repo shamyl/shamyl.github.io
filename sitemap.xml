@@ -12,7 +12,7 @@
   </url>
   <url>
     <loc>https://shamylmansoor.com/blog/</loc>
-    <lastmod>2026-09-09</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
@@ -31,7 +31,17 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://shamylmansoor.com/blog/apple-iphone-duo-3d-printed-titanium-hinge-manufacturing/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://shamylmansoor.com/blog/ai-coding-agents-testing-techniques-dan-luu-eval/</loc>
+    <lastmod>2026-09-09</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shamylmansoor.com/blog/mbk-geyser-monitor-esp32-railway/</loc>
     <lastmod>2026-09-09</lastmod>
     <priority>0.7</priority>
   </url>

@@ -5,13 +5,90 @@
     <link>https://shamylmansoor.com/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Wed, 09 Sep 2026 04:03:40 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 10 Sep 2026 04:06:36 GMT</lastBuildDate>
     <atom:link href="https://shamylmansoor.com/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamylmansoor.com/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamylmansoor.com/blog</link>
     </image>
+    <item>
+      <title>Apple&apos;s 3D Printed Titanium Hinge in the iPhone Duo: What It Means for Manufacturing Beyond Consumer Electronics</title>
+      <link>https://shamylmansoor.com/blog/apple-iphone-duo-3d-printed-titanium-hinge-manufacturing</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/apple-iphone-duo-3d-printed-titanium-hinge-manufacturing</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Apple&apos;s first foldable iPhone uses a 3D printed titanium hinge cover made from 100% recycled material. Here is what this means for additive manufacturing in mass production, product design, and the broader manufacturing industry.</description>
+      <content:encoded><![CDATA[<p>On September 9, 2026, Apple unveiled the iPhone Duo, its first foldable iPhone. Buried among the A20 Pro chip, dual displays, and iOS 27 features was a manufacturing detail that matters far beyond the phone industry: the hinge cover is 3D printed titanium, made from 100 percent recycled material, produced at the scale of a flagship consumer product launch. This is not a prototype or a limited-run marketing exercise. It is a structural component in a mass-market device that Apple expects to sell in the tens of millions.</p>
+<h2>In Brief</h2>
+<ul>
+<li>Apple&#39;s iPhone Duo, announced September 9, 2026, features a 3D printed titanium hinge cover with a micro-blasted finish, made from 100 percent recycled titanium</li>
+<li>The hinge contains more than 100 individual components and must survive hundreds of thousands of fold cycles</li>
+<li>Apple previously moved 3D printing into mass production in September 2025 with titanium Apple Watch cases and a titanium USB-C port on iPhone Air, using laser powder bed fusion</li>
+<li>Chinese phone makers Oppo and Honor already use 3D printed titanium hinge components in foldable phones, proving the approach at scale before Apple entered the market</li>
+<li>The iPhone Duo starts at $1,999, with pre-orders opening October 16 and availability from October 23, 2026</li>
+</ul>
+<h2>Why 3D Printing for a Phone Hinge?</h2>
+<p>Foldable phone hinges are a manufacturing nightmare. The hinge assembly must be thin enough to disappear inside a device that, when closed, needs to feel like a normal phone. It must hold a flexible display in place without crushing it. It must survive hundreds of thousands of open-close cycles. And it must do all of this in grade 5 titanium — a material chosen for strength and premium feel but notorious for machining difficulty.</p>
+<p>Conventional titanium machining has a fundamental problem here: you start with a block of titanium and cut away everything you do not need. For tiny, complex hinge parts with internal channels, thin walls, and interlocking features, this means low yields, long cycle times, and most of the raw material ending up as chips on the factory floor. The thinner the part, the worse the economics become.</p>
+<p>Metal 3D printing — specifically laser powder bed fusion — builds the geometry layer by layer instead. Internal channels, lattice structures, and thin walls that would require separate machining and assembly steps can come out of the printer close to finished shape. According to <a href="https://www.apple.com/newsroom/2026/09/apple-unveils-iphone-duo/">Apple&#39;s newsroom announcement</a>, the hinge cover uses a &quot;contrasting micro-blasted finish&quot; against the mirror-polished titanium enclosure, confirming it is a visibly distinct component rather than a hidden internal part.</p>
+<p>Apple stated that the iPhone Duo is &quot;crafted from grade 5 titanium for incredible strength&quot; and that the 3D printed hinge cover is made from &quot;100 percent recycled&quot; titanium. The company also noted that the hinge is &quot;engineered from more than 100 components to precisely control opening and closing and support the center of the display.&quot;</p>
+<h2>Apple&#39;s 3D Printing History: From Watch Cases to Moving Parts</h2>
+<p>The iPhone Duo hinge cover is not Apple&#39;s first mass-production 3D printed part. According to <a href="https://www.voxelmatters.com/apple-releases-new-iphone-duo-with-mass-produced-3d-printed-hinge-covers/">VoxelMatters</a>, Apple moved 3D printing into mass production in September 2025 with a titanium USB-C port on the iPhone Air and titanium cases for Apple Watch 11 and Apple Watch Ultra 3. Both were built using laser powder bed fusion from recycled titanium powder.</p>
+<p>Apple detailed that process two months later: each watch case takes shape across more than 900 printed layers at 60 microns each, using approximately half the raw titanium a machined case would need. The company estimated the savings at more than 400 metric tons of titanium overall.</p>
+<p>The iPhone Duo hinge cover represents a step beyond the watch case. A watch case is static — it has to look right and feel right, but it does not move. A hinge cover is a structural component inside a moving assembly, subject to repeated mechanical stress, friction, and impact. Moving 3D printing from a static enclosure to a dynamic hinge part demonstrates that Apple&#39;s additive manufacturing supply chain has matured enough to handle functional, load-bearing components.</p>
+<h2>The Chinese Foldable Precedent: Oppo and Honor Got There First</h2>
+<p>Apple is not the first phone maker to use 3D printed titanium in a foldable hinge. Chinese manufacturers hit the same manufacturing wall and reached for the same solution — in some cases, more than a year before Apple.</p>
+<p>According to VoxelMatters, Oppo used a titanium alloy hinge 3D printed by <a href="https://www.blt3d.com/">BLT (Bright Laser Technologies)</a> to make the Find N5 the thinnest foldable phone on the market at 8.93 mm closed. The 3D printed hinge cut the part count from 92 to four, reduced wall thickness from 0.3 mm to 0.15 mm, raised rigidity by 36 percent, and doubled impact resistance compared to the previous machined design.</p>
+<p>Honor took a similar approach for the Magic V2&#39;s Luban hinge, working with equipment maker Hanbang Technology to 3D print a titanium shaft cover that replaced an aluminum part. The switch to 3D printed titanium cut the component&#39;s width by 27 percent and increased its strength by 150 percent, on a phone that closed at 9.9 mm.</p>
+<p>In both cases, the manufacturers stated that conventional titanium machining could not simultaneously hit the thinness and durability targets. 3D printing was not a marketing decision — it was the only manufacturing process that could produce the geometry the product required.</p>
+<h2>What This Means for Additive Manufacturing</h2>
+<p>Apple&#39;s adoption of 3D printed titanium for a flagship product matters for several reasons:</p>
+<p><strong>Validation at unprecedented scale.</strong> Apple&#39;s supply chain operates at volumes that dwarf most other manufacturers. When Apple commits to a manufacturing process, it signals to the broader industry that the technology is ready for high-volume production — not just prototyping or low-run specialty parts. The iPhone Duo will be manufactured in quantities that no other 3D printed consumer electronics component has reached.</p>
+<p><strong>Cost economics are shifting.</strong> Metal 3D printing has historically been expensive on a per-part basis compared to machining or casting. But for complex geometries in expensive materials like titanium, the math changes. When you build near-net-shape and use roughly half the raw material, and when the alternative is machining tiny parts with low yields, additive manufacturing can be competitive even at volume. Apple&#39;s 400-metric-ton titanium savings on watch cases alone shows the material economics can work.</p>
+<p><strong>Design freedom creates product possibilities.</strong> The Oppo Find N5&#39;s hinge part count dropping from 92 to four is the most striking example. When you can print complex internal geometry that would be impossible to machine, you can consolidate assemblies, reduce failure points, and create geometries optimized for function rather than manufacturability. This is the real promise of additive manufacturing — not replacing machining part-for-part, but enabling designs that machining cannot produce at all.</p>
+<p><strong>Recycled material integration.</strong> Apple&#39;s use of 100 percent recycled titanium in the hinge cover connects additive manufacturing to circular material flows. Metal powder for laser powder bed fusion can be produced from recycled feedstock, and the process itself generates less waste than subtractive machining. For manufacturers under pressure to reduce environmental impact, this combination is increasingly relevant.</p>
+<h2>What This Means for Product Teams and Manufacturers</h2>
+<p>For product builders, the iPhone Duo hinge cover is a case study in how additive manufacturing migrates from prototyping to production. The trajectory is clear: it started with static, relatively simple parts (watch cases), moved to structural components in moving assemblies (hinge covers), and will likely continue toward more complex, multi-functional parts.</p>
+<p>For manufacturing teams considering metal AM, the key lessons from Apple and the Chinese foldable makers are:</p>
+<ul>
+<li><strong>Part consolidation is where the real value lives.</strong> Reducing 92 hinge parts to four is a manufacturing transformation, not just a cost saving. Fewer parts mean fewer failure modes, simpler assembly, and tighter tolerances across the assembly.</li>
+<li><strong>Material economics matter as much as machine economics.</strong> In titanium, halving raw material usage can offset higher machine costs, especially as titanium prices remain high.</li>
+<li><strong>The design process changes.</strong> When you design for additive manufacturing, you optimize for function — internal channels, lattice structures, integrated features — rather than for what a CNC machine can reach with a cutting tool.</li>
+</ul>
+<h2>Relevance for Pakistan and Emerging Manufacturing Economies</h2>
+<p>For Pakistani technology teams and manufacturers, Apple&#39;s adoption of metal 3D printing at scale is a signal worth paying attention to. Pakistan&#39;s manufacturing sector is dominated by conventional subtractive processes — machining, casting, stamping. Metal additive manufacturing equipment remains expensive and requires specialized expertise in both machine operation and design for AM.</p>
+<p>However, the same dynamics that pushed Apple, Oppo, and Honor toward 3D printed titanium apply to any manufacturer facing complex geometry challenges in expensive materials. As metal AM equipment costs continue to decline and service providers proliferate, the barrier to entry drops. Pakistani manufacturers in aerospace, medical devices, and precision tooling — areas where the country already has growing capability — could benefit from adopting additive approaches for specific high-value components rather than treating 3D printing as exclusively a prototyping tool.</p>
+<p>For educators and STEAM programs, the iPhone Duo hinge cover is a concrete, relatable example of how 3D printing has moved beyond hobbyist FDM printers into industrial mass production. Students who learn design for additive manufacturing principles today are preparing for a manufacturing landscape where AM is a mainstream production process, not a novelty. Platforms like <a href="/projects/learnosteam">LearnOSTEAM</a> that introduce students to digital fabrication concepts are building exactly the foundational literacy this transition requires.</p>
+<h2>Product Builder&#39;s Perspective</h2>
+<p>From a product-building perspective, the most interesting aspect of Apple&#39;s 3D printed hinge cover is not the technology itself — metal laser powder bed fusion has been commercially available for over a decade. It is the integration of AM into a high-volume, cost-constrained, quality-obsessed supply chain.</p>
+<p>Building a 3D printed titanium part in a lab is one thing. Building millions of them to Apple&#39;s tolerances, with recycled material, at a cost that fits inside a $1,999 consumer product, is an entirely different challenge. It requires stable powder feedstock, consistent machine calibration, post-processing automation, quality assurance at scale, and a supply chain that can deliver finished parts to assembly lines on schedule.</p>
+<p>This is the gap that has kept metal AM out of mass consumer production for years. The technology worked, but the manufacturing ecosystem around it was not ready. Apple&#39;s watch cases in 2025 and hinge covers in 2026 suggest that gap is closing — not just for Apple, but for any manufacturer willing to invest in the production engineering required to make AM work at volume.</p>
+<p>The fact that Chinese phone makers reached the same solution independently reinforces that this is a manufacturing trend, not a single-company story. When multiple companies in different markets converge on the same technology for the same problem, it usually means the technology has crossed an adoption threshold.</p>
+<h2>What to Watch Next</h2>
+<ul>
+<li><strong>Apple&#39;s next 3D printed parts.</strong> If Apple extends AM beyond watch cases and hinge covers to more complex internal structures, it will signal deeper integration of additive manufacturing into the company&#39;s design process.</li>
+<li><strong>Foldable phone hinge evolution.</strong> Watch whether Samsung and Google&#39;s foldable phones adopt 3D printed hinge components in their next generations, following the Oppo/Honor/Apple pattern.</li>
+<li><strong>Metal AM equipment demand.</strong> Apple&#39;s volume needs likely require significant machine capacity. Watch for metal AM equipment makers — EOS, SLM Solutions, BLT, 3D Systems — reporting orders tied to consumer electronics production.</li>
+<li><strong>Recycled titanium powder supply.</strong> Apple&#39;s 100 percent recycled titanium claim depends on a reliable supply chain for recycled titanium powder. This could become a bottleneck — or a business opportunity — as more manufacturers adopt metal AM.</li>
+<li><strong>Cost trajectory.</strong> If metal AM costs continue to decline, the technology will move beyond premium consumer electronics into mid-range products, dramatically expanding the addressable market.</li>
+</ul>
+<h2>Conclusion</h2>
+<p>Apple&#39;s 3D printed titanium hinge cover in the iPhone Duo is not the first metal 3D printed part in a consumer product, but it may be the highest-volume one yet. Combined with the earlier examples from Oppo and Honor, it marks the point where metal additive manufacturing in consumer electronics shifted from experimental to expected. For anyone building physical products, the question is no longer whether 3D printing can work in mass production — Apple, Oppo, and Honor have answered that. The question is which components in your own products could benefit from the design freedom, material efficiency, and part consolidation that additive manufacturing enables. The <a href="/blog/navy-3d-printed-metal-parts-submarine-protocol/">U.S. Navy&#39;s recent protocol for 3D printed metal submarine parts</a> shows the same transition happening in defense manufacturing, with the same shift from per-part approvals to standardized processes.</p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://www.apple.com/newsroom/2026/09/apple-unveils-iphone-duo/">Apple Newsroom — Apple unveils iPhone Duo</a> (September 9, 2026)</li>
+<li><a href="https://www.voxelmatters.com/apple-releases-new-iphone-duo-with-mass-produced-3d-printed-hinge-covers/">VoxelMatters — Apple releases new iPhone Duo with mass produced 3D printed hinge covers</a> (September 2026)</li>
+<li><a href="https://www.voxelmatters.com/">VoxelMatters — Oppo Find N5 3D printed titanium hinge by BLT</a> (2025)</li>
+<li><a href="https://www.voxelmatters.com/">VoxelMatters — Honor Magic V2 Luban hinge 3D printed titanium</a> (2025)</li>
+</ul>
+]]></content:encoded>
+      <category>3d-printing</category>
+    <category>additive-manufacturing</category>
+    <category>metal-3d-printing</category>
+    <category>apple</category>
+    <category>manufacturing</category>
+    <category>titanium</category>
+    </item>
     <item>
       <title>AI Coding Agents Can&apos;t Test: What Dan Luu&apos;s 26-Condition Eval Reveals About Agent Quality</title>
       <link>https://shamylmansoor.com/blog/ai-coding-agents-testing-techniques-dan-luu-eval</link>
@@ -111,6 +188,198 @@
     <category>CTO</category>
     <category>product engineering</category>
     <category>developer tools</category>
+    </item>
+    <item>
+      <title>Building MBK’s Geyser Monitor: From an ESP32 and a Printed Case to a Remote Dashboard</title>
+      <link>https://shamylmansoor.com/blog/mbk-geyser-monitor-esp32-railway</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/mbk-geyser-monitor-esp32-railway</guid>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+      <description>How I built a personal geyser temperature monitor with an ESP32, DS18B20, OLED, Wi-Fi setup portal and a custom dashboard on Railway.</description>
+      <content:encoded><![CDATA[<p>I wanted a simple answer to a simple question: what is the temperature at my geyser right now?</p>
+<p>The first version needed a probe, a readable display, and a way to check the reading from my phone at home. Then I wanted to see it while away. That led to <strong>MBK’s Geyser Monitor</strong>: an ESP32-based device in a 3D-printed enclosure, with an OLED, a local web interface, and a separate internet dashboard running on Railway.</p>
+<p>I kept the scope to my own monitor. There is one owner and one device, with no customer registration or pairing system yet. That made it possible to work through the details that matter in everyday use: first-time Wi-Fi setup, changing networks, recovering from an outage, and making it clear when a displayed temperature is old.</p>
+<p><img src="/images/geyser-monitor/enclosed-monitor.png" alt="MBK’s Geyser Monitor in its blue and black printed enclosure, with the OLED visible through the front panel."></p>
+<p><em>The assembled prototype. Product photographs in this post have cleaned backgrounds; they show the actual device.</em></p>
+<h2>The hardware and enclosure</h2>
+<p>The main components are straightforward:</p>
+<ul>
+<li><strong>ESP32 development board:</strong> reads the sensor, drives the display, serves the local pages, and uploads readings.</li>
+<li><strong>DS18B20 temperature probe:</strong> a wired digital temperature sensor with a metal-tipped probe assembly.</li>
+<li><strong>128 × 64 SSD1306 OLED:</strong> shows the temperature and connection state without needing a phone.</li>
+<li><strong>USB power:</strong> powers the electronics and provides a simple way to restart them.</li>
+<li><strong>3D-printed base and cover:</strong> holds the board and display together while leaving the screen and cable connections accessible.</li>
+</ul>
+<p>The <a href="https://www.analog.com/en/products/ds18b20.html">DS18B20</a> uses a 1-Wire interface and supports 9- to 12-bit resolution. Its chip specification gives ±0.5°C accuracy from −10°C to +85°C. That is a component specification, not a calibration result for my finished monitor: probe construction, placement and thermal contact all affect the reading in an installation.</p>
+<p>For this ESP32 board, the sensor data line is on <strong>GPIO 4</strong>. The OLED uses <strong>GPIO 21 for SDA</strong> and <strong>GPIO 22 for SCL</strong>, with I²C address <strong>0x3C</strong>. Both peripherals share ground with the ESP32. For a three-wire, externally powered DS18B20 connection, use 3.3V for VDD and a pull-up from the data line to 3.3V; <strong>4.7 kΩ</strong> is the usual starting point, as described in <a href="https://support.analog.com/en-US/knowledgebase/article/000094969">Analog Devices’ pull-up guidance</a>. Check whether a sensor module already includes that resistor, and confirm the pinout of the particular probe rather than trusting cable colours.</p>
+<p>The OLED connects to 3.3V and ground as well as its two I²C signals. These pin assignments describe this prototype; a different ESP32 board or display may need changes.</p>
+<p><img src="/images/geyser-monitor/inside-monitor.png" alt="The cover removed, revealing the ESP32 board, OLED module and temperature probe beside the printed base."></p>
+<p><em>Removing the cover makes the layout easier to see. Normal operation does not require opening the case.</em></p>
+<p>The enclosure helped turn loose electronics into something I could hand to another person. It also exposed a documentation mistake worth catching: <strong>this prototype has no externally accessible setup/reset button</strong>. A manual that says “hold the reset button for five seconds” is useless if that button does not exist.</p>
+<p>This is a temperature-monitoring prototype. It does not switch the geyser, replace its thermostat, or establish that water is safe to touch. The printed enclosure is not being presented as a waterproof or heat-rated housing; keep the electronics away from water and hot surfaces. The wiring described here is for the low-voltage monitor, not the geyser’s mains supply.</p>
+<h2>Keep local monitoring independent of the cloud</h2>
+<p>There are three ways to see a reading:</p>
+<ol>
+<li><strong>On the OLED</strong>, directly at the device.</li>
+<li><strong>On the local web page</strong>, from a phone on the same home network.</li>
+<li><strong>On the internet dashboard</strong>, from a phone or computer with internet access.</li>
+</ol>
+<p>The ESP32 sends data outward to Railway over HTTPS. My phone talks to that hosted application. I did not need to open an inbound port on the home router or expose the ESP32’s local web server to the internet.</p>
+<p>The data path is:</p>
+<pre><code class="language-text">DS18B20 probe → ESP32 → OLED
+                  ├── local web dashboard on home Wi-Fi
+                  └── HTTPS upload → Railway app → PostgreSQL
+                                          ↑
+                              browser / installed web app
+</code></pre>
+<p>An internet failure should interrupt remote updates without stopping local temperature readings. That requirement shaped the firmware: sensor conversion is asynchronous, the setup portal runs without blocking the main loop, and cloud requests run in a separate FreeRTOS task.</p>
+<h2>Reading the sensor without freezing the interface</h2>
+<p>The Arduino sketch uses <strong>OneWire</strong>, <strong>DallasTemperature</strong>, <strong>WiFiManager</strong>, <strong>Adafruit GFX</strong>, and <strong>Adafruit SSD1306</strong>, alongside the networking libraries in the ESP32 Arduino core. The <a href="https://github.com/milesburton/Arduino-Temperature-Control-Library">DallasTemperature library</a> handles the sensor interface, while <a href="https://github.com/adafruit/Adafruit_SSD1306">Adafruit’s SSD1306 library</a> handles the display.</p>
+<p>Here is a shortened initialization excerpt. The objects are created elsewhere in the sketch:</p>
+<pre><code class="language-cpp">Wire.begin(21, 22);
+oledAvailable = display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
+
+sensors.begin();
+sensors.setResolution(12);
+sensors.setWaitForConversion(false);
+</code></pre>
+<p>The important choice is <code>setWaitForConversion(false)</code>. Instead of waiting inside the conversion request, the loop starts a measurement and comes back for the result. At 12-bit resolution, the code allows 750 milliseconds before reading it, consistent with the DS18B20’s maximum conversion time in its <a href="https://www.analog.com/media/en/technical-documentation/data-sheets/ds18b20.pdf">datasheet</a>.</p>
+<p>This is the relevant loop logic, reformatted from the firmware. It depends on the sketch’s existing state variables and <code>publishCloud()</code> helper; it is not a complete replacement sketch:</p>
+<pre><code class="language-cpp">unsigned long t = millis();
+
+if (!converting &amp;&amp; t - lastCycle &gt;= 2000) {
+  lastCycle = t;
+  requestedAt = t;
+  sensors.requestTemperatures();
+  converting = true;
+}
+
+if (converting &amp;&amp; t - requestedAt &gt;= 750) {
+  converting = false;
+  float reading = sensors.getTempCByIndex(0);
+  sensorConnected = reading != DEVICE_DISCONNECTED_C
+                 &amp;&amp; reading &gt;= -55 &amp;&amp; reading &lt;= 125;
+
+  if (sensorConnected) {
+    temperatureC = reading;
+    minTemperature = min(minTemperature, reading);
+    maxTemperature = max(maxTemperature, reading);
+  }
+  publishCloud(temperatureC, sensorConnected);
+}
+</code></pre>
+<p>Local readings run on roughly a two-second cycle. The OLED refreshes every second, and the local web page requests updates every two seconds. A missing sensor becomes a sensor error, rather than a plausible-looking temperature.</p>
+<p><img src="/images/geyser-monitor/oled-and-probe.png" alt="Close product view of the OLED showing temperature and Wi-Fi status."></p>
+<p><em>The OLED remains useful even when remote access is unavailable.</em></p>
+<p>The status thresholds are shared between firmware and cloud: <strong>Normal below 65°C</strong>, <strong>High from 65°C to below 75°C</strong>, and <strong>Critical at 75°C and above</strong>. These are the prototype’s display thresholds, not recommended bathing temperatures or a substitute for independent temperature protection.</p>
+<h2>First-time Wi-Fi setup: why 192.168.4.1 is correct</h2>
+<p>I wanted the user to enter their home Wi-Fi credentials through a setup page rather than recompile firmware whenever the network changed.</p>
+<p><a href="https://github.com/tzapu/WiFiManager">WiFiManager</a> provides the temporary access point and captive portal. In this build, the setup network is named <code>GeyserMonitor-XXXX</code>, where the suffix identifies the device. Its prototype setup password is <code>setup1234</code>. That is only the temporary Wi-Fi password; it is separate from both the owner’s cloud login and the device upload key. A customer version should use a unique provisioning password per device.</p>
+<p>The user connects their phone to that network, opens the portal, chooses <strong>Configure WiFi</strong>, and saves their home network’s credentials. If the portal does not appear automatically, the fallback address is <strong><code>http://192.168.4.1</code></strong>. WiFiManager documents this as its default portal address.</p>
+<p>That address is unrelated to whether the home router uses <code>192.168.1.1</code>, <code>192.168.0.1</code>, or something else. During setup, <strong>the ESP32 is creating the network the phone has joined</strong>. After configuration, it joins the home network and gets a different address from the router. Espressif’s <a href="https://docs.espressif.com/projects/arduino-esp32/en/latest/api/wifi.html">Wi-Fi documentation</a> explains this distinction between access-point and station modes.</p>
+<p>After connection, the firmware starts mDNS so the local dashboard can be reached at <strong><code>http://geyser.local</code></strong>:</p>
+<pre><code class="language-cpp">// Run after the ESP32 connects to the home Wi-Fi.
+MDNS.end();
+MDNS.begin(&quot;geyser&quot;);
+MDNS.addService(&quot;http&quot;, &quot;tcp&quot;, 80);
+</code></pre>
+<p>Espressif’s <a href="https://components.espressif.com/components/espressif/mdns/versions/1.2.3/examples/query_advertise?language=en">mDNS example</a> describes advertising a hostname with the <code>.local</code> suffix. The phone must be on a network that can discover the device; guest-network isolation and multicast restrictions can interfere. The assigned local IP remains a useful fallback.</p>
+<p>In the current firmware, <code>geyser.local</code> is started after home Wi-Fi connects. It is <strong>not</strong> the first-time setup address. The manual now separates those two stages explicitly.</p>
+<h2>Restarting is different from forgetting Wi-Fi</h2>
+<p>The local Settings page, at <code>http://geyser.local/settings</code>, has three distinct controls:</p>
+<ul>
+<li><strong>Restart Device:</strong> reboot while keeping saved Wi-Fi credentials.</li>
+<li><strong>Change Wi-Fi:</strong> open the setup portal without first erasing the saved network.</li>
+<li><strong>Reset Wi-Fi Settings:</strong> clear the saved network after confirmation and restart into setup.</li>
+</ul>
+<p>Unplugging and reconnecting USB power also restarts the device while keeping its Wi-Fi settings. Local minimum and maximum readings start again after a restart; uploaded cloud history stays in the database.</p>
+<p>There was a practical implementation detail here: the local web server and WiFiManager’s portal both want port 80. When opening the portal, the firmware stops the local server. Once the portal is no longer active, it starts the local server again. The controls use POST requests with a per-boot form token, and the action is delayed briefly so the browser can receive its response before the device restarts or changes network mode.</p>
+<p>Those controls are local. The cloud dashboard can rename the monitor, but it does not remotely reset the device or change its Wi-Fi. The local interface assumes a trusted home network; its form token is not a separate owner-login system.</p>
+<h2>Sending readings securely to Railway</h2>
+<p>For the remote version I built a small <strong>Node.js/Express application</strong>, with <strong>PostgreSQL</strong> in production. The dashboard is a web app that can be added to a phone’s home screen, so I did not need to maintain separate native Android and iOS apps for the first version.</p>
+<p>The ESP32 uploads to <code>POST /api/v1/readings</code>. A representative body looks like this:</p>
+<pre><code class="language-json">{
+  &quot;device_id&quot;: &quot;geyser-home&quot;,
+  &quot;boot_id&quot;: &quot;example-boot-0001&quot;,
+  &quot;seq&quot;: 42,
+  &quot;temperature&quot;: 48.5,
+  &quot;sensor_ok&quot;: true,
+  &quot;rssi&quot;: -58
+}
+</code></pre>
+<p>The device ID identifies the monitor; it is not a password. Each boot has a new identifier, and each measurement has a sequence number. Together they let the server recognize duplicate uploads. For a failed sensor reading, the uploader sends <code>sensor_ok: false</code> and <code>temperature: null</code>.</p>
+<p>The request carries a separate secret device key in the <code>Authorization</code> header. Here is an abbreviated transport excerpt; <code>body</code>, the constants, and error handling belong to the surrounding uploader:</p>
+<pre><code class="language-cpp">WiFiClientSecure client;
+client.setCACert(MBK_ROOT_CA);
+client.setHandshakeTimeout(5);
+
+HTTPClient http;
+http.setConnectTimeout(4000);
+http.setTimeout(4000);
+
+if (http.begin(client, MBK_CLOUD_URL)) {
+  http.addHeader(&quot;Content-Type&quot;, &quot;application/json&quot;);
+  http.addHeader(&quot;Authorization&quot;, String(&quot;Bearer &quot;) + MBK_DEVICE_KEY);
+  int result = http.POST(body);
+  // The surrounding task handles failures and later attempts.
+  http.end();
+}
+</code></pre>
+<p>The configured build validates the server certificate with a CA certificate and synchronizes its clock before uploading. It does not disable TLS verification. The actual key lives in a private <code>CloudConfig.h</code>, excluded from Git. The browser never receives that key, and the owner’s login uses a separate password hash and server-side sessions.</p>
+<p>Cloud requests can be slow, so they run in a separate task. A one-element queue holds the latest measurement: when a new reading arrives, it replaces the older queued reading. The main loop can continue updating the OLED while a network request is in progress.</p>
+<p>The server checks the key and payload before storing a reading. It rejects malformed data and deduplicates the combination of device, boot and sequence. This excerpt shows the insert used by the application, inside its transaction:</p>
+<pre><code class="language-sql">INSERT INTO readings
+  (device_id, boot_id, seq, received_at, temperature, sensor_ok, rssi)
+VALUES ($1, $2, $3, $4, $5, $6, $7)
+ON CONFLICT (device_id, boot_id, seq) DO NOTHING
+RETURNING seq;
+</code></pre>
+<p>The server records receipt time. This first version does not keep an offline backlog, so an internet outage creates missing history rather than a burst of old readings when the connection returns. That is a deliberate limitation, and one I would revisit for a logging product.</p>
+<h2>The remote dashboard</h2>
+<p>The hosted application is at <a href="https://mbkgeysermonitor.up.railway.app/">mbkgeysermonitor.up.railway.app</a>. The owner’s readings require sign-in. The <strong>Explore with example readings</strong> option provides a clearly labelled preview without exposing private measurements.</p>
+<p><img src="/images/geyser-monitor/dashboard-preview.png" alt="Screenshot of the actual dashboard in Preview mode, showing a sample 48.5°C reading, connection status and period statistics."></p>
+<p><em>Actual application, example data. These numbers are a UI demonstration, not measurements from my geyser.</em></p>
+<p>The dashboard shows the latest temperature, sensor and connection status, and when a reading was last received. History can be viewed over one hour, 24 hours or seven days, with lowest, highest and average values for that selected period. It also records recent activity and can export the last seven days as CSV. Readings and events have a 90-day retention window in this version.</p>
+<p>That distinction between <strong>local min/max since restart</strong> and <strong>cloud statistics for a selected period</strong> matters. Both can be correct while displaying different numbers.</p>
+<p>The device uploads roughly every ten seconds, and the browser checks for updates every ten seconds. Those waits can add together, so a change may take around 20 seconds, plus network time, to appear remotely. The uploader waits after a request finishes, so this is an approximate cadence rather than a strict ten-second schedule.</p>
+<p>A five-second cadence is a possible next improvement, but it has <strong>not</strong> been applied to this version. Faster updates would also mean more requests and stored readings. For now, the dashboard exposes freshness instead of implying that a remote number is instantaneous.</p>
+<p>If no new reading arrives for about 60 seconds, the dashboard treats the monitor as offline. If the browser cannot reach the server, it shows a separate warning that displayed data may be out of date. The OLED continues locally while Wi-Fi reconnects. Browser alerts are available while the app is open; there are no background push, email or SMS notifications yet.</p>
+<h2>Deploying from GitHub</h2>
+<p>I already had a paid Railway account, so I used a separate project with an application service and PostgreSQL. The application source is in a private GitHub repository. Railway follows its <code>main</code> branch and builds the application when changes are pushed, using the project’s Dockerfile and deployment configuration. Railway documents this in its <a href="https://docs.railway.com/deployments/github-autodeploys">GitHub autodeploy guide</a>.</p>
+<p>The main production configuration is:</p>
+<pre><code class="language-dotenv">NODE_ENV=production
+PUBLIC_URL=https://your-app.up.railway.app
+DATABASE_URL=&lt;Railway PostgreSQL connection string&gt;
+DEVICE_ID=geyser-home
+DEVICE_API_KEY=&lt;a unique random device secret&gt;
+OWNER_PASSWORD_HASH=&lt;generated salted scrypt hash&gt;
+</code></pre>
+<p>These are placeholders, not runnable credentials. The real values are deployment variables. <code>PUBLIC_URL</code> must match the actual browser origin, and the firmware’s endpoint must match the HTTPS domain plus <code>/api/v1/readings</code>. When I renamed the Railway domain, both sides needed to agree on the new address.</p>
+<p>The service checks database connectivity through <code>/health</code> and uses one application replica for this personal version. I would add tested backups, restore procedures and operational monitoring before treating it as a customer service.</p>
+<p>The complete application repository remains private; the snippets above show the relevant implementation patterns without publishing configured firmware or private access files. They are excerpts, not a complete flashable sketch or a complete backend.</p>
+<h2>What I checked, and what comes next</h2>
+<p>The cloud-enabled firmware compiled for the ESP32 Arduino core used by this build. Application tests covered login and sessions, device authentication, invalid payloads, duplicate readings, threshold changes, offline recovery, history statistics and CSV export. The database tests also exercised the SQL through a PostgreSQL engine using PGlite. Deployment checks covered the hosted app’s health and authentication.</p>
+<p>Those checks are useful, but they do not establish sensor calibration, enclosure durability, or long-term field reliability. Those need physical testing over time.</p>
+<p>Before extending this to other customers, I would add device claiming, separate owner accounts, individual revocable upload keys, password recovery, and a clearer provisioning process. I would also evaluate offline storage, background notifications, and a recovery path for changing Wi-Fi when the old network is no longer available.</p>
+<p>The most useful lesson from this build was how much work sits around the temperature reading. A working sensor is the beginning. The product becomes usable when someone can connect it, understand what the screen is telling them, recover from a network problem, and distinguish a fresh reading from an old one.</p>
+<p>That is where this first version stands: a personal monitor, a printed case, and a remote dashboard built around everyday use. <strong>Made in Pakistan.</strong></p>
+<h2>References</h2>
+<ul>
+<li><a href="https://www.analog.com/en/products/ds18b20.html">Analog Devices: DS18B20 product page and datasheet</a> — sensor interface, resolution, accuracy and conversion timing.</li>
+<li><a href="https://support.analog.com/en-US/knowledgebase/article/000094969">Analog Devices: DS18B20 pull-up resistor guidance</a> — the data-line pull-up.</li>
+<li><a href="https://docs.espressif.com/projects/arduino-esp32/en/latest/api/wifi.html">Espressif: Arduino ESP32 Wi-Fi API</a> — access-point and station operation.</li>
+<li><a href="https://github.com/tzapu/WiFiManager">WiFiManager source and documentation</a> — captive-portal provisioning and the default setup IP.</li>
+<li><a href="https://github.com/milesburton/Arduino-Temperature-Control-Library">DallasTemperature library</a> — Arduino sensor support.</li>
+<li><a href="https://github.com/adafruit/Adafruit_SSD1306">Adafruit SSD1306 library</a> — OLED display support.</li>
+<li><a href="https://components.espressif.com/components/espressif/mdns/versions/1.2.3/examples/query_advertise?language=en">Espressif mDNS advertise example</a> — local hostname discovery.</li>
+<li><a href="https://docs.railway.com/deployments/github-autodeploys">Railway: GitHub autodeploys</a> — deployment from a connected repository branch.</li>
+</ul>
+]]></content:encoded>
+      <category>esp32</category>
+    <category>iot</category>
+    <category>hardware</category>
+    <category>3d-printing</category>
+    <category>nodejs</category>
+    <category>projects</category>
     </item>
     <item>
       <title>XPENG&apos;s IRON Humanoid Robot Walks Off the Production Line: What It Means for Robotics Manufacturing</title>
