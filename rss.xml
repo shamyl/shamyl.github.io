@@ -5,13 +5,159 @@
     <link>https://shamylmansoor.com/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Thu, 10 Sep 2026 04:06:36 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 11 Sep 2026 04:04:03 GMT</lastBuildDate>
     <atom:link href="https://shamylmansoor.com/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamylmansoor.com/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamylmansoor.com/blog</link>
     </image>
+    <item>
+      <title>YuE2: How Open-Source AI Music Generation Caught Up to Suno — and Why Symbolic Planning Matters</title>
+      <link>https://shamylmansoor.com/blog/yue2-open-source-ai-music-generation-symbolic-planning</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/yue2-open-source-ai-music-generation-symbolic-planning</guid>
+      <pubDate>Fri, 11 Sep 2026 00:00:00 GMT</pubDate>
+      <description>YuE2 is an open-source AI music generation model that matches Suno v5 on quality benchmarks using symbolic planning — writing editable scores before rendering audio. Here is what it means for creators, educators, and developers.</description>
+      <content:encoded><![CDATA[<p>YuE2, released on September 9, 2026, by researchers at the Hong Kong University of Science and Technology and the Multimodal Art Projection (M·A·P) group, is an open-source AI music generation model that achieves frontier-quality song output — competitive with proprietary systems like Suno v5 — while introducing a fundamentally different architecture: symbolic planning. Instead of generating audio directly from a text prompt, YuE2 first writes an editable musical score (melody and chords in ABC notation), then renders that score into a full song with vocals and accompaniment. This two-stage approach gives creators unprecedented control over AI-generated music and raises questions about where the open-source community is heading in the race against closed commercial platforms.</p>
+<h2>In Brief</h2>
+<ul>
+<li>YuE2-3B was released on September 9, 2026, with model weights on Hugging Face under CC BY-NC 4.0 and code on GitHub under Apache 2.0</li>
+<li>On the WildSongBench benchmark (192 prompts, evaluated September 5, 2026), YuE2 best-of-8 achieved 6.9632 SongBench Avg — the highest mean among 15 evaluated settings, narrowly ahead of Mureka 9 (6.9377) and Suno v5 (6.8721)</li>
+<li>The model uses a single AR–NAR Mixture-of-Transformers backbone that predicts an editable score and semantic tokens autoregressively, then generates acoustic latents via flow matching</li>
+<li>YuE2 supports three workflows: original song creation, zero-shot covers (transcribe a recording, reimagine in a new style), and agentic editing (revise a song through conversation about its score)</li>
+<li>The project includes MERT2 (state-of-the-art music understanding on 14 of 15 MARBLE metrics) and SheetSage2 (state-of-the-art audio-to-score transcription on 10 of 13 benchmark metrics)</li>
+<li>Training data consists primarily of CC0 music and licensed synthetic data from Tokenwave.AI</li>
+</ul>
+<h2>What Makes YuE2 Different: Symbolic Planning</h2>
+<p>Most AI music generation tools — Suno, Udio, Mureka, MiniMax Music — operate as black boxes. You provide a text prompt describing a style and lyrics, and the model produces audio directly. You cannot inspect or edit the intermediate musical decisions. If the melody is wrong in bar 12, your only option is to regenerate and hope for a better result.</p>
+<p>YuE2 takes a different path. When given lyrics and a style prompt, it first generates a symbolic plan — a musical score in ABC notation that specifies melody and chord progressions. This score is human-readable, playable, and editable. The model then renders this score into full audio: vocals, instruments, and production. The staged pipeline is exposed as <code>plan()</code> → <code>generate_semantic()</code> → <code>synthesize()</code> → <code>decode()</code> in the Python API.</p>
+<p>This architecture borrows from how human musicians actually work. A composer writes a score, then performers and producers bring it to life. YuE2 separates composition from rendering, which means a creator can intervene at the composition stage — changing a chord progression, adjusting a melody, shifting the key — without re-rolling the entire generation from scratch.</p>
+<p>The practical implications are significant. A music teacher can generate a song, show students the score, and discuss the harmonic choices. A developer building a creative coding tool can expose the score as an interactive layer. A musician can take an AI-generated composition, edit the parts they dislike, and re-render. None of this is possible with black-box generation.</p>
+<h2>How It Compares: YuE2 vs. Proprietary AI Music Tools</h2>
+<p>The WildSongBench comparison, evaluated on September 5, 2026, provides the most comprehensive publicly available benchmark of AI music generation systems. The results are worth examining carefully.</p>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>SongBench Avg</th>
+<th>AudioBox PQ</th>
+<th>MuLan</th>
+<th>PER (lower is better)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>YuE2 (best-of-8)</td>
+<td>6.9632</td>
+<td>8.2714</td>
+<td>0.5051</td>
+<td>9.79%</td>
+</tr>
+<tr>
+<td>Mureka 9</td>
+<td>6.9377</td>
+<td>8.0226</td>
+<td>0.4394</td>
+<td>11.69%</td>
+</tr>
+<tr>
+<td>Suno v5</td>
+<td>6.8721</td>
+<td>8.1698</td>
+<td>0.5428</td>
+<td>8.10%</td>
+</tr>
+<tr>
+<td>YuE2</td>
+<td>6.7316</td>
+<td>8.2598</td>
+<td>0.5068</td>
+<td>8.44%</td>
+</tr>
+<tr>
+<td>Suno v5.5</td>
+<td>6.7150</td>
+<td>8.1955</td>
+<td>0.5089</td>
+<td>5.96%</td>
+</tr>
+<tr>
+<td>Suno v4.5</td>
+<td>6.6995</td>
+<td>8.2541</td>
+<td>0.5022</td>
+<td>5.80%</td>
+</tr>
+<tr>
+<td>MiniMax Music 2.6</td>
+<td>6.3222</td>
+<td>8.1711</td>
+<td>0.4251</td>
+<td>24.55%</td>
+</tr>
+</tbody></table>
+<p>A few observations worth noting. The gap between YuE2 best-of-8 and Suno v5 is approximately 0.09 on the SongBench Avg scale — small enough that the project authors themselves acknowledge &quot;rankings vary by metric&quot; and that &quot;the small gap between the highest means does not establish statistical significance.&quot; On MuLan (which measures text-audio alignment), Suno v5 actually outperforms YuE2. On PER (phoneme error rate, where lower is better), Suno v4.5 leads the pack.</p>
+<p>The best-of-8 selection method is also worth scrutiny. YuE2 generates eight candidates and selects the best one based on musicality, prompt control, and lyric accuracy. Standard YuE2 (selecting from two candidates) scores 6.7316, which places it below Suno v5. This means the model&#39;s single-shot quality is good but not yet dominant — the headline number benefits from selection among multiple generations.</p>
+<p>That said, for an open-source 3B-parameter model running on a single GPU to be in the same ballpark as Suno&#39;s latest proprietary systems is a meaningful achievement. The open-source AI music gap has narrowed considerably since the original YuE model scored 4.9165 on the same benchmark.</p>
+<h2>The Ecosystem: MERT2 and SheetSage2</h2>
+<p>YuE2 is not just a single model — it is a suite of three interconnected systems, all released openly.</p>
+<p><strong>MERT2</strong> is a music understanding model that achieves state-of-the-art results on 14 of 15 MARBLE benchmark metrics, including 91.72% genre accuracy on GTZAN. It comes in two variants: MERT2-30s (30-second context, 632M parameters) and MERT2-FS (300-second context, same parameter count). These models serve as the &quot;ears&quot; of the system — encoding musical features that downstream components use for transcription and generation.</p>
+<p><strong>SheetSage2</strong> is an audio-to-score transcription system that achieves state-of-the-art on 10 of 13 benchmark metrics, including 82.51% vocal melody pitch-class F1 on RWC-Pop. It can take any audio recording and produce a musical score — the bridge that enables YuE2&#39;s cover functionality. You feed it a source recording, it produces an ABC notation score, and then YuE2 can reimagine that score in a completely different style.</p>
+<p>Together, the three systems form a complete workflow: understand music (MERT2), transcribe it (SheetSage2), generate new music or reimagine existing music (YuE2). All three are available on Hugging Face, all are reproducible, and all come with benchmark evaluation code.</p>
+<h2>Zero-Shot Covers and Agentic Editing</h2>
+<p>Two capabilities distinguish YuE2 from most commercial AI music tools.</p>
+<p><strong>Zero-shot covers</strong> take an existing recording, transcribe its melody using SheetSage2, and then re-render it in a completely different style — without any cover-specific fine-tuning. The project reports that full-score YuE2 reaches 0.647 CLEWS mAP on 948 works for source-identity preservation, compared with 0.006 without a score. The demo on the project page follows a song called &quot;The Last Train&quot; through 9 editing steps and 14 versions, transforming it from Mandarin pop to English jazz with new harmony and a saxophone solo — all using the same generation checkpoint.</p>
+<p><strong>Agentic editing</strong> turns music generation into a conversation. An AI agent can receive musical feedback (&quot;make the bridge more melancholic,&quot; &quot;change the chorus to a minor key&quot;), revise the ABC score accordingly, and re-render the song. The yue2-music skill package includes instructions for agents to generate songs, transcribe recordings, edit scores, check musical invariants, and organize listening comparisons. This is not just prompt-and-pray generation — it is an iterative creative workflow.</p>
+<h2>Hardware Requirements and Accessibility</h2>
+<p>YuE2 requires Linux, Python 3.12, and an NVIDIA GPU with BF16 support and 24 GB VRAM. The model produces 48 kHz stereo audio without quantization. Model files download from Hugging Face on first use.</p>
+<p>The 24 GB VRAM requirement is a meaningful constraint. It puts YuE2 out of reach for most consumer laptops and many desktop systems. However, it is accessible to anyone with an RTX 3090, 4090, or equivalent workstation GPU — hardware that is increasingly common in maker and developer communities. For comparison, running a 3B parameter model in BF16 requires roughly 6 GB for weights alone, but the full generation pipeline (including the VAE decoder and intermediate representations) pushes the total memory requirement higher.</p>
+<p>For educators and developers in Pakistan and similar markets, the 24 GB VRAM requirement is a real barrier. Most systems available locally max out at 8–12 GB. Cloud GPU rental (via services like RunPod, Lambda Labs, or vast.ai) remains the most practical path, though it adds cost. This is the same constraint that affects local AI development more broadly — the gap between what open-source models require and what widely available hardware can provide.</p>
+<h2>What This Means for Creators and Educators</h2>
+<p>For <strong>creative coders and makers</strong>, YuE2 opens up possibilities that proprietary tools cannot match. The ABC notation output can be fed into other software — music notation tools, DAWs, game engines, generative art systems. You can build applications that use AI-generated music as a starting point and then apply programmatic transformations to the score. This is the kind of creative coding pipeline that connects AI music generation to the broader world of computational art.</p>
+<p>For <strong>STEAM educators</strong>, the symbolic planning approach is pedagogically valuable. When a student generates a song with Suno, they learn nothing about music theory — they type a prompt and get audio. When a student generates a song with YuE2, they can inspect the score, see which chords were chosen, modify the melody, and understand the relationship between notation and sound. It turns AI music generation from a black box into a teachable artifact. This connects to the broader principle that educational technology should expose its internal workings rather than hiding them — a philosophy that aligns with approaches to <a href="/work/learnosteam/">STEAM education</a> where understanding the process matters as much as the output.</p>
+<p>For <strong>developers building music products</strong>, the Apache 2.0 code license (with CC BY-NC 4.0 for model weights) creates a clear distinction. You can build and ship software that uses YuE2&#39;s code freely. But the model weights are non-commercial — you cannot use them in a commercial product without negotiating a separate license. This is a common pattern in open-source AI and limits the direct commercial applicability. However, for research, education, prototyping, and non-commercial creative work, the terms are permissive.</p>
+<h2>The Open-Source AI Music Landscape</h2>
+<p>YuE2 arrives at a moment when the AI music generation field is consolidating around a few major proprietary platforms. Suno, which launched <a href="https://suno.com/blog">Studio 2.0</a> as a browser-based DAW in August 2026, has positioned itself as the consumer-facing leader. The company has also been navigating the legal and industry relationships — its strategic alliance with BMG, announced August 12, 2026, represents one model for reconciling AI music tools with traditional music rights holders.</p>
+<p>On the platform side, <a href="https://www.theverge.com/entertainment/977815/spotify-ai-persona-label-recommendations">Spotify&#39;s &quot;AI Persona&quot; badge</a> policy — announced in August 2026 and starting mid-September — will suppress AI-generated artist profiles in editorial and algorithmic recommendations. This creates a distribution challenge for AI-generated music regardless of which tool produces it.</p>
+<p>YuE2 represents the open-source counterweight to this consolidation. It does not need to win the commercial race to be valuable. It needs to provide a credible, transparent, modifiable alternative that researchers, educators, and developers can use without depending on a single company&#39;s API, pricing, or content policies. The original YuE model demonstrated that open-source AI music generation was possible. YuE2 demonstrates that it can reach frontier quality.</p>
+<h2>Product Builder&#39;s Perspective</h2>
+<p>From a product-building perspective, YuE2&#39;s symbolic planning architecture is the most interesting design decision in the project, and it carries lessons beyond music generation.</p>
+<p><strong>Separating planning from execution.</strong> By generating an intermediate representation (the score) before producing the final output (audio), YuE2 creates a natural inspection and editing point. This pattern applies to any AI generation pipeline where the output is complex and iterative refinement is valuable. A code generation tool that produces an intermediate plan before writing code. A design tool that produces a layout specification before rendering pixels. The principle is the same: give users control over the plan, not just the output.</p>
+<p><strong>The non-commercial license tension.</strong> The split licensing (Apache 2.0 code, CC BY-NC 4.0 weights) reflects a genuine tension in open-source AI. The code is free for any use, but the weights — which represent most of the development cost — are restricted to non-commercial use. This protects the researchers&#39; ability to monetize their work while still enabling research and education. For product teams, it means YuE2 is excellent for prototyping and research but cannot be directly integrated into a commercial product without a separate license agreement.</p>
+<p><strong>The benchmark caveats.</strong> YuE2&#39;s headline benchmark number (6.9632) uses best-of-8 selection. Standard YuE2 (6.7316) is below Suno v5. This is not a criticism — best-of-8 is a legitimate inference strategy — but it means the model&#39;s typical single-generation quality is good rather than dominant. The gap between &quot;best possible output from eight tries&quot; and &quot;typical output&quot; matters for real-world applications where users do not want to generate eight versions of every song.</p>
+<p><strong>Training data ethics.</strong> The project states that models are &quot;trained primarily on CC0 music and synthetic data&quot; from Tokenwave.AI under license. This is a meaningful ethical commitment — it avoids the copyright concerns that have dogged Suno and Udio. Whether the CC0 + synthetic data approach can scale to match the quality of models trained on copyrighted music remains an open question, but YuE2&#39;s benchmark results suggest the gap is narrowing.</p>
+<h2>What to Watch Next</h2>
+<ul>
+<li><strong>Community fine-tunes.</strong> With weights on Hugging Face, the community will likely fine-tune YuE2 for specific genres, languages, and use cases. Watch for South Asian music fine-tunes — the model supports Chinese and English, and South Asian musical traditions are underrepresented.</li>
+<li><strong>Commercial licensing.</strong> Whether the M·A·P group offers commercial licenses for the weights will determine whether YuE2 becomes a foundation for commercial products or remains a research and education tool.</li>
+<li><strong>The technical report.</strong> The full technical report is listed as &quot;coming soon.&quot; It will provide architectural details that enable independent evaluation of the model&#39;s design choices.</li>
+<li><strong>Hardware optimization.</strong> Quantized versions (INT8, INT4) that reduce the VRAM requirement would dramatically expand accessibility. Community efforts to optimize the model for 12–16 GB GPUs would be significant.</li>
+<li><strong>Integration with creative coding tools.</strong> Watch for YuE2 integrations with tools like Sonic Pi, Strudel, or Web Audio API — the ABC notation output makes it a natural fit for the creative coding ecosystem.</li>
+</ul>
+<h2>Conclusion</h2>
+<p>YuE2 does not mean open-source AI music generation has overtaken proprietary platforms. The benchmark gaps are narrow, the best results require multiple generations, and the 24 GB VRAM requirement limits accessibility. But the symbolic planning architecture — generating editable scores before audio — is a genuinely different approach that offers creators, educators, and developers something proprietary tools do not: transparency and control over the musical decisions an AI makes.</p>
+<p>For anyone working at the intersection of AI, music, and education, YuE2 is worth experimenting with. For product builders, the architectural pattern of separating planning from execution is worth studying. And for the open-source AI community, it is evidence that the gap between open and closed models in music generation is closing — not as fast as in text or image generation, but closing nonetheless.</p>
+<p>If you are a musician, educator, or developer experimenting with AI music tools, what would editable scores mean for your workflow? That question is worth thinking about before the next wave of models makes it obsolete.</p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://map-yue2.github.io/">YuE2 Project Page — map-yue2.github.io, September 2026</a></li>
+<li><a href="https://github.com/multimodal-art-projection/YuE">YuE2 GitHub Repository — multimodal-art-projection/YuE</a></li>
+<li><a href="https://huggingface.co/m-a-p/YuE2-3B">YuE2-3B Model on Hugging Face — m-a-p/YuE2-3B, uploaded September 9, 2026</a></li>
+<li><a href="https://huggingface.co/datasets/m-a-p/WildSongBench">WildSongBench Benchmark on Hugging Face — m-a-p/WildSongBench</a></li>
+<li><a href="https://huggingface.co/m-a-p/MERT-v2-30s">MERT2 on Hugging Face — m-a-p/MERT-v2-30s</a></li>
+<li><a href="https://huggingface.co/m-a-p/SheetSage2">SheetSage2 on Hugging Face — m-a-p/SheetSage2</a></li>
+<li><a href="https://arxiv.org/abs/2503.08638">YuE Technical Report (predecessor) — arXiv:2503.08638</a></li>
+<li><a href="https://arxiv.org/abs/2306.00107">MERT Technical Report — arXiv:2306.00107</a></li>
+<li><a href="https://suno.com/blog">Suno Studio 2.0 Launch — Suno Blog, August 13, 2026</a></li>
+<li><a href="https://www.theverge.com/entertainment/977815/spotify-ai-persona-label-recommendations">Spotify AI Persona Badge Announcement — The Verge, August 2026</a></li>
+</ul>
+]]></content:encoded>
+      <category>AI-music</category>
+    <category>open-source</category>
+    <category>creative-coding</category>
+    <category>music-generation</category>
+    <category>symbolic-planning</category>
+    <category>YuE2</category>
+    </item>
     <item>
       <title>Apple&apos;s 3D Printed Titanium Hinge in the iPhone Duo: What It Means for Manufacturing Beyond Consumer Electronics</title>
       <link>https://shamylmansoor.com/blog/apple-iphone-duo-3d-printed-titanium-hinge-manufacturing</link>
@@ -58,7 +204,7 @@
 <h2>Relevance for Pakistan and Emerging Manufacturing Economies</h2>
 <p>For Pakistani technology teams and manufacturers, Apple&#39;s adoption of metal 3D printing at scale is a signal worth paying attention to. Pakistan&#39;s manufacturing sector is dominated by conventional subtractive processes — machining, casting, stamping. Metal additive manufacturing equipment remains expensive and requires specialized expertise in both machine operation and design for AM.</p>
 <p>However, the same dynamics that pushed Apple, Oppo, and Honor toward 3D printed titanium apply to any manufacturer facing complex geometry challenges in expensive materials. As metal AM equipment costs continue to decline and service providers proliferate, the barrier to entry drops. Pakistani manufacturers in aerospace, medical devices, and precision tooling — areas where the country already has growing capability — could benefit from adopting additive approaches for specific high-value components rather than treating 3D printing as exclusively a prototyping tool.</p>
-<p>For educators and STEAM programs, the iPhone Duo hinge cover is a concrete, relatable example of how 3D printing has moved beyond hobbyist FDM printers into industrial mass production. Students who learn design for additive manufacturing principles today are preparing for a manufacturing landscape where AM is a mainstream production process, not a novelty. Platforms like <a href="/projects/learnosteam">LearnOSTEAM</a> that introduce students to digital fabrication concepts are building exactly the foundational literacy this transition requires.</p>
+<p>For educators and STEAM programs, the iPhone Duo hinge cover is a concrete, relatable example of how 3D printing has moved beyond hobbyist FDM printers into industrial mass production. Students who learn design for additive manufacturing principles today are preparing for a manufacturing landscape where AM is a mainstream production process, not a novelty. Platforms like <a href="/work/learnosteam/">LearnOSTEAM</a> that introduce students to digital fabrication concepts are building exactly the foundational literacy this transition requires.</p>
 <h2>Product Builder&#39;s Perspective</h2>
 <p>From a product-building perspective, the most interesting aspect of Apple&#39;s 3D printed hinge cover is not the technology itself — metal laser powder bed fusion has been commercially available for over a decade. It is the integration of AM into a high-volume, cost-constrained, quality-obsessed supply chain.</p>
 <p>Building a 3D printed titanium part in a lab is one thing. Building millions of them to Apple&#39;s tolerances, with recycled material, at a cost that fits inside a $1,999 consumer product, is an entirely different challenge. It requires stable powder feedstock, consistent machine calibration, post-processing automation, quality assurance at scale, and a supply chain that can deliver finished parts to assembly lines on schedule.</p>
