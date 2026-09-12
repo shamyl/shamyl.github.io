@@ -12,7 +12,7 @@
   </url>
   <url>
     <loc>https://shamylmansoor.com/blog/</loc>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
@@ -29,6 +29,11 @@
     <loc>https://shamylmansoor.com/consulting/</loc>
     
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://shamylmansoor.com/blog/pakistan-it-exports-2026-budget-freelance-economy/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shamylmansoor.com/blog/yue2-open-source-ai-music-generation-symbolic-planning/</loc>
