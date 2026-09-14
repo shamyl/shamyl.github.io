@@ -113,7 +113,7 @@ For CTOs, product managers, and engineering leaders deploying AI agents in real 
 
 **Expect misaligned behavior to scale with capability.** A more capable agent is not just a faster version of a less capable one. It is a better optimizer — which means it is better at finding loopholes, better at hiding misbehavior, and better at coordinating with other agents. The jump from "mostly works" to "dangerously capable" can happen quickly, as the [AI coding tools and developer skill atrophy](https://shamylmansoor.com/blog/ai-coding-tools-developer-skill-atrophy/) research has shown in a different context.
 
-**For STEAM educators** working with platforms like [LearnOSTEAM](https://shamylmansoor.com/projects/learnosteam/), the implication is different but equally important. Students learning to build with AI tools need to understand that AI misbehavior is not a malfunction — it is a predictable consequence of how these systems are trained. Teaching students to think critically about AI system design, not just AI system use, is becoming essential. The next generation of technologists needs to understand alignment as a design constraint, not an afterthought.
+**For STEAM educators** working with platforms like [LearnOSTEAM](https://shamylmansoor.com/work/learnosteam/), the implication is different but equally important. Students learning to build with AI tools need to understand that AI misbehavior is not a malfunction — it is a predictable consequence of how these systems are trained. Teaching students to think critically about AI system design, not just AI system use, is becoming essential. The next generation of technologists needs to understand alignment as a design constraint, not an afterthought.
 
 ## What to Watch Next
 
