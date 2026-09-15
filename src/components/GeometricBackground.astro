@@ -1,0 +1,97 @@
+---
+---
+
+<div class="geometric-bg" aria-hidden="true">
+  <div class="grid-lines"></div>
+  <div class="glow glow-1"></div>
+  <div class="glow glow-2"></div>
+  <div class="noise"></div>
+</div>
+
+<style is:global>
+  .geometric-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  
+  /* Subtle grid */
+  .geometric-bg .grid-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      linear-gradient(to right, rgba(34, 34, 34, 0.5) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(34, 34, 34, 0.5) 1px, transparent 1px);
+    background-size: 80px 80px;
+    opacity: 0.2;
+  }
+  
+  [data-theme="light"] .geometric-bg .grid-lines {
+    background-image: 
+      linear-gradient(to right, rgba(100, 100, 100, 0.25) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(100, 100, 100, 0.25) 1px, transparent 1px);
+    opacity: 0.4;
+  }
+  
+  /* Subtle accent glows */
+  .geometric-bg .glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.08;
+  }
+  
+  [data-theme="light"] .geometric-bg .glow {
+    opacity: 0.04;
+  }
+  
+  .geometric-bg .glow-1 {
+    top: 5%;
+    right: 15%;
+    width: 350px;
+    height: 350px;
+    background: #3b82f6;
+    animation: glowPulse 12s ease-in-out infinite;
+  }
+  
+  .geometric-bg .glow-2 {
+    bottom: 5%;
+    left: 10%;
+    width: 280px;
+    height: 280px;
+    background: #8b5cf6;
+    animation: glowPulse2 14s ease-in-out infinite;
+  }
+  
+  /* Noise overlay */
+  .geometric-bg .noise {
+    position: absolute;
+    inset: 0;
+    opacity: 0.03;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
+  
+  @keyframes glowPulse {
+    0%, 100% { opacity: 0.06; transform: scale(1); }
+    50% { opacity: 0.14; transform: scale(1.1); }
+  }
+  
+  @keyframes glowPulse2 {
+    0%, 100% { opacity: 0.05; transform: scale(1); }
+    50% { opacity: 0.12; transform: scale(1.15); }
+  }
+  
+  @media (max-width: 768px) {
+    .geometric-bg .glow-1 { width: 200px; height: 200px; }
+    .geometric-bg .glow-2 { width: 150px; height: 150px; }
+  }
+</style>
