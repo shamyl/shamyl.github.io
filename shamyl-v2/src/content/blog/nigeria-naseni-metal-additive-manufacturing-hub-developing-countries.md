@@ -48,7 +48,7 @@ NASENI's metal hub announcement does not exist in isolation. In July 2026, Innov
 
 The sequence matters. Nigeria is building skills infrastructure before — or alongside — industrial AM capacity. Desktop FDM printers in a STEAM centre do not produce turbine blades, but they produce something more valuable in the long run: people who understand additive manufacturing as a process, not a black box. When the metal hub comes online, there will be a pipeline of trainees who already think in layers.
 
-This is the same principle that drives [LearnOSTEAM](/projects/learnosteam/) — building STEAM education platforms that teach coding, robotics, and design thinking to students through hands-on projects. The tool changes (a Buddy Bot one day, a metal powder bed system a decade later) but the pedagogical core stays the same: learn by making.
+This is the same principle that drives [LearnOSTEAM](/work/learnosteam/) — building STEAM education platforms that teach coding, robotics, and design thinking to students through hands-on projects. The tool changes (a Buddy Bot one day, a metal powder bed system a decade later) but the pedagogical core stays the same: learn by making.
 
 ## What Other African Countries Are Doing
 
@@ -90,7 +90,7 @@ The temptation is to buy the most advanced metal AM system available, install it
 
 Nigeria's two-track approach — STEAM training centres feeding into an industrial metal hub — is more sustainable. The training centre produces people. The metal hub employs them. The gap between the two is measured in years, not months, but the sequence is correct.
 
-For Pakistani hardware teams and educators, the practical takeaway is that AM adoption in developing countries is not primarily a technology problem. It is a human capital problem. The [Buddy Bot](/projects/buddy-bot/) robotics platform teaches students about sensors, actuators, and programming through hands-on experimentation. A similar platform for additive manufacturing — where students learn design for AM, process parameters, and quality control on accessible desktop systems before touching industrial equipment — would build the foundation that a future metal AM hub would need.
+For Pakistani hardware teams and educators, the practical takeaway is that AM adoption in developing countries is not primarily a technology problem. It is a human capital problem. The [Buddy Bot](/work/buddy-bot/) robotics platform teaches students about sensors, actuators, and programming through hands-on experimentation. A similar platform for additive manufacturing — where students learn design for AM, process parameters, and quality control on accessible desktop systems before touching industrial equipment — would build the foundation that a future metal AM hub would need.
 
 ## What to Watch Next
 
