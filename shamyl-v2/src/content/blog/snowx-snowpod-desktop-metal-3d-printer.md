@@ -75,7 +75,7 @@ For product development teams and hardware startups, a desktop metal printer cou
 
 For technology ecosystems in Pakistan and similar emerging markets, access to metal additive manufacturing has been essentially zero outside of a handful of university labs and industrial partnerships. A desktop metal printer, if priced in the low thousands of dollars rather than the hundreds of thousands, could democratize access to metal prototyping in ways that parallel what desktop FDM did for plastic prototyping a decade ago.
 
-For robotics and hardware teams building products in Pakistan — whether for [educational robotics platforms like LearnOSTEAM](https://shamylmansoor.com/projects/learnosteam/) or industrial applications — the ability to print small metal parts locally would reduce dependence on overseas service bureaus and long shipping cycles. The 316L stainless steel that SnowPod uses is a versatile material suitable for mechanical components, tools, and fixtures.
+For robotics and hardware teams building products in Pakistan — whether for [educational robotics platforms like LearnOSTEAM](https://shamylmansoor.com/work/learnosteam/) or industrial applications — the ability to print small metal parts locally would reduce dependence on overseas service bureaus and long shipping cycles. The 316L stainless steel that SnowPod uses is a versatile material suitable for mechanical components, tools, and fixtures.
 
 However, the practical challenges in Pakistan would include import duties, availability of metal powder refills, and the need for technical support. Crowdfunding platforms like Kickstarter may also have limited participation from Pakistan, meaning early access would likely require international shipping or proxy purchasing.
 
