@@ -110,4 +110,3 @@ Until these appear, the announcement is a direction, not a plan. Directions matt
 
 - [ProPakistani: Punjab to Introduce New Subject From Class 1 to 12](https://propakistani.pk/2026/09/25/punjab-to-introduce-new-subject-from-class-1-to-12/) (September 25, 2026)
 - [School Education Department, Government of Punjab](https://sed.punjab.gov.pk/)
-- [Punjab Curriculum and Textbook Board](https://pctb.punjab.gov.pk/)
