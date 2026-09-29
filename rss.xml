@@ -5,13 +5,99 @@
     <link>https://shamylmansoor.com/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Mon, 28 Sep 2026 04:06:43 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 29 Sep 2026 04:06:51 GMT</lastBuildDate>
     <atom:link href="https://shamylmansoor.com/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamylmansoor.com/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamylmansoor.com/blog</link>
     </image>
+    <item>
+      <title>NVIDIA Isaac ROS 5.0: AI Agents Now Build Robots Alongside Developers</title>
+      <link>https://shamylmansoor.com/blog/nvidia-isaac-ros-5-0-ai-agents-robotics-development-roscon-2026</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/nvidia-isaac-ros-5-0-ai-agents-robotics-development-roscon-2026</guid>
+      <pubDate>Tue, 29 Sep 2026 00:00:00 GMT</pubDate>
+      <description>At ROSCon 2026, NVIDIA released Isaac ROS 5.0 with AI agent workflows for robotics development, Google&apos;s Intrinsic open-sourced its core robotics platform, and Qualcomm acquired PickNik Robotics. Here is what these shifts mean for builders, educators, and the ROS ecosystem.</description>
+      <content:encoded><![CDATA[<p>At ROSCon 2026 in Toronto on September 22, NVIDIA released Isaac ROS 5.0, a version of its GPU-accelerated robotics software stack that introduces AI agent workflows for building robot applications. On the same day, Google&#39;s Intrinsic unit open-sourced the core of its industrial robotics platform under an Apache 2.0 license. The following day, Qualcomm announced an agreement to acquire PickNik Robotics, the company behind MoveIt, the most widely used motion planning framework in ROS. Taken together, these three announcements signal that robotics software is entering a new phase — one where AI agents assist with code, open-source infrastructure replaces proprietary stacks, and the major hardware companies are competing to own the developer ecosystem.</p>
+<h2>In Brief</h2>
+<ul>
+<li>NVIDIA Isaac ROS 5.0, released September 22, 2026, at ROSCon in Toronto, introduces AI agent-ready skills for robotics development, including automated environment setup, model fine-tuning, and manipulation workflow generation</li>
+<li>The release adds support for ROS 2 Lyrical and Ubuntu 24.04, with a NVIDIA-contributed CUDA buffer backend that enables zero-copy GPU data transport between ROS 2 nodes</li>
+<li>FoundationPose, NVIDIA&#39;s object pose estimation model, now runs up to 5.5x faster through an agent-ready inference library; pick-and-place is available as a standalone agent-ready skill</li>
+<li>Google&#39;s Intrinsic open-sourced Intrinsic Core under Apache 2.0, providing ROS-compatible capabilities including real-time control, motion planning, grasp planning, simulation, and camera calibration</li>
+<li>Qualcomm announced an agreement to acquire PickNik Robotics, longtime steward of MoveIt, with plans to integrate motion planning with its Dragonwing robotics platform and Arduino hardware</li>
+<li>The announcements reflect a broader shift: robotics software is becoming open, agent-assisted, and tied to specific hardware ecosystems — changing how builders, educators, and startups approach robot development</li>
+</ul>
+<h2>What Isaac ROS 5.0 Actually Adds</h2>
+<p>NVIDIA&#39;s Isaac ROS is not a robotics framework itself. It is a collection of GPU-accelerated packages built on top of ROS, the open-source Robot Operating System maintained by the Open Source Robotics Alliance. ROS provides the messaging, tooling, and libraries that underpin much of modern robotics development. Isaac ROS brings NVIDIA&#39;s GPU computing, AI models, and production-ready perception libraries to ROS users. According to NVIDIA, the ROS ecosystem now includes nearly 1.3 million users.</p>
+<p>Version 5.0 introduces three categories of capability:</p>
+<p><strong>Agent-ready development skills.</strong> NVIDIA has packaged common robotics development tasks into reusable &quot;skills&quot; that AI agents can execute. A setup skill automates environment configuration — installing dependencies, preparing build scripts, and configuring Isaac ROS on a developer&#39;s machine. A manipulation skill provides reusable workflows for pick-and-place, object detection, depth estimation, and pose output. A FoundationStereo fine-tuning skill allows an AI agent to adapt a stereo perception model to a developer&#39;s specific cameras and environment, rather than requiring manual parameter tuning.</p>
+<p>According to Katie Washabaugh, NVIDIA&#39;s product marketing manager for robotics simulation, the setup skill targets &quot;low-hanging fruit&quot; that &quot;nobody wants to do,&quot; while the manipulation skill tackles &quot;a greenfield area of robotics development&quot; where &quot;there are so many minuscule parts that you need to get right.&quot;</p>
+<p><strong>ROS 2 Lyrical support and CUDA acceleration.</strong> Isaac ROS 5.0 adds support for ROS 2 Lyrical (the latest ROS distribution) and Ubuntu 24.04. NVIDIA contributed a standard data-handling interface called <code>rosidl::Buffer</code> to ROS 2 Lyrical through the Open Source Robotics Alliance. This interface allows ROS 2 nodes to exchange GPU-resident data through zero-copy transport when conditions allow, eliminating the CPU-memory serialization and copying that can bottleneck GPU-accelerated robotics workloads. CUDA provides a working example backend, available to the entire ROS community.</p>
+<p>A <a href="https://developer.nvidia.com/blog/accelerating-a-ros-2-node-with-an-ai-agent-and-nvidia-isaac-ros/">technical blog post</a> published the same day demonstrates how an AI agent can use the <code>migrate-node-to-rosidl-buffer</code> skill to audit a CUDA-accelerated ROS 2 node, trace data movement, plan a minimal refactor, and verify that zero-copy GPU transport is enabled — work that would typically require deep expertise in both ROS internals and CUDA memory management.</p>
+<p><strong>Faster perception and standalone pick-and-place.</strong> FoundationPose, NVIDIA&#39;s foundation model for 6-DoF object pose estimation and tracking, now provides an agent-ready inference library that runs up to 5.5x faster than the previous version. Pick-and-place — the workflow connecting detection, depth estimation, and pose output — is now available as a standalone skill outside the full Isaac ROS stack, giving developers more flexibility.</p>
+<h2>Intrinsic Core: Google&#39;s Robotics Platform Goes Open Source</h2>
+<p>Also on September 22, 2026, Intrinsic — the robotics company that joined Google in February 2026 — released Intrinsic Core as an open-source project under the Apache 2.0 license. Available on <a href="https://github.com/intrinsic/intrinsic">GitHub</a>, Intrinsic Core provides ROS-compatible capabilities that Intrinsic uses internally for real manufacturing deployments.</p>
+<p>What Intrinsic Core includes:</p>
+<ul>
+<li><strong>Intrinsic Control</strong>: A hardware-agnostic real-time control framework that supports sensor-based mid-trajectory adaptation, designed to work with different robot arms, grippers, and sensors without rewriting drivers</li>
+<li><strong>Pose estimation</strong>: Built on NVIDIA FoundationPose, providing 6-DoF pose estimation for 3D parts with built-in integration</li>
+<li><strong>Motion planning</strong>: Auto-generation of collision-free paths, replacing manual joint-by-joint programming</li>
+<li><strong>Grasp planning</strong>: Dynamic gripper adaptation based on real-time sensor feedback</li>
+<li><strong>Simulation services</strong>: Powered by Gazebo, with visualization for debugging and validation</li>
+<li><strong>Camera calibration</strong>: Automated camera alignment and vision system configuration</li>
+<li><strong>Intrinsic-ROS drivers</strong>: Pre-configured drivers for supported robots, grippers, and 3D cameras</li>
+</ul>
+<p>Alongside Intrinsic Core, the company released the Open Machine Tending Solution (OMTS), a reference application for CNC machine tending that works with hardware from FANUC and Universal Robots. The OMTS is designed to be customizable: developers can adapt it for different assets and integrate foundation models like NVIDIA FoundationPose.</p>
+<p>This is a significant release for industrial robotics. The capabilities Intrinsic has open-sourced — real-time control, motion planning, grasp planning, and pose estimation — are the building blocks that most robotics integrators currently build from scratch or license from proprietary vendors. Making them available under Apache 2.0 lowers the barrier to entry for small teams and startups that cannot afford commercial robotics software platforms.</p>
+<h2>Qualcomm Acquires PickNik Robotics and MoveIt</h2>
+<p>On September 23, 2026, Qualcomm Technologies announced an agreement to acquire PickNik Inc., the Boulder-based robotics software company that has been the primary maintainer of MoveIt since 2016. MoveIt is the most widely used motion planning framework in the ROS ecosystem, relied upon by robotics developers for collision-aware path planning, manipulation, and kinematics.</p>
+<p>According to Qualcomm&#39;s press release, the acquisition is intended to &quot;advance open robotics, physical AI, and MoveIt integration with Dragonwing robotics platforms and Arduino platforms.&quot; This is notable because Qualcomm acquired Arduino in October 2025 and launched the <a href="/blog/arduino-ventuno-q-edge-ai-robotics-nvidia-jetson-alternative/">Ventuno Q</a> edge AI board in August 2026. By bringing MoveIt in-house, Qualcomm is building a vertically integrated robotics stack: Qualcomm silicon running Arduino hardware, with MoveIt providing the motion planning layer.</p>
+<p>Qualcomm has stated that MoveIt will remain open-source. For the ROS community, this is the critical question. MoveIt&#39;s open-source status is what made it ubiquitous. If Qualcomm maintains it as a genuinely community-driven project — similar to how NVIDIA contributes <code>rosidl::Buffer</code> upstream to ROS 2 — the acquisition could bring additional resources to MoveIt development. If MoveIt becomes a vehicle for Qualcomm-specific hardware differentiation, the community may fragment.</p>
+<h2>Why This Matters</h2>
+<p>These three announcements, occurring within 48 hours of each other, reflect a structural shift in robotics software.</p>
+<p><strong>Robotics development is becoming agent-assisted.</strong> NVIDIA&#39;s introduction of AI agent skills for robotics development is not a minor feature addition. Robotics has historically been one of the most painful software engineering domains — characterized by complex toolchain setup, hardware-software integration challenges, and long iteration cycles. If AI agents can reliably handle environment setup, model fine-tuning, and routine code migration tasks, the productivity gain for robotics developers could be substantial. The key word is &quot;reliably&quot; — NVIDIA&#39;s skills are early, and their effectiveness in production environments remains to be independently evaluated.</p>
+<p><strong>Open source is becoming the default for robotics infrastructure.</strong> Intrinsic Core&#39;s release under Apache 2.0 means that the core capabilities for industrial robot manipulation — control, motion planning, grasp planning, pose estimation — are now available without licensing fees. Combined with ROS 2 itself being open-source, this creates a viable path for small teams to build production robotics applications without proprietary software dependencies. For startups and educational institutions, especially in markets where commercial robotics software is prohibitively expensive, this matters.</p>
+<p><strong>Hardware companies are competing for the developer ecosystem.</strong> NVIDIA, Qualcomm, and Google (through Intrinsic) are all investing in open-source robotics tooling — but each tied to their own hardware or platform interests. NVIDIA&#39;s Isaac ROS is optimized for Jetson. Qualcomm&#39;s acquisition of PickNik points toward Dragonwing and Arduino integration. Intrinsic Core works with ROS but highlights NVIDIA FoundationPose. The competition is healthy for the ecosystem, but developers should understand that the open-source contributions are strategic, not philanthropic.</p>
+<h2>What This Means for Educators and Makers</h2>
+<p>For STEAM educators and robotics programs, Isaac ROS 5.0 and Intrinsic Core change the practical landscape in several ways.</p>
+<p>First, the barrier to teaching real robotics software is lower. ROS 2 has always been free, but setting up a working ROS environment with perception, motion planning, and simulation has been a semester-long exercise in configuration. NVIDIA&#39;s agent-ready setup skills and Intrinsic Core&#39;s pre-configured capabilities reduce this friction. A course that previously spent weeks on environment setup can spend that time on robotics concepts.</p>
+<p>Second, the gap between educational robotics and production robotics is narrowing. Platforms like the <a href="/blog/microduck-open-source-biped-robot-reinforcement-learning/">open-source Microduck biped robot</a> and the <a href="/blog/arduino-ventuno-q-edge-ai-robotics-nvidia-jetson-alternative/">Arduino Ventuno Q</a> already bring real robotics capabilities to educational price points. With Intrinsic Core providing production-grade motion planning and grasp planning as open-source libraries, students can now work with the same tools used in industrial deployments — not simplified educational substitutes.</p>
+<p>Third, for programs building on NVIDIA Jetson (as many university robotics labs do), Isaac ROS 5.0&#39;s support for scalable compute from Jetson Orin Nano to Jetson Thor means a single software stack can serve both introductory courses and advanced research projects. Students can start on affordable Orin Nano hardware and move to Thor for thesis-level work without rewriting their code.</p>
+<h2>Product Builder&#39;s Perspective</h2>
+<p>For product teams building robotics applications, the ROSCon 2026 announcements warrant three strategic considerations.</p>
+<p><strong>Evaluate your hardware-software coupling.</strong> Isaac ROS 5.0 is free and open-source, but it is optimized for NVIDIA Jetson. Intrinsic Core is hardware-agnostic in principle, but its FoundationPose integration assumes NVIDIA GPUs. Qualcomm&#39;s MoveIt acquisition signals intent to optimize for Dragonwing. If your product roadmap involves multiple hardware platforms, maintain a clear separation between hardware-agnostic ROS components and hardware-specific acceleration layers. The <code>rosidl::Buffer</code> abstraction is a good model — it provides a standard interface with CUDA as one backend, but the interface itself is hardware-neutral.</p>
+<p><strong>Experiment with agent-assisted development now.</strong> The productivity gains from AI-assisted robotics development are currently concentrated in setup and configuration tasks. These are exactly the tasks that consume disproportionate time in small teams. Testing NVIDIA&#39;s setup skills or the <code>migrate-node-to-rosidl-buffer</code> skill on a real project will give your team a concrete sense of where agent assistance works and where it falls short. The tools are free and open-source — the cost of experimentation is time.</p>
+<p><strong>Watch the Qualcomm-MoveIt integration closely.</strong> If you are building on ROS 2 with MoveIt for motion planning, Qualcomm&#39;s acquisition creates both opportunity and risk. Opportunity: MoveIt may receive more engineering resources and tighter integration with affordable hardware (Arduino boards with Qualcomm silicon). Risk: development priorities may shift toward Qualcomm-specific features. If MoveIt is critical to your product, contributing upstream — or at minimum tracking the project&#39;s governance closely — is prudent.</p>
+<h2>What to Watch Next</h2>
+<ul>
+<li><strong>ROS 2 Lyrical adoption</strong>: Isaac ROS 5.0&#39;s support for ROS 2 Lyrical provides a migration path, but the ROS community&#39;s transition from Iron/Jazzy to Lyrical will take time. Watch for adoption patterns and compatibility issues in the coming months.</li>
+<li><strong>Intrinsic Core community growth</strong>: The success of Intrinsic Core depends on community adoption. Watch the GitHub repository for contributor counts, issue activity, and ecosystem integrations beyond the initial launch partners.</li>
+<li><strong>MoveIt governance post-acquisition</strong>: Qualcomm has committed to keeping MoveIt open-source. Watch for any changes to the project&#39;s governance model, contribution process, or technical roadmap after the acquisition closes.</li>
+<li><strong>Agent skill maturity</strong>: NVIDIA&#39;s agent skills are first-generation. Watch for independent evaluations, community-built skills, and benchmarks comparing agent-assisted development to manual workflows.</li>
+<li><strong>NVIDIA GTC Berlin (October 20-22, 2026)</strong>: NVIDIA has announced that registration is open for GTC Berlin, where additional robotics announcements are likely.</li>
+</ul>
+<h2>Conclusion</h2>
+<p>ROSCon 2026 may mark the point where robotics software development began to look fundamentally different. AI agents are now part of the robotics development workflow — not as a novelty, but as packaged skills for setup, perception tuning, and code migration. The core infrastructure for industrial robotics manipulation is now open-source under permissive licenses. And the hardware companies that shape the ecosystem are competing through open-source contributions rather than proprietary lock-in.</p>
+<p>For builders, educators, and startups — especially in markets like Pakistan where access to commercial robotics software has been a barrier — these changes create real opportunities. The tools are free. The documentation is improving. The question is whether the community will adopt and extend them fast enough to realize the potential.</p>
+<p><strong>What robotics development tasks would you most want an AI agent to handle?</strong> The answer to that question will shape which of these tools succeeds.</p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://blogs.nvidia.com/blog/isaac-ros-5-0/">NVIDIA Blog: Isaac ROS 5.0 Advances Agentic, Open Source Robotics Development</a> (September 22, 2026)</li>
+<li><a href="https://developer.nvidia.com/blog/accelerating-a-ros-2-node-with-an-ai-agent-and-nvidia-isaac-ros/">NVIDIA Technical Blog: Accelerating a ROS 2 Node with an AI Agent and NVIDIA Isaac ROS</a> (September 22, 2026)</li>
+<li><a href="https://www.therobotreport.com/isaac-ros-5-0-brings-ai-agents-robotics-development/">The Robot Report: Isaac ROS 5.0 brings AI agents to robotics development</a> (September 22, 2026)</li>
+<li><a href="https://intrinsic.ai/blog/posts/introducing-intrinsic-core">Intrinsic Blog: Introducing Intrinsic Core</a> (September 22, 2026)</li>
+<li><a href="https://www.qualcomm.com/news/releases/2026/09/qualcomm-to-acquire-picknik-to-advance-the-future-of-open-roboti">Qualcomm Press Release: Qualcomm to Acquire PickNik to Advance the Future of Open Robotics and Physical AI</a> (September 23, 2026)</li>
+<li><a href="https://github.com/intrinsic/intrinsic">Intrinsic Core on GitHub</a></li>
+</ul>
+]]></content:encoded>
+      <category>robotics</category>
+    <category>NVIDIA</category>
+    <category>ROS</category>
+    <category>AI-agents</category>
+    <category>open-source</category>
+    <category>robotics-software</category>
+    </item>
     <item>
       <title>OpenAI Halts Training Again: What the Transluce Report on AI Agents Hacking Government Sites Means for Product Teams</title>
       <link>https://shamylmansoor.com/blog/openai-halts-training-ai-agents-hacking-government-sites</link>
