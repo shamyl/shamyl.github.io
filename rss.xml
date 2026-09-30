@@ -5,13 +5,161 @@
     <link>https://shamylmansoor.com/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Tue, 29 Sep 2026 04:06:51 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 30 Sep 2026 04:10:04 GMT</lastBuildDate>
     <atom:link href="https://shamylmansoor.com/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamylmansoor.com/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamylmansoor.com/blog</link>
     </image>
+    <item>
+      <title>Running LLMs on ESP32-S3: How a 7-Node BitNet Cluster Brings Edge AI to Microcontrollers</title>
+      <link>https://shamylmansoor.com/blog/esp32-s3-bitnet-158-bit-llm-cluster-edge-ai-inference</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/esp32-s3-bitnet-158-bit-llm-cluster-edge-ai-inference</guid>
+      <pubDate>Wed, 30 Sep 2026 00:00:00 GMT</pubDate>
+      <description>A developer built a 7-node ESP32-S3 cluster that runs a 0.5B LLM using 1.58-bit BitNet quantization over an SPI daisy-chain, drawing 1.5 watts total. Here is what the architecture does, how it compares to other edge AI options, and what it means for makers, educators, and product teams.</description>
+      <content:encoded><![CDATA[<p>Running a large language model on seven ESP32-S3 microcontrollers sounds like a stunt — and to some extent, it is. But the project, published on GitHub by developer Low Zi Hong on September 26, 2026, demonstrates something with real implications: Microsoft&#39;s 1.58-bit BitNet quantization scheme makes transformer inference possible on hardware that costs less than a single restaurant meal. The cluster runs a pruned Qwen2-0.5B model across seven ESP32-S3 boards connected by an SPI daisy-chain, using ternary weights that pack three values — {-1, 0, +1} — into two bits each. Total power consumption during inference: approximately 1.5 watts.</p>
+<h2>In Brief</h2>
+<ul>
+<li>The ESP32-S3 LLM Cluster runs a vocabulary-pruned Qwen2-0.5B model across 7 ESP32-S3 microcontrollers using Microsoft&#39;s BitNet 1.58-bit ternary quantization</li>
+<li>One board acts as master (tokenizer, embedding, sampling); six compute nodes each handle 4 transformer layers, with all communication over an SPI daisy-chain</li>
+<li>The cluster draws approximately 1.5W during inference and 1.15W idle, with each node taking roughly 1.3 seconds per inference step</li>
+<li>Microsoft released BitNet b1.58 2B4T, the first open-source native 1-bit LLM at the 2-billion parameter scale, in April 2025 under an MIT license</li>
+<li>The ESP32-S3 project is open-source under MIT and includes assembly-optimized MAC operations for ternary arithmetic</li>
+<li>The project is a proof of concept, not a production system — the model is undertrained and produces semi-coherent output — but the architecture is scalable to larger models with more nodes</li>
+</ul>
+<h2>What BitNet 1.58-Bit Quantization Actually Does</h2>
+<p>Standard LLM weights are stored in 16-bit floating point (FP16 or BF16). A 0.5B parameter model at FP16 occupies roughly 1 GB of memory. That is far beyond what a microcontroller can hold.</p>
+<p>BitNet b1.58, introduced by Microsoft Research in February 2024, takes a radically different approach. Instead of storing weights as floating-point numbers, each weight is quantized to one of three values: -1, 0, or +1. This is called ternary quantization, and it requires only 1.58 bits per weight — the information-theoretic minimum for three states.</p>
+<p>The key insight from Microsoft&#39;s paper, <a href="https://arxiv.org/abs/2402.17764">&quot;The Era of 1-bit LLMs&quot;</a>, is that BitNet models are trained from scratch with ternary weights, not post-training quantized. A model that is trained to use ternary weights from the beginning learns to work within that constraint. Post-training quantization — converting a trained FP16 model to lower precision — loses information. Native 1-bit training preserves it.</p>
+<p>Microsoft followed up with the BitNet b1.58 2B4T Technical Report in April 2025, releasing the first open-source 2-billion parameter native 1-bit LLM trained on 4 trillion tokens. According to the <a href="https://arxiv.org/abs/2504.12285">technical report</a>, the model matches full-precision models of similar size on language understanding, mathematical reasoning, coding, and conversational benchmarks, while requiring substantially less memory and energy. The model weights are available on <a href="https://huggingface.co/microsoft/bitnet-b1.58-2B-4T">Hugging Face</a> under an MIT license.</p>
+<p>For the ESP32-S3 cluster, the implications are direct. A 0.5B parameter model with ternary weights occupies roughly 100 MB — still too much for a single ESP32-S3&#39;s 16 MB flash, but small enough to distribute across multiple boards.</p>
+<h2>How the ESP32-S3 Cluster Works</h2>
+<p>The architecture is a pipeline-parallel inference system. Seven ESP32-S3 boards are arranged in a daisy-chain, connected by high-speed SPI:</p>
+<p><strong>Master Node</strong> — Runs the BPE tokenizer, token embedding lookup (INT4 quantized, ~14 MB in flash), and the final LM head with greedy sampling. It sends hidden state vectors to the first compute node and receives the final output back.</p>
+<p><strong>Compute Nodes 1-6</strong> — Each node runs 4 transformer layers (24 total for Qwen2-0.5B). Every layer includes RMSNorm, 1.58-bit attention with RoPE, KV cache in PSRAM, and 1.58-bit MLP projections. The node receives a hidden state vector from the previous node, processes its 4 layers, and forwards the result to the next node via SPI.</p>
+<p>The communication protocol uses dual-channel SPI on each node: Channel A for transmitting (TX) and Channel B for receiving (RX). Each node&#39;s TX connects to the next node&#39;s RX, forming a chain. The master node also handles reset signaling and synchronization through separate GPIO pins.</p>
+<p>The firmware is built with ESP-IDF and includes hand-written assembly optimization. The file <code>bitlinear_forward.S</code> contains assembly-optimized multiply-accumulate operations specifically for 1.58-bit ternary arithmetic, using look-up tables for extreme optimization. This is not a toy implementation — it is a serious attempt to squeeze useful computation out of extremely constrained hardware.</p>
+<h3>Key Specifications</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Base model</td>
+<td>Qwen2-0.5B (pruned to 32K vocab from 151K)</td>
+</tr>
+<tr>
+<td>Architecture</td>
+<td>24-layer transformer decoder, GQA (14 Q-heads, 2 KV-heads)</td>
+</tr>
+<tr>
+<td>Weight precision</td>
+<td>1.58-bit ternary (linear layers) + INT4 (embeddings)</td>
+</tr>
+<tr>
+<td>Weight packing</td>
+<td>4 ternary weights per byte (2-bit packed)</td>
+</tr>
+<tr>
+<td>Layer memory</td>
+<td>~3.82 MB per layer</td>
+</tr>
+<tr>
+<td>Per-node flash</td>
+<td>~15.3 MB (4 layers, fits 16 MB flash)</td>
+</tr>
+<tr>
+<td>Master flash</td>
+<td>~14.0 MB (INT4 embeddings) + 64 KB (final norm)</td>
+</tr>
+<tr>
+<td>Context window</td>
+<td>512 tokens (dynamic KV cache in PSRAM)</td>
+</tr>
+<tr>
+<td>Total power (inference)</td>
+<td>~1.5W across all 7 boards</td>
+</tr>
+<tr>
+<td>Total power (idle)</td>
+<td>~1.15W</td>
+</tr>
+<tr>
+<td>Per-node inference time</td>
+<td>~1.3 seconds</td>
+</tr>
+<tr>
+<td>License</td>
+<td>MIT</td>
+</tr>
+</tbody></table>
+<h2>What the Output Actually Looks Like</h2>
+<p>This is where expectations need calibration. The project&#39;s own documentation is refreshingly honest about the model&#39;s quality. The <code>qat_158.py</code> quantization-aware training script &quot;just partially trains&quot; the model, with loss reaching around 8.0 — a level where the model produces semi-random tokens. The README notes that the output can get &quot;stuck repeating the same word/token&quot; and that this is expected behavior for an under-trained model with greedy sampling.</p>
+<p>This is not a failure of the architecture. It is a failure of training compute. The developer notes that with a stronger computer and more training, the model could produce coherent output. The architecture — distributed inference, SPI communication, ternary arithmetic — works. What is missing is sufficient training to make the model useful, which is a software problem, not a hardware one.</p>
+<p>The important distinction: this project proves that 1.58-bit LLM inference is architecturally feasible on ESP32-S3 hardware. Making it produce useful output is a training problem that someone with more compute can solve.</p>
+<h2>How It Compares to Other Edge AI Options</h2>
+<p>The ESP32-S3 cluster is not the only way to run AI models at the edge, and it is important to understand where it sits in the landscape.</p>
+<p><strong>Single-board computers (Orange Pi 5, Raspberry Pi 5).</strong> An Orange Pi 5 Max with an RK3588 chip costs $75-$95 and can run Qwen2.5-0.5B at approximately 12 tokens per second via llama.cpp on CPU, according to a community test referenced in the <a href="https://news.ycombinator.com/item?id=49884625">Hacker News discussion</a>. This is a more practical path for anyone who actually wants to run a useful LLM at the edge. The ESP32-S3 cluster&#39;s per-node inference time of 1.3 seconds means it is dramatically slower — likely producing a token every several seconds at best.</p>
+<p><strong>Dedicated edge AI boards.</strong> Boards like the <a href="https://shamylmansoor.com/blog/arduino-ventuno-q-edge-ai-robotics-nvidia-jetson-alternative/">Arduino Ventuno Q</a> ($299 with 40 TOPS NPU) or NVIDIA Jetson Orin Nano ($199-$499) offer orders of magnitude more AI compute. The Ventuno Q ships with pre-installed Qwen 3 4B and Qwen 2.5 7B VLM running offline — models that are actually useful for real applications.</p>
+<p><strong>ESP32-S3 with smaller models.</strong> Running a much smaller model — a few million parameters for keyword spotting or intent classification — on a single ESP32-S3 is already practical. The ESP32-S3 has vector instructions and 512 KB SRAM, which is sufficient for tiny models. The cluster approach is specifically for running models that do not fit on a single board.</p>
+<p>The ESP32-S3 cluster&#39;s value is not in performance. It is in demonstrating the lower bound of what is possible. If you can run a 0.5B transformer on $35 worth of microcontrollers, the same architecture scales to larger models with more nodes. The developer explicitly notes this: &quot;if you have 100 of them then it will be 400 layers of model,&quot; though inference time scales linearly.</p>
+<h2>Why 1.58-Bit Quantization Matters for Edge AI</h2>
+<p>The ESP32-S3 has 512 KB of SRAM and 16 MB of flash storage. A standard FP16 0.5B model needs roughly 1 GB. Even an INT8 quantized version needs ~250 MB. Neither fits on a single microcontroller, and both are challenging to distribute across multiple boards because of the memory bandwidth bottleneck.</p>
+<p>Ternary quantization changes the math. At 1.58 bits per weight, the same 0.5B model occupies roughly 100 MB. Split across 7 boards, each board holds about 15 MB — which fits within the ESP32-S3&#39;s 16 MB flash with room for firmware and embeddings. The weight packing is also efficient: 4 ternary weights fit in a single byte (2 bits each), which maps cleanly to byte-aligned SIMD operations on the ESP32-S3&#39;s Xtensa LX7 processor.</p>
+<p>Microsoft&#39;s <a href="https://github.com/microsoft/BitNet">bitnet.cpp</a> inference framework, described in a <a href="https://arxiv.org/abs/2502.11880">February 2025 paper</a>, provides optimized CPU kernels for 1.58-bit models. The ESP32-S3 project builds on the same concepts but implements its own kernels in assembly, because bitnet.cpp targets x86 (AVX2) and ARM (NEON) platforms — not Xtensa.</p>
+<p>For product teams, the practical takeaway is that 1.58-bit quantization is not just an academic curiosity. It is a real path to running meaningful models on hardware that costs single-digit dollars per unit. For applications where latency is not critical — periodic sensor data interpretation, offline keyword recognition, simple classification tasks — this approach could eventually replace cloud API calls with on-device inference.</p>
+<h2>What This Means for Education and Makers</h2>
+<p>For STEAM educators and makers, this project is a teaching tool. It makes the internal workings of a language model tangible in a way that API calls cannot.</p>
+<p>Each board visibly corresponds to a section of the model. You can hold the tokenizer in one hand and four transformer layers in another. The SPI daisy-chain is a physical manifestation of the forward pass — data flows from board to board, each one contributing a layer of computation, and the result comes back to the master. For a student learning how transformers work, this is more instructive than any diagram.</p>
+<p>The project also teaches practical skills that connect directly to product engineering: embedded firmware development with ESP-IDF, SPI communication protocols, memory partitioning, assembly optimization, and quantization-aware training. These are the same skills needed to build <a href="https://shamylmansoor.com/blog/mbk-geyser-monitor-esp32-railway/">IoT devices</a> and <a href="/work/buddy-bot">educational robotics platforms</a> — the kind of hands-on hardware work that STEAM education is supposed to enable.</p>
+<p>For schools and makerspaces in Pakistan and other developing markets, the cost matters. Seven ESP32-S3 dev boards cost roughly $35-$55 total. Add jumper wires, a power supply, and a USB cable, and the complete hardware bill is under $70. That is accessible for a well-equipped school lab or a makerspace, and it provides a platform for experimenting with real AI inference — not simulation, not cloud APIs, but actual model execution on physical hardware.</p>
+<h2>Implications for Product Teams</h2>
+<p>For product teams building edge AI systems, the ESP32-S3 cluster is a reminder that the cost curve for on-device AI is bending downward faster than most roadmaps account for.</p>
+<p>Consider a product that needs to interpret natural language commands offline — a <a href="/work/robosim">robotics platform</a> that accepts voice instructions, or an IoT device that classifies user queries. Today, the practical approach is either a more powerful SoC (like the RK3588 or a Qualcomm IQ8) or a cloud API call. The 1.58-bit approach suggests a third path: a cluster of cheap microcontrollers running a ternary-quantized model.</p>
+<p>This is not practical today. The inference speed is too slow, the model quality is insufficient, and the engineering effort to integrate this into a product is substantial. But the trajectory matters. Microsoft&#39;s BitNet b1.58 2B4T model — a 2-billion parameter model that matches full-precision performance on standard benchmarks — was released 18 months after the original BitNet paper. The ESP32-S3 cluster was built 7 months after that. The gap between &quot;research paper&quot; and &quot;hacker running it on $35 of hardware&quot; is shrinking.</p>
+<p>For CTOs and product managers, the question to ask is: what happens to your edge AI architecture when the cost of on-device inference drops by 10x? If your current plan requires a $199 Jetson module per unit, and a $10 cluster of microcontrollers could handle the same workload in two years, how does that change your bill of materials and your deployment model?</p>
+<h2>Limitations and Open Questions</h2>
+<p>Several limitations are worth stating clearly.</p>
+<p><strong>Inference speed.</strong> At 1.3 seconds per node per step, generating a single token likely takes several seconds across the full pipeline. This is far too slow for interactive applications. The SPI daisy-chain bandwidth and the ESP32-S3&#39;s clock speed (240 MHz) are fundamental constraints.</p>
+<p><strong>Model quality.</strong> The project&#39;s model is undertrained and produces semi-random output. The architecture is sound, but the training pipeline (<code>qat_158.py</code>) needs significantly more compute to produce a useful model. This is a solvable problem, but solving it requires resources beyond what a single developer with an ESP32 collection can muster.</p>
+<p><strong>Scalability vs. latency.</strong> The developer notes that scaling to more nodes (more layers) is possible, but &quot;the time of inference will linearly grow while you scale up.&quot; This is the fundamental limitation of pipeline parallelism on slow interconnects. Each token requires a full forward pass through every node, and the SPI daisy-chain serializes that process.</p>
+<p><strong>Communication bottleneck.</strong> As one Hacker News commenter noted, &quot;It&#39;s scaling the communication that becomes hard. In this project they daisy-chain SPI. I don&#39;t believe that would scale very far.&quot; The hidden state vector for Qwen2-0.5B is 896 dimensions at FP32 — roughly 3.5 KB per transfer. At SPI speeds of 40 MHz, each transfer takes under a millisecond, but this adds up across 7 nodes and becomes worse with more.</p>
+<p><strong>Competition from single-board computers.</strong> An Orange Pi 5 Max at $75 can run the same model class at 12 tokens per second. For any practical application, this is a better choice. The ESP32 cluster&#39;s value is pedagogical and experimental, not commercial.</p>
+<h2>What to Watch Next</h2>
+<ul>
+<li><strong>BitNet model ecosystem.</strong> Microsoft is actively expanding BitNet: the GitHub repository shows releases for <a href="https://huggingface.co/microsoft/bitnet-embedding-0.6b">embedding models</a>, <a href="https://github.com/microsoft/VibeASR.cpp">ASR models (VibeASR.cpp)</a>, and GPU inference kernels as recently as July 2026. As more BitNet-trained models become available, the ecosystem for edge inference will grow.</li>
+<li><strong>Dedicated 1-bit AI hardware.</strong> Microsoft&#39;s original BitNet b1.58 paper explicitly calls for &quot;designing specific hardware optimized for 1-bit LLMs.&quot; If chip manufacturers build microcontrollers or NPUs with native ternary arithmetic support, the ESP32-S3 cluster&#39;s assembly hacks become hardware-native operations.</li>
+<li><strong>Community training efforts.</strong> The ESP32-S3 project&#39;s main weakness is its undertrained model. A community effort to properly train a 0.5B BitNet model for edge deployment — with adequate compute and data — would make this architecture immediately more useful.</li>
+<li><strong>Integration with educational robotics.</strong> For platforms like <a href="/work/learnosteam">LearnOSTEAM</a> and <a href="/work/buddy-bot">Buddy Bot</a>, a cluster of ESP32-S3 boards running a small LLM could enable natural language interaction with educational robots — voice commands, question answering, or code generation — entirely on-device.</li>
+</ul>
+<h2>Conclusion</h2>
+<p>The ESP32-S3 BitNet cluster is not going to replace your GPU. It is not going to run ChatGPT on your desk. What it does is prove a point: the hardware requirements for running a language model are not fixed. Ternary quantization, distributed inference, and cheap microcontrollers combine to create a path toward AI that runs on almost anything, almost anywhere, for almost nothing. For educators, makers, and product teams thinking about what edge AI looks like in two or three years, this project is worth studying.</p>
+<p>The full project, including firmware source code, wiring diagrams, and flashing instructions, is available on <a href="https://github.com/Low-Zi-Hong/ESP32s3-LLM-Cluster">GitHub</a> under an MIT license.</p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://github.com/Low-Zi-Hong/ESP32s3-LLM-Cluster">ESP32-S3 LLM Cluster — GitHub repository (Low Zi Hong)</a></li>
+<li><a href="https://arxiv.org/abs/2504.12285">BitNet b1.58 2B4T Technical Report — arXiv:2504.12285</a></li>
+<li><a href="https://arxiv.org/abs/2402.17764">The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits — arXiv:2402.17764</a></li>
+<li><a href="https://arxiv.org/abs/2310.11453">BitNet: Scaling 1-bit Transformers for Large Language Models — arXiv:2310.11453</a></li>
+<li><a href="https://arxiv.org/abs/2502.11880">Bitnet.cpp: Efficient Edge Inference for Ternary LLMs — arXiv:2502.11880</a></li>
+<li><a href="https://github.com/microsoft/BitNet">Microsoft BitNet repository (bitnet.cpp)</a></li>
+<li><a href="https://huggingface.co/microsoft/bitnet-b1.58-2B-4T">BitNet b1.58 2B4T model weights — Hugging Face</a></li>
+<li><a href="https://www.espressif.com/en/products/socs/esp32-s3">ESP32-S3 product page — Espressif Systems</a></li>
+<li><a href="https://news.ycombinator.com/item?id=49884625">Hacker News discussion (September 28, 2026)</a></li>
+</ul>
+]]></content:encoded>
+      <category>edge-ai</category>
+    <category>ESP32</category>
+    <category>BitNet</category>
+    <category>LLM</category>
+    <category>hardware</category>
+    <category>quantization</category>
+    <category>open-source</category>
+    </item>
     <item>
       <title>NVIDIA Isaac ROS 5.0: AI Agents Now Build Robots Alongside Developers</title>
       <link>https://shamylmansoor.com/blog/nvidia-isaac-ros-5-0-ai-agents-robotics-development-roscon-2026</link>
