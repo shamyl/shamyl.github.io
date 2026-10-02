@@ -5,13 +5,116 @@
     <link>https://shamylmansoor.com/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Thu, 01 Oct 2026 04:09:09 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 02 Oct 2026 04:05:09 GMT</lastBuildDate>
     <atom:link href="https://shamylmansoor.com/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamylmansoor.com/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamylmansoor.com/blog</link>
     </image>
+    <item>
+      <title>OpenDLSS-NR: What an Open-Source Vulkan Port of DLSS 5 Neural Rendering Means for Game Graphics</title>
+      <link>https://shamylmansoor.com/blog/opendlss-nr-vulkan-dlss5-neural-rendering-open-source</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/opendlss-nr-vulkan-dlss5-neural-rendering-open-source</guid>
+      <pubDate>Fri, 02 Oct 2026 00:00:00 GMT</pubDate>
+      <description>A developer has reverse-engineered NVIDIA&apos;s DLSS 5 neural rendering network into an open-source Vulkan implementation that is bit-exact against the original. Here is what it means for game developers, engine builders, and anyone working with real-time graphics.</description>
+      <content:encoded><![CDATA[<p>On September 30, 2026, a developer operating under the GitHub username maanHimself published OpenDLSS-NR, a Vulkan reimplementation of NVIDIA&#39;s DLSS 5 Neural Rendering network that achieves bit-exact parity with the original. The project reproduces the same 71-block Swin/ViT neural network that powers NVIDIA&#39;s DLSS-NR build 310.8.0, running FP8 on tensor cores, with all 75 block boundaries matching byte for byte. It also includes a WebGPU port that runs the same network in a browser without tensor cores. The project is licensed under MIT and has accumulated over 750 GitHub stars in its first two days. For game developers, engine builders, and anyone interested in how neural rendering is reshaping real-time graphics, this is one of the most significant open-source releases of the year.</p>
+<h2>In Brief</h2>
+<ul>
+<li>OpenDLSS-NR was published on GitHub on September 20, 2026, and reached the Hacker News front page on September 30, 2026, accumulating over 750 stars and 117 comments within two days</li>
+<li>The project reproduces NVIDIA&#39;s DLSS 5 neural rendering network — a 71-block U-net of shifted-window transformer blocks with a global ViT at the bottom, 141 MiB of weights, running FP8 (E4M3) activations with FP16 accumulation</li>
+<li>The implementation is bit-exact: all 75 block boundaries match the original byte for byte, not just the final output image</li>
+<li>A WebGPU port runs the same network in a browser at 72 ms per frame at 512x512, compared to 2.8 ms at 768x768 on an RTX 4070 SUPER via the native Vulkan path</li>
+<li>The project does not include model weights — users must supply their own, and nothing in the repository produces them</li>
+<li>NVIDIA describes DLSS 5 as &quot;the first productized generative rendering model to operate in real time,&quot; running on GeForce RTX 50 Series GPUs</li>
+<li>The release makes the architecture of neural rendering transparent and reproducible outside NVIDIA&#39;s proprietary stack for the first time</li>
+</ul>
+<h2>What DLSS 5 Actually Does</h2>
+<p>To understand why OpenDLSS-NR matters, it helps to understand what DLSS 5 does differently from its predecessors. According to <a href="https://research.nvidia.com/labs/adlr/DLSS5/">NVIDIA&#39;s research page</a>, DLSS 5 is &quot;a real-time generative rendering stage for interactive graphics that complements conventional rendering with appearance priors learned from real-world visual data.&quot;</p>
+<p>Previous DLSS versions — DLSS 1 through 4 — were reconstruction technologies. They took a lower-resolution or lower-sample-count rendered frame and used machine learning to approximate what a higher-budget render would look like. The output was still fundamentally a reconstruction of what the renderer produced, just sharper and more efficient.</p>
+<p>DLSS 5 changes the approach. Instead of reconstructing, it generates the final displayed appearance using a one-step pixel-space diffusion model conditioned on the rendered frame, engine motion vectors, carried temporal state, and artistic-direction values. NVIDIA calls this &quot;3D-guided neural rendering&quot; — the model learns broad appearance priors from real-world visual data and synthesizes complex effects like subsurface scattering in skin and light scattering through foliage that are difficult to achieve with traditional real-time rendering techniques.</p>
+<p>Critically, DLSS 5 is not an upscaler. Input and output are the same resolution. The network re-renders the frame the engine already drew, generating detail from injected noise and adjusting tone, structure, and skin under a style setting. NVIDIA says it is &quot;the first DLSS technology to generate the final displayed appearance rather than reconstruct a higher-cost reference output from the conventional renderer.&quot;</p>
+<p>DLSS 5 runs locally on GeForce RTX 50 Series GPUs as a rendering stage within existing game pipelines. NVIDIA&#39;s full technical report is available as a <a href="https://research.nvidia.com/labs/adlr/DLSS5/files/DLSS5_Report.pdf">PDF on their research site</a>.</p>
+<h2>What OpenDLSS-NR Reproduces</h2>
+<p>The <a href="https://github.com/maanHimself/OpenDLSS-NR">OpenDLSS-NR repository</a> contains a complete reimplementation of the DLSS-NR network architecture. According to the project&#39;s documentation, here is what it includes:</p>
+<p><strong>The network graph.</strong> A U-net of shifted-window transformer blocks with a global ViT at the bottom: 71 blocks over six pooling levels. The model takes one rendered frame (an LDR proxy, three lanes of Gaussian noise, the previous frame&#39;s output reprojected, and five conditioning scalars) and produces four f32 channels per pixel: an RGB residual and one temporal-blend logit.</p>
+<p><strong>Two implementation routes.</strong> The reference route uses GLSL kernels with cooperative-matrix FP8 GEMMs, fused QKV + window attention, expert MLP, and global attention. The fast route uses Python-generated PTX (parallel thread execution) kernels that emit <code>mma.sync</code> E4M3 instructions with f16 accumulation, <code>cp.async</code> rings, and barrier-free chaining through device counters.</p>
+<p><strong>A WebGPU port.</strong> Located in <code>ports/browser-webgpu/</code>, this is a second, independent implementation that runs the same network in a browser — without tensor cores, without FP8, and without fusion between blocks. The exactness comes from the specification, not the hardware. At 512x512, it runs at 72 ms per frame, compared to 2.7 ms for the native path at 768x768 on an RTX 4070 SUPER.</p>
+<p><strong>A demo application.</strong> The network runs inside a patched version of Google&#39;s Filament rendering engine, with glTF scene support and ImGui controls, letting users toggle neural rendering on and off in real time.</p>
+<p><strong>Bit-exactness verification.</strong> The <code>parity</code> tool compares the implementation against recorded captures of the original DLSS-NR. Verdicts are bit-exact (the pass), equal only up to the sign of zero (a failure), within one code (8-bit capture only), or a mismatch.</p>
+<h2>Performance Numbers</h2>
+<p>The project reports performance figures on an RTX 4070 SUPER, measuring the whole network per frame as a minimum over 40 frames across 241 dispatches:</p>
+<table>
+<thead>
+<tr>
+<th>Resolution</th>
+<th>Frame Time</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>768x768</td>
+<td>2.8 ms</td>
+</tr>
+<tr>
+<td>1920x1080</td>
+<td>7.8 ms</td>
+</tr>
+<tr>
+<td>2560x1440</td>
+<td>12.6 ms</td>
+</tr>
+<tr>
+<td>3840x2160</td>
+<td>29.3 ms</td>
+</tr>
+</tbody></table>
+<p>At 4K, 29.3 ms translates to approximately 34 frames per second for the neural rendering pass alone — within the budget of a 30 FPS game but tight for 60 FPS targets. At 1080p, 7.8 ms leaves comfortable headroom for the rest of the rendering pipeline at 60 FPS. The project notes that the GPU alternates between two clock states under sustained load, so medians run a few percent higher than the reported minima.</p>
+<p>The WebGPU port&#39;s 72 ms at 512x512 is not viable for real-time use, but it serves a different purpose: proving that the network&#39;s exactness is a property of the specification, not the hardware. This has implications for portability — the same network could theoretically run on any platform that supports WebGPU, including mobile devices and non-NVIDIA GPUs, albeit at much lower performance.</p>
+<h2>What Is Not Included: The Weights Question</h2>
+<p>The most important limitation of OpenDLSS-NR is stated clearly in the README: &quot;You supply the weights.&quot; The repository does not include the trained model weights, and nothing in it produces them. The <code>nr::Model</code> loader reads a <code>manifest.json</code> file describing the weight layout, but the actual 141 MiB of E4M3 weights must come from elsewhere.</p>
+<p>This is a deliberate choice. The weights are NVIDIA&#39;s intellectual property, trained on their data with their compute infrastructure. Distributing them would constitute clear infringement. By publishing only the architecture and inference code under MIT, the project stays on the legal side of reverse-engineering — the implementation is original code that reproduces the same functional behavior, but it does not distribute NVIDIA&#39;s trained model.</p>
+<p>The practical implication is that OpenDLSS-NR is primarily a research and educational tool, not a drop-in replacement for DLSS 5. To actually use it for rendering, you would need access to the original weights, which means owning an RTX 50 Series GPU with DLSS 5 installed and extracting them — a legally murky proposition. The project&#39;s value lies in making the architecture transparent and verifiable, not in providing a free alternative to NVIDIA&#39;s product.</p>
+<h2>Why This Matters for Game Developers</h2>
+<p>For game developers, OpenDLSS-NR matters in several ways:</p>
+<p><strong>Architecture transparency.</strong> DLSS 5 has been a black box since its announcement. Developers integrate it via NVIDIA&#39;s SDK, but they cannot inspect the network, understand why it produces certain results, or debug failures. OpenDLSS-NR makes the full graph — 71 blocks, six pooling levels, the attention mechanisms, the conditioning inputs — visible and modifiable. The project&#39;s <a href="https://github.com/maanHimself/OpenDLSS-NR/blob/main/docs/network.md">network documentation</a> describes the graph in full.</p>
+<p><strong>Cross-platform implications.</strong> DLSS 5 is exclusive to RTX 50 Series GPUs. OpenDLSS-NR&#39;s Vulkan implementation could, in principle, run on any GPU that supports the required Vulkan extensions (<code>VK_KHR_cooperative_matrix</code>, <code>VK_NV_cooperative_matrix2</code>, <code>VK_EXT_shader_float8</code>, and <code>VK_NV_cuda_kernel_launch</code>). The WebGPU port demonstrates that the architecture is not fundamentally tied to NVIDIA hardware — it just runs much faster there because of the tensor cores and FP8 support.</p>
+<p><strong>Engine integration reference.</strong> The demo application shows how to integrate neural rendering into a real rendering pipeline — in this case, Google&#39;s Filament engine, patched for per-object motion vectors and a Vulkan interop hook. This is a practical reference for engine developers who want to understand what integrating a neural rendering stage involves: motion vector generation, temporal feedback loops, conditioning parameter wiring, and the Vulkan compute dispatch pattern.</p>
+<p><strong>Educational value.</strong> For anyone learning about real-time neural rendering — students, researchers, engine programmers — having a complete, documented, bit-exact reimplementation is invaluable. The code is MIT-licensed, the documentation is thorough, and the verification tooling ensures that what you are studying is accurate.</p>
+<h2>Why This Matters for Pakistan and Emerging Markets</h2>
+<p>NVIDIA&#39;s DLSS 5 requires an RTX 50 Series GPU — hardware that, at current pricing, is inaccessible to most gamers and developers in Pakistan and similar markets. The RTX 5070, the cheapest card in the lineup, launched at $549 in the US; in Pakistan, import duties and limited availability typically push prices 40-60% higher, putting it well above the budget of most local developers and students.</p>
+<p>OpenDLSS-NR&#39;s Vulkan and WebGPU implementations point toward a future where neural rendering techniques could work on a broader range of hardware. The WebGPU port, while too slow for real-time use today, demonstrates that the architecture is portable. As non-NVIDIA GPUs add support for lower-precision compute (FP8 equivalents, cooperative matrices) and as WebGPU matures, the same techniques could reach affordable hardware.</p>
+<p>For educators teaching game development in Pakistan — whether in university programs or through platforms like <a href="https://learnobots.com">LearnOBots&#39; LearnOSTEAM</a> — OpenDLSS-NR provides a teaching tool that does not require expensive hardware to understand. Students can study the network architecture, read the code, and run the WebGPU port in a browser. Understanding how neural rendering works is increasingly important for game developers, and this project makes that knowledge accessible without an RTX 50 Series card.</p>
+<h2>Product Builder&#39;s Perspective</h2>
+<p>From a product-building perspective, OpenDLSS-NR illustrates several patterns relevant to anyone building technology products:</p>
+<p><strong>Reverse-engineering as documentation.</strong> When a proprietary technology becomes important enough, the community will reverse-engineer it. This happened with file formats, protocols, and now neural networks. The existence of a bit-exact reimplementation effectively turns DLSS 5&#39;s architecture into public knowledge, even though the weights remain proprietary. Companies building proprietary ML systems should assume that architecture secrecy is temporary — the real moat is the training data, the compute, and the weights themselves.</p>
+<p><strong>Verification as credibility.</strong> The project&#39;s authors did not just claim parity — they built tooling (<code>parity</code>, <code>verify</code>) that proves it block by block, byte by byte. This is what makes the project credible. In a landscape where AI claims are often unverifiable, a bit-exactness gate is a strong signal of quality. For any product team building ML systems, investing in verification infrastructure early pays off.</p>
+<p><strong>The WebGPU strategy.</strong> Including a browser-based port was a smart decision. It makes the project accessible to anyone with a browser, regardless of GPU vendor. It also proves a structural property — that the network&#39;s exactness is in the specification, not the hardware. For product teams, this is a reminder that portability arguments are stronger when demonstrated with a working implementation, not just argued in principle.</p>
+<h2>What to Watch Next</h2>
+<ul>
+<li><strong>AMD and Intel response.</strong> Both companies have their own upscaling technologies (FSR and XeSS). Whether they pursue generative neural rendering similar to DLSS 5, and whether OpenDLSS-NR influences their approach, is worth watching.</li>
+<li><strong>Weight extraction and legal precedent.</strong> If someone extracts DLSS 5 weights from an RTX 50 Series GPU and distributes them, NVIDIA&#39;s legal response will set an important precedent for the reversibility of proprietary neural networks.</li>
+<li><strong>Non-NVIDIA Vulkan support.</strong> The required Vulkan extensions (<code>VK_KHR_cooperative_matrix</code>, <code>VK_EXT_shader_float8</code>) are NVIDIA-specific today. If AMD or Intel implement equivalent extensions, OpenDLSS-NR could run on their hardware — potentially with performance gaps, but architecturally functional.</li>
+<li><strong>Engine integration.</strong> Whether any open-source game engine — <a href="https://godotengine.org">Godot</a>, for example — incorporates neural rendering support based on this work. Godot&#39;s MIT license and growing community make it a natural candidate.</li>
+<li><strong>WebGPU maturation.</strong> As WebGPU implementations improve and browsers add compute shader optimizations, the browser port&#39;s performance will improve. Whether it can reach real-time rates on integrated graphics within a year or two is an open question.</li>
+</ul>
+<h2>Conclusion</h2>
+<p>OpenDLSS-NR does not democratize access to DLSS 5&#39;s results — without the weights, it cannot. What it does is something arguably more valuable: it makes the architecture of real-time generative neural rendering transparent, documented, and verifiable. For the first time, developers, researchers, and students can see exactly how NVIDIA&#39;s neural rendering pipeline works, block by block, without signing an NDA or buying a $549+ GPU. That knowledge will influence how engine developers, researchers, and competitors approach neural rendering in the coming years — and it sets a precedent for how proprietary AI systems can be understood even when their weights remain closed.</p>
+<p>The question for the game graphics community is not whether OpenDLSS-NR will replace DLSS 5. It will not. The question is what developers and researchers will build now that the architecture is open.</p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://github.com/maanHimself/OpenDLSS-NR">OpenDLSS-NR GitHub Repository</a> — maanHimself, published September 20, 2026, accessed October 2, 2026</li>
+<li><a href="https://research.nvidia.com/labs/adlr/DLSS5/">NVIDIA DLSS 5: Generative Neural Rendering — Research Page</a> — NVIDIA ADLR, published September 2026</li>
+<li><a href="https://research.nvidia.com/labs/adlr/DLSS5/files/DLSS5_Report.pdf">DLSS 5 Technical Report (PDF)</a> — NVIDIA ADLR</li>
+<li><a href="https://news.ycombinator.com/item?id=49906100">Hacker News Discussion</a> — 250 points, 117 comments, posted September 30, 2026</li>
+</ul>
+]]></content:encoded>
+      <category>DLSS</category>
+    <category>neural-rendering</category>
+    <category>Vulkan</category>
+    <category>open-source</category>
+    <category>game-graphics</category>
+    <category>NVIDIA</category>
+    </item>
     <item>
       <title>Stratasys vs Bambu Lab: What the $27.6M Patent Verdict Means for 3D Printing</title>
       <link>https://shamylmansoor.com/blog/stratasys-bambu-lab-patent-verdict-3d-printing</link>
