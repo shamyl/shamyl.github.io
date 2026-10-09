@@ -5,13 +5,98 @@
     <link>https://shamylmansoor.com/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Thu, 08 Oct 2026 04:03:36 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 09 Oct 2026 07:02:19 GMT</lastBuildDate>
     <atom:link href="https://shamylmansoor.com/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamylmansoor.com/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamylmansoor.com/blog</link>
     </image>
+    <item>
+      <title>Bevy 0.20: Real-Time Path Tracing, WESL Shaders, and What It Means for Open-Source Game Engines</title>
+      <link>https://shamylmansoor.com/blog/bevy-0-20-rust-game-engine-path-tracing-wesl-shaders</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/bevy-0-20-rust-game-engine-path-tracing-wesl-shaders</guid>
+      <pubDate>Fri, 09 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Bevy 0.20 ships with Solari path-traced rendering, DLSS 4.5 integration, WESL shader language adoption, mesh shaders, and a stabilized BSN scene system. Here is what matters for game developers, creative coders, and STEAM educators evaluating Rust-based game engines.</description>
+      <content:encoded><![CDATA[<p><img src="/images/bevy-0-20-zorah-solari.jpg" alt="The Zorah scene rendered in Bevy Solari showing ancient ruins with columns and vegetation under a sky, demonstrating real-time path-traced rendering">
+<em>Screenshot: The Zorah scene rendered in Bevy Solari, the engine&#39;s real-time path-traced renderer (official image from the <a href="https://bevy.org/news/bevy-0-20/">Bevy 0.20 release announcement</a>, sourced from the <a href="https://github.com/bevyengine/bevy-website">bevy-website repository</a> licensed under <a href="https://github.com/bevyengine/bevy-website/blob/main/LICENSE">MIT</a>)</em></p>
+<p>Bevy 0.20, released on October 8, 2026, is the most technically ambitious update the Rust-based game engine has shipped to date. With 227 contributors and 817 pull requests, the release introduces Solari — a real-time path-traced renderer with DLSS 4.5 integration — alongside WESL shader language adoption, mesh shader support, a stabilized scene system, and major improvements to 2D rendering. For anyone evaluating open-source game engines for creative coding, education, or indie development, Bevy is no longer just a promising experiment. It is building capabilities that proprietary engines have dominated for years.</p>
+<h2>In Brief</h2>
+<ul>
+<li>Bevy 0.20 was released on October 8, 2026, with 227 contributors and 817 pull requests</li>
+<li>Solari, Bevy&#39;s real-time path-traced renderer, now runs on macOS via Metal and supports DLSS 4.5 for denoising on NVIDIA GPUs</li>
+<li>Bevy has officially adopted WESL (Enhanced WebGPU Shading Language), replacing its custom WGSL dialect with a community standard</li>
+<li>Mesh shaders are now supported for advanced GPU-driven geometry, enabling techniques like procedural grass and voxel rendering</li>
+<li>The BSN scene system syntax has been stabilized, with a Ready event for composing hierarchical scenes</li>
+<li>Bevy&#39;s GitHub repository has approximately 48,700 stars and is licensed under Apache 2.0</li>
+<li>The Bevy Foundation is a registered 501(c)(3) nonprofit, funded entirely by community donations</li>
+</ul>
+<h2>Solari: Real-Time Path Tracing Comes to Bevy</h2>
+<p>The headline feature of Bevy 0.20 is the maturation of Solari, Bevy&#39;s real-time path-traced renderer. Path tracing — the same rendering technique used in animated films and increasingly in games via NVIDIA&#39;s RTX platform — simulates light transport physically, producing realistic reflections, shadows, and global illumination. Solari was introduced in a previous release, but 0.20 brings it substantially closer to production readiness.</p>
+<p>The improvements fall into three categories. First, image quality: Bevy&#39;s ReSTIR (Resampled Importance Sampling) implementation has been refined to produce mostly unbiased lighting, meaning the rendered result converges toward the physically correct solution. Moving objects no longer have shadows that lag behind, and reflections look less shimmery in motion.</p>
+<p>Second, performance: DLSS-RR (Ray Reconstruction) has been updated to version 4.5, significantly improving denoising quality. The Bevy team has made ReSTIR optional and off by default, recognizing that for many scenes, DLSS alone produces sufficient quality at lower performance cost. The Solari scene management code has been rewritten to be retained rather than rebuilt each frame, substantially reducing CPU overhead.</p>
+<p>Third, platform support: Solari now runs on macOS via Metal, though without a built-in denoiser — MetalFX Ray Reconstruction may address this in the future. This matters because it extends path-traced rendering beyond Windows and Linux NVIDIA users.</p>
+<p>According to the release notes, Solari now supports lighting from Atmosphere and EnvironmentMapLight components on cameras, in addition to DirectionalLight and emissive meshes. PointLight, SpotLight, and RectLight support is planned for future releases.</p>
+<h2>WESL: Bevy Adopts a Community Shader Standard</h2>
+<p><img src="/images/bevy-0-20-wesl-analyzer.png" alt="VS Code showing WESL shader code with syntax highlighting, inlay hints, and language server features enabled by wgsl-analyzer">
+<em>Screenshot: A Bevy fog shader with WESL syntax highlighting and language server features in VS Code (official image from the <a href="https://bevy.org/news/bevy-0-20/">Bevy 0.20 release announcement</a>, sourced from the <a href="https://github.com/bevyengine/bevy-website">bevy-website repository</a> licensed under <a href="https://github.com/bevyengine/bevy-website/blob/main/LICENSE">MIT</a>)</em></p>
+<p>One of the most strategically significant decisions in Bevy 0.20 is the adoption of WESL (Enhanced WebGPU Shading Language) as the engine&#39;s official shader language, replacing Bevy&#39;s custom WGSL dialect. WESL is a community standard that extends WGSL — the WebGPU Shading Language — with imports, conditional compilation, and package management.</p>
+<p>This matters for several reasons. First, it means Bevy shaders can use modular imports, splitting shader code into reusable files rather than relying on preprocessor directives. Second, it connects Bevy to a broader tooling ecosystem: the wgsl-analyzer language server provides syntax highlighting, go-to-definition, inlay hints, and code folding in any IDE that supports LSP. Third, it aligns Bevy with the wider WebGPU community, where WESL is being developed as a shared standard rather than a single engine&#39;s proprietary extension.</p>
+<p>For developers coming from engines with mature shader ecosystems — Unity&#39;s HLSL, Unreal&#39;s Material Editor, Godot&#39;s shading language — this brings Bevy closer to having a comparable developer experience. Custom shaders in the old Bevy WGSL dialect need to be translated to WESL and renamed from <code>.wgsl</code> to <code>.wesl</code>, though plain WGSL files without preprocessor directives continue to work.</p>
+<h2>Mesh Shaders: GPU-Driven Geometry</h2>
+<p>Bevy 0.20 introduces initial support for mesh shaders, an advanced rendering technique that replaces the traditional vertex shader pipeline with a compute-based approach. Mesh shaders allow geometry to be generated directly on the GPU and passed to the fragment shader without intermediary buffers, enabling techniques like meshlet-based rendering (using tools like meshoptimizer), procedural grass with dynamic level-of-detail, voxel rendering, and particle systems.</p>
+<p>The implementation includes a <code>MeshPipelineDescriptor</code> for defining mesh shader pipelines and integrates with Bevy&#39;s pipeline cache. The release notes describe this as &quot;initial base support&quot; — higher-level APIs and integration with Bevy&#39;s StandardMaterial are planned for future releases. Mesh shaders are not supported on web platforms, which limits their use to desktop and native applications.</p>
+<p>For creative coders and technical artists, mesh shaders open possibilities that were previously inaccessible in Bevy. Procedural terrain generation, GPU-instanced vegetation, and dynamic particle effects can all benefit from the GPU-driven approach, particularly in scenes with high geometric complexity.</p>
+<h2>BSN: Bevy&#39;s Scene System Stabilizes</h2>
+<p>BSN (Bevy Scene Notation), introduced in the previous release, received significant syntax improvements in 0.20 that the Bevy team says should &quot;largely nail down&quot; the format. The changes make scene declarations more readable by removing <code>template_value</code> wrappers, simplifying enum handling, and introducing <code>--</code> as an entity separator in lists.</p>
+<p>More importantly, BSN now supports a <code>Ready</code> event — an observable that fires when a scene entity and all its descendants have been fully spawned. This is a critical capability for building composable, hierarchical scenes where logic depends on the complete scene being loaded. It also enables Bevy logic to be layered on top of other scene representations like glTF files.</p>
+<p>The roadmap includes a <code>.bsn</code> asset format for loading scenes from files, enabling hot-reloadable, human-readable scene definitions — a prerequisite for the scene editor Bevy is building toward.</p>
+<h2>2D Rendering Catches Up</h2>
+<p>Bevy&#39;s 2D rendering has historically lagged behind its 3D capabilities. Bevy 0.20 closes several gaps. Sprite materials can now use custom shaders via the <code>MaterialExtension2d</code> trait, allowing developers to create custom visual effects for sprites — something that was previously only possible for 3D meshes. The <code>ExtendedMaterial2d</code> struct provides a 2D analog to 3D&#39;s <code>ExtendedMaterial</code>, enabling layered material composition.</p>
+<p>The sprite render backend has been unified with the 3D infrastructure, improving performance in many cases and simplifying future maintenance. For 2D game developers and creative coders working with sprites, this brings Bevy&#39;s 2D pipeline closer to feature parity with its 3D renderer.</p>
+<h2>Why This Matters</h2>
+<p>Bevy occupies a unique position in the game engine landscape. It is not competing with Unity or Unreal Engine for AAA studio adoption — those engines have decades of tooling, asset stores, and production pipelines behind them. Instead, Bevy is carving out a niche as the most capable fully open-source game engine built in Rust, with an architecture (Entity Component System) that appeals to developers who want data-driven design without the overhead of commercial engine licensing.</p>
+<p>The Solari renderer is the clearest signal of Bevy&#39;s ambition. Real-time path tracing was, until recently, exclusive to engines with deep NVIDIA partnerships or proprietary rendering pipelines. Bevy implementing this — and supporting DLSS 4.5 — means the gap between open-source and proprietary rendering is narrowing, even if it has not closed.</p>
+<p>The WESL adoption is strategically smart. By adopting a community standard rather than maintaining a custom dialect, Bevy benefits from shared tooling development and positions itself within the broader WebGPU ecosystem. This is the same calculus that led Godot to invest in its own shading language — but Bevy&#39;s choice to collaborate with an emerging standard rather than build alone is worth noting.</p>
+<h2>For Educators and Makers</h2>
+<p>For STEAM educators evaluating game engines for classroom use, Bevy presents a different value proposition than <a href="/blog/godot-game-engine-steam-education/">Godot, which remains the strongest choice for most educational settings</a>. Bevy requires Rust proficiency, which is a steeper on-ramp than Godot&#39;s GDScript. However, for university-level courses teaching systems programming, data-oriented design, or graphics programming, Bevy&#39;s ECS architecture and Rust foundation make it a compelling teaching tool.</p>
+<p>The ECS paradigm — where entities are collections of components, systems are functions that query and mutate those components, and the scheduler parallelizes execution automatically — is itself a valuable concept for students studying software architecture. It contrasts with the object-oriented inheritance hierarchies that most game engines use, and it reflects a broader industry shift toward data-oriented design.</p>
+<p>For creative coders interested in <a href="/blog/blender-5-2-lts-node-physics-creative-coding/">generative art and procedural graphics tools like Blender&#39;s Geometry Nodes</a>, Bevy&#39;s mesh shaders and WESL import system offer a programmatic alternative to node-based workflows. Writing shaders in code rather than connecting nodes provides more control and is more amenable to version control, at the cost of visual immediacy.</p>
+<p>For Pakistani technology teams and founders considering game development or interactive 3D, Bevy&#39;s Apache 2.0 license means no runtime fees, no revenue sharing, and no vendor lock-in — the same freedom that <a href="/blog/godot-game-engine-steam-education/">Godot&#39;s MIT license</a> provides. The Bevy Foundation&#39;s 501(c)(3) nonprofit status adds an additional layer of protection: the engine&#39;s development is governed by a charitable mission, not investor expectations.</p>
+<h2>What to Watch Next</h2>
+<p>The Bevy team&#39;s roadmap, outlined in the release notes, points toward several developments worth tracking:</p>
+<ul>
+<li><strong>BSN asset format</strong>: Human-readable, hot-reloadable scene files will make iteration faster and enable tool-driven authoring</li>
+<li><strong>Assets as Entities</strong>: Unifying Bevy&#39;s asset system with its ECS will simplify the mental model and enable assets to use ECS features like event observers</li>
+<li><strong>Remote inspector</strong>: The ability to browse and modify entities from external tools or other devices will be a foundation for debugging and editor tooling</li>
+<li><strong>HDR display support</strong>: Wider color gamut output for displays that support it</li>
+</ul>
+<p>The release cadence — 0.19 shipped June 2026, 0.20 shipped October 2026 — suggests roughly one major release per quarter, which is rapid for a community-funded project. The 227 contributors in this release, up from previous cycles, indicate that Bevy&#39;s community is growing alongside its capabilities.</p>
+<h2>Product Builder&#39;s Perspective</h2>
+<p>From a product-building perspective, Bevy 0.20 is interesting less for any single feature and more for what it reveals about how open-source infrastructure matures. The Bevy Foundation&#39;s nonprofit model — funded by donations, governed by a board, with paid maintainers — has produced a release cadence and feature trajectory that rivals commercial engines in specific domains. The decision to adopt WESL rather than maintain a custom dialect is the kind of architectural choice that compounds: less code to maintain, more tooling shared across the ecosystem, and a clearer story for new contributors.</p>
+<p>For teams building educational simulations or interactive 3D experiences — the kind of work that <a href="/work/robosim/">RoboSim</a> does for teaching programming through virtual robots — the question is not whether Bevy can match Unity or Unreal today. It cannot, in most dimensions. The question is whether Bevy&#39;s trajectory, licensing model, and architectural decisions make it a viable foundation for projects that need long-term sustainability without commercial dependencies. For certain categories — research tools, open educational software, creative coding platforms — that calculation is increasingly favorable.</p>
+<h2>Conclusion</h2>
+<p>Bevy 0.20 does not make Bevy a replacement for Unity or Unreal Engine. What it does is demonstrate that a community-funded, open-source game engine built in Rust can deliver real-time path tracing, adopt industry standards, and build a rendering pipeline that competes in the same conversation as proprietary tools. For creative coders, Rust developers, and educators teaching systems-level concepts, Bevy deserves serious evaluation — not as a future possibility, but as a capable engine available today.</p>
+<p>The open-source game engine space now has three meaningful options at different maturity levels: Godot for general-purpose game development and education, Bevy for Rust-native and data-oriented projects, and increasingly capable WebGPU tooling for browser-based creative coding. Each serves a different audience, and the competition between them is making all three better.</p>
+<hr>
+<p><em>Are you using Bevy, Godot, or another open-source engine for a project? I would like to hear what you are building and what tradeoffs you encountered. Reach out via the contact page.</em></p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://bevy.org/news/bevy-0-20/">Bevy 0.20 Release Announcement</a> — Official release notes, October 8, 2026</li>
+<li><a href="https://github.com/bevyengine/bevy">Bevy GitHub Repository</a> — Apache 2.0 license, approximately 48,700 stars</li>
+<li><a href="https://bevy.org/foundation/">Bevy Foundation</a> — 501(c)(3) nonprofit, donation-funded development</li>
+<li><a href="https://github.com/bevyengine/bevy-website">Bevy Website Repository</a> — MIT license, source for release images</li>
+<li><a href="https://wesl-lang.dev/">WESL Documentation</a> — Enhanced WebGPU Shading Language specification and tooling</li>
+<li><a href="https://bevy.org/news/bevy-0-20/#migration">Bevy 0.19 to 0.20 Migration Guide</a> — Official upgrade documentation</li>
+</ul>
+]]></content:encoded>
+      <category>game-engine</category>
+    <category>Rust</category>
+    <category>Bevy</category>
+    <category>creative-coding</category>
+    <category>open-source</category>
+    <category>real-time-rendering</category>
+    </item>
     <item>
       <title>Volumetric 3D Printing Goes Commercial: IOT&apos;s Light-Form Lenses Change How Prescription Eyewear Is Made</title>
       <link>https://shamylmansoor.com/blog/volumetric-3d-printed-progressive-lenses-iot-light-form</link>
