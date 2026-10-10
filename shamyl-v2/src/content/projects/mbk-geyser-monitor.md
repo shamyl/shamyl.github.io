@@ -5,7 +5,7 @@ category: "hardware"
 date: 2025-01-01
 featured: true
 image: "/images/projects/mbk-geyser-monitor.png"
-link: "https://mbkgeysermonitor.up.railway.app/"
+link: "/blog/mbk-geyser-monitor-esp32-railway"
 ---
 
 **MBK Geyser Monitor** is a personal IoT project that answers a simple question: *what is the temperature at my geyser right now?* It started as a local probe-and-display setup and grew into a full remote monitoring system with an ESP32, a 3D-printed enclosure, and a cloud dashboard on Railway.
