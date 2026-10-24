@@ -5,13 +5,110 @@
     <link>https://shamylmansoor.com/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Fri, 23 Oct 2026 04:06:23 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 24 Oct 2026 04:02:51 GMT</lastBuildDate>
     <atom:link href="https://shamylmansoor.com/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamylmansoor.com/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamylmansoor.com/blog</link>
     </image>
+    <item>
+      <title>Pakistan Was the Second-Most Targeted Country in an Israeli Spyware Campaign Disguised as Online Ads. What That Means for Users, Businesses and Government Networks</title>
+      <link>https://shamylmansoor.com/blog/pakistan-israeli-spyware-adfection-citizen-lab-advertising-security</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/pakistan-israeli-spyware-adfection-citizen-lab-advertising-security</guid>
+      <pubDate>Sat, 24 Oct 2026 00:00:00 GMT</pubDate>
+      <description>A Citizen Lab investigation found that an Israeli company used online advertisements to deliver zero-click spyware to devices worldwide. Pakistan ranked second globally with 139 million malicious ad bids. Here is what the AdFection technique is, how it affected Pakistani users and websites, and what organizations should do about it.</description>
+      <content:encoded><![CDATA[<p>A Citizen Lab investigation published on October 15, 2026 revealed that an Israeli company called Discover-Tech used the online advertising infrastructure to deliver zero-click mercenary spyware to devices around the world. Pakistan ranked second globally in the number of malicious advertising bids recorded, with approximately 139 million bids targeting Pakistani IP addresses between March and June 2026. The findings expose a surveillance vector that most internet users — and many organizations — never consider: the advertisements displayed on the websites and apps they use every day.</p>
+<h2>In Brief</h2>
+<ul>
+<li>Citizen Lab identified a zero-click spyware delivery technique called &quot;AdFection&quot; that uses targeted online advertisements to infect devices without requiring any user click</li>
+<li>The Israeli company Discover-Tech operated as an intermediary in the digital advertising ecosystem, inserting malicious code into ads distributed through major ad platforms including Google, Yandex, and Vungle</li>
+<li>Pakistan ranked second globally with approximately 139 million malicious ad bids, behind Yemen at approximately 457 million</li>
+<li>Pakistani technology website WhatMobile.com.pk displayed more than 100,000 of these malicious ads</li>
+<li>The ads also appeared on Pakistani government-operated networks, though the report did not identify which networks</li>
+<li>A user identified as &quot;Pindi&quot; accessed Discover-Tech&#39;s spyware control platform exclusively from Pakistan, though Citizen Lab could not confirm whether this account was connected to a spyware company</li>
+<li>Google removed Discover-Tech from its advertising platforms after being notified, and IAB Europe removed the company from its approved vendor list</li>
+<li>Citizen Lab emphasized that an ad impression does not automatically confirm device infection, but the scale warrants urgent investigation</li>
+</ul>
+<h2>What Is AdFection and How Does It Work</h2>
+<p>The technique that Citizen Lab named &quot;AdFection&quot; exploits the architecture of real-time bidding (RTB) — the system that powers most online advertising. When a user opens a website or app, ad exchanges run auctions in milliseconds to determine which advertisement to display. Multiple advertisers bid on the opportunity, and the winning ad is pushed to the user&#39;s screen.</p>
+<p>AdFection works by inserting malicious code into what appears to be a normal advertisement. The code runs the moment the ad is rendered in the user&#39;s browser or app — no click required. This is what makes it a zero-click attack. The user does not need to tap, click, or interact with the ad in any way. Simply loading a page or opening an app that displays the ad is enough.</p>
+<p>According to Citizen Lab, Discover-Tech operated a platform called Controlium that allowed its spyware partners — primarily Candiru, an Israeli mercenary surveillance company that rebranded as &quot;Integrity Labs&quot; — to de-anonymize, fingerprint, and automatically infect targeted devices. The platform enabled operators to select specific devices for attack based on identifiers such as IP addresses, advertising IDs, and other tracking data that the advertising ecosystem routinely collects.</p>
+<p>The attack chain works as follows: Discover-Tech bids on ad impressions through standard ad exchanges. When it wins a bid, its ad — containing malicious code — is delivered to the target device. The code then attempts to exploit vulnerabilities in the device&#39;s browser or operating system to install Candiru&#39;s spyware. Once installed, the spyware can access messages, emails, contacts, photos, microphone audio, and location data.</p>
+<p>This is the first publicly confirmed instance of zero-click mercenary spyware being delivered through the online advertising system. Previous known delivery methods for mercenary spyware like Pegasus and Candiru included malicious links, watering hole attacks on specific websites, and network injection. AdFection represents a broader and potentially more scalable attack surface because it leverages the same advertising infrastructure that reaches billions of devices daily.</p>
+<h2>The Numbers: Pakistan&#39;s Exposure</h2>
+<p>Citizen Lab analyzed nearly four billion ad bidding records from Discover-Tech&#39;s system, covering activity between March and June 2026. The data was found on two publicly accessible Apache Druid instances on Discover-Tech&#39;s infrastructure that the company inadvertently exposed.</p>
+<p>The top countries by raw bid count were:</p>
+<table>
+<thead>
+<tr>
+<th>Country</th>
+<th>Approximate Malicious Ad Bids</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Yemen</td>
+<td>457,283,658</td>
+</tr>
+<tr>
+<td>Pakistan</td>
+<td>139,427,322</td>
+</tr>
+</tbody></table>
+<p>Pakistan&#39;s 139 million bids mean that Discover-Tech&#39;s system attempted to show malicious advertisements to Pakistani IP addresses roughly 139 million times in a four-month period. This does not mean 139 million successful infections — most bids do not result in winning the ad auction, and not every displayed ad results in a successful exploit. But the volume indicates deliberate and sustained targeting of Pakistani users.</p>
+<p>The report also found that malicious ads were shown on more than 120,000 unique websites and 75,000 mobile apps globally. In Pakistan, the technology website WhatMobile.com.pk — one of the country&#39;s most popular resources for mobile phone prices and tech news — displayed more than 100,000 of these malicious ads. Given WhatMobile&#39;s audience of Pakistani consumers researching smartphones and technology products, the exposure surface is significant.</p>
+<p>Critically, the report stated that Discover-Tech&#39;s ads also appeared on Pakistani government-operated networks. Citizen Lab did not identify the specific networks, but the finding places Pakistan alongside countries where government networks — including defense ministries, armed forces, and national cyber agencies — were exposed to the same ad-based spyware delivery system.</p>
+<h2>The &quot;Pindi&quot; User</h2>
+<p>One of the more provocative findings in the Citizen Lab report is the identification of a Controlium user who accessed Discover-Tech&#39;s spyware control platform exclusively from Pakistan. The user&#39;s account name was &quot;Pindi&quot; — a common shorthand for Rawalpindi, the city adjacent to Islamabad that hosts Pakistan&#39;s military headquarters.</p>
+<p>Citizen Lab could not establish whether this account was connected to a spyware company, a government entity, or any other organization. The report noted that login locations only indicate where users accessed the system and do not establish whether individuals in those countries were targeted. Two other unattributed users accessed the platform from India and Italy.</p>
+<p>The finding raises questions that the report itself does not answer. Who accessed a mercenary spyware control platform from Pakistan? Were they a customer, an operator, a researcher, or something else? Citizen Lab&#39;s cautious wording — &quot;we could not conclusively attribute&quot; — is appropriate given the available evidence. But for Pakistani readers, the presence of a Controlium user operating from within the country adds a domestic dimension to what might otherwise seem like a purely external threat.</p>
+<h2>Why Pakistan</h2>
+<p>The report does not explain why Pakistan ranked second in bid volume. Several factors could contribute to Pakistan&#39;s prominence in the data:</p>
+<p><strong>Large internet user base.</strong> Pakistan has over 111 million internet users. A large user base means more ad impressions overall, which translates to more bidding opportunities for any ad platform — malicious or legitimate.</p>
+<p><strong>Geopolitical positioning.</strong> Pakistan&#39;s relationships with countries in the Middle East, its role in regional security, and its nuclear status make it a natural target for intelligence collection. The report identified Yemen as the top targeted country, and other heavily targeted regions included the Middle East, Nordic countries, and government networks across Europe and Asia.</p>
+<p><strong>Limited digital security infrastructure.</strong> Many Pakistani users and organizations rely on standard browsers and devices without advanced ad-blocking or network-level advertising controls. The Citizen Lab report explicitly recommends ad-blocking as a cybersecurity best practice — a recommendation that most Pakistani organizations have not implemented at scale.</p>
+<p><strong>Mobile-first internet usage.</strong> Discover-Tech&#39;s ads appeared predominantly in mobile apps rather than desktop browsers. Pakistan&#39;s internet usage is overwhelmingly mobile-first, with the majority of users accessing the internet through Android devices where ad ecosystem tracking is deeply embedded.</p>
+<h2>What This Means for Pakistani Organizations</h2>
+<p>For Pakistani technology companies, government departments, and educational institutions, the AdFection findings should change how they think about advertising as a security threat surface.</p>
+<h3>Ad-Blocking Is Now a Security Measure</h3>
+<p>Citizen Lab&#39;s recommendation is unambiguous: &quot;there is currently no consistently safe way to expose your users and networks to targeted ads.&quot; The report recommends blocking online advertising at the organizational gateway, on work-issued devices, and through browser-level ad blockers. For Pakistani organizations that have traditionally treated ad-blocking as a productivity or user-experience preference rather than a security control, this framing shift is important.</p>
+<p>IT departments managing government networks, university systems, or corporate environments should consider deploying network-level ad blocking through DNS resolvers like Pi-hole or AdGuard Home, enforcing ad-blocking browser extensions through device management policies, and disabling advertising identifiers on managed mobile devices.</p>
+<h3>Browser Choice Matters</h3>
+<p>The report recommends transitioning toward browsers with built-in anti-tracking features and ad-blocking capabilities. Browsers like Brave, Firefox with Enhanced Tracking Protection, or Safari with Intelligent Tracking Prevention offer stronger default protections than Chrome, which allows extensive cross-site tracking by design. For organizations where Chrome is the standard, deploying uBlock Origin or similar extensions through enterprise policy is a practical mitigation.</p>
+<h3>Mobile Device Management</h3>
+<p>Because the majority of Discover-Tech&#39;s ads targeted mobile apps, organizations issuing mobile devices to employees should disable advertising identifiers (IDFA on iOS, Google Advertising ID on Android) through mobile device management (MDM) configurations. This reduces the ability of ad-based tracking systems — including malicious ones — to identify and target specific devices.</p>
+<h2>Why This Matters for Pakistan&#39;s Digital Economy</h2>
+<p>Pakistan is actively trying to grow its digital economy. The government&#39;s Uraan Pakistan plan targets $10 billion in annual IT exports by FY2029, as we examined in our analysis of <a href="/blog/pakistan-it-exports-q1-fy2027-freelance-record-growth/">Pakistan&#39;s IT exports in Q1 FY2027</a>. Google opened its first Pakistan office in August 2026 and signed an MoU targeting a $30 billion digital economy by 2030, which we covered in our <a href="/blog/google-pakistan-mou-ai-gemini-students-digital-economy/">Google-Pakistan partnership analysis</a>. The country is building its <a href="/blog/pakistan-leap-2026-digital-stack-tech-exports/">national digital stack under the Digital Nation Pakistan Act</a>.</p>
+<p>But a digital economy built on infrastructure that can be weaponized for surveillance is one where the risks grow alongside the opportunities. If Pakistani government networks are exposed to ad-based spyware delivery, the security of digital government services — including citizen data platforms, digital identity systems, and financial infrastructure — depends on understanding and mitigating these threats.</p>
+<p>For Pakistani technology companies building products for international clients, the AdFection report is also a reminder that security expectations are rising. International clients increasingly require evidence of robust security practices, and awareness of advanced surveillance threats is part of that expectation. Companies that can demonstrate awareness of threats like AdFection — and have implemented corresponding mitigations — will be better positioned in competitive markets.</p>
+<h2>Product Builder&#39;s Perspective</h2>
+<p>From a product-building perspective, the AdFection technique reveals something unsettling about the modern internet&#39;s architecture: the same real-time bidding system that serves relevant ads to users also provides a scalable, automated mechanism for delivering malicious code to specific devices. The targeting precision that makes digital advertising commercially valuable is the same precision that makes it dangerous as a surveillance tool.</p>
+<p>For product teams building apps or websites that display advertising — and many Pakistani products do, because advertising is the most common monetization model for free apps — the AdFection report creates an obligation. If your product serves ads from third-party networks, your users were potentially exposed to Discover-Tech&#39;s malicious ads. The report found that more than 120,000 websites and 75,000 mobile apps displayed these ads. Product teams should audit their ad supply chain, understand which ad networks they integrate with, and ask whether those networks have taken steps to prevent similar abuse.</p>
+<p>This connects to a broader issue we have explored before in the context of <a href="/blog/humanoid-robot-security-vulnerabilities-unitree-g1-edu-ble-root-rce/">security vulnerabilities in educational robotics platforms</a>: as products become more connected and more integrated with third-party services, the attack surface grows in ways that product teams often do not fully map. AdFection is a demonstration that the attack surface includes the advertising layer — not just the application code, the authentication system, or the network connection.</p>
+<h2>What to Watch Next</h2>
+<ul>
+<li><strong>Pakistani government response.</strong> As of publication, there has been no public statement from Pakistan&#39;s Ministry of IT and Telecommunication, the Pakistan Telecommunication Authority, or the National Cyber Emergency Response Team (nCERT) regarding the Citizen Lab findings. Given that Pakistani government networks were identified in the report, a formal response — or the absence of one — will be worth watching.</li>
+<li><strong>Discover-Tech&#39;s status.</strong> Google and IAB Europe have removed Discover-Tech from their platforms. Whether Candiru/Integrity Labs continues to operate, and whether other companies are using similar ad-based delivery techniques, remains an open question.</li>
+<li><strong>Domestic policy implications.</strong> The report&#39;s recommendation to block advertising on government networks could inform Pakistani cybersecurity policy. The establishment of <a href="/blog/pakistan-leap-2026-digital-stack-tech-exports/">Special Technology Zones</a> and the broader digital transformation agenda make network security policy increasingly relevant.</li>
+<li><strong>Awareness and training.</strong> Pakistani organizations should incorporate ad-based threat awareness into their security training programs. The concept that &quot;ads can hack you&quot; is new to most users and many IT professionals.</li>
+</ul>
+<h2>Conclusion</h2>
+<p>The Citizen Lab AdFection report is not a story about Pakistan alone — it is a global story about a structural flaw in the online advertising system that affects every internet user. But Pakistan&#39;s position as the second-most targeted country, the presence of a Controlium user operating from within the country, and the exposure of government networks make it a story that Pakistani technology professionals, policymakers, and organizations cannot afford to ignore.</p>
+<p>The internet&#39;s advertising infrastructure was built for scale and targeting efficiency, not for security. AdFection demonstrates what happens when that imbalance is exploited. For a country building its digital economy on the same infrastructure, the lesson is straightforward: treat advertising as a security surface, implement the mitigations that Citizen Lab recommends, and do not assume that because an ad looks harmless, the code behind it is.</p>
+<p><strong>What is your organization doing about ad-based security threats?</strong> If this is a topic you are working on — whether in government, education, or the private sector — it deserves a conversation.</p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/">Citizen Lab, &quot;Exposing AdFection: How Discover-Tech Turned Targeted Ads Into a Pipeline for Zero-Click Mercenary Spyware,&quot; October 15, 2026</a></li>
+<li><a href="https://propakistani.pk/2026/10/22/pakistan-among-most-targeted-countries-in-israeli-spyware-campaign/">ProPakistani, &quot;Pakistan Among Most Targeted Countries in Israeli Spyware Campaign,&quot; October 22, 2026</a></li>
+</ul>
+]]></content:encoded>
+      <category>pakistan</category>
+    <category>cybersecurity</category>
+    <category>spyware</category>
+    <category>Citizen-Lab</category>
+    <category>advertising</category>
+    <category>surveillance</category>
+    </item>
     <item>
       <title>When AI Can Jailbreak Your Console: How AI Tools Are Reshaping Game Decompilation, Modding and Preservation</title>
       <link>https://shamylmansoor.com/blog/ai-game-decompilation-modding-switch-2-jailbreak-xbox-labs</link>
