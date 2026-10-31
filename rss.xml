@@ -5,13 +5,167 @@
     <link>https://shamylmansoor.com/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Fri, 30 Oct 2026 04:07:22 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 31 Oct 2026 04:03:46 GMT</lastBuildDate>
     <atom:link href="https://shamylmansoor.com/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamylmansoor.com/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamylmansoor.com/blog</link>
     </image>
+    <item>
+      <title>Pakistan&apos;s Open Banking Draft Regulations: What SBP&apos;s Framework Means for Fintech Founders, Banks and Developers</title>
+      <link>https://shamylmansoor.com/blog/pakistan-open-banking-regulations-sbp-draft-fintech</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/pakistan-open-banking-regulations-sbp-draft-fintech</guid>
+      <pubDate>Sat, 31 Oct 2026 00:00:00 GMT</pubDate>
+      <description>The State Bank of Pakistan has released draft Open Banking Regulations for public consultation, enabling consent-based financial data sharing and third-party payment initiation. Here is what the framework covers, how it compares to global models, and what it means for fintech founders, banks and developers building in Pakistan.</description>
+      <content:encoded><![CDATA[<p>Pakistan&#39;s State Bank has taken its most significant step yet toward open banking. On October 30, 2026, the SBP released draft Open Banking Regulations for public consultation, proposing a framework that would give customers consent-based control over their financial data and enable authorized Third-Party Providers to initiate payments and build services on top of bank-held data. If adopted, the regulations would create the legal foundation for Pakistan&#39;s open banking ecosystem — bringing the country into line with a regulatory model already operating in the UK, the EU, Australia, Brazil and parts of Southeast Asia.</p>
+<h2>In Brief</h2>
+<ul>
+<li>The SBP released draft Open Banking Regulations on October 30, 2026, inviting feedback from stakeholders through November 30, 2026</li>
+<li>The draft enables secure, consent-based financial data sharing and payment initiation through authorized Third-Party Providers (TPPs)</li>
+<li>The framework covers B2B and C2B payment digitization, credit assessment, SME financing access, and tailored financial product development</li>
+<li>It builds on findings from the SBP&#39;s first Regulatory Sandbox cohort, which ran from January to June 2026 and included four successful open banking and remittance participants</li>
+<li>BankIslami&#39;s aik platform launched Pakistan&#39;s first Shariah-compliant open banking solution earlier in 2026, giving an early preview of what the market can deliver</li>
+<li>The draft includes safeguards for data protection, privacy, cybersecurity, fraud prevention and consumer protection</li>
+</ul>
+<h2>What Open Banking Is and Why It Matters</h2>
+<p>Open banking is a regulatory framework that requires banks to make customer financial data accessible — with the customer&#39;s explicit consent — to licensed third parties through standardized APIs. Instead of your financial data being locked inside one bank&#39;s systems, you can choose to let a fintech app, a lending platform or a payment service read your transaction history, verify your income, or initiate a payment on your behalf.</p>
+<p>The model matters because it breaks the data monopoly that traditional banks hold over their customers&#39; financial information. In markets where open banking is established, it has enabled faster loan approvals (because lenders can verify income through bank data rather than paperwork), cheaper payment initiation (because merchants can bypass card networks), and new categories of financial products built on transaction data.</p>
+<p>The UK&#39;s open banking implementation, for example, has grown to over 11 million regular users as of 2024, according to Open Banking Limited. Brazil&#39;s Pix system, while not purely open banking, demonstrates how regulatory infrastructure can transform payment behavior at national scale. Pakistan&#39;s draft is closer to the UK and EU model — focused on consent-based data sharing and payment initiation through TPPs — but adapted to local market conditions.</p>
+<h2>What the SBP Draft Covers</h2>
+<p>According to the SBP&#39;s announcement as reported by ProPakistani on October 30, 2026, the draft regulations aim to:</p>
+<ul>
+<li><strong>Enable consent-based data sharing</strong>: Customers can authorize Third-Party Providers to access their financial data held by banks, with the ability to revoke that consent</li>
+<li><strong>Enable payment initiation</strong>: TPPs can initiate B2B and C2B payments on behalf of customers, creating alternatives to card-based payment rails</li>
+<li><strong>Facilitate credit assessment</strong>: Lenders can use bank data to perform robust credit assessments, potentially reducing the documentation burden for loan applicants</li>
+<li><strong>Improve SME financing access</strong>: Small and medium enterprises can share their financial data with lenders, making it easier to demonstrate creditworthiness</li>
+<li><strong>Support tailored financial products</strong>: Banks and fintechs can develop products based on a customer&#39;s actual financial profile rather than generic demographic assumptions</li>
+</ul>
+<p>The SBP stated that the draft is aligned with international best practices and informed by the outcomes of its first Regulatory Sandbox cohort on open banking, which concluded in June 2026. The framework includes safeguards for data protection, privacy, cybersecurity, fraud prevention and consumer protection.</p>
+<p>The draft regulations are available on the SBP&#39;s website. Feedback can be submitted by November 30, 2026, via email with the subject line &quot;Feedback on Draft Open Banking Regulations,&quot; or by post to the Payment Systems Policy &amp; Oversight Department, 4th Floor, SBP Building, I.I. Chundrigar Road, Karachi.</p>
+<h2>The Sandbox Foundation</h2>
+<p>The draft regulations did not appear from nowhere. The SBP launched its first Regulatory Sandbox in August 2025 under its Vision 2028 initiative, focusing on three areas: technology-enabled solutions for inward remittances, open banking, and remote onboarding of merchants. According to ProPakistani&#39;s reporting on September 16, 2026, six participants were shortlisted for the first cohort, with testing conducted between January and June 2026. Four participants successfully demonstrated their solutions:</p>
+<ul>
+<li><strong>Digi Khata (SMC Private) Ltd</strong> — tested an open banking solution</li>
+<li><strong>Swich Retail Private Ltd</strong> — tested an open banking solution</li>
+<li><strong>Neem Exponential Financial Services (Pvt) Ltd</strong> — tested an open banking solution</li>
+<li><strong>Taptap Send UK Ltd and United Bank Ltd</strong> — tested a technology-enabled inward remittance solution</li>
+</ul>
+<p>The SBP clarified that sandbox completion does not constitute regulatory approval, and successful participants must obtain required authorization before commercial launch. But the findings, lessons and regulatory recommendations from this cohort directly informed the draft regulations now under consultation.</p>
+<h2>Early Market Signals: BankIslami&#39;s aik</h2>
+<p>Open banking is not entirely theoretical in Pakistan. BankIslami launched aik, a Shariah-compliant open banking platform, earlier in 2026. The platform represents the first concrete implementation of open banking principles in Pakistan&#39;s financial sector, albeit outside a formal regulatory framework. Its existence demonstrates that the market is ready — banks and fintechs are already building the infrastructure that the draft regulations would formalize.</p>
+<p>For fintech founders, the aik launch and the sandbox cohort together signal that Pakistan&#39;s open banking ecosystem has moved from concept to early implementation. The draft regulations provide the legal scaffolding to scale these pilots into a national framework.</p>
+<h2>How Pakistan&#39;s Approach Compares Globally</h2>
+<p>Pakistan is adopting open banking later than the UK and EU (which implemented the PSD2 directive and open banking standards from 2018 onward), but earlier than most South Asian peers. India has no formal open banking regulation but has built the Account Aggregator framework under RBI guidance, which serves a similar function. Singapore&#39;s MAS implemented an API playbook rather than binding regulations. Bangladesh and Sri Lanka have not yet formalized open banking frameworks.</p>
+<p>The SBP&#39;s draft appears to follow a hybrid approach — taking the consent-based data sharing model from the UK and EU, but with implementation timelines and technical standards likely to be phased, similar to how Brazil rolled out its framework incrementally.</p>
+<table>
+<thead>
+<tr>
+<th>Market</th>
+<th>Framework</th>
+<th>Key Feature</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>UK</td>
+<td>Open Banking Standard</td>
+<td>Mandatory API access for CMA9 banks</td>
+<td>Live since 2018</td>
+</tr>
+<tr>
+<td>EU</td>
+<td>PSD2 / PSD3</td>
+<td>Regulatory mandate for bank API access</td>
+<td>Live since 2018</td>
+</tr>
+<tr>
+<td>Brazil</td>
+<td>Open Banking regulations</td>
+<td>Phased implementation across 4 stages</td>
+<td>Live since 2021</td>
+</tr>
+<tr>
+<td>India</td>
+<td>Account Aggregator</td>
+<td>Non-bank financial data sharing framework</td>
+<td>Live since 2021</td>
+</tr>
+<tr>
+<td>Singapore</td>
+<td>MAS API Playbook</td>
+<td>Voluntary guidelines</td>
+<td>Live since 2016</td>
+</tr>
+<tr>
+<td>Pakistan</td>
+<td>SBP Draft Open Banking Regulations</td>
+<td>Consent-based data sharing + payment initiation</td>
+<td>Draft consultation (Oct 2026)</td>
+</tr>
+</tbody></table>
+<h2>What This Means for Fintech Founders</h2>
+<p>For fintech founders building in Pakistan, the draft regulations open several possibilities:</p>
+<p><strong>New product categories.</strong> Open banking APIs enable products that were previously impossible or required manual bank statement uploads. Automated credit scoring based on real-time transaction data, personal finance management apps that aggregate accounts across banks, and instant SME lending platforms all become technically feasible.</p>
+<p><strong>Lower customer acquisition costs.</strong> If a fintech can verify a customer&#39;s income and transaction history through open banking APIs instead of requiring physical documentation, onboarding friction drops significantly. This is particularly relevant for lending platforms and insurance providers.</p>
+<p><strong>Payment initiation without card rails.</strong> The B2B and C2B payment initiation component of the draft could enable account-to-account payments that bypass card networks — and their interchange fees. For merchants operating on thin margins, this is financially significant.</p>
+<p><strong>Regulatory clarity.</strong> Until now, fintechs accessing bank data in Pakistan have operated in a grey zone — using screen scraping, customer-provided credentials, or bilateral agreements with individual banks. The draft regulations would create a formal licensing category for TPPs, providing legal certainty that investors and partners need.</p>
+<p>However, founders should note that the draft is a consultation document, not a final rule. Key implementation details — API standards, certification requirements, liability frameworks, phased timelines — will likely be determined after the consultation period closes. Building products that depend on open banking APIs before the final regulations are published carries execution risk.</p>
+<h2>What This Means for Banks</h2>
+<p>For Pakistan&#39;s commercial banks, open banking is a double-edged development.</p>
+<p>The opportunity is that open banking APIs can turn a bank from a closed system into a platform. Banks that build strong developer ecosystems, offer reliable APIs, and partner effectively with fintechs can capture new revenue streams — API access fees, embedded finance commissions, expanded customer bases through third-party distribution channels.</p>
+<p>The risk is that open banking commoditizes the bank-customer relationship. If a customer manages their finances through a third-party app that connects to multiple banks via open banking APIs, the bank&#39;s brand and direct relationship with that customer weakens. Banks that treat open banking as a compliance exercise rather than a strategic opportunity may find themselves reduced to utility providers — holding deposits and executing transactions while fintechs own the customer interface.</p>
+<p>For product teams inside Pakistani banks, the draft regulations signal that API investment is no longer optional. Banks that begin building production-grade open banking APIs now — with proper documentation, sandbox environments for developers, and dedicated partnership teams — will be better positioned when the final regulations take effect.</p>
+<h2>What This Means for the Broader Digital Economy</h2>
+<p>Open banking does not operate in isolation. Its impact ripples across the broader digital economy:</p>
+<ul>
+<li><strong>E-commerce</strong>: Account-to-account payment initiation can reduce dependence on cash-on-delivery and card payments, which together account for the majority of Pakistan&#39;s e-commerce transactions</li>
+<li><strong>SME lending</strong>: The SBP&#39;s simultaneous launch of SMEConnect — a centralized digital platform for SME loan applications starting November 1, 2026 — complements open banking by creating the application infrastructure, while open banking provides the data infrastructure for faster credit decisions</li>
+<li><strong>Government payments</strong>: Open banking APIs can facilitate tax payments, utility bills and government disbursements with better reconciliation and lower transaction costs</li>
+<li><strong>Cross-border payments</strong>: While the draft focuses on domestic transactions, open banking infrastructure could eventually support cheaper inbound remittances — relevant given that Pakistan&#39;s freelancers earned a record $197 million in September 2026, as we tracked in our analysis of <a href="/blog/pakistan-it-exports-q1-fy2027-freelance-record-growth/">Pakistan&#39;s IT exports and freelance economy</a></li>
+</ul>
+<p>The connection to Pakistan&#39;s <a href="/blog/pakistan-startup-funding-2026-i2i-ventures-report/">broader startup ecosystem</a> is also worth noting. Several of Pakistan&#39;s most active startup sectors — fintech, lending, payments and B2B commerce — depend on financial data access. Open banking regulation could reduce the infrastructure cost of building these businesses, making the unit economics more attractive for both founders and investors.</p>
+<h2>Product Builder&#39;s Perspective</h2>
+<p>From a product-building perspective, the most important question is not what the regulations say today, but what they will enable tomorrow.</p>
+<p>Open banking is fundamentally an API infrastructure layer. Like any infrastructure layer, its value comes from what gets built on top of it. The UK took several years after its open banking implementation to see meaningful adoption beyond basic account aggregation. Brazil moved faster because its central bank coupled open banking with Pix, creating immediate consumer-facing use cases.</p>
+<p>For Pakistan, the adoption curve will depend on three factors: how quickly the SBP finalizes the regulations after consultation, how quickly banks build production-grade APIs, and how quickly fintechs and developers build products that consumers and SMEs actually want to use. The sandbox cohort and BankIslami&#39;s aik platform suggest the first two factors are moving. The third — product-market fit for open banking use cases — is where the real work lies.</p>
+<p>For STEAM educators and program designers, this is also a signal that API literacy, financial data standards, and consent management are becoming core skills for Pakistan&#39;s developer workforce. Training programs that teach these skills — alongside the practical coding and systems thinking we focus on in <a href="/projects/learnosteam/">LearnOSTEAM</a> — will produce graduates who are better prepared for the financial technology jobs that open banking will create.</p>
+<h2>What to Watch</h2>
+<ul>
+<li><strong>Consultation feedback.</strong> The November 30 deadline is the first checkpoint. The quality and substance of feedback from banks, fintechs and industry bodies will indicate how much consensus exists on key implementation questions.</li>
+<li><strong>Final regulation timeline.</strong> The SBP has not published a target date for final rules. Based on international precedent, a gap of 6–12 months between consultation close and final publication is typical.</li>
+<li><strong>API standard specification.</strong> The draft regulations define the legal framework, but the technical API standard — data models, authentication protocols, rate limits, error handling — is what developers will actually work with. Watch for a separate technical specification document.</li>
+<li><strong>Bank readiness.</strong> Which Pakistani banks begin publishing open banking APIs or developer sandboxes first will indicate which institutions are treating this strategically.</li>
+<li><strong>TPP licensing process.</strong> The draft introduces a Third-Party Provider category. How the SBP structures licensing requirements — capital, security audits, compliance obligations — will determine how accessible the TPP market is to startups versus incumbents.</li>
+</ul>
+<h2>How to Submit Feedback</h2>
+<p>The SBP has invited feedback from financial institutions, fintechs, technology providers, consumer groups, academia and the general public. Comments can be submitted through November 30, 2026:</p>
+<ul>
+<li><strong>By email</strong>: Send to the SBP with subject line &quot;Feedback on Draft Open Banking Regulations&quot;</li>
+<li><strong>By post</strong>: Payment Systems Policy &amp; Oversight Department, 4th Floor, SBP Building, I.I. Chundrigar Road, Karachi</li>
+<li><strong>Draft regulations</strong>: Available on the SBP website at <a href="https://www.sbp.org.pk/">sbp.org.pk</a></li>
+</ul>
+<p>For fintech founders and technology builders, this is an opportunity to shape the regulatory framework before it is finalized. Technical feedback on API standards, security requirements and implementation timelines from the people who will actually build on this infrastructure is more useful than generic industry commentary.</p>
+<h2>Conclusion</h2>
+<p>Pakistan&#39;s draft Open Banking Regulations represent the most consequential financial infrastructure reform in years. The framework would give customers control over their financial data, enable a new category of fintech products, and create payment rails that bypass traditional card networks. But a draft is a draft. The distance between consultation and implementation — between a published regulation and a working API that a developer can call in production — is where most open banking frameworks either succeed or stall.</p>
+<p>The SBP&#39;s sandbox-first approach, the early market signals from BankIslami&#39;s aik, and the simultaneous rollout of SMEConnect all suggest genuine institutional momentum. Whether that momentum translates into a functioning open banking ecosystem will depend on how quickly the final regulations are published, how seriously banks invest in API infrastructure, and how effectively fintechs build products that solve real problems for Pakistani consumers and businesses.</p>
+<p>The consultation window is open. If you build in fintech, payments or financial technology in Pakistan, this is your chance to help shape the rules before they are written.</p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://propakistani.pk/2026/10/30/sbp-wants-fintechs-to-have-more-access-to-banking-data/">ProPakistani: SBP Wants Fintechs to Have More Access to Banking Data</a> — October 30, 2026</li>
+<li><a href="https://propakistani.pk/2026/09/16/sbp-clarifies-rules-for-fintechs-after-sandbox-testing/">ProPakistani: SBP Clarifies Rules for Fintechs After Sandbox Testing</a> — September 16, 2026</li>
+<li><a href="https://propakistani.pk/2026/10/29/new-sbp-website-for-business-loans-launched/">ProPakistani: New SBP Website for Business Loans Launched</a> — October 29, 2026</li>
+<li>State Bank of Pakistan, draft Open Banking Regulations (available on <a href="https://www.sbp.org.pk/">sbp.org.pk</a>)</li>
+<li>Open Banking Limited (UK), open banking adoption statistics (ob.comparison data, 2024)</li>
+</ul>
+]]></content:encoded>
+      <category>pakistan</category>
+    <category>open-banking</category>
+    <category>fintech</category>
+    <category>SBP</category>
+    <category>API</category>
+    <category>digital-finance</category>
+    </item>
     <item>
       <title>TinyWorldformer: How a 26K-Parameter World Model Runs Five Games on a Raspberry Pi Pico 2 W</title>
       <link>https://shamylmansoor.com/blog/tinyworldformer-world-model-games-raspberry-pi-pico-2</link>
