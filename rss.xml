@@ -5,13 +5,144 @@
     <link>https://shamylmansoor.com/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Sun, 01 Nov 2026 04:03:13 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2026 04:03:48 GMT</lastBuildDate>
     <atom:link href="https://shamylmansoor.com/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamylmansoor.com/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamylmansoor.com/blog</link>
     </image>
+    <item>
+      <title>Cloudflare&apos;s GLM-5.3 KV Cache Leak: What LLM Tenant Isolation Failures Mean for Product Teams</title>
+      <link>https://shamylmansoor.com/blog/cloudflare-glm-5-3-kv-cache-cross-tenant-data-leak-llm-security</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/cloudflare-glm-5-3-kv-cache-cross-tenant-data-leak-llm-security</guid>
+      <pubDate>Mon, 02 Nov 2026 00:00:00 GMT</pubDate>
+      <description>A configuration mismatch and an SGLang bug let Cloudflare Workers AI users see other customers&apos; data in GLM-5.3 responses. 155 responses were affected. Here is what happened, how it was fixed, and what it means for CTOs and product teams relying on shared LLM infrastructure.</description>
+      <content:encoded><![CDATA[<p>On September 8, 2026, security researcher Gadi Evron from Knostic reported a tenant isolation failure in Cloudflare&#39;s Workers AI platform: prompts sent to the GLM-5.3 model could return text belonging to other users. The root cause was a combination of a configuration mismatch — the model&#39;s context window was larger than the GPU memory allocated for its KV cache — and a bug in SGLang, the open-source inference engine Cloudflare uses, that allowed rejected requests to pass through to the decode stage with stale cache pages intact. Between August 27 and September 9, 2026, 155 responses contained data from other customers&#39; sessions. Cloudflare took the model offline within 40 minutes of confirming the issue, patched the engine, and restored service the same day. The coordinated disclosure, published by Cloudflare and SGLang on October 26, 2026, reveals a class of vulnerability that every team building on shared LLM infrastructure should understand.</p>
+<h2>In Brief</h2>
+<ul>
+<li>Cloudflare&#39;s GLM-5.3 Workers AI model exposed cross-tenant data between August 27 and September 9, 2026, affecting 155 responses to prompts longer than 681,280 tokens</li>
+<li>The cause was twofold: a KV cache pool smaller than the configured context window, and an SGLang bug that let rejected requests proceed through the disaggregated prefill/decode handoff</li>
+<li>The decode node read stale KV cache pages from previous users&#39; sessions instead of the current request&#39;s data, producing responses that contained other customers&#39; prompts and partial generations</li>
+<li>Researcher Gadi Evron reported the issue via HackerOne; Cloudflare reproduced it in 25 minutes using two independent accounts and took the model offline</li>
+<li>SGLang released fixes in versions v0.5.20, v0.5.21, and v0.5.22; Cloudflare recommends all disaggregated SGLang operators upgrade to v0.5.22 or later</li>
+<li>Cloudflare is now working with SGLang on page-level KV cache ownership tags and formal verification of the RDMA transfer protocol</li>
+<li>No evidence of deliberate exploitation was found; affected requests were consistent with ordinary long-context use</li>
+</ul>
+<h2>What Is KV Cache and Why It Matters for LLM Security</h2>
+<p>Large language models process text in two phases: prefill, where the input prompt is processed into an intermediate representation called the KV (key-value) cache, and decode, where the model generates output tokens one at a time using that cache. The KV cache is a tensor stored in GPU memory — it represents everything the model &quot;remembers&quot; about the current conversation.</p>
+<p>In a multi-tenant serving setup like Cloudflare Workers AI, hundreds of users share the same GPU infrastructure. Each request gets allocated pages of KV cache memory, uses them during processing, and releases them when finished. The next request reuses those same pages. This is standard practice across inference engines — zeroing memory between requests would be too slow — but it places the entire burden of data isolation on the inference engine&#39;s bookkeeping.</p>
+<p>If that bookkeeping fails, the consequences are exactly what happened here: one user&#39;s response contains fragments of another user&#39;s prompt. In a coding agent context, where prompts might include source code, API keys, internal documentation, or proprietary business logic, the impact of such a leak is significant.</p>
+<h2>How the Leak Happened</h2>
+<p>Cloudflare serves GLM-5.3 using SGLang in a disaggregated configuration: one pool of GPUs handles prefill (processing the prompt), then transfers the resulting KV cache via RDMA (Remote Direct Memory Access) to a separate pool of decode GPUs that generate the response. This architecture, which Cloudflare has written about publicly, allows them to optimize each phase independently.</p>
+<p>Two overlapping issues caused the exposure:</p>
+<p><strong>Configuration mismatch.</strong> GLM-5.3 was deployed with a context window of 1,048,576 tokens, but the KV cache pool on the prefill GPUs could only hold 681,280 tokens. Cloudflare was aware of this mismatch before launch. According to the company, pre-launch testing showed successful HTTP responses at long contexts, so they assumed the engine would handle the overflow gracefully. It did not.</p>
+<p><strong>SGLang rejection-path bug.</strong> When a prompt exceeded the KV cache pool size, SGLang&#39;s scheduler rejected it. In single-node mode, this worked correctly: the rejected request was replaced with a one-token placeholder, the batch finished, and the client received an error. In disaggregated mode, the rejection path broke down. The rejection was stored in a field that the admission queue did not check — it tested <code>finished()</code>, which still returned <code>False</code> for rejected requests. So the rejected request passed through prefill, which processed only the one-token placeholder, then sent a &quot;transfer complete&quot; signal to decode. The decode node had reserved 8 pages for the request based on the original prompt length, but prefill had only written to page 1. Pages 2 through 8 still held data from earlier requests. Decode then generated a response attending over all 8 pages — reading other users&#39; content.</p>
+<p>According to Cloudflare&#39;s report, the client received HTTP 200 instead of HTTP 400. The <code>prompt_tokens</code> count matched the original long prompt. The response was coherent. It arrived faster than an 8-page prefill should take. And it contained content from other users&#39; KV pages.</p>
+<p>This bug had been reported to SGLang by another user as issue #30233 on July 6, 2026, two months before the Cloudflare incident. Cloudflare had been flagging related KV cache lifetime issues with SGLang since v0.5.10.</p>
+<h2>The Response Timeline</h2>
+<p>Cloudflare&#39;s incident timeline, published in their report, shows a rapid response once the issue was confirmed:</p>
+<table>
+<thead>
+<tr>
+<th>Time (UTC)</th>
+<th>Event</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Aug 27, 2026</td>
+<td>GLM-5.3 launched on Workers AI with the mismatched configuration</td>
+</tr>
+<tr>
+<td>Sep 8, 2026 — 23:11</td>
+<td>Report received via HackerOne from Gadi Evron</td>
+</tr>
+<tr>
+<td>Sep 9, 2026 — 08:00</td>
+<td>Cloudflare begins verifying the report</td>
+</tr>
+<tr>
+<td>Sep 9, 2026 — 13:22</td>
+<td>Security incident declared; reproduced in 25 minutes with two accounts</td>
+</tr>
+<tr>
+<td>Sep 9, 2026 — 14:00</td>
+<td>GLM-5.3 set to private; requests return HTTP 400</td>
+</tr>
+<tr>
+<td>Sep 9, 2026 — 14:35</td>
+<td>Root cause identified; canary node with larger pool confirmed not susceptible</td>
+</tr>
+<tr>
+<td>Sep 9, 2026 — 14:52</td>
+<td>All prefill nodes rolled to corrected configuration</td>
+</tr>
+<tr>
+<td>Sep 9, 2026 — 19:04</td>
+<td>Full deployment rebuilt with patched engine; validated against reproduction script</td>
+</tr>
+<tr>
+<td>Sep 9, 2026 — 19:40</td>
+<td>Model restored to public access</td>
+</tr>
+<tr>
+<td>Oct 26, 2026</td>
+<td>Coordinated disclosure published with SGLang and the researcher</td>
+</tr>
+</tbody></table>
+<p>The fix had two layers. First, Cloudflare adjusted the GLM-5.3 configuration so the prefill KV pool holds approximately 2.04 million tokens — roughly twice the context length. Second, they patched the engine so rejected requests are retired at the disaggregation admission queue before any KV transfer happens, with the decode node verifying that the number of tokens transferred matches what was reserved.</p>
+<h2>What SGLang Fixed Upstream</h2>
+<p>SGLang, maintained by the team at RadixArk (formerly LMSYS), merged a series of fixes across three releases. The most important changes:</p>
+<ul>
+<li><strong>#36988 (v0.5.20):</strong> Retires aborted prefill requests when their result reaches decode, stopping the exposure path</li>
+<li><strong>#38935 (v0.5.21):</strong> Rejects over-length requests at admission, before any bootstrap, allocation, or KV transfer — following Cloudflare&#39;s proposed approach in #38704</li>
+<li><strong>#39500 (v0.5.21):</strong> Adds <code>--disaggregation-enable-kv-checksum</code>, letting decode verify a checksum of transferred KV cache before generating</li>
+<li><strong>#41023 (v0.5.21):</strong> Enables deferred KV release by default, holding pages until transfers are confirmed complete</li>
+<li><strong>#32758 (v0.5.20):</strong> Caps Mooncake transfer batch sizes so a single timed-out RDMA call cannot leave an unbounded tail of writes</li>
+</ul>
+<p>SGLang also published their own <a href="https://lmsys.org/blog/2026-10-26-cf-security">security disclosure post</a> covering the technical details from the engine side.</p>
+<h2>Why This Matters for Product Teams</h2>
+<p>For CTOs and product teams building on shared LLM infrastructure — whether Cloudflare Workers AI, OpenAI, Anthropic, or any platform that multi-tenants GPU resources — this incident exposes a category of risk that is not covered by standard API security thinking.</p>
+<p>When you send a prompt to a hosted LLM, you are trusting not just the model provider&#39;s API authentication and access controls, but the entire inference stack: the engine that schedules requests, the memory management that isolates tenants, and the distributed system that moves data between GPUs. A bug in any of these layers can expose your data to other customers — or their data to you — without any error message, authentication failure, or detectable anomaly.</p>
+<p>Cloudflare&#39;s testing gap illustrates this. They tested HTTP response codes and performance at long contexts. They did not validate model output coherence. The responses looked correct — HTTP 200, matching token counts, coherent text — because the model was generating real responses. It was just generating them using a mix of the current user&#39;s data and previous users&#39; data.</p>
+<p>For product teams, the practical implications are:</p>
+<p><strong>Classify what goes into prompts.</strong> Source code, API keys, customer data, internal documentation, and proprietary business logic are all candidates for prompt content in agentic workflows. A cross-tenant leak of this information has the same impact as a data breach. Teams should understand what their AI workflows are sending to third-party inference infrastructure.</p>
+<p><strong>Consider self-hosted alternatives for sensitive workloads.</strong> The <a href="https://shamylmansoor.com/blog/strands-decider-2b-open-source-decision-model-agentic-ai/">open-source decision model movement</a> and tools like SGLang make it increasingly viable to run models on your own infrastructure. For Pakistani technology teams dealing with dollar-denominated API costs and data sovereignty concerns, self-hosting eliminates an entire category of multi-tenant risk — though it shifts the burden of security and operations to your team.</p>
+<p><strong>Watch for the next class of bug.</strong> Cloudflare&#39;s report describes this as part of a broader category of KV cache memory-safety bugs. Pages can be freed, reused, or read while something else still holds a claim on them. The company had already fixed related issues in decode offload and grammar error paths before this incident. The next bug will have a different shape, but the same result: one user&#39;s data in another user&#39;s response.</p>
+<h2>What This Means for Pakistani Technology Teams</h2>
+<p>Pakistani teams building AI products face a compound challenge here. Most rely on international cloud providers for LLM inference because local GPU infrastructure is scarce and expensive. When a cross-tenant vulnerability like this surfaces, there is no contractual recourse for a small Pakistani startup against a global infrastructure provider — the terms of service typically limit liability to the cost of the API calls.</p>
+<p>For teams building EdTech products — where student data, assessment content, or proprietary curriculum might flow through LLM prompts — the stakes are specific. A leak of student-generated content through a shared inference infrastructure could violate local data protection expectations, even if the model provider&#39;s terms technically disclaim responsibility.</p>
+<p>The <a href="https://shamylmansoor.com/blog/ai-coding-agent-hidden-costs-vibe-tax/">hidden costs of AI coding agents</a> extend beyond token bills. They include the risk profile of whatever information your agents send to shared infrastructure. Teams should treat prompt content with the same classification rigor they apply to database storage and network traffic.</p>
+<h2>What Cloudflare Is Doing Next</h2>
+<p>Cloudflare is pursuing two longer-term fixes:</p>
+<p><strong>Page-level KV cache ownership tags.</strong> Every physical KV page carries a tag that changes when the page is reallocated. Each request records the tags it expects, and the mapping is checked before decode reads the cache. Cloudflare built a prototype over the summer that cost under 1% in throughput and tail latency. They are now working with SGLang to build a production version that works across all model architectures.</p>
+<p><strong>Formal verification of the RDMA transfer protocol.</strong> Cloudflare is applying its experience with formal methods — previously used for DNS IP selection (Topaz) and consensus protocols (QuePaxa) — to model and prove the safety of the KV cache transfer system. The goal is to mathematically demonstrate that a bug like this cannot occur, rather than relying on testing and configuration checks.</p>
+<h2>What to Watch Next</h2>
+<ul>
+<li>SGLang v0.5.22 includes all critical fixes. If you operate disaggregated SGLang, upgrade. Cloudflare&#39;s report includes a checklist: measure KV pool against context length on every node, enable deferred release, bound transfer batches, and turn on corruption detection.</li>
+<li>Other inference engines (vLLM, TensorRT-LLM) may have similar disaggregated rejection-path issues. The bug class is not specific to SGLang — it is a distributed systems consistency problem that any engine serving prefill and decode on separate hardware must handle.</li>
+<li>The researcher&#39;s report, when published, may reveal additional details about discovery methodology. Gadi Evron&#39;s reproduction used two independent accounts, which is a model for how teams can test their own LLM providers for tenant isolation.</li>
+<li>Watch for adoption of KV checksum verification across inference engines. SGLang&#39;s <code>--disaggregation-enable-kv-checksum</code> is a first step, but it does not yet cover every model architecture.</li>
+</ul>
+<h2>Conclusion</h2>
+<p>The Cloudflare GLM-5.3 incident is the most detailed public account of a cross-tenant data leak in LLM serving infrastructure. It was caused by a configuration mismatch and a distributed systems bug — not a cryptographic failure, an authentication bypass, or a model-level vulnerability. The fix was straightforward once identified. The lesson is structural: multi-tenant LLM inference relies on memory management assumptions that are easy to violate and hard to test. Product teams building on shared LLM infrastructure should understand what their prompts contain, classify that content accordingly, and consider whether self-hosted inference is appropriate for sensitive workloads. The next vulnerability in this class will not look exactly like this one, but it will have the same shape: a bookkeeping failure in a system that was assumed to be safe.</p>
+<p><strong>What is your team doing to classify and protect the content that flows through your LLM prompts?</strong></p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://blog.cloudflare.com/kv-cache-exposure-remediation/">Cloudflare: Cross-request KV cache exposure in the GLM-5.3 Workers AI model</a> — Kevin Flansburg and Michelle Chen, October 26, 2026</li>
+<li><a href="https://lmsys.org/blog/2026-10-26-cf-security">SGLang: Security update improving request isolation</a> — SGLang Team, October 26, 2026</li>
+<li><a href="https://developers.cloudflare.com/workers-ai/models/glm-5.3/">Cloudflare Workers AI GLM-5.3 model documentation</a></li>
+<li><a href="https://github.com/sgl-project/sglang">SGLang GitHub repository</a></li>
+</ul>
+]]></content:encoded>
+      <category>AI</category>
+    <category>LLM security</category>
+    <category>Cloudflare</category>
+    <category>SGLang</category>
+    <category>GLM-5.3</category>
+    <category>data privacy</category>
+    <category>product engineering</category>
+    </item>
     <item>
       <title>NASA&apos;s Hubble Servicing RfI: Can Commercial Space Extend the Telescope&apos;s Life Past 2033?</title>
       <link>https://shamylmansoor.com/blog/hubble-commercial-servicing-rfi-2026</link>
