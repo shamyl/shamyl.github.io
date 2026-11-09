@@ -5,13 +5,90 @@
     <link>https://shamylmansoor.com/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Sun, 08 Nov 2026 04:05:53 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 09 Nov 2026 04:02:42 GMT</lastBuildDate>
     <atom:link href="https://shamylmansoor.com/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamylmansoor.com/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamylmansoor.com/blog</link>
     </image>
+    <item>
+      <title>When a CEO Replaces Their Chief of Staff With AI Agents: What Brian Armstrong&apos;s Workflow Reveals</title>
+      <link>https://shamylmansoor.com/blog/coinbase-brian-armstrong-ai-agent-chief-of-staff-ceo-workflow</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/coinbase-brian-armstrong-ai-agent-chief-of-staff-ceo-workflow</guid>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Coinbase CEO Brian Armstrong says he now runs his workday through a hierarchy of always-on AI agents, with a chief-of-staff agent managing lead agents that manage sub-agents. Here is what the setup does, what Goldman Sachs&apos;s rollback tells us, and what it means for founders, CTOs, and product teams building AI-first organizations.</description>
+      <content:encoded><![CDATA[<p>Brian Armstrong has reorganized his workday, and most of the new org chart is software. In a post on X on November 8, 2026, the Coinbase co-founder and CEO described a system where AI agents handle the tracking, coordination, and review-chasing that typically falls to a chief of staff or a layer of middle managers. He has one lead agent per area of focus, each running continuously, with a chief-of-staff agent overseeing them all. Every decision lands in a single prioritized queue. He insists humans still sign off on every change.</p>
+<p>The post is notable not because a CEO uses AI, but because it describes a specific, copyable workflow for delegating executive-level coordination to autonomous agents. It also arrives at a moment when the picture for enterprise AI agent adoption is anything but uniform. On the same week, Bloomberg reported that Goldman Sachs restricted Claude Code and GitHub Copilot to its engineers only, pulling the tools from traders and bankers who had been using them for months.</p>
+<p>Two of the largest financial companies in the world are moving in opposite directions on AI agents. The contrast is more instructive than either story alone.</p>
+<h2>In Brief</h2>
+<ul>
+<li>Brian Armstrong described a hierarchy of always-on AI agents on November 8, 2026: one chief-of-staff agent oversees lead agents, which in turn manage sub-agents that write code, test it, chase reviews, and coordinate with team members</li>
+<li>All agent output flows into a single prioritized queue — a local web app — that Armstrong clears in batches by voice and keyboard shortcuts</li>
+<li>Armstrong said the system &quot;keeps learning my preferences and distilling my judgment into a &#39;Brian brain,&#39;&quot; aiming for fewer corrections per change over time</li>
+<li>Every change still goes through human review and security checks; Armstrong framed it as &quot;eliminating tasks, not human judgment&quot;</li>
+<li>The same week, Goldman Sachs restricted Claude Code and GitHub to engineers only, reversing access for traders and bankers who had been building tools with the agents</li>
+<li>Goldman&#39;s CIO Marco Argenti praised &quot;vibe coding&quot; by non-technical staff in July 2026; by October, internal guidance limited coding agents to the bank&#39;s 12,000 engineers</li>
+<li>Coinbase has been building toward agent-native operations all year, including internal agents named &quot;Fred&quot; and &quot;Balaji,&quot; an &quot;Oracle of Coinbase&quot; knowledge agent, Agentic Wallets, and the x402 machine-to-machine payment protocol</li>
+</ul>
+<h2>What Armstrong Actually Described</h2>
+<p>The setup has three layers. At the top sits a chief-of-staff agent that oversees the entire operation. Below it are lead agents, one per area of focus, each running continuously. Each lead manages its own sub-agents that handle the actual work: writing code, running tests, chasing reviews, coordinating with human team members.</p>
+<p>The output flows into one place. &quot;Everything I need to decide or review comes into one prioritized queue, a simple local web app,&quot; Armstrong wrote. Each product review arrives with screenshots and a video demo. He clears the queue in batches, &quot;mostly by voice and keyboard shortcuts.&quot;</p>
+<p>This is the part that deserves attention. Anyone who has run multiple AI coding agents knows the problem: each one lives in its own chat window, each one wants input, and the hours saved on execution get spent on context-switching. Armstrong&#39;s solution — one prioritized list with evidence attached, cleared in batches — is not technically sophisticated. It is operationally sophisticated.</p>
+<p>He also described something more ambitious. The system &quot;keeps learning my preferences and distilling my judgment into a &#39;Brian brain,&#39;&quot; so its recommendations and first drafts improve before they reach him. &quot;The goal is fewer corrections per change,&quot; he wrote. A good human chief of staff does exactly this over time. After a few months, they know which memo will come back marked up and why. Armstrong is trying to get software to that point, with every approval and rejection in the queue serving as a training signal.</p>
+<p>He did not say which models power the agents, where the preference data is stored, or how the Brian brain is built. At a publicly traded company that holds customer funds, those are not trivial questions.</p>
+<h2>The Human Gate</h2>
+<p>Armstrong drew the line plainly: &quot;Every change still goes through the same human review and security checks. It is eliminating tasks, not human judgment.&quot;</p>
+<p>That caveat matters more at Coinbase than it would at most companies. Coinbase is a regulated financial exchange. The agents he describes write and test code. A setup where agents shipped changes autonomously would be a different story, and likely a regulatory one. His version keeps people as the approval step and uses agents to get work to that step faster.</p>
+<p>The post also describes a personal workflow, not a company-wide rollout. Armstrong did not say the system is being deployed across Coinbase. He framed it as his own experiment, tied to Coinbase&#39;s broader push into &quot;agentic finance&quot; — including Agentic Wallets, launched in February 2026, which let AI agents hold funds and transact onchain, and the x402 protocol for machine-to-machine payments.</p>
+<h2>What Goldman Sachs&#39;s Reversal Tells Us</h2>
+<p>The same week Armstrong described expanding his agent usage, Bloomberg reported that Goldman Sachs moved in the opposite direction. Internal guidance updated in October 2026 restricts Anthropic&#39;s Claude Code and Microsoft&#39;s GitHub Copilot to the bank&#39;s engineers. Traders and bankers who had been using the tools to monitor client trading flows, model market moves, and prepare client materials lost access.</p>
+<p>The reversal is striking because Goldman&#39;s CIO Marco Argenti was publicly praising the practice months earlier. In July 2026, he told Bloomberg that traders and bankers had been building tools with AI and passing them to the firm&#39;s 12,000 engineers for improvement. At a conference in Turin in October, Argenti described AI adoption in waves, with developers making up the first wave.</p>
+<p>The October guidance limits coding agents to that wave. The people closest to business problems — traders, bankers, analysts — can no longer use the tools that let them build first versions without waiting for engineering time. Strats, who work across trading, quantitative research, and software engineering, retained access.</p>
+<p>Goldman&#39;s concerns were about productivity and risk, according to Bloomberg. Having thousands of employees without engineering training run software that writes and executes code, on machines that also handle client information, creates an attack surface that banks cannot easily control. Goldman restricted Claude from its Hong Kong bankers in April 2026, after reading its Anthropic contract strictly; an Anthropic spokesperson said Claude had never been officially supported in Hong Kong.</p>
+<p>The irony is that Goldman and Morgan Stanley are lead underwriters on Anthropic&#39;s IPO, according to the S-1 filing. The bank is taking the company public while pulling its product from most of its own workforce.</p>
+<h2>Why the Queue Matters More Than the Agents</h2>
+<p>The most replicable idea in Armstrong&#39;s post is not the agent hierarchy. Spinning up a dozen agents is straightforward with current tools. The bottleneck is reviewing what they produce.</p>
+<p>Anyone running <a href="/blog/ai-coding-agent-hidden-costs-vibe-tax/">AI coding agents</a> at scale knows the pattern: the agents generate work faster than you can evaluate it. Without a structured review pipeline, the cognitive overhead of switching between agent outputs eats the time the agents saved. Armstrong&#39;s queue solves this by batching review work, attaching evidence to each item, and using voice input to speed up the clearing process.</p>
+<p>For product teams, the implication is practical. Before adding more agents, build the review infrastructure. A prioritized queue with screenshots, test results, or demo videos attached to each item is more valuable than another agent. Save every correction so the system can learn from it. Keep a human on the approval step for anything that touches production systems, customer data, or money.</p>
+<p>This connects to a broader pattern that <a href="/blog/anthropic-employment-study-ai-agents-restructuring-work-hiring/">Anthropic&#39;s own internal study</a> documented in October 2026: agent hours at the company outnumber human hours by 6 to 1, and the nature of human work has shifted from doing to supervising. Armstrong&#39;s queue is a concrete implementation of that shift.</p>
+<h2>The Goldman Lesson: Access Without Governance Is a Liability</h2>
+<p>Goldman&#39;s rollback illustrates the other side. Giving non-technical employees access to coding agents without controls, training, or clear governance creates risks that surface only after deployment. Traders building tools that write and execute code on machines handling client data is a compliance problem, even if the tools themselves work well.</p>
+<p>The lesson for organizations is not that non-technical employees should never use coding agents. It is that access needs to come with guardrails. <a href="/blog/ai-coding-agent-hidden-costs-vibe-tax/">Claude Code&#39;s auto mode</a> and similar tools can operate with significant autonomy — running commands, making decisions, executing multi-step workflows without pausing for confirmation. That is the feature, not the bug. But it means that governance has to be designed before deployment, not retrofitted after a risk review.</p>
+<p>For Pakistani technology teams and startups, where resources are constrained and formal governance processes may be lighter, the instinct to give everyone access and see what happens is understandable. Goldman&#39;s experience suggests that a role-based approach — engineers get full agent access, business teams get supervised or read-only access — is a safer starting point.</p>
+<h2>What This Means for Founders and CTOs</h2>
+<p>Armstrong&#39;s post and Goldman&#39;s rollback represent two valid approaches to the same problem: AI agents are powerful enough to be useful, but not predictable enough to be ungoverned.</p>
+<p><strong>For founders running small teams:</strong> Armstrong&#39;s queue pattern is worth copying immediately. If you are already using AI agents for development, building a simple review queue — even a shared document or a Slack channel with structured entries — will reduce the context-switching cost. The agent hierarchy can come later.</p>
+<p><strong>For CTOs at larger organizations:</strong> Goldman&#39;s experience is a cautionary tale. Rolling out coding agents broadly and then restricting them creates frustration and wasted effort. Start with a defined group, establish what good usage looks like, measure productivity and risk, and expand from there.</p>
+<p><strong>For product teams building <a href="/blog/strands-decider-2b-open-source-decision-model-agentic-ai/">AI-first workflows</a>:</strong> The &quot;Brian brain&quot; concept — a system that learns from each approval and rejection to produce better first drafts — is the most interesting long-term idea. It is also the hardest to build. Armstrong did not describe the implementation, but the principle is clear: every human correction should become training data for the system, so the next draft requires fewer changes.</p>
+<p><strong>For educators and STEAM programs:</strong> The gap between what Armstrong is doing and what Goldman&#39;s traders were doing is not about the technology. It is about process discipline. Teaching students to work with AI agents effectively means teaching them to design review workflows, not just to write prompts. The agent is the easy part. The queue is the hard part.</p>
+<h2>What to Watch Next</h2>
+<ul>
+<li>Whether Armstrong shares metrics on &quot;corrections per change&quot; — the number he says he cares about most — in future posts or Coinbase earnings calls</li>
+<li>Whether Coinbase rolls out a version of this workflow beyond the CEO&#39;s office, or if it remains a personal experiment</li>
+<li>How Goldman&#39;s restriction affects trader productivity, and whether other banks follow suit</li>
+<li>Whether the &quot;Brian brain&quot; concept evolves into a productized feature of agent platforms, or remains a bespoke system</li>
+<li>How regulators view CEO-level agent autonomy at financial companies, particularly around code that touches customer funds</li>
+</ul>
+<h2>Conclusion</h2>
+<p>Armstrong&#39;s agent hierarchy and Goldman&#39;s rollback are not contradictory data points. They are two edges of the same knife. AI agents can handle real executive-level coordination work — tracking, chasing, drafting, testing — but only when the review pipeline is designed before the agents are turned on. The technology is ready. The organizational infrastructure around it is what most teams are missing.</p>
+<p>The queue is the product. The agents are just the workers.</p>
+<h2>Sources</h2>
+<ul>
+<li>Brian Armstrong, post on X, November 8, 2026 — described via <a href="https://www.thestateofai.com/news/coinbase-brian-armstrong-ai-chief-of-staff-agent">State of AI&#39;s reporting</a></li>
+<li><a href="https://www.thestateofai.com/news/coinbase-brian-armstrong-ai-chief-of-staff-agent">State of AI: &quot;Coinbase&#39;s CEO Now Has a Chief of Staff. It&#39;s an AI Agent.&quot;</a>, November 8, 2026</li>
+<li><a href="https://www.thestateofai.com/news/goldman-sachs-claude-code-traders-bankers">State of AI: &quot;Goldman Sachs Is Pulling Claude Code From Its Bankers and Traders.&quot;</a>, November 2, 2026 (original reporting via Bloomberg News)</li>
+<li><a href="https://www.anthropic.com/news/how-employment-is-changing-at-anthropic">Anthropic employment study</a>, published October 16, 2026 — covered in <a href="/blog/anthropic-employment-study-ai-agents-restructuring-work-hiring/">our analysis</a></li>
+</ul>
+]]></content:encoded>
+      <category>AI</category>
+    <category>AI agents</category>
+    <category>Coinbase</category>
+    <category>Brian Armstrong</category>
+    <category>CEO workflow</category>
+    <category>product teams</category>
+    <category>Goldman Sachs</category>
+    </item>
     <item>
       <title>NASA&apos;s $10 Billion Moon Base Build-Out: How CLPS 2 and the PROMISE Nuclear Rover Could Reshape Lunar Exploration</title>
       <link>https://shamylmansoor.com/blog/nasa-moon-base-clps2-promise-rover-lunar-south-pole</link>
