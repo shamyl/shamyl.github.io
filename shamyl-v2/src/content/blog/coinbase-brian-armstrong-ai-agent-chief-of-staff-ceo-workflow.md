@@ -107,4 +107,4 @@ The queue is the product. The agents are just the workers.
 - Brian Armstrong, post on X, November 8, 2026 — described via [State of AI's reporting](https://www.thestateofai.com/news/coinbase-brian-armstrong-ai-chief-of-staff-agent)
 - [State of AI: "Coinbase's CEO Now Has a Chief of Staff. It's an AI Agent."](https://www.thestateofai.com/news/coinbase-brian-armstrong-ai-chief-of-staff-agent), November 8, 2026
 - [State of AI: "Goldman Sachs Is Pulling Claude Code From Its Bankers and Traders."](https://www.thestateofai.com/news/goldman-sachs-claude-code-traders-bankers), November 2, 2026 (original reporting via Bloomberg News)
-- [Anthropic employment study](https://www.anthropic.com/news/how-employment-is-changing-at-anthropic), published October 16, 2026 — covered in [our analysis](/blog/anthropic-employment-study-ai-agents-restructuring-work-hiring/)
+- [Anthropic employment study](https://www.anthropic.com/research/employment-at-anthropic), published October 16, 2026 — covered in [our analysis](/blog/anthropic-employment-study-ai-agents-restructuring-work-hiring/)
