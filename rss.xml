@@ -5,13 +5,90 @@
     <link>https://shamylmansoor.com/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Tue, 10 Nov 2026 04:01:45 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 04:03:30 GMT</lastBuildDate>
     <atom:link href="https://shamylmansoor.com/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamylmansoor.com/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamylmansoor.com/blog</link>
     </image>
+    <item>
+      <title>DeepMind&apos;s AlphaProof Code: What AI-Verified Cryptography Means for Software Teams</title>
+      <link>https://shamylmansoor.com/blog/alphaproof-code-deepmind-signal-protocol-formal-verification</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/alphaproof-code-deepmind-signal-protocol-formal-verification</guid>
+      <pubDate>Wed, 11 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Google DeepMind used AI agents to formally verify Signal&apos;s cryptographic protocol down to machine instructions — over six million lines of Lean proof in four weeks. Here is what AlphaProof Code means for software engineers, CTOs, and product teams building security-critical systems.</description>
+      <content:encoded><![CDATA[<p>Formal verification — mathematically proving that code behaves exactly as specified — has been a goal of software engineering for decades. In practice, it has been too expensive, too slow, and too specialized for all but the most critical systems. On November 10, 2026, Google DeepMind announced that researchers used a multi-agent AI framework called AlphaProof Code to formally verify the core cryptographic protocol underlying Signal, the messaging app used by billions of people through Signal and Google Messages. The AI agents generated over six million lines of machine-checked proof in the Lean language, completing in four weeks what has historically taken expert teams years. It is the first time any method — AI-assisted or otherwise — has formally verified a widely deployed cryptographic protocol at this depth.</p>
+<h2>In Brief</h2>
+<ul>
+<li>Google DeepMind introduced AlphaProof Code on November 10, 2026, an agentic framework that combines human expertise with AI agents for formal verification of software at unprecedented depth</li>
+<li>AI agents powered by Gemini Carbon generated over six million lines of Lean proof to verify Signal&#39;s cryptographic protocol down to compiled machine instructions — the first time this has been achieved by any method</li>
+<li>The verification process took four weeks, compared to the years that traditional formal verification of cryptographic protocols typically requires</li>
+<li>Human experts only needed to review approximately one percent of the codebase, with Lean automatically checking the rest</li>
+<li>The system correctly identified two real, previously fixed Signal bugs when they were reintroduced, producing machine-checked proofs that the buggy versions were insecure</li>
+<li>Signal CTO Ehren Kret called the work &quot;a major breakthrough&quot; and said it gives Signal &quot;even greater confidence in our code&#39;s privacy guarantees&quot;</li>
+<li>DeepMind open-sourced the formal verification artifacts for community use</li>
+</ul>
+<h2>What AlphaProof Code Actually Does</h2>
+<p>The framework, described in a blog post by Pushmeet Kohli and Swarat Chaudhuri of Google DeepMind, splits formal verification the way a research team would divide work. Human experts collaborate with AI to decide what properties need to be proven, translating Signal&#39;s security goals into formal mathematical specifications. From there, AI agents powered by Gemini Carbon — DeepMind&#39;s frontier model — generate the proofs themselves, writing Lean code that mathematically demonstrates the implementation meets those specifications.</p>
+<p>Lean is a functional programming language and theorem prover. When a proof is written in Lean, the Lean compiler automatically checks whether the proof is valid. This is critical: the AI agents do not need to be trusted. If an agent makes an error, Lean will reject the proof. The human reviewers only need to focus on the specifications — what the code should do — and on the small fraction of cases the agents flag for review.</p>
+<p>According to DeepMind, the agents generated over six million lines of Lean proof to verify Signal&#39;s core cryptographic code. The human review burden was reduced to approximately one percent of the codebase. The entire process took four weeks.</p>
+<h2>Why Verification Down to Machine Instructions Matters</h2>
+<p>Most formal verification of cryptographic protocols stops at the design level. Researchers prove that the mathematical protocol is correct — that the Double Ratchet algorithm in Signal&#39;s case produces the intended confidentiality and forward secrecy guarantees. But real-world vulnerabilities often live in the gap between the design and the implementation. A protocol that is mathematically perfect can still be compromised by a bug in how the code is compiled, how memory is managed, or how edge cases are handled.</p>
+<p>AlphaProof Code went further. According to DeepMind, the agents proved that the compiled code — the actual machine instructions running on devices — fulfills the key security properties. This includes proving that messages remain protected before and after a device is temporarily compromised, which is the forward secrecy and post-compromise security guarantee that makes the Signal Protocol distinctive.</p>
+<p>This depth of verification is what makes the work unprecedented. As DeepMind noted, &quot;real-world vulnerabilities often hide in the gap between design and implementation, bridging this gap makes these proofs vastly more complex.&quot;</p>
+<h2>The Bug Detection Test</h2>
+<p>To confirm that AlphaProof Code can distinguish correct code from buggy code, the researchers reintroduced two real, previously fixed bugs into an isolated version of Signal&#39;s code. In both cases, the system produced a machine-checked proof that the buggy version was insecure.</p>
+<p>This is an important validation. Formal verification is only useful if it can catch real problems. By using actual historical bugs — rather than synthetic test cases — DeepMind demonstrated that the framework detects vulnerabilities that were realistic enough to have been discovered and fixed in production.</p>
+<h2>What Signal Says</h2>
+<p>Signal&#39;s leadership endorsed the work directly. Ehren Kret, Chief Technology Officer of Signal, said in a statement quoted in the DeepMind announcement: &quot;Using AI agents to translate live code into valid Lean theorems is a major breakthrough. As AI-driven security threats grow, rigorously verifying the Signal protocol implementation gives us even greater confidence in our code&#39;s privacy guarantees.&quot;</p>
+<p>Kret&#39;s mention of &quot;AI-driven security threats&quot; is worth noting. The verification work arrives at a time when AI is being used both to attack and defend software systems. DeepMind also referenced its automated defense agent called CodeMender, suggesting a vision where formal verification and automated defense work together.</p>
+<h2>Why This Matters for Product Teams</h2>
+<p>For CTOs and product teams building security-critical software, AlphaProof Code represents a potential shift in the cost curve of formal verification.</p>
+<p><strong>The cost problem.</strong> Formal verification has traditionally been justified only for the most critical systems — aerospace flight controllers, nuclear plant monitoring, smart contract protocols handling large sums. The cost of hiring formal methods experts and the time required for manual proofs have made it impractical for most product teams. If AI agents can reduce verification time from years to weeks, the economics change.</p>
+<p><strong>The trust problem.</strong> One concern with AI-generated code and proofs is the black-box problem: if an AI writes the proof, how do you trust it? Lean&#39;s automatic checking solves this for the proof itself — if Lean accepts the proof, it is mathematically valid. The remaining human responsibility is ensuring the specification is correct. This is a meaningful division of labor: humans define what the software should do, and AI proves that it does it.</p>
+<p><strong>The scaling problem.</strong> DeepMind notes that this approach &quot;lays the groundwork to secure other vital systems, from medical device firmware to power grid software.&quot; For product teams in regulated industries — healthcare, finance, infrastructure — this could become a practical path to higher assurance levels without the traditional cost overhead.</p>
+<h2>Connection to Broader AI Verification Trends</h2>
+<p>AlphaProof Code is part of a larger pattern. In November 2025, Anthropic released <a href="/blog/anthropic-flashprove-provable-inference-zksnark-llm-verification/">FlashProve</a>, an open-source system that generates zero-knowledge proofs of LLM inference, allowing users to verify that a model actually produced a given output. Both projects share a common thread: using AI to generate proofs about AI systems and the software they depend on.</p>
+<p>The difference is scope. FlashProve proves that a specific inference happened. AlphaProof Code proves that the cryptographic protocol protecting billions of messages is mathematically correct. The former is about trust in AI outputs. The latter is about trust in the infrastructure that AI — and everything else — runs on.</p>
+<p>For product teams thinking about <a href="/blog/ai-coding-agents-testing-techniques-dan-luu-eval/">AI coding agent quality and testing</a>, formal verification offers a complementary approach to the testing problem. Where Dan Luu&#39;s evaluation of 26 testing techniques showed that AI coding agents struggle with knowing how to test their own code, AlphaProof Code suggests that AI agents can be effective at a different kind of verification — one where the proof checker (Lean) provides an objective ground truth that does not depend on the agent&#39;s judgment.</p>
+<h2>What This Means for Pakistan and Emerging Markets</h2>
+<p>The Signal Protocol underpins not just the Signal app but also WhatsApp&#39;s end-to-end encryption, which is used by over 100 million people in Pakistan. The security of private communications, business transactions, and journalist sources in Pakistan depends on this cryptographic foundation being correct.</p>
+<p>For Pakistani software teams, the broader implication is about access to security assurance. Formal verification expertise is scarce globally and practically nonexistent in most Pakistani engineering teams. If AI agents can democratize access to formal methods — even partially — it could allow Pakistani startups building fintech, healthtech, or government software to achieve higher security guarantees than they could afford today.</p>
+<p>This matters in the context of Pakistan&#39;s <a href="/blog/pakistan-digital-payments-roadmap-raast-cashless-economy/">expanding digital payments infrastructure</a>. As Raast and other digital payment systems scale, the security of the underlying cryptographic code becomes more critical. AI-assisted formal verification could become a tool for Pakistani fintech teams to validate their implementations against specifications without hiring specialized formal methods researchers.</p>
+<h2>Limitations and Open Questions</h2>
+<p>The AlphaProof Code announcement is significant, but several caveats are worth noting.</p>
+<p><strong>Signal is a well-studied protocol.</strong> The Signal Protocol has been analyzed by cryptographers for years. The specifications were relatively clear before AlphaProof Code started. Verifying a protocol that is less well understood — or one where the specification itself is ambiguous — would be harder.</p>
+<p><strong>Four weeks is still not trivial.</strong> For teams operating on continuous deployment cycles, a four-week verification process is accessible for critical releases but not for every iteration. The question is how quickly this time can be compressed as the framework matures.</p>
+<p><strong>Open-source artifacts are available but the framework itself is not.</strong> DeepMind open-sourced the formal verification artifacts — the proofs and specifications — but the AlphaProof Code framework as a general-purpose tool is not yet publicly available. Other teams cannot simply download it and verify their own code. Making this a repeatable, general-purpose tool will require additional engineering.</p>
+<p><strong>The human specification step remains manual.</strong> The framework&#39;s division of labor puts humans in charge of defining what to prove. This is a feature, not a bug — but it means the quality of verification depends on the quality of the specifications. A team that specifies the wrong properties will get a proof of the wrong things.</p>
+<p><strong>Scale of the verified code.</strong> The verification covers Signal&#39;s core cryptographic protocol, not the entire Signal application. Messaging apps include UI code, network stack code, backup systems, and contact management — none of which were part of this verification. The core protocol is the most security-critical component, but it is a subset of the full application.</p>
+<h2>What to Watch Next</h2>
+<ul>
+<li><strong>DeepMind&#39;s open-source release.</strong> The formal verification artifacts are available, but the broader framework may follow. Watch for whether AlphaProof Code becomes a reusable tool or remains a research demonstration.</li>
+<li><strong>Adoption beyond Signal.</strong> DeepMind mentioned medical device firmware and power grid software as targets. The first non-research deployment of this approach will be a stronger signal than the initial announcement.</li>
+<li><strong>Lean ecosystem growth.</strong> The Lean prover community has been growing, but it remains small compared to mainstream programming languages. If AI-assisted formal verification becomes practical, demand for Lean expertise — and for tools that abstract away Lean&#39;s complexity — will increase.</li>
+<li><strong>Competition.</strong> Other AI labs are likely working on similar approaches. The combination of frontier LLMs with theorem provers is a natural research direction, and DeepMind&#39;s demonstration will accelerate interest.</li>
+<li><strong>Regulatory response.</strong> Formal verification is already referenced in some safety standards for automotive (ISO 26262) and aviation (DO-178C). If AI-assisted verification becomes practical, regulators in fintech and healthcare may update their assurance requirements.</li>
+</ul>
+<p>For product teams and CTOs, the practical takeaway is this: formal verification is moving from a niche specialty to something that AI agents can assist with. It is not yet a turnkey solution, but the trajectory suggests that within a few years, verifying critical code with AI-assisted formal methods could be as routine as running a test suite — albeit for a much smaller subset of code. The teams that start building familiarity with these tools now will have an advantage when the economics shift.</p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://deepmind.google/blog/introducing-alphaproof-code/">Google DeepMind blog post: &quot;Introducing AlphaProof Code: a breakthrough in verifying complex software at depth&quot;</a> — November 10, 2026</li>
+<li><a href="https://signal.org/docs/">Signal Protocol documentation</a> — Signal Foundation</li>
+<li><a href="https://lean-lang.org/">Lean Programming Language</a> — Lean Community</li>
+<li>Ehren Kret (CTO, Signal) quoted in DeepMind announcement, November 10, 2026</li>
+<li>Researchers: Swarat Chaudhuri, Andrew Ferraiuolo, Anton Kovsharov, Tej Chajed, Sam Schlesinger, Karn Seth, Jonathan Katz, Charles Sutton, and Pushmeet Kohli (Google DeepMind)</li>
+</ul>
+]]></content:encoded>
+      <category>AI</category>
+    <category>formal verification</category>
+    <category>DeepMind</category>
+    <category>Signal</category>
+    <category>cryptography</category>
+    <category>software engineering</category>
+    <category>AlphaProof Code</category>
+    </item>
     <item>
       <title>Agentic Robotics: How AI Agents Are Learning to Program Robots Without Massive Datasets</title>
       <link>https://shamylmansoor.com/blog/agentic-robotics-ai-agents-program-robots-simulation-berkeley-nvidia</link>
