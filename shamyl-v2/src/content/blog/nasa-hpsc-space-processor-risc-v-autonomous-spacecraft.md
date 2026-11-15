@@ -99,13 +99,13 @@ One of HPSC's most significant design choices is its software compatibility. The
 
 This matters because space software has historically required specialized ports, custom DSP flows, and conservative processor assumptions. HPSC gives software developers a modern vector target, familiar AI libraries, Linux support, real-time OS support, and deterministic I/O. The programming model looks much closer to terrestrial embedded AI than previous rad-hard platforms allowed.
 
-For organizations building [educational robotics platforms](/projects/learnosteam) or edge AI systems, this convergence is worth noting. The same open-source AI frameworks that run on a Raspberry Pi or a Jetson Nano can, in principle, run on a radiation-hardened spacecraft processor. The qualification and verification requirements are dramatically different, but the developer experience is converging.
+For organizations building [educational robotics platforms](/work/learnosteam/) or edge AI systems, this convergence is worth noting. The same open-source AI frameworks that run on a Raspberry Pi or a Jetson Nano can, in principle, run on a radiation-hardened spacecraft processor. The qualification and verification requirements are dramatically different, but the developer experience is converging.
 
 ## What This Means for Pakistan, Educators, and Technology Builders
 
 ### For STEAM Educators
 
-HPSC is a concrete example of why open architecture matters. RISC-V is an open instruction set — anyone can implement it without licensing fees. NASA's choice of RISC-V for its most advanced space processor validates a model where the architecture is open and the implementation is specialized. For educators teaching [STEAM concepts through hands-on robotics](/projects/buddy-bot), the RISC-V ecosystem offers a path from classroom hardware to space-grade silicon using the same fundamental instruction set. Students who learn RISC-V today are learning the same ISA that will guide NASA's next generation of autonomous spacecraft.
+HPSC is a concrete example of why open architecture matters. RISC-V is an open instruction set — anyone can implement it without licensing fees. NASA's choice of RISC-V for its most advanced space processor validates a model where the architecture is open and the implementation is specialized. For educators teaching [STEAM concepts through hands-on robotics](/work/buddy-bot/), the RISC-V ecosystem offers a path from classroom hardware to space-grade silicon using the same fundamental instruction set. Students who learn RISC-V today are learning the same ISA that will guide NASA's next generation of autonomous spacecraft.
 
 ### For Pakistani Technology Teams
 
