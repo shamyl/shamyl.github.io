@@ -5,13 +5,94 @@
     <link>https://shamylmansoor.com/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Fri, 20 Nov 2026 04:02:20 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 21 Nov 2026 04:01:26 GMT</lastBuildDate>
     <atom:link href="https://shamylmansoor.com/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamylmansoor.com/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamylmansoor.com/blog</link>
     </image>
+    <item>
+      <title>Pakistan&apos;s Freelancers Are Losing International Clients Over Payment Gateway Restrictions. Here Is What Needs to Change.</title>
+      <link>https://shamylmansoor.com/blog/pakistan-freelancer-payment-gateway-restrictions-international-clients</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/pakistan-freelancer-payment-gateway-restrictions-international-clients</guid>
+      <pubDate>Sat, 21 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Pakistani freelancers and small tech firms are losing international clients because of persistent payment gateway restrictions. Despite record export earnings, the absence of PayPal, limited gateway access, and regulatory friction are costing work. Here is what the problem looks like, what is being done, and what remains unresolved.</description>
+      <content:encoded><![CDATA[<p>Pakistani freelancers and small technology firms are losing international clients because of persistent payment gateway restrictions, according to reporting by Arab News Pakistan on November 21, 2026. The problem is not new, but it is becoming more costly. Pakistani freelancers earned a record $197 million in export receipts in September 2026 alone — the highest monthly figure in the country&#39;s history. Yet the infrastructure for receiving those earnings from international clients remains fragmented, unreliable, and in some cases simply unavailable. The result is that freelancers are losing contracts not because they lack skills, but because clients cannot pay them easily.</p>
+<h2>In Brief</h2>
+<ul>
+<li>Pakistani freelancers and small tech firms are losing international clients due to payment gateway restrictions, according to Arab News Pakistan</li>
+<li>PayPal does not operate in Pakistan, forcing freelancers to rely on workarounds including wire transfers, Payoneer, and informal channels</li>
+<li>The State Bank of Pakistan has eased some export rules for IT freelancers, but fundamental gateway access issues remain</li>
+<li>Pakistani freelancers earned a record $197 million in September 2026, pushing Q1 FY2027 freelance earnings to approximately $550 million</li>
+<li>The gap between domestic digital payment progress and international payment infrastructure is widening</li>
+<li>Small tech firms report losing clients who find payment friction unacceptable compared to competing vendors in countries with full gateway access</li>
+</ul>
+<h2>The Problem: Skilled Workers, Broken Pipes</h2>
+<p>Pakistan&#39;s freelance economy is one of the country&#39;s strongest technology export stories. Freelancers earned approximately $1.76 billion in FY2026, and the current quarterly run rate of roughly $550 million suggests FY2027 could reach $2.2 billion, as we examined in our analysis of <a href="/blog/pakistan-it-exports-q1-fy2027-freelance-record-growth/">Q1 FY2027 IT export numbers</a>. Pakistan ranks among the world&#39;s top freelance economies by volume of workers.</p>
+<p>But the payment infrastructure beneath those earnings has not kept pace. The core issue is that many of the payment platforms international clients expect to use — PayPal, Stripe, and several others — either do not operate in Pakistan or operate with severe limitations. Freelancers report that prospective clients abandon projects when they discover payment will require wire transfers, third-party intermediaries, or unfamiliar local platforms. For a client hiring a freelancer for a $500 design job or a $2,000 development sprint, the friction of setting up a Payoneer account or initiating an international wire transfer is often enough to choose a vendor in another country instead.</p>
+<p>According to the Arab News Pakistan report published on November 21, 2026, both individual freelancers and small technology firms describe losing clients specifically over payment gateway limitations. The reporting indicates that the problem affects not only new client acquisition but also ongoing relationships, where payment failures or delays erode trust.</p>
+<h2>Why PayPal Still Does Not Operate in Pakistan</h2>
+<p>The absence of PayPal in Pakistan is the most visible symptom of a broader problem. PayPal, which processes payments in over 200 markets globally, has repeatedly declined to enter Pakistan despite government pressure and public expressions of interest from Pakistani officials.</p>
+<p>According to reporting by Arab News Pakistan and Dawn, Pakistani officials have continued to express optimism about PayPal&#39;s potential entry, but no concrete agreement has been announced. Dawn reported that freelancers have expressed frustration over PayPal&#39;s refusal to operate in the country, noting that the platform&#39;s absence creates a competitive disadvantage compared to freelancers in neighbouring India and Bangladesh, where PayPal is available.</p>
+<p>The reasons for PayPal&#39;s absence are not fully public. Regulatory concerns related to Pakistan&#39;s financial sector oversight, anti-money-laundering frameworks, and the country&#39;s history on FATF grey lists have been cited in various reports. Pakistan was removed from the FATF grey list in 2022, but the reputational impact on international payment platforms&#39; risk assessments appears to persist. The State Bank of Pakistan&#39;s regulatory requirements for foreign payment operators may also contribute to the friction.</p>
+<p>This is not a problem that individual freelancers can solve. It requires government-to-platform negotiation and regulatory alignment at a level that has not yet produced results.</p>
+<h2>What the SBP Has Done — and What It Has Not</h2>
+<p>The State Bank of Pakistan has taken steps to ease the path for IT freelancers. According to The Express Tribune, the SBP has eased export rules for IT freelancers, simplifying documentation and compliance requirements for individuals receiving foreign exchange for IT and IT-enabled services. These measures reduce the bureaucratic burden on freelancers who previously faced complex paperwork to legitimise their foreign earnings.</p>
+<p>The government has also promoted the Raast instant payment system for domestic transactions, as we covered in our analysis of <a href="/blog/pakistan-digital-payments-roadmap-raast-cashless-economy/">Pakistan&#39;s 100% digital payments roadmap</a>. Raast has made domestic digital payments faster and cheaper. But Raast is a domestic system — it does not solve the problem of receiving payments from international clients who want to use PayPal, Stripe, or credit card processors.</p>
+<p>The distinction matters. Pakistan has made real progress on domestic payment digitisation. Government cheque payments ended on November 15, 2026, shifting to Raast. BISP payments are 100% digital. Raast QR codes are expanding to utility bills. But the international payment infrastructure — the pipes that connect Pakistani freelancers to global clients — remains the weakest link in the export chain.</p>
+<h2>The Cost of Payment Friction</h2>
+<p>Payment friction has measurable costs for Pakistan&#39;s freelance economy:</p>
+<p><strong>Lost contracts.</strong> Freelancers report that clients choose competitors in other countries specifically because payment is easier. This is particularly damaging for small contracts ($100–$2,000) where the overhead of setting up alternative payment methods exceeds the project value from the client&#39;s perspective.</p>
+<p><strong>Higher transaction costs.</strong> Workarounds like Payoneer, wire transfers, and intermediary services typically charge higher fees than direct payment gateway processing. For freelancers operating on thin margins, a 3–5% fee difference on every transaction is significant.</p>
+<p><strong>Delayed payments.</strong> International wire transfers can take 3–7 business days to clear in Pakistan. Payment platforms in other markets settle within hours. This cash flow gap affects freelancers who depend on timely receipt of funds for living expenses.</p>
+<p><strong>Reduced competitiveness.</strong> When a client can pay a freelancer in the Philippines or Ukraine with a credit card through Stripe in two minutes, but paying a Pakistani freelancer requires a wire transfer that takes a week, the Pakistani freelancer starts at a disadvantage regardless of skill level or price.</p>
+<p><strong>Client trust erosion.</strong> When payments fail, are delayed, or require multiple attempts, clients lose confidence in the freelancer&#39;s professionalism. This is particularly damaging for freelancers building long-term client relationships.</p>
+<h2>How This Connects to Pakistan&#39;s Broader Tech Export Ambitions</h2>
+<p>The government&#39;s Uraan Pakistan plan targets $10 billion in annual IT exports by FY2029, requiring approximately 27.8% compound annual growth from current levels. Freelance earnings are a critical component of that target — if FY2027 freelance earnings reach $2.2 billion as the current run rate suggests, freelancers would contribute roughly 20–25% of the total IT export goal.</p>
+<p>But the payment gateway problem creates a ceiling on freelance growth that is independent of skill supply or demand. Pakistan can train more freelancers, improve their skills, and connect them to global platforms, but if the payment infrastructure cannot reliably and cheaply move money from clients to freelancers, the export growth will plateau.</p>
+<p>This is also a competitiveness issue for Pakistan&#39;s formal IT sector. Small technology firms providing services to international clients face the same payment friction. As we noted in our coverage of <a href="/blog/pakistan-it-exports-2026-budget-freelance-economy/">Pakistan&#39;s IT exports and the FY2026-27 budget</a>, the gap between gross and net IT exports reflects continued dependence on imported software, cloud services, and hardware. Payment friction on the revenue side compounds the challenge.</p>
+<p>For technology product companies building platforms for the Pakistani market — such as <a href="/projects/learnosteam/">LearnOSTEAM</a> and other EdTech products — the payment gateway problem also affects domestic operations. When schools or parents need to pay for digital subscriptions, the available options are limited. The expansion of Raast helps, but international SaaS tools and services that Pakistani companies rely on still require access to international payment rails.</p>
+<h2>What Other Countries Have Done</h2>
+<p>Several countries with similar profiles have addressed payment gateway access more effectively:</p>
+<p><strong>Bangladesh</strong> has had PayPal available since 2020, after years of negotiation between the government and the platform. Bangladesh&#39;s freelance economy is comparable to Pakistan&#39;s in scale, and the availability of PayPal is frequently cited by Banglian freelancers as a competitive advantage.</p>
+<p><strong>Egypt</strong> partnered with Stripe in 2021 to enable local payment processing, giving Egyptian freelancers and startups access to one of the world&#39;s most widely used payment platforms.</p>
+<p><strong>The Philippines</strong> has full access to PayPal, Stripe, and most major payment gateways, making it one of the most competitive freelance markets globally for payment infrastructure.</p>
+<p>The common thread is that governments in these countries treated payment gateway access as a trade and export infrastructure priority, not just a financial regulation issue. They negotiated directly with platforms, aligned regulatory frameworks, and in some cases adjusted compliance requirements to meet platform standards.</p>
+<h2>Product Builder&#39;s Perspective</h2>
+<p>From a product-building perspective, the payment gateway problem is an infrastructure dependency that individual freelancers and small firms cannot solve on their own. Three observations are relevant:</p>
+<p><strong>Payment infrastructure is a public good for the digital economy.</strong> Just as roads and electricity are infrastructure that enables physical commerce, payment gateways are infrastructure that enables digital commerce. When a country&#39;s payment infrastructure is inadequate, the cost is borne by every individual participant in the economy — but the solution requires coordinated action at the government and regulatory level.</p>
+<p><strong>The domestic-international gap is the key challenge.</strong> Pakistan has made real progress on domestic payments with Raast. The next priority should be international payment access. This means not just PayPal, but a broader strategy to enable Stripe, Wise, and other major payment platforms to operate in Pakistan. Each platform that enters the market reduces friction for a segment of freelance work.</p>
+<p><strong>Freelancer collectives could partiallly mitigate the problem.</strong> While the underlying infrastructure gap requires government action, freelancer collectives and associations like PAFLA (Pakistan Freelancers Association) could negotiate better terms with existing payment intermediaries like Payoneer by aggregating volume. This is a workaround, not a solution — but it could reduce transaction costs in the short term while broader access is negotiated.</p>
+<h2>What to Watch Next</h2>
+<ul>
+<li><strong>PayPal negotiations.</strong> Watch for any concrete announcement from the IT Ministry or SBP regarding PayPal&#39;s entry. Public expressions of optimism without actionable commitments have been recurring for years; a specific timeline or regulatory change would be meaningful.</li>
+<li><strong>SBP regulatory changes.</strong> The SBP&#39;s ongoing easing of IT freelancer export rules may include further measures to simplify foreign payment receipt. The draft Open Banking Regulations, if finalised, could also enable new payment service providers to enter the market.</li>
+<li><strong>Islamabad cashless deadline.</strong> The capital is set to become Pakistan&#39;s first cashless city by December 31, 2026, as Arab News Pakistan reported on November 20, 2026. If successful, the domestic digital payment model could be extended — but it does not address the international payment gap.</li>
+<li><strong>Freelancer organising.</strong> PAFLA and other freelancer associations may push more aggressively for payment infrastructure reform as the economic stakes grow. With freelance earnings now exceeding $2 billion annually, the political weight of this constituency is increasing.</li>
+</ul>
+<h2>Conclusion</h2>
+<p>Pakistan&#39;s freelance economy is growing at a remarkable rate — 49% year-on-year in September 2026. But that growth is happening despite the payment infrastructure, not because of it. Every freelancer who loses a client over payment friction represents export revenue that goes to a competitor in another country. The government has recognised the domestic side of the problem with its digital payments roadmap. The international side now needs the same level of urgency.</p>
+<p>PayPal&#39;s entry alone would not solve everything, but it would signal that Pakistan is serious about removing the infrastructure barriers that limit its digital export potential. Until then, Pakistani freelancers will continue to compete with one hand tied behind their backs — not because they lack skills, but because the pipes that carry their earnings are broken.</p>
+<p>What payment platform would make the biggest difference for your freelance or technology work? That is the question policymakers should be asking — and acting on.</p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://www.arabnews.pk/pakistan/pakistani-freelancers-small-tech-firms-lose-clients-over-payment-gateway-restrictions-3007561">Pakistani freelancers, small tech firms lose clients over payment gateway restrictions — Arab News Pakistan, November 21, 2026</a></li>
+<li><a href="https://www.arabnews.pk/pakistan/pakistan-still-hopeful-online-payment-giant-paypal-will-play-ball">Pakistan still &#39;hopeful&#39; online payment giant PayPal will play ball — Arab News Pakistan</a></li>
+<li><a href="https://www.dawn.com/news/1447496/freelancers-upset-over-paypal-refusal-to-operate-in-pakistan">Freelancers upset over PayPal refusal to operate in Pakistan — Dawn</a></li>
+<li><a href="https://tribune.com.pk/story/2480001/sbp-eases-export-rules-for-it-freelancers">SBP eases export rules for IT freelancers — The Express Tribune</a></li>
+<li><a href="https://www.dawn.com/news/1562002/let-paypal-come-to-pakistan">Let PayPal come to Pakistan — Dawn</a></li>
+<li><a href="https://propakistani.pk/">Pakistan IT Exports Q1 FY2027 — State Bank of Pakistan data via ProPakistani</a></li>
+<li><a href="https://www.arabnews.pk/pakistan/at-islamabads-markets-deadline-to-go-cashless-meets-unreliable-internet-connections-3007564">At Islamabad&#39;s markets, deadline to go cashless meets unreliable Internet connections — Arab News Pakistan, November 20, 2026</a></li>
+</ul>
+]]></content:encoded>
+      <category>pakistan</category>
+    <category>freelance</category>
+    <category>payment-gateways</category>
+    <category>IT-exports</category>
+    <category>digital-economy</category>
+    <category>PayPal</category>
+    </item>
     <item>
       <title>ChatGPT for SNES: How a 2.2M-Parameter Language Model Runs on a Super Nintendo Cartridge</title>
       <link>https://shamylmansoor.com/blog/chatgpt-snes-language-model-super-nintendo-cartridge</link>
