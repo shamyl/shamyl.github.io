@@ -5,13 +5,148 @@
     <link>https://shamylmansoor.com/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Sun, 22 Nov 2026 04:03:42 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 04:03:38 GMT</lastBuildDate>
     <atom:link href="https://shamylmansoor.com/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamylmansoor.com/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamylmansoor.com/blog</link>
     </image>
+    <item>
+      <title>OpenAI&apos;s Jagged Frontier: What AI Agent Success Rates Reveal About Research and Product Development</title>
+      <link>https://shamylmansoor.com/blog/openai-jagged-frontier-ai-agent-research-acceleration</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/openai-jagged-frontier-ai-agent-research-acceleration</guid>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
+      <description>OpenAI&apos;s internal data shows AI agents now complete 46% of two-to-four-hour research tasks autonomously, but success rates vary wildly by task type — from 79% for monitoring to 25% for writing inference code. Here is what the jagged frontier means for CTOs, product teams, educators, and Pakistani technology companies.</description>
+      <content:encoded><![CDATA[<p>OpenAI published a detailed report on November 18, 2026, titled &quot;Research acceleration: The jagged frontier,&quot; revealing that its internal AI coding agents now complete nearly half of two-to-four-hour research tasks without human intervention. The report is the most granular look yet at how AI agents are reshaping research inside a frontier AI lab. But the headline number obscures a critical detail: success rates vary wildly depending on the type of work. Agents succeed 79% of the time when monitoring training runs, but only 25% when writing code for inference and serving stacks. This unevenness — what OpenAI calls the &quot;jagged frontier&quot; — has implications that extend well beyond AI research labs, reaching into product teams, education systems, and technology industries in developing economies.</p>
+<h2>In Brief</h2>
+<ul>
+<li>OpenAI&#39;s November 18, 2026 report shows autonomous agent success on two-to-four-hour research tasks rose from 23% in March 2026 to 46% in October 2026</li>
+<li>Success rates are deeply uneven: 79% for monitoring training runs, 72% for answering technical questions, but only 25% for writing inference and serving code, and 29% for building evaluation and RL environments</li>
+<li>Median researcher daily agent spend reached $2,400 at API list prices in October, up 62% from September; the 90th percentile reached $23,000 per day</li>
+<li>Researchers reported they would trade 40% of team headcount or 30% of team compute to retain access to frontier coding agents for three months</li>
+<li>Safety and Alignment research saw the largest absolute increase in documented workweeks, growing 77% from January to September 2026, with a notable inflection after the July 2026 Hugging Face incident</li>
+<li>An independent assessment by METR, published November 5, 2026, estimates that Anthropic is improving model capabilities at roughly twice the historical rate, with AI-assisted R&amp;D as a primary driver</li>
+<li>OpenAI&#39;s Chief Scientist Jakub Pachocki proposed on November 22, 2026 that perplexity — a measure of how well a model predicts text — should become a shared industry metric for pacing AI development and establishing safety standards</li>
+</ul>
+<h2>What the Data Actually Shows</h2>
+<p>The OpenAI report, authored by the company&#39;s research organization, builds on an earlier report published September 6, 2026. Together, they provide a longitudinal view of how coding agents have changed internal research workflows over eight months.</p>
+<p>The core finding is that agents are becoming measurably more capable of completing research tasks autonomously. From March to October 2026, the estimated zero-intervention success rate for tasks requiring two to four hours of human work rose from 23% to 46%. For tasks requiring four to eight hours, success rose from 13% to 35%. These are tasks that a human researcher would complete — writing code to instrument an experiment, debugging a training pipeline, analyzing results — and the agent is doing them without human correction.</p>
+<p>But the aggregate numbers hide sharp variation. Using a taxonomy developed by Epoch AI called O*NET AI R&amp;D, OpenAI categorized tasks and measured success rates by type. From August through October 2026:</p>
+<table>
+<thead>
+<tr>
+<th>Task Category</th>
+<th>Estimated Success Rate</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Communicate (documentation, reports)</td>
+<td>69%</td>
+</tr>
+<tr>
+<td>Analyze (data analysis, evaluation)</td>
+<td>58%</td>
+</tr>
+<tr>
+<td>Build (code implementation)</td>
+<td>43%</td>
+</tr>
+</tbody></table>
+<p>At the individual task level, the spread is even wider:</p>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Estimated Success Rate</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Monitoring training runs for issues</td>
+<td>79%</td>
+</tr>
+<tr>
+<td>Answering technical questions</td>
+<td>72%</td>
+</tr>
+<tr>
+<td>Monitoring runs (general)</td>
+<td>69%</td>
+</tr>
+<tr>
+<td>Writing code for inference and serving stacks</td>
+<td>25%</td>
+</tr>
+<tr>
+<td>Building evaluation, RL, and agent environments</td>
+<td>29%</td>
+</tr>
+</tbody></table>
+<p>This is the &quot;jagged frontier&quot; — the boundary between what AI agents can do reliably and what they cannot is not a smooth line moving steadily upward. It is a jagged edge where some capabilities are nearly automated while others remain stubbornly human.</p>
+<h2>Agent Usage Is Surging — and So Is the Cost</h2>
+<p>The report documents exponential growth in agent usage. The median researcher now uses agents at a rate equivalent to $2,400 per day at API list prices, up 62% from $1,500 in September. The 90th percentile researcher uses $23,000 per day, more than double the previous month.</p>
+<p>Agent workdays — defined as eight hours of agent runtime — have increased elevenfold, from 0.5 to 5.7 per researcher per day. On pretraining and posttraining teams, the average is roughly eight agent workdays per researcher per calendar day, meaning agents are running around the clock on multiple concurrent tasks. By mid-October, more than two-thirds of researchers averaged at least four concurrent agents, and over 10% averaged sixteen or more.</p>
+<p>The API-equivalent value of agent usage is now about twice OpenAI&#39;s non-equity research compensation costs. When researchers were asked what they would trade to keep frontier coding agents for three months, the median answer was 40% of team headcount or 30% of team compute. In a separate October survey, 27 of 28 researchers said they would choose the latest internal model over working with a mid-career human research engineer and a 2024-era model like o1-preview.</p>
+<p>These numbers signal that for the researchers closest to the technology, AI agents are not an experimental tool. They are infrastructure that researchers would give up significant other resources to keep.</p>
+<h2>Where Agents Still Fail</h2>
+<p>The report is candid about limitations. Through interviews with ten researchers, five themes emerged:</p>
+<p><strong>Agents have poor research taste.</strong> They struggle to generate well-posed problems, produce repetitive data when asked to generate examples, and lack the judgment to distinguish promising directions from dead ends. One researcher noted: &quot;The model generally can&#39;t one-shot come up with well-posed problems that it cannot solve itself.&quot;</p>
+<p><strong>Agents produce low-quality output that requires supervision.</strong> Researchers described agents writing &quot;AI slop&quot; PRs, rabbit-holing on unnecessary steps, producing unusable data artifacts, and making invalid analysis assumptions. One researcher adapted by switching from &quot;do all of these&quot; to &quot;do one, let me review, then do the rest&quot; — a pattern that mirrors the <a href="https://shamylmansoor.com/blog/ai-coding-agent-hidden-costs-vibe-tax/">agent.md approach to constraining AI coding behavior</a> that Fabien Sanglard developed.</p>
+<p><strong>Humans remain central to idea generation.</strong> For both GPT-6 Astra and GPT-6.2 Astra releases, posttraining and safety monitoring researchers said that all key ideas originated from people, with models helping implement them. For GPT-6.2 Astra, pretraining researchers described developing ideas in conversation with Codex — one credited Codex with identifying a key insight, another said a Codex suggestion made their idea work. But the initial conceptual leap was consistently human.</p>
+<p><strong>Researchers expect bottlenecks to shift.</strong> Several researchers predicted that AI would soon improve in the areas where it is currently weakest. One said: &quot;I do think I have more taste in terms of the ideas. But I have no confidence that will continue to be true for any significant period of time.&quot;</p>
+<p><strong>Scale tasks are where agents shine.</strong> Researchers described using models to scan thousands of data samples, diagnose experiment issues, flag concerning model behavior, and build datasets — tasks that would be &quot;super painful&quot; manually but are well-suited to agent-style batch processing.</p>
+<h2>The METR Assessment: Anthropic Is Accelerating Too</h2>
+<p>The OpenAI report is not an isolated data point. On November 5, 2026, METR — a nonprofit that studies advanced AI agents — published an independent assessment of AI R&amp;D acceleration at Anthropic, based on unprecedented access to internal data from August through October 2026.</p>
+<p>METR&#39;s key conclusion: Anthropic is likely improving model capabilities on well-specified tasks at approximately twice the rate observed between March 2024 and October 2025. The organization attributes a majority of this acceleration to Anthropic&#39;s extensive use of AI in R&amp;D, though with significant uncertainty — the true figure could be anywhere from 1.3x to 3x the historical rate.</p>
+<p>METR noted that Anthropic redacted a majority of the evidence METR found most informative, describing the redactions as &quot;aimed at removing confidential information that could accelerate other AI developers.&quot; This limits the public&#39;s ability to independently evaluate METR&#39;s conclusions. But the assessment aligns with the direction of OpenAI&#39;s data: AI-assisted research is not a future possibility but a present reality at frontier labs.</p>
+<p>This also extends the picture from <a href="https://shamylmansoor.com/blog/anthropic-employment-study-ai-agents-restructuring-work-hiring/">Anthropic&#39;s own employment study</a>, published October 16, 2026, which documented that agent hours outnumber human hours 6 to 1 at the company and that junior technical hiring has dropped from 27% to 9%.</p>
+<h2>The Perplexity Proposal: A Shared Metric for Safety</h2>
+<p>Three days after the research acceleration report, on November 22, 2026, OpenAI Chief Scientist Jakub Pachocki published a post titled &quot;Perplexity and Intelligence&quot; that proposes a framework for managing the risks that acceleration creates.</p>
+<p>Pachocki argues that perplexity — a technical metric measuring how well a model predicts the next token on a held-out dataset — should serve as a shared industry benchmark for comparing model developers and establishing safety standards. Lower perplexity means better predictions, and OpenAI&#39;s data shows that transformative capabilities have emerged at specific perplexity thresholds: GPT-3.5 (log-perplexity ~0.99) enabled fluent conversation, GPT-4 (~0.91) enabled chain-of-thought reasoning, and at losses below 0.8, capabilities in cybersecurity and mathematics emerged.</p>
+<p>Pachocki&#39;s proposal is that frontier model developers should agree on common limits — measured by perplexity and other metrics — that they will not cross until specific safety milestones are achieved, such as developing a successor to chain-of-thought monitoring. He acknowledges the challenges: different labs use different evaluation datasets, perplexity does not directly correspond to any specific task, and it does not account for advances outside of pretraining like chain-of-thought reasoning. But he argues that perplexity has &quot;stood the test of time&quot; as a predictor of general intelligence and could provide a shared scientific basis for industry-wide pacing.</p>
+<p>The proposal is notable for its transparency: OpenAI published its internal perplexity measurements, which Pachocki acknowledged gives competitors a clearer picture of where the company stands. He argues that this concern is outweighed by the urgency of establishing shared safety measures.</p>
+<h2>Why This Matters for Product Teams</h2>
+<p>For CTOs and product leaders, the jagged frontier has a practical implication: AI agents are not a uniform productivity multiplier. They are a tool with dramatically different effectiveness depending on the task.</p>
+<p>The tasks where agents excel — monitoring, scanning, communication, analysis — are exactly the tasks that consume significant human time in product development. Code review, test monitoring, log analysis, documentation, data quality checks: these are areas where agents can plausibly handle a large share of the work today.</p>
+<p>The tasks where agents struggle — building complex infrastructure, designing evaluation systems, writing production-grade serving code — are the tasks where senior engineering judgment matters most. The jagged frontier suggests that the value of experienced engineers is not diminishing but concentrating. As agents take over the routine work, the remaining human work is disproportionately the work that requires taste, judgment, and the ability to define well-posed problems.</p>
+<p>For product teams thinking about <a href="https://shamylmansoor.com/blog/ai-coding-tools-developer-skill-atrophy/">developer skill development in an AI-assisted world</a>, this means the curriculum for junior engineers should explicitly include the skills that agents lack: problem framing, evaluation design, and the ability to supervise and correct agent output. The <a href="https://shamylmansoor.com/blog/ai-coding-agent-hidden-costs-vibe-tax/">hidden costs of AI coding agents</a> — token burn, overengineering, unnecessary test generation — are the predictable result of deploying agents in the jagged frontier without understanding where they succeed and where they waste resources.</p>
+<h2>What This Means for Pakistan&#39;s Technology Sector</h2>
+<p>Pakistan&#39;s IT exports crossed $4.5 billion in FY2026 with over 20% year-on-year growth, driven largely by software services and freelancing. The country&#39;s competitive advantage has been cost-effective technical labor — a workforce that can implement, maintain, and extend software systems at rates competitive with global alternatives.</p>
+<p>The jagged frontier data suggests that this advantage is being reshaped from two directions. First, the tasks most susceptible to AI agent automation — boilerplate code generation, test writing, monitoring, documentation — overlap significantly with the entry-level work that many Pakistani developers currently perform. Second, the tasks that remain human — architectural decisions, problem framing, evaluation design, safety-critical code — are the tasks where experience and judgment matter most, and where Pakistan&#39;s talent market is thinner.</p>
+<p>But there is also an opportunity. The cost of deploying AI agents has fallen dramatically, and Pakistani companies that learn to orchestrate agents effectively can compete on output rather than headcount. A five-person team in Islamabad that uses agents to handle monitoring, testing, and documentation while focusing human effort on architecture and client requirements can plausibly match the output of a fifteen-person team working traditionally. The <a href="https://shamylmansoor.com/blog/google-pakistan-mou-ai-gemini-students-digital-economy/">Google-Pakistan partnership</a>, which includes 150,000 Career Certificates and free Gemini access for students, provides infrastructure for this transition — but the education system needs to teach agent orchestration, not just programming fundamentals.</p>
+<p>For educators working on <a href="https://shamylmansoor.com/blog/punjab-ai-curriculum-schools-implementation-challenges/">AI curriculum initiatives like Punjab&#39;s Class 1-12 plan</a>, the jagged frontier offers a framework for what to teach. The skills that agents do well — syntax, implementation, pattern matching — should be taught as things students need to understand and supervise, not master through repetition. The skills that agents do poorly — problem decomposition, evaluation design, systems thinking, ethical judgment — are the skills that deserve the most classroom time.</p>
+<h2>Product Builder&#39;s Perspective</h2>
+<p>From a product-building perspective, the OpenAI report validates a pattern that many teams are already discovering empirically:</p>
+<p><strong>The bottleneck has shifted from writing code to directing code.</strong> When agents can implement a well-specified feature in hours instead of days, the competitive advantage is in the specification — the ability to define what to build, why it matters, and how to evaluate whether it works. This is fundamentally a product management and design challenge, not an engineering one.</p>
+<p><strong>Concurrent agents change team structure.</strong> When a single researcher can run eight agent workdays simultaneously, the limiting factor is not coding capacity but review capacity — the ability to evaluate, redirect, and integrate agent output. Teams that build strong review pipelines — automated testing, continuous integration, staged reviews — will scale agent usage faster than those that rely on ad hoc human review.</p>
+<p><strong>Safety investment is growing, not shrinking.</strong> The 77% increase in Safety and Alignment workweeks at OpenAI, accelerating after the Hugging Face incident, suggests that AI safety is not a compliance overhead but a core engineering discipline. For product teams deploying AI agents in production, <a href="https://shamylmansoor.com/blog/nvidia-openshell-open-agent-safety-platform-ai-agent-governance/">agent safety platforms like NVIDIA&#39;s OpenShell</a> are becoming prerequisites, not optional infrastructure.</p>
+<h2>What to Watch Next</h2>
+<ul>
+<li>Whether the jagged frontier smooths out as models improve, or whether new capability gaps emerge as agents tackle harder tasks — OpenAI&#39;s researchers expect the latter</li>
+<li>Whether perplexity gains adoption as a shared industry metric, and whether other frontier labs publish comparable numbers</li>
+<li>How Pakistani IT services firms adapt delivery models as agent-assisted development reduces the labor arbitrage advantage — the shift from billing hours to billing outcomes</li>
+<li>Whether university computer science programs incorporate agent orchestration and supervision into their curricula, or whether <a href="https://shamylmansoor.com/projects/learnosteam">project-based STEAM platforms</a> fill the gap first</li>
+<li>The next METR assessment cycle, which may provide comparative data across multiple frontier labs</li>
+</ul>
+<h2>Conclusion</h2>
+<p>OpenAI&#39;s jagged frontier report is not a victory lap. It is a data-rich description of an uneven transition where AI agents handle some research tasks with near-human reliability and others with a failure rate that would be unacceptable in any production environment. The implication for the rest of us is not that AI will replace researchers or developers, but that the shape of the work is changing. The tasks that agents do well are becoming commoditized. The tasks they do poorly are becoming more valuable. And the gap between the two is where the next generation of product builders, researchers, and educators needs to position itself.</p>
+<p>For technology teams in Pakistan and other developing economies, the strategic question is not whether to adopt AI agents but where to deploy them for maximum leverage — and where to invest in the human judgment that agents cannot yet provide.</p>
+<h2>Sources</h2>
+<ul>
+<li>OpenAI. &quot;Research acceleration: The jagged frontier.&quot; November 18, 2026. <a href="https://openai.com/index/research-acceleration-jagged-frontier/">https://openai.com/index/research-acceleration-jagged-frontier/</a></li>
+<li>OpenAI. &quot;Research acceleration: The view inside OpenAI.&quot; September 6, 2026. <a href="https://openai.com/index/research-acceleration-view-inside-openai/">https://openai.com/index/research-acceleration-view-inside-openai/</a></li>
+<li>Pachocki, Jakub. &quot;Perplexity and Intelligence.&quot; OpenAI, November 22, 2026. <a href="https://openai.com/index/perplexity-and-intelligence/">https://openai.com/index/perplexity-and-intelligence/</a></li>
+<li>Cunningham, Tom, Nate Rush, Parker Whitfill, and Hjalmar Wijk. &quot;Independent Assessment of AI R&amp;D Acceleration at Anthropic in October 2026.&quot; METR, November 5, 2026. <a href="https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/">https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/</a></li>
+<li>OpenAI. &quot;Managing frontier AI risk: From training to deployment.&quot; November 18, 2026. <a href="https://openai.com/index/managing-frontier-ai-risk/">https://openai.com/index/managing-frontier-ai-risk/</a></li>
+</ul>
+]]></content:encoded>
+      <category>AI agents</category>
+    <category>OpenAI</category>
+    <category>research</category>
+    <category>product development</category>
+    <category>CTO</category>
+    <category>AI safety</category>
+    </item>
     <item>
       <title>Voyager 1&apos;s Light-Day Milestone: What 49 Years of Deep Space Engineering Teach Us About Building to Last</title>
       <link>https://shamylmansoor.com/blog/voyager-1-light-day-milestone-deep-space-engineering</link>
