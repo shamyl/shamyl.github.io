@@ -5,13 +5,111 @@
     <link>https://shamylmansoor.com/blog</link>
     <description>Updates, thoughts, and announcements from Shamyl Bin Mansoor - Co-founder &amp;amp; CTO @ LearnOBots</description>
     <language>en</language>
-    <lastBuildDate>Tue, 24 Nov 2026 04:02:23 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 04:04:04 GMT</lastBuildDate>
     <atom:link href="https://shamylmansoor.com/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://shamylmansoor.com/favicon.svg</url>
       <title>Shamyl Bin Mansoor - Blog</title>
       <link>https://shamylmansoor.com/blog</link>
     </image>
+    <item>
+      <title>Ladybird Browser Reaches Alpha: What Building a Browser Engine From Scratch Teaches About Product Engineering</title>
+      <link>https://shamylmansoor.com/blog/ladybird-browser-alpha-independent-engine-lessons</link>
+      <guid isPermaLink="true">https://shamylmansoor.com/blog/ladybird-browser-alpha-independent-engine-lessons</guid>
+      <pubDate>Wed, 25 Nov 2026 00:00:00 GMT</pubDate>
+      <description>The Ladybird Browser Initiative has shipped its first alpha — a new web browser engine built from scratch, funded by donations, and developed by a small team. Here is what the project&apos;s architecture decisions, Rust migration, and open source governance changes reveal about building ambitious software products in the AI era.</description>
+      <content:encoded><![CDATA[<p>On November 23, 2026, Andreas Kling announced that <a href="https://ladybird.org/posts/alpha/">Ladybird</a> — a web browser with a new engine built entirely from scratch — had entered alpha, with downloadable builds available for macOS and Linux. The milestone is remarkable for several reasons: the project is funded entirely by donations, it uses no code from Chromium, Gecko, or WebKit, and it passed Safari Technology Preview on the Web Platform Tests in October 2026. For product builders, the Ladybird story offers concrete lessons about architecture decisions, language migrations, open source governance, and what it means to build ambitious software in an era when AI tools are reshaping how code gets written.</p>
+<h2>In Brief</h2>
+<ul>
+<li>Ladybird shipped its first alpha on November 23, 2026, with rolling builds for macOS and Linux — available as disk image, Flatpak, and standalone archive</li>
+<li>The project is a US 501(c)(3) non-profit funded entirely by donations and sponsorships, with Platinum sponsors including Shopify, Cloudflare, and FUTO</li>
+<li>The codebase has 68,882 GitHub stars, 1,547 contributors, and a language mix of Rust (48.1M bytes), HTML (41.8M), and C++ (39.3M) according to the GitHub API</li>
+<li>In February 2026, the team used Claude Code and Codex to port the JavaScript engine&#39;s frontend pipeline from C++ to Rust — approximately 25,000 lines in two weeks, with zero test regressions across 65,359 tests</li>
+<li>In June 2026, Ladybird closed public pull requests, citing AI-generated contributions as a reason they can no longer use PRs as a signal of contributor intent and good faith</li>
+<li>On October 26, 2026, Ladybird passed Safari Technology Preview on Web Platform Tests, reaching 2,184,722 subtests</li>
+</ul>
+<h2>Why Build a Browser Engine From Scratch</h2>
+<p>Every major browser today runs on one of three engines: Blink (Chromium, Chrome, Edge, Brave, Arc, Opera), Gecko (Firefox), or WebKit (Safari). All three are open source, but as Chris Wanstrah — GitHub co-founder and Ladybird co-founder — <a href="https://ladybird.org/posts/why-ladybird/">noted in 2024</a>, they are all effectively funded by Google&#39;s advertising empire, either directly or through search default deals. The web is too important a platform to have a single funding source, and that source being advertising creates structural incentives that may not align with user interests.</p>
+<p>Ladybird&#39;s answer is to build a new engine from the ground up. Not a fork. Not a Chromium wrapper. A genuinely independent implementation of web standards, funded by unrestricted donations, with no monetization model — no search deals, no crypto tokens, no user data sales.</p>
+<p>This is a product decision worth examining. Most teams building a browser would start with Chromium and customize it. The <a href="https://ladybird.org/">Ladybird FAQ</a> explicitly addresses this: the engine is original code, though it does use third-party libraries for common functionality like image, audio, and video formats. The project began as part of SerenityOS, which had a culture of writing everything from scratch, and has since forked into its own independent project.</p>
+<p>For product builders, the from-scratch decision has obvious trade-offs: it multiplies the engineering effort, means you cannot lean on a decade of optimizations from Google or Apple engineers, and requires implementing an enormous surface area of web standards. The benefit is architectural freedom — no inherited technical debt, no conflicts of interest with upstream maintainers, and the ability to make design decisions based solely on what serves the user.</p>
+<h2>The Rust Migration: A Practical AI-Assisted Porting Case Study</h2>
+<p>In February 2026, Kling published a <a href="https://ladybird.org/posts/adopting-rust/">post about adopting Rust</a> as Ladybird&#39;s C++ successor language. The team had previously tried Swift and rejected it due to poor C++ interop and limited platform support. Rust was chosen for its ecosystem maturity and safety guarantees — both Firefox and Chromium had already begun introducing Rust into their codebases.</p>
+<p>The first target was LibJS, Ladybird&#39;s JavaScript engine. The lexer, parser, AST, and bytecode generator were ported from C++ to Rust. According to Kling, the translation was done using Claude Code and Codex, but explicitly described as &quot;human-directed, not autonomous code generation.&quot; He decided what to port, in what order, and what the Rust code should look like. The process involved hundreds of small prompts steering the agents, followed by multiple passes of adversarial review using different models.</p>
+<p>The results are worth noting:</p>
+<ul>
+<li>Approximately 25,000 lines of Rust produced in about two weeks</li>
+<li>Byte-for-byte identical bytecode output to the C++ pipeline</li>
+<li>Zero regressions across 52,898 test262 tests and 12,461 Ladybird-specific tests</li>
+<li>No performance regressions on tracked JS benchmarks</li>
+</ul>
+<p>Kling noted that the same work would have taken multiple months by hand. The Rust code intentionally mimics C++ patterns — register allocation, object shapes — to ensure identical output. It is not idiomatic Rust, and cleanup is deferred until the C++ pipeline can be retired.</p>
+<p>This is one of the most documented real-world examples of AI-assisted language migration at scale. For CTOs and product teams considering similar migrations, the key takeaways are: the human direction mattered enormously, the test suite was the safety net, and the result was deliberately unidiomatic to prioritize correctness over style. This is not &quot;AI wrote my migration&quot; — it is &quot;an expert engineer used AI as a force multiplier on a well-scoped, well-tested subsystem.&quot;</p>
+<p>For teams dealing with <a href="/blog/technical-debt-startup-cto-lessons/">technical debt in startup environments</a>, the Ladybird approach offers a template: identify a self-contained subsystem with comprehensive tests, define the target architecture, use AI to accelerate the mechanical translation, and verify with existing test coverage.</p>
+<h2>Closing Public Pull Requests: Open Source Governance in the AI Era</h2>
+<p>In June 2026, Ladybird made a decision that generated significant discussion: <a href="https://ladybird.org/posts/changing-how-we-develop-ladybird/">closing public pull requests</a> entirely. Going forward, only project maintainers would introduce code changes.</p>
+<p>The reasoning is directly relevant to anyone building open source software in 2026. For decades, pull requests served as a signal: a substantial patch implied substantial effort, and that effort was a reasonable proxy for good faith. AI tools have broken that assumption. A pull request that looks like weeks of work may have been generated in minutes.</p>
+<p>For a browser, this matters more than for most projects. A browser executes untrusted code from the entire internet on a user&#39;s machine. One well-disguised vulnerability is all an attacker needs. Ladybird&#39;s team explicitly cited the risk of patient, well-resourced campaigns to earn maintainer trust and abuse it — now accelerated by AI making it cheaper to produce work that looks like a serious contribution.</p>
+<p>This connects to broader questions about <a href="/blog/ai-coding-tools-developer-skill-atrophy/">AI coding tools and developer skill</a>. When the effort signal disappears, projects need new mechanisms for trust and quality control. Ladybird&#39;s answer is to restrict code introduction to maintainers who are responsible for what enters the codebase. The project remains open source — the code is public, bug reports and testing contributions are welcome — but the contribution model has fundamentally changed.</p>
+<p>For product teams running open source projects, this is worth watching. The traditional open source contribution pipeline was designed for a world where producing code required time and skill. AI has commodified both, and governance models need to adapt.</p>
+<h2>Passing Safari on Web Platform Tests</h2>
+<p>The Web Platform Tests (WPT) project is a cross-browser test suite that measures how correctly a browser implements web standards. In October 2026, Ladybird passed Safari Technology Preview on WPT — a significant milestone for a project that started as a hobby HTML viewer.</p>
+<p>According to the <a href="https://ladybird.org/newsletter/2026-10-31">October 2026 newsletter</a>, Ladybird ended the month at 2,184,722 subtests, a gain of 75,650. The team pointed AI coding agents at WPT failures and asked them to fill in missing functionality. The result was lots of small fixes that added up — the biggest gains were about 30,000 in CSS and 10,000 in editing.</p>
+<p>Other October achievements include a JavaScript JIT for LibJS on x86-64 and AArch64, a new WebAssembly engine with its own interpreter and JIT (scoring about 7x higher on JetStream 3 Wasm workloads), and moving style and layout off the main thread — a feature the team claims no other browser currently matches, though this has not been independently verified.</p>
+<p>This is not the same as being competitive with Chrome on real-world performance. But passing Safari on standards compliance means Ladybird is no longer a toy. It is a browser that correctly implements a substantial portion of the web platform, which is the foundation everything else builds on.</p>
+<h2>What the Alpha Actually Includes</h2>
+<p>The alpha is a rolling release with automatic updates. It supports:</p>
+<ul>
+<li>macOS (disk image) and Linux (Flatpak, Ubuntu, Fedora, standalone archive)</li>
+<li>WebDriver for automated testing and the Firefox DevTools protocol</li>
+<li>Tab management with pinning, search, and session restore</li>
+<li>Private browsing with a distinct visual theme</li>
+<li>First support for VoiceOver on macOS and Orca on Linux</li>
+<li>Picture-in-Picture, spell checking, and text fragment links</li>
+<li>A redesigned UI with light, dark, and violet dark themes</li>
+</ul>
+<p>Windows support is in progress — the JavaScript engine already builds and tests on Windows — but the full browser is not yet available there. Mobile platforms are not a current focus.</p>
+<p>The team is explicit about limitations: some websites will not work, it will crash, and they make no security promises. They actively invite security researchers to hack it and report findings.</p>
+<h2>Product Builder&#39;s Perspective</h2>
+<p>Several aspects of the Ladybird project are worth studying for anyone building complex software products:</p>
+<p><strong>Architecture decisions have long-tail consequences.</strong> The from-scratch decision meant years more work before a usable product, but it gave the team complete freedom over their technology choices — including the Rust migration. A fork of Chromium would have made introducing a new language or restructuring the engine nearly impossible.</p>
+<p><strong>Test coverage enables bold changes.</strong> The Rust port worked because test262 and Ladybird&#39;s own regression tests provided 65,359 tests with zero regressions. Without that safety net, AI-assisted migration would be reckless. With it, the migration took two weeks instead of months. This is a practical argument for investing in tests even when you cannot see the immediate ROI.</p>
+<p><strong>Funding model shapes product direction.</strong> Ladybird&#39;s non-profit, donation-only model means no advertising incentives, no search deals, no user monetization. For product builders, this is a reminder that funding sources create structural pressures — and choosing an unusual funding model can be a feature, not just a constraint.</p>
+<p><strong>AI tools are changing governance, not just productivity.</strong> The decision to close public PRs is one of the first clear examples of an open source project restructuring its contribution model specifically because of AI. As <a href="/blog/ai-coding-agent-hidden-costs-vibe-tax/">AI coding agents create hidden costs for product teams</a>, the governance dimension may prove as significant as the productivity one.</p>
+<h2>What This Means for Pakistan and Emerging Tech Ecosystems</h2>
+<p>Ladybird&#39;s story has specific relevance for technology teams in Pakistan and other emerging ecosystems. The project demonstrates that ambitious software can be built outside the traditional venture-backed startup model, funded by a community that values the product&#39;s independence. For Pakistani developers and product teams, this is a reminder that the default funding model is not the only option — non-profit structures, community funding, and mission-driven organizations can produce competitive software.</p>
+<p>The Rust migration case study is also directly applicable. Many Pakistani technology companies maintain codebases in older languages and face migration decisions. The Ladybird approach — scope a well-tested subsystem, use AI as a translation accelerator under expert direction, verify with existing tests — is a practical playbook that does not require a large team or budget.</p>
+<p>Finally, the governance question affects everyone running open source projects. Pakistani open source maintainers face the same AI-generated contribution challenges as Ladybird. The project&#39;s decision to restrict code introduction to maintainers, while keeping the code open and welcoming community testing, is one model worth considering.</p>
+<h2>What to Watch Next</h2>
+<ul>
+<li><strong>Beta release timeline:</strong> The alpha is rolling, with automatic updates. Watch for when Ladybird announces a beta and expands platform support to Windows.</li>
+<li><strong>Rust migration progress:</strong> The team is incrementally porting subsystems. The style and layout engine is already moving to Rust, as noted in the July 2026 newsletter.</li>
+<li><strong>WPT trajectory:</strong> Passing Safari Technology Preview is a milestone, but Chrome and Firefox remain ahead. The rate of progress in the coming months will indicate whether Ladybird can close the gap.</li>
+<li><strong>Security hardening:</strong> The team worked with Trail of Bits on security hardening in September 2026. As the browser reaches more users, security scrutiny will intensify.</li>
+<li><strong>Community response to closed PRs:</strong> Whether other open source projects follow Ladybird&#39;s governance model, and whether it affects the project&#39;s ability to attract contributors, will be telling.</li>
+</ul>
+<h2>Conclusion</h2>
+<p>Ladybird reaching alpha is not just a browser milestone — it is a case study in building ambitious software products under constraints that most teams would consider impossible: a new engine, no corporate backing, a small team, and a funding model that rejects monetization. The project&#39;s decisions about architecture, language migration, and governance are all directly relevant to product builders navigating an AI-shaped development landscape. For anyone building complex software, the Ladybird story is worth following — not as inspiration, but as a source of practical lessons about what works when the constraints are real.</p>
+<p>If you are building a product and considering a language migration, an open source governance change, or an alternative funding model, the Ladybird project&#39;s documented decisions are a useful reference point. And if you build websites, downloading the alpha and testing your own site is a concrete way to contribute to an independent web.</p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://ladybird.org/posts/alpha/">Ladybird is now in alpha</a> — November 23, 2026</li>
+<li><a href="https://ladybird.org/newsletter/2026-10-31">This Month in Ladybird - October 2026</a> — October 31, 2026</li>
+<li><a href="https://ladybird.org/posts/adopting-rust/">Ladybird adopts Rust, with help from AI</a> — February 23, 2026</li>
+<li><a href="https://ladybird.org/posts/changing-how-we-develop-ladybird/">Changing How We Develop Ladybird</a> — June 5, 2026</li>
+<li><a href="https://ladybird.org/posts/why-ladybird/">Why we need Ladybird</a> — Chris Wanstrath, 2024</li>
+<li><a href="https://ladybird.org/posts/announcement/">Announcing the Ladybird Browser Initiative</a> — 2024</li>
+<li><a href="https://ladybird.org/organization/">Ladybird Browser Initiative</a> — Organization page</li>
+<li><a href="https://github.com/LadybirdBrowser/ladybird">Ladybird GitHub Repository</a> — BSD 2-Clause License</li>
+</ul>
+]]></content:encoded>
+      <category>browser-engine</category>
+    <category>Ladybird</category>
+    <category>open-source</category>
+    <category>product-engineering</category>
+    <category>Rust</category>
+    <category>software-architecture</category>
+    </item>
     <item>
       <title>Robotics&apos; Integration Hell Problem: How coprod&apos;s $6M Raise Could Change How Robots Are Built</title>
       <link>https://shamylmansoor.com/blog/coprod-robotics-integration-hell-modular-hardware-stack</link>
