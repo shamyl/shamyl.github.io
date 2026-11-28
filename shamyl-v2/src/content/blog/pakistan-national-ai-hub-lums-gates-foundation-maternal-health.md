@@ -104,7 +104,7 @@ The open questions are about deployment, evaluation, and sustainability. Partner
 
 ## Sources
 
-- [LUMS Awarded Major Grant to Establish Pakistan's First National AI Hub](https://lums.edu.pk/news/lums-awarded-major-grant-establish-pakistands-first-national-ai-hub), LUMS, March 19, 2026
+- [LUMS Awarded Major Grant to Establish Pakistan's First National AI Hub](https://lums.edu.pk/news/lums-awarded-major-grant-establish-pakistans-first-national-ai-hub), LUMS, March 19, 2026
 - [LUMS secures Gates Foundation grant to launch Pakistan's first National AI Hub](https://tribune.com.pk/article/lumns-secures-gates-foundation-grant-launch-pakistans-first-national-ai-hub), The Express Tribune, March 18, 2026
 - [Ministry of National Health Services Partners with National AI Hub at LUMS](https://lums.edu.pk/news/ministry-national-health-services-regulations-and-coordination-partners-national-ai-hub-lums), LUMS, July 20, 2026
 - [Balochistan Government and National AI Hub Partner on AI-Driven Healthcare](https://lums.edu.pk/news/balochistan-government-and-national-ai-hub-partner-ai-driven-healthcare), LUMS, August 19, 2026
